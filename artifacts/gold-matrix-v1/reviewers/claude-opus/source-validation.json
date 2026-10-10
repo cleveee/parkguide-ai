@@ -1,0 +1,1435 @@
+{
+  "errors": [],
+  "quotes": 81,
+  "labels": 40,
+  "labels_sha256": "6a61b0e942a2aa7befa9a4feb5d685125e5edbdbf07d20257dd39bf568fdda7c",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "resolved_evidence": [
+    {
+      "item_id": "M001",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "No pets allowed on shuttle buses.",
+      "occurrences": [
+        {
+          "start": 3790,
+          "end": 3823
+        }
+      ]
+    },
+    {
+      "item_id": "M001",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S007",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Pets are not allowed on park shuttle buses.",
+      "occurrences": [
+        {
+          "start": 754,
+          "end": 797
+        }
+      ]
+    },
+    {
+      "item_id": "M001",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service dogs are permitted (as defined by the Americans With Disabilities Act",
+      "occurrences": [
+        {
+          "start": 3824,
+          "end": 3901
+        }
+      ]
+    },
+    {
+      "item_id": "M001",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service animal means any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability",
+      "occurrences": [
+        {
+          "start": 4852,
+          "end": 4988
+        }
+      ]
+    },
+    {
+      "item_id": "M002",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars",
+      "occurrences": [
+        {
+          "start": 1858,
+          "end": 1932
+        }
+      ]
+    },
+    {
+      "item_id": "M002",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "at least 25 yards (23 m) away from all other animals, including bison and elk",
+      "occurrences": [
+        {
+          "start": 1938,
+          "end": 2015
+        }
+      ]
+    },
+    {
+      "item_id": "M003",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S015",
+      "doc_id": "215ed416f9d7173b14160a0d2c3f130def8848a4002199b43941a9272130d833",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/oldfaithfulvec.htm",
+      "content_hash": "73835002fbbdc94f93fa370f4e2c4f20efcff3d82a215f675c94e6962322e793",
+      "quote": "Predictions for Old Faithful's next eruption, as well as predictions for five other geyser eruptions.",
+      "occurrences": [
+        {
+          "start": 1097,
+          "end": 1198
+        }
+      ]
+    },
+    {
+      "item_id": "M004",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S021",
+      "doc_id": "23f5079f4eba0a777ff8662042cd473026220783cc2c9d6cf6a2d15dbaecba68",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/app.htm",
+      "content_hash": "0bae305a3f92e1ef59c68210f1e7e61c4f0d402d2057ce23d25f659082db086b",
+      "quote": "Offline Use: No internet access? No problem! You can download content from entire parks for offline use.",
+      "occurrences": [
+        {
+          "start": 1890,
+          "end": 1994
+        }
+      ]
+    },
+    {
+      "item_id": "M004",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S028",
+      "doc_id": "8bd6a87f958762271a5d0f58a5998c09b7495cf49c1e680cbe7abbe3eaafe379",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/internet.htm",
+      "content_hash": "95e6eba60cb0abde7ef19bea1cdb9add32ca6122d1069ae0338e65dd27f789eb",
+      "quote": "Tuolumne Meadows: Cell service is not reliable.",
+      "occurrences": [
+        {
+          "start": 1085,
+          "end": 1132
+        }
+      ]
+    },
+    {
+      "item_id": "M004",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S028",
+      "doc_id": "8bd6a87f958762271a5d0f58a5998c09b7495cf49c1e680cbe7abbe3eaafe379",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/internet.htm",
+      "content_hash": "95e6eba60cb0abde7ef19bea1cdb9add32ca6122d1069ae0338e65dd27f789eb",
+      "quote": "Tuolumne Meadows: No cell service.",
+      "occurrences": [
+        {
+          "start": 588,
+          "end": 622
+        }
+      ]
+    },
+    {
+      "item_id": "M005",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S019",
+      "doc_id": "acbd89f92e7c3b37c4acdb6bf9cc0a3d8fd8d3349699d066e1a6091795979a87",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/visiting-yellowstone-in-winter.htm",
+      "content_hash": "c95e8cfde7003260b872294106048102ca6a13fbba31c6895b642197cc35dd04",
+      "quote": "The road between the North and the Northeast entrances is open to automobiles year-round.",
+      "occurrences": [
+        {
+          "start": 577,
+          "end": 666
+        }
+      ]
+    },
+    {
+      "item_id": "M005",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S017",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "The only road generally open year-round to regular vehicles is from the North Entrance at Gardiner, Montana, through the park to Cooke City, Montana",
+      "occurrences": [
+        {
+          "start": 94,
+          "end": 242
+        }
+      ]
+    },
+    {
+      "item_id": "M005",
+      "fact_ids": [
+        "F2",
+        "F3"
+      ],
+      "source_id": "S019",
+      "doc_id": "acbd89f92e7c3b37c4acdb6bf9cc0a3d8fd8d3349699d066e1a6091795979a87",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/visiting-yellowstone-in-winter.htm",
+      "content_hash": "c95e8cfde7003260b872294106048102ca6a13fbba31c6895b642197cc35dd04",
+      "quote": "Old Faithful Snow Lodge and Mammoth Hot Springs Hotel are open during winter.",
+      "occurrences": [
+        {
+          "start": 1453,
+          "end": 1530
+        }
+      ]
+    },
+    {
+      "item_id": "M006",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S027",
+      "doc_id": "fc0fc91d00a8056d4f8c891b09f2c97eb3547d0ca7f665ee14246cdaf5f80c53",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/hours.htm",
+      "content_hash": "425d2351df9473320534e1a456d50a72b49ea1dce9bddada1d258e774b2b6e2d",
+      "quote": "However, the Hetch Hetchy Entrance Station is open only during daylight hours (approximately)",
+      "occurrences": [
+        {
+          "start": 107,
+          "end": 200
+        }
+      ]
+    },
+    {
+      "item_id": "M006",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S027",
+      "doc_id": "fc0fc91d00a8056d4f8c891b09f2c97eb3547d0ca7f665ee14246cdaf5f80c53",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/hours.htm",
+      "content_hash": "425d2351df9473320534e1a456d50a72b49ea1dce9bddada1d258e774b2b6e2d",
+      "quote": "Yosemite National Park is open 24 hours per day, 365 days per year.",
+      "occurrences": [
+        {
+          "start": 39,
+          "end": 106
+        }
+      ]
+    },
+    {
+      "item_id": "M008",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S004",
+      "doc_id": "38551df11ea1a1da86c3c5892035e77abc4e72c539af8163ac59cf86d3918553",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/day-hiking.htm",
+      "content_hash": "05f6618af48c781846338021449073f4039f955a83b8b54f21983bb099b4631e",
+      "quote": "Permits are not required for noncommercial day hikes.",
+      "occurrences": [
+        {
+          "start": 616,
+          "end": 669
+        }
+      ]
+    },
+    {
+      "item_id": "M008",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S001",
+      "doc_id": "2108ce623f4f24c9d0d685963500ec76e35622ef6edc73c059ade2545b9f41d6",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm",
+      "content_hash": "d3cd3243165ed79afbe3d28735e710b2d350387a7d61ddecd2d0fd5a6b84d4be",
+      "quote": "day hikes (this includes nighttime",
+      "occurrences": [
+        {
+          "start": 799,
+          "end": 833
+        }
+      ]
+    },
+    {
+      "item_id": "M008",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S001",
+      "doc_id": "2108ce623f4f24c9d0d685963500ec76e35622ef6edc73c059ade2545b9f41d6",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm",
+      "content_hash": "d3cd3243165ed79afbe3d28735e710b2d350387a7d61ddecd2d0fd5a6b84d4be",
+      "quote": "overnight camping in all sites at Tuweep Campground",
+      "occurrences": [
+        {
+          "start": 349,
+          "end": 400
+        }
+      ]
+    },
+    {
+      "item_id": "M009",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S019",
+      "doc_id": "acbd89f92e7c3b37c4acdb6bf9cc0a3d8fd8d3349699d066e1a6091795979a87",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/visiting-yellowstone-in-winter.htm",
+      "content_hash": "c95e8cfde7003260b872294106048102ca6a13fbba31c6895b642197cc35dd04",
+      "quote": "Winter temperatures range from zero to 20°F (-20°C to -5°C) throughout the day.",
+      "occurrences": [
+        {
+          "start": 1750,
+          "end": 1829
+        }
+      ]
+    },
+    {
+      "item_id": "M010",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S016",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Summer 2026 / First Day | Summer 2026 / Last Day",
+      "occurrences": [
+        {
+          "start": 895,
+          "end": 943
+        },
+        {
+          "start": 1749,
+          "end": 1797
+        },
+        {
+          "start": 3334,
+          "end": 3382
+        },
+        {
+          "start": 4220,
+          "end": 4268
+        },
+        {
+          "start": 5837,
+          "end": 5885
+        },
+        {
+          "start": 6800,
+          "end": 6848
+        },
+        {
+          "start": 7610,
+          "end": 7658
+        },
+        {
+          "start": 9578,
+          "end": 9626
+        },
+        {
+          "start": 10017,
+          "end": 10065
+        },
+        {
+          "start": 12395,
+          "end": 12443
+        }
+      ]
+    },
+    {
+      "item_id": "M010",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S016",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Bridge Bay Campground | Closed | May 15 | September 13",
+      "occurrences": [
+        {
+          "start": 1052,
+          "end": 1106
+        }
+      ]
+    },
+    {
+      "item_id": "M010",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S016",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Facilities close at the end of the last business day listed, except campgrounds, which close at 11 a.m. on that day.",
+      "occurrences": [
+        {
+          "start": 348,
+          "end": 464
+        }
+      ]
+    },
+    {
+      "item_id": "M011",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S013",
+      "doc_id": "5236f5b94604e65e16b0cdcb21d8bca26f5338b75b5f4cd677da4fa716ea8e6d",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/directions.htm",
+      "content_hash": "76adacce64bc440372353d5c4ff1694c0b9fba5fc2db83908cfda5546d7913b5",
+      "quote": "Commercial airlines serve the following airports near Yellowstone National Park all year: Cody and Jackson, WY; Bozeman and Billings, MT, and Idaho Falls, ID.",
+      "occurrences": [
+        {
+          "start": 698,
+          "end": 856
+        }
+      ]
+    },
+    {
+      "item_id": "M012",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S010",
+      "doc_id": "e099c2d8f6bcf49d85ae5c5395fb6d1ad84f220af662f3543e57d9ba45624d59",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/skywalk.htm",
+      "content_hash": "b538f5468de7021c039a358f030c37509e8e7fc3874d616c556779462a1dd5b9",
+      "quote": "The Tribe has chosen a site at the far western end of Grand Canyon",
+      "occurrences": [
+        {
+          "start": 874,
+          "end": 940
+        }
+      ]
+    },
+    {
+      "item_id": "M012",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S010",
+      "doc_id": "e099c2d8f6bcf49d85ae5c5395fb6d1ad84f220af662f3543e57d9ba45624d59",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/skywalk.htm",
+      "content_hash": "b538f5468de7021c039a358f030c37509e8e7fc3874d616c556779462a1dd5b9",
+      "quote": "about 250 miles (400 km) by road, a five hour drive, from the South Rim of Grand Canyon National Park",
+      "occurrences": [
+        {
+          "start": 943,
+          "end": 1044
+        }
+      ]
+    },
+    {
+      "item_id": "M012",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S010",
+      "doc_id": "e099c2d8f6bcf49d85ae5c5395fb6d1ad84f220af662f3543e57d9ba45624d59",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/skywalk.htm",
+      "content_hash": "b538f5468de7021c039a358f030c37509e8e7fc3874d616c556779462a1dd5b9",
+      "quote": "The Skywalk, managed by the Hualapai Tribe and located on tribal lands",
+      "occurrences": [
+        {
+          "start": 2161,
+          "end": 2231
+        }
+      ]
+    },
+    {
+      "item_id": "M013",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S002",
+      "doc_id": "003203535d0ee2822764dd4e225a5602e13bad0290ee36efbd2516650f92d34a",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/basicinfo.htm",
+      "content_hash": "be1a187ce121c0cd989b6f8d4a8a08b990fd58d4b60b021eb6f6e4fcde1d7c67",
+      "quote": "The North Rim is open for the season, May 15, through October 15, 2026.",
+      "occurrences": [
+        {
+          "start": 3082,
+          "end": 3153
+        }
+      ]
+    },
+    {
+      "item_id": "M013",
+      "fact_ids": [
+        "F2",
+        "F3"
+      ],
+      "source_id": "S002",
+      "doc_id": "003203535d0ee2822764dd4e225a5602e13bad0290ee36efbd2516650f92d34a",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/basicinfo.htm",
+      "content_hash": "be1a187ce121c0cd989b6f8d4a8a08b990fd58d4b60b021eb6f6e4fcde1d7c67",
+      "quote": "The entire North Kaibab trail remains closed from extensive damage from a flash flood that took place on August 29, 2026.",
+      "occurrences": [
+        {
+          "start": 3267,
+          "end": 3388
+        }
+      ]
+    },
+    {
+      "item_id": "M014",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S022",
+      "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+      "content_hash": "838d4248a37da00af6ce10ab06297c266f5d67cd45126bb34dd9b5bafe5ade4c",
+      "quote": "Do not store food in your car (including trunk) or truck after dark: use a food locker",
+      "occurrences": [
+        {
+          "start": 1372,
+          "end": 1458
+        }
+      ]
+    },
+    {
+      "item_id": "M014",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S022",
+      "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+      "content_hash": "838d4248a37da00af6ce10ab06297c266f5d67cd45126bb34dd9b5bafe5ade4c",
+      "quote": "includes any item with a scent, regardless of packaging.",
+      "occurrences": [
+        {
+          "start": 756,
+          "end": 812
+        }
+      ]
+    },
+    {
+      "item_id": "M015",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S030",
+      "doc_id": "ce3cb9b4ae9036cfcb18adfc3a1e2d57446bbde96d07391c6cec64d4ad87ef11",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/wildpermits.htm",
+      "content_hash": "7ee26dceb89735450d080205cb82d073e546aa507dcad06207f26b998dcf5013",
+      "quote": "A wilderness permit is not required for day hikes (unless hiking to Half Dome",
+      "occurrences": [
+        {
+          "start": 169,
+          "end": 246
+        }
+      ]
+    },
+    {
+      "item_id": "M017",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S007",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Yavapai Lodge is the only in-park lodge that has pet friendly rooms.",
+      "occurrences": [
+        {
+          "start": 2322,
+          "end": 2390
+        }
+      ]
+    },
+    {
+      "item_id": "M018",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S014",
+      "doc_id": "e25f6a96877e778eaab1e51a7ac10a33dd668c2dfd238e49c69402b02426f0ee",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+      "content_hash": "3ccbab153fd2099ffc70b167320fe0b62447225cb3afc9a0315da4dad4aaa384",
+      "quote": "For all annual passes, the pass holder must be present with identification for entry into Yellowstone National Park.",
+      "occurrences": [
+        {
+          "start": 1228,
+          "end": 1344
+        }
+      ]
+    },
+    {
+      "item_id": "M018",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S014",
+      "doc_id": "e25f6a96877e778eaab1e51a7ac10a33dd668c2dfd238e49c69402b02426f0ee",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+      "content_hash": "3ccbab153fd2099ffc70b167320fe0b62447225cb3afc9a0315da4dad4aaa384",
+      "quote": "cannot accept receipts or pictures of the pass in lieu of the actual pass.",
+      "occurrences": [
+        {
+          "start": 1410,
+          "end": 1484
+        }
+      ]
+    },
+    {
+      "item_id": "M018",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S014",
+      "doc_id": "e25f6a96877e778eaab1e51a7ac10a33dd668c2dfd238e49c69402b02426f0ee",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+      "content_hash": "3ccbab153fd2099ffc70b167320fe0b62447225cb3afc9a0315da4dad4aaa384",
+      "quote": "Passes are non-refundable and non-transferable.",
+      "occurrences": [
+        {
+          "start": 8481,
+          "end": 8528
+        }
+      ]
+    },
+    {
+      "item_id": "M019",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am.",
+      "occurrences": [
+        {
+          "start": 1660,
+          "end": 1751
+        }
+      ]
+    },
+    {
+      "item_id": "M020",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S005",
+      "doc_id": "f22ab691895e84a96e46bf39d7e228f41f3c101bc5880a132f5e99a5a4a3aff8",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/hike-smart.htm",
+      "content_hash": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+      "quote": "If you have any pre-existing health issues, we strongly recommend consulting with your physician before attempting rigorous hikes, especially in hot weather.",
+      "occurrences": [
+        {
+          "start": 7388,
+          "end": 7545
+        }
+      ]
+    },
+    {
+      "item_id": "M020",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S002",
+      "doc_id": "003203535d0ee2822764dd4e225a5602e13bad0290ee36efbd2516650f92d34a",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/basicinfo.htm",
+      "content_hash": "be1a187ce121c0cd989b6f8d4a8a08b990fd58d4b60b021eb6f6e4fcde1d7c67",
+      "quote": "Visitors with respiratory or heart problems may experience difficulties.",
+      "occurrences": [
+        {
+          "start": 2824,
+          "end": 2896
+        }
+      ]
+    },
+    {
+      "item_id": "M020",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S004",
+      "doc_id": "38551df11ea1a1da86c3c5892035e77abc4e72c539af8163ac59cf86d3918553",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/day-hiking.htm",
+      "content_hash": "05f6618af48c781846338021449073f4039f955a83b8b54f21983bb099b4631e",
+      "quote": "Do not attempt to hike from the rim to the river and back in one day, especially between May and September",
+      "occurrences": [
+        {
+          "start": 159,
+          "end": 265
+        }
+      ]
+    },
+    {
+      "item_id": "M021",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S011",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "South Kaibab Trailhead to:",
+      "occurrences": [
+        {
+          "start": 2120,
+          "end": 2146
+        }
+      ]
+    },
+    {
+      "item_id": "M021",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S011",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "Cedar Ridge | 1.5/2.4 | 6120/1865",
+      "occurrences": [
+        {
+          "start": 2181,
+          "end": 2214
+        }
+      ]
+    },
+    {
+      "item_id": "M021",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S011",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "DW = drinking water; TF = Toilet Facilities",
+      "occurrences": [
+        {
+          "start": 1183,
+          "end": 1226
+        }
+      ]
+    },
+    {
+      "item_id": "M021",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S004",
+      "doc_id": "38551df11ea1a1da86c3c5892035e77abc4e72c539af8163ac59cf86d3918553",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/day-hiking.htm",
+      "content_hash": "05f6618af48c781846338021449073f4039f955a83b8b54f21983bb099b4631e",
+      "quote": "Steep trail, no water, little shade. Water available seasonally at the trailhead.",
+      "occurrences": [
+        {
+          "start": 3189,
+          "end": 3270
+        }
+      ]
+    },
+    {
+      "item_id": "M022",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S012",
+      "doc_id": "6926242fcc1981ee8fee3a1085715eda1d81805b54568c47935015e1026eb4c3",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/canyonvc.htm",
+      "content_hash": "e8a64093c66baeee699fd321b0bf9920f8dd9685eefedc5b75bf71a133c8b99c",
+      "quote": "A 9,000-pound, rotating globe illustrates volcanic hotspots found around the world.",
+      "occurrences": [
+        {
+          "start": 1125,
+          "end": 1208
+        }
+      ]
+    },
+    {
+      "item_id": "M023",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S001",
+      "doc_id": "2108ce623f4f24c9d0d685963500ec76e35622ef6edc73c059ade2545b9f41d6",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm",
+      "content_hash": "d3cd3243165ed79afbe3d28735e710b2d350387a7d61ddecd2d0fd5a6b84d4be",
+      "quote": "overnight camping at Mather Campground and Desert View Campground (campground reservations at www.recreation.gov",
+      "occurrences": [
+        {
+          "start": 865,
+          "end": 977
+        }
+      ]
+    },
+    {
+      "item_id": "M024",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S020",
+      "doc_id": "c10778381c9bfe8e56d1b48a5505968c1da4806b74b08cad276012f45e01de84",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/yellowstonepledge.htm",
+      "content_hash": "3383cf1b436d43ff588b0b5d5401179225a4efaee5ba374f983467e163bc1228",
+      "quote": "Clean, drain, and dry your watercraft and fishing gear before you come into the park or move from one body of water to another.",
+      "occurrences": [
+        {
+          "start": 2681,
+          "end": 2808
+        }
+      ]
+    },
+    {
+      "item_id": "M024",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Pets are not allowed in thermal areas or on boardwalks, even if they're on a leash or carried in arms, strollers, or backpacks.",
+      "occurrences": [
+        {
+          "start": 1128,
+          "end": 1255
+        }
+      ]
+    },
+    {
+      "item_id": "M025",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm.",
+      "occurrences": [
+        {
+          "start": 2841,
+          "end": 2921
+        }
+      ]
+    },
+    {
+      "item_id": "M025",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Generator use is not allowed at other times.",
+      "occurrences": [
+        {
+          "start": 2922,
+          "end": 2966
+        }
+      ]
+    },
+    {
+      "item_id": "M027",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S029",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).",
+      "occurrences": [
+        {
+          "start": 400,
+          "end": 481
+        }
+      ]
+    },
+    {
+      "item_id": "M027",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S029",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)",
+      "occurrences": [
+        {
+          "start": 1122,
+          "end": 1238
+        }
+      ]
+    },
+    {
+      "item_id": "M027",
+      "fact_ids": [
+        "F4"
+      ],
+      "source_id": "S029",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "pets must be restrained on a leash not more than six feet long",
+      "occurrences": [
+        {
+          "start": 583,
+          "end": 645
+        }
+      ]
+    },
+    {
+      "item_id": "M028",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S006",
+      "doc_id": "5827793c29ad5eb7665589803697d5a10934cda34bbb616f608a974ffd1c99fb",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/parking_sr.htm",
+      "content_hash": "be5e39806e27cc161bcd7b529b66137d55188e83a0a68a48bd1e7824c77a82b8",
+      "quote": "Lot 1 is the closest to Mather Point and Grand Canyon views, and has Pull-through Spaces for RVs and Vehicles with Trailers.",
+      "occurrences": [
+        {
+          "start": 984,
+          "end": 1108
+        }
+      ]
+    },
+    {
+      "item_id": "M028",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S006",
+      "doc_id": "5827793c29ad5eb7665589803697d5a10934cda34bbb616f608a974ffd1c99fb",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/parking_sr.htm",
+      "content_hash": "be5e39806e27cc161bcd7b529b66137d55188e83a0a68a48bd1e7824c77a82b8",
+      "quote": "Lot 2 is closer to the Visitor Center Plaza. No RV spaces",
+      "occurrences": [
+        {
+          "start": 1110,
+          "end": 1167
+        }
+      ]
+    },
+    {
+      "item_id": "M029",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S023",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Upper Pines | All year | 4000 ft/1200 m | 35 ft/24 ft | 5 months ahead on 15th | $36 | 236",
+      "occurrences": [
+        {
+          "start": 7074,
+          "end": 7164
+        }
+      ]
+    },
+    {
+      "item_id": "M029",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S023",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Reservations are extremely difficult to get",
+      "occurrences": [
+        {
+          "start": 249,
+          "end": 292
+        }
+      ]
+    },
+    {
+      "item_id": "M030",
+      "fact_ids": [
+        "F1",
+        "F3"
+      ],
+      "source_id": "S013",
+      "doc_id": "5236f5b94604e65e16b0cdcb21d8bca26f5338b75b5f4cd677da4fa716ea8e6d",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/directions.htm",
+      "content_hash": "76adacce64bc440372353d5c4ff1694c0b9fba5fc2db83908cfda5546d7913b5",
+      "quote": "Public transportation is not available in Yellowstone, but many companies provide shuttle services and tours.",
+      "occurrences": [
+        {
+          "start": 1820,
+          "end": 1929
+        }
+      ]
+    },
+    {
+      "item_id": "M030",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S013",
+      "doc_id": "5236f5b94604e65e16b0cdcb21d8bca26f5338b75b5f4cd677da4fa716ea8e6d",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/directions.htm",
+      "content_hash": "76adacce64bc440372353d5c4ff1694c0b9fba5fc2db83908cfda5546d7913b5",
+      "quote": "a vehicle is generally required to visit the park.",
+      "occurrences": [
+        {
+          "start": 1769,
+          "end": 1819
+        }
+      ]
+    },
+    {
+      "item_id": "M031",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Keep at least 100 yards (91 meters) from bears at all times and never approach a bear to take a photo.",
+      "occurrences": [
+        {
+          "start": 3182,
+          "end": 3284
+        }
+      ]
+    },
+    {
+      "item_id": "M032",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S012",
+      "doc_id": "6926242fcc1981ee8fee3a1085715eda1d81805b54568c47935015e1026eb4c3",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/canyonvc.htm",
+      "content_hash": "e8a64093c66baeee699fd321b0bf9920f8dd9685eefedc5b75bf71a133c8b99c",
+      "quote": "Real-time earthquake data that is currently being collected in the park.",
+      "occurrences": [
+        {
+          "start": 1333,
+          "end": 1405
+        }
+      ]
+    },
+    {
+      "item_id": "M033",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "No pets allowed on shuttle buses.",
+      "occurrences": [
+        {
+          "start": 3790,
+          "end": 3823
+        }
+      ]
+    },
+    {
+      "item_id": "M033",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S007",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Pets are not allowed on park shuttle buses.",
+      "occurrences": [
+        {
+          "start": 754,
+          "end": 797
+        }
+      ]
+    },
+    {
+      "item_id": "M033",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S009",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service dogs are permitted (as defined by the Americans With Disabilities Act",
+      "occurrences": [
+        {
+          "start": 3824,
+          "end": 3901
+        }
+      ]
+    },
+    {
+      "item_id": "M034",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S005",
+      "doc_id": "f22ab691895e84a96e46bf39d7e228f41f3c101bc5880a132f5e99a5a4a3aff8",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/hike-smart.htm",
+      "content_hash": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+      "quote": "Before your hike, visit the Key Hiking Messages for current information on trail conditions, water availability, heat risk and weather affecting the backcountry.",
+      "occurrences": [
+        {
+          "start": 680,
+          "end": 841
+        }
+      ]
+    },
+    {
+      "item_id": "M034",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S005",
+      "doc_id": "f22ab691895e84a96e46bf39d7e228f41f3c101bc5880a132f5e99a5a4a3aff8",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/hike-smart.htm",
+      "content_hash": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+      "quote": "only the Bright Angel and North Kaibab Trails have potable water spigots and these may be out of service",
+      "occurrences": [
+        {
+          "start": 1998,
+          "end": 2102
+        }
+      ]
+    },
+    {
+      "item_id": "M034",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S008",
+      "doc_id": "33ab568ebd04787e7d2c00574a6adf9fb3c21f93710d9286c6655b46d4012737",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/safe-water.htm",
+      "content_hash": "3a69bb095f21fd4f4fa356ecd45e07527c653b8b0e3a4eec91d5a9e5096458e7",
+      "quote": "standard backpacking water filters are designed to remove bacteria, protozoa, and sediment, but they do not remove dissolved cyanotoxins to safe drinking levels.",
+      "occurrences": [
+        {
+          "start": 3226,
+          "end": 3387
+        }
+      ]
+    },
+    {
+      "item_id": "M034",
+      "fact_ids": [
+        "F4"
+      ],
+      "source_id": "S008",
+      "doc_id": "33ab568ebd04787e7d2c00574a6adf9fb3c21f93710d9286c6655b46d4012737",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/safe-water.htm",
+      "content_hash": "3a69bb095f21fd4f4fa356ecd45e07527c653b8b0e3a4eec91d5a9e5096458e7",
+      "quote": "boiling water or chemical disinfection methods such as bleach or iodine will not remove cyanotoxins that are already dissolved in the water.",
+      "occurrences": [
+        {
+          "start": 3399,
+          "end": 3539
+        }
+      ]
+    },
+    {
+      "item_id": "M035",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S026",
+      "doc_id": "8dc9e453ca684c867993b01b5ed286183e93e809b875d2c4f69ae5a98b3ab97a",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/guide.htm",
+      "content_hash": "0cb91088872777db27afc1efb371460bff4e1d1b991320d7e24b3573bd8bb87e",
+      "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026",
+      "occurrences": [
+        {
+          "start": 553,
+          "end": 605
+        }
+      ]
+    },
+    {
+      "item_id": "M036",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Keep at least 100 yards (91 meters) from bears at all times and never approach a bear to take a photo.",
+      "occurrences": [
+        {
+          "start": 3182,
+          "end": 3284
+        }
+      ]
+    },
+    {
+      "item_id": "M036",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S018",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Keep at least 25 yards (23 meters) from bison at all times",
+      "occurrences": [
+        {
+          "start": 11888,
+          "end": 11946
+        }
+      ]
+    },
+    {
+      "item_id": "M037",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "A maximum of six people (including children) are allowed per campsite.",
+      "occurrences": [
+        {
+          "start": 1705,
+          "end": 1775
+        }
+      ]
+    },
+    {
+      "item_id": "M037",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "A maximum of two motor vehicles are allowed per campsite.",
+      "occurrences": [
+        {
+          "start": 1800,
+          "end": 1857
+        }
+      ]
+    },
+    {
+      "item_id": "M037",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S024",
+      "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+      "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+      "quote": "A maximum of two motor vehicles are allowed per campsite.",
+      "occurrences": [
+        {
+          "start": 4820,
+          "end": 4877
+        }
+      ]
+    },
+    {
+      "item_id": "M037",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Trailers don't count against the vehicle limit as long as they fit on the parking pad.",
+      "occurrences": [
+        {
+          "start": 2057,
+          "end": 2143
+        }
+      ]
+    },
+    {
+      "item_id": "M037",
+      "fact_ids": [
+        "F4"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "some sites can only accommodate one.",
+      "occurrences": [
+        {
+          "start": 1974,
+          "end": 2010
+        }
+      ]
+    },
+    {
+      "item_id": "M038",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S029",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)",
+      "occurrences": [
+        {
+          "start": 1122,
+          "end": 1238
+        }
+      ]
+    },
+    {
+      "item_id": "M038",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S029",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "There are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.)",
+      "occurrences": [
+        {
+          "start": 1546,
+          "end": 1659
+        }
+      ]
+    },
+    {
+      "item_id": "M039",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "source_id": "S003",
+      "doc_id": "12f7aaa0b019b36bb791e0b4b38524b3258a6a9961d459ada70fe63d6a40db9d",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/bc-food-storage.htm",
+      "content_hash": "10a2b782e0fcca6e57de5ffb2275c1ddab53c8db19741327edac4471219b7a43",
+      "quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory.",
+      "occurrences": [
+        {
+          "start": 1962,
+          "end": 2098
+        }
+      ]
+    },
+    {
+      "item_id": "M040",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Quiet hours are from 10 pm to 6 am.",
+      "occurrences": [
+        {
+          "start": 2805,
+          "end": 2840
+        }
+      ]
+    },
+    {
+      "item_id": "M040",
+      "fact_ids": [
+        "F2"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm.",
+      "occurrences": [
+        {
+          "start": 2841,
+          "end": 2921
+        }
+      ]
+    },
+    {
+      "item_id": "M040",
+      "fact_ids": [
+        "F3"
+      ],
+      "source_id": "S025",
+      "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "content_hash": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+      "quote": "Generator use is not allowed at other times.",
+      "occurrences": [
+        {
+          "start": 2922,
+          "end": 2966
+        }
+      ]
+    }
+  ],
+  "semantic_support_verified": false
+}

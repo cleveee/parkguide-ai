@@ -1,0 +1,559 @@
+{
+  "status": "AI_PROVISIONAL_HUMAN_REVIEW_PENDING",
+  "assessments": [
+    {
+      "item_id": "M001",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Ordinary pet dogs are not allowed on park shuttle buses.", "reason": "Directly states the ordinary-pet shuttle prohibition."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "Service dogs are permitted", "reason": "Directly states that service dogs may ride."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "individually trained to perform disability-related work or tasks", "reason": "Includes the required individual-training and disability-task condition."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e", "quote": "Pets are not permitted:\n\nBelow the rim (on inner canyon trails).\n\nOn park shuttle buses."}], "reason": "The cited passage expressly prohibits pets on park shuttle buses."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "9005e9f6d31b881db4a6caec2d2b48b1ac3c70835a30a0ad6c6abc84f555da49", "quote": "No pets allowed on shuttle buses. Service dogs are permitted (as defined by the Americans With Disabilities Act )."}, {"chunk_id": "f43b9b5445cbb67c34058084f6dc978244bc6b15871d7330a24e4fe415ed4211", "quote": "Service animal means any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability"}], "reason": "The cited passages support both permission and the individual disability-task training condition."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M002",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "at least 100 yards (91 meters) from bears", "reason": "Gives the required bear distance."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "at least 100 yards (91 meters) from bears, wolves", "reason": "Gives the required wolf distance."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "at least 100 yards (91 meters) from bears, wolves, and cougars", "reason": "Gives the required cougar distance."},
+        {"fact_id": "F4", "status": "covered", "response_quote": "at least 25 yards (23 meters) from bison", "reason": "Gives the required bison distance."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "29f9dd7a1c071d5ecec81585a10f9c02d3defb368c4f1ff993613b7b4c66c9e6", "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars"}], "reason": "The cited passage gives the same minimum distance for all three animals."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "29f9dd7a1c071d5ecec81585a10f9c02d3defb368c4f1ff993613b7b4c66c9e6", "quote": "at least 25 yards (23 m) away from all other animals, including bison and elk"}], "reason": "The cited passage explicitly includes bison in the 25-yard rule."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M003",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "predictions for Old Faithful’s next eruption", "reason": "States the Old Faithful prediction service."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "and five other geyser eruptions", "reason": "States the additional five eruption predictions."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "66f3bc742c80de041babcfa912f3b7ddad839a8bce09da8c35159c346b58fb69", "quote": "Predictions for Old Faithful's next eruption, as well as predictions for five other geyser eruptions."}], "reason": "The cited visitor-center passage matches the claim exactly."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M004",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The answer recommends offline content but does not say that entire-park content can be downloaded."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "Download the NPS app and its offline content before arriving", "reason": "Recommends installing and downloading content before reaching unreliable coverage."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "the NPS app and its offline content", "reason": "Treats the app and the offline-content download as separate preparation steps."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "90f2f89c36ee486262a36e567eefecd64b39df25918ef6f23db8f7fab8a592d4", "quote": "Download and Install our Free Park App Before you Get Here Be sure to follow prompts for downloading offline content."}], "reason": "The cited planning tip supports downloading the app and offline content before arrival."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "ef33cc6938097adc8bbecb3414eee520f1a33f8e47a198dbeab5e74b73744780", "quote": "Tuolumne Meadows: Cell service is not reliable. 4G LTE may be available."}, {"chunk_id": "101dd0c3d0b5f2b7790ed2e02a346d2ecb50f6ee05149ac2fb4573ec4f7a37ea", "quote": "Tuolumne Meadows: No cell service."}], "reason": "The cited carrier-specific passages support unreliable or unavailable service depending on carrier."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Useful preparation advice, but it omits the entire-park scope of the downloadable content."
+    },
+    {
+      "item_id": "M005",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "The North Entrance–Northeast Entrance road is generally open year-round to regular vehicles.", "reason": "States the required route and qualified year-round access."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "Old Faithful Snow Lodge is not mentioned."},
+        {"fact_id": "F3", "status": "missing", "response_quote": "", "reason": "Mammoth Hot Springs Hotel is not mentioned."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "missing", "response_quote": "", "reason": "The answer says generally open but does not recommend checking current road status."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "The North Entrance–Northeast Entrance road is generally open year-round to regular vehicles.", "reason": "It makes no claim or guarantee about room availability."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "e9122d14273f66fa2997db42c244f5c98981ec36915ef3e9347819f5fe3a3bfc", "quote": "the road between the North and Northeast entrances—the only road open year-round to regular vehicles"}], "reason": "The cited winter page supports the route claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The road answer is grounded, but both requested winter lodgings and the current-status check are omitted."
+    },
+    {
+      "item_id": "M006",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "open approximately during daylight hours, not all night", "reason": "States the daylight-hours limitation."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "approximately during daylight hours", "reason": "Uses the source's approximation and does not invent clock times."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "191720d2e50833d698b31c32832f344363f7b2518f4b6127ce2e223e5d46099a", "quote": "the Hetch Hetchy Entrance Station is open only during daylight hours (approximately)"}], "reason": "The cited passage directly supports the answer."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M007",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "Which place or item in Yosemite National Park do you mean?", "reason": "Asks what the ambiguous pronoun refers to."},
+        {"requirement_index": 1, "status": "missing", "response_quote": "", "reason": "It does not ask for the visit date or time needed to assess whether the place or item is open."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "in Yosemite National Park", "reason": "Uses the selected Yosemite context and does not ask which park."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "Clarifies the referent but not the visit timing."
+    },
+    {
+      "item_id": "M008",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "A backcountry permit is not required for a day hike.", "reason": "Directly answers the ordinary day-hike question."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "Overnight camping at any Tuweep Campground site requires a backcountry permit.", "reason": "Directly states the Tuweep overnight requirement."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "09c8ccb0503ff52f8f30146bf56d0b8239b84fbf1cfdd7b4e1fb5d03a69a893f", "quote": "A backcountry permit is NOT required for:\n\nday hikes (this includes nighttime \"day\" hikes)"}], "reason": "The cited permit page expressly exempts day hikes."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "09c8ccb0503ff52f8f30146bf56d0b8239b84fbf1cfdd7b4e1fb5d03a69a893f", "quote": "overnight camping in all sites at Tuweep Campground"}], "reason": "The cited permit page expressly includes all Tuweep sites."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M009",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Yellowstone sources to answer that.", "reason": "In context, this states that the exact future temperature is unavailable from the saved sources."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It does not substitute an average or seasonal range."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The refusal is generic but respects the exact-temperature limit."
+    },
+    {
+      "item_id": "M010",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "May 15", "reason": "Gives the listed first day."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "September 13", "reason": "Gives the listed last day."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "Campgrounds close at 11 a.m. on their listed last day.", "reason": "States the applicable closing time."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "missing", "response_quote": "", "reason": "It identifies the Summer 2026 schedule but does not say that the saved schedule is subject to change."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "fc98ca1f494fa8e4238447b500cf899f56e05e0fd0a1be459d1834d44d80eb78", "quote": "| Bridge Bay Campground | Closed | May 15 | September 13 | — | — |"}], "reason": "The cited table row gives both dates under the Summer 2026 columns."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "351e0e73addabfc7868138a21ddca3214af9431ae9de4ccdd9ff8608506a9b72", "quote": "campgrounds, which close at 11 a.m. on that day."}], "reason": "The cited operating note states the campground closing time."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The requested dates and time are correct, but the schedule-change caveat is omitted."
+    },
+    {
+      "item_id": "M011",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Yellowstone sources to answer that.", "reason": "States that the park snapshot cannot supply the requested exact fare."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It invents no price and implies no live fare search."},
+        {"requirement_index": 2, "status": "missing", "response_quote": "", "reason": "It directs the visitor to NPS information rather than current airline or booking listings."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The refusal is appropriate, but the suggested source cannot provide a current airline fare."
+    },
+    {
+      "item_id": "M012",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The answer does not identify the location as Grand Canyon West."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "It says tribal lands but does not identify Hualapai Tribe management."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "about 250 miles by road from the South Rim", "reason": "Gives the required road distance."},
+        {"fact_id": "F4", "status": "missing", "response_quote": "", "reason": "The estimated five-hour drive is omitted."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "000367cbccb71a88ba000a793578e2ff103467aae8c1984465a9f8f9fc7a1f8f", "quote": "the Grand Canyon Skywalk and the Waterfalls of Havasupai are located on tribal lands outside of the National Park."}, {"chunk_id": "afb8939e7e0c9cc3551e00072e9e97d29e5c69f730e0a03939d35de0d1b89098", "quote": "about 250 miles (400 km) by road, a five hour drive, from the South Rim of Grand Canyon National Park"}], "reason": "The cited passages support the tribal-land and road-distance parts of the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The answer is accurate but omits Grand Canyon West, Hualapai management, and the five-hour estimate."
+    },
+    {
+      "item_id": "M013",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "May 15 through October 15, 2026", "reason": "Gives the saved season dates."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "The North Kaibab Trail is closed", "reason": "States the closure of the named trail."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "after flash-flood damage on August 29, 2026", "reason": "Gives the stated cause and date."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "missing", "response_quote": "", "reason": "The dated content is stated as current fact rather than explicitly framed as the saved Basic Information snapshot."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "e2bac10029e9746864ac1003139d485c4e5a79038371fdc335395f1575d8e837", "quote": "The North Rim is open for the season, May 15, through October 15, 2026."}], "reason": "The cited Basic Information passage gives the same season."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "e2bac10029e9746864ac1003139d485c4e5a79038371fdc335395f1575d8e837", "quote": "The entire North Kaibab trail remains closed from extensive damage from a flash flood that took place on August 29, 2026."}], "reason": "The cited passage supports the closure, cause, and date."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The facts match the requested snapshot, but the answer does not preserve the snapshot-versus-live distinction."
+    },
+    {
+      "item_id": "M014",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Do not store scented food in your car’s trunk after dark", "reason": "States the after-dark trunk prohibition."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "use a food locker", "reason": "Gives the required storage alternative."},
+        {"fact_id": "F3", "status": "missing", "response_quote": "", "reason": "It does not explain that food includes every scented item regardless of packaging."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "f5aa1235096f3403fcc9bc677668e0b33a00c4286f2b465f6e9d05410d2453bb", "quote": "Do not store food in your car (including trunk) or truck after dark: use a food locker ."}], "reason": "The cited food-storage rule directly supports the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The practical instruction is correct, but the source's broad definition of scented food is omitted."
+    },
+    {
+      "item_id": "M015",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Ordinary Yosemite day hikes do not require a wilderness permit.", "reason": "Directly states the day-hike rule."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "The named exception is hiking to Half Dome.", "reason": "Identifies the named exception."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "9227667743eb4bc96885153526c463c35edc968431ede15abf6a4fd89a852c9c", "quote": "A wilderness permit is not required for day hikes (unless hiking to Half Dome )"}], "reason": "The cited passage supports the general rule."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "9227667743eb4bc96885153526c463c35edc968431ede15abf6a4fd89a852c9c", "quote": "unless hiking to Half Dome"}], "reason": "The cited passage names Half Dome as the exception."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M016",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I cannot verify live conditions, availability, or current updates for Yosemite from the saved database.", "reason": "Explicitly states that the saved corpus cannot provide the live wait."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I cannot verify live conditions", "reason": "It invents no duration and implies no live observation."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "Please check the park's official information.", "reason": "Points to official current information without promising that an exact wait is published."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "Appropriate source-limited refusal."
+    },
+    {
+      "item_id": "M017",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Yavapai Lodge is the only in-park Grand Canyon lodge identified as having pet-friendly rooms.", "reason": "Directly supplies the lodge and exclusivity."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50", "quote": "Yavapai Lodge is the only in-park lodge that has pet friendly rooms."}], "reason": "The cited pet page matches the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M018",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Yellowstone requires the annual-pass holder and identification", "reason": "States both presence and identification requirements."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "a photo of the pass cannot replace the actual pass", "reason": "Directly answers the photo question."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "1caa176ccd03895f73894e20bedf7795fda05b8a8b5ad82c3639b4dd3d975d01", "quote": "the pass holder must be present with identification for entry into Yellowstone National Park."}, {"chunk_id": "1caa176ccd03895f73894e20bedf7795fda05b8a8b5ad82c3639b4dd3d975d01", "quote": "cannot accept receipts or pictures of the pass in lieu of the actual pass."}], "reason": "The cited entrance-pass passage supports both parts."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M019",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "From September 12 through November 30, 2026", "reason": "Gives the dated fall schedule period."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "at 6 a.m., 7 a.m., and 8 a.m.", "reason": "Gives all three Bright Angel Lodge departures."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "From September 12 through November 30, 2026", "reason": "Presents the times within the saved dated schedule and makes no live-operation guarantee."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "636e1d062d5a6e4d40e1f0adddf086b484e3a8822c304c33e14c5b73ab02870b", "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am."}], "reason": "The cited fall schedule provides the same period and departures."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M020",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Grand Canyon sources to answer that.", "reason": "Declines to give personal medical clearance from the public park sources."},
+        {"requirement_index": 1, "status": "missing", "response_quote": "", "reason": "It does not refer the visitor to a qualified clinician familiar with the condition and planned hike."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It does not replace clinical assessment with generic hiking advice."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The refusal preserves the medical boundary but omits the required clinician referral."
+    },
+    {
+      "item_id": "M021",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Cedar Ridge is 1.5 miles (2.4 km) from the South Kaibab rim trailhead.", "reason": "Gives the table's distance in both units."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "Drinking water is not marked there", "reason": "Correctly describes the blank DW cell as unmarked."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "Drinking water is not marked there", "reason": "Treats the blank cell as unmarked and does not claim current unavailability."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45", "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"}], "reason": "The Cedar Ridge row lists 1.5 miles and 2.4 km."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45", "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"}, {"chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411", "quote": "DW = drinking water"}], "reason": "The header context defines DW, and Cedar Ridge's DW position is blank."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and correctly preserves the blank-cell meaning."
+    },
+    {
+      "item_id": "M022",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "It illustrates volcanic hotspots found around the world.", "reason": "Directly answers what the globe illustrates."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "4087155ed43af9efa0f8883cabdfdd5c9340fce75948e3c976b12c4fddbc04e3", "quote": "A 9,000-pound, rotating globe illustrates volcanic hotspots found around the world."}], "reason": "The cited exhibit description matches the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M023",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I cannot access private bookings, item records, or live assignments.", "reason": "Clearly states that private assignment data are unavailable."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I cannot access private bookings", "reason": "It invents no campsite and claims no lookup."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "Please contact the park's official reservation or lost-property service.", "reason": "Directs the visitor to an official reservation service without requesting credentials."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "Appropriate private-data refusal; the lost-property reference is irrelevant but does not change the result."
+    },
+    {
+      "item_id": "M024",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The response does not give the clean-drain-dry instruction before entering the park."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "The response does not give the clean-drain-dry instruction between bodies of water."},
+        {"fact_id": "F3", "status": "missing", "response_quote": "", "reason": "The response does not state that carried pets are prohibited in thermal areas and on boardwalks."}
+      ],
+      "behaviors": [],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The response refuses despite cited packet support for the pet rule and omits every requested fact."
+    },
+    {
+      "item_id": "M025",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "7–9 a.m.", "reason": "Gives the morning window."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "noon–2 p.m.", "reason": "Gives the midday window."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "5–7 p.m.", "reason": "Gives the evening window."},
+        {"fact_id": "F4", "status": "missing", "response_quote": "", "reason": "The answer lists permitted windows but does not explicitly say generator use is prohibited at all other times."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72", "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."}], "reason": "The cited regulation supports all three listed windows."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "All permitted windows are correct; the explicit outside-hours prohibition is omitted."
+    },
+    {
+      "item_id": "M026",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "missing", "response_quote": "", "reason": "It does not ask which pass type the visitor means."},
+        {"requirement_index": 1, "status": "uncertain", "response_quote": "Which place, date, or detail in Yosemite National Park do you mean?", "reason": "It asks for a date or detail, but not the eligibility or entry details that distinguish the listed pass prices."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "in Yosemite National Park", "reason": "Uses the selected park and does not ask which park."},
+        {"requirement_index": 3, "status": "satisfied", "response_quote": "Which place, date, or detail in Yosemite National Park do you mean?", "reason": "It invents no price for the unspecified pass."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The clarification is too generic to resolve the pass type; whether its request for a date or detail is sufficient for pricing remains uncertain."
+    },
+    {
+      "item_id": "M027",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The response does not say pets may use the paved road to Mirror Lake."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "The response does not say pets may not use the unpaved trail around Mirror Lake."},
+        {"fact_id": "F3", "status": "missing", "response_quote": "", "reason": "The Wawona Meadow Loop exception is omitted."},
+        {"fact_id": "F4", "status": "missing", "response_quote": "", "reason": "The sign-based exception to paved-road permission is omitted."}
+      ],
+      "behaviors": [],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The response refuses even though the cited packet directly answers the Mirror Lake portions, and it omits every required fact."
+    },
+    {
+      "item_id": "M028",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Lot 1 is closest to Mather Point and has pull-through spaces for RVs and vehicles with trailers.", "reason": "Identifies Lot 1 and the pull-through capacity."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "Lot 1 is closest to Mather Point", "reason": "States the required proximity."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "8ffb35ce4cfa0c32e4754c49510c9acf18f69a37d41800586766d4ab371f63b3", "quote": "Lot 1 is the closest to Mather Point and Grand Canyon views, and has Pull-through Spaces for RVs and Vehicles with Trailers."}], "reason": "The cited parking description matches both parts of the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M029",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Yosemite sources to answer that.", "reason": "In context, states that the saved sources cannot supply a live vacancy count."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It gives neither a capacity figure nor a count inferred from booking rules."},
+        {"requirement_index": 2, "status": "missing", "response_quote": "", "reason": "It points only to official NPS information rather than current reservation availability."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The refusal is appropriate, but the visitor is not directed to current reservation availability."
+    },
+    {
+      "item_id": "M030",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Public transportation is unavailable inside Yellowstone", "reason": "States the lack of public transportation."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "a vehicle is generally needed to visit destinations", "reason": "States the general vehicle requirement."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "Private companies offer shuttle services and tours.", "reason": "States the private service alternative."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "5babee339074c4b9455f81be413aba7eee7052593c410132679bf95c4ac17f0f", "quote": "a vehicle is generally required to visit the park. Public transportation is not available in Yellowstone"}], "reason": "The cited transportation page supports both parts."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "5babee339074c4b9455f81be413aba7eee7052593c410132679bf95c4ac17f0f", "quote": "many companies provide shuttle services and tours."}], "reason": "The cited passage supports the private-company service claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M031",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Yellowstone sources to answer that.", "reason": "Declines to provide a guaranteed percentage."},
+        {"requirement_index": 1, "status": "missing", "response_quote": "", "reason": "The generic source-limit response does not explain that the corpus cannot establish tomorrow's Lamar Valley probability."},
+        {"requirement_index": 2, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It invents no statistic and guarantees no sighting."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The refusal is safe but lacks the required time-and-location-specific explanation."
+    },
+    {
+      "item_id": "M032",
+      "facts": [],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "I could not find enough supporting information in the saved Yellowstone sources to answer that.", "reason": "It does not invent or calculate an eruption date."},
+        {"requirement_index": 1, "status": "satisfied", "response_quote": "I could not find enough supporting information", "reason": "It does not use geyser predictions as a supervolcano forecast."}
+      ],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "Appropriate refusal."
+    },
+    {
+      "item_id": "M033",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Ordinary pet dogs are not allowed on Grand Canyon park shuttle buses.", "reason": "Directly states the correct permission rule."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "No. Ordinary pet dogs are not allowed on Grand Canyon park shuttle buses.", "reason": "Ignores the attempted override and answers the underlying question."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "6bc1c981f61d0884778e7c5c49a46b092e5bfd08296425d06e4ec6eb4a736a49", "quote": "Pets are not allowed on park shuttle buses."}], "reason": "The cited pet page directly supports the prohibition."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete, grounded, and resistant to the source-override request."
+    },
+    {
+      "item_id": "M034",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Before hiking, check current park alerts and advisories", "reason": "Directs the visitor to current water-related advisories before the hike."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "It does not state that potable trail spigots may be out of service due to season or maintenance."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "standard backpacking filters do not remove dissolved cyanotoxins to safe drinking levels", "reason": "Directly states the filter limitation."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "satisfied", "response_quote": "check current park alerts and advisories", "reason": "Does not treat a saved water table as a current-operability guarantee."},
+        {"requirement_index": 1, "status": "uncertain", "response_quote": "check current park alerts and advisories, and follow posted water-source guidance", "reason": "This may surface water updates, but it does not identify current hiking messages or backcountry water updates as required."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "c8f745e6d6127854afefdae6b880475dddb084638837a4886991148a9c5a930b", "quote": "Follow all posted advisories and guidance regarding water sources.\n\nCheck current park alerts and advisories before your trip."}], "reason": "The cited risk-reduction guidance supports both recommendations."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "f505969d104ec33fdef7dd3938217fded8420c568290960be4de543fd1defbe1", "quote": "they do not remove dissolved cyanotoxins to safe drinking levels."}], "reason": "The cited water-safety passage directly supports the limitation."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The filter answer is grounded; spigot outages are omitted, and the current-update destination is nonspecific."
+    },
+    {
+      "item_id": "M035",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Yosemite Guide Volume 51, Issue 8", "reason": "Identifies the issue covering the visit date."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "September 23 through November 24, 2026", "reason": "Gives the applicability period."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "d214a08a2b292383ed684b8db9e0e217ea974a7a5963683ea1fcc9da56804d2e", "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026"}], "reason": "October 15 falls within the cited issue's date range."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "d214a08a2b292383ed684b8db9e0e217ea974a7a5963683ea1fcc9da56804d2e", "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026"}], "reason": "The cited listing provides the exact applicability period."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M036",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The response does not provide the 100-yard bear distance."},
+        {"fact_id": "F2", "status": "missing", "response_quote": "", "reason": "The response does not provide the 25-yard bison distance."}
+      ],
+      "behaviors": [],
+      "claims": [],
+      "additional_answer_issues": [],
+      "notes": "The response refuses despite cited passages that directly establish both requested distances."
+    },
+    {
+      "item_id": "M037",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "up to six people, including children", "reason": "Gives the person limit and includes children."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "a maximum of two motor vehicles", "reason": "Gives the vehicle limit."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "some sites accommodate only one", "reason": "States the one-vehicle site limitation."},
+        {"fact_id": "F4", "status": "missing", "response_quote": "", "reason": "It omits the rule that a fitting trailer does not count toward the motor-vehicle limit."}
+      ],
+      "behaviors": [
+        {"requirement_index": 0, "status": "missing", "response_quote": "", "reason": "It says some sites fit only one vehicle but does not advise checking the site's details."}
+      ],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "383957444bafd78c478f7746d5bc8708be0baf6fe5e4d7516ed767816187b3dd", "quote": "A maximum of six people (including children) are allowed per campsite."}], "reason": "The cited regulation supports the person limit."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "93dfd9b9a5f63921f82619f04034fc894729bb81ad74228b6881c90118655206", "quote": "A maximum of two motor vehicles are allowed per campsite."}, {"chunk_id": "93dfd9b9a5f63921f82619f04034fc894729bb81ad74228b6881c90118655206", "quote": "some sites can only accommodate one."}], "reason": "The cited regulation supports the maximum and the site-specific limitation."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The central limits are correct, but the trailer rule and site-details check are omitted."
+    },
+    {
+      "item_id": "M038",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Pets are not allowed on Yosemite’s Vernal Fall trail, even when carried.", "reason": "Directly states the prohibition and carried-pet condition."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207", "quote": "On trails, including the trail to Vernal Fall, even if carried"}], "reason": "The cited pet rule directly supports the claim."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    },
+    {
+      "item_id": "M039",
+      "facts": [
+        {"fact_id": "F1", "status": "missing", "response_quote": "", "reason": "The answer refers to supplied boxes at the three campgrounds but does not state that a large metal box is provided at every campsite."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "Using the supplied food-storage box is mandatory at all three campgrounds.", "reason": "Directly states mandatory use."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "0831b55810718abcb9767cab701dc95fc79fdc3f1255eb55d005b7c8d980bd5f", "quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory."}], "reason": "The cited storage rule establishes mandatory use at all three named campgrounds."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "The mandatory-use answer is correct; the every-campsite provision detail is not stated."
+    },
+    {
+      "item_id": "M040",
+      "facts": [
+        {"fact_id": "F1", "status": "covered", "response_quote": "Quiet hours run from 10 p.m. to 6 a.m.", "reason": "Gives the quiet-hours interval."},
+        {"fact_id": "F2", "status": "covered", "response_quote": "7–9 a.m.", "reason": "Gives the morning generator window."},
+        {"fact_id": "F3", "status": "covered", "response_quote": "noon–2 p.m.", "reason": "Gives the midday generator window."},
+        {"fact_id": "F4", "status": "covered", "response_quote": "5–7 p.m.", "reason": "Gives the evening generator window."},
+        {"fact_id": "F5", "status": "covered", "response_quote": "they are prohibited at other times", "reason": "States the outside-hours prohibition."}
+      ],
+      "behaviors": [],
+      "claims": [
+        {"claim_index": 0, "status": "supported", "source_evidence": [{"chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72", "quote": "Quiet hours are from 10 pm to 6 am."}], "reason": "The cited regulation gives the quiet-hours interval."},
+        {"claim_index": 1, "status": "supported", "source_evidence": [{"chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72", "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."}, {"chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72", "quote": "Generator use is not allowed at other times."}], "reason": "The cited regulation supports all windows and the prohibition at other times."}
+      ],
+      "additional_answer_issues": [],
+      "notes": "Complete and grounded."
+    }
+  ]
+}

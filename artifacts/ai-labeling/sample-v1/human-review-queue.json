@@ -1,0 +1,39 @@
+{
+  "status": "human_review_pending",
+  "author": "root AI inspection; not an adjudication",
+  "no_label_files_rewritten": true,
+  "items": [
+    {
+      "item_id": "AL05",
+      "review_focus": "The question says January without a year. All reviewers use the Winter 2026–27 table. Decide whether the intended year should be stated in a future revised sample; preserve this version and its original labels."
+    },
+    {
+      "item_id": "AL06",
+      "review_focus": "Keep the one-way distance and round-trip time distinct. Check the table header/legend, blank DW cell, and TF=Y mapping; a blank cell is not an explicit No."
+    },
+    {
+      "item_id": "AL07",
+      "review_focus": "Check Yosemite’s leash-or-other-physical-restraint qualification, paved-path permissions, Wawona Meadow Loop and other listed road exceptions. Do not let a general trail-ban sentence contradict permitted paved trails. Claude compresses the leash requirement and the list of exceptions; the Codex references include different amounts of detail. Decide which facts are essential, without rewarding verbosity alone."
+    },
+    {
+      "item_id": "AL09",
+      "review_focus": "All references distinguish saved information from live availability. Codex references add the hiking PDF’s explicit South Kaibab no-water statement; Claude focuses on the blank DW table cell. Decide whether the extra independent source statement belongs in the required reference facts. A blank table cell alone is not proof of absence."
+    },
+    {
+      "item_id": "AL10",
+      "review_focus": "Check the revised August 14 closure against the original September 7 date and the night-before-closing convention. The inferred August 13 night must remain an inference from the saved rule, not a claim of actual campsite occupancy or guaranteed access."
+    },
+    {
+      "item_id": "AL13/AL14/AL15",
+      "review_focus": "Refusals concern private, live and future facts unavailable to a saved public corpus. Corpus-wide lexical scans are supporting search records, not proof of semantic absence or a claim about the entire internet."
+    },
+    {
+      "item_id": "AL16",
+      "review_focus": "Claude lists the ambiguity itself as an unquoted required fact; Codex uses no factual evidence. This is a question/rubric observation, not a missing NPS citation."
+    },
+    {
+      "item_id": "AL18",
+      "review_focus": "Preserve individually trained disability-related work/tasks versus emotional support or comfort. Do not turn the reference into a claim that psychiatric disabilities cannot qualify."
+    }
+  ]
+}

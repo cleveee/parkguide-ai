@@ -1,0 +1,105 @@
+{
+  "review_version": "report-review-v1",
+  "reviewed_at": "2026-10-10T18:20:00-05:00",
+  "report": "reports/GOLD_MATRIX_EVALUATION.md",
+  "status": "pass_with_nonblocking_clarity_note",
+  "scope": {
+    "read_only": true,
+    "arithmetic_and_provenance_only": true,
+    "semantic_judgments_regraded": false,
+    "providers_called": false,
+    "git_mutations": false
+  },
+  "verified_numbers": {
+    "fresh_calls": "40/40",
+    "execution_errors": 0,
+    "action_correct": "37/40",
+    "action_micro": {"precision": 0.925, "recall": 0.925, "f1": 0.925},
+    "action_macro": {"precision": 0.9090909091, "recall": 0.9666666667, "f1": 0.9298245614},
+    "semantic_summary": {
+      "required_facts": "55/75 (73.3%)",
+      "behaviors": "30/42 (71.4%)",
+      "claim_identity": "40/40",
+      "claim_support": "40/40 (100.0%)",
+      "full_rubric": "21/40"
+    },
+    "retrieval": {
+      "scorable_cases": 30,
+      "known_relevant_chunks": 44,
+      "at_5": {"hits": 35, "retrieved": 150, "known_relevant": 44, "micro_precision": 0.2333333333, "micro_recall": 0.7954545455, "micro_f1": 0.3608247423},
+      "at_20": {"hits": 43, "retrieved": 600, "known_relevant": 44, "micro_precision": 0.0716666667, "micro_recall": 0.9772727273, "micro_f1": 0.1335403727},
+      "fact_coverage": {"at_5": 0.8416666667, "at_20": 0.9666666667, "generation_context": 0.8416666667},
+      "mrr": 0.7944444444,
+      "ndcg_at_10": 0.7693303210,
+      "missing_qrels_items": []
+    },
+    "latency": {"p50_ms": 4143.1, "p95_ms": 34922.24},
+    "hashes": {
+      "consensus": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+      "responses": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+      "metrics_matches_saved_inputs": true
+    }
+  },
+  "verified_provenance": {
+    "independent_labelers": {
+      "count": 5,
+      "labels": 200,
+      "per_labeler": 40,
+      "action_distribution_each": {"answer": 30, "refuse": 8, "clarify": 2},
+      "agreement": {"pairwise": 1.0, "leave_one_out_f1": 1.0, "fleiss_kappa": 1.0},
+      "fact_counts_and_quotes": {
+        "codex-sol": {"facts": 77, "quotes": 63, "represented": "75/75"},
+        "codex-astra": {"facts": 71, "quotes": 70, "represented": "73/75"},
+        "codex-luna": {"facts": 66, "quotes": 57, "represented": "70/75"},
+        "claude-opus": {"facts": 83, "quotes": 81, "represented": "74/75"},
+        "claude-sonnet": {"facts": 60, "quotes": 59, "represented": "71/75"}
+      }
+    },
+    "adjudicator": {"configured_model": "gpt-6-sol", "reasoning_effort": "high", "no_bot_outputs_read": true, "human_verified": false},
+    "semantic_assessor": {"assessor_count": 1, "configured_model": "gpt-5.6-sol", "reasoning_effort": "high", "human_review": "pending", "network_used": false},
+    "execution": {"fresh_attempts": 40, "local_chat_answer": true, "rerank_enabled": false, "remote_vercel_or_ui": false},
+    "source_freeze": {"original_frozen_adjudication_sha256": "ced4667b5b2e9d125f30ae0a0d9bae9c50064156d05527547fe28a878815de74", "supplement_used_for_scores": false, "actions_facts_votes_rubrics_unchanged": true}
+  },
+  "verified_limitations": [
+    "Human verification is pending; semantic figures are from one AI assessor and remain provisional.",
+    "The 40-case source-guided sample used earlier candidate evidence and is a development diagnostic, not a held-out benchmark or exhaustive absence study.",
+    "Qrels cover declared evidence alternatives only; rejected-candidate precision/recall/F1 is unavailable without a labeled candidate universe.",
+    "The late M005 source-only supplement is retained separately and excluded from scored frozen references."
+  ],
+  "local_links": {
+    "checked": 20,
+    "missing": [],
+    "checked_targets": [
+      "artifacts/gold-matrix-v1/reviewers/codex-sol/labels.raw.json",
+      "artifacts/gold-matrix-v1/reviewers/codex-astra/labels.raw.json",
+      "artifacts/gold-matrix-v1/reviewers/codex-luna/labels.raw.json",
+      "artifacts/gold-matrix-v1/reviewers/claude-opus/labels.raw.json",
+      "artifacts/gold-matrix-v1/reviewers/claude-sonnet/labels.raw.json",
+      "data/evaluation/gold-matrix-v1/gold-consensus.jsonl",
+      "artifacts/gold-matrix-v1/freeze-incident.json",
+      "artifacts/gold-matrix-v1/result-manifest.json",
+      "artifacts/gold-matrix-v1/metrics.json",
+      "artifacts/gold-matrix-v1/per-item-metrics.jsonl",
+      "artifacts/gold-matrix-v1/agreement.json",
+      "artifacts/gold-matrix-v1/qrels.json",
+      "artifacts/gold-matrix-v1/chatbot/responses.jsonl",
+      "artifacts/gold-matrix-v1/semantic-assessment.json",
+      "artifacts/gold-matrix-v1/adjudication.frozen.json",
+      "artifacts/gold-matrix-v1/metrics-review-final.json",
+      "docs/EVALUATION_FUNCTIONALITY.md",
+      "scripts/gold_matrix.py",
+      "docs/AI_LABELING_SAMPLE.md",
+      "reports/hallucination-experiment-20261010/REPORT.md"
+    ]
+  },
+  "issues": [
+    {
+      "severity": "low",
+      "status": "nonblocking",
+      "finding": "The report says a separate semantic assessor graded responses, but does not explicitly state that the assessor count is one.",
+      "evidence": "artifacts/gold-matrix-v1/semantic-provenance.json reports assessor_count=1.",
+      "recommended_clarity": "Add 'one AI semantic assessor' beside the semantic results so readers do not infer independent assessor replication."
+    }
+  ],
+  "arithmetic_result": "No material arithmetic or provenance defect found."
+}

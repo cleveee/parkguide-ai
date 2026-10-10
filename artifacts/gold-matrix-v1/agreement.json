@@ -1,0 +1,297 @@
+{
+  "pairwise_action_agreement": {
+    "codex-sol": {
+      "codex-sol": 1.0,
+      "codex-astra": 1.0,
+      "codex-luna": 1.0,
+      "claude-opus": 1.0,
+      "claude-sonnet": 1.0
+    },
+    "codex-astra": {
+      "codex-sol": 1.0,
+      "codex-astra": 1.0,
+      "codex-luna": 1.0,
+      "claude-opus": 1.0,
+      "claude-sonnet": 1.0
+    },
+    "codex-luna": {
+      "codex-sol": 1.0,
+      "codex-astra": 1.0,
+      "codex-luna": 1.0,
+      "claude-opus": 1.0,
+      "claude-sonnet": 1.0
+    },
+    "claude-opus": {
+      "codex-sol": 1.0,
+      "codex-astra": 1.0,
+      "codex-luna": 1.0,
+      "claude-opus": 1.0,
+      "claude-sonnet": 1.0
+    },
+    "claude-sonnet": {
+      "codex-sol": 1.0,
+      "codex-astra": 1.0,
+      "codex-luna": 1.0,
+      "claude-opus": 1.0,
+      "claude-sonnet": 1.0
+    }
+  },
+  "leave_one_out_action_metrics": {
+    "codex-sol": {
+      "n": 40,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "micro_precision": 1.0,
+      "micro_recall": 1.0,
+      "micro_f1": 1.0,
+      "per_class": [
+        {
+          "class": "answer",
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "support": 30,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "refuse",
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "support": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "clarify",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ],
+      "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+      "excluded_no_other_reviewer_majority": [],
+      "meaning": "agreement with the other four reviewers, not factual accuracy"
+    },
+    "codex-astra": {
+      "n": 40,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "micro_precision": 1.0,
+      "micro_recall": 1.0,
+      "micro_f1": 1.0,
+      "per_class": [
+        {
+          "class": "answer",
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "support": 30,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "refuse",
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "support": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "clarify",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ],
+      "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+      "excluded_no_other_reviewer_majority": [],
+      "meaning": "agreement with the other four reviewers, not factual accuracy"
+    },
+    "codex-luna": {
+      "n": 40,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "micro_precision": 1.0,
+      "micro_recall": 1.0,
+      "micro_f1": 1.0,
+      "per_class": [
+        {
+          "class": "answer",
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "support": 30,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "refuse",
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "support": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "clarify",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ],
+      "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+      "excluded_no_other_reviewer_majority": [],
+      "meaning": "agreement with the other four reviewers, not factual accuracy"
+    },
+    "claude-opus": {
+      "n": 40,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "micro_precision": 1.0,
+      "micro_recall": 1.0,
+      "micro_f1": 1.0,
+      "per_class": [
+        {
+          "class": "answer",
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "support": 30,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "refuse",
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "support": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "clarify",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ],
+      "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+      "excluded_no_other_reviewer_majority": [],
+      "meaning": "agreement with the other four reviewers, not factual accuracy"
+    },
+    "claude-sonnet": {
+      "n": 40,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "micro_precision": 1.0,
+      "micro_recall": 1.0,
+      "micro_f1": 1.0,
+      "per_class": [
+        {
+          "class": "answer",
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "support": 30,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "refuse",
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "support": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "clarify",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ],
+      "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+      "excluded_no_other_reviewer_majority": [],
+      "meaning": "agreement with the other four reviewers, not factual accuracy"
+    }
+  },
+  "consensus_fact_representation": {
+    "codex-sol": {
+      "represented": 75,
+      "total": 75,
+      "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+    },
+    "codex-astra": {
+      "represented": 73,
+      "total": 75,
+      "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+    },
+    "codex-luna": {
+      "represented": 70,
+      "total": 75,
+      "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+    },
+    "claude-opus": {
+      "represented": 74,
+      "total": 75,
+      "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+    },
+    "claude-sonnet": {
+      "represented": 71,
+      "total": 75,
+      "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+    }
+  },
+  "fleiss_kappa": 1.0,
+  "unanimous_action_items": 40,
+  "items": 40,
+  "interpretation": "Agreement is correlated AI agreement, not human correctness; only action labels, not semantic facts, are compared numerically."
+}

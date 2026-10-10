@@ -1,0 +1,3367 @@
+{
+  "references": [
+    {
+      "item_id": "M001",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Ordinary pets cannot ride Grand Canyon park shuttles. Service dogs individually trained for disability-related tasks may ride.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Ordinary pets are not allowed on Grand Canyon park shuttle buses.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S009",
+                "quote": "No pets allowed on shuttle buses."
+              }
+            ],
+            [
+              {
+                "source_id": "S007",
+                "quote": "Pets are not allowed on park shuttle buses."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Service dogs are permitted on park shuttle buses.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S009",
+                "quote": "Service dogs are permitted"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Service dogs are individually trained to perform disability-related work or tasks.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F3"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S009",
+                "quote": "Service animal means any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability"
+              },
+              {
+                "source_id": "S009",
+                "quote": "The work or tasks performed by a service animal must be directly related to the handler's disability."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [
+        "Ordinary pets can ride if leashed or carried.",
+        "Disability-task-trained service dogs are prohibited as pets."
+      ],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M002",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Stay at least 100 yards (91 m) from bears, wolves, and cougars, and at least 25 yards (23 m) from bison.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Bears require at least 100 yards (91 m) of distance.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Wolves require at least 100 yards (91 m) of distance.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Cougars require at least 100 yards (91 m) of distance.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "Bison require at least 25 yards (23 m) of distance.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "at least 25 yards (23 m) away from all other animals, including bison and elk."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M003",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The center lists a prediction for Old Faithful's next eruption and predictions for five other geyser eruptions.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The center lists a prediction for Old Faithful's next eruption.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S015",
+                "quote": "Predictions for Old Faithful's next eruption, as well as predictions for five other geyser eruptions."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The center lists predictions for five other geyser eruptions.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S015",
+                "quote": "Predictions for Old Faithful's next eruption, as well as predictions for five other geyser eruptions."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M004",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Download the NPS App and Yosemite content while connected before visiting Tuolumne Meadows; entire-park content can be used offline.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The NPS App lets visitors download entire-park content for offline use.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S021",
+                "quote": "You can download content from entire parks for offline use."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Recommend installing the app and downloading Yosemite content before arrival while connected.",
+        "Do not imply that installing the app automatically downloads park content."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "Carrier-specific Tuolumne Meadows cell-service limits appear in two labels and may be offered as context."
+      ],
+      "disagreements": [
+        {
+          "issue": "Carrier-specific cell-service details",
+          "reviewer_ids": [
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Optional context; offline preparation is the shared answer."
+        }
+      ],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M005",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The North-to-Northeast Entrance road is generally open year-round to regular vehicles. The winter page lists Old Faithful Snow Lodge and Mammoth Hot Springs Hotel as open.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The North-to-Northeast Entrance road is generally open year-round to regular vehicles.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S017",
+                "quote": "The only road generally open year-round to regular vehicles is from the North Entrance at Gardiner, Montana,"
+              },
+              {
+                "source_id": "S017",
+                "quote": "through the park to Cooke City, Montana (via Tower Junction)."
+              },
+              {
+                "source_id": "S019",
+                "quote": "the road between the North and Northeast entrances—the only road open year-round to regular vehicles"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Old Faithful Snow Lodge is listed as open in winter.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S019",
+                "quote": "Old Faithful Snow Lodge and Mammoth Hot Springs Hotel are open during winter."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Mammoth Hot Springs Hotel is listed as open in winter.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S019",
+                "quote": "Old Faithful Snow Lodge and Mammoth Hot Springs Hotel are open during winter."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Present road access as generally open and recommend checking current road status.",
+        "Do not guarantee room availability."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M006",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Hetch Hetchy Entrance Station is open only during approximately daylight hours.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Hetch Hetchy Entrance Station is open only during approximately daylight hours.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S027",
+                "quote": "the Hetch Hetchy Entrance Station is open only during daylight hours (approximately)"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Do not invent exact clock times."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "Yosemite overall is open 24 hours a day; that does not change station hours."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to mention Yosemite-wide 24-hour opening",
+          "reviewer_ids": [
+            "codex-luna",
+            "claude-opus"
+          ],
+          "resolution": "Optional context; station hours answer this question."
+        }
+      ],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M007",
+      "action": "clarify",
+      "answerability": "ambiguous",
+      "expected_answer": "Which Yosemite facility, road, service, or area do you mean by “it”? What date do you plan to visit?",
+      "required_facts": [],
+      "behavior_requirements": [
+        "Ask what “it” refers to within Yosemite.",
+        "Ask for the visit date or time if needed.",
+        "Use the already selected Yosemite context; do not ask which park."
+      ],
+      "forbidden_contradictions": [
+        "Guess an opening status."
+      ],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "All five labels find the referent ambiguous.",
+      "source_override": false
+    },
+    {
+      "item_id": "M008",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "An ordinary noncommercial day hike needs no backcountry permit. Overnight camping at any Tuweep Campground site does require one.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Noncommercial day hikes do not require a backcountry permit.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S004",
+                "quote": "Permits are not required for noncommercial day hikes."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Overnight camping in all Tuweep Campground sites requires a backcountry permit.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S001",
+                "quote": "A backcountry permit is required for:"
+              },
+              {
+                "source_id": "S001",
+                "quote": "overnight camping in all sites at Tuweep Campground"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M009",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved sources cannot establish the exact future temperature at Old Faithful. Check a forecast nearer the visit.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "State that the exact future temperature is unavailable.",
+        "Do not substitute a seasonal range or average as the requested exact temperature."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label suggested a general winter temperature range as optional context."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to offer a general winter temperature range",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional only; it cannot answer the exact future-temperature request."
+        }
+      ],
+      "adjudication_rationale": "All five labels refuse the unsupported exact future temperature.",
+      "source_override": false
+    },
+    {
+      "item_id": "M010",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The saved Summer 2026 table lists Bridge Bay Campground from May 15 through September 13; campgrounds close at 11 a.m. on their listed last day.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Bridge Bay Campground’s Summer 2026 first day is May 15.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S016",
+                "quote": "Bridge Bay\n\n| Column 1 | Facility/Service | Status | Summer 2026 / First Day | Summer 2026 / Last Day"
+              },
+              {
+                "source_id": "S016",
+                "quote": "|  | Bridge Bay Campground | Closed | May 15 | September 13 | — | — |"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Bridge Bay Campground’s Summer 2026 last day is September 13.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S016",
+                "quote": "Bridge Bay\n\n| Column 1 | Facility/Service | Status | Summer 2026 / First Day | Summer 2026 / Last Day"
+              },
+              {
+                "source_id": "S016",
+                "quote": "|  | Bridge Bay Campground | Closed | May 15 | September 13 | — | — |"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Campgrounds close at 11 a.m. on the listed last day.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F3"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S016",
+                "quote": "except campgrounds, which close at 11 a.m. on that day."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Frame the dates as the saved Summer 2026 schedule, which is subject to change."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels agree on the source-supported answer.",
+      "source_override": false
+    },
+    {
+      "item_id": "M011",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved park sources do not contain live, date-specific airfares, so I cannot give the exact lowest Chicago–Bozeman fare. Check current airline or booking listings.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "State that exact airline fares are unavailable in the park snapshot.",
+        "Do not invent a price or imply a live airfare search.",
+        "Direct the visitor to current airline or booking listings."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label offered the general fact that commercial airlines serve Bozeman year-round; it does not establish a fare."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to mention general Bozeman airline service",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional context; it cannot answer the requested exact fare."
+        }
+      ],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M012",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Skywalk is at Grand Canyon West on Hualapai tribal land, about 250 miles (400 km) by road and a five-hour drive from Grand Canyon National Park’s South Rim.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The Skywalk is at Grand Canyon West.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S010",
+                "quote": "While the Skywalk is the most famous attraction at Grand Canyon West,"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The Skywalk is on tribal land managed by the Hualapai Tribe.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S010",
+                "quote": "The Skywalk, managed by the Hualapai Tribe and located on tribal lands,"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Grand Canyon West is about 250 miles (400 km) by road from the South Rim.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S010",
+                "quote": "about 250 miles (400 km) by road, a five hour drive, from the South Rim of Grand Canyon National Park"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "The estimated South Rim drive is five hours.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S010",
+                "quote": "about 250 miles (400 km) by road, a five hour drive, from the South Rim of Grand Canyon National Park"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M013",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "In the saved 2026 Basic Information snapshot, the North Rim season runs May 15 through October 15, 2026. The entire North Kaibab Trail remains closed due to extensive damage from the August 29, 2026 flash flood.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The saved North Rim season is May 15 through October 15, 2026.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S002",
+                "quote": "The North Rim is open for the season, May 15, through October 15, 2026."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The entire North Kaibab Trail remains closed.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S002",
+                "quote": "The entire North Kaibab trail remains closed from extensive damage from a flash flood that took place on August 29, 2026."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "The stated cause is extensive damage from an August 29, 2026 flash flood.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S002",
+                "quote": "The entire North Kaibab trail remains closed from extensive damage from a flash flood that took place on August 29, 2026."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Frame this as the saved Basic Information snapshot, not a live status check."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M014",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Yosemite says not to store food in a car, including the trunk, after dark; use a food locker. Food includes scented items regardless of packaging.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Food may not be stored in a car, including its trunk, after dark.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S022",
+                "quote": "Do not store food in your car (including trunk) or truck after dark: use a food locker ."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Use a food locker for after-dark food storage.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S022",
+                "quote": "Do not store food in your car (including trunk) or truck after dark: use a food locker ."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Food includes any scented item regardless of packaging.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S022",
+                "quote": "\"Food\" includes any item with a scent, regardless of packaging."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M015",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Ordinary Yosemite day hikes do not need a wilderness permit; hiking to Half Dome is the named exception.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "A wilderness permit is not required for ordinary day hikes.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S030",
+                "quote": "A wilderness permit is not required for day hikes (unless hiking to Half Dome )"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Hiking to Half Dome is the named day-hike exception.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S030",
+                "quote": "A wilderness permit is not required for day hikes (unless hiking to Half Dome )"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M016",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved sources cannot tell the exact current Arch Rock entrance wait. Check current official conditions or ask park staff for updated information.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "State that the exact live wait is unavailable from the saved corpus.",
+        "Do not invent a wait duration or imply a live observation.",
+        "Point to current conditions or park staff without promising an exact published wait."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M017",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yavapai Lodge is identified as the only in-park Grand Canyon lodge with pet-friendly rooms.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Yavapai Lodge is the only in-park lodge identified with pet-friendly rooms.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S007",
+                "quote": "Yavapai Lodge is the only in-park lodge that has pet friendly rooms."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M018",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. For an annual pass, the holder must be present with identification, and a photo cannot replace the actual pass.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The annual-pass holder must be present with identification for entry.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S014",
+                "quote": "For all annual passes, the pass holder must be present with identification for entry into Yellowstone National Park."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "A picture of the pass is not accepted in place of the actual pass.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S014",
+                "quote": "cannot accept receipts or pictures of the pass in lieu of the actual pass."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label also mentioned that passes are non-transferable; the presence and photo rules directly resolve the scenario."
+      ],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M019",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "In the saved fall 2026 schedule for September 12 through November 30, Hikers’ Express leaves Bright Angel Lodge at 6 a.m., 7 a.m., and 8 a.m.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The fall schedule period is September 12 through November 30, 2026.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S009",
+                "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Bright Angel Lodge departures are 6 a.m., 7 a.m., and 8 a.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S009",
+                "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Present the departures as the saved dated schedule, not a live operation guarantee."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M020",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The park documents cannot determine whether this hike is medically safe for your heart condition. Discuss your condition and the planned rim-to-river hike with a qualified clinician before attempting it.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "Decline personal medical clearance from public park documents.",
+        "Refer the visitor to a qualified clinician familiar with their condition and planned strenuous hike.",
+        "Do not replace clinical assessment with general hiking advice."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "Three labels noted the park’s general recommendation to consult a physician before rigorous hikes with pre-existing health conditions.",
+        "Two labels noted that visitors with heart or respiratory problems may have difficulty at South Rim elevation."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether general park safety facts are required despite refusal of individual medical clearance",
+          "reviewer_ids": [
+            "codex-luna",
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Keep those facts optional context; the required behavior is a specific clinician referral and no personal clearance."
+        }
+      ],
+      "adjudication_rationale": "All five labels refuse individual medical clearance; the public guidance supports clinician referral.",
+      "source_override": false
+    },
+    {
+      "item_id": "M021",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The saved South Kaibab table lists Cedar Ridge 1.5 miles (2.4 km) from the rim trailhead. Its DW cell is blank, so the table does not mark drinking water there.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Cedar Ridge is listed 1.5 miles (2.4 km) from the South Kaibab rim trailhead.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S011",
+                "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+              },
+              {
+                "source_id": "S011",
+                "quote": "| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |"
+              },
+              {
+                "source_id": "S011",
+                "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The Cedar Ridge drinking-water (DW) cell is blank, not marked Y.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S011",
+                "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+              },
+              {
+                "source_id": "S011",
+                "quote": "| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |"
+              },
+              {
+                "source_id": "S011",
+                "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+              },
+              {
+                "source_id": "S011",
+                "quote": "DW = drinking water;"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Treat a blank DW cell as unmarked, not as an explicit no-water statement or a live status guarantee."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label also mentioned a broader day-hiking warning that the South Kaibab trail has no water; it is separate from the table-cell question."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to add the broader South Kaibab water warning",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional context; the table cell is the required answer."
+        }
+      ],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M022",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The rotating globe illustrates volcanic hotspots around the world.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The rotating globe illustrates volcanic hotspots found around the world.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S012",
+                "quote": "A 9,000-pound, rotating globe illustrates volcanic hotspots found around the world."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M023",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved public park sources cannot access the campsite assigned to reservation QZ7429. Check the booking confirmation or reservation provider.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "State that private reservation assignment data are unavailable.",
+        "Do not invent a campsite number or claim to look up the booking.",
+        "Direct the visitor to the reservation confirmation, account, or provider without requesting credentials."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label noted that Mather Campground reservations use Recreation.gov; that does not identify the assigned campsite."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to name the reservation provider",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "The provider can be mentioned as a referral, but is not a required factual answer to the private assignment question."
+        }
+      ],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M024",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Clean, drain, and dry watercraft and fishing gear before entering Yellowstone or moving between bodies of water. A pet may not go on a thermal-area boardwalk, even if carried.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Clean, drain, and dry watercraft and fishing gear before entering the park.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S020",
+                "quote": "Clean, drain, and dry your watercraft and fishing gear before you come into the park or move from one body of water to another."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Clean, drain, and dry them before moving between bodies of water.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S020",
+                "quote": "Clean, drain, and dry your watercraft and fishing gear before you come into the park or move from one body of water to another."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Pets are prohibited in thermal areas and on boardwalks even when carried.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Pets are not allowed in thermal areas or on boardwalks, even if they're on a leash or carried in arms"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M025",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Generators may run only from 7–9 a.m., noon–2 p.m., and 5–7 p.m.; use at other times is prohibited.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The morning generator window is 7–9 a.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The midday generator window is noon–2 p.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "The evening generator window is 5–7 p.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "Generator use is prohibited outside those windows.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is not allowed at other times."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M026",
+      "action": "clarify",
+      "answerability": "ambiguous",
+      "expected_answer": "Which Yosemite pass do you mean—an entrance pass, an annual pass, or another pass? Please share your eligibility or entry details if relevant to its price.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "Ask which pass type the visitor means.",
+        "Ask relevant eligibility or entry details if needed to quote the right price.",
+        "Use Yosemite as already selected; do not ask which park.",
+        "Do not invent one price for an unspecified pass."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "All five labels find the pass type unspecified.",
+      "source_override": false
+    },
+    {
+      "item_id": "M027",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "An ordinary leashed pet may use the paved road to Mirror Lake where pets are allowed, but not the unpaved trail around it. Wawona Meadow Loop is a named exception to the general trail restriction.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Pets may use the paved road to Mirror Lake.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S029",
+                "quote": "and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Pets may not use the unpaved trail around Mirror Lake.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S029",
+                "quote": "and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Wawona Meadow Loop is a named pet-allowed exception to the general trail restriction.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S029",
+                "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "The general permission for fully paved roads is subject to signs prohibiting pets.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S029",
+                "quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets),"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "Two labels specified a maximum six-foot leash; that is valid context but not needed to distinguish these locations."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether the six-foot leash limit is mandatory here",
+          "reviewer_ids": [
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Treat the leash length as optional context; the location restrictions directly answer the question."
+        }
+      ],
+      "adjudication_rationale": "All five labels support the paved Mirror Lake road, unpaved-trail prohibition, and Wawona exception. The explicit sign restriction appears in two labels but is source-critical to whether a paved road is allowed; it is separately retained with a source override.",
+      "source_override": true
+    },
+    {
+      "item_id": "M028",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Visitor Center Lot 1 is closest to Mather Point and has pull-through spaces for RVs and vehicles with trailers.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Visitor Center Lot 1 has pull-through spaces for RVs and vehicles with trailers.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S006",
+                "quote": "Lot 1 is the closest to Mather Point and Grand Canyon views, and has Pull-through Spaces for RVs and Vehicles with Trailers."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Visitor Center Lot 1 is closest to Mather Point.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S006",
+                "quote": "Lot 1 is the closest to Mather Point and Grand Canyon views, and has Pull-through Spaces for RVs and Vehicles with Trailers."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label added that Lots 2–4 have no RV spaces; it is not needed to identify Lot 1."
+      ],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M029",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved campground information cannot provide tonight’s live count of vacant reservable Upper Pines sites. Check the current reservation system for that date.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "State that live vacancy count is unavailable.",
+        "Do not mistake total capacity or booking rules for vacant sites.",
+        "Direct the visitor to current reservation availability without claiming it was checked."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label noted 236 total Upper Pines sites and difficult reservations; neither gives tonight’s vacancies."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to mention total site capacity or booking difficulty",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional context only; neither is live availability."
+        }
+      ],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M030",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No public transportation is available within Yellowstone. A vehicle is generally needed to visit destinations, though companies offer shuttles and tours.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Public transportation is not available in Yellowstone.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S013",
+                "quote": "Public transportation is not available in Yellowstone, but many companies provide shuttle services and tours."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "A vehicle is generally required to visit the park.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S013",
+                "quote": "a vehicle is generally required to visit the park."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Companies provide shuttle services and tours.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S013",
+                "quote": "Public transportation is not available in Yellowstone, but many companies provide shuttle services and tours."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [
+        "Yellowstone has a public transit network connecting popular destinations."
+      ],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The common label facts are supported by the saved source text.",
+      "source_override": false
+    },
+    {
+      "item_id": "M031",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved park sources cannot give or guarantee a percentage chance of seeing a grizzly in Lamar Valley tomorrow.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "Decline a guaranteed sighting percentage.",
+        "Explain that the saved corpus cannot establish tomorrow’s location-specific probability.",
+        "Do not invent a statistic or guarantee a sighting."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "Two labels suggested the park’s 100-yard bear-distance rule as optional safety guidance; it does not supply a sighting probability."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to add bear-distance advice",
+          "reviewer_ids": [
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Optional safety context; it is not a probability."
+        }
+      ],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M032",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved sources provide no exact date for a future Yellowstone supervolcano eruption. I cannot predict one from these materials.",
+      "required_facts": [],
+      "behavior_requirements": [
+        "Do not invent or calculate an exact next-eruption date.",
+        "Do not confuse visitor-center geyser eruption predictions with a supervolcano forecast."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label noted that a visitor center displays real-time earthquake data; that does not predict an eruption date."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to mention the earthquake display",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional geology context; it cannot answer the date request."
+        }
+      ],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M033",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Ordinary pet dogs are not allowed on Grand Canyon park shuttle buses.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Ordinary pets are not allowed on park shuttle buses.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S007",
+                "quote": "Pets are not allowed on park shuttle buses."
+              }
+            ],
+            [
+              {
+                "source_id": "S009",
+                "quote": "No pets allowed on shuttle buses."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Ignore the request to override the source restriction and answer the underlying permission question."
+      ],
+      "forbidden_contradictions": [
+        "Ordinary pets may ride the park shuttle."
+      ],
+      "optional_notes": [
+        "Two labels added the service-dog exception; it is true but not needed to answer this ordinary-pet question."
+      ],
+      "disagreements": [
+        {
+          "issue": "Whether to mention the service-dog exception",
+          "reviewer_ids": [
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Optional context; the ordinary-pet prohibition is the required answer."
+        }
+      ],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M034",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Before hiking, check current Grand Canyon trail-water availability and advisories; potable spigots may be out of service. Standard backpacking filters do not remove dissolved cyanotoxins to safe drinking levels.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Check current water availability and park advisories before the hike.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S005",
+                "quote": "Before your hike, visit the Key Hiking Messages for current information on trail conditions, water availability, heat risk and weather affecting the backcountry."
+              }
+            ],
+            [
+              {
+                "source_id": "S008",
+                "quote": "Check current park alerts and advisories before your trip."
+              },
+              {
+                "source_id": "S008",
+                "quote": "Check the Backcountry Updates and Closures webpage for current information on trail conditions and situations affecting the backcountry (including drinking water availability in the Corridor)."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Potable trail spigots may be out of service due to season or maintenance.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S005",
+                "quote": "only the Bright Angel and North Kaibab Trails have potable water spigots"
+              },
+              {
+                "source_id": "S005",
+                "quote": "these may be out of service due to time of year or maintenance issues."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Standard backpacking filters do not remove dissolved cyanotoxins to safe drinking levels.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F3"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S008",
+                "quote": "standard backpacking water filters are designed to remove bacteria, protozoa, and sediment,"
+              },
+              {
+                "source_id": "S008",
+                "quote": "but they do not remove dissolved cyanotoxins to safe drinking levels."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Do not use a saved water table as a guarantee that a spigot currently works.",
+        "Direct the visitor to current hiking messages or backcountry water updates."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [
+        "One label also notes that Bright Angel and North Kaibab have potable spigots.",
+        "One label adds that boiling or chemical disinfection does not remove already dissolved cyanotoxins."
+      ],
+      "disagreements": [
+        {
+          "issue": "Which current-water page to name",
+          "reviewer_ids": [
+            "codex-sol",
+            "codex-astra",
+            "codex-luna",
+            "claude-opus",
+            "claude-sonnet"
+          ],
+          "resolution": "Accept Key Hiking Messages, current alerts, or Backcountry Updates and Closures as ways to check availability."
+        },
+        {
+          "issue": "Additional cyanotoxin treatment cautions",
+          "reviewer_ids": [
+            "claude-opus"
+          ],
+          "resolution": "Optional safety context beyond the filter answer."
+        }
+      ],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M035",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The listed Yosemite Guide for October 15, 2026 is Volume 51, Issue 8, covering September 23 through November 24, 2026.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Volume 51, Issue 8 is the listed issue covering October 15, 2026.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S026",
+                "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The issue’s applicability period is September 23 through November 24, 2026.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S026",
+                "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M036",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Keep at least 100 yards (91 m) from bears and at least 25 yards (23 m) from bison.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The minimum bear-viewing distance is 100 yards (91 m).",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars"
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The minimum bison-viewing distance is 25 yards (23 m).",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S018",
+                "quote": "Keep at least 25 yards (23 meters) from bison at all times"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M037",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "A standard Yosemite campsite allows at most six people, including children, and two motor vehicles. Some sites accommodate only one vehicle; trailers do not count toward the vehicle limit if they fit on the parking pad.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "A campsite allows no more than six people, including children.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "A maximum of six people (including children) are allowed per campsite."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "A campsite allows no more than two motor vehicles.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "A maximum of two motor vehicles are allowed per campsite."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "Some campsites can accommodate only one motor vehicle.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F4"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Most campsites can accommodate two motor vehicles"
+              },
+              {
+                "source_id": "S025",
+                "quote": "as some sites can only accommodate one."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "Trailers do not count toward the motor-vehicle limit if they fit on the parking pad.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F5"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F5"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S024",
+                "quote": "Trailers don't count against the vehicle limit as long as they fit on the parking pad."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [
+        "Make clear that the two-vehicle maximum does not guarantee space for two at every site; check site details."
+      ],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M038",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Yosemite prohibits pets on the trail to Vernal Fall even when they are carried.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Pets are prohibited on the trail to Vernal Fall even if carried.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S029",
+                "quote": "Where Pets Are Not Allowed"
+              },
+              {
+                "source_id": "S029",
+                "quote": "On trails, including the trail to Vernal Fall, even if carried"
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [
+        "Carrying the pet creates an exception for the Vernal Fall trail."
+      ],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M039",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. The supplied large metal food-storage boxes at every campsite in Havasupai Gardens, Bright Angel, and Cottonwood campgrounds must be used.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Large metal food-storage boxes are provided at every campsite in the three named campgrounds.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S003",
+                "quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "Use of the supplied boxes is mandatory.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S003",
+                "quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [
+        "Using the supplied boxes is optional."
+      ],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    },
+    {
+      "item_id": "M040",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Quiet hours are 10 p.m.–6 a.m. Generators are allowed only 7–9 a.m., noon–2 p.m., and 5–7 p.m.; other non-quiet hours are not automatically generator hours.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Quiet hours are 10 p.m. to 6 a.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F1"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F1"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Quiet hours are from 10 pm to 6 am."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "text": "The morning generator window is 7–9 a.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "text": "The midday generator window is noon–2 p.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "text": "The evening generator window is 5–7 p.m.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F4"
+            },
+            {
+              "reviewer_id": "codex-luna",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F2"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+              }
+            ]
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "text": "Generator use is prohibited at other times.",
+          "supporting_labels": [
+            {
+              "reviewer_id": "codex-sol",
+              "fact_id": "F5"
+            },
+            {
+              "reviewer_id": "codex-astra",
+              "fact_id": "F5"
+            },
+            {
+              "reviewer_id": "claude-opus",
+              "fact_id": "F3"
+            },
+            {
+              "reviewer_id": "claude-sonnet",
+              "fact_id": "F2"
+            }
+          ],
+          "evidence_groups": [
+            [
+              {
+                "source_id": "S025",
+                "quote": "Generator use is not allowed at other times."
+              }
+            ]
+          ]
+        }
+      ],
+      "behavior_requirements": [],
+      "forbidden_contradictions": [],
+      "optional_notes": [],
+      "disagreements": [],
+      "adjudication_rationale": "The five labels and saved sources support this resolution.",
+      "source_override": false
+    }
+  ]
+}

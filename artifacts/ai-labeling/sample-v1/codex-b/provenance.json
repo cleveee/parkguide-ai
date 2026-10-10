@@ -1,0 +1,16 @@
+{
+  "reviewer_id": "codex-b",
+  "input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "started_at_utc": "2026-10-10T22:03:06Z",
+  "finished_at_utc": "2026-10-10T22:08:09.533801Z",
+  "model": "inherited parent model",
+  "human_review_pending": true,
+  "execution_limitations": [
+    "Independent AI proposals using only the frozen packet; no human verification.",
+    "No live traffic, private reservation, or future weather access; no browsing or provider requests.",
+    "All ten normalized source documents were read; the other 145 documents are represented by inventory and literal-search records, not full text.",
+    "Normalized PDF text can collapse table layout; lexical nonmatches do not prove semantic absence."
+  ],
+  "self_check": "Passed supplied-schema recursive validation, ordered case IDs, allowed actions, local fact-ID mappings, all factual facts evidenced, exact substrings and 25-word quote limits; jsonschema package unavailable.",
+  "label_count": 18
+}

@@ -1,0 +1,24 @@
+{
+  "prior_exposure": "Author has seen existing development questions and chatbot failures; these are new questions with overlapping themes, not an untouched final test.",
+  "selection": "purposive, three items per stratum; not random",
+  "strata": {
+    "AL01": "factual",
+    "AL02": "factual",
+    "AL03": "factual",
+    "AL04": "multi_hop",
+    "AL05": "multi_hop",
+    "AL06": "multi_hop",
+    "AL07": "comparative",
+    "AL08": "comparative",
+    "AL09": "comparative",
+    "AL10": "temporal",
+    "AL11": "temporal",
+    "AL12": "temporal",
+    "AL13": "unanswerable",
+    "AL14": "unanswerable",
+    "AL15": "unanswerable",
+    "AL16": "ambiguous_adversarial",
+    "AL17": "ambiguous_adversarial",
+    "AL18": "ambiguous_adversarial"
+  }
+}

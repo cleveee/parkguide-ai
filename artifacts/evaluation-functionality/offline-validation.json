@@ -1,0 +1,503 @@
+{
+  "application_requests": 0,
+  "benchmark_eligible": false,
+  "code_commit": "d7c4918e59c959edfb100ea7483061840933dad6",
+  "counts": {
+    "candidate_rows": 74,
+    "original_cross_park_preflight_checks": 12,
+    "request_field_shapes": 74,
+    "source_evidence_units": 103
+  },
+  "dataset_manifest_sha256": "19ff0f5172916100d038fe54ac5ae689e089f650a934e7fa15a6901b338be1d0",
+  "errors": [],
+  "kind": "offline_contract_and_source_integrity_only",
+  "knowledge_categories": {
+    "ambiguous_adversarial": 3,
+    "comparative": 4,
+    "factual": 15,
+    "multi_hop": 6,
+    "temporal": 4,
+    "unanswerable": 8
+  },
+  "knowledge_selected_parks": {
+    "grca": 13,
+    "yell": 13,
+    "yose": 14
+  },
+  "limitations": [
+    "No actual chat, retrieval, generation, citation-support grading, hosted behavior or UI transitions were measured.",
+    "Dialogue API checks used empty history for shape only; actual preceding assistant responses must be carried by a future product runner.",
+    "Human semantic verification and a reviewed grouped dev/test split remain pending.",
+    "Original corpus-QA labeling outputs remain unchanged; none is newly certified as product gold."
+  ],
+  "original_cross_park_preflight_checks": [
+    {
+      "action": "refuse",
+      "item_id": "G022",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yose"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G022",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yell"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G022",
+      "reason": "selected_park_mismatch",
+      "selected_park": "grca"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G023",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yose"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G023",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yell"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G023",
+      "reason": "selected_park_mismatch",
+      "selected_park": "grca"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G024",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yose"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G024",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yell"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G024",
+      "reason": "selected_park_mismatch",
+      "selected_park": "grca"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G025",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yose"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G025",
+      "reason": "selected_park_mismatch",
+      "selected_park": "yell"
+    },
+    {
+      "action": "refuse",
+      "item_id": "G025",
+      "reason": "selected_park_mismatch",
+      "selected_park": "grca"
+    }
+  ],
+  "paid_calls": 0,
+  "preflight_observations": [
+    {
+      "expected_action": "answer",
+      "item_id": "PG001",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG002",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG003",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG004",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG005",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG006",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG007",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG008",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG009",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG010",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG011",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG012",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG013",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG014",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG015",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG016",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG017",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG018",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG019",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG020",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG021",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG022",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG023",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG024",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG025",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG026",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG027",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG028",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG029",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG030",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG031",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG032",
+      "preflight_action": "refuse",
+      "preflight_reason": "private_record_lookup",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG033",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG034",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG035",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG036",
+      "preflight_action": "refuse",
+      "preflight_reason": "live_information_unavailable",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PG037",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "clarify",
+      "item_id": "PG038",
+      "preflight_action": "clarify",
+      "preflight_reason": "missing_reference",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "clarify",
+      "item_id": "PG039",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PG040",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PSC01",
+      "preflight_action": "refuse",
+      "preflight_reason": "selected_park_mismatch",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PSC02",
+      "preflight_action": "refuse",
+      "preflight_reason": "selected_park_mismatch",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PSC03",
+      "preflight_action": "refuse",
+      "preflight_reason": "selected_park_mismatch",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PSC04",
+      "preflight_action": "refuse",
+      "preflight_reason": "selected_park_mismatch",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD001",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD002",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD003",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD004",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD005",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD006",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD007",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "answer",
+      "item_id": "PD008",
+      "preflight_action": null,
+      "preflight_reason": null,
+      "remaining_check": "real retrieval/generation and semantic grading needed"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PD009",
+      "preflight_action": "refuse",
+      "preflight_reason": "live_information_unavailable",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "refuse",
+      "item_id": "PD010",
+      "preflight_action": "refuse",
+      "preflight_reason": "private_record_lookup",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "clarify",
+      "item_id": "PD011",
+      "preflight_action": "clarify",
+      "preflight_reason": "missing_reference",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    },
+    {
+      "expected_action": "clarify",
+      "item_id": "PD012",
+      "preflight_action": "clarify",
+      "preflight_reason": "missing_reference",
+      "remaining_check": "controlled behavior observed; quality rubric still requires review"
+    }
+  ],
+  "source_integrity_and_static_contract_pass": true
+}

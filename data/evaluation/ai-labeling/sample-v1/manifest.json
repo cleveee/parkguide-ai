@@ -1,0 +1,27 @@
+{
+  "active_build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "benchmark_eligible": false,
+  "case_count": 18,
+  "corpus_document_count": 155,
+  "created_at": "2026-10-10T22:02:08.187549+00:00",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "dataset_id": "parkguide-ai-label-sample-v1",
+  "existing_gold_files_modified": false,
+  "files": {
+    "cases.json": "7797d27e344f3a91a1ec214a8a4ae891f26cc93244cd23ab8c3259cb1f8023cf",
+    "instructions.txt": "67261b7cee62f5095cb5651c3460c412ded9966d6d7451ce05762c613db62225",
+    "labels.schema.json": "6ff2b224a4dc7a21be230985946fe7ac11c403d6c9e5ff56a75fbb281110a071",
+    "sampling-plan.json": "25c79745844651f9762b565177fd55b8b9899001545f3f54227ef64133af0a2b",
+    "source-packet.json": "0952bf8d96ede31a5f789063a2a23cc2642f8ce07102f1e5441e0320f58d61d1"
+  },
+  "git_commit_at_freeze": "80fdab1bd1cc3821a76560af0d38b25267a120da",
+  "human_review_pending": true,
+  "model_calls_before_freeze": 0,
+  "protected_files": {
+    "data/evaluation/gold-authored-original.jsonl": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+    "data/evaluation/gold-draft-manifest.json": "07eae971504341e572a8c3404f8a13f00af94ecc77d7d1ccd224f03092faecb2",
+    "data/evaluation/gold-drafts.jsonl": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47"
+  },
+  "provided_full_source_count": 10,
+  "source_text_matches_database": true
+}

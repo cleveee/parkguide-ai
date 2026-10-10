@@ -1,0 +1,22 @@
+{
+  "cases": 40,
+  "unique_ids": 40,
+  "selected_park_counts": {
+    "grca": 13,
+    "yell": 13,
+    "yose": 14
+  },
+  "category_lineage_counts": {
+    "comparative": 4,
+    "factual": 15,
+    "multi_hop": 6,
+    "ambiguous_adversarial": 3,
+    "unanswerable": 8,
+    "temporal": 4
+  },
+  "multi_hop_lineage_with_single_page_reference": [
+    "PG016"
+  ],
+  "category_note": "Category labels preserve original candidate lineage; independent source consensus can collapse a presumed multi-hop case to one page.",
+  "human_verified": false
+}

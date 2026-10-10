@@ -1,0 +1,124 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "labels": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "enum": [
+              "answer",
+              "refuse",
+              "clarify"
+            ]
+          },
+          "answerability": {
+            "enum": [
+              "answerable",
+              "partially_answerable",
+              "unanswerable",
+              "ambiguous"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "fact_ids": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "source_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "quote",
+                "fact_ids"
+              ],
+              "type": "object"
+            },
+            "type": "array",
+            "maxItems": 8
+          },
+          "expected_answer": {
+            "type": "string"
+          },
+          "forbidden_contradictions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "item_id": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "required_facts": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "fact_id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fact_id",
+                "text"
+              ],
+              "type": "object"
+            },
+            "type": "array",
+            "maxItems": 6
+          },
+          "behavior_requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "item_id",
+          "action",
+          "answerability",
+          "expected_answer",
+          "required_facts",
+          "forbidden_contradictions",
+          "evidence",
+          "rationale",
+          "confidence",
+          "behavior_requirements"
+        ],
+        "type": "object"
+      },
+      "maxItems": 40,
+      "minItems": 40,
+      "type": "array"
+    }
+  },
+  "required": [
+    "labels"
+  ],
+  "type": "object"
+}

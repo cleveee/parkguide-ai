@@ -1,0 +1,73 @@
+{
+  "reviewer_id": "codex-astra",
+  "configured_model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "configuration_basis": "Parent dispatch identified this reviewer as user-configured gpt-6-astra/xhigh; independent runtime model telemetry was not exposed.",
+  "input_path": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-matrix-codex-astra-20i48z5x/annotation-input.json",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "instructions_path": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-matrix-codex-astra-20i48z5x/instructions.txt",
+  "instructions_sha256": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+  "schema_path": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-matrix-codex-astra-20i48z5x/labels.schema.json",
+  "schema_sha256": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+  "started_at_utc": "2026-10-10T22:48:20Z",
+  "finished_at_utc": "2026-10-10T22:53:56.469202Z",
+  "status": "completed",
+  "output_path": "/Users/robin/Build/Personal/parkguide-ai/artifacts/gold-matrix-v1/reviewers/codex-astra/labels.json",
+  "output_sha256": "358074326ac247482dd0af823183e2a810ce564ab39f32a5c90f48ea0999c458",
+  "human_review_pending": true,
+  "model_telemetry": null,
+  "token_usage": null,
+  "cost_usd": null,
+  "telemetry_note": "Model execution telemetry, token usage, and billing cost were not exposed; null values are intentional.",
+  "isolation": {
+    "method": "Input-only instructions, not an OS sandbox.",
+    "os_sandbox": false,
+    "source_scope": "Only the supplied instructions, schema, and blinded annotation-input packet; own output files read for validation.",
+    "external_source_access": false,
+    "repository_reference_answers_read": false,
+    "other_reviewer_outputs_read": false,
+    "application_source_or_evaluation_files_read": false,
+    "browsers_or_provider_calls": false,
+    "delegation": false,
+    "git_or_commit_actions": false
+  },
+  "annotation_scope": {
+    "case_count": 40,
+    "unique_item_ids": 40,
+    "supplied_source_documents_read_completely": 30,
+    "fresh_empty_history_per_case": true,
+    "selected_park_known": true,
+    "static_snapshot": true,
+    "action_counts": {
+      "answer": 30,
+      "clarify": 2,
+      "refuse": 8
+    },
+    "answerability_counts": {
+      "answerable": 30,
+      "ambiguous": 2,
+      "unanswerable": 8
+    },
+    "required_fact_count": 71,
+    "evidence_quote_count": 70
+  },
+  "self_validation": {
+    "schema_validation": "Passed strict recursive validation of the supplied schema; jsonschema package was unavailable.",
+    "all_case_ids_exactly_once": true,
+    "all_quotes_exact_substrings": true,
+    "all_quotes_at_most_25_whitespace_words": true,
+    "all_evidence_from_selected_park": true,
+    "all_required_facts_have_linked_evidence": true,
+    "expected_answer_word_limit": 100,
+    "maximum_expected_answer_words": 47,
+    "rationale_word_limit": 45,
+    "maximum_rationale_words": 25,
+    "independent_human_validation": false
+  },
+  "source_limits": [
+    "Cedar Ridge drinking water is unmarked in the table; a blank cell is not an explicit no.",
+    "Dated schedules and closures are labeled as saved-source facts, not live verification.",
+    "Unavailable-request reasoning is bounded to the supplied saved public packet; corpus inventory metadata does not establish exhaustive absence across all public sources.",
+    "No individualized medical clearance, private reservation lookup, live availability, or exact future prediction is inferred from general park material."
+  ]
+}

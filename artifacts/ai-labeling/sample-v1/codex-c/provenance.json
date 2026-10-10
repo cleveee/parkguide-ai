@@ -1,0 +1,14 @@
+{
+  "reviewer_id": "codex-c",
+  "input_hash": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "start_utc": "2026-10-10T22:03:15Z",
+  "finish_utc": "2026-10-10T22:08:50.309147Z",
+  "model": "inherited parent model",
+  "human_review_pending": true,
+  "execution_limitations": [
+    "Reviewed only the supplied frozen packet: ten complete normalized source documents, 155-document inventory, and saved lexical search records.",
+    "No browsing, live status access, private booking lookup, provider requests, application edits, Git operations, other labels, memory, or subagents.",
+    "Lexical searches do not prove semantic absence; unavailable-fact conclusions are limited to the saved public packet.",
+    "These labels are independent AI proposals and have not been human verified."
+  ]
+}

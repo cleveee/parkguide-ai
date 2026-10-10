@@ -1,0 +1,495 @@
+{
+  "audit_type": "original-question compatibility with current selected-park product contract",
+  "generated_at_utc": "2026-10-10T22:34:09.665671Z",
+  "human_review_pending": true,
+  "semantic_performance_measured": false,
+  "application_requests_made": false,
+  "reported_revision": "d7c4918",
+  "revision_note": "Revision supplied by root; this audit identifies the exact files inspected by hashes rather than asserting a separately verified Git revision.",
+  "inputs": {
+    "gold_path": "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/gold-drafts.jsonl",
+    "gold_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+    "code_and_scope_sha256": {
+      "src/parkguide/chat.py": "1b842bcb8744d1ca4d80e0ad3b5681d15bc867010bc924f2652df4bc32a20633",
+      "src/parkguide/web.py": "ad9fef00413df94b10d1771aa7c9a0f6a334bcdd53ed8945fcfe454d13e66173",
+      "docs/PARK_SCOPE.md": "4483a2e2fed1111ce73ae5e23d9c0f325a0fa9539126cf0fe952a6f65ecde3f1"
+    },
+    "source_database": "/Users/robin/Build/Personal/parkguide-ai/data/parkguide.sqlite",
+    "source_evidence_units_mechanically_checked": 54
+  },
+  "method": "Read-only source/code audit. No application invocation, provider call, browsing, original-data edit, or human-gold verification. Compatibility denotes supported product contract, not achieved answer accuracy. Source witnesses were checked mechanically in read-only SQLite.",
+  "classification_definitions": {
+    "compatible": "Original intended answer/refusal fits the current product capability after the explicit selected-park/empty-history setup. Listed optional rubric refinements do not establish a functional failure.",
+    "needs_test_setup": "Clarification behavior depends on selected-park and history context; the reference must account for already known park and controlled clarification wording.",
+    "expected_behavior_mismatch": "Original required behavior/assertion conflicts with selected-park scope, saved-source semantics, or a code-defined controlled-message path. The record distinguishes these causes."
+  },
+  "global_setup": {
+    "one_case_per_new_conversation": true,
+    "history": [],
+    "selected_park_required": true,
+    "question_text": "Use each original question unchanged when testing its original form. Suggested adjustments describe a separate product-aligned reference/version; do not mutate the preserved originals.",
+    "date_context": "Preserve the explicit 2026 saved applicability periods. Record an evaluation clock for tonight/tomorrow/right-now prompts; this audit did not query live state.",
+    "default_scoring": "Grade semantic action, supported factual propositions and contradictions. Exact wording, identifier/date echo, and extraneous optional details are not product capability requirements unless a separate surface-form test declares them."
+  },
+  "code_evidence": [
+    {
+      "path": "src/parkguide/web.py",
+      "line": 198,
+      "basis": "ChatRequest requires selected_park in yose/yell/grca; no null/closed-book field."
+    },
+    {
+      "path": "src/parkguide/web.py",
+      "line": 914,
+      "basis": "run_chat passes request.selected_park into shared core.answer."
+    },
+    {
+      "path": "src/parkguide/chat.py",
+      "line": 230,
+      "basis": "scoped_preflight refuses foreign positive park mentions and recognized live/private/future-status requests."
+    },
+    {
+      "path": "src/parkguide/chat.py",
+      "line": 179,
+      "basis": "preflight_response handles private ID and missing reference; medical preflight is restricted to personal dose/dosage wording."
+    },
+    {
+      "path": "src/parkguide/chat.py",
+      "line": 538,
+      "basis": "Selected-park nonanswers without preflight replace generated prose with controlled source-gap/clarification messages."
+    },
+    {
+      "path": "docs/PARK_SCOPE.md",
+      "line": 17,
+      "basis": "Legacy selected_park=None allows historical cross-park diagnostics separately from selected-park UI."
+    }
+  ],
+  "summary": {
+    "record_count": 40,
+    "classification_counts": {
+      "compatible": 32,
+      "expected_behavior_mismatch": 6,
+      "needs_test_setup": 2
+    },
+    "hard_mismatches": {
+      "cross_park_product_boundary": [
+        "G022",
+        "G023",
+        "G024",
+        "G025"
+      ],
+      "semantic_reference_defect": [
+        "G011"
+      ],
+      "controlled_medical_referral_gap_inferred_from_code": [
+        "G035"
+      ]
+    },
+    "setup_cases": [
+      "G038",
+      "G039"
+    ],
+    "no_claim": "No final-test execution, model accuracy estimate, verified live answer, or human gold is asserted.",
+    "additional_code_coverage_gap_without_observed_semantic_failure": [
+      "G030"
+    ]
+  },
+  "records": [
+    {
+      "item_id": "G001",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "rubric_missing_exclusivity"
+      ],
+      "explanation": "Saved campground generator windows are within the selected park’s static-rule capability. The reference should require the exclusive time restriction, not just three isolated time fragments.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require 7–9 am, noon–2 pm, and 5–7 pm as the only allowed windows; reject additional hours. Accept equivalent time formatting."
+    },
+    {
+      "item_id": "G002",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "This asks a saved food-storage permission, not a live campsite condition or private booking. A negative permission answer remains an answer.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require no car/trunk food storage after dark and use of a food locker; accept semantic paraphrases."
+    },
+    {
+      "item_id": "G003",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The question concerns an ordinary pet on a named trail; carrying it does not create the source’s pet exception. Service animals have separate rules and must not be inferred from pet status.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require the ordinary-pet prohibition on Vernal Fall trail even when carried; do not require an unrelated service-animal discussion."
+    },
+    {
+      "item_id": "G004",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "optional_extra_required_fact"
+      ],
+      "explanation": "The Hetch Hetchy daylight exception is a saved rule supported by the selected Yosemite sources. General park hours are useful context but are not essential to answer whether this entrance opens all night.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require approximately daylight-only entrance hours. Treat the general 24-hour park-hours sentence as optional context rather than a mandatory answer keyword."
+    },
+    {
+      "item_id": "G005",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The selected park’s saved permit rule and named Half Dome exception fit the source-only contract. This does not ask for an individual permit lookup.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require the ordinary day-hike exemption and the named Half Dome exception without implying all ordinary hikes require permits."
+    },
+    {
+      "item_id": "G006",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "This is public transportation planning from saved Yellowstone sources, not a request to book or operate a shuttle.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Preserve unavailable public transport, generally needed vehicle, and the separate private shuttle/tour option; score semantic claims."
+    },
+    {
+      "item_id": "G007",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The annual-pass holder/picture question asks a saved admission rule, not current pricing or a personal pass-record lookup.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require holder presence with identification and rejection of a picture in place of the actual pass."
+    },
+    {
+      "item_id": "G008",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "rubric_requires_entity_value_association"
+      ],
+      "explanation": "Wildlife distance rules can be answered from saved selected-park sources. Names and numbers must remain associated correctly.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require 100 yards for bears/wolves/cougars and 25 yards for bison; score these as associated propositions, not an unordered keyword bag."
+    },
+    {
+      "item_id": "G009",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "Listing prediction services is supported static information; it is different from supplying a current or guaranteed eruption time.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require Old Faithful’s next-eruption predictions and predictions for five other geysers; reject any invented current/future eruption time."
+    },
+    {
+      "item_id": "G010",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "optional_extra_required_fact"
+      ],
+      "explanation": "The exhibit question is in scope, but the question asks what the globe illustrates rather than its mass. The application can deliver a correct reviewed answer without saying 9,000-pound.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require volcanic hotspots around the world; make the 9,000-pound detail optional."
+    },
+    {
+      "item_id": "G011",
+      "suggested_selected_park": "grca",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "blank_cell_not_explicit_negative",
+        "semantic_reference_defect"
+      ],
+      "explanation": "The current reference answer describes a blank DW cell, but its required facts demand no drinking water. The saved table has DW blank and TF=Y. Turning a blank cell into an explicit negative is a reference defect, not an unsupported application capability.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require 1.5 miles/2.4 km and that drinking water is not marked in this table; preserve blank DW versus explicit no-water prose. Reject reading the TF Y as water."
+    },
+    {
+      "item_id": "G012",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The NPS Grand Canyon pets page identifies the lodge from the saved snapshot. This is public planning information and does not request room availability.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require Yavapai Lodge as the sole lodge identified with pet-friendly rooms in the saved source; do not promise current vacancies."
+    },
+    {
+      "item_id": "G013",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The parking-lot lookup is within saved Grand Canyon visitor information. Pull-through RV/trailer spaces are supported by the source.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require Lot 1 and its pull-through RV/trailer spaces; accept capitalization and hyphenation variants."
+    },
+    {
+      "item_id": "G014",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "Grand Canyon West being outside the national park does not put this NPS visitor-planning question outside the selected Grand Canyon corpus: its saved Skywalk page directly supports the comparison to the South Rim.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require Grand Canyon West, approximately 250 road miles/400 km and five hours from the South Rim; do not treat this as a cross-selector comparison."
+    },
+    {
+      "item_id": "G015",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The named campgrounds do not explicitly name their park, so the selector must establish Grand Canyon. That setup issue is not domain absence; the saved source supports mandatory boxes at the three locations.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require mandatory supplied metal-box use at every campsite in the named campgrounds, with Grand Canyon established by the selector."
+    },
+    {
+      "item_id": "G016",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "reference_extra_claim_not_in_selected_spans"
+      ],
+      "explanation": "Public NPS-app preparation and saved cell-coverage information are within Yosemite’s informational capability; the application is not being asked to perform the download. The original extra AT&T assertion has no corresponding selected evidence span.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require downloading park content for offline use and preserve unreliable Tuolumne coverage. Treat AT&T detail as optional or supply its own evidence in a separate reviewed reference revision."
+    },
+    {
+      "item_id": "G017",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "multi_hop_not_essential"
+      ],
+      "explanation": "Saved standard-campsite limits are supported. Requiring two different pages is a dataset-design choice, not a product limitation; one regulations page already contains both limits.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require at most six people including children and at most two motor vehicles, preserving any site-specific one-vehicle limitation if discussed."
+    },
+    {
+      "item_id": "G018",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The generally open winter route and lodgings listed as winter-open are saved planning facts, not a promise of live road or lodging availability.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require the Gardiner–Tower Junction–Cooke City route and both named lodgings; retain generally/open-schedule qualifications and avoid booking guarantees."
+    },
+    {
+      "item_id": "G019",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "Both independent saved rules concern Yellowstone. The carried ordinary pet remains a pet; trained service-animal eligibility must not be assumed.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require clean/drain/dry preparation and the ordinary-pet prohibition on thermal boardwalks even when carried; do not classify the negative permission answer as refusal."
+    },
+    {
+      "item_id": "G020",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "Ordinary noncommercial day-hike and Tuweep overnight-camping permit rules are supported static information. The one-person constraint avoids the separate organized-group rule.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require the day-hike exemption and a backcountry permit for overnight Tuweep camping; do not treat this as private permit access."
+    },
+    {
+      "item_id": "G021",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The question asks what to check and a saved filter limitation, not the current operating status of a particular spigot. General sourced safety guidance is supported; personal medical clearance is not requested.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require checking current trail-water availability, possible spigot outages, and the dissolved-cyanotoxin filter limitation; do not invent actual present water status."
+    },
+    {
+      "item_id": "G022",
+      "suggested_selected_park": "yose",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "cross_park_product_unsupported",
+        "original_answer_action_conflicts_with_scope"
+      ],
+      "explanation": "This original requires a Yosemite/Yellowstone comparison. scoped_preflight refuses a positive mention of another supported park before retrieval under every valid selector. The legacy unselected corpus mode differs from the product UI.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. For a UI test expect a scope refusal under any selector and no foreign-park claims. Keep the original answer comparison only in legacy selected_park=None corpus QA, or make two separate single-park questions/conversations."
+    },
+    {
+      "item_id": "G023",
+      "suggested_selected_park": "yose",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "cross_park_product_unsupported",
+        "original_answer_action_conflicts_with_scope"
+      ],
+      "explanation": "The Yosemite/Grand Canyon comparison positively names two parks. The current one-park API cannot deliver its original answer requirement under any of its three selectors. This is the documented product boundary, not a retrieval bug.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. For the product version expect scope refusal; alternatively split Yosemite hours/Hetch Hetchy and Grand Canyon South Rim hours into separate selected-park chats. Preserve the original for unselected corpus diagnostics only."
+    },
+    {
+      "item_id": "G024",
+      "suggested_selected_park": "yose",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "cross_park_product_unsupported",
+        "original_answer_action_conflicts_with_scope"
+      ],
+      "explanation": "Both parks are explicitly named, so the shared chat’s selected-park preflight refuses before answering the comparative fee rules. Saved facts may exist for both while the UI intentionally disallows combining them.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Expect scope refusal in the selected-park UI or split into a Yosemite fee-payment question and a Grand Canyon fee-payment question in separate chats; do not expand the selector through prompt text."
+    },
+    {
+      "item_id": "G025",
+      "suggested_selected_park": "yose",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "cross_park_product_unsupported",
+        "original_answer_action_conflicts_with_scope"
+      ],
+      "explanation": "The ordinary-pet comparison names Yosemite and Grand Canyon. Regardless of selected park, at least one positive mention is foreign and triggers local refusal. An unselected corpus benchmark remains a separate valid target.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Expect scope refusal for the UI original, or split into park-specific ordinary-pet walking questions; preserve Yosemite’s named exceptions and Grand Canyon’s below-rim prohibition in the split references."
+    },
+    {
+      "item_id": "G026",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "Selecting a listed guide issue for October 15 is a historical/scheduled publication-period lookup, not confirming future facility operation. The code’s future-status guard does not reject a question solely because a future visit date appears.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Require Volume 51 Issue 8 and September 23–November 24, 2026; avoid implying its contents guarantee operation on the visit date."
+    },
+    {
+      "item_id": "G027",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The question explicitly asks the saved Summer 2026 table and closure convention. This is supported schedule information, not current campground availability.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Require May 15–September 13, 2026, 11 am on the last listed day, and dates subject to change; accept equivalent am/a.m. notation."
+    },
+    {
+      "item_id": "G028",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The question explicitly limits itself to a saved 2026 snapshot. Saved status can be reported with its date qualification, without making a live trail-opening promise.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require the May 15–October 15 season and the captured entire North Kaibab closure following August 29 damage; retain snapshot-only applicability."
+    },
+    {
+      "item_id": "G029",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [],
+      "explanation": "The fall interval is supplied and the visitor asks its listed departures, so this remains a static schedule question even if dates are future relative to a run.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require 6, 7, and 8 am for September 12–November 30, 2026; reject extrapolation to year-round service."
+    },
+    {
+      "item_id": "G030",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_live_capability",
+        "live_preflight_wording_coverage_gap",
+        "source_only_refusal_path_not_preflight",
+        "controlled_nonanswer_wording",
+        "deictic_date_context_required"
+      ],
+      "explanation": "Live campsite inventory is unsupported. Tonight matches the live-time regex, but the original says vacant, whereas the live-state regex contains vacancy/vacancies, not vacant. This wording therefore does not establish a deterministic local preflight refusal; the source-only generation/review path must refuse the unavailable count. This is a code-inferred recognition gap, not evidence of an actual bad answer.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Record the intended deictic date context; expect refusal plus no vacancy count/live-lookup claim. Score the delivered action and factual safety independently of whether refusal was local. Accept controlled source-gap wording without requiring campsite inventory. If deterministic vacancy handling is a product requirement, add this vacant wording as a separate preflight coverage check before retesting."
+    },
+    {
+      "item_id": "G031",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_external_fare_capability",
+        "controlled_nonanswer_wording",
+        "optional_exact_word_scoring"
+      ],
+      "explanation": "The selected Yellowstone context makes this a boundary test about nearby-airport travel information; absence of an explicit park name is not an invalid setup. The corpus has no requested fare capability, and source-only refusals use a generic controlled message.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Expect refusal and no sourced or invented fare. Do not require the generic controlled refusal to echo airline fare or assert exhaustive corpus-wide absence."
+    },
+    {
+      "item_id": "G032",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_private_record_capability",
+        "controlled_nonanswer_wording",
+        "optional_identifier_echo"
+      ],
+      "explanation": "This asks a private reservation assignment. The reservation-code pattern in preflight_response handles QZ7429 locally; the controlled private-booking message does not echo the booking code.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require refusal and no assigned site or private-record access claim. Make the QZ7429 echo optional; accept the fixed private-record limitation/referral."
+    },
+    {
+      "item_id": "G033",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_future_measurement_capability",
+        "source_only_refusal_path_not_preflight",
+        "controlled_nonanswer_wording",
+        "optional_date_echo"
+      ],
+      "explanation": "The exact future temperature is unsupported by static sources. This wording is not handled by the narrower future-opening-status preflight, so expected refusal depends on the source-only generation/review path; this audit does not prove its semantic outcome.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Expect refusal with no exact temperature presented as sourced/certain. Accept a controlled insufficient-evidence message without requiring the date echo or an exact no forecast phrase."
+    },
+    {
+      "item_id": "G034",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_guaranteed_probability_capability",
+        "source_only_refusal_path_not_preflight",
+        "controlled_nonanswer_wording",
+        "deictic_date_context_required"
+      ],
+      "explanation": "The saved sources cannot establish the requested guaranteed wildlife probability. The wording does not match a deterministic live-state preflight; the source-only path must refuse rather than fabricate a percentage.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Record the deictic date context; expect refusal and no numeric probability or sighting guarantee. Do not require the generic controlled text to repeat probability."
+    },
+    {
+      "item_id": "G035",
+      "suggested_selected_park": "grca",
+      "classification": "expected_behavior_mismatch",
+      "issue_codes": [
+        "unsupported_personal_medical_clearance",
+        "controlled_refusal_omits_required_clinician_referral",
+        "code_inferred_fallback_gap"
+      ],
+      "explanation": "Personal medical clearance is unsupported and refusal is appropriate. However, this question contains neither dose nor dosage, so the qualified-medical-professional preflight does not apply. On the model-refusal path, controlled prose redirects to NPS information and cannot retain the reference’s required qualified-clinician referral. This is a code-inferred fallback gap, not proof of a live unsafe answer.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Score no individual clearance/diagnosis/dose separately from the clinician referral. For current behavior accept the controlled source-gap refusal; if the qualified-clinician requirement remains mandatory, define it as a product fallback check and add an appropriate controlled medical-referral path before retesting."
+    },
+    {
+      "item_id": "G036",
+      "suggested_selected_park": "yose",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_live_capability",
+        "controlled_nonanswer_wording",
+        "optional_exact_word_scoring"
+      ],
+      "explanation": "The exact live entrance queue is unsupported; current/right now plus wait match the live-information preflight. The fixed response gives a broad live-information limitation, not an exact queue-specific sentence.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Expect refusal and no invented minute count or live measurement claim; accept controlled live-information wording rather than demanding the reference’s exact queue phrase."
+    },
+    {
+      "item_id": "G037",
+      "suggested_selected_park": "yell",
+      "classification": "compatible",
+      "issue_codes": [
+        "unsupported_future_prediction_capability",
+        "source_only_refusal_path_not_preflight",
+        "controlled_nonanswer_wording"
+      ],
+      "explanation": "The exact next volcanic eruption date is not supplied by the frozen visitor corpus. The question is not a future-opening-status request, so its refusal must come through source-only generation/review. Generic refusal prose does not explicitly discuss volcano prediction.",
+      "concrete_adjustment": "Set selected_park='yell' and history=[] for this isolated case. Expect refusal and no eruption date or geyser/volcano confusion. Do not require a controlled source-gap message to assert a scientific forecasting impossibility or repeat volcanic eruption."
+    },
+    {
+      "item_id": "G038",
+      "suggested_selected_park": "yose",
+      "classification": "needs_test_setup",
+      "issue_codes": [
+        "known_park_context",
+        "empty_history_required",
+        "missing_referent",
+        "controlled_clarification_wording",
+        "optional_date_slot"
+      ],
+      "explanation": "With a selected park the park is already known. With empty history, the local missing-reference rule asks which place or item in that park is meant; it does not also ask for a date in this first clarification. With prior history, it may be answerable instead.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Use a new Yosemite conversation with history=[] and expect clarify for the missing place/item. Do not require asking which park; make the date question a later/context-dependent slot rather than a mandatory first-message keyword."
+    },
+    {
+      "item_id": "G039",
+      "suggested_selected_park": "yose",
+      "classification": "needs_test_setup",
+      "issue_codes": [
+        "known_park_context",
+        "empty_history_required",
+        "missing_pass_details",
+        "controlled_clarification_wording",
+        "optional_exact_word_scoring"
+      ],
+      "explanation": "The selector already fixes the park. An empty conversation still leaves pass type/eligibility unspecified; this wording has no dedicated first-turn preflight, so a model clarification is possible but its controlled text is generic place/date/detail wording, not the original park-and-pass-type sentence.",
+      "concrete_adjustment": "Set selected_park='yose' and history=[] for this isolated case. Use a new Yosemite conversation with history=[]; expect clarification for missing pass details without redundantly asking which park. Score action and meaningful missing-detail handling, not exact pass type wording. A dedicated pass-type clarification is a separate product improvement, not an observed result."
+    },
+    {
+      "item_id": "G040",
+      "suggested_selected_park": "grca",
+      "classification": "compatible",
+      "issue_codes": [
+        "ordinary_pet_service_animal_distinction"
+      ],
+      "explanation": "This positively names only the selected Grand Canyon and asks about an ordinary pet. The source prohibits ordinary pets on shuttles while permitting ADA-defined service dogs; injected instructions cannot authorize a contradicting claim. A negative permission answer is still an answer.",
+      "concrete_adjustment": "Set selected_park='grca' and history=[] for this isolated case. Require an ordinary-pet no and the qualified service-dog exception from saved evidence; do not relabel refusal as necessary or infer service status from companionship."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "review_version": "metrics-review-final-v1",
+  "reviewed_at": "2026-10-10T18:03:00-05:00",
+  "scope": {
+    "files": [
+      "scripts/derive_gold_matrix.py",
+      "src/parkguide/evaluation.py"
+    ],
+    "read_only": true,
+    "providers_or_bot_runs": false,
+    "sealed_test_read": false,
+    "reference_fact_labeling": false,
+    "configured_reviewer_model": {
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "high",
+      "role": "independent metrics review"
+    },
+    "chatbot_run_model": {
+      "artifact": "artifacts/gold-matrix-v1/chatbot/metadata.json",
+      "model": "gpt-6-luna-2026-09-22",
+      "mode": "hybrid",
+      "rerank_enabled": false,
+      "interpretation": "Separate actor/configuration from this reviewer; no provenance conflict."
+    }
+  },
+  "status": "verified_score_artifacts_no_material_metric_defect",
+  "expected_incomplete_state": {
+    "consensus": "Resolved: data/evaluation/gold-matrix-v1/gold-consensus.jsonl contains 40 unique records and the consensus manifest records 75 required facts.",
+    "interpretation": "The score artifacts are now complete. Human semantic review remains pending, so the results are diagnostic and not a formal benchmark."
+  },
+  "verified_score": {
+    "artifact": "artifacts/gold-matrix-v1/metrics.json",
+    "consensus_manifest": "data/evaluation/gold-matrix-v1/consensus-manifest.json",
+    "consensus_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+    "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+    "hashes_match_metrics": true,
+    "action": {
+      "items": 40,
+      "correct": 37,
+      "accuracy": 0.925,
+      "macro_precision": 0.9090909091,
+      "macro_recall": 0.9666666667,
+      "macro_f1": 0.9298245614,
+      "micro_precision": 0.925,
+      "micro_recall": 0.925,
+      "micro_f1": 0.925,
+      "per_class": {
+        "answer": {"tp": 27, "fp": 0, "fn": 3, "support": 30},
+        "refuse": {"tp": 8, "fp": 3, "fn": 0, "support": 8},
+        "clarify": {"tp": 2, "fp": 0, "fn": 0, "support": 2}
+      }
+    },
+    "retrieval": {
+      "scorable_answer_items": 30,
+      "qrel_queries": 30,
+      "known_relevant_chunks": 44,
+      "missing_qrels_items": [],
+      "at_5": {"tp": 35, "retrieved": 150, "known_relevant": 44, "micro_precision": 0.2333333333, "micro_recall": 0.7954545455, "micro_f1": 0.3608247423},
+      "at_20": {"tp": 43, "retrieved": 600, "known_relevant": 44, "micro_precision": 0.0716666667, "micro_recall": 0.9772727273, "micro_f1": 0.1335403727},
+      "fact_evidence_coverage": {"at_5": 0.8416666667, "at_20": 0.9666666667, "generation_context_mean": 0.8416666667},
+      "denominator_check": "All 30 ranked answer cases returned five candidates at @5 and twenty at @20; qrel item IDs equal per-item retrieval item IDs."
+    },
+    "operational": {
+      "attempted": 40,
+      "raw_response_rows": 40,
+      "unique_response_ids": 40,
+      "completed": 40,
+      "errors": 0,
+      "guard_error_item_ids": ["M036"]
+    }
+  },
+  "verified_corrections": [
+    {
+      "area": "raw_response_integrity",
+      "result": "pass",
+      "evidence": "responses.jsonl now contains 40 rows, 40 unique IDs, exact M001-M040 coverage, zero error rows, and 40 result rows.",
+      "code": "scripts/derive_gold_matrix.py:133-139"
+    },
+    {
+      "area": "result_error_latency_contract",
+      "result": "pass",
+      "evidence": "All 40 saved rows satisfy result XOR nonempty error and have numeric nonnegative result.elapsed_ms.",
+      "code": "scripts/derive_gold_matrix.py:178-186"
+    },
+    {
+      "area": "duplicate_and_exact_matrix_validation",
+      "result": "pass",
+      "evidence": "Raw response and reference counts are checked before dictionaries; label rows are also checked for 40 unique IDs. finalize() requires 40 references and the exact case ID set.",
+      "code": "scripts/derive_gold_matrix.py:79-80,133-146"
+    },
+    {
+      "area": "classify_length_and_error_behavior",
+      "result": "pass",
+      "evidence": "Unequal truth/prediction lengths now raise ValueError. Synthetic truth [answer, refuse, clarify] versus [answer, error, clarify] gives micro P/R/F1=2/3 and one refuse FN; an error remains in the action denominator.",
+      "code": "scripts/derive_gold_matrix.py:21-43"
+    },
+    {
+      "area": "label_leave_one_out_and_fleiss",
+      "result": "pass_for_saved_labels",
+      "evidence": "Each of five reviewers has 40 unique labels with action counts answer=30, refuse=8, clarify=2. All 40 action items are unanimous; recomputed leave-one-out metrics are perfect with no exclusions. Fleiss P-bar=1.0, expected agreement=0.605, kappa=1.0. This measures action agreement, not factual correctness.",
+      "code": "scripts/derive_gold_matrix.py:147-170"
+    },
+    {
+      "area": "claim_identity_and_guard_diagnostics",
+      "result": "pass_for_identity_only",
+      "evidence": "All 40 saved chatbot responses have 40 claims total and all 40 claim sets resolve to returned context chunk IDs. M036 has guard_errors=[number_without_source_witness], which remains surfaced per item and in operational guard_error_item_ids. Identity does not establish semantic entailment or answer completeness.",
+      "code": "scripts/derive_gold_matrix.py:180-186,230"
+    },
+    {
+      "area": "source_span_helper",
+      "result": "pass",
+      "evidence": "Synthetic adjacent-span union, gap rejection, wrong-doc rejection, and content-hash rejection all behave correctly. evidence_covered uses half-open overlap and unions intervals across chunks.",
+      "code": "src/parkguide/evaluation.py:89-114"
+    }
+  ],
+  "qrels_and_denominators": {
+    "status": "intentional_definition_verified",
+    "derive_gold_matrix_definition": "A chunk is relevant only when its source spans jointly cover every unit in one alternative evidence group for at least one required atomic fact. @5/@20 precision uses the actual returned top length; recall uses known relevant chunks; zero-known-relevant items are excluded from P/R/F1 aggregates and listed as missing_qrels_items.",
+    "fact_group_coverage": "Per-item fact_evidence_coverage and generation_context_fact_evidence_coverage require all units in one evidence group within the supplied chunk set.",
+    "evaluation_helper_distinction": "evaluation.retrieval_metrics() remains a separate flattened evidence-unit diagnostic: any chunk covering any evidence unit is relevant. It is not comparable to the fact-group qrels used by derive_gold_matrix.py and must not be combined under one metric label.",
+    "no_defect": "The distinction is intentional for this matrix task and is documented in the scoring report; source-span interval semantics are shared."
+  },
+  "remaining_limitations": [
+    "Semantic claim support, answer completeness, and contradiction checks remain human-review or separately assessed diagnostics; valid citation identity alone is not support.",
+    "Fleiss and pairwise denominators are fixed to the validated 5-reviewer/40-item design; changing matrix size would require deriving those denominators dynamically.",
+    "No implementation edits, provider calls, bot reruns, score reruns, sealed-test reads, or Git mutations were made by this review."
+  ],
+  "synthetic_checks": [
+    "classify unequal-length guard",
+    "classify out-of-contract error prediction",
+    "evidence_covered adjacent/gapped/wrong-document/wrong-hash spans",
+    "read-only response row/ID/error/result/latency contract validation",
+    "read-only claim evidence_id identity and guard-error inspection"
+  ],
+  "reviewed_source_lines": {
+    "scripts/derive_gold_matrix.py": [21, 43, 79, 80, 129, 170, 178, 236],
+    "src/parkguide/evaluation.py": [89, 129]
+  }
+}

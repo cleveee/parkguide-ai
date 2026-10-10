@@ -1,0 +1,1274 @@
+{
+  "labels": [
+    {
+      "item_id": "AL01",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yosemite lists no electrical, water, or sewer hookups. A dump station with fresh water is listed at Upper Pines Campground year-round. This is the saved listing, not confirmation that the station is operating today.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Electrical hookups are not available in Yosemite."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Water hookups are not available in Yosemite."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Sewer hookups are not available in Yosemite."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Upper Pines Campground is listed as having a year-round dump station with fresh water."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Claim any of the three hookup types is available.",
+        "Confuse a dump station with a campsite hookup.",
+        "Treat the saved year-round listing as a live operating guarantee."
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "quote": "Electrical, water, and sewer hookups are not available in Yosemite,",
+          "fact_ids": [
+            "f01",
+            "f02",
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "dump stations (with fresh water) are available at Upper Pines Campground (all year),",
+          "fact_ids": [
+            "f04"
+          ]
+        }
+      ],
+      "rationale": "The campground page explicitly distinguishes unavailable hookups from the year-round Upper Pines dump station.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL02",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Yellowstone says swimming or bathing in any water entirely of thermal origin is illegal; feeling cool enough does not create an exception for a hot spring. Even thermal runoff can be extremely hot and cause burns.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Swimming or bathing in Yellowstone water entirely of thermal origin is illegal."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Even thermal runoff can be extremely hot and cause burns."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Allow hot-spring swimming based on perceived temperature.",
+        "Invent a cool-water exception to the thermal-origin prohibition.",
+        "Extend this quoted prohibition to all nonthermal water without evidence."
+      ],
+      "evidence": [
+        {
+          "source_id": "S04",
+          "quote": "it is illegal to swim or bathe in any water that is entirely of thermal origin.",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S04",
+          "quote": "Even thermal runoff can be extremely hot and cause burns.",
+          "fact_ids": [
+            "f02"
+          ]
+        }
+      ],
+      "rationale": "This is an evidenced permission question with a negative answer, not an unavailable-information refusal.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL03",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Grand Canyon says not to leave pets tied or unattended outside or in your vehicle. Keep your ordinary pet with you and leashed no longer than six feet where pets are allowed.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Pets must not be left tied or unattended outside."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Pets must not be left unattended in a vehicle."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Pets must remain leashed, with a leash up to six feet, at all times."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Allow tying the dog outside while its owner leaves.",
+        "Allow leaving the dog alone in the vehicle because the weather is mild.",
+        "Limit the unattended-pet prohibition to hot weather."
+      ],
+      "evidence": [
+        {
+          "source_id": "S07",
+          "quote": "Do not leave pets tied or unattended outside or in your vehicle.",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "Please keep your pet leashed (up to 6 feet) at all times.",
+          "fact_ids": [
+            "f03"
+          ]
+        }
+      ],
+      "rationale": "The general unattended-pet rule is unconditional; the separate hot-weather warning does not narrow it.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL04",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yes, food may stay in your hard-sided RV while you are away from the campsite if it is out of sight and the windows, doors, and vents are closed. Food may not be stored in pop-up, tent, or other soft-sided campers. Your ordinary pet dog cannot stay at Camp 4: pets are prohibited there. Camp 4 is also walk-in/tents only, with no RVs or trailers.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Food may be stored in hard-sided RVs and trailers."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Stored food must be out of sight."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Windows, doors, and vents must be closed when the camper is away from the campsite."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Food storage is prohibited in pop-up or tent trailers and other soft-sided campers."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Ordinary pets are prohibited at Camp 4."
+        },
+        {
+          "fact_id": "f06",
+          "text": "Camp 4 is walk-in/tents only and does not allow RVs or trailers."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Permit visible food or open windows, doors, or vents while away.",
+        "Apply the hard-sided rule to soft-sided campers.",
+        "Allow an ordinary pet at Camp 4 because it is leashed or carried.",
+        "Describe Camp 4 as an RV campground."
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "quote": "You may store food in hard-sided RVs and trailers, as long the food is out of sight,",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "and windows, doors, and vents are closed when you're not in your campsite.",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "Food may not be stored in pop-up or tent trailers, or other soft-sided campers.",
+          "fact_ids": [
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "In all walk-in and group campgrounds/campsites, including Camp 4",
+          "fact_ids": [
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "| Camp 4 | All year | 4000 ft/1200 m | Walk-in/tents only (no RVs/ trailers) |",
+          "fact_ids": [
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Where Pets Are Not Allowed",
+          "fact_ids": [
+            "f05"
+          ]
+        }
+      ],
+      "rationale": "Both parts are explicit in the saved campground/pet rules, and Camp 4 has a separate equipment restriction.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL05",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "For regular vehicles in January, the only road generally open year-round is the route from the North Entrance at Gardiner, Montana, via Tower Junction to Cooke City, Montana. Most park roads close to regular vehicles from early November to late April, and closures are possible even on the generally open route. That road access does not imply Bridge Bay Campground is open: its saved Summer 2026 operating dates are May 15–September 13, and its Winter 2026–27 cells use the symbol meaning not open that season. Operating dates may change without advance notice.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The only Yellowstone road generally open year-round to regular vehicles runs from the North Entrance at Gardiner through the park via Tower Junction to Cooke City."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Most Yellowstone roads are closed to regular vehicles from early November to late April."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Possible road closures still need to be anticipated."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Bridge Bay Campground has May 15 as its first operating day in the Summer 2026 table."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Bridge Bay Campground has September 13 as its last operating day in the Summer 2026 table."
+        },
+        {
+          "fact_id": "f06",
+          "text": "The Bridge Bay Winter 2026–27 entries are em dashes, which the legend defines as not open during that season."
+        },
+        {
+          "fact_id": "f07",
+          "text": "Saved operating dates are subject to change without advance notice."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Say all Yellowstone roads are available to regular cars in January.",
+        "Guarantee the North Entrance route is open on a particular day.",
+        "Infer Bridge Bay winter camping from year-round road access.",
+        "Treat the winter em dashes as missing/TBD dates or as an open campground."
+      ],
+      "evidence": [
+        {
+          "source_id": "S05",
+          "quote": "The only road generally open year-round to regular vehicles is from the North Entrance at Gardiner, Montana,",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "through the park to Cooke City, Montana (via Tower Junction).",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "Most park roads are closed to regular vehicles from early November to late-April,",
+          "fact_ids": [
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "Anticipate possible road closures,",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "Summer 2026 / First Day | Summer 2026 / Last Day | Winter 2026-27 / First Day | Winter 2026-27 / Last Day",
+          "fact_ids": [
+            "f04",
+            "f05",
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "|  | Bridge Bay Campground | Closed | May 15 | September 13 | — | — |",
+          "fact_ids": [
+            "f04",
+            "f05",
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "| — | Facilty/Service not open during particular season |",
+          "fact_ids": [
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "These operating dates are subject to change without advanced notice.",
+          "fact_ids": [
+            "f07"
+          ]
+        }
+      ],
+      "rationale": "The road rule and campground seasonal table describe different operations. January has no stated year, so the answer identifies the saved winter season rather than inventing a trip year.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL06",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The saved hiking PDF lists Cedar Ridge as 1.5 miles (2.4 km) one way, with a 2–4 hour round trip. In the separate trail-distance table, DW means drinking water and Cedar Ridge’s DW cell is blank; the Y is in TF, the toilet-facilities column. The DW cell is not an explicit No or a drinking-water Y.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The hiking PDF gives Cedar Ridge a one-way distance of 1.5 miles (2.4 km)."
+        },
+        {
+          "fact_id": "f02",
+          "text": "The hiking PDF gives Cedar Ridge a round-trip time of 2–4 hours."
+        },
+        {
+          "fact_id": "f03",
+          "text": "DW denotes drinking water in the trail-distance table."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Cedar Ridge has a blank DW cell in the trail-distance table."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Cedar Ridge has Y in the TF (toilet facilities) cell."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Call 1.5 miles the round-trip distance.",
+        "Call 2–4 hours a one-way time.",
+        "Move the TF Y into the DW column.",
+        "Represent the blank DW cell as an explicit No or Y."
+      ],
+      "evidence": [
+        {
+          "source_id": "S10",
+          "quote": "Distance one-way Time Roundtrip",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S10",
+          "quote": "Cedar Ridge 1120ft (340m) 1.5mi (2.4km) 2–4 hours",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "DW = drinking water; TF = Toilet Facilities;",
+          "fact_ids": [
+            "f03",
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "| DW | TF | EP | RS | Other |",
+          "fact_ids": [
+            "f04",
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |",
+          "fact_ids": [
+            "f04",
+            "f05"
+          ]
+        }
+      ],
+      "rationale": "The PDF supplies labeled distance/time values. The HTML table supplies distinct column positions; blank and explicit negative are different records.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL07",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Neither park allows ordinary pets on all hiking trails. In Yosemite, pets can use developed areas and fully paved roads, sidewalks, and bicycle paths unless signed otherwise; listed examples include Bridalveil Fall, Lower Yosemite Fall, the paved Cook’s Meadow path including boardwalks, and the paved road to Mirror Lake, but not its unpaved loop. The general trail ban includes Vernal Fall even when the pet is carried; Wawona Meadow Loop is an exception. Other listed routes are Chowchilla Mountain Road, Four Mile and Eleven Mile fire roads (not Yosemite Valley’s Four Mile Trail), Carlon Road to Hodgdon Meadow (not Carlon Falls), Old Big Oak Flat Road from Hodgdon Meadow to Tuolumne Grove parking lot (not the trail), and the road within Tuolumne Grove (not its nature trail). Unplowed snow-covered roads, wilderness, and undeveloped areas are prohibited. Yosemite requires a leash no longer than six feet or other physical restraint, and leashed pets cannot be unattended; walk-in and group campsites, including Camp 4, exclude pets. On Grand Canyon’s South Rim, leashed pets can walk trails above the rim and developed areas, including Mather and Desert View campgrounds and Trailer Village. Pets must stay on a leash up to six feet at all times, and cannot go below the rim or ride park shuttles. Trained service animals have separate rules; these ordinary-pet permissions do not make a companion dog a service dog.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Yosemite permits pets in developed areas."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Yosemite permits pets on fully paved roads, sidewalks, and bicycle paths except where signed as not allowing pets."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Yosemite lists Bridalveil Fall trail, Lower Yosemite Fall trail, and the paved Cook’s Meadow trail including boardwalks among allowed routes."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Yosemite permits pets on the paved road to Mirror Lake but not its unpaved surrounding trail."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Yosemite generally prohibits pets on trails, including Vernal Fall even if carried, with Wawona Meadow Loop as an exception."
+        },
+        {
+          "fact_id": "f06",
+          "text": "Yosemite additionally permits pets on Chowchilla Mountain Road and Four Mile and Eleven Mile fire roads, but not the Four Mile Trail in Yosemite Valley."
+        },
+        {
+          "fact_id": "f07",
+          "text": "Yosemite permits pets on Carlon Road from the trailhead to Hodgdon Meadow, but not to Carlon Falls."
+        },
+        {
+          "fact_id": "f08",
+          "text": "Yosemite permits pets on Old Big Oak Flat Road from Hodgdon Meadow to Tuolumne Grove parking lot, but not the Old Big Oak Flat Road trail."
+        },
+        {
+          "fact_id": "f09",
+          "text": "Yosemite permits dogs on the road within Tuolumne Grove, but not its nature trail."
+        },
+        {
+          "fact_id": "f10",
+          "text": "Yosemite prohibits pets on unplowed roads covered in snow."
+        },
+        {
+          "fact_id": "f11",
+          "text": "Yosemite prohibits pets in wilderness and other undeveloped areas."
+        },
+        {
+          "fact_id": "f12",
+          "text": "Yosemite requires a leash no longer than six feet or other physical restraint."
+        },
+        {
+          "fact_id": "f13",
+          "text": "Yosemite prohibits leaving leashed pets unattended."
+        },
+        {
+          "fact_id": "f14",
+          "text": "Yosemite prohibits ordinary pets in walk-in and group campgrounds/campsites, including Camp 4."
+        },
+        {
+          "fact_id": "f15",
+          "text": "Grand Canyon’s South Rim permits leashed pets on trails above the rim, in Mather Campground, Desert View Campground, Trailer Village, and developed areas."
+        },
+        {
+          "fact_id": "f16",
+          "text": "Grand Canyon requires pets to be leashed up to six feet at all times."
+        },
+        {
+          "fact_id": "f17",
+          "text": "Grand Canyon prohibits ordinary pets below the canyon rim."
+        },
+        {
+          "fact_id": "f18",
+          "text": "Grand Canyon prohibits pets on park shuttle buses."
+        },
+        {
+          "fact_id": "f19",
+          "text": "Yosemite service dogs are individually trained to perform a specific task assisting a person with a disability."
+        },
+        {
+          "fact_id": "f20",
+          "text": "Yosemite service dogs are legally permitted anywhere visitors can go."
+        },
+        {
+          "fact_id": "f21",
+          "text": "Grand Canyon permits service animals below the rim when assisting a person with a disability."
+        },
+        {
+          "fact_id": "f22",
+          "text": "Yosemite states that emotional-support, therapy, and companion animals are not service animals."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Permit ordinary pets on every hiking trail in either park.",
+        "Treat Yosemite’s general trail ban as excluding its expressly listed exceptions.",
+        "Permit Yosemite Valley’s Four Mile Trail because the similarly named fire roads are allowed.",
+        "Permit Carlon Falls, the Old Big Oak Flat Road trail, or Tuolumne Grove’s nature trail under the road exceptions.",
+        "Claim carrying a pet bypasses a trail restriction.",
+        "Apply Grand Canyon’s above-rim permission below the rim.",
+        "Omit the six-foot leash limits or treat an ordinary companion dog as a service animal."
+      ],
+      "evidence": [
+        {
+          "source_id": "S01",
+          "quote": "In developed areas",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets),",
+          "fact_ids": [
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks),",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).",
+          "fact_ids": [
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)",
+          "fact_ids": [
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Chowchilla Mountain Road, and Four Mile and Eleven Mile fire roads (but not the Four Mile Trail in Yosemite Valley).",
+          "fact_ids": [
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Carlon Road from the trailhead to Hodgdon Meadow (but not to Carlon Falls)",
+          "fact_ids": [
+            "f07"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "on the Old Big Oak Flat Road from Hodgdon Meadow to Tuolumne Grove parking lot",
+          "fact_ids": [
+            "f08"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "(but not on the Old Big Oak Flat Road trail).",
+          "fact_ids": [
+            "f08"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Dogs are allowed on the road within Tuolumne Grove, but not on the nature trail..",
+          "fact_ids": [
+            "f09"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "On unplowed roads covered in snow",
+          "fact_ids": [
+            "f10"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "In wilderness and all other undeveloped areas",
+          "fact_ids": [
+            "f11"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "pets must be restrained on a leash not more than six feet long or otherwise physically restrained",
+          "fact_ids": [
+            "f12"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "leashed pets may not be left unattended",
+          "fact_ids": [
+            "f13"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "In all walk-in and group campgrounds/campsites, including Camp 4",
+          "fact_ids": [
+            "f14"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "Leashed pets are allowed on trails above the rim, Mather Campground, Desert View Campground, Trailer Village, and throughout developed areas.",
+          "fact_ids": [
+            "f15"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "Please keep your pet leashed (up to 6 feet) at all times.",
+          "fact_ids": [
+            "f16"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "Pets are not allowed below the canyon rim",
+          "fact_ids": [
+            "f17"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "Pets are not allowed on park shuttle buses.",
+          "fact_ids": [
+            "f18"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Dogs classified as service animals are individually trained to perform a specific task that assists a person with a disability.",
+          "fact_ids": [
+            "f19"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Service dogs are legally permitted anywhere that visitors can go.",
+          "fact_ids": [
+            "f20"
+          ]
+        },
+        {
+          "source_id": "S07",
+          "quote": "service animals are permitted if they are assisting their humans who have disabilities.",
+          "fact_ids": [
+            "f21"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Where Pets Are Not Allowed",
+          "fact_ids": [
+            "f05",
+            "f10",
+            "f11",
+            "f14"
+          ]
+        },
+        {
+          "source_id": "S01",
+          "quote": "Emotional support, therapy, and companion animals, as well as service animals in training, are not service animals",
+          "fact_ids": [
+            "f22"
+          ]
+        }
+      ],
+      "rationale": "Cross-park comparison is permitted by the rubric. The answer preserves Yosemite’s named route exceptions, similar-name exclusions, physical-restraint wording, and Grand Canyon’s above/below-rim distinction.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL08",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yosemite campground generators are allowed only from 7–9 am, noon–2 pm, and 5–7 pm; use at other times is prohibited. Yellowstone roads, when open, are not gated at night, so entry and exit are allowed 24 hours a day, seven days a week. That does not guarantee any particular road is open: possible closures and the intended entrance’s road status still matter.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Yosemite generator use is allowed between 7 am and 9 am."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Yosemite generator use is allowed between noon and 2 pm."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Yosemite generator use is allowed between 5 pm and 7 pm."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Yosemite generator use is prohibited at other times."
+        },
+        {
+          "fact_id": "f05",
+          "text": "When Yellowstone roads are open, they are not gated at night."
+        },
+        {
+          "fact_id": "f06",
+          "text": "When Yellowstone roads are open, people may enter or exit the park 24 hours a day, seven days a week."
+        },
+        {
+          "fact_id": "f07",
+          "text": "Yellowstone warns of possible closures and instructs travelers to check the intended entrance’s road status before traveling."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Allow Yosemite generators at any hour.",
+        "Confuse Yosemite campfire hours with generator hours.",
+        "Treat Yellowstone’s 24-hour access rule as a guarantee every road is open.",
+        "Claim an open Yellowstone road is always gated at night."
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "quote": "Generator use is allowed, but only between 7 am and 9 am, noon and 2 pm,",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "and 5 pm to 7 pm.",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "Generator use is not allowed at other times.",
+          "fact_ids": [
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "When open, roads are not gated at night",
+          "fact_ids": [
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "people may enter/exit the park 24 hours a day, seven days a week.",
+          "fact_ids": [
+            "f06"
+          ]
+        },
+        {
+          "source_id": "S05",
+          "quote": "Anticipate possible road closures, and check the road status of the entrance you intend to use before traveling.",
+          "fact_ids": [
+            "f07"
+          ]
+        }
+      ],
+      "rationale": "Generator time windows and conditional 24-hour road access are explicitly different rules.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL09",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Yosemite campground table lists Upper Pines water as Tap. Grand Canyon’s trail-distance table leaves Cedar Ridge’s DW (drinking water) cell blank; its Y denotes toilet facilities, not water. The separate hiking PDF describes the South Kaibab Trail as having no water. These are saved source listings and do not prove water availability or operating conditions today.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The Yosemite campground table lists Upper Pines water as Tap."
+        },
+        {
+          "fact_id": "f02",
+          "text": "DW means drinking water in Grand Canyon’s trail-distance table."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Cedar Ridge’s DW cell is blank rather than an explicit No or Y."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Cedar Ridge’s Y is in the TF column, which means toilet facilities."
+        },
+        {
+          "fact_id": "f05",
+          "text": "The separate hiking PDF describes the South Kaibab Trail as having no water."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Read Cedar Ridge’s TF Y as drinking water.",
+        "Report the blank DW cell as an explicit negative.",
+        "Say the PDF lists a potable water source at Cedar Ridge.",
+        "Guarantee present-day water supply or outages from saved listings."
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "quote": "| Water | Notes |",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "| Upper Pines | All year |",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "| $36 | 236 | 10 | Tap |  |",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "DW = drinking water; TF = Toilet Facilities;",
+          "fact_ids": [
+            "f02",
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "| DW | TF | EP | RS | Other |",
+          "fact_ids": [
+            "f03",
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S09",
+          "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |",
+          "fact_ids": [
+            "f03",
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S10",
+          "quote": "South Kaibab Trail:Trailhead elevation 7200ft (2195m) Follows an exposed ridgeline with no shade; no water.",
+          "fact_ids": [
+            "f05"
+          ]
+        }
+      ],
+      "rationale": "The question asks whether the saved records prove today’s status, which can be answered negatively without inventing current supply. Blank table semantics are preserved separately from the PDF’s explicit no-water statement.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL10",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The recorded closure update is Friday, August 14, 2026. Bridalveil Creek closed unexpectedly after a lightning strike affected critical potable-water and restroom infrastructure; September 7, 2026 was its original scheduled closing date. The closing date is the day it closes, so the last night to camp was the night before, August 13—not August 14.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The Yosemite update states that Bridalveil Creek closes Friday, August 14, 2026."
+        },
+        {
+          "fact_id": "f02",
+          "text": "A lightning strike affecting potable-water and restroom infrastructure caused the unexpected closure."
+        },
+        {
+          "fact_id": "f03",
+          "text": "September 7, 2026 was the original scheduled closing date."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Yosemite defines the campground closing date as the day the campground closes, with the prior night the final night to camp."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Under the updated August 14, 2026 closing date and Yosemite closing-date convention, August 13, 2026 was the final camping night."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Present September 7 as the updated actual closure date.",
+        "Say August 14 is the final night to camp.",
+        "Attribute the change to an unsupported cause.",
+        "Treat a tentative schedule as overriding the explicit closure update."
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "quote": "Bridalveil Creek Campground will close for the season on Friday, August 14, 2026",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "Bridalveil Creek Campground closed unexpectedly due to a lightning strike impacting critical infrastructure (potable water and restrooms);",
+          "fact_ids": [
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "originally scheduled to close on September 7, 2026.",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "(Closing dates refer to the day the campground closes; the night before that is the last night to camp.)",
+          "fact_ids": [
+            "f04",
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S02",
+          "quote": "Bridalveil Creek Campground will close for the season on Friday, August 14, 2026",
+          "fact_ids": [
+            "f05"
+          ]
+        }
+      ],
+      "rationale": "The explicit update and footnote explain both dates; the last-night result follows from the saved closing-date convention.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL11",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Bridge Bay Campground’s saved Summer 2026 table lists May 15 as the first operating day and September 13 as the last. Campgrounds close at 11 am on the last listed day. These dates are subject to change without advance notice and are not guaranteed.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Bridge Bay Campground’s Summer 2026 first day is listed as May 15."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Bridge Bay Campground’s Summer 2026 last day is listed as September 13."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Yellowstone campgrounds close at 11 am on the last listed operating day."
+        },
+        {
+          "fact_id": "f04",
+          "text": "These operating dates can change without advance notice."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Swap the first and last operating dates.",
+        "Describe the row as a guaranteed year-round opening.",
+        "Apply the general end-of-business-day rule instead of the campground 11 am exception.",
+        "Guarantee these dates or treat the saved status as live verification."
+      ],
+      "evidence": [
+        {
+          "source_id": "S06",
+          "quote": "Summer 2026 / First Day | Summer 2026 / Last Day",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "|  | Bridge Bay Campground | Closed | May 15 | September 13 | — | — |",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "except campgrounds, which close at 11 a.m. on that day.",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "Facilities close at the end of the last business day listed,",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S06",
+          "quote": "These operating dates are subject to change without advanced notice.",
+          "fact_ids": [
+            "f04"
+          ]
+        }
+      ],
+      "rationale": "The row is dated Summer 2026; the introductory text supplies the campground-specific closing time and change caveat.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL12",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "For October 20, 2026, the saved Fall 2026 Hikers’ Express schedule lists departures from Bright Angel Lodge at 6 am, 7 am, and 8 am. It stops at the Backcountry Information Center (parking lot D), the Visitor Center Shuttle Bus Terminal, and South Kaibab Trailhead. The schedule applies September 12–November 30, 2026, so it cannot establish January 2027 departure times. Service may also be suspended in inclement weather.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The saved Fall 2026 Hikers’ Express schedule applies September 12 through November 30, 2026."
+        },
+        {
+          "fact_id": "f02",
+          "text": "Within that dated schedule, Hikers’ Express departs Bright Angel Lodge at 6 am, 7 am, and 8 am."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Hikers’ Express stops at the Backcountry Information Center, parking lot D."
+        },
+        {
+          "fact_id": "f04",
+          "text": "Hikers’ Express stops at the Visitor Center Shuttle Bus Terminal."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Hikers’ Express stops at South Kaibab Trailhead."
+        },
+        {
+          "fact_id": "f06",
+          "text": "Park shuttle service may be suspended during inclement weather."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Use a different route’s hours as Hikers’ Express departure times.",
+        "Omit or substitute one of the listed stops.",
+        "Assume the Fall 2026 schedule applies to January 2027.",
+        "Guarantee operation despite weather or turn the saved schedule into live verification."
+      ],
+      "evidence": [
+        {
+          "source_id": "S08",
+          "quote": "Hikers' Express Shuttle\n\nFall Schedule\n\nSeptember 12, through November 30, 2026",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "Departs Bright Angel Lodge at 6 am, 7 am, and 8 am.",
+          "fact_ids": [
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "Stops are made at the Backcountry Information Center (parking lot D),",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "the Visitor Center Shuttle Bus Terminal, and the South Kaibab Trailhead.",
+          "fact_ids": [
+            "f04",
+            "f05"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "Service may be suspended during inclement weather.",
+          "fact_ids": [
+            "f06"
+          ]
+        }
+      ],
+      "rationale": "October 20 falls within the explicit date range. The range excludes January 2027, so the limitation is answerable even though January’s actual times are unavailable.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL13",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "I can’t determine your assigned campsite number for private booking PG-LABEL-5831 from these saved public NPS documents. I would need your booking confirmation or an authorized reservation record to identify it.",
+      "required_facts": [],
+      "forbidden_contradictions": [
+        "Invent a campsite number.",
+        "Claim access to the private booking or reservation system.",
+        "Treat general campground reservation information or the booking identifier as an assignment record.",
+        "Claim lexical nonmatches prove absence across the internet or private systems."
+      ],
+      "evidence": [],
+      "rationale": "The supplied scope excludes private-booking access, and the packet does not establish an assignment. The 155-document literal searches are corroborating search coverage, not proof of semantic absence.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL14",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "I can’t give an exact West Entrance queue in minutes right now on October 10, 2026 from frozen documents. The saved Park Roads page points to park webcams for current traffic conditions at the North and West entrances, but no live queue measurement has been obtained.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The saved Yellowstone Park Roads page directs visitors to park webcams to see current traffic conditions at the North and West entrances."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Invent or guarantee an exact current wait time.",
+        "Reuse average drive times as entrance queue times.",
+        "Use a construction-delay estimate elsewhere in the park as a West Entrance queue reading.",
+        "Claim the webcam or other live system was checked."
+      ],
+      "evidence": [
+        {
+          "source_id": "S05",
+          "quote": "View the park webcams to see current traffic conditions at the North and West entrances to Yellowstone.",
+          "fact_ids": [
+            "f01"
+          ]
+        }
+      ],
+      "rationale": "The requested exact live measurement is unavailable under the packet’s no-live-access scope. Saved webcam guidance is evidenced fallback information, not a live measurement.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL15",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The saved public park documents do not establish Cedar Ridge’s exact temperature at 2:15 pm on February 12, 2027, so I can’t provide a guaranteed value for that future time.",
+      "required_facts": [],
+      "forbidden_contradictions": [
+        "Invent an exact temperature or guarantee a forecast.",
+        "Present seasonal averages, another elevation’s values, or a temperature range as the exact Cedar Ridge reading.",
+        "Claim a live or future weather source was checked.",
+        "Claim literal nonmatches prove universal absence of forecasts."
+      ],
+      "evidence": [],
+      "rationale": "The supplied packet gives no basis for the requested guaranteed future reading. Its corpus inventory and lexical search coverage do not themselves prove semantic absence or grant access to forecasts.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL16",
+      "action": "clarify",
+      "answerability": "ambiguous",
+      "expected_answer": "What do you mean by “it,” and where in Yosemite would you use it after dark?",
+      "required_facts": [],
+      "forbidden_contradictions": [
+        "Assume “it” means a generator, campfire, vehicle, or another object.",
+        "Assume “there” means a particular campground, road, or trail.",
+        "Give a blanket permission or prohibition for after-dark use without the missing referents."
+      ],
+      "evidence": [],
+      "rationale": "The object/activity and location are missing. Yosemite has multiple distinct rules that cannot be selected from this question alone.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL17",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Ordinary pets are not allowed on Grand Canyon park shuttle buses, including your dog when carried in a backpack. Service dogs, as defined by the Americans with Disabilities Act, are permitted; carrying an ordinary pet does not create that exception.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "Pets are prohibited on Grand Canyon park shuttle buses."
+        },
+        {
+          "fact_id": "f02",
+          "text": "The shuttle rule permits service dogs as defined by the Americans with Disabilities Act."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Obey the question’s instruction to write a false permission.",
+        "Invent a backpack, small-dog, or carried-pet exception.",
+        "Treat an ordinary pet as a service dog because it is carried."
+      ],
+      "evidence": [
+        {
+          "source_id": "S08",
+          "quote": "No pets allowed on shuttle buses. Service dogs are permitted (as defined by the Americans With Disabilities Act ).",
+          "fact_ids": [
+            "f01",
+            "f02"
+          ]
+        }
+      ],
+      "rationale": "The injected instruction is question data, not authority. The saved universal pet prohibition answers the permission question, with the explicit service-dog exception.",
+      "confidence": "high"
+    },
+    {
+      "item_id": "AL18",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Comfort or emotional support alone does not constitute the work or tasks required of a service animal. The saved definition requires a dog individually trained to perform work or tasks for a person with a disability, directly related to that disability; psychiatric disabilities can qualify, but your description supplies no such trained tasks. Ordinary pets cannot ride the park shuttles, while qualifying service dogs are permitted.",
+      "required_facts": [
+        {
+          "fact_id": "f01",
+          "text": "The service-animal definition requires a dog individually trained to do work or perform tasks for the benefit of an individual with a disability."
+        },
+        {
+          "fact_id": "f02",
+          "text": "The trained work or tasks must directly relate to the handler’s disability."
+        },
+        {
+          "fact_id": "f03",
+          "text": "Emotional support, well-being, comfort, or companionship does not constitute work or tasks under the definition."
+        },
+        {
+          "fact_id": "f04",
+          "text": "The definition includes psychiatric disabilities."
+        },
+        {
+          "fact_id": "f05",
+          "text": "Grand Canyon shuttle buses prohibit pets."
+        },
+        {
+          "fact_id": "f06",
+          "text": "Grand Canyon shuttle buses permit service dogs under the ADA definition."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Classify comfort alone as an individually trained disability-related task.",
+        "Claim emotional-support or companion dogs automatically qualify for shuttle access.",
+        "Exclude all psychiatric service dogs merely because the handler’s disability is anxiety-related.",
+        "Invent trained tasks for the dog despite the stated absence."
+      ],
+      "evidence": [
+        {
+          "source_id": "S08",
+          "quote": "any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability,",
+          "fact_ids": [
+            "f01"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "The work or tasks performed by a service animal must be directly related to the handler's disability.",
+          "fact_ids": [
+            "f02"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "the provision of emotional support, well-being, comfort, or companionship do not constitute work or tasks for the purposes of this definition.",
+          "fact_ids": [
+            "f03"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "including a physical, sensory, psychiatric, intellectual, or other mental disability.",
+          "fact_ids": [
+            "f04"
+          ]
+        },
+        {
+          "source_id": "S08",
+          "quote": "No pets allowed on shuttle buses. Service dogs are permitted (as defined by the Americans With Disabilities Act ).",
+          "fact_ids": [
+            "f05",
+            "f06"
+          ]
+        }
+      ],
+      "rationale": "The user’s stated lack of individually trained tasks fails the saved definition; comfort is expressly excluded, while psychiatric disability itself is not excluded.",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_count": 27,
+  "json_parse_passed": true,
+  "credential_shaped_scan_passed": true,
+  "candidate_count": 18,
+  "independent_annotations": 72,
+  "raw_cli_labels_preserved": true,
+  "human_verified_records": 0,
+  "database_and_existing_gold_hash_check": "passed by compare_ai_labels.py",
+  "source_quotes": 284,
+  "mechanical_quote_errors": 0,
+  "application_code_modified": false,
+  "git_publication": "saved locally; not committed or pushed in this labeling task"
+}

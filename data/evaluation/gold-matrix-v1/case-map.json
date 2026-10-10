@@ -1,0 +1,282 @@
+[
+  {
+    "item_id": "M001",
+    "candidate_item_id": "PG024",
+    "original_item_id": "G024",
+    "category": "comparative",
+    "family_id": "product-grca-shuttle-pet-service-dog"
+  },
+  {
+    "item_id": "M002",
+    "candidate_item_id": "PG008",
+    "original_item_id": "G008",
+    "category": "factual",
+    "family_id": "product-yell-wildlife-distances"
+  },
+  {
+    "item_id": "M003",
+    "candidate_item_id": "PG009",
+    "original_item_id": "G009",
+    "category": "factual",
+    "family_id": "product-yell-G009"
+  },
+  {
+    "item_id": "M004",
+    "candidate_item_id": "PG016",
+    "original_item_id": "G016",
+    "category": "multi_hop",
+    "family_id": "product-yose-G016"
+  },
+  {
+    "item_id": "M005",
+    "candidate_item_id": "PG018",
+    "original_item_id": "G018",
+    "category": "multi_hop",
+    "family_id": "product-yell-G018"
+  },
+  {
+    "item_id": "M006",
+    "candidate_item_id": "PG004",
+    "original_item_id": "G004",
+    "category": "factual",
+    "family_id": "product-yose-G004"
+  },
+  {
+    "item_id": "M007",
+    "candidate_item_id": "PG038",
+    "original_item_id": "G038",
+    "category": "ambiguous_adversarial",
+    "family_id": "product-yose-G038"
+  },
+  {
+    "item_id": "M008",
+    "candidate_item_id": "PG020",
+    "original_item_id": "G020",
+    "category": "multi_hop",
+    "family_id": "product-grca-G020"
+  },
+  {
+    "item_id": "M009",
+    "candidate_item_id": "PG033",
+    "original_item_id": "G033",
+    "category": "unanswerable",
+    "family_id": "product-yell-G033"
+  },
+  {
+    "item_id": "M010",
+    "candidate_item_id": "PG027",
+    "original_item_id": "G027",
+    "category": "temporal",
+    "family_id": "product-yell-G027"
+  },
+  {
+    "item_id": "M011",
+    "candidate_item_id": "PG031",
+    "original_item_id": "G031",
+    "category": "unanswerable",
+    "family_id": "product-yell-G031"
+  },
+  {
+    "item_id": "M012",
+    "candidate_item_id": "PG014",
+    "original_item_id": "G014",
+    "category": "factual",
+    "family_id": "product-grca-G014"
+  },
+  {
+    "item_id": "M013",
+    "candidate_item_id": "PG028",
+    "original_item_id": "G028",
+    "category": "temporal",
+    "family_id": "product-grca-G028"
+  },
+  {
+    "item_id": "M014",
+    "candidate_item_id": "PG002",
+    "original_item_id": "G002",
+    "category": "factual",
+    "family_id": "product-yose-G002"
+  },
+  {
+    "item_id": "M015",
+    "candidate_item_id": "PG005",
+    "original_item_id": "G005",
+    "category": "factual",
+    "family_id": "product-yose-G005"
+  },
+  {
+    "item_id": "M016",
+    "candidate_item_id": "PG036",
+    "original_item_id": "G036",
+    "category": "unanswerable",
+    "family_id": "product-yose-G036"
+  },
+  {
+    "item_id": "M017",
+    "candidate_item_id": "PG012",
+    "original_item_id": "G012",
+    "category": "factual",
+    "family_id": "product-grca-G012"
+  },
+  {
+    "item_id": "M018",
+    "candidate_item_id": "PG007",
+    "original_item_id": "G007",
+    "category": "factual",
+    "family_id": "product-yell-G007"
+  },
+  {
+    "item_id": "M019",
+    "candidate_item_id": "PG029",
+    "original_item_id": "G029",
+    "category": "temporal",
+    "family_id": "product-grca-G029"
+  },
+  {
+    "item_id": "M020",
+    "candidate_item_id": "PG035",
+    "original_item_id": "G035",
+    "category": "unanswerable",
+    "family_id": "product-grca-G035"
+  },
+  {
+    "item_id": "M021",
+    "candidate_item_id": "PG011",
+    "original_item_id": "G011",
+    "category": "factual",
+    "family_id": "product-grca-G011"
+  },
+  {
+    "item_id": "M022",
+    "candidate_item_id": "PG010",
+    "original_item_id": "G010",
+    "category": "factual",
+    "family_id": "product-yell-G010"
+  },
+  {
+    "item_id": "M023",
+    "candidate_item_id": "PG032",
+    "original_item_id": "G032",
+    "category": "unanswerable",
+    "family_id": "product-grca-G032"
+  },
+  {
+    "item_id": "M024",
+    "candidate_item_id": "PG019",
+    "original_item_id": "G019",
+    "category": "multi_hop",
+    "family_id": "product-yell-G019"
+  },
+  {
+    "item_id": "M025",
+    "candidate_item_id": "PG001",
+    "original_item_id": "G001",
+    "category": "factual",
+    "family_id": "product-yose-campground-generator-hours"
+  },
+  {
+    "item_id": "M026",
+    "candidate_item_id": "PG039",
+    "original_item_id": "G039",
+    "category": "ambiguous_adversarial",
+    "family_id": "product-yose-G039"
+  },
+  {
+    "item_id": "M027",
+    "candidate_item_id": "PG025",
+    "original_item_id": "G025",
+    "category": "comparative",
+    "family_id": "product-yose-pet-trail-rules"
+  },
+  {
+    "item_id": "M028",
+    "candidate_item_id": "PG013",
+    "original_item_id": "G013",
+    "category": "factual",
+    "family_id": "product-grca-G013"
+  },
+  {
+    "item_id": "M029",
+    "candidate_item_id": "PG030",
+    "original_item_id": "G030",
+    "category": "unanswerable",
+    "family_id": "product-yose-G030"
+  },
+  {
+    "item_id": "M030",
+    "candidate_item_id": "PG006",
+    "original_item_id": "G006",
+    "category": "factual",
+    "family_id": "product-yell-G006"
+  },
+  {
+    "item_id": "M031",
+    "candidate_item_id": "PG034",
+    "original_item_id": "G034",
+    "category": "unanswerable",
+    "family_id": "product-yell-G034"
+  },
+  {
+    "item_id": "M032",
+    "candidate_item_id": "PG037",
+    "original_item_id": "G037",
+    "category": "unanswerable",
+    "family_id": "product-yell-G037"
+  },
+  {
+    "item_id": "M033",
+    "candidate_item_id": "PG040",
+    "original_item_id": "G040",
+    "category": "ambiguous_adversarial",
+    "family_id": "product-grca-shuttle-pet-service-dog"
+  },
+  {
+    "item_id": "M034",
+    "candidate_item_id": "PG021",
+    "original_item_id": "G021",
+    "category": "multi_hop",
+    "family_id": "product-grca-G021"
+  },
+  {
+    "item_id": "M035",
+    "candidate_item_id": "PG026",
+    "original_item_id": "G026",
+    "category": "temporal",
+    "family_id": "product-yose-G026"
+  },
+  {
+    "item_id": "M036",
+    "candidate_item_id": "PG022",
+    "original_item_id": "G022",
+    "category": "comparative",
+    "family_id": "product-yell-wildlife-distances"
+  },
+  {
+    "item_id": "M037",
+    "candidate_item_id": "PG017",
+    "original_item_id": "G017",
+    "category": "multi_hop",
+    "family_id": "product-yose-G017"
+  },
+  {
+    "item_id": "M038",
+    "candidate_item_id": "PG003",
+    "original_item_id": "G003",
+    "category": "factual",
+    "family_id": "product-yose-pet-trail-rules"
+  },
+  {
+    "item_id": "M039",
+    "candidate_item_id": "PG015",
+    "original_item_id": "G015",
+    "category": "factual",
+    "family_id": "product-grca-G015"
+  },
+  {
+    "item_id": "M040",
+    "candidate_item_id": "PG023",
+    "original_item_id": "G023",
+    "category": "comparative",
+    "family_id": "product-yose-campground-generator-hours"
+  }
+]

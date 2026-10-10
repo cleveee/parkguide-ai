@@ -1,0 +1,37 @@
+{
+  "reviewer_id": "codex-sol",
+  "configured_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "instructions_sha256": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+  "schema_sha256": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+  "started_at_utc": "2026-10-10T22:48:12Z",
+  "finished_at_utc": "2026-10-10T22:51:36.063704Z",
+  "status": "completed",
+  "output_sha256": "9e6d5a12631550abb2afdaf8bc857d8349a4beabd8f54ea5ffb6dd548e68ddf7",
+  "isolation": {
+    "method": "input-only instructions, not OS sandbox",
+    "read_scope": "Blinded annotation-input.json, instructions.txt, and labels.schema.json only",
+    "forbidden_inputs_read": false,
+    "browser_or_provider_calls": false,
+    "delegation": false
+  },
+  "model_telemetry": null,
+  "cost": null,
+  "human_review_pending": true,
+  "label_count": 40,
+  "source_uncertainties": [
+    "The static corpus cannot establish live waits, vacancies, fares, private assignments, exact future observations, guaranteed wildlife probabilities, or individualized medical clearance.",
+    "Cedar Ridge drinking-water table cell is blank and must not be interpreted as an explicit negative.",
+    "Dated operating and trail-status statements describe saved snapshots and are not live checks."
+  ],
+  "validation": {
+    "unique_item_ids": 40,
+    "exact_quotes_checked": true,
+    "selected_park_quotes_checked": true,
+    "quote_word_limit_checked": true,
+    "word_and_array_limits_checked": true,
+    "full_schema_validation": true,
+    "schema_validator": "recursive validator of every provided JSON Schema constraint"
+  }
+}

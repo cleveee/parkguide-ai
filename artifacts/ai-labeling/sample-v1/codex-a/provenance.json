@@ -1,0 +1,15 @@
+{
+  "reviewer_id": "codex-a",
+  "input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "started_at_utc": "2026-10-10T22:02:58Z",
+  "finished_at_utc": "2026-10-10T22:08:22.464834Z",
+  "model": "inherited parent model",
+  "human_review_pending": true,
+  "execution_limitations": [
+    "AI reference proposals only; no human verification.",
+    "Used only the supplied frozen packet, its instructions and schema; no live browsing, provider calls, private booking access, or app changes.",
+    "The other 145 corpus documents were represented by inventory and lexical search excerpts, not full text; lexical absence is not semantic absence.",
+    "An initial combined metadata/search-record print was truncated; all ten complete normalized documents and bounded inventory/search summaries were subsequently inspected.",
+    "Exact quote, quote-length, case-order, fact-reference, and schema checks were performed locally against the unchanged packet."
+  ]
+}

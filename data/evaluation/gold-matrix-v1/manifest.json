@@ -1,0 +1,52 @@
+{
+  "status": "prepared",
+  "created_at": "2026-10-10T22:47:46.398797+00:00",
+  "code_commit": "8f5a1f12a873a7f0ed661276f76879337a9ff262",
+  "original_candidate_sha256": "005d90251ad918aa50daa84f8295afb8860092d84afc9988751cbe4977b4b154",
+  "original_gold_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "instructions_sha256": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+  "schema_sha256": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+  "configurations": {
+    "codex-sol": {
+      "provider": "codex_subagent",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "codex-astra": {
+      "provider": "codex_subagent",
+      "model": "gpt-6-astra",
+      "effort": "xhigh"
+    },
+    "codex-luna": {
+      "provider": "codex_subagent",
+      "model": "gpt-6-luna",
+      "effort": "high"
+    },
+    "claude-opus": {
+      "provider": "claude_code_cli",
+      "model": "opus",
+      "effort": "high"
+    },
+    "claude-sonnet": {
+      "provider": "claude_code_cli",
+      "model": "sonnet",
+      "effort": "medium"
+    }
+  },
+  "cases": 40,
+  "reviewer_count": 5,
+  "sources": 30,
+  "corpus_inventory": 155,
+  "shuffle_seed": 20261010,
+  "blinding": "Identical source packet, opaque shuffled IDs; no existing answers, categories, comparison outputs or bot responses provided. Subagent file isolation is an instruction boundary, not OS sandboxing.",
+  "source_selection_limit": "Focused complete documents selected using revised draft evidence; not an unbiased source discovery study. No final sealed course test exists/is consumed.",
+  "aggregation_rule": "Equal reviewer action votes; unique majority required. Source-based adjudication clusters semantic facts from all five labels, records supporter IDs and exact evidence; disagreements remain visible. Every final reference remains AI-derived and human_review_pending.",
+  "metric_plan": "Fresh selected-park core chat with rerank=False. Action macro/micro precision/recall/F1, label pairwise and leave-one-out agreement, chunk retrieval P/R/F1@5/@20 and source-evidence coverage. Semantic answer/citation checks are AI-provisional, not calibrated human scores.",
+  "claude_budget_cap_usd_per_pipe": 3,
+  "azure_budget_cap_usd": 5,
+  "benchmark_eligible": false,
+  "human_verifier": null,
+  "verified_at": null
+}

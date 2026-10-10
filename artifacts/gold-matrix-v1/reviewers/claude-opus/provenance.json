@@ -1,0 +1,75 @@
+{
+  "reviewer_id": "claude-opus",
+  "configuration": {
+    "provider": "claude_code_cli",
+    "model": "opus",
+    "effort": "high"
+  },
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "prompt_sha256": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+  "schema_sha256": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+  "cli_version": "2.1.296 (Claude Code)",
+  "started_at": "2026-10-10T22:48:25.259767+00:00",
+  "status": "completed",
+  "safe_mode": true,
+  "tools": [],
+  "fallback_model": null,
+  "budget_cap_usd": 3,
+  "human_review_pending": true,
+  "exit_code": 0,
+  "total_cost_usd": 1.578712,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 125303,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 28814,
+    "output_tokens_details": {
+      "thinking_tokens": 11820
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 125303,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 28814,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 125303,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 125303
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 28814,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 125303,
+      "webSearchRequests": 0,
+      "costUSD": 1.578712,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 11820,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "cli_turn_count": 2,
+  "duration_api_ms": 211867,
+  "finished_at": "2026-10-10T22:51:58.444202+00:00",
+  "elapsed_seconds": 213.195
+}

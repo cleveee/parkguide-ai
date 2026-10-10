@@ -1,0 +1,403 @@
+{
+  "created_at": "2026-10-10T23:16:57.209507+00:00",
+  "dataset_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+  "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+  "agreement": {
+    "pairwise_action_agreement": {
+      "codex-sol": {
+        "codex-sol": 1.0,
+        "codex-astra": 1.0,
+        "codex-luna": 1.0,
+        "claude-opus": 1.0,
+        "claude-sonnet": 1.0
+      },
+      "codex-astra": {
+        "codex-sol": 1.0,
+        "codex-astra": 1.0,
+        "codex-luna": 1.0,
+        "claude-opus": 1.0,
+        "claude-sonnet": 1.0
+      },
+      "codex-luna": {
+        "codex-sol": 1.0,
+        "codex-astra": 1.0,
+        "codex-luna": 1.0,
+        "claude-opus": 1.0,
+        "claude-sonnet": 1.0
+      },
+      "claude-opus": {
+        "codex-sol": 1.0,
+        "codex-astra": 1.0,
+        "codex-luna": 1.0,
+        "claude-opus": 1.0,
+        "claude-sonnet": 1.0
+      },
+      "claude-sonnet": {
+        "codex-sol": 1.0,
+        "codex-astra": 1.0,
+        "codex-luna": 1.0,
+        "claude-opus": 1.0,
+        "claude-sonnet": 1.0
+      }
+    },
+    "leave_one_out_action_metrics": {
+      "codex-sol": {
+        "n": 40,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "micro_f1": 1.0,
+        "per_class": [
+          {
+            "class": "answer",
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "refuse",
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "clarify",
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+        "excluded_no_other_reviewer_majority": [],
+        "meaning": "agreement with the other four reviewers, not factual accuracy"
+      },
+      "codex-astra": {
+        "n": 40,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "micro_f1": 1.0,
+        "per_class": [
+          {
+            "class": "answer",
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "refuse",
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "clarify",
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+        "excluded_no_other_reviewer_majority": [],
+        "meaning": "agreement with the other four reviewers, not factual accuracy"
+      },
+      "codex-luna": {
+        "n": 40,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "micro_f1": 1.0,
+        "per_class": [
+          {
+            "class": "answer",
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "refuse",
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "clarify",
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+        "excluded_no_other_reviewer_majority": [],
+        "meaning": "agreement with the other four reviewers, not factual accuracy"
+      },
+      "claude-opus": {
+        "n": 40,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "micro_f1": 1.0,
+        "per_class": [
+          {
+            "class": "answer",
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "refuse",
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "clarify",
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+        "excluded_no_other_reviewer_majority": [],
+        "meaning": "agreement with the other four reviewers, not factual accuracy"
+      },
+      "claude-sonnet": {
+        "n": 40,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "micro_f1": 1.0,
+        "per_class": [
+          {
+            "class": "answer",
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "refuse",
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "class": "clarify",
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null",
+        "excluded_no_other_reviewer_majority": [],
+        "meaning": "agreement with the other four reviewers, not factual accuracy"
+      }
+    },
+    "consensus_fact_representation": {
+      "codex-sol": {
+        "represented": 75,
+        "total": 75,
+        "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+      },
+      "codex-astra": {
+        "represented": 73,
+        "total": 75,
+        "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+      },
+      "codex-luna": {
+        "represented": 70,
+        "total": 75,
+        "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+      },
+      "claude-opus": {
+        "represented": 74,
+        "total": 75,
+        "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+      },
+      "claude-sonnet": {
+        "represented": 71,
+        "total": 75,
+        "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"
+      }
+    },
+    "fleiss_kappa": 1.0,
+    "unanimous_action_items": 40,
+    "items": 40,
+    "interpretation": "Agreement is correlated AI agreement, not human correctness; only action labels, not semantic facts, are compared numerically."
+  },
+  "action_metrics": {
+    "n": 40,
+    "accuracy": 0.925,
+    "macro_precision": 0.9090909090909091,
+    "macro_recall": 0.9666666666666667,
+    "macro_f1": 0.9298245614035088,
+    "micro_precision": 0.925,
+    "micro_recall": 0.925,
+    "micro_f1": 0.925,
+    "per_class": [
+      {
+        "class": "answer",
+        "tp": 27,
+        "fp": 0,
+        "fn": 3,
+        "support": 30,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315
+      },
+      {
+        "class": "refuse",
+        "tp": 8,
+        "fp": 3,
+        "fn": 0,
+        "support": 8,
+        "precision": 0.7272727272727273,
+        "recall": 1.0,
+        "f1": 0.8421052631578947
+      },
+      {
+        "class": "clarify",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "macro_zero_policy": "undefined class value contributes zero to the three-class macro average; per-class undefined values remain null"
+  },
+  "retrieval_metrics": {
+    "at_5": {
+      "items": 30,
+      "macro_precision": 0.23333333333333334,
+      "macro_recall": 0.8444444444444444,
+      "macro_f1": 0.3535714285714286,
+      "micro_precision": 0.23333333333333334,
+      "micro_recall": 0.7954545454545454,
+      "micro_f1": 0.36082474226804123,
+      "tp": 35,
+      "retrieved": 150,
+      "known_relevant": 44,
+      "fact_evidence_coverage": 0.8416666666666667
+    },
+    "at_20": {
+      "items": 30,
+      "macro_precision": 0.07166666666666667,
+      "macro_recall": 0.9833333333333333,
+      "macro_f1": 0.13185896229374489,
+      "micro_precision": 0.07166666666666667,
+      "micro_recall": 0.9772727272727273,
+      "micro_f1": 0.13354037267080743,
+      "tp": 43,
+      "retrieved": 600,
+      "known_relevant": 44,
+      "fact_evidence_coverage": 0.9666666666666667
+    },
+    "mrr": {
+      "mean": 0.7944444444444444,
+      "denominator": 30
+    },
+    "ndcg_at_10": {
+      "mean": 0.769330321991674,
+      "denominator": 30
+    },
+    "generation_context_fact_evidence_coverage": {
+      "mean": 0.8416666666666667,
+      "denominator": 30
+    },
+    "qrels_definition": "A chunk is relevant if its actual source spans jointly cover all units in any evidence group for at least one required atomic fact. Qrels judge only declared evidence alternatives; not exhaustive human relevance judgments.",
+    "rankings_definition": "@5/@20 use ranked candidates before generation-context pruning; actual generation contexts have a separate coverage metric.",
+    "missing_qrels_items": []
+  },
+  "operational": {
+    "attempted": 40,
+    "raw_response_rows": 40,
+    "unique_response_ids": 40,
+    "completed": 40,
+    "errors": 0,
+    "guard_error_item_ids": [
+      "M036"
+    ],
+    "latency_p50_ms": 4143.1,
+    "latency_p95_ms": 34922.24,
+    "latency_policy": "successful calls including preflight; errors counted separately, never zero latency"
+  },
+  "grading_status": "AI_CONSENSUS_REFERENCE_HUMAN_REVIEW_PENDING",
+  "formal_course_benchmark": false
+}

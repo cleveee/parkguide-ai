@@ -1,0 +1,25 @@
+{
+  "status": "AI_LABELS_AVAILABLE_HUMAN_REVIEW_PENDING",
+  "input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "outputs": {
+    "codex-a": {
+      "labels.json": "3d4880e863141b7824dc0eed6de93cf307689b1bec8e8988a6b301b7a5bd9d97",
+      "provenance.json": "ac6ae82e099cc1325003c023a1d01ec94bb0bc0950d214977c6cb69e553a8012"
+    },
+    "codex-b": {
+      "labels.json": "0e651b82e291cbcf0a7ea8a6d7056671ad735be2f96cc6d9f4d24d4413e3a1fe",
+      "provenance.json": "c53d0092edddb6a0d3bc6cc6ea404eb819fea02de99598ee6d8d13d799d79b19"
+    },
+    "codex-c": {
+      "labels.json": "88ca601da084e0e9e138caff37af9dccc5558de6dfc0ffe53ad1e98c97064214",
+      "provenance.json": "e43d2660578f759a8c13080fd7845afaa3a9a2b7382e1d913855fc3729a89fab"
+    },
+    "claude-code": {
+      "labels.json": "c9b5e0a141c51251ba8782b66cb5b67c326095dbbb36ddf421a31d93fae2073b",
+      "provenance.json": "a75ec49e4e43634efdee15bf34913d8e8462229f422d6208d8e49e7e2ae01819"
+    }
+  },
+  "claude_raw_response_sha256": "0443deab150f30b92c84b0fbcbbd4c6d1e72ac8bf86952be4a662dad56fc7502",
+  "adjudicated_reference": null,
+  "human_verifier": null
+}

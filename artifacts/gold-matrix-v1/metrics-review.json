@@ -1,0 +1,129 @@
+{
+  "review_version": "metrics-review-v1",
+  "reviewed_at": "2026-10-10T17:58:52-05:00",
+  "scope": {
+    "scripts": [
+      "scripts/derive_gold_matrix.py",
+      "src/parkguide/evaluation.py"
+    ],
+    "read_only": true,
+    "providers_or_bot_runs": false,
+    "sealed_test_read": false,
+    "reference_fact_labeling": false,
+    "configured_model": {
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "high"
+    },
+    "observed_saved_run_metadata": {
+      "artifact": "artifacts/gold-matrix-v1/chatbot/metadata.json",
+      "model": "gpt-6-luna-2026-09-22",
+      "mode": "hybrid",
+      "rerank_enabled": false,
+      "note": "The saved run is not evidence of the requested gpt-5.6-luna/high configuration; the model provenance must be reconciled before reporting it as that configuration."
+    }
+  },
+  "status": "blocked_pending_complete_responses_and_consensus",
+  "findings": [
+    {
+      "id": "MR-001",
+      "severity": "blocker",
+      "status": "observed",
+      "location": "scripts/derive_gold_matrix.py:131-133",
+      "finding": "The saved chatbot response file contains 35 rows and 35 unique IDs (M001-M036), while the matrix has 40 cases; M037-M040 are absent and no explicit failed rows are present. score() therefore stops at its 40-row assertion, so no action or retrieval metrics are currently produced.",
+      "repair": "Complete the four missing case records or write explicit error records for them, then assert raw row count, uniqueness, and exact expected IDs before constructing the ID dictionary. Keep those error records in the action denominator and report their retrieval/latency policy explicitly."
+    },
+    {
+      "id": "MR-002",
+      "severity": "high",
+      "status": "observed_in_code",
+      "location": "scripts/derive_gold_matrix.py:131-133 and 73-78",
+      "finding": "score() builds refs and bots with dict comprehensions before validating the raw records. A duplicate ID can overwrite an earlier record; a duplicate plus a missing or extra ID can leave a 40-entry dictionary that passes the current length/set assertion. finalize() has the same duplicate-collapse risk for adjudication references.",
+      "repair": "Validate raw JSONL rows first: exact expected ID set, row count, and unique IDs; reject duplicates and missing/extra IDs. Only then build dictionaries. Include the raw and unique counts in the metrics manifest."
+    },
+    {
+      "id": "MR-003",
+      "severity": "high",
+      "status": "observed_in_code",
+      "location": "scripts/derive_gold_matrix.py:170-184; src/parkguide/evaluation.py:117-129",
+      "finding": "The matrix scorer defines relevance at the fact-group level: one chunk is relevant only when it covers every unit in one alternative evidence group for a required fact. The shared retrieval_metrics helper defines relevance at the flattened evidence-unit level: any chunk covering any unit is relevant. A multi-unit fact split across chunks can therefore have no known qrel chunk in score(), while the helper reports relevant chunks and high recall. The same distinction applies to coverage: derive_gold_matrix reports required-fact group coverage, while evaluation.py reports evidence-unit coverage.",
+      "repair": "Choose one explicit qrel unit and centralize it. For fact-aware scoring, expose set-valued/group qrels or compute chunk ranking metrics over atomic evidence units and keep fact-group coverage as a separate metric. Do not mix the two definitions under the same @5/@20 labels; retain the definition and denominators in the report."
+    },
+    {
+      "id": "MR-004",
+      "severity": "medium",
+      "status": "observed_in_code",
+      "location": "scripts/derive_gold_matrix.py:209-212",
+      "finding": "Operational attempted/errors are hard-coded to 40 and completion is inferred from rows containing result.elapsed_ms. That is safe only after exact-ID validation and assumes every successful result has elapsed_ms. With missing rows, duplicate-collapse, or malformed result rows, the operational summary can misstate the failure count or raise instead of preserving a failed case.",
+      "repair": "Derive attempted from the frozen expected ID set, count explicit error rows separately, validate successful elapsed_ms, and emit missing/duplicate/malformed IDs before computing latency percentiles."
+    },
+    {
+      "id": "MR-005",
+      "severity": "medium",
+      "status": "observed_in_code",
+      "location": "scripts/derive_gold_matrix.py:161-190",
+      "finding": "Action and retrieval scoring does not score semantic claim support. It records the response action and retrieval/context coverage but ignores claims, citation_review, and guard_errors when constructing per-item metrics. Therefore a valid action or retrieved span must not be reported as an answer with supported claims.",
+      "repair": "Add a clearly provisional claim-identity/guard diagnostic per item (for example, every evidence_id exists in contexts, guard_errors are surfaced, and unsupported numerical claims are counted), while keeping semantic answer correctness and citation entailment explicitly human-review pending."
+    },
+    {
+      "id": "MR-006",
+      "severity": "low",
+      "status": "observed_in_code",
+      "location": "scripts/derive_gold_matrix.py:21-41",
+      "finding": "classify() uses zip(truth, predicted) without checking equal lengths. A direct short prediction input reports n=len(truth) and accuracy over that denominator while per-class supports are computed over the truncated zip. score() normally intends equal lengths, but this is a fragile public helper and becomes relevant if row validation is bypassed.",
+      "repair": "Raise on unequal input lengths before any count, and derive n from the validated paired inputs."
+    }
+  ],
+  "verified_passes": [
+    {
+      "area": "action_macro_micro_and_errors",
+      "result": "pass_by_static_review_and_synthetic_check",
+      "details": "Per-class TP/FP/FN are one-vs-rest. A wrong or out-of-contract error prediction contributes one global FP and one FN. Synthetic truth [answer, refuse, clarify] versus [answer, error, clarify] produced micro precision/recall/F1=2/3 and a refuse FN=1. Macro uses fixed answer/refuse/clarify labels and documents undefined-class-as-zero policy."
+    },
+    {
+      "area": "independent_label_matrix",
+      "result": "pass_for_saved_labels",
+      "details": "All five reviewer files contain exactly 40 unique expected IDs and only answer/refuse/clarify actions. Every reviewer has 30 answer, 8 refuse, 2 clarify labels. All 40 action items are unanimous."
+    },
+    {
+      "area": "leave_one_out",
+      "result": "pass_for_saved_labels",
+      "details": "The four-reviewer majority threshold is 3; no item is excluded and each reviewer has n=40. Recomputed leave-one-out action accuracy and macro/micro P/R/F1 are 1.0 for all five reviewers. This measures reviewer action agreement, not factual accuracy."
+    },
+    {
+      "area": "fleiss_kappa",
+      "result": "pass_for_saved_labels",
+      "details": "The implementation uses five raters and 40 items: per-item agreement denominator 20 and marginal total 200. Recomputed P-bar=1.0, expected agreement=0.605, and kappa=1.0. The constants are correct for this fixed matrix but should be derived if the matrix size becomes configurable."
+    },
+    {
+      "area": "retrieval_denominators",
+      "result": "pass_static_with_definition_caveat",
+      "details": "@5/@20 use the actual returned top length as the precision denominator, aggregate TP/retrieved/relevant counts, and report item count. Items with zero known relevant chunks are excluded from recall/P/R/F1 aggregates and listed as missing_qrels_items; this is a defined unscorable policy, not an implicit zero."
+    },
+    {
+      "area": "source_span_helper",
+      "result": "pass_for_interval_identity",
+      "details": "Synthetic checks passed for contiguous spans across chunks, rejection of gaps, doc_id mismatch, and content_hash mismatch. evidence_covered uses half-open overlap semantics and correctly unions adjacent source spans."
+    },
+    {
+      "area": "saved_claim_identity_diagnostic",
+      "result": "observed_not_semantic_validation",
+      "details": "The 35 saved responses contain 34 claims; all 34 have evidence_ids that resolve to returned contexts. M036 has guard_errors=[number_without_source_witness]. This confirms citation identity and a surfaced guard event only; it does not establish claim entailment or answer completeness."
+    }
+  ],
+  "synthetic_checks": [
+    "derive_gold_matrix.classify with an out-of-contract error prediction",
+    "parkguide.evaluation.evidence_covered with adjacent, gapped, wrong-doc, and wrong-hash spans",
+    "parkguide.evaluation.retrieval_metrics with two separate evidence units in distinct chunks to expose unit-vs-group semantics",
+    "read-only validation of five saved label matrices, action distributions, duplicate IDs, and saved response IDs"
+  ],
+  "limitations": [
+    "No final consensus file exists, so score() could not be run and no action P/R/F1 or retrieval @5/@20 result is claimed here.",
+    "No source facts were independently relabeled; references remain AI consensus pending human review.",
+    "No provider calls, bot reruns, sealed-test reads, Git mutations, or implementation edits were made by this review.",
+    "The saved chatbot metadata reports gpt-6-luna-2026-09-22, while this review records the requested configured target gpt-5.6-luna/high; provenance must be reconciled before using a model-specific result label."
+  ],
+  "reviewed_source_lines": {
+    "derive_gold_matrix.py": [21, 41, 131, 159, 161, 212],
+    "evaluation.py": [90, 129, 132, 145]
+  }
+}

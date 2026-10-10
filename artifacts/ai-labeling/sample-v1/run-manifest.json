@@ -1,0 +1,36 @@
+{
+  "input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "workspaces": {
+    "codex-a": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-independent-labeling-8o00fuf9/codex-a",
+    "codex-b": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-independent-labeling-8o00fuf9/codex-b",
+    "codex-c": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-independent-labeling-8o00fuf9/codex-c",
+    "claude-code": "/var/folders/s2/mx0lxsdn2l1gd8l8n2czzck40000gn/T/parkguide-independent-labeling-8o00fuf9/claude-code"
+  },
+  "reviewers": [
+    "codex-a",
+    "codex-b",
+    "codex-c",
+    "claude-code"
+  ],
+  "independent_inputs": true,
+  "codex_model": "inherited parent model; three independent runs, not three different models",
+  "claude_model": "configured default; actual reported usage model will be recorded",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "application_model_calls": 0,
+  "claude_cli_api_budget_cap_usd": 3,
+  "status": "completed",
+  "n_questions": 18,
+  "n_annotations": 72,
+  "exact_evidence_quotes_checked": 284,
+  "mechanical_evidence_error_count": 0,
+  "claude_actual_model": [
+    "claude-opus-5-5"
+  ],
+  "claude_cli_reported_cost_usd": 1.105736,
+  "claude_cli_turn_count": 2,
+  "root_semantic_adjudication": "not performed; focused AI review questions saved separately",
+  "all_reviewer_outputs_stable": true,
+  "final_gold_labels_created": false,
+  "existing_gold_files_and_sqlite_unchanged": true
+}

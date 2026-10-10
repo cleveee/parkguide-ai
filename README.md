@@ -1,10 +1,10 @@
 [Open ParkGuide on Vercel](https://parkguide-ai-dh24.vercel.app/)
 
-## Evaluation
+## Eval
 
-[Read the evaluation report](reports/hallucination-experiment-20261010/REPORT.md)
+[Read the evaluation report](reports/GOLD_MATRIX_EVALUATION.md)
 
-The evaluation compares chatbot answers with saved official NPS sources across single-park conversations, follow-ups, tables, exceptions, and source limitations. The current pilot audits 39 recorded responses for unsupported claims, missing conditions, incomplete answers, and unnecessary refusals. Source evidence, annotations, and reproducible results are saved with the report. The semantic judgments are provisional; independent evaluator and human review remain pending.
+Five model configurations independently labeled 40 single-park questions. The report compares their consensus with 40 fresh chatbot responses using precision, recall, F1, source support and completeness. AI-derived references and semantic grades await human review.
 
 ## Tech stack
 

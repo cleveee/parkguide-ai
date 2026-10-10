@@ -1,0 +1,72 @@
+{
+  "adjudication_type": "AI consensus adjudication of five independent source-based labels; not an independent sixth labeling vote",
+  "configured_model": "gpt-6-sol",
+  "configured_reasoning_effort": "high",
+  "actual_model_identity": "unknown",
+  "actual_token_usage": "unknown",
+  "work_first_artifact_written_at_utc": "2026-10-10T23:00:12.762000+00:00",
+  "completed_at_utc": "2026-10-10T23:06:50.732281+00:00",
+  "input_sha256": "662c591476ce84eff8fd3e7f629eca4c264f6b1a37cb78ccb8e6242149834efe",
+  "instructions_sha256": "dbd2fc5ab732e97e928cffd229090cbb35eae3593695f1d6dd5028d2235b643b",
+  "adjudication_sha256": "7a37ed2a6474249f87ecd37b2a606d167a62f32ada2c17c3803c60079792646d",
+  "evidence_inputs": [
+    "artifacts/gold-matrix-v1/adjudication-instructions.txt",
+    "artifacts/gold-matrix-v1/adjudication-input.json"
+  ],
+  "reviewer_ids": [
+    "codex-sol",
+    "codex-astra",
+    "codex-luna",
+    "claude-opus",
+    "claude-sonnet"
+  ],
+  "reference_count": 40,
+  "required_fact_count": 75,
+  "action_counts": {
+    "answer": 30,
+    "clarify": 2,
+    "refuse": 8
+  },
+  "source_override_items": [
+    "M027"
+  ],
+  "no_bot_outputs_read": true,
+  "no_prior_references_read": true,
+  "no_provider_app_or_browser_calls": true,
+  "human_approved": false,
+  "human_verified": false,
+  "validation_note": "Local structural check passed: 40 IDs, unanimous action alignment, required-fact reviewer links, >=3 distinct supporters except documented source override, and every evidence quote uniquely occurs in saved source text with <=25 whitespace-delimited words. Root performs final validation.",
+  "source_packet_sha256": "0c19eea9c56bb1f7b5774691e2430fe4d31826b2a2fdd56b3c1100107db8ae23",
+  "source_text_sha256_by_id": {
+    "S001": "d3cd3243165ed79afbe3d28735e710b2d350387a7d61ddecd2d0fd5a6b84d4be",
+    "S002": "be1a187ce121c0cd989b6f8d4a8a08b990fd58d4b60b021eb6f6e4fcde1d7c67",
+    "S003": "10a2b782e0fcca6e57de5ffb2275c1ddab53c8db19741327edac4471219b7a43",
+    "S004": "05f6618af48c781846338021449073f4039f955a83b8b54f21983bb099b4631e",
+    "S005": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+    "S006": "be5e39806e27cc161bcd7b529b66137d55188e83a0a68a48bd1e7824c77a82b8",
+    "S007": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+    "S008": "3a69bb095f21fd4f4fa356ecd45e07527c653b8b0e3a4eec91d5a9e5096458e7",
+    "S009": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+    "S010": "b538f5468de7021c039a358f030c37509e8e7fc3874d616c556779462a1dd5b9",
+    "S011": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+    "S012": "e8a64093c66baeee699fd321b0bf9920f8dd9685eefedc5b75bf71a133c8b99c",
+    "S013": "76adacce64bc440372353d5c4ff1694c0b9fba5fc2db83908cfda5546d7913b5",
+    "S014": "3ccbab153fd2099ffc70b167320fe0b62447225cb3afc9a0315da4dad4aaa384",
+    "S015": "73835002fbbdc94f93fa370f4e2c4f20efcff3d82a215f675c94e6962322e793",
+    "S016": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+    "S017": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+    "S018": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+    "S019": "c95e8cfde7003260b872294106048102ca6a13fbba31c6895b642197cc35dd04",
+    "S020": "3383cf1b436d43ff588b0b5d5401179225a4efaee5ba374f983467e163bc1228",
+    "S021": "0bae305a3f92e1ef59c68210f1e7e61c4f0d402d2057ce23d25f659082db086b",
+    "S022": "838d4248a37da00af6ce10ab06297c266f5d67cd45126bb34dd9b5bafe5ade4c",
+    "S023": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+    "S024": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+    "S025": "081766edf682cb0114a2dc05d23dbef24eb6fc065fb5e60f9e852e890559c27a",
+    "S026": "0cb91088872777db27afc1efb371460bff4e1d1b991320d7e24b3573bd8bb87e",
+    "S027": "425d2351df9473320534e1a456d50a72b49ea1dce9bddada1d258e774b2b6e2d",
+    "S028": "95e6eba60cb0abde7ef19bea1cdb9add32ca6122d1069ae0338e65dd27f789eb",
+    "S029": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+    "S030": "7ee26dceb89735450d080205cb82d073e546aa507dcad06207f26b998dcf5013"
+  }
+}

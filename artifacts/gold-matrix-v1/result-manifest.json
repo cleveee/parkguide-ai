@@ -1,0 +1,117 @@
+{
+  "created_at": "2026-10-10T23:18:50.602510+00:00",
+  "status": "COMPLETED_AI_PROVISIONAL_HUMAN_REVIEW_PENDING",
+  "labelers": {
+    "codex-sol": {
+      "provider": "codex_subagent",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "codex-astra": {
+      "provider": "codex_subagent",
+      "model": "gpt-6-astra",
+      "effort": "xhigh"
+    },
+    "codex-luna": {
+      "provider": "codex_subagent",
+      "model": "gpt-6-luna",
+      "effort": "high"
+    },
+    "claude-opus": {
+      "provider": "claude_code_cli",
+      "model": "opus",
+      "effort": "high"
+    },
+    "claude-sonnet": {
+      "provider": "claude_code_cli",
+      "model": "sonnet",
+      "effort": "medium"
+    }
+  },
+  "additional_worker_configurations": {
+    "source_adjudicator": {
+      "model": "gpt-6-sol",
+      "effort": "high"
+    },
+    "metric_reviewer": {
+      "model": "gpt-5.6-luna",
+      "effort": "high"
+    },
+    "semantic_assessor": {
+      "model": "gpt-5.6-sol",
+      "effort": "high"
+    }
+  },
+  "labels": 200,
+  "reference_cases": 40,
+  "fresh_attempts": 40,
+  "execution_errors": 0,
+  "source_code_commit": "4d3faaf74f5fdf1ba91fe09193eaaa93f8c4ddb7",
+  "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "original_gold_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+  "claude_cli_reported_total_usd": 2.266518,
+  "azure_shared_ledger_interval_estimate_usd": 0.08171568200000001,
+  "codex_cost_usd": null,
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "artifacts_sha256": {
+    "artifacts/gold-matrix-v1/adjudication-input.json": "662c591476ce84eff8fd3e7f629eca4c264f6b1a37cb78ccb8e6242149834efe",
+    "artifacts/gold-matrix-v1/adjudication-instructions.txt": "dbd2fc5ab732e97e928cffd229090cbb35eae3593695f1d6dd5028d2235b643b",
+    "artifacts/gold-matrix-v1/adjudication-provenance.json": "310216c3c0e17d291935a1fe3468a8465f7b79344247328f5c194f5dc1fb2750",
+    "artifacts/gold-matrix-v1/adjudication.frozen.json": "ced4667b5b2e9d125f30ae0a0d9bae9c50064156d05527547fe28a878815de74",
+    "artifacts/gold-matrix-v1/adjudication.json": "7a37ed2a6474249f87ecd37b2a606d167a62f32ada2c17c3803c60079792646d",
+    "artifacts/gold-matrix-v1/agreement.json": "7ed3a4d9fba02e4d49eea8c638b175e144f06945a7051779228cd054db69c2af",
+    "artifacts/gold-matrix-v1/chatbot/metadata.json": "f07d1b7894f6698d18a7965e31fffe03decb8a0886cb8ddbe73727ad8e6e8873",
+    "artifacts/gold-matrix-v1/chatbot/responses.jsonl": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+    "artifacts/gold-matrix-v1/dataset-audit.json": "fb982af6f2988f5d6e3bf996c5a572d3aefb9522e0b289d73e0bf031fd639689",
+    "artifacts/gold-matrix-v1/freeze-incident.json": "1f824bc3cb6c1aeda288bc9aed84f7224055ce20fbd33d7b05d9e318fdf3a651",
+    "artifacts/gold-matrix-v1/label-freeze.json": "adfe7967a0561846fd273db813da133be2bd46cacbad9b722c46128ca8e507ba",
+    "artifacts/gold-matrix-v1/metrics-review-final.json": "a2a1ecf9f80d194194f0452c00315e81808c38cef77c21ed4ed451f0de33fe9e",
+    "artifacts/gold-matrix-v1/metrics-review.json": "f2526dbbd6ef4d26e14197341e6f4492034afa65396242d1a27d71a8858168ef",
+    "artifacts/gold-matrix-v1/metrics.json": "4986f0e766be2d23280e67b0b742075a3195dd063858766c46ce9aee416c81ae",
+    "artifacts/gold-matrix-v1/per-item-metrics.jsonl": "e192c6ff663a6509fb96b21f2a0730edc33ab6360c5609a12e4ae500561fcc27",
+    "artifacts/gold-matrix-v1/qrels.json": "371be29f4cd080a5f1c783e1845d3c4ad39556ba9d993c219d60f921c25bbfce",
+    "artifacts/gold-matrix-v1/report-review.json": "6768606caaa077084eb8b18f2e4f3e7e58ec54c8ad4565ca3918123d80e216e2",
+    "artifacts/gold-matrix-v1/reviewers/claude-opus/cli-response.json": "ce0b14b24cf450324faf577b8bd1a6bd650d8b1fc399bb09381ac06c928e69e9",
+    "artifacts/gold-matrix-v1/reviewers/claude-opus/labels.json": "6a61b0e942a2aa7befa9a4feb5d685125e5edbdbf07d20257dd39bf568fdda7c",
+    "artifacts/gold-matrix-v1/reviewers/claude-opus/labels.raw.json": "6a61b0e942a2aa7befa9a4feb5d685125e5edbdbf07d20257dd39bf568fdda7c",
+    "artifacts/gold-matrix-v1/reviewers/claude-opus/provenance.json": "46fbe92b8263f4d168f788ac951beb64e20c734c4c8e6fbea976bbf21f151caa",
+    "artifacts/gold-matrix-v1/reviewers/claude-opus/source-validation.json": "3c80d7120d16bec64ef918c8e936134cd56ff4b9a3e87d034d2682eb40147e2a",
+    "artifacts/gold-matrix-v1/reviewers/claude-sonnet/cli-response.json": "92e1d373a799707fa444e68032799eac8c32a056bdc8e2714a48f07d38ae2fa7",
+    "artifacts/gold-matrix-v1/reviewers/claude-sonnet/labels.json": "7a9287cc13c9ec59c2e824177343b4f6377b8aeae34d88766374171ee4408dd9",
+    "artifacts/gold-matrix-v1/reviewers/claude-sonnet/labels.raw.json": "7a9287cc13c9ec59c2e824177343b4f6377b8aeae34d88766374171ee4408dd9",
+    "artifacts/gold-matrix-v1/reviewers/claude-sonnet/provenance.json": "13e1e3895240e4975db5337d231b7a3e7249d843359fb22a0b2aabf63631ab01",
+    "artifacts/gold-matrix-v1/reviewers/claude-sonnet/source-validation.json": "e2cc9bb8804bb78d62c88437f0e564911caca40530c1f58d7c2538d10b1c97c2",
+    "artifacts/gold-matrix-v1/reviewers/codex-astra/labels.json": "358074326ac247482dd0af823183e2a810ce564ab39f32a5c90f48ea0999c458",
+    "artifacts/gold-matrix-v1/reviewers/codex-astra/labels.raw.json": "358074326ac247482dd0af823183e2a810ce564ab39f32a5c90f48ea0999c458",
+    "artifacts/gold-matrix-v1/reviewers/codex-astra/provenance.json": "a5b26058a2fb7c793a4f3461ed67db1a08f502554d332bfd0dc6f562cf811cb5",
+    "artifacts/gold-matrix-v1/reviewers/codex-astra/source-validation.json": "bc01a3159e3dfe86f12f8c8df9b0ebf9206183220d290e1915a08ec00bde701c",
+    "artifacts/gold-matrix-v1/reviewers/codex-luna/labels.json": "84f18b2fabfb347b0d9f6b61e088ba046fb4b1866e874667920aa4b20b0605a6",
+    "artifacts/gold-matrix-v1/reviewers/codex-luna/labels.raw.json": "84f18b2fabfb347b0d9f6b61e088ba046fb4b1866e874667920aa4b20b0605a6",
+    "artifacts/gold-matrix-v1/reviewers/codex-luna/provenance.json": "f3adca37ef772002f79d953a5e58d89b335202a5e5d8f1ddda63612fb4a60fe3",
+    "artifacts/gold-matrix-v1/reviewers/codex-luna/source-validation.json": "bd28cbe29fddc0382eccdfe783953954ba3e8e39448bd90333d7dfb959e7a971",
+    "artifacts/gold-matrix-v1/reviewers/codex-sol/labels.json": "9e6d5a12631550abb2afdaf8bc857d8349a4beabd8f54ea5ffb6dd548e68ddf7",
+    "artifacts/gold-matrix-v1/reviewers/codex-sol/labels.raw.json": "9e6d5a12631550abb2afdaf8bc857d8349a4beabd8f54ea5ffb6dd548e68ddf7",
+    "artifacts/gold-matrix-v1/reviewers/codex-sol/provenance.json": "2c4b6895c603687a327e50954bb2231c40b695c61eb80b6f0afddb72161ac180",
+    "artifacts/gold-matrix-v1/reviewers/codex-sol/source-validation.json": "361fccc949ddd44b48eb510b80f079aa23108b2c86c17b60929cfa117c8f7780",
+    "artifacts/gold-matrix-v1/semantic-assessment.json": "e69bf1cac2794b125814d7fbd80755821488746be6068ef3a68763b257548dcf",
+    "artifacts/gold-matrix-v1/semantic-assessment.raw.json": "e69bf1cac2794b125814d7fbd80755821488746be6068ef3a68763b257548dcf",
+    "artifacts/gold-matrix-v1/semantic-input.json": "9876b91aae819c8ed3332caeffe096665a9f953e0454244901d1112e7d38b654",
+    "artifacts/gold-matrix-v1/semantic-instructions.txt": "1c7d5ce101c6107fbc999371a44e26fd824f73cd5de78b8bb8a9f4e1892e5fb4",
+    "artifacts/gold-matrix-v1/semantic-provenance.json": "9742a12be353b923e43b10fd25ce6cd8b673aca66fa6d67578481bf81b3a2b04",
+    "artifacts/gold-matrix-v1/semantic-summary.json": "e414e1d37c4a706082b2118cd11d985dcfdeabde636d77ddda4036a693b96f90",
+    "data/evaluation/gold-matrix-v1/annotation-input.json": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+    "data/evaluation/gold-matrix-v1/case-map.json": "0850e7bc0c57f12cee6b814e57b52623e73552ae732dfac1b48494cfdc2af7a2",
+    "data/evaluation/gold-matrix-v1/consensus-manifest.json": "12b54f88765b788a1438ea0c034d0229f6e35b78e02fc3bc76aa3cd7751a0656",
+    "data/evaluation/gold-matrix-v1/gold-consensus.jsonl": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+    "data/evaluation/gold-matrix-v1/instructions.txt": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+    "data/evaluation/gold-matrix-v1/labels.schema.json": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+    "data/evaluation/gold-matrix-v1/manifest.json": "c12c8330c06a2f7712b17918d277942edf0fc13344fae4ca21fa85236a27398f",
+    "reports/GOLD_MATRIX_EVALUATION.md": "1edba637d6ece1f8941085b0e4cccac136db4cac4b16c7dfd80e117249bf4dd1",
+    "scripts/assess_gold_matrix.py": "fe1cc8825124353b5ae7a48f1f1a6657d8fdce90fda88faebe1d13af1251f8b5",
+    "scripts/build_gold_matrix_report.py": "03541f419a13663dba5eee552295ff386bbe40c308208180393aae978f34ba16",
+    "scripts/derive_gold_matrix.py": "22a3a188f6d334166aedf701b2dd213d0c274211d5343a2af9b4ec6d03394ec2",
+    "scripts/gold_matrix.py": "0f9e2cba5b4f636958a33942ba445f005fa469a44136a016b0492d4a36189512"
+  }
+}

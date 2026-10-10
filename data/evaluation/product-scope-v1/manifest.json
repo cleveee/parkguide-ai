@@ -1,0 +1,40 @@
+{
+  "benchmark_eligible": false,
+  "builder_sha256": "80287c2aeac83e3b3e029ec12359997d7159758b6fc976cde359b8cca488e201",
+  "chatbot_outputs_generated": 0,
+  "code_commit": "d7c4918e59c959edfb100ea7483061840933dad6",
+  "contract_file_hashes": {
+    "src/parkguide/chat.py": "1b842bcb8744d1ca4d80e0ad3b5681d15bc867010bc924f2652df4bc32a20633",
+    "src/parkguide/evaluation.py": "afe6d401b243a8bd01bda8bc99f6e9985d0619bbfc6bcd135010b31f665f17a3",
+    "src/parkguide/web.py": "ad9fef00413df94b10d1771aa7c9a0f6a334bcdd53ed8945fcfe454d13e66173",
+    "web/src/App.tsx": "d7d52d2a0e70e917531496b256ee70f2877668b65d0dc0934ee4feb8c6b70c9d",
+    "web/src/lib/chat-storage.ts": "a09f3a99f1c965c189b80afd2871eaea60358a49197557656e6cb311687dbcc9"
+  },
+  "counts": {
+    "diagnostics": 12,
+    "dialogue_turns": 18,
+    "dialogues": 6,
+    "knowledge_candidates": 40,
+    "scope_controls": 4
+  },
+  "created_at": "2026-10-10T22:40:50.731612+00:00",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "execution_contract": "Use POST /api/chat with selected_park/question/history, or answer(question, history, selected_park=...). Legacy evaluation.run omits selected_park and is incompatible. Changing the UI park starts a separate chat with empty history.",
+  "input_hashes": {
+    "data/evaluation/diagnostic.jsonl": "53c1551e25eb9bd2264c9e90de04a871704ba58073680b3b0ab781e6c0c75816",
+    "data/evaluation/dialogues.jsonl": "fa5b70643c1aeb44284b829f10c79a4486a7eba264bac51dbeda03cbfc45740d",
+    "data/evaluation/gold-drafts.jsonl": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47"
+  },
+  "original_gold_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+  "output_hashes": {
+    "diagnostic-candidates.jsonl": "99eb611d334c089a2d05a1a28e6e18adfd97aed3aeffc20e2ac1dbdb3d9cf463",
+    "dialogue-candidates.jsonl": "18594c13c65c0a001ab051d3581c1f2e89187321aa4d591f27351b0812717fb5",
+    "gold-candidates.jsonl": "005d90251ad918aa50daa84f8295afb8860092d84afc9988751cbe4977b4b154",
+    "scope-controls.jsonl": "52458d69689a384902b62841715573c7d401bf3bb8ca8148d1f5322c177473e1"
+  },
+  "paid_calls": 0,
+  "purpose": "Product-aligned revision proposals and separate operational scope controls; not final gold or measured chatbot accuracy.",
+  "review_contract": "All labels are AI proposals. Preserve source evidence and behavioral quality requirements. Human review and grouped split must precede any formal benchmark.",
+  "split_contract": "Group repeated evidence/topic families; no dev/test split created. This 40-item revision alone still lacks PDF and persistence/UI coverage.",
+  "status": "HUMAN_REVIEW_PENDING"
+}

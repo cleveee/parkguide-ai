@@ -1,0 +1,678 @@
+{
+  "reviewer_id": "codex-c",
+  "model": "inherited parent model",
+  "review_kind": "independent_AI_product_scope_source_and_code_review",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "verification_status": "HUMAN_REVIEW_PENDING",
+  "started_at_utc": "2026-10-10T22:33:00Z",
+  "finished_at_utc": "2026-10-10T22:42:31.849574+00:00",
+  "code_commit": "d7c4918e59c959edfb100ea7483061840933dad6",
+  "reviewed_files": {
+    "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/product-scope-v1/gold-candidates.jsonl": "005d90251ad918aa50daa84f8295afb8860092d84afc9988751cbe4977b4b154",
+    "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/product-scope-v1/scope-controls.jsonl": "52458d69689a384902b62841715573c7d401bf3bb8ca8148d1f5322c177473e1",
+    "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/product-scope-v1/dialogue-candidates.jsonl": "18594c13c65c0a001ab051d3581c1f2e89187321aa4d591f27351b0812717fb5",
+    "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/product-scope-v1/diagnostic-candidates.jsonl": "99eb611d334c089a2d05a1a28e6e18adfd97aed3aeffc20e2ac1dbdb3d9cf463",
+    "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/product-scope-v1/manifest.json": "19ff0f5172916100d038fe54ac5ae689e089f650a934e7fa15a6901b338be1d0"
+  },
+  "database": {
+    "path": "/Users/robin/Build/Personal/parkguide-ai/data/parkguide.sqlite",
+    "sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+    "access": "SQLite URI mode=ro",
+    "document_counts": {
+      "html": 150,
+      "pdf": 5
+    }
+  },
+  "code_file_hashes": {
+    "src/parkguide/chat.py": "1b842bcb8744d1ca4d80e0ad3b5681d15bc867010bc924f2652df4bc32a20633",
+    "src/parkguide/dialogue.py": "72a3a17a5fbf1f34ae45870e21bb1ee2970b37f9d6534ab6b3bee16f7551e081",
+    "src/parkguide/web.py": "ad9fef00413df94b10d1771aa7c9a0f6a334bcdd53ed8945fcfe454d13e66173",
+    "src/parkguide/evaluation.py": "afe6d401b243a8bd01bda8bc99f6e9985d0619bbfc6bcd135010b31f665f17a3",
+    "web/src/App.tsx": "d7d52d2a0e70e917531496b256ee70f2877668b65d0dc0934ee4feb8c6b70c9d",
+    "web/src/lib/use-chat.ts": "7c7be7d1944148505fbaad59a5c2f00c1829f92843c083bb5f95c5beb6a48f62",
+    "web/src/lib/chat-storage.ts": "a09f3a99f1c965c189b80afd2871eaea60358a49197557656e6cb311687dbcc9"
+  },
+  "summary": {
+    "knowledge_candidates": 40,
+    "scope_controls": 4,
+    "dialogue_trajectories": 6,
+    "dialogue_turns": 18,
+    "diagnostics": 12,
+    "total_requests": 74,
+    "evidence_units": 103,
+    "mechanical_source_errors": 0,
+    "open_support_or_scope_defects": 0,
+    "resolved_reference_or_rubric_findings": 13,
+    "remaining_implementation_findings": 2,
+    "chatbot_calls": 0,
+    "provider_calls": 0,
+    "browser_calls": 0,
+    "assessment": "Latest revision has no material remaining source-support or one-park-scope defect found in this AI review. It is not human verified or a measured performance result."
+  },
+  "contract_audit": {
+    "api": "ChatRequest requires selected_park in yose/yell/grca, question and optional alternating complete user/assistant history; extra fields forbidden. POST /api/chat forwards selected_park into shared answer().",
+    "ui": "After an existing chat has turns, choosing another park starts a distinct conversation with empty turns. An empty chat may change its selected park directly. Completed same-park turns produce actual history_content and actual history_evidence_ids; mismatch refusals and incomplete/blank pairs are excluded.",
+    "dialogues": "All six trajectories stay in one selected park for three turns. The fixture says to append actual completed assistant responses and actual evidence IDs; reference answers must never seed history.",
+    "nonanswer_rubrics": "All 17 nonanswer requests in knowledge/dialogue/diagnostic suites have empty keyword fact lists plus explicit semantic expected-answer behavior. Four additional operational scope controls require selector-directed refusal and no cross-park answer.",
+    "source_table_semantics": "Cedar Ridge DW blank is represented as unmarked in the saved table, never as an explicit N value or a live water-availability claim. Distance is along-trail mi/km, separate from elevation ft/m.",
+    "temporal_semantics": "Saved guide periods, schedules and status statements retain their applicable years/dates. They are captured-source information, not current or guaranteed operation."
+  },
+  "targeted_revision_acceptance": [
+    {
+      "item_ids": [
+        "PG022",
+        "PG023",
+        "PG024",
+        "PG025"
+      ],
+      "decision": "accepted",
+      "reason": "All four rewritten comparisons concern facts within their selected park, preserve their safety/access qualifiers, and have exact supporting source units."
+    },
+    {
+      "item_ids": [
+        "PG011",
+        "PT02-2"
+      ],
+      "decision": "accepted",
+      "reason": "Blank drinking-water cells are not converted into an explicit negative. DW definition, column heading and source rows are retained."
+    },
+    {
+      "item_ids": [
+        "PG038",
+        "PG039",
+        "PD011",
+        "PD012",
+        "PT04-1"
+      ],
+      "decision": "accepted",
+      "reason": "Clarification asks for the missing place, pass type, item or starting location; the selected park is already known."
+    },
+    {
+      "item_ids": [
+        "PT01-1",
+        "PT01-2",
+        "PT01-3"
+      ],
+      "decision": "accepted",
+      "reason": "Chronology changes from June 2025 to October 2026 inside Yosemite, then asks whether the obsolete guide still applies. Applicability periods are source supported."
+    },
+    {
+      "item_ids": [
+        "PT03-1",
+        "PT03-2",
+        "PT03-3"
+      ],
+      "decision": "accepted",
+      "reason": "Both bear-encounter contexts remain inside Yosemite. Developed-area/approaching-bear guidance is verbatim yelling very loudly and aggressively, not an invented instruction."
+    },
+    {
+      "item_ids": [
+        "PG035",
+        "PT06-3"
+      ],
+      "decision": "accepted_quality_requirement_retained",
+      "reason": "Refuse individual medical clearance or dosage, with qualified clinical/appropriate urgent assistance referral. Do not weaken this to match generic existing refusal text."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "review_issue_id": "R001",
+      "item_ids": [
+        "PT02-1"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Below the rim could mean vertical elevation loss, whereas the reference gives trail distance.",
+      "verified_correction": "Question now explicitly asks one-way trail distance from the rim trailhead to Cedar Ridge.",
+      "replacement_evidence": []
+    },
+    {
+      "review_issue_id": "R002",
+      "item_ids": [
+        "PT02-3"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Keyword fragments did not explicitly require the computed difference.",
+      "verified_correction": "Required facts now specify both rim-to-point distances and the 1.5-mile (2.4-km) difference; the reference states the along-trail comparison.",
+      "replacement_evidence": []
+    },
+    {
+      "review_issue_id": "R003",
+      "item_ids": [
+        "PG011",
+        "PT02-1",
+        "PT02-3"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Generic column headings and point rows did not independently identify the South Kaibab origin.",
+      "verified_correction": "All three now include the South Kaibab section row.",
+      "replacement_evidence": [
+        {
+          "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+          "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+          "end": 2178,
+          "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+          "quote": "| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+          "start": 2118
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R004",
+      "item_ids": [
+        "PG016"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "AT&T no-service detail appeared in the reference without its own carrier-qualified evidence unit.",
+      "verified_correction": "Added exact Tuolumne Meadows no-cell-service unit with the AT&T heading.",
+      "replacement_evidence": [
+        {
+          "content_hash": "95e6eba60cb0abde7ef19bea1cdb9add32ca6122d1069ae0338e65dd27f789eb",
+          "doc_id": "8bd6a87f958762271a5d0f58a5998c09b7495cf49c1e680cbe7abbe3eaafe379",
+          "end": 622,
+          "heading_path": "Internet Access and Cell Service > Cell Service > AT&T",
+          "quote": "Tuolumne Meadows: No cell service.",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/internet.htm",
+          "start": 588
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R005",
+      "item_ids": [
+        "PG017"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Parking-pad detail appeared in the reference beyond the two vehicle/people quotes.",
+      "verified_correction": "Added the exact parking-pad requirement.",
+      "replacement_evidence": [
+        {
+          "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+          "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+          "end": 4923,
+          "heading_path": "Frequently Asked Questions about Campground Reservations > We have more than two vehicles arriving at our campsite. Where can we park the additional vehicles?",
+          "quote": "All vehicles must be parked on a parking pad.",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+          "start": 4878
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R006",
+      "item_ids": [
+        "PG018"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Route fragment omitted generally, year-round and regular-vehicle qualifiers.",
+      "verified_correction": "Added the preceding qualification span; route and lodgings remain supported.",
+      "replacement_evidence": [
+        {
+          "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+          "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+          "end": 156,
+          "heading_path": "Park Roads > FIND OUT MORE",
+          "quote": "The only road generally open year-round to regular vehicles is",
+          "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+          "start": 94
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R007",
+      "item_ids": [
+        "PG021"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "These and they fragments omitted the potable-spigot and standard-filter antecedents.",
+      "verified_correction": "Added both antecedent spans, preserving the possible outage and dissolved-cyanotoxin limitation.",
+      "replacement_evidence": [
+        {
+          "content_hash": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+          "doc_id": "f22ab691895e84a96e46bf39d7e228f41f3c101bc5880a132f5e99a5a4a3aff8",
+          "end": 2070,
+          "heading_path": "Summer Hiking - Hike Smart > Summer Hiking Tips For Success",
+          "quote": "only the Bright Angel and North Kaibab Trails have potable water spigots",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/hike-smart.htm",
+          "start": 1998
+        },
+        {
+          "content_hash": "3a69bb095f21fd4f4fa356ecd45e07527c653b8b0e3a4eec91d5a9e5096458e7",
+          "doc_id": "33ab568ebd04787e7d2c00574a6adf9fb3c21f93710d9286c6655b46d4012737",
+          "end": 3321,
+          "heading_path": "Safe Drinking Water > Cyanobacteria in Grand Canyon > Water Collection and Cyanobacteria",
+          "quote": "standard backpacking water filters are designed to remove bacteria, protozoa, and sediment, but",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/safe-water.htm",
+          "start": 3226
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R008",
+      "item_ids": [
+        "PT04-2"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Reference contrasted Hetch Hetchy with general park opening but lacked the general-opening evidence unit.",
+      "verified_correction": "Added exact 24-hour/365-day general rule; approximate daylight exception remains distinct.",
+      "replacement_evidence": [
+        {
+          "content_hash": "425d2351df9473320534e1a456d50a72b49ea1dce9bddada1d258e774b2b6e2d",
+          "doc_id": "fc0fc91d00a8056d4f8c891b09f2c97eb3547d0ca7f665ee14246cdaf5f80c53",
+          "end": 106,
+          "heading_path": "Operating Hours & Seasons",
+          "quote": "Yosemite National Park is open 24 hours per day, 365 days per year.",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/hours.htm",
+          "start": 39
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R009",
+      "item_ids": [
+        "PT05-3"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Reference mentioned sufficient hard or lockable alternatives without its own alternatives unit.",
+      "verified_correction": "Added listed alternatives, alongside the critter-proof container requirement.",
+      "replacement_evidence": [
+        {
+          "content_hash": "10a2b782e0fcca6e57de5ffb2275c1ddab53c8db19741327edac4471219b7a43",
+          "doc_id": "12f7aaa0b019b36bb791e0b4b38524b3258a6a9961d459ada70fe63d6a40db9d",
+          "end": 2447,
+          "heading_path": "Backcountry Food Storage",
+          "quote": "Metal cookie tins, bear canisters, and cooking pots with lockable lids are sufficient alternatives.",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/bc-food-storage.htm",
+          "start": 2348
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R010",
+      "item_ids": [
+        "PD008"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "East Entrance was required and mentioned beyond the quoted destination span.",
+      "verified_correction": "Added exact East Entrance continuation.",
+      "replacement_evidence": [
+        {
+          "content_hash": "1ce4afa2436949e70a354ca1d4269b1be1011fd3a3485c3f5add86205edc9091",
+          "doc_id": "4624ac2211617c82b827f2047552afb51b11170c75cccbd96bbcc1bdd2ac6dcd",
+          "end": 312,
+          "heading_path": "Desert View Drive > Along Desert View Drive",
+          "quote": "and the East Entrance of Grand Canyon National Park.",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/desert-view-drive.htm",
+          "start": 260
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R011",
+      "item_ids": [
+        "PG027"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "On that day closing-time fragment lacked the last-business-day antecedent.",
+      "verified_correction": "Expanded quote now explicitly ties campground closure at 11 am to the last listed day.",
+      "replacement_evidence": [
+        {
+          "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+          "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+          "end": 464,
+          "heading_path": "Operating Dates > FIND OUT MORE...",
+          "quote": "Facilities close at the end of the last business day listed, except campgrounds, which close at 11 a.m. on that day.",
+          "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+          "start": 348
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R012",
+      "item_ids": [
+        "PD010"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Reporting-instructions detail appeared in a reference with no source unit.",
+      "verified_correction": "Added exact lost-property report instruction while preserving refusal to claim a personal recovery result.",
+      "replacement_evidence": [
+        {
+          "content_hash": "358cff67c61cdd16e05b9950ddad43087745e00fef90efeebc906af929caa24a",
+          "doc_id": "dfeabdb778df4eb5a8518d4b34cd27f4302531569a5618ce95300c319e99c047",
+          "end": 1064,
+          "heading_path": "Lost & Found Property > North Rim",
+          "quote": "make a lost property report and send it to Grand Canyon National Park's Lost and Found Office.",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/lost-found.htm",
+          "start": 970
+        }
+      ]
+    },
+    {
+      "review_issue_id": "R013",
+      "item_ids": [
+        "PG035"
+      ],
+      "classification": "reference_or_rubric",
+      "status": "resolved_in_rechecked_revision",
+      "finding": "Clinician-referral quality requirement needed preservation despite current generic model-refusal handling.",
+      "verified_correction": "Requirement remains explicit; additional source evidence recommends consulting a physician before rigorous hiking. This is not medical clearance.",
+      "replacement_evidence": [
+        {
+          "content_hash": "68084e3e6df05a8a698b5521afb043c1d766d377704923346b0e805ae5782cdf",
+          "doc_id": "f22ab691895e84a96e46bf39d7e228f41f3c101bc5880a132f5e99a5a4a3aff8",
+          "end": 7545,
+          "heading_path": "Summer Hiking - Hike Smart > KEEP YOURSELF SOAKING WET TO STAY COOL.",
+          "quote": "we strongly recommend consulting with your physician before attempting rigorous hikes, especially in hot weather.",
+          "source_url": "https://www.nps.gov/grca/planyourvisit/hike-smart.htm",
+          "start": 7432
+        }
+      ]
+    }
+  ],
+  "open_support_or_scope_findings": [],
+  "implementation_findings": [
+    {
+      "finding_id": "I001",
+      "classification": "existing_implementation_bug_or_limitation",
+      "item_ids": [
+        "PG035",
+        "PG039"
+      ],
+      "status": "static_code_finding_not_runtime_verified",
+      "code_reference": {
+        "path": "src/parkguide/chat.py",
+        "line": 540
+      },
+      "finding": "When a selected-park request has no deterministic preflight and the model returns refuse or clarify, the shared path replaces its free-form text with a generic official-NPS refusal or generic place/date/detail clarification. PG035 heart-condition clearance is not covered by the dose/dosage preflight branch; a correct model clinician referral would be erased. A correct PG039 pass-type clarification can likewise lose specificity.",
+      "suggested_correction": "Preserve safe, structured reason-specific nonanswer guidance, or add deterministic clinical-clearance and pass-type clarification paths. Retain the dataset requirements.",
+      "limitation": "No answer(), API, app or provider call was run. This establishes a conditional code-path loss of behavior, not an observed model result."
+    },
+    {
+      "finding_id": "I002",
+      "classification": "existing_evaluation_runner_incompatibility",
+      "item_ids": [
+        "PG001",
+        "PG002",
+        "PG003",
+        "PG004",
+        "PG005",
+        "PG006",
+        "PG007",
+        "PG008",
+        "PG009",
+        "PG010",
+        "PG011",
+        "PG012",
+        "PG013",
+        "PG014",
+        "PG015",
+        "PG016",
+        "PG017",
+        "PG018",
+        "PG019",
+        "PG020",
+        "PG021",
+        "PG022",
+        "PG023",
+        "PG024",
+        "PG025",
+        "PG026",
+        "PG027",
+        "PG028",
+        "PG029",
+        "PG030",
+        "PG031",
+        "PG032",
+        "PG033",
+        "PG034",
+        "PG035",
+        "PG036",
+        "PG037",
+        "PG038",
+        "PG039",
+        "PG040",
+        "PSC01",
+        "PSC02",
+        "PSC03",
+        "PSC04",
+        "PT01-1",
+        "PT01-2",
+        "PT01-3",
+        "PT02-1",
+        "PT02-2",
+        "PT02-3",
+        "PT03-1",
+        "PT03-2",
+        "PT03-3",
+        "PT04-1",
+        "PT04-2",
+        "PT04-3",
+        "PT05-1",
+        "PT05-2",
+        "PT05-3",
+        "PT06-1",
+        "PT06-2",
+        "PT06-3",
+        "PD001",
+        "PD002",
+        "PD003",
+        "PD004",
+        "PD005",
+        "PD006",
+        "PD007",
+        "PD008",
+        "PD009",
+        "PD010",
+        "PD011",
+        "PD012"
+      ],
+      "status": "already_disclosed_in_manifest",
+      "code_reference": [
+        {
+          "path": "src/parkguide/evaluation.py",
+          "line": 213
+        },
+        {
+          "path": "src/parkguide/evaluation.py",
+          "line": 322
+        },
+        {
+          "path": "src/parkguide/evaluation.py",
+          "line": 132
+        }
+      ],
+      "finding": "Legacy run() and dialogue_diagnostic() call answer() without selected_park. Their provisional_grade() uses token overlap, ignores semantic behavior_requirements and contradictions, and gives action-only diagnostic success when required_facts is empty. They cannot execute or semantically grade this product-aligned suite as defined.",
+      "suggested_correction": "Use the manifest-described selected-park API/shared path and human semantic adjudication, or implement a separate compatible runner/grader before measurement. Do not treat provisional keyword/action heuristics as accuracy."
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "gap_id": "C001",
+      "area": "PDF source use",
+      "finding": "The frozen corpus contains five PDFs, but all evidence units in this revision point to HTML documents. A guide-page link to a PDF does not test retrieval or interpretation of the PDF itself.",
+      "suggested_follow_up": "Add verified PDF-dependent questions before claiming PDF QA coverage."
+    },
+    {
+      "gap_id": "C002",
+      "area": "UI persistence and park change",
+      "finding": "Request/reference review does not exercise reload restoration, localStorage integrity, chat switching, cancellation, source-inspector rendering or park-selector creation of a new conversation.",
+      "suggested_follow_up": "Keep these as separate product integration tests using the actual UI; do not infer them from the 74 QA fixtures."
+    },
+    {
+      "gap_id": "C003",
+      "area": "Retrieved prompt injection",
+      "item_ids": [
+        "PG040",
+        "PT06-2"
+      ],
+      "finding": "These inject instructions in the user question. PT06-2 labels its user text SOURCE INSTRUCTION, but it does not modify or supply an actual retrieved-document passage.",
+      "suggested_follow_up": "Describe these as user adversarial/instruction-conflict controls. Add a controlled retrieved-context injection test if that coverage is required."
+    },
+    {
+      "gap_id": "C004",
+      "area": "Scope-boundary breadth",
+      "item_ids": [
+        "PSC01",
+        "PSC02",
+        "PSC03",
+        "PSC04"
+      ],
+      "finding": "All four dedicated controls select Yosemite and explicitly name a foreign park. They do not cover inverse selected parks, implied park aliases, negated mentions, or a mismatched turn followed by an in-scope follow-up.",
+      "suggested_follow_up": "Add separate operational guard tests if comprehensive scope/history coverage is claimed."
+    },
+    {
+      "gap_id": "C005",
+      "area": "Human review and leakage control",
+      "finding": "The revision was authored after earlier development outputs and remains AI proposed. Repeated sources/topics occur across knowledge and dialogue suites; different family_id strings alone do not prove leakage-safe grouping. No dev/test split exists.",
+      "suggested_follow_up": "Human reviewers must adjudicate facts/actions and group shared evidence/topic dependencies before any formal held-out benchmark."
+    },
+    {
+      "gap_id": "C006",
+      "area": "Runtime and live-data guard behavior",
+      "item_ids": [
+        "PG030",
+        "PG035",
+        "PG039"
+      ],
+      "finding": "No actual assistant responses were generated in this review. In particular vacant is absent from the local live_state pattern and PG035/PG039 depend on paths beyond their specific deterministic preflight. The source-supported refusal/clarification requirements remain valid, but their delivered behavior is unknown.",
+      "suggested_follow_up": "Verify these through the authorized selected-park path when runtime evaluation is explicitly scheduled; do not lower reference requirements."
+    }
+  ],
+  "suite_checks": {
+    "gold-candidates.jsonl": {
+      "request_count": 40,
+      "action_counts": {
+        "answer": 30,
+        "refuse": 8,
+        "clarify": 2
+      },
+      "evidence_units": 65,
+      "reviewed_item_ids": [
+        "PG001",
+        "PG002",
+        "PG003",
+        "PG004",
+        "PG005",
+        "PG006",
+        "PG007",
+        "PG008",
+        "PG009",
+        "PG010",
+        "PG011",
+        "PG012",
+        "PG013",
+        "PG014",
+        "PG015",
+        "PG016",
+        "PG017",
+        "PG018",
+        "PG019",
+        "PG020",
+        "PG021",
+        "PG022",
+        "PG023",
+        "PG024",
+        "PG025",
+        "PG026",
+        "PG027",
+        "PG028",
+        "PG029",
+        "PG030",
+        "PG031",
+        "PG032",
+        "PG033",
+        "PG034",
+        "PG035",
+        "PG036",
+        "PG037",
+        "PG038",
+        "PG039",
+        "PG040"
+      ]
+    },
+    "scope-controls.jsonl": {
+      "request_count": 4,
+      "action_counts": {
+        "refuse": 4
+      },
+      "evidence_units": 0,
+      "reviewed_item_ids": [
+        "PSC01",
+        "PSC02",
+        "PSC03",
+        "PSC04"
+      ]
+    },
+    "dialogue-candidates.jsonl": {
+      "request_count": 18,
+      "action_counts": {
+        "answer": 15,
+        "clarify": 1,
+        "refuse": 2
+      },
+      "evidence_units": 26,
+      "reviewed_item_ids": [
+        "PT01-1",
+        "PT01-2",
+        "PT01-3",
+        "PT02-1",
+        "PT02-2",
+        "PT02-3",
+        "PT03-1",
+        "PT03-2",
+        "PT03-3",
+        "PT04-1",
+        "PT04-2",
+        "PT04-3",
+        "PT05-1",
+        "PT05-2",
+        "PT05-3",
+        "PT06-1",
+        "PT06-2",
+        "PT06-3"
+      ]
+    },
+    "diagnostic-candidates.jsonl": {
+      "request_count": 12,
+      "action_counts": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "evidence_units": 12,
+      "reviewed_item_ids": [
+        "PD001",
+        "PD002",
+        "PD003",
+        "PD004",
+        "PD005",
+        "PD006",
+        "PD007",
+        "PD008",
+        "PD009",
+        "PD010",
+        "PD011",
+        "PD012"
+      ]
+    }
+  },
+  "execution_limitations": [
+    "Read only the revision candidate suites, manifest, task-relevant repository documentation/code and frozen SQLite. Did not read other reviewer labels or alter original drafts/independent labeling outputs.",
+    "Source support and API/UI contract were audited statically. No browser, app, answer/API or provider request was executed.",
+    "Root changed the candidate files during review. All resolved changes were re-read; final candidate hashes were checked against the final manifest at artifact creation.",
+    "All assessments and proposed corrections are AI proposals pending human adjudication; no measured semantic performance or benchmark eligibility is claimed."
+  ],
+  "started_at_utc_is_approximate": true
+}

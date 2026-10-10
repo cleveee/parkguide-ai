@@ -1,0 +1,15 @@
+{
+  "reviewer_id": "codex-luna",
+  "configured_model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "instructions_sha256": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
+  "schema_sha256": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
+  "output_sha256": "84f18b2fabfb347b0d9f6b61e088ba046fb4b1866e874667920aa4b20b0605a6",
+  "start_utc": "2026-10-10T22:47:00Z",
+  "finish_utc": "2026-10-10T22:53:00Z",
+  "status": "completed",
+  "isolation": "input-only instructions; not OS sandboxed",
+  "model_telemetry_cost": null,
+  "human_review_pending": true
+}

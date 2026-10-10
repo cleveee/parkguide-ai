@@ -28,6 +28,7 @@ web/*.tsbuildinfo
 
 # Runtime locks and transient database sidecars
 artifacts/api-ledger.lock
+artifacts/gold-matrix-v1/workspaces.local.json
 *.sqlite-wal
 *.sqlite-shm
 *.sqlite-journal

@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-10T22:48:26.297990+00:00",
+  "code_commit": "4d3faaf74f5fdf1ba91fe09193eaaa93f8c4ddb7",
+  "input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+  "config_sha256": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+  "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "model": "gpt-6-luna-2026-09-22",
+  "rerank_enabled": false,
+  "mode": "hybrid",
+  "selected_park_required": true,
+  "history": [],
+  "execution": "fresh shared chat.answer service path locally; hosted retrieval configuration (rerank=False), not remote Vercel/UI requests",
+  "budget_before": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.847797898,
+    "remaining_estimated_usd": 4.152202102,
+    "events": 1198,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "no_semantic_retries": true,
+  "benchmark_eligible": false,
+  "formal_final_test": false,
+  "human_review_pending": true,
+  "finished_at": "2026-10-10T22:58:40.870538+00:00",
+  "budget_after": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.9295135800000001,
+    "remaining_estimated_usd": 4.07048642,
+    "events": 1316,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f"
+}

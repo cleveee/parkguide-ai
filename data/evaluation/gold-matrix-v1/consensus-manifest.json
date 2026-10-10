@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-10T23:06:42.493684+00:00",
+  "dataset_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+  "label_freeze_sha256": "adfe7967a0561846fd273db813da133be2bd46cacbad9b722c46128ca8e507ba",
+  "adjudication_sha256": "ced4667b5b2e9d125f30ae0a0d9bae9c50064156d05527547fe28a878815de74",
+  "count": 40,
+  "facts": 75,
+  "actions": {
+    "answer": 30,
+    "clarify": 2,
+    "refuse": 8
+  },
+  "source_overrides": [
+    "M027"
+  ],
+  "status": "AI_CONSENSUS_HUMAN_REVIEW_PENDING",
+  "benchmark_eligible": false,
+  "human_verifier": null,
+  "adjudication_artifact": "artifacts/gold-matrix-v1/adjudication.frozen.json"
+}

@@ -1,0 +1,1185 @@
+{
+  "input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "labels_sha256": "c9b5e0a141c51251ba8782b66cb5b67c326095dbbb36ddf421a31d93fae2073b",
+  "case_count": 18,
+  "quote_count": 56,
+  "evidence_errors": [],
+  "facts_without_mechanically_valid_quote": {
+    "AL09": [
+      "F3"
+    ],
+    "AL13": [
+      "F1"
+    ],
+    "AL14": [
+      "F1"
+    ],
+    "AL15": [
+      "F1"
+    ],
+    "AL16": [
+      "F1"
+    ]
+  },
+  "note": "Exact source identity/quote checks do not establish semantic support. Refusal and clarification requirements may be unsupported by design; inspect uncovered facts rather than assume a grounding failure.",
+  "spans": [
+    {
+      "item_id": "AL01",
+      "evidence_index": 0,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Electrical, water, and sewer hookups are not available in Yosemite",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1885,
+          "end": 1951
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL01",
+      "evidence_index": 1,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "No campsites in Yosemite have hook-ups of any kind.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 5013,
+          "end": 5064
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL01",
+      "evidence_index": 2,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "dump stations (with fresh water) are available at Upper Pines Campground (all year)",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1962,
+          "end": 2045
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL02",
+      "evidence_index": 0,
+      "source_id": "S04",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "it is illegal to swim or bathe in any water that is entirely of thermal origin.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1047,
+          "end": 1126
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL02",
+      "evidence_index": 1,
+      "source_id": "S04",
+      "doc_id": "ac54eda7da850264b147c15e9908fc19dc86dae401c7204d0eb61faea9981c49",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+      "content_hash": "425e1791ca3fc47b202bfc6d5a348b6954ffb7f402bb86cd6e112d2d0051893d",
+      "quote": "Even thermal runoff can be extremely hot and cause burns.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 629,
+          "end": 686
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL03",
+      "evidence_index": 0,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Do not leave pets tied or unattended outside or in your vehicle.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 367,
+          "end": 431
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL03",
+      "evidence_index": 1,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "When temperatures are hot, do not leave your pet in a closed vehicle.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 433,
+          "end": 502
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL04",
+      "evidence_index": 0,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "You may store food in hard-sided RVs and trailers, as long the food is out of sight,",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3426,
+          "end": 3510
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL04",
+      "evidence_index": 1,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "windows, doors, and vents are closed when you're not in your campsite.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3515,
+          "end": 3585
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL04",
+      "evidence_index": 2,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Food may not be stored in pop-up or tent trailers, or other soft-sided campers.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3586,
+          "end": 3665
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL04",
+      "evidence_index": 3,
+      "source_id": "S01",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "In all walk-in and group campgrounds/campsites, including Camp 4",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1449,
+          "end": 1513
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL04",
+      "evidence_index": 4,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Walk-in/tents only (no RVs/ trailers)",
+      "fact_ids": [
+        "F4"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 7455,
+          "end": 7492
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL05",
+      "evidence_index": 0,
+      "source_id": "S05",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "The only road generally open year-round to regular vehicles is from the North Entrance at Gardiner, Montana,",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 94,
+          "end": 202
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL05",
+      "evidence_index": 1,
+      "source_id": "S05",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "through the park to Cooke City, Montana (via Tower Junction)",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 203,
+          "end": 263
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL05",
+      "evidence_index": 2,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Bridge Bay Campground | Closed | May 15 | September 13 | — | —",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1052,
+          "end": 1114
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL05",
+      "evidence_index": 3,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Facilty/Service not open during particular season",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 743,
+          "end": 792
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL06",
+      "evidence_index": 0,
+      "source_id": "S10",
+      "doc_id": "0d023e1b0ce3ea7b2f9808cfdf4378ff53817c6f0e4e23095cf7bf3ae1c2e952",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/upload/intro-bc-hike.pdf",
+      "content_hash": "4eebe276bc3ebb2147a1c01f369fb60969b1eb30a291ae6c1cc616134415f61d",
+      "quote": "Cedar Ridge 1120ft (340m) 1.5mi (2.4km) 2–4 hours",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 6760,
+          "end": 6809
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL06",
+      "evidence_index": 1,
+      "source_id": "S09",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "DW = drinking water; TF = Toilet Facilities",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1183,
+          "end": 1226
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL06",
+      "evidence_index": 2,
+      "source_id": "S09",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "Elevation (ft/m) | DW | TF | EP | RS | Other",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1317,
+          "end": 1361
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL06",
+      "evidence_index": 3,
+      "source_id": "S09",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2179,
+          "end": 2223
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 0,
+      "source_id": "S01",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "pets must be restrained on a leash not more than six feet long or otherwise physically restrained",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 583,
+          "end": 680
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 1,
+      "source_id": "S01",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail,",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 188,
+          "end": 341
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 2,
+      "source_id": "S01",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1122,
+          "end": 1238
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 3,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Please keep your pet leashed (up to 6 feet) at all times.",
+      "fact_ids": [
+        "F4"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 308,
+          "end": 365
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 4,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Leashed pets are allowed on trails above the rim, Mather Campground, Desert View Campground, Trailer Village, and throughout developed areas.",
+      "fact_ids": [
+        "F5"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2179,
+          "end": 2320
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 5,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Below the rim (on inner canyon trails).",
+      "fact_ids": [
+        "F6"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1997,
+          "end": 2036
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 6,
+      "source_id": "S01",
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "quote": "Service dogs are legally permitted anywhere that visitors can go.",
+      "fact_ids": [
+        "F7"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2818,
+          "end": 2883
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL07",
+      "evidence_index": 7,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "While pets are never allowed below the rim of Grand Canyon, service animals are permitted if they are assisting their humans who have disabilities.",
+      "fact_ids": [
+        "F7"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1261,
+          "end": 1408
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL08",
+      "evidence_index": 0,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Generator use is allowed, but only between 7 am and 9 am, noon and 2 pm, and 5 pm to 7 pm.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2376,
+          "end": 2466
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL08",
+      "evidence_index": 1,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Generator use is not allowed at other times.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2467,
+          "end": 2511
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL08",
+      "evidence_index": 2,
+      "source_id": "S05",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "When open, roads are not gated at night and people may enter/exit the park 24 hours a day, seven days a week.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 469,
+          "end": 578
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL08",
+      "evidence_index": 3,
+      "source_id": "S05",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "Most park roads are closed to regular vehicles from early November to late-April,",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 265,
+          "end": 346
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL09",
+      "evidence_index": 0,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Accessible Sites for people with disabilities | Water | Notes",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 6794,
+          "end": 6855
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL09",
+      "evidence_index": 1,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "| Upper Pines | All year | 4000 ft/1200 m |",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 7072,
+          "end": 7115
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL09",
+      "evidence_index": 2,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "$36 | 236 | 10 | Tap",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 7155,
+          "end": 7175
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL09",
+      "evidence_index": 3,
+      "source_id": "S09",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2179,
+          "end": 2223
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL09",
+      "evidence_index": 4,
+      "source_id": "S09",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "quote": "DW = drinking water",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1183,
+          "end": 1202
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL10",
+      "evidence_index": 0,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "Bridalveil Creek Campground will close for the season on Friday, August 14, 2026 due to a lighting strike that impacted critical intrastructure",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 5294,
+          "end": 5437
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL10",
+      "evidence_index": 1,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "impacting critical infrastructure (potable water and restrooms);",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 9245,
+          "end": 9309
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL10",
+      "evidence_index": 2,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "originally scheduled to close on September 7, 2026.",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 9310,
+          "end": 9361
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL10",
+      "evidence_index": 3,
+      "source_id": "S02",
+      "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "content_hash": "515ed70980ea8cb0a498b33a5693e8d4ed18d18869ecf1827d02ab89a0ba8560",
+      "quote": "(Closing dates refer to the day the campground closes; the night before that is the last night to camp.)",
+      "fact_ids": [
+        "F4"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 9057,
+          "end": 9161
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL11",
+      "evidence_index": 0,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Bridge Bay Campground | Closed | May 15 | September 13",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1052,
+          "end": 1106
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL11",
+      "evidence_index": 1,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Summer 2026 / First Day | Summer 2026 / Last Day",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 895,
+          "end": 943
+        },
+        {
+          "start": 1749,
+          "end": 1797
+        },
+        {
+          "start": 3334,
+          "end": 3382
+        },
+        {
+          "start": 4220,
+          "end": 4268
+        },
+        {
+          "start": 5837,
+          "end": 5885
+        },
+        {
+          "start": 6800,
+          "end": 6848
+        },
+        {
+          "start": 7610,
+          "end": 7658
+        },
+        {
+          "start": 9578,
+          "end": 9626
+        },
+        {
+          "start": 10017,
+          "end": 10065
+        },
+        {
+          "start": 12395,
+          "end": 12443
+        }
+      ],
+      "multiple_occurrences": true,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL11",
+      "evidence_index": 2,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "Facilities close at the end of the last business day listed, except campgrounds, which close at 11 a.m. on that day.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 348,
+          "end": 464
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL11",
+      "evidence_index": 3,
+      "source_id": "S06",
+      "doc_id": "abc09d5b040d3606f75eb61b11feeb3ca839a29c01ffdff7fc73844493afc021",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "content_hash": "553353d00a706fab4471c86912f4eac7b9b27b6ad85256ac04f05a1822b2b89a",
+      "quote": "These operating dates are subject to change without advanced notice.",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 625,
+          "end": 693
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL12",
+      "evidence_index": 0,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am.",
+      "fact_ids": [
+        "F1",
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1660,
+          "end": 1751
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL12",
+      "evidence_index": 1,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Stops are made at the Backcountry Information Center (parking lot D), the Visitor Center Shuttle Bus Terminal, and the South Kaibab Trailhead.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1752,
+          "end": 1894
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL12",
+      "evidence_index": 2,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service may be suspended during inclement weather.",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3679,
+          "end": 3729
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL14",
+      "evidence_index": 0,
+      "source_id": "S05",
+      "doc_id": "a67fb574d8452e582b62a4ab439ed5ced4a01b5fac4628fd4dd4bc0238f90174",
+      "source_url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+      "content_hash": "d77a154ac56a81546d85e207d7edab86df8592d6bd0c9aacb5bf216cf16e0cd4",
+      "quote": "View the park webcams to see current traffic conditions at the North and West entrances to Yellowstone.",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 1249,
+          "end": 1352
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL15",
+      "evidence_index": 0,
+      "source_id": "S10",
+      "doc_id": "0d023e1b0ce3ea7b2f9808cfdf4378ff53817c6f0e4e23095cf7bf3ae1c2e952",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/upload/intro-bc-hike.pdf",
+      "content_hash": "4eebe276bc3ebb2147a1c01f369fb60969b1eb30a291ae6c1cc616134415f61d",
+      "quote": "Check the weather and adjust plans",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 2235,
+          "end": 2269
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL17",
+      "evidence_index": 0,
+      "source_id": "S07",
+      "doc_id": "35318f0c22b0ddc2102dbea2cd6e336e35677a435e541c9ee3c2a5e159f362d1",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+      "content_hash": "a701a6ee18d27ef6a87b5f72963683f623f3010955841ee31c195cac46a99477",
+      "quote": "Pets are not allowed on park shuttle buses.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 754,
+          "end": 797
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL17",
+      "evidence_index": 1,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "No pets allowed on shuttle buses.",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3790,
+          "end": 3823
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL17",
+      "evidence_index": 2,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service dogs are permitted (as defined by the Americans With Disabilities Act ).",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3824,
+          "end": 3904
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL18",
+      "evidence_index": 0,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "Service animal means any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability",
+      "fact_ids": [
+        "F1"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 4852,
+          "end": 4988
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL18",
+      "evidence_index": 1,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "The crime deterrent effects of an animal's presence and the provision of emotional support, well-being, comfort, or companionship do not constitute work or tasks",
+      "fact_ids": [
+        "F2"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 6011,
+          "end": 6172
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    },
+    {
+      "item_id": "AL18",
+      "evidence_index": 2,
+      "source_id": "S08",
+      "doc_id": "5f40ff2be1cfa595c3dae4d334a9586369203d66589765017dbcd8b248e93cf5",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+      "content_hash": "fd5dfff66c91b349f2d203a4b1102cf5d10ca62e1108013881fb58519ad8f845",
+      "quote": "No pets allowed on shuttle buses.",
+      "fact_ids": [
+        "F3"
+      ],
+      "matching_character_spans": [
+        {
+          "start": 3790,
+          "end": 3823
+        }
+      ],
+      "multiple_occurrences": false,
+      "mechanically_valid": true
+    }
+  ]
+}

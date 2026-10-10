@@ -1,0 +1,1308 @@
+{
+  "labels": [
+    {
+      "item_id": "M001",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Ordinary pets are not allowed on Grand Canyon park shuttle buses. A service dog individually trained to do disability-related work or tasks is permitted.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Ordinary pets are not allowed on park shuttle buses."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Service dogs are permitted on park shuttle buses."
+        },
+        {
+          "fact_id": "F3",
+          "text": "A service animal is an individually trained dog that performs work or tasks for a person with a disability."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Ordinary pets may ride the park shuttle."
+      ],
+      "evidence": [
+        {
+          "source_id": "S007",
+          "quote": "Pets are not allowed on park shuttle buses.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S009",
+          "quote": "No pets allowed on shuttle buses. Service dogs are permitted (as defined by the Americans With Disabilities Act ).",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S007",
+          "quote": "Service animal means any dog that is individually trained to do work or perform tasks for the benefit of an individual with a disability",
+          "fact_ids": [
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "The park rule distinguishes ordinary pets from service animals.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M002",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Stay at least 100 yards from bears, wolves, and cougars, and at least 25 yards from bison.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Minimum distance from bears is 100 yards (91 m)."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Minimum distance from wolves is 100 yards (91 m)."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Minimum distance from cougars is 100 yards (91 m)."
+        },
+        {
+          "fact_id": "F4",
+          "text": "Minimum distance from bison is 25 yards (23 m)."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Bison require a 100-yard minimum distance."
+      ],
+      "evidence": [
+        {
+          "source_id": "S018",
+          "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ]
+        },
+        {
+          "source_id": "S018",
+          "quote": "at least 25 yards (23 m) away from all other animals, including bison and elk.",
+          "fact_ids": [
+            "F4"
+          ]
+        }
+      ],
+      "rationale": "The safety source groups bears, wolves, and cougars together and identifies bison among animals with a 25-yard minimum.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M003",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Old Faithful Visitor Education Center lists predictions for Old Faithful's next eruption and for five other geyser eruptions.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "It offers predictions for Old Faithful's next eruption."
+        },
+        {
+          "fact_id": "F2",
+          "text": "It offers predictions for five other geyser eruptions."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The source predicts Yellowstone supervolcano eruptions."
+      ],
+      "evidence": [
+        {
+          "source_id": "S015",
+          "quote": "Predictions for Old Faithful's next eruption, as well as predictions for five other geyser eruptions.",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The question asks which eruption-prediction service is listed at this center.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M004",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Download the Yosemite park content in the NPS app before visiting so it is available offline in remote areas without internet access.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The NPS app lets users download content from entire parks for offline use."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Offline content is useful in remote areas without internet access."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The app requires an internet connection to use downloaded park content."
+      ],
+      "evidence": [
+        {
+          "source_id": "S021",
+          "quote": "You can download content from entire parks for offline use.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S021",
+          "quote": "It’s especially handy if you’re exploring remote areas in parks or concerned about data limits.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source gives both the preparation step and why it helps in remote areas.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M005",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The road from the North Entrance through the park to Cooke City via Tower Junction is generally open year-round to regular vehicles. The two listed winter lodgings are Old Faithful Snow Lodge and Mammoth Hot Springs Hotel.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The North Entrance–Cooke City road via Tower Junction is generally open year-round to regular vehicles."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Old Faithful Snow Lodge is open during winter."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Mammoth Hot Springs Hotel is open during winter."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Other Yellowstone roads are generally open year-round to regular vehicles."
+      ],
+      "evidence": [
+        {
+          "source_id": "S017",
+          "quote": "The only road generally open year-round to regular vehicles is from the North Entrance at Gardiner, Montana,",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S017",
+          "quote": "through the park to Cooke City, Montana (via Tower Junction).",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S019",
+          "quote": "Old Faithful Snow Lodge and Mammoth Hot Springs Hotel are open during winter.",
+          "fact_ids": [
+            "F2",
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "Both sources name the route and the two winter lodgings.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M006",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Yosemite is open 24 hours a day, but the Hetch Hetchy Entrance Station is open only during approximate daylight hours.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Yosemite National Park is open 24 hours per day, 365 days per year."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Hetch Hetchy Entrance Station is open only during approximately daylight hours."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The Hetch Hetchy Entrance Station is open all night."
+      ],
+      "evidence": [
+        {
+          "source_id": "S027",
+          "quote": "Yosemite National Park is open 24 hours per day, 365 days per year.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S027",
+          "quote": "However, the Hetch Hetchy Entrance Station is open only during daylight hours (approximately)",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source distinguishes the park’s 24-hour access from this entrance station’s daylight schedule.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M007",
+      "action": "clarify",
+      "answerability": "ambiguous",
+      "expected_answer": "Which Yosemite place, facility, road, or service are you asking about? The park is already identified as Yosemite.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "The question has no referent in the supplied empty chat history.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Ask what “it” refers to; do not ask which park."
+      ]
+    },
+    {
+      "item_id": "M008",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "A one-person ordinary noncommercial day hike does not require a backcountry permit. An overnight camp at Tuweep does require one.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "A day hike does not require a backcountry permit."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Overnight camping at all Tuweep Campground sites requires a backcountry permit."
+        }
+      ],
+      "forbidden_contradictions": [
+        "A backcountry permit is required for an ordinary day hike."
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "quote": "A backcountry permit is NOT required for:",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S001",
+          "quote": "day hikes (this includes nighttime \"day\" hikes)",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S001",
+          "quote": "overnight camping in all sites at Tuweep Campground",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source explicitly lists day hikes as an exception and Tuweep overnight camping as requiring a permit.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M009",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied static park sources do not provide an exact temperature for Old Faithful at 2:15 p.m. on January 17, 2027; that future, time-specific value cannot be given from this packet.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "The question requests a precise future weather observation unavailable in the frozen corpus.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not invent a temperature or present a forecast as an exact observation."
+      ]
+    },
+    {
+      "item_id": "M010",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Summer 2026 table lists Bridge Bay Campground as opening May 15 and closing September 13. Campgrounds close at 11 a.m. on their last listed day.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Bridge Bay Campground’s Summer 2026 first day is May 15 and last day is September 13."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Campgrounds close at 11 a.m. on their last listed day."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Campgrounds close at the end of the last business day."
+      ],
+      "evidence": [
+        {
+          "source_id": "S016",
+          "quote": "Facility/Service | Status | Summer 2026 / First Day | Summer 2026 / Last Day",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S016",
+          "quote": "Bridge Bay Campground | Closed | May 15 | September 13 | — | —",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S016",
+          "quote": "except campgrounds, which close at 11 a.m. on that day.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The table’s Summer 2026 headers govern the Bridge Bay row; the page states a campground-specific closing-time exception.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M011",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied park sources do not contain a live airline fare or an exact fare for Chicago to Bozeman on February 3, 2027.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "An exact future airfare is a live commercial price, outside this static park corpus.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not invent or estimate an exact fare."
+      ]
+    },
+    {
+      "item_id": "M012",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Skywalk is on Hualapai tribal lands at Grand Canyon West, about 250 road miles and a five-hour drive from Grand Canyon National Park’s South Rim.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The Skywalk is located on tribal lands at Grand Canyon West."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Grand Canyon West is about 250 road miles and a five-hour drive from the South Rim."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The Skywalk is next to the South Rim."
+      ],
+      "evidence": [
+        {
+          "source_id": "S010",
+          "quote": "The Tribe has chosen a site at the far western end of Grand Canyon",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S010",
+          "quote": "about 250 miles (400 km) by road, a five hour drive, from the South Rim of Grand Canyon National Park",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source places Grand Canyon West and the Skywalk in relation to the South Rim by road.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M013",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The saved 2026 North Rim season dates are May 15 through October 15. The page says the entire North Kaibab Trail remains closed because of damage from the August 29, 2026 flash flood.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The 2026 North Rim season runs May 15 through October 15."
+        },
+        {
+          "fact_id": "F2",
+          "text": "The entire North Kaibab Trail remains closed due to August 29, 2026 flash-flood damage."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The North Kaibab Trail is open during the 2026 North Rim season."
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "quote": "The North Rim is open for the season, May 15, through October 15, 2026.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S002",
+          "quote": "The entire North Kaibab trail remains closed from extensive damage from a flash flood that took place on August 29, 2026.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "This answer is explicitly limited to the dates and status in the saved September 15, 2026 snapshot.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M014",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Yosemite prohibits storing food in a car, including its trunk, after dark; use a food locker.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Food may not be stored in a car, including its trunk, after dark."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Use a food locker after dark."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Food may be left in a car trunk after dark."
+      ],
+      "evidence": [
+        {
+          "source_id": "S022",
+          "quote": "Do not store food in your car (including trunk) or truck after dark: use a food locker .",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The park’s vehicle food-storage rule directly covers trunks and after-dark storage.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M015",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "An ordinary Yosemite day hike does not require a wilderness permit, except a day hike to Half Dome does.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Wilderness permits are not required for day hikes."
+        },
+        {
+          "fact_id": "F2",
+          "text": "The named day-hike exception is Half Dome."
+        }
+      ],
+      "forbidden_contradictions": [
+        "All Yosemite day hikes require wilderness permits."
+      ],
+      "evidence": [
+        {
+          "source_id": "S030",
+          "quote": "A wilderness permit is not required for day hikes (unless hiking to Half Dome )",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source states the general rule and the named exception together.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M016",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied static sources do not report the live wait in minutes at Yosemite’s Arch Rock entrance right now.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "A current entrance wait is live operational information absent from the frozen corpus.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not invent a wait time; direct the visitor to current park conditions if useful."
+      ]
+    },
+    {
+      "item_id": "M017",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yavapai Lodge is the only in-park Grand Canyon lodge identified as having pet-friendly rooms.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Yavapai Lodge is the only in-park lodge with pet-friendly rooms."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Another in-park Grand Canyon lodge is identified as having pet-friendly rooms."
+      ],
+      "evidence": [
+        {
+          "source_id": "S007",
+          "quote": "Yavapai Lodge is the only in-park lodge that has pet friendly rooms.",
+          "fact_ids": [
+            "F1"
+          ]
+        }
+      ],
+      "rationale": "The pets page names the lodge and says it is the only one.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M018",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. For annual-pass entry, the pass holder must be present with identification; a picture of the pass cannot substitute for the actual pass.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "An annual-pass holder must be present with identification for Yellowstone entry."
+        },
+        {
+          "fact_id": "F2",
+          "text": "A picture of the pass is not accepted in lieu of the actual pass."
+        }
+      ],
+      "forbidden_contradictions": [
+        "A photo of an absent holder’s annual pass is accepted for entry."
+      ],
+      "evidence": [
+        {
+          "source_id": "S014",
+          "quote": "For all annual passes, the pass holder must be present with identification for entry into Yellowstone National Park.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S014",
+          "quote": "cannot accept receipts or pictures of the pass in lieu of the actual pass.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The pass rule directly answers the proposed workaround.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M019",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Under the Fall 2026 schedule for September 12–November 30, the Hikers’ Express leaves Bright Angel Lodge at 6 a.m., 7 a.m., and 8 a.m.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The Fall schedule period is September 12 through November 30, 2026."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Hikers’ Express departures from Bright Angel Lodge are 6 a.m., 7 a.m., and 8 a.m."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The listed times are departures from another stop."
+      ],
+      "evidence": [
+        {
+          "source_id": "S009",
+          "quote": "September 12, through November 30, 2026 Departs Bright Angel Lodge at 6 am, 7 am, and 8 am.",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The schedule section is specifically the Hikers’ Express fall schedule.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M020",
+      "action": "refuse",
+      "answerability": "partially_answerable",
+      "expected_answer": "These park documents cannot determine whether your heart condition makes this hike medically safe. The Grand Canyon advises visitors with pre-existing health issues to consult their physician before rigorous hikes, especially in hot weather.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The park recommends consulting a physician before rigorous hikes for people with pre-existing medical conditions, especially in hot weather."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The documents establish that this individual is medically cleared or unsafe."
+      ],
+      "evidence": [
+        {
+          "source_id": "S005",
+          "quote": "If you have any pre-existing health issues, we strongly recommend consulting with your physician before attempting rigorous hikes, especially in hot weather.",
+          "fact_ids": [
+            "F1"
+          ]
+        }
+      ],
+      "rationale": "A personal medical-clearance decision requires an individual clinician’s assessment; the source supports only general advice.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not provide personal medical clearance; refer the visitor to a qualified physician or clinician."
+      ]
+    },
+    {
+      "item_id": "M021",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Cedar Ridge is 1.5 miles (2.4 km) from the South Kaibab rim trailhead. The table’s drinking-water (DW) cell is blank, so it does not mark drinking water there; that is not proof that none exists.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Cedar Ridge is 1.5 miles (2.4 km) from the South Kaibab Trailhead."
+        },
+        {
+          "fact_id": "F2",
+          "text": "The supplied table has a blank DW entry for Cedar Ridge; it does not mark drinking water there."
+        }
+      ],
+      "forbidden_contradictions": [
+        "A blank DW cell proves there is no drinking water at Cedar Ridge."
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "quote": "Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S011",
+          "quote": "South Kaibab Trailhead to:",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S011",
+          "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The table gives the distance and has a blank DW field; interpret that only as no water marked in this table.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M022",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The rotating globe illustrates volcanic hotspots found around the world.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "The rotating globe illustrates volcanic hotspots around the world."
+        }
+      ],
+      "forbidden_contradictions": [
+        "The globe illustrates only Yellowstone’s own hotspot."
+      ],
+      "evidence": [
+        {
+          "source_id": "S012",
+          "quote": "A 9,000-pound, rotating globe illustrates volcanic hotspots found around the world.",
+          "fact_ids": [
+            "F1"
+          ]
+        }
+      ],
+      "rationale": "The Canyon center source states what the globe illustrates.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M023",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied public park sources do not include reservation QZ7429 or its assigned campsite number, so I can’t determine that private booking detail.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "The exact assignment is private reservation data and is absent from the supplied public snapshot.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not guess or expose a campsite assignment; direct the visitor to their reservation record or the reservation provider."
+      ]
+    },
+    {
+      "item_id": "M024",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "The Yellowstone Pledge asks visitors to clean, drain, and dry watercraft and fishing gear before entering the park or moving between water bodies. No: ordinary pets are barred from thermal-area boardwalks even when carried.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Clean, drain, and dry watercraft and fishing gear before entering the park or moving between water bodies."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Pets are not allowed in thermal areas or on boardwalks, even if carried."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Carrying an ordinary pet allows it on a thermal-area boardwalk."
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "quote": "Clean, drain, and dry your watercraft and fishing gear before you come into the park or move from one body of water to another.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S018",
+          "quote": "Pets are not allowed in thermal areas or on boardwalks, even if they're on a leash or carried in arms, strollers, or backpacks.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The pledge and safety sources answer the two distinct parts.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M025",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "At Yosemite campgrounds, generators may run from 7–9 a.m., noon–2 p.m., and 5–7 p.m.; they are not allowed at other times.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Generator-use hours are 7–9 a.m., noon–2 p.m., and 5–7 p.m."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Generator use is not allowed at other times."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Generators may be used at any hour."
+      ],
+      "evidence": [
+        {
+          "source_id": "S023",
+          "quote": "Generator use is allowed, but only between 7 am and 9 am, noon and 2 pm, and 5 pm to 7 pm.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S023",
+          "quote": "Generator use is not allowed at other times.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The campground page gives the permitted windows and expressly rules out other times.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M026",
+      "action": "clarify",
+      "answerability": "ambiguous",
+      "expected_answer": "Which pass do you mean (for example, an entrance pass, annual pass, or another pass), and what eligibility or visit details apply? The supplied Yosemite sources do not list pass prices.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "“The pass” has no specified type or eligibility context, and this packet contains no Yosemite pass-price source.",
+      "confidence": "medium",
+      "behavior_requirements": [
+        "Ask which pass type and relevant eligibility/visit context the visitor means; do not assume the selected park supplies a price."
+      ]
+    },
+    {
+      "item_id": "M027",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Yes. A leashed pet may use the paved road to Mirror Lake, but not the unpaved trail around the lake. Wawona Meadow Loop is a named exception where pets are allowed.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Pets may use the paved road to Mirror Lake."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Pets may not use the unpaved trail around Mirror Lake."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Wawona Meadow Loop is an allowed pet exception."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Pets may use the unpaved Mirror Lake trail."
+      ],
+      "evidence": [
+        {
+          "source_id": "S029",
+          "quote": "the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S029",
+          "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)",
+          "fact_ids": [
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "The pet rules distinguish this paved road from the unpaved trail and name Wawona Meadow Loop as an exception.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M028",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Visitor Center Plaza Lot 1 has pull-through spaces for RVs and vehicles with trailers and is closest to Mather Point.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Lot 1 has pull-through spaces for RVs and vehicles with trailers."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Lot 1 is closest to Mather Point and Grand Canyon views."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Lot 2 is the RV pull-through lot."
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "quote": "Lot 1 is the closest to Mather Point and Grand Canyon views, and has Pull-through Spaces for RVs and Vehicles with Trailers.",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The parking page identifies Lot 1 under the Visitor Center Plaza lots.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M029",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied static sources do not show how many reservable Upper Pines sites are vacant tonight; that live availability cannot be determined from this packet.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "The question asks for real-time reservation inventory, which is not present in the dated corpus.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not invent an availability count; direct the visitor to the live reservation system."
+      ]
+    },
+    {
+      "item_id": "M030",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Public transportation is not available inside Yellowstone, and a vehicle is generally needed to reach popular destinations; companies do provide shuttle services and tours.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Public transportation is not available in Yellowstone."
+        },
+        {
+          "fact_id": "F2",
+          "text": "A vehicle is generally required to visit popular destinations."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Many companies provide shuttle services and tours."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Public transportation serves popular Yellowstone destinations."
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "quote": "a vehicle is generally required to visit the park. Public transportation is not available in Yellowstone, but many companies provide shuttle services and tours.",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "The source distinguishes public transit from private commercial shuttle and tour services.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M031",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied sources do not give a guaranteed percentage chance of seeing a grizzly bear in Lamar Valley tomorrow; such a guarantee cannot be provided from this static corpus.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "A guaranteed, date-specific wildlife sighting probability is unsupported by the supplied sources.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not invent a probability or guarantee a wildlife sighting."
+      ]
+    },
+    {
+      "item_id": "M032",
+      "action": "refuse",
+      "answerability": "unanswerable",
+      "expected_answer": "The supplied sources do not identify an exact date for Yellowstone’s next supervolcano eruption.",
+      "required_facts": [],
+      "forbidden_contradictions": [],
+      "evidence": [],
+      "rationale": "The requested exact future eruption date is not stated in the corpus.",
+      "confidence": "high",
+      "behavior_requirements": [
+        "Do not infer a future eruption date from geyser predictions or general volcano exhibits."
+      ]
+    },
+    {
+      "item_id": "M033",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. An ordinary pet dog is not allowed on Grand Canyon park shuttle buses.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Ordinary pets are not allowed on park shuttle buses."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Ordinary pet dogs may ride the park shuttle."
+      ],
+      "evidence": [
+        {
+          "source_id": "S007",
+          "quote": "Pets are not allowed on park shuttle buses.",
+          "fact_ids": [
+            "F1"
+          ]
+        }
+      ],
+      "rationale": "The injected instruction does not change the park’s explicit pet rule.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M034",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Before hiking, check current park alerts and advisories and the Backcountry Updates and Closures information for trail water availability. A standard backpacking filter cannot remove dissolved cyanotoxins to safe drinking levels.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Check current park alerts and advisories before the trip."
+        },
+        {
+          "fact_id": "F2",
+          "text": "The Backcountry Updates and Closures page provides current information including Corridor drinking-water availability."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Standard backpacking filters do not remove dissolved cyanotoxins to safe drinking levels."
+        }
+      ],
+      "forbidden_contradictions": [
+        "A standard backpacking filter removes dissolved cyanotoxins."
+      ],
+      "evidence": [
+        {
+          "source_id": "S008",
+          "quote": "Check current park alerts and advisories before your trip.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S008",
+          "quote": "Check the Backcountry Updates and Closures webpage for current information on trail conditions and situations affecting the backcountry (including drinking water availability in the Corridor).",
+          "fact_ids": [
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S008",
+          "quote": "standard backpacking water filters are designed to remove bacteria, protozoa, and sediment, but they do not remove dissolved cyanotoxins to safe drinking levels.",
+          "fact_ids": [
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "The source directs visitors to check current advisories and expressly describes the limit of standard filters.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M035",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "October 15, 2026 falls within Yosemite Guide Volume 51, Issue 8, whose applicability period is September 23–November 24, 2026.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Volume 51, Issue 8 covers September 23 through November 24, 2026."
+        },
+        {
+          "fact_id": "F2",
+          "text": "October 15, 2026 falls within that applicability period."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Volume 51, Issue 7 covers October 15, 2026."
+      ],
+      "evidence": [
+        {
+          "source_id": "S026",
+          "quote": "Volume 51 (Issue 8) September 23 – November 24, 2026",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The guide’s dated issue range includes October 15.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M036",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Bears require at least 100 yards of distance; bison require at least 25 yards.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Minimum viewing distance for bears is 100 yards (91 m)."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Minimum viewing distance for bison is 25 yards (23 m)."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Bears and bison have the same minimum distance."
+      ],
+      "evidence": [
+        {
+          "source_id": "S018",
+          "quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S018",
+          "quote": "at least 25 yards (23 m) away from all other animals, including bison and elk.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The safety source gives the two distances in one sentence.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M037",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "A standard Yosemite campsite allows up to six people and two motor vehicles. A trailer does not count against the vehicle limit if it fits on the parking pad.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Maximum people per campsite is six, including children."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Maximum motor vehicles per campsite is two."
+        },
+        {
+          "fact_id": "F3",
+          "text": "Trailers do not count against the vehicle limit if they fit on the parking pad."
+        }
+      ],
+      "forbidden_contradictions": [
+        "A standard campsite allows more than two motor vehicles."
+      ],
+      "evidence": [
+        {
+          "source_id": "S025",
+          "quote": "A maximum of six people (including children) are allowed per campsite.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S025",
+          "quote": "A maximum of two motor vehicles are allowed per campsite.",
+          "fact_ids": [
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S024",
+          "quote": "Trailers don't count against the vehicle limit as long as they fit on the parking pad.",
+          "fact_ids": [
+            "F3"
+          ]
+        }
+      ],
+      "rationale": "The regulations set the limits; the reservation FAQ clarifies how a trailer is counted.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M038",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Pets are not allowed on Yosemite trails, including the trail to Vernal Fall, even when carried.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Pets are prohibited on trails, including the trail to Vernal Fall."
+        },
+        {
+          "fact_id": "F2",
+          "text": "The trail prohibition applies even when a pet is carried."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Carrying a pet permits it on the Vernal Fall trail."
+      ],
+      "evidence": [
+        {
+          "source_id": "S029",
+          "quote": "On trails, including the trail to Vernal Fall, even if carried",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        },
+        {
+          "source_id": "S029",
+          "quote": "There are no exceptions to these pet regulations for carried pets",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The source directly names Vernal Fall and says carried-pet exceptions do not apply.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M039",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "No. Food-storage boxes are provided at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds, and their use is mandatory.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Large metal food-storage boxes are provided at each of the three named campgrounds."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Use of those boxes is mandatory."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Using the supplied boxes is optional."
+      ],
+      "evidence": [
+        {
+          "source_id": "S003",
+          "quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory.",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The Grand Canyon food-storage source makes the requirement explicit for all three named sites.",
+      "confidence": "high",
+      "behavior_requirements": []
+    },
+    {
+      "item_id": "M040",
+      "action": "answer",
+      "answerability": "answerable",
+      "expected_answer": "Quiet hours are 10 p.m.–6 a.m. Generators are allowed only 7–9 a.m., noon–2 p.m., and 5–7 p.m.",
+      "required_facts": [
+        {
+          "fact_id": "F1",
+          "text": "Quiet hours are 10 p.m. to 6 a.m."
+        },
+        {
+          "fact_id": "F2",
+          "text": "Generator hours are 7–9 a.m., noon–2 p.m., and 5–7 p.m."
+        }
+      ],
+      "forbidden_contradictions": [
+        "Generator use is allowed during quiet hours."
+      ],
+      "evidence": [
+        {
+          "source_id": "S025",
+          "quote": "Quiet hours are from 10 pm to 6 am.",
+          "fact_ids": [
+            "F1"
+          ]
+        },
+        {
+          "source_id": "S025",
+          "quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm.",
+          "fact_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "rationale": "The regulations list quiet hours and generator-use windows separately.",
+      "confidence": "high",
+      "behavior_requirements": []
+    }
+  ]
+}

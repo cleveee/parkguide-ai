@@ -1,0 +1,735 @@
+{
+  "created_at": "2026-10-10T22:11:00.031425+00:00",
+  "dataset_id": "parkguide-ai-label-sample-v1",
+  "n_questions": 18,
+  "n_reviewers": 4,
+  "n_annotations": 72,
+  "unanimous_action_count": 18,
+  "unanimous_answerability_count": 18,
+  "pairwise": [
+    {
+      "reviewers": [
+        "codex-a",
+        "codex-b"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    },
+    {
+      "reviewers": [
+        "codex-a",
+        "codex-c"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    },
+    {
+      "reviewers": [
+        "codex-a",
+        "claude-code"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    },
+    {
+      "reviewers": [
+        "codex-b",
+        "codex-c"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    },
+    {
+      "reviewers": [
+        "codex-b",
+        "claude-code"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    },
+    {
+      "reviewers": [
+        "codex-c",
+        "claude-code"
+      ],
+      "n": 18,
+      "action_agreement": 18,
+      "answerability_agreement": 18
+    }
+  ],
+  "items": [
+    {
+      "item_id": "AL01",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL02",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL03",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL04",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL05",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL06",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL07",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL08",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL09",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "medium"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL10",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL11",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL12",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL13",
+      "actions": {
+        "refuse": 4
+      },
+      "answerabilities": {
+        "unanswerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL14",
+      "actions": {
+        "refuse": 4
+      },
+      "answerabilities": {
+        "unanswerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL15",
+      "actions": {
+        "refuse": 4
+      },
+      "answerabilities": {
+        "unanswerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "refuse",
+          "answerability": "unanswerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL16",
+      "actions": {
+        "clarify": 4
+      },
+      "answerabilities": {
+        "ambiguous": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "clarify",
+          "answerability": "ambiguous",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "clarify",
+          "answerability": "ambiguous",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "clarify",
+          "answerability": "ambiguous",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "clarify",
+          "answerability": "ambiguous",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL17",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    },
+    {
+      "item_id": "AL18",
+      "actions": {
+        "answer": 4
+      },
+      "answerabilities": {
+        "answerable": 4
+      },
+      "action_unanimous": true,
+      "answerability_unanimous": true,
+      "labels": {
+        "codex-a": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-b": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "codex-c": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        },
+        "claude-code": {
+          "action": "answer",
+          "answerability": "answerable",
+          "confidence": "high"
+        }
+      },
+      "semantic_answer_agreement": "not scored"
+    }
+  ],
+  "source_validation": {
+    "codex-a": {
+      "case_count": 18,
+      "quote_count": 75,
+      "evidence_errors": [],
+      "facts_without_mechanically_valid_quote": {},
+      "labels_sha256": "3d4880e863141b7824dc0eed6de93cf307689b1bec8e8988a6b301b7a5bd9d97"
+    },
+    "codex-b": {
+      "case_count": 18,
+      "quote_count": 84,
+      "evidence_errors": [],
+      "facts_without_mechanically_valid_quote": {},
+      "labels_sha256": "0e651b82e291cbcf0a7ea8a6d7056671ad735be2f96cc6d9f4d24d4413e3a1fe"
+    },
+    "codex-c": {
+      "case_count": 18,
+      "quote_count": 69,
+      "evidence_errors": [],
+      "facts_without_mechanically_valid_quote": {},
+      "labels_sha256": "88ca601da084e0e9e138caff37af9dccc5558de6dfc0ffe53ad1e98c97064214"
+    },
+    "claude-code": {
+      "case_count": 18,
+      "quote_count": 56,
+      "evidence_errors": [],
+      "facts_without_mechanically_valid_quote": {
+        "AL09": [
+          "F3"
+        ],
+        "AL13": [
+          "F1"
+        ],
+        "AL14": [
+          "F1"
+        ],
+        "AL15": [
+          "F1"
+        ],
+        "AL16": [
+          "F1"
+        ]
+      },
+      "labels_sha256": "c9b5e0a141c51251ba8782b66cb5b67c326095dbbb36ddf421a31d93fae2073b"
+    }
+  },
+  "limitations": [
+    "AI labels remain proposals; no human gold verification or adjudication",
+    "Three Codex runs inherit one parent model and are not three different models",
+    "Reviewer isolation is by task instructions and separate inputs; subagents retain ordinary filesystem access",
+    "Input includes ten complete relevant documents plus metadata/search excerpts for the 155-document snapshot; reviewers did not semantically inspect every document",
+    "Purposive 18-case development sample with prior topic exposure; not a held-out benchmark",
+    "Agreement on categorical action or answerability does not prove answer or evidence correctness",
+    "No automatic majority reference or chatbot performance score",
+    "Claude CLI cost is reported separately from Azure application spend"
+  ]
+}

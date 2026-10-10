@@ -1,0 +1,6 @@
+{
+  "source_packet_sha256": "0952bf8d96ede31a5f789063a2a23cc2642f8ce07102f1e5441e0320f58d61d1",
+  "annotation_input_sha256": "96521432f3fd7c73835d60fb0b107e2dbd098208182f1d4140d379b7b4156839",
+  "projection": "identical cases, full normalized source text, corpus inventory and search records; redundant block representation omitted",
+  "labeling_started": false
+}
