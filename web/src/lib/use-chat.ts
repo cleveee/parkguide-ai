@@ -34,12 +34,12 @@ export function useChat(park: ParkCode | null, initialTurns: TurnState[] = []) {
   const epoch = useRef(0)
   const inflight = useRef<{ controller: AbortController; turnId: string } | null>(null)
 
-  const reset = useCallback(() => {
+  const replace = useCallback((nextTurns: TurnState[] = []) => {
     epoch.current += 1
     inflight.current?.controller.abort()
     inflight.current = null
     setPending(false)
-    setTurns([])
+    setTurns(nextTurns)
   }, [])
 
   const stopWaiting = useCallback(() => {
@@ -111,5 +111,5 @@ export function useChat(park: ParkCode | null, initialTurns: TurnState[] = []) {
     [park, turns],
   )
 
-  return { turns, pending, send, reset, stopWaiting }
+  return { turns, pending, send, replace, stopWaiting }
 }
