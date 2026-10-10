@@ -32,7 +32,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from . import chat as core
-from . import embedding_cache
+from . import embedding_cache, followups
 from .runtime import ROOT, config, hosted, ledger_path as runtime_ledger_path, rerank_override, runtime_profile, sqlite_uri
 from .source_links import captured_label, cited_source_pages, official_source_url
 
@@ -815,7 +815,7 @@ def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, sel
     selection = trace.get("context_selection") if isinstance(trace.get("context_selection"), dict) else None
     retrieval_ran = bool(trace.get("candidates")) or "eligible_count" in trace
     generation_ran = bool(usage) or bool(response.get("generation_error"))
-    rerank_ran = retrieval_ran and bool(result.get("rerank_enabled"))
+    rerank_ran = retrieval_ran and bool(result.get("rerank_enabled")) and not trace.get("evidence_reuse")
     history_used = result.get("history") if isinstance(result.get("history"), list) else []
     return {
         "turn_id": uuid.uuid4().hex,
@@ -825,6 +825,7 @@ def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, sel
         "text": text,
         "claims": public_claims,
         "sources": sources,
+        "suggested_questions": followups.suggest_questions(database(), build["build_id"], selected_park, result["question"], sources, history_used, text) if delivered else [],
         # Sent back by the browser as the assistant turn; never used as evidence.
         "history_content": result.get("rendered", "") if delivered else text,
         "history_evidence_ids": list(dict.fromkeys(cited_ids))[:5] if delivered else [],
@@ -908,13 +909,15 @@ def run_chat(request: ChatRequest) -> dict:
     try:
         before = _ledger_events()
         call_started = time.perf_counter()
+        suggested = followups.resolve_question(database(), build["build_id"], request.selected_park, request.question)
         # Hosted forces rerank=False; locally the shared path's config default applies.
         override = rerank_override()
         try:
             result = core.answer(
                 request.question, [message.model_dump(exclude_defaults=True) for message in request.history],
                 mode="hybrid", build_id=build["build_id"], selected_park=request.selected_park,
-                embedder=_observed_embedder(observation), **({} if override is None else {"rerank": override}),
+                embedder=_observed_embedder(observation),
+                **({"followup_evidence_ids": suggested["evidence_ids"]} if suggested else {}), **({} if override is None else {"rerank": override}),
             )
         except Exception as error:  # Never return arbitrary exception text.
             failure = error

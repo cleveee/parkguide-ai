@@ -865,3 +865,42 @@ def test_spa_shell_and_assets(env):
     assert "id=root" in client.get("/corpus").text
     assert client.get("/assets/app.js").text == "console.log('fixture')"
     assert client.get("/api/unknown").status_code == 404
+
+
+def test_supported_followups_and_click_use_the_catalog_passage(env, monkeypatch):
+    client, state = env
+    monkeypatch.setattr(core, "config", lambda: {**web.config(), "database": str(state["db"])})
+    url = DOCS[0]["source_url"]
+    entry = {"id": "fixture-pets", "park": "yose", "topic": "pets",
+             "question": "What leash rule applies to dogs in developed areas of Yosemite?",
+             "source_url": url, "supporting_quote": "Pets must remain on a leash in developed areas.",
+             "keywords": ["pets", "dog", "leash"]}
+    monkeypatch.setattr(web.followups, "load_catalog", lambda: [entry])
+    first = ask(client).json()
+    assert first["status"] == "answer"
+    assert first["suggested_questions"][0]["question"] == entry["question"]
+    evidence = first["suggested_questions"][0]["evidence_ids"]
+    history = [{"role": "user", "content": "What are the pet rules?"},
+               {"role": "assistant", "content": first["history_content"], "evidence_ids": first["history_evidence_ids"]}]
+    second = ask(client, question=entry["question"], history=history).json()
+    assert second["status"] == "answer"
+    assert second["inspector"]["retrieval"]["mode"] == "suggested_followup"
+    assert state["calls"][-1]["followup_evidence_ids"] == evidence
+    assert second["sources"][0]["passages"][0]["chunk_id"] in evidence
+    assert second["suggested_questions"] == []  # Do not offer the question just answered.
+
+
+def test_nonanswers_never_offer_followups(env):
+    client, _ = env
+    refusal = ask(client, "Can I fly a drone in Yellowstone?", park="yose").json()
+    assert refusal["status"] == "refusal"
+    assert refusal["suggested_questions"] == []
+    clarification = ask(client, "How long does it take?").json()
+    assert clarification["status"] != "answer"
+    assert clarification["suggested_questions"] == []
+
+
+def test_browser_cannot_supply_followup_evidence_overrides(env):
+    client, _ = env
+    response = ask(client, followup_evidence_ids=["arbitrary"])
+    assert response.status_code == 422

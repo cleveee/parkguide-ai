@@ -354,12 +354,14 @@ def paid_dialogue_plan(question, history, selected_park, settings):
 
 def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
            generator=None, embedder=None, retriever=None, reviewer=None, closed_book=False, enforce_gate=True,
-           selected_park=None, planner=None):
+           selected_park=None, planner=None, followup_evidence_ids=None):
     started = time.perf_counter()
     if selected_park is not None and (not isinstance(selected_park, str) or selected_park not in PARK_NAMES):
         raise ValueError("Select one supported park: yose, yell, or grca")
     if selected_park is not None and closed_book:
         raise ValueError("A selected-park conversation must use database evidence")
+    if followup_evidence_ids and (selected_park is None or closed_book):
+        raise ValueError("Suggested follow-ups require a selected-park database answer")
     load_dotenv(ROOT / ".env", override=False)
     # Keep each saved trace limited to what actually preceded this request.
     # Evaluation and the UI append later turns to their own mutable history.
@@ -383,7 +385,11 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
             retrieval_query = f"{PARK_NAMES[selected_park]}: {retrieval_query}"
         generation_question = f"Selected park: {PARK_NAMES[selected_park]} National Park. Answer only for this park from its saved passages.\nVisitor question: {question}"
     preflight = scoped_preflight(question, selected_park, retrieval_query) if selected_park else None
-    if retriever is None and not closed_book and preflight is None:
+    if followup_evidence_ids:
+        # Catalog questions are standalone and must not inherit a prior table URL.
+        filters = {"parks": [selected_park]}
+        retrieval_query = f"{PARK_NAMES[selected_park]}: {question}"
+    if retriever is None and not closed_book and preflight is None and not followup_evidence_ids:
         filters = table_followup_filters(question, history, filters, ROOT / settings['database'])
     if preflight is None and not closed_book:
         preflight = preflight_response(question, history, filters)
@@ -391,7 +397,7 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
     dialogue = {"action": "explain_previous" if history and explanation_request(question) and not detail_request(question) else
                "search_followup" if history and detail_request(question) or "Previous topic:" in retrieval_query else "search_new",
                "method": "local", "cost_estimate_usd": 0}
-    if history and not closed_book and preflight is None and (planner or default_generator and selected_park):
+    if history and not closed_book and preflight is None and not followup_evidence_ids and (planner or default_generator and selected_park):
         from .dialogue import validate_plan, clarification
         try:
             planned = planner(question, history, selected_park) if planner else paid_dialogue_plan(question, history, selected_park, settings)
@@ -426,7 +432,14 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
         retriever = retrieve
     trace = {"candidates": [], "final": [], "timings": {}, "candidate_count": 0}
     if not closed_book and preflight is None:
-        if dialogue['action'] == 'explain_previous' and retriever.__module__ == 'parkguide.retrieval':
+        if followup_evidence_ids:
+            from .retrieval import saved_evidence
+            reused = saved_evidence(ROOT / settings['database'], followup_evidence_ids, build_id=build_id, filters=filters)
+            if reused:
+                trace = {**reused, "mode": "suggested_followup", "context_selection": {
+                    "method": "catalog_supporting_passage", "selected_ids": followup_evidence_ids}}
+                dialogue = {"action": "search_followup", "method": "catalog", "cost_estimate_usd": 0}
+        if not trace.get('evidence_reuse') and dialogue['action'] == 'explain_previous' and retriever.__module__ == 'parkguide.retrieval':
             from .dialogue import previous_evidence_ids
             from .retrieval import saved_evidence
             reused = saved_evidence(ROOT / settings['database'], previous_evidence_ids(history), build_id=build_id, filters=filters)

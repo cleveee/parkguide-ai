@@ -1,0 +1,679 @@
+[
+  {
+    "id": "yose-pets-1",
+    "park": "yose",
+    "topic": "pets",
+    "question": "How long should my pet’s leash be in Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+    "supporting_quote": "Keeping your pet attended and on a six-foot leash as well as fully vaccinated will reduce the chances of injury or disease.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "leash"
+    ]
+  },
+  {
+    "id": "yose-pets-2",
+    "park": "yose",
+    "topic": "pets",
+    "question": "Can I carry my pet on trails where pets are prohibited in Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+    "supporting_quote": "There are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "trail",
+      "carried"
+    ]
+  },
+  {
+    "id": "yose-pets-3",
+    "park": "yose",
+    "topic": "pets",
+    "question": "Which paved Yosemite paths allow pets?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+    "supporting_quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "trail",
+      "path"
+    ]
+  },
+  {
+    "id": "yose-camping-1",
+    "park": "yose",
+    "topic": "camping",
+    "question": "How many people can stay at a standard Yosemite campsite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "A maximum of six people (including children) are allowed per campsite.",
+    "keywords": [
+      "camp",
+      "camping",
+      "campsite",
+      "people",
+      "children"
+    ]
+  },
+  {
+    "id": "yose-camping-2",
+    "park": "yose",
+    "topic": "camping",
+    "question": "What are the quiet hours in Yosemite campgrounds?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "Quiet hours are from 10 pm to 6 am.",
+    "keywords": [
+      "camp",
+      "camping",
+      "campground",
+      "quiet",
+      "noise"
+    ]
+  },
+  {
+    "id": "yose-camping-3",
+    "park": "yose",
+    "topic": "camping",
+    "question": "When may I run a generator in Yosemite campgrounds?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm. Generator use is not allowed at other times.",
+    "keywords": [
+      "camp",
+      "camping",
+      "campground",
+      "generator"
+    ]
+  },
+  {
+    "id": "yose-camping-4",
+    "park": "yose",
+    "topic": "camping",
+    "question": "Can I sleep in my vehicle outside a designated Yosemite campsite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "Camping or sleeping in vehicles is permitted only in designated campsites. Sleeping in vehicles is not permitted anywhere else in Yosemite.",
+    "keywords": [
+      "camp",
+      "camping",
+      "vehicle",
+      "sleep",
+      "car"
+    ]
+  },
+  {
+    "id": "yose-camping-5",
+    "park": "yose",
+    "topic": "camping",
+    "question": "Are utility hookups available in Yosemite campgrounds?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "Connecting to any utility system (e.g., water spigots, electrical outlets) in the campgrounds is prohibited. No hookups are available in Yosemite.",
+    "keywords": [
+      "camp",
+      "camping",
+      "rv",
+      "hookup",
+      "water",
+      "electricity"
+    ]
+  },
+  {
+    "id": "yose-pets-4",
+    "park": "yose",
+    "topic": "pets",
+    "question": "Which Yosemite campgrounds prohibit pets?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "Pets are permitted in all campgrounds except Camp 4 and all group campsites.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "camp",
+      "camping"
+    ]
+  },
+  {
+    "id": "yose-food-1",
+    "park": "yose",
+    "topic": "food",
+    "question": "How often must food be properly stored at a Yosemite campsite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+    "supporting_quote": "You must keep your food properly stored 24 hours per day.",
+    "keywords": [
+      "food",
+      "storage",
+      "camp",
+      "camping",
+      "bear",
+      "bears"
+    ]
+  },
+  {
+    "id": "yose-wildlife-1",
+    "park": "yose",
+    "topic": "wildlife",
+    "question": "Should I feed or approach wildlife in Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+    "supporting_quote": "Respect animals at a distance: never feed or approach them.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "feed",
+      "bear",
+      "bears"
+    ]
+  },
+  {
+    "id": "yose-transport-1",
+    "park": "yose",
+    "topic": "transport",
+    "question": "Where should I stop to take photos while driving in Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+    "supporting_quote": "Use turnouts to pull completely out of the road to take photos, consult the park map, or simply enjoy the park's scenery and wildlife.",
+    "keywords": [
+      "drive",
+      "driving",
+      "road",
+      "car",
+      "photo",
+      "traffic"
+    ]
+  },
+  {
+    "id": "yose-fees-1",
+    "park": "yose",
+    "topic": "fees",
+    "question": "What identification should I show with an America the Beautiful pass at Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/fees.htm",
+    "supporting_quote": "Passholders must show valid photo identification (ID) with each pass.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "identification"
+    ]
+  },
+  {
+    "id": "yose-fees-2",
+    "park": "yose",
+    "topic": "fees",
+    "question": "Can an America the Beautiful pass be refunded or replaced if lost in Yosemite?",
+    "source_url": "https://www.nps.gov/yose/planyourvisit/fees.htm",
+    "supporting_quote": "America the Beautiful Passes are non-refundable, non-transferable and cannot be replaced if lost or stolen .",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "lost",
+      "refund"
+    ]
+  },
+  {
+    "id": "yell-wildlife-1",
+    "park": "yell",
+    "topic": "wildlife",
+    "question": "How far should I stay from Yellowstone bears, wolves, and cougars?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars, and at least 25 yards (23 m) away from all other animals, including bison and elk.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "bear",
+      "bears",
+      "wolf",
+      "wolves",
+      "cougar",
+      "distance"
+    ]
+  },
+  {
+    "id": "yell-wildlife-2",
+    "park": "yell",
+    "topic": "wildlife",
+    "question": "How far should I stay from bison and elk in Yellowstone?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Always stay at least 100 yards (91 m) away from bears, wolves, and cougars, and at least 25 yards (23 m) away from all other animals, including bison and elk.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "bison",
+      "elk",
+      "distance"
+    ]
+  },
+  {
+    "id": "yell-wildlife-3",
+    "park": "yell",
+    "topic": "wildlife",
+    "question": "What should I do if Yellowstone wildlife moves closer to me?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "If an animal moves closer to you, back away to maintain a safe distance.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "approach",
+      "distance"
+    ]
+  },
+  {
+    "id": "yell-wildlife-4",
+    "park": "yell",
+    "topic": "wildlife",
+    "question": "What should I use to view Yellowstone wildlife from a distance?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Binoculars and telephoto lenses always give you a better view than approaching the animal would. Lenses with focal lengths of 300mm or greater are recommended for adequate reach.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "photo",
+      "view",
+      "binoculars"
+    ]
+  },
+  {
+    "id": "yell-pets-1",
+    "park": "yell",
+    "topic": "pets",
+    "question": "Can I bring a leashed or carried pet into Yellowstone thermal areas?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Pets are not allowed in thermal areas or on boardwalks, even if they're on a leash or carried in arms, strollers, or backpacks.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "thermal",
+      "boardwalk",
+      "geyser"
+    ]
+  },
+  {
+    "id": "yell-food-1",
+    "park": "yell",
+    "topic": "food",
+    "question": "Can I leave a food cooler unattended in Yellowstone?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Don't leave packs, bags, or coolers containing food unattended, even for a few minutes, as animals can learn new food sources quickly. Store these items in vehicles or bear-proof storage lockers, if available.",
+    "keywords": [
+      "food",
+      "storage",
+      "cooler",
+      "wildlife",
+      "bear",
+      "bears"
+    ]
+  },
+  {
+    "id": "yell-food-2",
+    "park": "yell",
+    "topic": "food",
+    "question": "What should I store in Yellowstone campsite food lockers?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Use provided food lockers available at some campsites to store all food, garbage, and smelly items.",
+    "keywords": [
+      "food",
+      "storage",
+      "camp",
+      "camping",
+      "locker",
+      "bear",
+      "bears"
+    ]
+  },
+  {
+    "id": "yell-food-3",
+    "park": "yell",
+    "topic": "food",
+    "question": "Which bear-resistant food containers are allowed in Yellowstone?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Only hard-sided bear-resistant food containers approved by the Interagency Grizzly Bear Committee (IGBC) may be used in lieu of hanging food and scented items.",
+    "keywords": [
+      "food",
+      "storage",
+      "camp",
+      "camping",
+      "container",
+      "bear",
+      "bears"
+    ]
+  },
+  {
+    "id": "yell-wildlife-5",
+    "park": "yell",
+    "topic": "wildlife",
+    "question": "Why should I avoid feeding Yellowstone wildlife?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Never feed wildlife, even birds and squirrels. Animals that become dependent on human food may become aggressive toward people and have to be killed. Animals also carry diseases that can be transmitted to people.",
+    "keywords": [
+      "food",
+      "feed",
+      "wildlife",
+      "animal",
+      "animals",
+      "bird",
+      "squirrel"
+    ]
+  },
+  {
+    "id": "yell-transport-1",
+    "park": "yell",
+    "topic": "transport",
+    "question": "Where should I park to watch Yellowstone wildlife from the road?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Don't block traffic to take pictures. Use pullouts to watch wildlife and let other cars pass by making sure all of your wheels are completely, and safely, off the road. Stay with your vehicle if you encounter a wildlife jam.",
+    "keywords": [
+      "drive",
+      "driving",
+      "road",
+      "car",
+      "wildlife",
+      "traffic"
+    ]
+  },
+  {
+    "id": "yell-hiking-1",
+    "park": "yell",
+    "topic": "hiking",
+    "question": "Where should I carry bear spray while exploring Yellowstone?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
+    "supporting_quote": "Each person in your group should carry one can of bear spray where it can be reached quickly, such as in a waist holster or chest holster. Do not carry it inside your pack or in other hard to reach areas.",
+    "keywords": [
+      "hike",
+      "hiking",
+      "trail",
+      "bear",
+      "bears",
+      "spray"
+    ]
+  },
+  {
+    "id": "yell-fees-1",
+    "park": "yell",
+    "topic": "fees",
+    "question": "Does a Yellowstone vehicle entrance pass cover my passengers?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+    "supporting_quote": "If you enter the park in a motorized vehicle, your entrance pass covers both you and your passengers. Your passengers do not need a separate pass.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "vehicle",
+      "car",
+      "passengers"
+    ]
+  },
+  {
+    "id": "yell-fees-2",
+    "park": "yell",
+    "topic": "fees",
+    "question": "What identification is required when using a Yellowstone annual pass?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+    "supporting_quote": "For all annual passes, the pass holder must be present with identification for entry into Yellowstone National Park.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "annual",
+      "identification"
+    ]
+  },
+  {
+    "id": "yell-fees-3",
+    "park": "yell",
+    "topic": "fees",
+    "question": "Can I use a receipt or photo instead of my Yellowstone annual pass?",
+    "source_url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+    "supporting_quote": "We cannot look up information if your pass is lost or stolen and cannot accept receipts or pictures of the pass in lieu of the actual pass.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "annual",
+      "lost",
+      "receipt"
+    ]
+  },
+  {
+    "id": "grca-pets-1",
+    "park": "grca",
+    "topic": "pets",
+    "question": "How long may my pet’s leash be at Grand Canyon?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+    "supporting_quote": "Please keep your pet leashed (up to 6 feet) at all times.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "leash"
+    ]
+  },
+  {
+    "id": "grca-pets-2",
+    "park": "grca",
+    "topic": "pets",
+    "question": "Can I take my pet on Grand Canyon shuttle buses?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+    "supporting_quote": "Pets are not allowed on park shuttle buses.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "shuttle",
+      "bus"
+    ]
+  },
+  {
+    "id": "grca-pets-3",
+    "park": "grca",
+    "topic": "pets",
+    "question": "Where are leashed pets allowed on Grand Canyon’s South Rim?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+    "supporting_quote": "Leashed pets are allowed on trails above the rim, Mather Campground, Desert View Campground, Trailer Village, and throughout developed areas.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "trail",
+      "rim",
+      "camp"
+    ]
+  },
+  {
+    "id": "grca-pets-4",
+    "park": "grca",
+    "topic": "pets",
+    "question": "Which Grand Canyon lodge has pet friendly rooms?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+    "supporting_quote": "Yavapai Lodge is the only in-park lodge that has pet friendly rooms.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "lodge",
+      "lodging",
+      "room"
+    ]
+  },
+  {
+    "id": "grca-pets-5",
+    "park": "grca",
+    "topic": "pets",
+    "question": "May I leave my pet tied up or unattended at Grand Canyon?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+    "supporting_quote": "Do not leave pets tied or unattended outside or in your vehicle.",
+    "keywords": [
+      "pet",
+      "pets",
+      "dog",
+      "dogs",
+      "unattended",
+      "vehicle"
+    ]
+  },
+  {
+    "id": "grca-food-1",
+    "park": "grca",
+    "topic": "food",
+    "question": "Which Grand Canyon campgrounds provide mandatory food storage boxes?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/bc-food-storage.htm",
+    "supporting_quote": "Large metal boxes are provided at every campsite at Havasupai Gardens, Bright Angel, and Cottonwood campgrounds. Their use is mandatory.",
+    "keywords": [
+      "food",
+      "storage",
+      "camp",
+      "camping",
+      "bright",
+      "angel",
+      "cottonwood"
+    ]
+  },
+  {
+    "id": "grca-food-2",
+    "park": "grca",
+    "topic": "food",
+    "question": "What food containers are alternatives for Grand Canyon backcountry camping?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/bc-food-storage.htm",
+    "supporting_quote": "Metal cookie tins, bear canisters, and cooking pots with lockable lids are sufficient alternatives.",
+    "keywords": [
+      "food",
+      "storage",
+      "camp",
+      "camping",
+      "container",
+      "backcountry"
+    ]
+  },
+  {
+    "id": "grca-wildlife-1",
+    "park": "grca",
+    "topic": "wildlife",
+    "question": "How far should I stay from Grand Canyon elk, deer, and condors?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+    "supporting_quote": "Stay at least 100 feet (30 meters) or about two bus lengths away from elk, deer, bighorn sheep, California Condors, and mountain lions.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "elk",
+      "deer",
+      "condor",
+      "distance"
+    ]
+  },
+  {
+    "id": "grca-wildlife-2",
+    "park": "grca",
+    "topic": "wildlife",
+    "question": "How far should I stay from Grand Canyon squirrels, birds, and reptiles?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+    "supporting_quote": "Keep at least 50 feet (15 meters) or about one bus-length away from other smaller wildlife like squirrels, birds, and reptiles.",
+    "keywords": [
+      "wildlife",
+      "animal",
+      "animals",
+      "squirrel",
+      "bird",
+      "reptile",
+      "distance"
+    ]
+  },
+  {
+    "id": "grca-hiking-1",
+    "park": "grca",
+    "topic": "hiking",
+    "question": "How far should I stay from the canyon edge in Grand Canyon?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+    "supporting_quote": "Stay on designated trails and walkways and always keep a safe distance of at least six feet (2 m) from the edge.",
+    "keywords": [
+      "hike",
+      "hiking",
+      "trail",
+      "rim",
+      "edge",
+      "overlook"
+    ]
+  },
+  {
+    "id": "grca-transport-1",
+    "park": "grca",
+    "topic": "transport",
+    "question": "Do I need a separate ticket for Grand Canyon park shuttle buses?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+    "supporting_quote": "No tickets are required; a portion of your entrance fee pays for this important service.",
+    "keywords": [
+      "shuttle",
+      "bus",
+      "buses",
+      "transport",
+      "ticket",
+      "fee"
+    ]
+  },
+  {
+    "id": "grca-transport-2",
+    "park": "grca",
+    "topic": "transport",
+    "question": "How can I identify Grand Canyon park shuttle buses?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+    "supporting_quote": "Most buses are white with a green stripe and display the route name on the front and the side.",
+    "keywords": [
+      "shuttle",
+      "bus",
+      "buses",
+      "transport",
+      "route"
+    ]
+  },
+  {
+    "id": "grca-fees-1",
+    "park": "grca",
+    "topic": "fees",
+    "question": "Do children under 16 need a Grand Canyon entrance pass when arriving on foot?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/fees.htm",
+    "supporting_quote": "If you enter the park on a bicycle or on foot and are at least 16 years old, you need your own entrance pass. Children under the age of 16 don't need an entrance pass.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "children",
+      "bicycle",
+      "foot"
+    ]
+  },
+  {
+    "id": "grca-fees-2",
+    "park": "grca",
+    "topic": "fees",
+    "question": "Can I use my America the Beautiful pass for Grand Canyon entrance?",
+    "source_url": "https://www.nps.gov/grca/planyourvisit/fees.htm",
+    "supporting_quote": "If you already have an America the Beautiful—the National Parks and Federal Recreational Lands Pass, that's the only entrance pass you need.",
+    "keywords": [
+      "fee",
+      "fees",
+      "pass",
+      "passes",
+      "america",
+      "beautiful"
+    ]
+  }
+]
