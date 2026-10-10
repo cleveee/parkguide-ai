@@ -39,6 +39,8 @@ One primitive system (Radix via shadcn/ui) is used on every surface. No Base UI 
 
 ## Other packages
 
+The sidebar resize handles use `react-resizable-panels@4.14.4` (MIT, [upstream](https://github.com/bvaughn/react-resizable-panels)) for pointer capture, keyboard resizing, size constraints and double-click reset. `web/src/components/ui/resizable.tsx` adds ParkGuide styling and labels. Desktop navigation and inspector panels are resizable; smaller screens keep the existing Radix sheets. The input-group disabled styling now follows the input/textarea control rather than a disabled child action, so an empty Send button does not fade an enabled composer.
+
 | Package | Version | License | Purpose |
 |---|---|---|---|
 | react / react-dom | 19.3.0 | MIT | UI |

@@ -18,6 +18,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
+import { ResizableGroup, ResizablePanel, ResizeHandle } from "@/components/ui/resizable"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -68,9 +69,7 @@ function Sidebar({
   return (
     <div className="flex h-full flex-col gap-6 p-4">
       <div className="flex items-center gap-2.5">
-        <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-          <TreesIcon className="size-4" aria-hidden />
-        </span>
+        <TreesIcon className="size-8 shrink-0 text-primary" aria-hidden />
         <div>
           <p className="text-sm font-semibold">ParkGuide</p>
           <p className="text-xs text-muted-foreground">Saved official NPS sources</p>
@@ -244,74 +243,92 @@ export default function App() {
   return (
     <TooltipProvider>
       <div className="flex h-dvh overflow-hidden bg-background pr-[env(safe-area-inset-right)] pl-[env(safe-area-inset-left)]">
-        <aside className="hidden w-64 shrink-0 border-r bg-sidebar md:block">{sidebar("sidebar")}</aside>
+        <ResizableGroup id="app-layout" orientation="horizontal" className="flex-1">
+          {wide && (
+            <ResizablePanel id="navigation" defaultSize="16rem" minSize="14.5rem" maxSize="22rem" groupResizeBehavior="preserve-pixel-size">
+              <aside className="h-full overflow-y-auto bg-sidebar" aria-label="Navigation">{sidebar("sidebar")}</aside>
+            </ResizablePanel>
+          )}
+          {wide && <ResizeHandle aria-label="Resize navigation sidebar" />}
 
-        <div className="flex min-w-0 flex-1 flex-col">
-          <header className="flex shrink-0 items-center gap-2 border-b px-3 pt-[env(safe-area-inset-top)] sm:px-4">
-            <div className="flex h-13 min-w-0 flex-1 items-center gap-2">
-              <Button variant="ghost" size="icon-sm" className="md:hidden" aria-label="Open menu" onClick={() => setMenuOpen(true)}>
-                <MenuIcon />
-              </Button>
-              <div className="min-w-0">
-                <h1 className="truncate text-sm font-semibold">
-                  {view === "corpus" ? "Saved corpus" : park ? `${parkName(park)} National Park` : "ParkGuide"}
-                </h1>
-                <p className="truncate text-xs text-muted-foreground">
-                  {view === "corpus" ? "Read-only local database" : park ? "Answers use only this park's saved NPS sources" : "No park selected"}
-                </p>
+          <ResizablePanel id="workspace" minSize={wide ? "30rem" : 0}>
+            <div className="flex h-full min-w-0 flex-col">
+              <header className="flex shrink-0 items-center gap-2 border-b px-3 pt-[env(safe-area-inset-top)] sm:px-4">
+                <div className="flex h-13 min-w-0 flex-1 items-center gap-2">
+                  <Button variant="ghost" size="icon-sm" className="md:hidden" aria-label="Open menu" onClick={() => setMenuOpen(true)}>
+                    <MenuIcon />
+                  </Button>
+                  <div className="min-w-0">
+                    <h1 className="truncate text-sm font-semibold">
+                      {view === "corpus" ? "Saved corpus" : park ? `${parkName(park)} National Park` : "ParkGuide"}
+                    </h1>
+                    <p className="truncate text-xs text-muted-foreground">
+                      {view === "corpus" ? "Read-only local database" : park ? "Answers use only this park's saved NPS sources" : "No park selected"}
+                    </p>
+                  </div>
+                </div>
+                {view === "chat" && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon-sm"
+                        aria-label={inspectorOpen ? "Close inspector" : "Open inspector"}
+                        aria-pressed={inspectorOpen}
+                        onClick={() => setInspectorOpen((open) => !open)}
+                      >
+                        {inspectorOpen && desktop ? <PanelRightCloseIcon /> : <PanelRightOpenIcon />}
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>Inspector</TooltipContent>
+                  </Tooltip>
+                )}
+              </header>
+
+              <div className="flex min-h-0 flex-1">
+                <ResizableGroup id="conversation-layout" orientation="horizontal" className="flex-1">
+                  <ResizablePanel id="conversation" minSize={desktop && inspectorOpen ? "30rem" : 0}>
+                    <main className="flex h-full min-w-0 flex-col">
+                      {view === "chat" ? (
+                        <PromptInputProvider>
+                          <ChatView
+                            park={park}
+                            meta={meta}
+                            metaError={metaError}
+                            turns={chat.turns}
+                            pending={chat.pending}
+                            chatReady={chatReady}
+                            onChoosePark={(next) => request({ kind: "park", park: next })}
+                            onSend={chat.send}
+                            onStop={chat.stopWaiting}
+                            onReloadMeta={loadMeta}
+                            onOpenEvidence={(turnId, number, claim) => setEvidence({ turnId, number, claim: claim ?? null })}
+                            onInspect={(turnId) => {
+                              setInspectorTurnId(turnId)
+                              setInspectorOpen(true)
+                            }}
+                          />
+                        </PromptInputProvider>
+                      ) : (
+                        <CorpusBrowser meta={meta} metaError={metaError} selectedPark={park} />
+                      )}
+                    </main>
+                  </ResizablePanel>
+                  {view === "chat" && desktop && inspectorOpen && (
+                    <ResizeHandle aria-label="Resize inspector sidebar" />
+                  )}
+                  {view === "chat" && desktop && inspectorOpen && (
+                    <ResizablePanel id="inspector" defaultSize="26rem" minSize="20rem" maxSize="35rem" groupResizeBehavior="preserve-pixel-size">
+                      <aside className="flex h-full min-w-0 flex-col bg-card" aria-label="Inspector">
+                        {inspector}
+                      </aside>
+                    </ResizablePanel>
+                  )}
+                </ResizableGroup>
               </div>
             </div>
-            {view === "chat" && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    aria-label={inspectorOpen ? "Close inspector" : "Open inspector"}
-                    aria-pressed={inspectorOpen}
-                    onClick={() => setInspectorOpen((open) => !open)}
-                  >
-                    {inspectorOpen && desktop ? <PanelRightCloseIcon /> : <PanelRightOpenIcon />}
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>Inspector</TooltipContent>
-              </Tooltip>
-            )}
-          </header>
-
-          <div className="flex min-h-0 flex-1">
-            <main className="flex min-w-0 flex-1 flex-col">
-              {view === "chat" ? (
-                <PromptInputProvider>
-                  <ChatView
-                    park={park}
-                    meta={meta}
-                    metaError={metaError}
-                    turns={chat.turns}
-                    pending={chat.pending}
-                    chatReady={chatReady}
-                    onChoosePark={(next) => request({ kind: "park", park: next })}
-                    onSend={chat.send}
-                    onStop={chat.stopWaiting}
-                    onReloadMeta={loadMeta}
-                    onOpenEvidence={(turnId, number, claim) => setEvidence({ turnId, number, claim: claim ?? null })}
-                    onInspect={(turnId) => {
-                      setInspectorTurnId(turnId)
-                      setInspectorOpen(true)
-                    }}
-                  />
-                </PromptInputProvider>
-              ) : (
-                <CorpusBrowser meta={meta} metaError={metaError} selectedPark={park} />
-              )}
-            </main>
-            {view === "chat" && desktop && inspectorOpen && (
-              <aside className="flex w-[26rem] shrink-0 flex-col border-l bg-card" aria-label="Inspector">
-                {inspector}
-              </aside>
-            )}
-          </div>
-        </div>
+          </ResizablePanel>
+        </ResizableGroup>
       </div>
 
       <Sheet
