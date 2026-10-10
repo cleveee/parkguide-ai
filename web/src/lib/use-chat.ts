@@ -58,8 +58,8 @@ export function useChat(park: ParkCode | null) {
       const history: HistoryMessage[] = []
       for (const turn of turns) {
         if (turn.phase !== "done" || turn.park !== park) continue
-        // An other-park question was refused locally; resending it would make the
-        // server drop the whole history for every later follow-up.
+        // An other-park question was refused locally; leave that exchange out
+        // of the selected park's follow-up context.
         if (turn.response.reason?.code === "selected_park_mismatch") continue
         // The server rejects blank history content, so a pair with empty text
         // would make every later request fail; skip the whole pair.

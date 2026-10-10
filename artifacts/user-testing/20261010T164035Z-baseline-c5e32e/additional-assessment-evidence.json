@@ -1,0 +1,17 @@
+{
+  "purpose": "Post-output alternative-source inspection; not changed expectations",
+  "doc_id": "f4e22e511edd7feabe0980655163df9f3d335b6de94d6eb8ceb54e52995504c8",
+  "source_url": "https://www.nps.gov/yell/planyourvisit/conditions.htm",
+  "content_hash": "8d8581b2818af9f7248b7c05d4d95a6d9dd45eab9cefb3358990f237d5d26062",
+  "crawled_at": "2026-10-10T02:48:26.731924+00:00",
+  "spans": [
+    {
+      "block_index": 4,
+      "end": 473,
+      "heading_path": "Current Conditions > Alerts > Park Roads",
+      "kind": "paragraph",
+      "start": 52,
+      "text": "The road between Mammoth Hot Springs and the northeast entrance is the only park road typically open to regular traffic year-round, weather permitting (closes in winter east of Cooke City, MT). All other park roads are closed to wheeled vehicles (cars, vans, motorcycles, etc.), and open to limited snowmobile and snowcoach travel from mid-December to mid-March. Before coming to the park, be sure to check the following:"
+    }
+  ]
+}

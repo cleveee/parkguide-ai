@@ -1,0 +1,3182 @@
+{
+  "question": "Can I refill drinking water there according to the saved trail table?",
+  "history": [
+    {
+      "role": "user",
+      "content": "How many miles one way is Cedar Ridge from the South Kaibab trailhead?"
+    },
+    {
+      "role": "assistant",
+      "content": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead. [Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)](https://www.nps.gov/grca/planyourvisit/trail-distances.htm)"
+    }
+  ],
+  "history_scope_reset": false,
+  "selected_park": "grca",
+  "generation_question": "Selected park: Grand Canyon National Park. Answer only for this park from its saved passages.\nVisitor question: Can I refill drinking water there according to the saved trail table?",
+  "retrieval_query": "Grand Canyon: Can I refill drinking water there according to the saved trail table? Previous topic: How many miles one way is Cedar Ridge from the South Kaibab trailhead",
+  "closed_book": false,
+  "rerank_enabled": false,
+  "filters": {
+    "parks": [
+      "grca"
+    ],
+    "source_url": [
+      "https://www.nps.gov/grca/planyourvisit/trail-distances.htm"
+    ]
+  },
+  "retrieval": {
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "mode": "hybrid",
+    "keyword_query": "refill drinking water according saved trail table many miles one way cedar ridge south kaibab trailhead",
+    "keyword_current_terms": [
+      "refill",
+      "drinking",
+      "water",
+      "according",
+      "saved",
+      "trail",
+      "table"
+    ],
+    "keyword_candidate_count": 22,
+    "candidates": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nBright Angel Trail: The trail begins on the South Rim just west of Kolb Studio, and descends to the Colorado River. Elevation change from rim to river is 4460 ft (1360 m), along a 7.8 mile (12.6 km) trail. This trail passes through Havasupai Gardens (formerly known as Indian Garden).\n\nNorth Kaibab Trail: The trail begins on the North Rim at the head of Roaring Springs Canyon and descends to the Colorado River. Elevation from rim to river is 5850 ft (1780 m), along a 14.2 mi (22.9 km) trail.\n\nDW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 970, \"kind\": \"paragraph\", \"start\": 686}, {\"end\": 1181, \"kind\": \"paragraph\", \"start\": 972}, {\"end\": 1269, \"kind\": \"paragraph\", \"start\": 1183}]",
+        "token_count": 167,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "source_span": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 4.767016577283983,
+          "dense": 0.6531197428703308,
+          "rrf": 0.032018442622950824,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": 1
+        },
+        "score": 0.032018442622950824
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "1a226caed70c7fba549af658616c583e30d1a81fdb4f4e145b55f21fba7f28df",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nCorridor Trails Distances\n\nSouth Kaibab Trail: The trail begins on the South Rim near Yaki Point, and descends to the Colorado River. Elevation change from rim to river is 4860 ft (1480 m), along a 6.3 mile (10.1 km) trail. Because of the unavailability of water and steepness of the South Kaibab Trail, rangers recommend hiking down this trail only - and recommend using the Bright Angel Trail for the hike out.\n\nRiver Trail: The trail has little elevation variation and follows the Colorado River for 1.7 miles (2.7 km) between the Bright Angel and South Kaibab trails. Two foot bridges permit access to the north side of the Colorado River.",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 66, \"kind\": \"paragraph\", \"start\": 41}, {\"end\": 453, \"kind\": \"paragraph\", \"start\": 68}, {\"end\": 684, \"kind\": \"paragraph\", \"start\": 455}]",
+        "token_count": 168,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "source_span": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 6.2203841704240865,
+          "dense": 0.6054781675338745,
+          "rrf": 0.03200204813108039,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 3
+        },
+        "score": 0.03200204813108039
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "7f57f61692f679d759e0e61cdea57dabecaf6d1194acdef07d4c2d8321142aaa",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| North Kaibab Trailhead to: |  | 8241/2512 |  |  |  |  |  |\n| Supai Tunnel | 1.7/2.5 | 6800/2073 | Y | Y |  |  | water available mid-May to mid-Oct only |\n| Roaring Springs | 4.7/7.3 | 5220/1591 |  | Y |  |  | 20 minute detour off main trail; NO WATER |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2698, \"kind\": \"table_row\", \"start\": 2637}, {\"end\": 2793, \"kind\": \"table_row\", \"start\": 2698}, {\"end\": 2892, \"kind\": \"table_row\", \"start\": 2793}]",
+        "token_count": 170,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 4.000060406551893,
+          "dense": 0.6177841424942017,
+          "rrf": 0.0315136476426799,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 5,
+          "dense": 2
+        },
+        "score": 0.0315136476426799
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Phantom Ranch | 9.9/15.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |\n| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |\n| Skeleton Point | 3/4.8 | 5220/1591 |  |  |  |  |  |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2118, \"kind\": \"table_row\", \"start\": 2018}, {\"end\": 2179, \"kind\": \"table_row\", \"start\": 2118}, {\"end\": 2233, \"kind\": \"table_row\", \"start\": 2179}, {\"end\": 2287, \"kind\": \"table_row\", \"start\": 2233}]",
+        "token_count": 183,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.154302964711533,
+          "dense": 0.575817346572876,
+          "rrf": 0.031099324975891997,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 8
+        },
+        "score": 0.031099324975891997
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4fc90c20ef3feb0342352803f4044f9d6f2420ccda3168b74e95859551ce0715",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Bright Angel Trailhead to: |  | 6860/2093 |  |  |  |  |  |\n| Mile-and-a-Half Resthouse | 1.6/2.6 | 5729/1748 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n| Three-Mile Resthouse | 3.1/5 | 4748/1449 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1475, \"kind\": \"table_row\", \"start\": 1414}, {\"end\": 1584, \"kind\": \"table_row\", \"start\": 1475}, {\"end\": 1686, \"kind\": \"table_row\", \"start\": 1584}]",
+        "token_count": 169,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 3.0511925871901324,
+          "dense": 0.5994809865951538,
+          "rrf": 0.030536130536130537,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 5
+        },
+        "score": 0.030536130536130537
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8b64fa9b7679d36c3c8328c124fd96133a0dab156947ed4a2e30c9f82272de1f",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances\n\nTonto Trail Distances\n\nTonto Trail: This trail crosses the Tonto Platform approximately 3900 ft (1200 m) below the South Rim, intersecting both the Bright Angel and South Kaibab Trails.\n\nFor a table showing distances along the Tonto Trail view the following PDF file: Tonto Trail Distances .",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances",
+        "source_span_json": "[{\"end\": 4061, \"kind\": \"paragraph\", \"start\": 4040}, {\"end\": 4225, \"kind\": \"paragraph\", \"start\": 4063}, {\"end\": 4331, \"kind\": \"paragraph\", \"start\": 4227}]",
+        "token_count": 81,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4061,
+            "kind": "paragraph",
+            "start": 4040
+          },
+          {
+            "end": 4225,
+            "kind": "paragraph",
+            "start": 4063
+          },
+          {
+            "end": 4331,
+            "kind": "paragraph",
+            "start": 4227
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4061,
+            "kind": "paragraph",
+            "start": 4040
+          },
+          {
+            "end": 4225,
+            "kind": "paragraph",
+            "start": 4063
+          },
+          {
+            "end": 4331,
+            "kind": "paragraph",
+            "start": 4227
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 6.158194582570773,
+          "dense": 0.5217471122741699,
+          "rrf": 0.030158730158730156,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": 10
+        },
+        "score": 0.030158730158730156
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "2d39a0bf95c0287f5e0d6580d23f8e2a069a36047fbba011c23c184a2104d82d",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Ribbon Falls | 8.4/13.3 | 3720/1134 |  |  |  |  | Ribbon Falls Bridge has been removed due to damage. Until the bridge is replaced, visitors should stay on the North Kaibab Trail and travel safely in this area. |\n| Phantom Ranch | 13.6/21.8 | 2546/776 | Y | Y | Y |  | reservation required for food and lodging |\n| Bright Angel Campground | 14/22.5 | 2480/756 | Y | Y | Y | Y | picnic tables, food storage cans, pack poles |",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 3323, \"kind\": \"table_row\", \"start\": 3108}, {\"end\": 3423, \"kind\": \"table_row\", \"start\": 3323}, {\"end\": 3534, \"kind\": \"table_row\", \"start\": 3423}]",
+        "token_count": 195,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 3323,
+            "kind": "table_row",
+            "start": 3108
+          },
+          {
+            "end": 3423,
+            "kind": "table_row",
+            "start": 3323
+          },
+          {
+            "end": 3534,
+            "kind": "table_row",
+            "start": 3423
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 3323,
+            "kind": "table_row",
+            "start": 3108
+          },
+          {
+            "end": 3423,
+            "kind": "table_row",
+            "start": 3323
+          },
+          {
+            "end": 3534,
+            "kind": "table_row",
+            "start": 3423
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 1.1375452925925225,
+          "dense": 0.5958049297332764,
+          "rrf": 0.029437229437229435,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 6
+        },
+        "score": 0.029437229437229435
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5f7c973d65447c8bf33186fc53d00bf952c8243c40668560871575bcbe6ea551",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Manzanita Rest Area | 5.4/8.4 | 4600/1402 | Y | Y | Y |  |  |\n| Cottonwood Campground | 6.8/10.9 | 4080/1244 | Y | Y | Y |  | water available mid-May to mid-Oct only; picnic tables, food storage cans, pack poles |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2956, \"kind\": \"table_row\", \"start\": 2892}, {\"end\": 3108, \"kind\": \"table_row\", \"start\": 2956}]",
+        "token_count": 144,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2956,
+            "kind": "table_row",
+            "start": 2892
+          },
+          {
+            "end": 3108,
+            "kind": "table_row",
+            "start": 2956
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2956,
+            "kind": "table_row",
+            "start": 2892
+          },
+          {
+            "end": 3108,
+            "kind": "table_row",
+            "start": 2956
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 1.28358129740695,
+          "dense": 0.537227213382721,
+          "rrf": 0.028985507246376812,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 9,
+          "dense": 9
+        },
+        "score": 0.028985507246376812
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8ba36d01617872ccec0278b9df6c7fc39a28aa0b574037edd39d0e81ce7ed8fa",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Introduction to Backcountry Hiking Brochure\n\nIntroduction to Backcountry Hiking Brochure\n\nThis brochure is for day and overnight inner canyon hikers. It has information about hiking the Bright Angel, South Kaibab, and North Kaibab trails, as well as permit, planning, Leave No Trace, and Hike Smart information. It is distributed at park visitor centers and backcountry information centers. The web version of this publication (available below) is formatted to print on standard 8.5 x 11 letter-sized paper.\n\nBackcountry Hiking Brochure (PDF file)",
+        "heading_path": "Backcountry Trail Distances > Introduction to Backcountry Hiking Brochure",
+        "source_span_json": "[{\"end\": 3579, \"kind\": \"paragraph\", \"start\": 3536}, {\"end\": 3998, \"kind\": \"paragraph\", \"start\": 3581}, {\"end\": 4038, \"kind\": \"paragraph\", \"start\": 4000}]",
+        "token_count": 126,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3579,
+            "kind": "paragraph",
+            "start": 3536
+          },
+          {
+            "end": 3998,
+            "kind": "paragraph",
+            "start": 3581
+          },
+          {
+            "end": 4038,
+            "kind": "paragraph",
+            "start": 4000
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3579,
+            "kind": "paragraph",
+            "start": 3536
+          },
+          {
+            "end": 3998,
+            "kind": "paragraph",
+            "start": 3581
+          },
+          {
+            "end": 4038,
+            "kind": "paragraph",
+            "start": 4000
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 2.3430051816889192,
+          "dense": 0.49689874053001404,
+          "rrf": 0.028814262023217248,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 7,
+          "dense": 12
+        },
+        "score": 0.028814262023217248
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "410bc5dd9242ae23093fec268f1bfb539d2a6032f9554dbd7069baacaa836db1",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\n| Backcountry Permit Regulations Hiking Tips Hiking FAQs Trail Courtesy | Day Hiking Guided Hikes Summer Hiking Winter Hiking Weather Dangers | Trails / Use Areas Distances Private Stock Food Storage Safe Water Updates / Closures |\n| --- | --- | --- |",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4653, \"kind\": \"table_header\", \"start\": 4402}]",
+        "token_count": 82,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4653,
+            "kind": "table_header",
+            "start": 4402
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4653,
+            "kind": "table_header",
+            "start": 4402
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 1.8370254048618175,
+          "dense": 0.48712921142578125,
+          "rrf": 0.028404512489927477,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 13
+        },
+        "score": 0.028404512489927477
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "181e533386efc71ef72640c08fa44b550eb0e955478fa5e3949c208025fc2918",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Havasupai Gardens Campground | 4.5/7.3 | 3800/1160 | Y | Y | Y | Y | picnic tables, food storage cans, pack poles (formerly known as Indian Garden Campground) |\n| River Resthouse | 8/12.9 | 2480/756 |  | Y | Y |  |  |\n| Bright Angel Campground | 9.5/15.3 | 2480/756 | Y | Y | Y |  | picnic tables, food storage cans, pack poles |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1849, \"kind\": \"table_row\", \"start\": 1686}, {\"end\": 1906, \"kind\": \"table_row\", \"start\": 1849}, {\"end\": 2018, \"kind\": \"table_row\", \"start\": 1906}]",
+        "token_count": 181,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1849,
+            "kind": "table_row",
+            "start": 1686
+          },
+          {
+            "end": 1906,
+            "kind": "table_row",
+            "start": 1849
+          },
+          {
+            "end": 2018,
+            "kind": "table_row",
+            "start": 1906
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1849,
+            "kind": "table_row",
+            "start": 1686
+          },
+          {
+            "end": 1906,
+            "kind": "table_row",
+            "start": 1849
+          },
+          {
+            "end": 2018,
+            "kind": "table_row",
+            "start": 1906
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 0.394558593114493,
+          "dense": 0.5999922752380371,
+          "rrf": 0.027820121951219513,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 22,
+          "dense": 4
+        },
+        "score": 0.027820121951219513
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "897464d70b63a08dc9ccacdc6bb5f2c3984793b22e46d92e60c6d9b2c69af6d3",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances\n\nBackcountry Trail Distances",
+        "heading_path": "Backcountry Trail Distances",
+        "source_span_json": "[{\"end\": 39, \"kind\": \"paragraph\", \"start\": 12}]",
+        "token_count": 13,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 39,
+            "kind": "paragraph",
+            "start": 12
+          }
+        ],
+        "source_span": [
+          {
+            "end": 39,
+            "kind": "paragraph",
+            "start": 12
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 1.0521014342262156,
+          "dense": 0.48318541049957275,
+          "rrf": 0.027598020555767037,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 11,
+          "dense": 14
+        },
+        "score": 0.027598020555767037
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4d8880b226231656f8d82b6f54050f6ac8bec05a43fd2bea6462400c4991b944",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Tip Off | 4.4/7.1 | 4000/1219 |  | Y | Y |  | junction with Tonto Trail (distance to Havasupai Gardens via Tonto Trail - 4.6 mi/6.6 km) |\n| Bright Angel Campground | 7/11.3 | 2480/756 | Y | Y | Y |  | picnic tables, food storage cans, pack poles |\n| Phantom Ranch | 7.4/11.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2427, \"kind\": \"table_row\", \"start\": 2287}, {\"end\": 2537, \"kind\": \"table_row\", \"start\": 2427}, {\"end\": 2637, \"kind\": \"table_row\", \"start\": 2537}]",
+        "token_count": 191,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2427,
+            "kind": "table_row",
+            "start": 2287
+          },
+          {
+            "end": 2537,
+            "kind": "table_row",
+            "start": 2427
+          },
+          {
+            "end": 2637,
+            "kind": "table_row",
+            "start": 2537
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2427,
+            "kind": "table_row",
+            "start": 2287
+          },
+          {
+            "end": 2537,
+            "kind": "table_row",
+            "start": 2427
+          },
+          {
+            "end": 2637,
+            "kind": "table_row",
+            "start": 2537
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 0.7250857040777038,
+          "dense": 0.5772184133529663,
+          "rrf": 0.027425373134328357,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 20,
+          "dense": 7
+        },
+        "score": 0.027425373134328357
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "05e41ea710e726b2dd6fed28050260012e75977b79f8b763861a08c8d1f213f8",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\nLast updated: March 12, 2025",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4683, \"kind\": \"paragraph\", \"start\": 4655}]",
+        "token_count": 37,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4683,
+            "kind": "paragraph",
+            "start": 4655
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4683,
+            "kind": "paragraph",
+            "start": 4655
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 0.940531251395874,
+          "dense": 0.4772114157676697,
+          "rrf": 0.027222222222222224,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 12,
+          "dense": 15
+        },
+        "score": 0.027222222222222224
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0661b9674a2cb9aa56358895572671f1adbee5a9b64b3d2e4212f325a27a9846",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\nAdditional backcountry info can be found on the following webpages.",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4400, \"kind\": \"paragraph\", \"start\": 4333}]",
+        "token_count": 40,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4400,
+            "kind": "paragraph",
+            "start": 4333
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4400,
+            "kind": "paragraph",
+            "start": 4333
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 0.9315506725389644,
+          "dense": 0.4634784460067749,
+          "rrf": 0.026856524873828405,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 13,
+          "dense": 16
+        },
+        "score": 0.026856524873828405
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f0f43b85d8cd9cf20d54fe8ada2b29c0e7eac1ec9198cbfbbb284488c7c164ed",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer\n\nPark footer",
+        "heading_path": "Backcountry Trail Distances > Park footer",
+        "source_span_json": "[{\"end\": 4696, \"kind\": \"paragraph\", \"start\": 4685}]",
+        "token_count": 13,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4696,
+            "kind": "paragraph",
+            "start": 4685
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4696,
+            "kind": "paragraph",
+            "start": 4685
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 0.8463992887666474,
+          "dense": 0.4464570879936218,
+          "rrf": 0.026500526500526502,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 17
+        },
+        "score": 0.026500526500526502
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f8ccad038df30087cda9428248dd8f6c240d79c7b318ecd7a1cbd89cd2695525",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info > Mailing Address:\n\nMailing Address:\n\nPO Box 129 Grand Canyon, AZ 86023",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info > Mailing Address:",
+        "source_span_json": "[{\"end\": 4728, \"kind\": \"paragraph\", \"start\": 4712}, {\"end\": 4763, \"kind\": \"paragraph\", \"start\": 4730}]",
+        "token_count": 33,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4728,
+            "kind": "paragraph",
+            "start": 4712
+          },
+          {
+            "end": 4763,
+            "kind": "paragraph",
+            "start": 4730
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4728,
+            "kind": "paragraph",
+            "start": 4712
+          },
+          {
+            "end": 4763,
+            "kind": "paragraph",
+            "start": 4730
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 0.7107442468491663,
+          "dense": 0.5181087255477905,
+          "rrf": 0.0264301860545992,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 21,
+          "dense": 11
+        },
+        "score": 0.0264301860545992
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "9f8619a512f1ac65e3caad832c7dbea1bedf3dbd717b7f0b72e5ced382a9d742",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info\n\nContact Info",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info",
+        "source_span_json": "[{\"end\": 4710, \"kind\": \"paragraph\", \"start\": 4698}]",
+        "token_count": 16,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4710,
+            "kind": "paragraph",
+            "start": 4698
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4710,
+            "kind": "paragraph",
+            "start": 4698
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 0.8180122743831906,
+          "dense": 0.4221910834312439,
+          "rrf": 0.0259915611814346,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 15,
+          "dense": 19
+        },
+        "score": 0.0259915611814346
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f2a3325d3e244d06537f97151d4d7a3504031da8ec06ad26125acd9b6e8edbb8",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Stay Connected\n\nStay Connected",
+        "heading_path": "Backcountry Trail Distances > Park footer > Stay Connected",
+        "source_span_json": "[{\"end\": 4850, \"kind\": \"paragraph\", \"start\": 4836}]",
+        "token_count": 16,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4850,
+            "kind": "paragraph",
+            "start": 4836
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4850,
+            "kind": "paragraph",
+            "start": 4836
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 0.8180122743831906,
+          "dense": 0.4449344575405121,
+          "rrf": 0.025978407557354925,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 18
+        },
+        "score": 0.025978407557354925
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8f36063b3936bc2f951f96fa6232d0f10651b188ef18ae08339aa1c372850ef4",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info > Contact Us\n\nContact Us",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info > Contact Us",
+        "source_span_json": "[{\"end\": 4801, \"kind\": \"paragraph\", \"start\": 4791}]",
+        "token_count": 19,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4801,
+            "kind": "paragraph",
+            "start": 4791
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4801,
+            "kind": "paragraph",
+            "start": 4791
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 0.791467590138431,
+          "dense": 0.41752177476882935,
+          "rrf": 0.025332691999358666,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 17,
+          "dense": 21
+        },
+        "score": 0.025332691999358666
+      }
+    ],
+    "reranked": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nBright Angel Trail: The trail begins on the South Rim just west of Kolb Studio, and descends to the Colorado River. Elevation change from rim to river is 4460 ft (1360 m), along a 7.8 mile (12.6 km) trail. This trail passes through Havasupai Gardens (formerly known as Indian Garden).\n\nNorth Kaibab Trail: The trail begins on the North Rim at the head of Roaring Springs Canyon and descends to the Colorado River. Elevation from rim to river is 5850 ft (1780 m), along a 14.2 mi (22.9 km) trail.\n\nDW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 970, \"kind\": \"paragraph\", \"start\": 686}, {\"end\": 1181, \"kind\": \"paragraph\", \"start\": 972}, {\"end\": 1269, \"kind\": \"paragraph\", \"start\": 1183}]",
+        "token_count": 167,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "source_span": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 4.767016577283983,
+          "dense": 0.6531197428703308,
+          "rrf": 0.032018442622950824,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": 1
+        },
+        "score": 0.032018442622950824,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "1a226caed70c7fba549af658616c583e30d1a81fdb4f4e145b55f21fba7f28df",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nCorridor Trails Distances\n\nSouth Kaibab Trail: The trail begins on the South Rim near Yaki Point, and descends to the Colorado River. Elevation change from rim to river is 4860 ft (1480 m), along a 6.3 mile (10.1 km) trail. Because of the unavailability of water and steepness of the South Kaibab Trail, rangers recommend hiking down this trail only - and recommend using the Bright Angel Trail for the hike out.\n\nRiver Trail: The trail has little elevation variation and follows the Colorado River for 1.7 miles (2.7 km) between the Bright Angel and South Kaibab trails. Two foot bridges permit access to the north side of the Colorado River.",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 66, \"kind\": \"paragraph\", \"start\": 41}, {\"end\": 453, \"kind\": \"paragraph\", \"start\": 68}, {\"end\": 684, \"kind\": \"paragraph\", \"start\": 455}]",
+        "token_count": 168,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "source_span": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 6.2203841704240865,
+          "dense": 0.6054781675338745,
+          "rrf": 0.03200204813108039,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 3
+        },
+        "score": 0.03200204813108039,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "7f57f61692f679d759e0e61cdea57dabecaf6d1194acdef07d4c2d8321142aaa",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| North Kaibab Trailhead to: |  | 8241/2512 |  |  |  |  |  |\n| Supai Tunnel | 1.7/2.5 | 6800/2073 | Y | Y |  |  | water available mid-May to mid-Oct only |\n| Roaring Springs | 4.7/7.3 | 5220/1591 |  | Y |  |  | 20 minute detour off main trail; NO WATER |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2698, \"kind\": \"table_row\", \"start\": 2637}, {\"end\": 2793, \"kind\": \"table_row\", \"start\": 2698}, {\"end\": 2892, \"kind\": \"table_row\", \"start\": 2793}]",
+        "token_count": 170,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 4.000060406551893,
+          "dense": 0.6177841424942017,
+          "rrf": 0.0315136476426799,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 5,
+          "dense": 2
+        },
+        "score": 0.0315136476426799,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Phantom Ranch | 9.9/15.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |\n| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |\n| Skeleton Point | 3/4.8 | 5220/1591 |  |  |  |  |  |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2118, \"kind\": \"table_row\", \"start\": 2018}, {\"end\": 2179, \"kind\": \"table_row\", \"start\": 2118}, {\"end\": 2233, \"kind\": \"table_row\", \"start\": 2179}, {\"end\": 2287, \"kind\": \"table_row\", \"start\": 2233}]",
+        "token_count": 183,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.154302964711533,
+          "dense": 0.575817346572876,
+          "rrf": 0.031099324975891997,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 8
+        },
+        "score": 0.031099324975891997,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4fc90c20ef3feb0342352803f4044f9d6f2420ccda3168b74e95859551ce0715",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Bright Angel Trailhead to: |  | 6860/2093 |  |  |  |  |  |\n| Mile-and-a-Half Resthouse | 1.6/2.6 | 5729/1748 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n| Three-Mile Resthouse | 3.1/5 | 4748/1449 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1475, \"kind\": \"table_row\", \"start\": 1414}, {\"end\": 1584, \"kind\": \"table_row\", \"start\": 1475}, {\"end\": 1686, \"kind\": \"table_row\", \"start\": 1584}]",
+        "token_count": 169,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 3.0511925871901324,
+          "dense": 0.5994809865951538,
+          "rrf": 0.030536130536130537,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 5
+        },
+        "score": 0.030536130536130537,
+        "post_rank": 5
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8b64fa9b7679d36c3c8328c124fd96133a0dab156947ed4a2e30c9f82272de1f",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances\n\nTonto Trail Distances\n\nTonto Trail: This trail crosses the Tonto Platform approximately 3900 ft (1200 m) below the South Rim, intersecting both the Bright Angel and South Kaibab Trails.\n\nFor a table showing distances along the Tonto Trail view the following PDF file: Tonto Trail Distances .",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances",
+        "source_span_json": "[{\"end\": 4061, \"kind\": \"paragraph\", \"start\": 4040}, {\"end\": 4225, \"kind\": \"paragraph\", \"start\": 4063}, {\"end\": 4331, \"kind\": \"paragraph\", \"start\": 4227}]",
+        "token_count": 81,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4061,
+            "kind": "paragraph",
+            "start": 4040
+          },
+          {
+            "end": 4225,
+            "kind": "paragraph",
+            "start": 4063
+          },
+          {
+            "end": 4331,
+            "kind": "paragraph",
+            "start": 4227
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4061,
+            "kind": "paragraph",
+            "start": 4040
+          },
+          {
+            "end": 4225,
+            "kind": "paragraph",
+            "start": 4063
+          },
+          {
+            "end": 4331,
+            "kind": "paragraph",
+            "start": 4227
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 6.158194582570773,
+          "dense": 0.5217471122741699,
+          "rrf": 0.030158730158730156,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": 10
+        },
+        "score": 0.030158730158730156,
+        "post_rank": 6
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "2d39a0bf95c0287f5e0d6580d23f8e2a069a36047fbba011c23c184a2104d82d",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Ribbon Falls | 8.4/13.3 | 3720/1134 |  |  |  |  | Ribbon Falls Bridge has been removed due to damage. Until the bridge is replaced, visitors should stay on the North Kaibab Trail and travel safely in this area. |\n| Phantom Ranch | 13.6/21.8 | 2546/776 | Y | Y | Y |  | reservation required for food and lodging |\n| Bright Angel Campground | 14/22.5 | 2480/756 | Y | Y | Y | Y | picnic tables, food storage cans, pack poles |",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 3323, \"kind\": \"table_row\", \"start\": 3108}, {\"end\": 3423, \"kind\": \"table_row\", \"start\": 3323}, {\"end\": 3534, \"kind\": \"table_row\", \"start\": 3423}]",
+        "token_count": 195,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 3323,
+            "kind": "table_row",
+            "start": 3108
+          },
+          {
+            "end": 3423,
+            "kind": "table_row",
+            "start": 3323
+          },
+          {
+            "end": 3534,
+            "kind": "table_row",
+            "start": 3423
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 3323,
+            "kind": "table_row",
+            "start": 3108
+          },
+          {
+            "end": 3423,
+            "kind": "table_row",
+            "start": 3323
+          },
+          {
+            "end": 3534,
+            "kind": "table_row",
+            "start": 3423
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 1.1375452925925225,
+          "dense": 0.5958049297332764,
+          "rrf": 0.029437229437229435,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 6
+        },
+        "score": 0.029437229437229435,
+        "post_rank": 7
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5f7c973d65447c8bf33186fc53d00bf952c8243c40668560871575bcbe6ea551",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Manzanita Rest Area | 5.4/8.4 | 4600/1402 | Y | Y | Y |  |  |\n| Cottonwood Campground | 6.8/10.9 | 4080/1244 | Y | Y | Y |  | water available mid-May to mid-Oct only; picnic tables, food storage cans, pack poles |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2956, \"kind\": \"table_row\", \"start\": 2892}, {\"end\": 3108, \"kind\": \"table_row\", \"start\": 2956}]",
+        "token_count": 144,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2956,
+            "kind": "table_row",
+            "start": 2892
+          },
+          {
+            "end": 3108,
+            "kind": "table_row",
+            "start": 2956
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2956,
+            "kind": "table_row",
+            "start": 2892
+          },
+          {
+            "end": 3108,
+            "kind": "table_row",
+            "start": 2956
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 1.28358129740695,
+          "dense": 0.537227213382721,
+          "rrf": 0.028985507246376812,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 9,
+          "dense": 9
+        },
+        "score": 0.028985507246376812,
+        "post_rank": 8
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8ba36d01617872ccec0278b9df6c7fc39a28aa0b574037edd39d0e81ce7ed8fa",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Introduction to Backcountry Hiking Brochure\n\nIntroduction to Backcountry Hiking Brochure\n\nThis brochure is for day and overnight inner canyon hikers. It has information about hiking the Bright Angel, South Kaibab, and North Kaibab trails, as well as permit, planning, Leave No Trace, and Hike Smart information. It is distributed at park visitor centers and backcountry information centers. The web version of this publication (available below) is formatted to print on standard 8.5 x 11 letter-sized paper.\n\nBackcountry Hiking Brochure (PDF file)",
+        "heading_path": "Backcountry Trail Distances > Introduction to Backcountry Hiking Brochure",
+        "source_span_json": "[{\"end\": 3579, \"kind\": \"paragraph\", \"start\": 3536}, {\"end\": 3998, \"kind\": \"paragraph\", \"start\": 3581}, {\"end\": 4038, \"kind\": \"paragraph\", \"start\": 4000}]",
+        "token_count": 126,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3579,
+            "kind": "paragraph",
+            "start": 3536
+          },
+          {
+            "end": 3998,
+            "kind": "paragraph",
+            "start": 3581
+          },
+          {
+            "end": 4038,
+            "kind": "paragraph",
+            "start": 4000
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3579,
+            "kind": "paragraph",
+            "start": 3536
+          },
+          {
+            "end": 3998,
+            "kind": "paragraph",
+            "start": 3581
+          },
+          {
+            "end": 4038,
+            "kind": "paragraph",
+            "start": 4000
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 2.3430051816889192,
+          "dense": 0.49689874053001404,
+          "rrf": 0.028814262023217248,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 7,
+          "dense": 12
+        },
+        "score": 0.028814262023217248,
+        "post_rank": 9
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "410bc5dd9242ae23093fec268f1bfb539d2a6032f9554dbd7069baacaa836db1",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\n| Backcountry Permit Regulations Hiking Tips Hiking FAQs Trail Courtesy | Day Hiking Guided Hikes Summer Hiking Winter Hiking Weather Dangers | Trails / Use Areas Distances Private Stock Food Storage Safe Water Updates / Closures |\n| --- | --- | --- |",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4653, \"kind\": \"table_header\", \"start\": 4402}]",
+        "token_count": 82,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4653,
+            "kind": "table_header",
+            "start": 4402
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4653,
+            "kind": "table_header",
+            "start": 4402
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 1.8370254048618175,
+          "dense": 0.48712921142578125,
+          "rrf": 0.028404512489927477,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 13
+        },
+        "score": 0.028404512489927477,
+        "post_rank": 10
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "181e533386efc71ef72640c08fa44b550eb0e955478fa5e3949c208025fc2918",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Havasupai Gardens Campground | 4.5/7.3 | 3800/1160 | Y | Y | Y | Y | picnic tables, food storage cans, pack poles (formerly known as Indian Garden Campground) |\n| River Resthouse | 8/12.9 | 2480/756 |  | Y | Y |  |  |\n| Bright Angel Campground | 9.5/15.3 | 2480/756 | Y | Y | Y |  | picnic tables, food storage cans, pack poles |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1849, \"kind\": \"table_row\", \"start\": 1686}, {\"end\": 1906, \"kind\": \"table_row\", \"start\": 1849}, {\"end\": 2018, \"kind\": \"table_row\", \"start\": 1906}]",
+        "token_count": 181,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1849,
+            "kind": "table_row",
+            "start": 1686
+          },
+          {
+            "end": 1906,
+            "kind": "table_row",
+            "start": 1849
+          },
+          {
+            "end": 2018,
+            "kind": "table_row",
+            "start": 1906
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1849,
+            "kind": "table_row",
+            "start": 1686
+          },
+          {
+            "end": 1906,
+            "kind": "table_row",
+            "start": 1849
+          },
+          {
+            "end": 2018,
+            "kind": "table_row",
+            "start": 1906
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 0.394558593114493,
+          "dense": 0.5999922752380371,
+          "rrf": 0.027820121951219513,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 22,
+          "dense": 4
+        },
+        "score": 0.027820121951219513,
+        "post_rank": 11
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "897464d70b63a08dc9ccacdc6bb5f2c3984793b22e46d92e60c6d9b2c69af6d3",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances\n\nBackcountry Trail Distances",
+        "heading_path": "Backcountry Trail Distances",
+        "source_span_json": "[{\"end\": 39, \"kind\": \"paragraph\", \"start\": 12}]",
+        "token_count": 13,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 39,
+            "kind": "paragraph",
+            "start": 12
+          }
+        ],
+        "source_span": [
+          {
+            "end": 39,
+            "kind": "paragraph",
+            "start": 12
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 1.0521014342262156,
+          "dense": 0.48318541049957275,
+          "rrf": 0.027598020555767037,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 11,
+          "dense": 14
+        },
+        "score": 0.027598020555767037,
+        "post_rank": 12
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4d8880b226231656f8d82b6f54050f6ac8bec05a43fd2bea6462400c4991b944",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Tip Off | 4.4/7.1 | 4000/1219 |  | Y | Y |  | junction with Tonto Trail (distance to Havasupai Gardens via Tonto Trail - 4.6 mi/6.6 km) |\n| Bright Angel Campground | 7/11.3 | 2480/756 | Y | Y | Y |  | picnic tables, food storage cans, pack poles |\n| Phantom Ranch | 7.4/11.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2427, \"kind\": \"table_row\", \"start\": 2287}, {\"end\": 2537, \"kind\": \"table_row\", \"start\": 2427}, {\"end\": 2637, \"kind\": \"table_row\", \"start\": 2537}]",
+        "token_count": 191,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2427,
+            "kind": "table_row",
+            "start": 2287
+          },
+          {
+            "end": 2537,
+            "kind": "table_row",
+            "start": 2427
+          },
+          {
+            "end": 2637,
+            "kind": "table_row",
+            "start": 2537
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2427,
+            "kind": "table_row",
+            "start": 2287
+          },
+          {
+            "end": 2537,
+            "kind": "table_row",
+            "start": 2427
+          },
+          {
+            "end": 2637,
+            "kind": "table_row",
+            "start": 2537
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 0.7250857040777038,
+          "dense": 0.5772184133529663,
+          "rrf": 0.027425373134328357,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 20,
+          "dense": 7
+        },
+        "score": 0.027425373134328357,
+        "post_rank": 13
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "05e41ea710e726b2dd6fed28050260012e75977b79f8b763861a08c8d1f213f8",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\nLast updated: March 12, 2025",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4683, \"kind\": \"paragraph\", \"start\": 4655}]",
+        "token_count": 37,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4683,
+            "kind": "paragraph",
+            "start": 4655
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4683,
+            "kind": "paragraph",
+            "start": 4655
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 0.940531251395874,
+          "dense": 0.4772114157676697,
+          "rrf": 0.027222222222222224,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 12,
+          "dense": 15
+        },
+        "score": 0.027222222222222224,
+        "post_rank": 14
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0661b9674a2cb9aa56358895572671f1adbee5a9b64b3d2e4212f325a27a9846",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.\n\nAdditional backcountry info can be found on the following webpages.",
+        "heading_path": "Backcountry Trail Distances > Tonto Trail Distances > Additional backcountry info can be found on the following webpages.",
+        "source_span_json": "[{\"end\": 4400, \"kind\": \"paragraph\", \"start\": 4333}]",
+        "token_count": 40,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4400,
+            "kind": "paragraph",
+            "start": 4333
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4400,
+            "kind": "paragraph",
+            "start": 4333
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 0.9315506725389644,
+          "dense": 0.4634784460067749,
+          "rrf": 0.026856524873828405,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 13,
+          "dense": 16
+        },
+        "score": 0.026856524873828405,
+        "post_rank": 15
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f0f43b85d8cd9cf20d54fe8ada2b29c0e7eac1ec9198cbfbbb284488c7c164ed",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer\n\nPark footer",
+        "heading_path": "Backcountry Trail Distances > Park footer",
+        "source_span_json": "[{\"end\": 4696, \"kind\": \"paragraph\", \"start\": 4685}]",
+        "token_count": 13,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4696,
+            "kind": "paragraph",
+            "start": 4685
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4696,
+            "kind": "paragraph",
+            "start": 4685
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 0.8463992887666474,
+          "dense": 0.4464570879936218,
+          "rrf": 0.026500526500526502,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 17
+        },
+        "score": 0.026500526500526502,
+        "post_rank": 16
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f8ccad038df30087cda9428248dd8f6c240d79c7b318ecd7a1cbd89cd2695525",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info > Mailing Address:\n\nMailing Address:\n\nPO Box 129 Grand Canyon, AZ 86023",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info > Mailing Address:",
+        "source_span_json": "[{\"end\": 4728, \"kind\": \"paragraph\", \"start\": 4712}, {\"end\": 4763, \"kind\": \"paragraph\", \"start\": 4730}]",
+        "token_count": 33,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4728,
+            "kind": "paragraph",
+            "start": 4712
+          },
+          {
+            "end": 4763,
+            "kind": "paragraph",
+            "start": 4730
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4728,
+            "kind": "paragraph",
+            "start": 4712
+          },
+          {
+            "end": 4763,
+            "kind": "paragraph",
+            "start": 4730
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 0.7107442468491663,
+          "dense": 0.5181087255477905,
+          "rrf": 0.0264301860545992,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 21,
+          "dense": 11
+        },
+        "score": 0.0264301860545992,
+        "post_rank": 17
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "9f8619a512f1ac65e3caad832c7dbea1bedf3dbd717b7f0b72e5ced382a9d742",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info\n\nContact Info",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info",
+        "source_span_json": "[{\"end\": 4710, \"kind\": \"paragraph\", \"start\": 4698}]",
+        "token_count": 16,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4710,
+            "kind": "paragraph",
+            "start": 4698
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4710,
+            "kind": "paragraph",
+            "start": 4698
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 0.8180122743831906,
+          "dense": 0.4221910834312439,
+          "rrf": 0.0259915611814346,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 15,
+          "dense": 19
+        },
+        "score": 0.0259915611814346,
+        "post_rank": 18
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f2a3325d3e244d06537f97151d4d7a3504031da8ec06ad26125acd9b6e8edbb8",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Stay Connected\n\nStay Connected",
+        "heading_path": "Backcountry Trail Distances > Park footer > Stay Connected",
+        "source_span_json": "[{\"end\": 4850, \"kind\": \"paragraph\", \"start\": 4836}]",
+        "token_count": 16,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4850,
+            "kind": "paragraph",
+            "start": 4836
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4850,
+            "kind": "paragraph",
+            "start": 4836
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 0.8180122743831906,
+          "dense": 0.4449344575405121,
+          "rrf": 0.025978407557354925,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 18
+        },
+        "score": 0.025978407557354925,
+        "post_rank": 19
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8f36063b3936bc2f951f96fa6232d0f10651b188ef18ae08339aa1c372850ef4",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Park footer > Contact Info > Contact Us\n\nContact Us",
+        "heading_path": "Backcountry Trail Distances > Park footer > Contact Info > Contact Us",
+        "source_span_json": "[{\"end\": 4801, \"kind\": \"paragraph\", \"start\": 4791}]",
+        "token_count": 19,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4801,
+            "kind": "paragraph",
+            "start": 4791
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4801,
+            "kind": "paragraph",
+            "start": 4791
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 0.791467590138431,
+          "dense": 0.41752177476882935,
+          "rrf": 0.025332691999358666,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 17,
+          "dense": 21
+        },
+        "score": 0.025332691999358666,
+        "post_rank": 20
+      }
+    ],
+    "final": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nBright Angel Trail: The trail begins on the South Rim just west of Kolb Studio, and descends to the Colorado River. Elevation change from rim to river is 4460 ft (1360 m), along a 7.8 mile (12.6 km) trail. This trail passes through Havasupai Gardens (formerly known as Indian Garden).\n\nNorth Kaibab Trail: The trail begins on the North Rim at the head of Roaring Springs Canyon and descends to the Colorado River. Elevation from rim to river is 5850 ft (1780 m), along a 14.2 mi (22.9 km) trail.\n\nDW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 970, \"kind\": \"paragraph\", \"start\": 686}, {\"end\": 1181, \"kind\": \"paragraph\", \"start\": 972}, {\"end\": 1269, \"kind\": \"paragraph\", \"start\": 1183}]",
+        "token_count": 167,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "source_span": [
+          {
+            "end": 970,
+            "kind": "paragraph",
+            "start": 686
+          },
+          {
+            "end": 1181,
+            "kind": "paragraph",
+            "start": 972
+          },
+          {
+            "end": 1269,
+            "kind": "paragraph",
+            "start": 1183
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 4.767016577283983,
+          "dense": 0.6531197428703308,
+          "rrf": 0.032018442622950824,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": 1
+        },
+        "score": 0.032018442622950824,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "1a226caed70c7fba549af658616c583e30d1a81fdb4f4e145b55f21fba7f28df",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nCorridor Trails Distances\n\nSouth Kaibab Trail: The trail begins on the South Rim near Yaki Point, and descends to the Colorado River. Elevation change from rim to river is 4860 ft (1480 m), along a 6.3 mile (10.1 km) trail. Because of the unavailability of water and steepness of the South Kaibab Trail, rangers recommend hiking down this trail only - and recommend using the Bright Angel Trail for the hike out.\n\nRiver Trail: The trail has little elevation variation and follows the Colorado River for 1.7 miles (2.7 km) between the Bright Angel and South Kaibab trails. Two foot bridges permit access to the north side of the Colorado River.",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 66, \"kind\": \"paragraph\", \"start\": 41}, {\"end\": 453, \"kind\": \"paragraph\", \"start\": 68}, {\"end\": 684, \"kind\": \"paragraph\", \"start\": 455}]",
+        "token_count": 168,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "source_span": [
+          {
+            "end": 66,
+            "kind": "paragraph",
+            "start": 41
+          },
+          {
+            "end": 453,
+            "kind": "paragraph",
+            "start": 68
+          },
+          {
+            "end": 684,
+            "kind": "paragraph",
+            "start": 455
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 6.2203841704240865,
+          "dense": 0.6054781675338745,
+          "rrf": 0.03200204813108039,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 3
+        },
+        "score": 0.03200204813108039,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "7f57f61692f679d759e0e61cdea57dabecaf6d1194acdef07d4c2d8321142aaa",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| North Kaibab Trailhead to: |  | 8241/2512 |  |  |  |  |  |\n| Supai Tunnel | 1.7/2.5 | 6800/2073 | Y | Y |  |  | water available mid-May to mid-Oct only |\n| Roaring Springs | 4.7/7.3 | 5220/1591 |  | Y |  |  | 20 minute detour off main trail; NO WATER |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2698, \"kind\": \"table_row\", \"start\": 2637}, {\"end\": 2793, \"kind\": \"table_row\", \"start\": 2698}, {\"end\": 2892, \"kind\": \"table_row\", \"start\": 2793}]",
+        "token_count": 170,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2698,
+            "kind": "table_row",
+            "start": 2637
+          },
+          {
+            "end": 2793,
+            "kind": "table_row",
+            "start": 2698
+          },
+          {
+            "end": 2892,
+            "kind": "table_row",
+            "start": 2793
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 4.000060406551893,
+          "dense": 0.6177841424942017,
+          "rrf": 0.0315136476426799,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 5,
+          "dense": 2
+        },
+        "score": 0.0315136476426799,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Phantom Ranch | 9.9/15.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |\n| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |\n| Skeleton Point | 3/4.8 | 5220/1591 |  |  |  |  |  |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2118, \"kind\": \"table_row\", \"start\": 2018}, {\"end\": 2179, \"kind\": \"table_row\", \"start\": 2118}, {\"end\": 2233, \"kind\": \"table_row\", \"start\": 2179}, {\"end\": 2287, \"kind\": \"table_row\", \"start\": 2233}]",
+        "token_count": 183,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 2118,
+            "kind": "table_row",
+            "start": 2018
+          },
+          {
+            "end": 2179,
+            "kind": "table_row",
+            "start": 2118
+          },
+          {
+            "end": 2233,
+            "kind": "table_row",
+            "start": 2179
+          },
+          {
+            "end": 2287,
+            "kind": "table_row",
+            "start": 2233
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.154302964711533,
+          "dense": 0.575817346572876,
+          "rrf": 0.031099324975891997,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 8
+        },
+        "score": 0.031099324975891997,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4fc90c20ef3feb0342352803f4044f9d6f2420ccda3168b74e95859551ce0715",
+        "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+        "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Bright Angel Trailhead to: |  | 6860/2093 |  |  |  |  |  |\n| Mile-and-a-Half Resthouse | 1.6/2.6 | 5729/1748 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n| Three-Mile Resthouse | 3.1/5 | 4748/1449 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n",
+        "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+        "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1475, \"kind\": \"table_row\", \"start\": 1414}, {\"end\": 1584, \"kind\": \"table_row\", \"start\": 1475}, {\"end\": 1686, \"kind\": \"table_row\", \"start\": 1584}]",
+        "token_count": 169,
+        "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+        "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+        "effective_date": "2025-03-12",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+        "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1414,
+            "kind": "table_header",
+            "start": 1271
+          },
+          {
+            "end": 1475,
+            "kind": "table_row",
+            "start": 1414
+          },
+          {
+            "end": 1584,
+            "kind": "table_row",
+            "start": 1475
+          },
+          {
+            "end": 1686,
+            "kind": "table_row",
+            "start": 1584
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 3.0511925871901324,
+          "dense": 0.5994809865951538,
+          "rrf": 0.030536130536130537,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 5
+        },
+        "score": 0.030536130536130537,
+        "post_rank": 5
+      }
+    ],
+    "candidate_count": 20,
+    "eligible_count": 23,
+    "shortfall": false,
+    "requested_candidates": 20,
+    "filters": {
+      "parks": [
+        "grca"
+      ],
+      "source_url": [
+        "https://www.nps.gov/grca/planyourvisit/trail-distances.htm"
+      ]
+    },
+    "rerank_input_tokens": null,
+    "score_types": {
+      "dense": "cosine",
+      "bm25": "BM25Okapi",
+      "rrf": "sum(1/(60+rank))",
+      "rerank": "raw model score (not calibrated probability)"
+    },
+    "timings": {
+      "load_ms": 60.77562482096255,
+      "retrieval_ms": 1.0636248625814915,
+      "rerank_ms": 0.0,
+      "total_ms": 61.85254082083702
+    },
+    "context_selection": {
+      "method": "named_table_rows_then_original_final",
+      "named_rows": [
+        "Cedar Ridge"
+      ],
+      "selected_ids": [
+        "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+        "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+        "1a226caed70c7fba549af658616c583e30d1a81fdb4f4e145b55f21fba7f28df",
+        "7f57f61692f679d759e0e61cdea57dabecaf6d1194acdef07d4c2d8321142aaa",
+        "4fc90c20ef3feb0342352803f4044f9d6f2420ccda3168b74e95859551ce0715"
+      ],
+      "ranking_unchanged": true
+    }
+  },
+  "contexts": [
+    {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Phantom Ranch | 9.9/15.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |\n| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |\n| Skeleton Point | 3/4.8 | 5220/1591 |  |  |  |  |  |\n",
+      "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+      "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2118, \"kind\": \"table_row\", \"start\": 2018}, {\"end\": 2179, \"kind\": \"table_row\", \"start\": 2118}, {\"end\": 2233, \"kind\": \"table_row\", \"start\": 2179}, {\"end\": 2287, \"kind\": \"table_row\", \"start\": 2233}]",
+      "token_count": 183,
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+      "effective_date": "2025-03-12",
+      "page_type": "html",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+      "source_spans": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 2118,
+          "kind": "table_row",
+          "start": 2018
+        },
+        {
+          "end": 2179,
+          "kind": "table_row",
+          "start": 2118
+        },
+        {
+          "end": 2233,
+          "kind": "table_row",
+          "start": 2179
+        },
+        {
+          "end": 2287,
+          "kind": "table_row",
+          "start": 2233
+        }
+      ],
+      "source_span": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 2118,
+          "kind": "table_row",
+          "start": 2018
+        },
+        {
+          "end": 2179,
+          "kind": "table_row",
+          "start": 2118
+        },
+        {
+          "end": 2233,
+          "kind": "table_row",
+          "start": 2179
+        },
+        {
+          "end": 2287,
+          "kind": "table_row",
+          "start": 2233
+        }
+      ],
+      "pre_rank": 4,
+      "rank": 4,
+      "scores": {
+        "bm25": 8.154302964711533,
+        "dense": 0.575817346572876,
+        "rrf": 0.031099324975891997,
+        "rerank": null
+      },
+      "retriever_ranks": {
+        "bm25": 1,
+        "dense": 8
+      },
+      "score": 0.031099324975891997
+    },
+    {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nBright Angel Trail: The trail begins on the South Rim just west of Kolb Studio, and descends to the Colorado River. Elevation change from rim to river is 4460 ft (1360 m), along a 7.8 mile (12.6 km) trail. This trail passes through Havasupai Gardens (formerly known as Indian Garden).\n\nNorth Kaibab Trail: The trail begins on the North Rim at the head of Roaring Springs Canyon and descends to the Colorado River. Elevation from rim to river is 5850 ft (1780 m), along a 14.2 mi (22.9 km) trail.\n\nDW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station",
+      "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+      "source_span_json": "[{\"end\": 970, \"kind\": \"paragraph\", \"start\": 686}, {\"end\": 1181, \"kind\": \"paragraph\", \"start\": 972}, {\"end\": 1269, \"kind\": \"paragraph\", \"start\": 1183}]",
+      "token_count": 167,
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+      "effective_date": "2025-03-12",
+      "page_type": "html",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+      "source_spans": [
+        {
+          "end": 970,
+          "kind": "paragraph",
+          "start": 686
+        },
+        {
+          "end": 1181,
+          "kind": "paragraph",
+          "start": 972
+        },
+        {
+          "end": 1269,
+          "kind": "paragraph",
+          "start": 1183
+        }
+      ],
+      "source_span": [
+        {
+          "end": 970,
+          "kind": "paragraph",
+          "start": 686
+        },
+        {
+          "end": 1181,
+          "kind": "paragraph",
+          "start": 972
+        },
+        {
+          "end": 1269,
+          "kind": "paragraph",
+          "start": 1183
+        }
+      ],
+      "pre_rank": 1,
+      "rank": 1,
+      "scores": {
+        "bm25": 4.767016577283983,
+        "dense": 0.6531197428703308,
+        "rrf": 0.032018442622950824,
+        "rerank": null
+      },
+      "retriever_ranks": {
+        "bm25": 4,
+        "dense": 1
+      },
+      "score": 0.032018442622950824,
+      "post_rank": 1
+    },
+    {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "chunk_id": "1a226caed70c7fba549af658616c583e30d1a81fdb4f4e145b55f21fba7f28df",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\nCorridor Trails Distances\n\nSouth Kaibab Trail: The trail begins on the South Rim near Yaki Point, and descends to the Colorado River. Elevation change from rim to river is 4860 ft (1480 m), along a 6.3 mile (10.1 km) trail. Because of the unavailability of water and steepness of the South Kaibab Trail, rangers recommend hiking down this trail only - and recommend using the Bright Angel Trail for the hike out.\n\nRiver Trail: The trail has little elevation variation and follows the Colorado River for 1.7 miles (2.7 km) between the Bright Angel and South Kaibab trails. Two foot bridges permit access to the north side of the Colorado River.",
+      "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+      "source_span_json": "[{\"end\": 66, \"kind\": \"paragraph\", \"start\": 41}, {\"end\": 453, \"kind\": \"paragraph\", \"start\": 68}, {\"end\": 684, \"kind\": \"paragraph\", \"start\": 455}]",
+      "token_count": 168,
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+      "effective_date": "2025-03-12",
+      "page_type": "html",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+      "source_spans": [
+        {
+          "end": 66,
+          "kind": "paragraph",
+          "start": 41
+        },
+        {
+          "end": 453,
+          "kind": "paragraph",
+          "start": 68
+        },
+        {
+          "end": 684,
+          "kind": "paragraph",
+          "start": 455
+        }
+      ],
+      "source_span": [
+        {
+          "end": 66,
+          "kind": "paragraph",
+          "start": 41
+        },
+        {
+          "end": 453,
+          "kind": "paragraph",
+          "start": 68
+        },
+        {
+          "end": 684,
+          "kind": "paragraph",
+          "start": 455
+        }
+      ],
+      "pre_rank": 2,
+      "rank": 2,
+      "scores": {
+        "bm25": 6.2203841704240865,
+        "dense": 0.6054781675338745,
+        "rrf": 0.03200204813108039,
+        "rerank": null
+      },
+      "retriever_ranks": {
+        "bm25": 2,
+        "dense": 3
+      },
+      "score": 0.03200204813108039,
+      "post_rank": 2
+    },
+    {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "chunk_id": "7f57f61692f679d759e0e61cdea57dabecaf6d1194acdef07d4c2d8321142aaa",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| North Kaibab Trailhead to: |  | 8241/2512 |  |  |  |  |  |\n| Supai Tunnel | 1.7/2.5 | 6800/2073 | Y | Y |  |  | water available mid-May to mid-Oct only |\n| Roaring Springs | 4.7/7.3 | 5220/1591 |  | Y |  |  | 20 minute detour off main trail; NO WATER |\n",
+      "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+      "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 2698, \"kind\": \"table_row\", \"start\": 2637}, {\"end\": 2793, \"kind\": \"table_row\", \"start\": 2698}, {\"end\": 2892, \"kind\": \"table_row\", \"start\": 2793}]",
+      "token_count": 170,
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+      "effective_date": "2025-03-12",
+      "page_type": "html",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+      "source_spans": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 2698,
+          "kind": "table_row",
+          "start": 2637
+        },
+        {
+          "end": 2793,
+          "kind": "table_row",
+          "start": 2698
+        },
+        {
+          "end": 2892,
+          "kind": "table_row",
+          "start": 2793
+        }
+      ],
+      "source_span": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 2698,
+          "kind": "table_row",
+          "start": 2637
+        },
+        {
+          "end": 2793,
+          "kind": "table_row",
+          "start": 2698
+        },
+        {
+          "end": 2892,
+          "kind": "table_row",
+          "start": 2793
+        }
+      ],
+      "pre_rank": 3,
+      "rank": 3,
+      "scores": {
+        "bm25": 4.000060406551893,
+        "dense": 0.6177841424942017,
+        "rrf": 0.0315136476426799,
+        "rerank": null
+      },
+      "retriever_ranks": {
+        "bm25": 5,
+        "dense": 2
+      },
+      "score": 0.0315136476426799,
+      "post_rank": 3
+    },
+    {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "chunk_id": "4fc90c20ef3feb0342352803f4044f9d6f2420ccda3168b74e95859551ce0715",
+      "doc_id": "9ed23adabbbcf894282151e045ac85b79c6c1a47b9d2a5542674f03b31de2040",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Bright Angel Trailhead to: |  | 6860/2093 |  |  |  |  |  |\n| Mile-and-a-Half Resthouse | 1.6/2.6 | 5729/1748 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n| Three-Mile Resthouse | 3.1/5 | 4748/1449 | Y | Y | Y |  | water available mid-May to mid-Oct only |\n",
+      "heading_path": "Backcountry Trail Distances > Corridor Trails Distances",
+      "source_span_json": "[{\"end\": 1414, \"kind\": \"table_header\", \"start\": 1271}, {\"end\": 1475, \"kind\": \"table_row\", \"start\": 1414}, {\"end\": 1584, \"kind\": \"table_row\", \"start\": 1475}, {\"end\": 1686, \"kind\": \"table_row\", \"start\": 1584}]",
+      "token_count": 169,
+      "content_hash": "bccdc0fafd6b9e2bdfe7d66ef1570409d07aa05647b2a3bb719aebaed50788a2",
+      "crawled_at": "2026-10-10T02:44:59.538968+00:00",
+      "effective_date": "2025-03-12",
+      "page_type": "html",
+      "source_url": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "title": "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)",
+      "source_spans": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 1475,
+          "kind": "table_row",
+          "start": 1414
+        },
+        {
+          "end": 1584,
+          "kind": "table_row",
+          "start": 1475
+        },
+        {
+          "end": 1686,
+          "kind": "table_row",
+          "start": 1584
+        }
+      ],
+      "source_span": [
+        {
+          "end": 1414,
+          "kind": "table_header",
+          "start": 1271
+        },
+        {
+          "end": 1475,
+          "kind": "table_row",
+          "start": 1414
+        },
+        {
+          "end": 1584,
+          "kind": "table_row",
+          "start": 1475
+        },
+        {
+          "end": 1686,
+          "kind": "table_row",
+          "start": 1584
+        }
+      ],
+      "pre_rank": 5,
+      "rank": 5,
+      "scores": {
+        "bm25": 3.0511925871901324,
+        "dense": 0.5994809865951538,
+        "rrf": 0.030536130536130537,
+        "rerank": null
+      },
+      "retriever_ranks": {
+        "bm25": 6,
+        "dense": 5
+      },
+      "score": 0.030536130536130537,
+      "post_rank": 5
+    }
+  ],
+  "response": {
+    "action": "answer",
+    "answer": "The table does not indicate drinking water at Cedar Ridge; DW means drinking water.",
+    "claims": [
+      {
+        "text": "The table does not indicate drinking water at Cedar Ridge; DW means drinking water.",
+        "evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2853,
+      "output_tokens": 138
+    },
+    "elapsed_ms": 1725.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "2151ec563809cc0b0110ab34dd5ed30bc1c2d0039a5a0afc6a795374f5d627ef",
+    "cost_estimate_usd": 0.00085812
+  },
+  "raw_response": {
+    "action": "answer",
+    "answer": "The table does not indicate drinking water at Cedar Ridge; DW means drinking water.",
+    "claims": [
+      {
+        "text": "The table does not indicate drinking water at Cedar Ridge; DW means drinking water.",
+        "evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2853,
+      "output_tokens": 138
+    },
+    "elapsed_ms": 1725.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "2151ec563809cc0b0110ab34dd5ed30bc1c2d0039a5a0afc6a795374f5d627ef",
+    "cost_estimate_usd": 0.00042516
+  },
+  "rendered": "The table does not indicate drinking water at Cedar Ridge; DW means drinking water. [Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)](https://www.nps.gov/grca/planyourvisit/trail-distances.htm)",
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "reason": "The Cedar Ridge row has a blank DW cell, and the legend defines DW as drinking water.",
+        "supporting_quotes": [
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+          },
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+          },
+          {
+            "evidence_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+            "quote": "DW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station"
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3248,
+      "output_tokens": 72
+    },
+    "elapsed_ms": 1582.9,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "f8be4478e539c7b2c711ec1ab67b1adf3adab5fc216c9f1d97f6ba9728e0142b",
+    "cost_estimate_usd": 0.00043296,
+    "withheld_claims": 0
+  },
+  "source_derivation": null,
+  "guard_errors": [],
+  "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+  "elapsed_ms": 3462.5,
+  "timestamp": "2026-10-10T17:54:14.712745+00:00"
+}

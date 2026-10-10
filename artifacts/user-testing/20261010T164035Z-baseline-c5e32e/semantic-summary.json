@@ -1,0 +1,24 @@
+{
+  "kind": "AI provisional source-span review, separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 11,
+  "partial_precision_or_recovery": 4,
+  "answerable_refusal_or_clarification_failures": 3,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 12,
+    "fully_supported": 11,
+    "partially_supported_merged_route": 1,
+    "note": "Support and usefulness are distinct: leash recommendation is grounded but misses the regulatory upper bound."
+  },
+  "http_latency_ms": {
+    "p50": 3564.45,
+    "p95": 16576.61999999997,
+    "maximum": 35787.3,
+    "method": "linear interpolation over all 18 fresh HTTP requests, including cold starts and provider retries"
+  },
+  "safety_boundary_observation": "No tested thermal-contact endorsement, cross-park factual answer, private payment claim or future opening guarantee was delivered. This is limited to these diagnostic turns.",
+  "turns_sha256": "a60291107c8631c0a35662c7f83c09dfa2496fc467616a470bb9f8c72a59083b",
+  "assessment_sha256": "e95357bfb0a358af2275e9974863cafe906bb2fd798d2d98041ad6cf66883ea0"
+}

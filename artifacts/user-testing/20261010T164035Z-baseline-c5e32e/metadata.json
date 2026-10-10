@@ -1,0 +1,141 @@
+{
+  "http_status": 200,
+  "elapsed_ms": 707.2,
+  "body": {
+    "parks": [
+      {
+        "code": "yose",
+        "name": "Yosemite",
+        "documents": 56,
+        "html": 53,
+        "pdf": 3,
+        "table_documents": 9,
+        "active_chunks": 1377,
+        "captured_earliest": "2026-10-10T02:44:54.433051+00:00",
+        "captured_latest": "2026-10-10T02:50:24.703800+00:00"
+      },
+      {
+        "code": "yell",
+        "name": "Yellowstone",
+        "documents": 40,
+        "html": 40,
+        "pdf": 0,
+        "table_documents": 5,
+        "active_chunks": 850,
+        "captured_earliest": "2026-10-10T02:44:55.691074+00:00",
+        "captured_latest": "2026-10-10T02:50:05.283387+00:00"
+      },
+      {
+        "code": "grca",
+        "name": "Grand Canyon",
+        "documents": 59,
+        "html": 57,
+        "pdf": 2,
+        "table_documents": 31,
+        "active_chunks": 1480,
+        "captured_earliest": "2026-10-10T02:44:56.443010+00:00",
+        "captured_latest": "2026-10-10T02:50:20.283473+00:00"
+      }
+    ],
+    "totals": {
+      "documents": 155,
+      "html": 150,
+      "pdf": 5,
+      "table_documents": 45,
+      "chunks_all_builds": 5405,
+      "vectors_all_builds": 5405
+    },
+    "active_build": {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "active": true,
+      "strategy": "structure",
+      "created_at": "2026-10-10T03:49:58.065777+00:00",
+      "chunk_count": 3707,
+      "vector_count": 3707,
+      "dimension": 1536,
+      "embedding_deployment": "text-embedding-3-small",
+      "target_tokens": 200,
+      "overlap_tokens": 40
+    },
+    "builds": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "active": true,
+        "strategy": "structure",
+        "created_at": "2026-10-10T03:49:58.065777+00:00",
+        "chunk_count": 3707,
+        "vector_count": 3707,
+        "dimension": 1536,
+        "embedding_deployment": "text-embedding-3-small",
+        "target_tokens": 200,
+        "overlap_tokens": 40
+      },
+      {
+        "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+        "active": false,
+        "strategy": "fixed",
+        "created_at": "2026-10-10T03:45:44.384220+00:00",
+        "chunk_count": 1698,
+        "vector_count": 1698,
+        "dimension": 1536,
+        "embedding_deployment": "text-embedding-3-small",
+        "target_tokens": 200,
+        "overlap_tokens": 40
+      }
+    ],
+    "models": {
+      "embedding": {
+        "deployment": "text-embedding-3-small",
+        "dimension": 1536
+      },
+      "generation": {
+        "model": "gpt-6-luna-2026-09-22",
+        "deployment": "gpt-6-luna"
+      },
+      "reranker": {
+        "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+        "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+        "enabled": false
+      },
+      "azure_resource": {
+        "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+        "embedding_deployment": "text-embedding-3-small",
+        "generation_deployment": "gpt-6-luna",
+        "generation_store_requested": false
+      }
+    },
+    "local_persistence": {
+      "conversation_text": "browser tab memory only; sent to this server per request and not stored by it",
+      "embedding_cache": "/tmp/parkguide/embedding-cache/ on this instance only (ephemeral): SHA-256 of each embedded retrieval query, its vector and metadata (no query text)",
+      "budget_ledger": "/tmp/parkguide/api-ledger.json on this instance only (ephemeral, not shared across instances): kind, time, status, tokens and estimated cost of each paid call (no text)"
+    },
+    "runtime": {
+      "profile": "vercel",
+      "rerank_enabled": false,
+      "rerank_reason": "The hosted Vercel bundle does not install the optional PyTorch cross-encoder (size and cold start). Retrieval is hybrid NumPy cosine + BM25 with reciprocal-rank fusion and the same five-passage context.",
+      "evaluation_note": "Recent selected-park web checks used the local cross-encoder reranker. Historical development stages used several local retrieval variants. They do not measure this hosted profile's retrieval accuracy.",
+      "budget": {
+        "cap_usd": 5.0,
+        "scope": "per_instance",
+        "note": "Ledger lives in /tmp on each Vercel instance; it resets when the instance is recycled and is not shared across concurrently running instances. It is not a global spending limit. Use deployment protection and provider rate/quota controls to manage exposure; Azure budget alerts alone do not enforce a hard cap."
+      },
+      "state_storage": "/tmp/parkguide (ephemeral, per instance)",
+      "request_serialization": "one answer at a time per instance; instances do not coordinate"
+    },
+    "retrieval": {
+      "mode": "hybrid",
+      "strategy": "structure",
+      "candidate_count": 20,
+      "final_context_count": 5,
+      "rrf_k": 60,
+      "selected_park_rerank": false,
+      "context_token_budget": 1600
+    },
+    "chat": {
+      "ready": true,
+      "reason": null
+    },
+    "history_storage": "browser_memory_only",
+    "generated_at": "2026-10-10T16:40:36.149486+00:00"
+  }
+}

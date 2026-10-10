@@ -1,0 +1,23 @@
+{
+  "kind": "AI provisional source-span review, separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 13,
+  "partial_precision_or_recovery": 4,
+  "answerable_refusal_or_clarification_failures": 1,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 13,
+    "fully_supported": 13,
+    "partially_supported": 0,
+    "note": "Grounded claims can still be incomplete answers; H06.2 retains general prose but loses the table-specific claim."
+  },
+  "observed_regressions": [
+    "H01.3 leash-limit refusal",
+    "H04.2 lost date-specific explanation"
+  ],
+  "remaining_presentation_issue": "H05.2 repeats the same supported below-rim rule twice",
+  "environment_limitation": "Baseline was Vercel HTTPS; candidate is local HTTP with hosted runtime, read-only same frozen DB and reranker off. Local origin shim differs; latency is not comparable.",
+  "turns_sha256": "6bac403f53450515f5dfc3a4cc421146030eed9048016e73a0996d4d7adfe865",
+  "assessment_sha256": "b0504ec7e4b55aaab1adc2ea003e43a405b684e6f25565ca59168e3ffb9ad59e"
+}

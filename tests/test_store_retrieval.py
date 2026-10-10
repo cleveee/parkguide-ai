@@ -131,6 +131,86 @@ def test_bm25_and_rrf_have_visible_distinct_score_types(indexed):
         assert c["scores"]["rerank"] is None
 
 
+def test_visitor_subject_outranks_question_word_overlap(tmp_path):
+    """A carried-dog query must find the pet rule, not short 'Can I' FAQs."""
+    db = tmp_path / "visitor.sqlite"
+    docs = [document(0, text="Pets are prohibited on the waterfall trail even if carried.")]
+    docs += [document(i, text=f"Can I change my reservation? Call the campground office. Site {i}.")
+             for i in range(1, 21)]
+    docs += [document(i, text=f"Waterfall trail scenery and hiking distance. Viewpoint {i}.")
+             for i in range(21, 31)]
+    build_index(db, docs, "fixed", embeddings, model_config={"model": "fixture-v1", "dimension": 64})
+    result = retrieve(db, "Can I carry my dog on the waterfall trail?", mode="bm25", filters={"parks": ["yose"]})
+    assert result["final"][0]["doc_id"] == docs[0]["doc_id"]
+    assert all("/yose/" in item["source_url"] for item in result["candidates"])
+
+
+def test_lexical_cleanup_preserves_numbers_and_negation():
+    from parkguide.retrieval import _tokens
+    assert "not" in _tokens("Pets are not allowed on trails")
+    assert {"25", "100"} <= set(_tokens("Stay 25 or 100 yards away"))
+
+
+def test_followup_property_finds_rule_despite_long_prior_route(tmp_path):
+    db = tmp_path / "followup.sqlite"
+    docs = [document(0, text="Pets must be kept on a leash no longer than six feet.")]
+    docs += [document(i, text=f"The paved road and unpaved trail around the lake offer a scenic walk. View {i}.")
+             for i in range(1, 31)]
+    build_index(db, docs, "fixed", embeddings, model_config={"model": "fixture-v1", "dimension": 64})
+    query = "Yosemite: How long can his leash be? Previous topic: Can I walk my dog on the paved road to the lake And the unpaved trail around the lake"
+    result = retrieve(db, query, np.eye(64)[1], filters={"parks": ["yose"]})
+    assert docs[0]["doc_id"] in {item["doc_id"] for item in result["final"]}
+    assert result["keyword_current_terms"] == ["leash"]
+    assert result["keyword_query"].split().count("pet") == 1
+    assert result["keyword_query"].split().count("lake") == 1
+    # A route-only passage remains eligible through dense search, but does not
+    # receive an extra RRF contribution for weak overlap with inherited context.
+    route = next(item for item in result["candidates"] if item["doc_id"] == docs[1]["doc_id"])
+    assert route["scores"]["bm25"] > 0
+    assert route["retriever_ranks"] == {"bm25": None, "dense": 1}
+    assert result["candidate_count"] == 20
+    assert result["keyword_candidate_count"] == 1
+
+
+def test_alternative_transport_retains_companion_restriction(tmp_path):
+    db = tmp_path / "shuttle.sqlite"
+    docs = [document(0, text="Pets are not permitted on park shuttle buses.", park="grca")]
+    docs += [document(i, text=f"Ride the park shuttle bus to the viewpoint. Route {i}.", park="grca")
+             for i in range(1, 31)]
+    build_index(db, docs, "fixed", embeddings, model_config={"model": "fixture-v1", "dimension": 64})
+    query = "Grand Canyon: Could we ride a park shuttle bus instead? Previous topic: Can I take my pet dog along the trails above the South Rim What if I carry him down an inner canyon trail below the rim"
+    result = retrieve(db, query, mode="bm25", filters={"parks": ["grca"]})
+    assert result["final"][0]["doc_id"] == docs[0]["doc_id"]
+    assert result["keyword_query"].split().count("pet") == 1
+    assert result["keyword_current_terms"] == ["shuttle", "bus"]
+
+
+@pytest.mark.parametrize(("followup", "previous", "evidence"), [
+    ("Can I bring him along?", "Can my dog ride a park shuttle?", "Pets are not permitted on park shuttle buses."),
+    ("How long does it take?", "Tell me about the Lower Yosemite Fall trail.", "The Lower Yosemite Fall trail takes approximately 30 minutes."),
+    ("Is that still allowed?", "Can I carry my dog on the trail to Vernal Fall?", "Pets are not permitted on the trail to Vernal Fall, even if carried."),
+])
+def test_generic_followup_retrieves_inherited_subject_without_gate(tmp_path, followup, previous, evidence):
+    db = tmp_path / "generic.sqlite"
+    docs = [document(0, text=evidence)]
+    docs += [document(i, text=f"Visitor center parking lot and restroom information. Location {i}.")
+             for i in range(1, 31)]
+    build_index(db, docs, "fixed", embeddings, model_config={"model": "fixture-v1", "dimension": 64})
+    result = retrieve(db, f"{followup} Previous topic: {previous}", mode="bm25", filters={"parks": ["yose"]})
+    assert result["final"][0]["doc_id"] == docs[0]["doc_id"]
+    assert result["keyword_current_terms"] == []
+    assert result["keyword_candidate_count"] == 31
+
+
+@pytest.mark.parametrize("followup", ["And how long?", "What about there?", "And in May 2027?", "And July 18th?", "What about Saturday?", "And at 4:30pm?", "Can I use it?", "Would that work?", "Can I go again?"])
+def test_keyword_search_retains_topic_for_context_only_followups(followup):
+    from parkguide.retrieval import _keyword_inputs
+    query = followup + " Previous topic: visiting a campground with a generator"
+    keywords, current_terms = _keyword_inputs(query, {"parks": ["yose"]})
+    assert "generator" in keywords
+    assert current_terms == []
+
+
 def test_reranking_keeps_original_pool_and_full_post_order(indexed):
     db, _, _ = indexed
     result = retrieve(db, "parking", np.eye(64)[0], rerank=True, reranker=lambda pairs: np.arange(len(pairs)))

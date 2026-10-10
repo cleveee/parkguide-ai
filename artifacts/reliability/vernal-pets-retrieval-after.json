@@ -1,0 +1,2671 @@
+{
+  "question": "Yosemite: Can I carry my dog to Vernal Fall?",
+  "stage": "lexical-normalization",
+  "retrieval": {
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "mode": "hybrid",
+    "candidates": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.028938340398177,
+          "dense": 0.6132901906967163,
+          "rrf": 0.03009207275993712,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 13,
+          "dense": 1
+        },
+        "score": 0.03009207275993712
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.698883877862574,
+          "dense": 0.5739251375198364,
+          "rrf": 0.029827662395050816,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 13
+        },
+        "score": 0.029827662395050816
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Allowed\n\nWhere Pets Are Allowed\n\nIn developed areas\n\nOn fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).\n\nIn all campgrounds except walk-in campgrounds (e.g., Camp 4) and in group campsites",
+        "heading_path": "Pets > Where Pets Are Allowed",
+        "source_span_json": "[{\"end\": 166, \"kind\": \"paragraph\", \"start\": 144}, {\"end\": 186, \"kind\": \"paragraph\", \"start\": 168}, {\"end\": 481, \"kind\": \"paragraph\", \"start\": 188}, {\"end\": 566, \"kind\": \"paragraph\", \"start\": 483}]",
+        "token_count": 102,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "source_span": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 11.221211284617816,
+          "dense": 0.5834852457046509,
+          "rrf": 0.029437229437229435,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 10
+        },
+        "score": 0.029437229437229435
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "93e9653483d09935b2cc23cb392e336426ac2ee711ae14058bc9f0bf93107f5e",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets\n\nPets\n\nIf you bring your pet to Yosemite, please protect your pet, other people, and park wildlife by abiding by these regulations:",
+        "heading_path": "Pets",
+        "source_span_json": "[{\"end\": 16, \"kind\": \"paragraph\", \"start\": 12}, {\"end\": 142, \"kind\": \"paragraph\", \"start\": 18}]",
+        "token_count": 32,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "source_span": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.957029599890408,
+          "dense": 0.596685528755188,
+          "rrf": 0.0288981288981289,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 5
+        },
+        "score": 0.0288981288981289
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Not Allowed\n\nWhere Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)\n\nOn unplowed roads covered in snow\n\nIn wilderness and all other undeveloped areas\n\nOn all meadows, beaches, and waterways\n\nIn public buildings\n\nOn shuttle buses\n\nIn lodging areas (including Housekeeping Camp)\n\nIn all walk-in and group campgrounds/campsites, including Camp 4\n\nIn any other areas, as signed\n\nThere are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed.",
+        "heading_path": "Pets > Where Pets Are Not Allowed",
+        "source_span_json": "[{\"end\": 1120, \"kind\": \"paragraph\", \"start\": 1094}, {\"end\": 1238, \"kind\": \"paragraph\", \"start\": 1122}, {\"end\": 1273, \"kind\": \"paragraph\", \"start\": 1240}, {\"end\": 1320, \"kind\": \"paragraph\", \"start\": 1275}, {\"end\": 1360, \"kind\": \"paragraph\", \"start\": 1322}, {\"end\": 1381, \"kind\": \"paragraph\", \"start\": 1362}, {\"end\": 1399, \"kind\": \"paragraph\", \"start\": 1383}, {\"end\": 1447, \"kind\": \"paragraph\", \"start\": 1401}, {\"end\": 1513, \"kind\": \"paragraph\", \"start\": 1449}, {\"end\": 1544, \"kind\": \"paragraph\", \"start\": 1515}, {\"end\": 1712, \"kind\": \"paragraph\", \"start\": 1546}]",
+        "token_count": 152,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 19.261309237072513,
+          "dense": 0.5569204688072205,
+          "rrf": 0.02889344262295082,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 20
+        },
+        "score": 0.02889344262295082
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "63601c63c2a1eea37b7dc3a5e1297df8ad6667fe1bdda95430defb3361fbe7f9",
+        "doc_id": "5dba9801a99e400243666cee286514f2bb3394ee9ddccc0253c5bc76403f81b3",
+        "text": "Heading: Your Safety > Pets\n\nPets\n\nSome visitors choose to bring pets along on their vacations. In Yosemite, pets have a few rules to follow .",
+        "heading_path": "Your Safety > Pets",
+        "source_span_json": "[{\"end\": 1601, \"kind\": \"paragraph\", \"start\": 1597}, {\"end\": 1710, \"kind\": \"paragraph\", \"start\": 1603}]",
+        "token_count": 31,
+        "content_hash": "25e11a766870efdb2ea1e6502e1da792da40efc2d7fa231d4ca3446440b2cc05",
+        "crawled_at": "2026-10-10T02:48:14.667132+00:00",
+        "effective_date": "2025-12-03",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+        "title": "Safety - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1601,
+            "kind": "paragraph",
+            "start": 1597
+          },
+          {
+            "end": 1710,
+            "kind": "paragraph",
+            "start": 1603
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1601,
+            "kind": "paragraph",
+            "start": 1597
+          },
+          {
+            "end": 1710,
+            "kind": "paragraph",
+            "start": 1603
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 8.905367454985603,
+          "dense": 0.5901357531547546,
+          "rrf": 0.02803921568627451,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 15,
+          "dense": 8
+        },
+        "score": 0.02803921568627451
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cacd14d12c0174ce63fbf8e652608e2ba51e2081e69e99d1d4f598348cd51fea",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km; Happy Isles; Come prepared with your own approved bear is wheelchair-accessible. Expect heavy spray in spring. paved with gentle Shuttle Stop 6 section has heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Continue up 1500 ft (450 m) elev. gain Shuttle Stop 16 canister\u2014or rent one at an open wilderness center. Stay behind barriers. Rocks at the base of the waterfall incline to Clark Point for more great views of Vernal and Nevada Falls, then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51187, \"kind\": \"paragraph\", \"start\": 50416}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 8.388434631229927,
+          "dense": 0.6042342185974121,
+          "rrf": 0.027673192771084338,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 23,
+          "dense": 4
+        },
+        "score": 0.027673192771084338
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7\n\n maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or inside Available for iOS park buildings. and Android. Pets must be leashed at all times. Yosemite National Park website Properly dispose of pet waste. Turn You are driving in wildlife habitat. www.nps.gov/yose to page 10 for pet-friendly walks in Follow posted speed limits, Yosemite Valley. Social Media drive carefully, and watch @YosemiteNPS Service dogs are allowed anywhere that for animals crossing the road. visitors can go. A service dog is trained to perform a specific task to assist a person \u201cRed Bear, Dead Bear\u201d signs on park roads with a disability. Emotional support, Enjoy Your mark places where bears have been hit. therapy, and companion animals are all subject to pet regulations. National Park!",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+        "source_span_json": "[{\"end\": 60360, \"kind\": \"paragraph\", \"start\": 59532}]",
+        "token_count": 189,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "source_span": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 7.92747174736299,
+          "dense": 0.6099653244018555,
+          "rrf": 0.02724014336917563,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 30,
+          "dense": 2
+        },
+        "score": 0.02724014336917563
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cbaef24dd3e0bd4f5cbfff124d84a652cc4afc1cdca4025ab73151e0917ea081",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips > Pets\n\nPets\n\nThinking about bringing your four-legged friend on vacation? Learn more about Yosemite's pet policies.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips > Pets",
+        "source_span_json": "[{\"end\": 3951, \"kind\": \"paragraph\", \"start\": 3947}, {\"end\": 4055, \"kind\": \"paragraph\", \"start\": 3953}]",
+        "token_count": 33,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 8.21922378526778,
+          "dense": 0.606976330280304,
+          "rrf": 0.027236652236652236,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 28,
+          "dense": 3
+        },
+        "score": 0.027236652236652236
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "dcf2e59e089c278bd3e4dab11a5ccfa5868ec2f9de6c4f17e4e837b8a8bd7705",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Become a B.A.R.K. Ranger\n\nPlanning on visiting Yosemite with your dog? Ranger Nicole explains how to become a Yosemite B.A.R.K. Ranger and visit the park safely with your pet.",
+        "heading_path": "Pets > Become a B.A.R.K. Ranger",
+        "source_span_json": "[{\"end\": 4002, \"kind\": \"paragraph\", \"start\": 3853}]",
+        "token_count": 44,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 8.756727899382915,
+          "dense": 0.5739775896072388,
+          "rrf": 0.026709401709401708,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 18,
+          "dense": 12
+        },
+        "score": 0.026709401709401708
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f601721cfc84b4e5b2379a238e3881a2e4021342e40cbf24353d4d1100b81681",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 56972, \"kind\": \"table_row\", \"start\": 56779}, {\"end\": 57248, \"kind\": \"table_row\", \"start\": 56972}]",
+        "token_count": 186,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 11.669805996933825,
+          "dense": 0.536047637462616,
+          "rrf": 0.026182294223531334,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": 37
+        },
+        "score": 0.026182294223531334
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "81e79818cf8f8c79b25bc6d8dad332d305f3143f9c481b9a3bca7e508d445006",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 56477, \"kind\": \"table_row\", \"start\": 56135}, {\"end\": 56596, \"kind\": \"table_row\", \"start\": 56477}]",
+        "token_count": 179,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 10.21003276445068,
+          "dense": 0.5435655117034912,
+          "rrf": 0.025856389986824768,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 9,
+          "dense": 28
+        },
+        "score": 0.025856389986824768
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8c78bcc0bcfccbcab7792e25b2619717e23c2dc64283c50e163cf2444d4d72c5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 55859, \"kind\": \"table_row\", \"start\": 55666}, {\"end\": 56135, \"kind\": \"table_row\", \"start\": 55859}]",
+        "token_count": 188,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 11.625591676752789,
+          "dense": 0.5339290499687195,
+          "rrf": 0.02582908163265306,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": 38
+        },
+        "score": 0.02582908163265306
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "e0e1eda0913438fe7676cb5e80659f99d988fae06938612f7c38ec009da82882",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs and winter closures may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 57610, \"kind\": \"table_row\", \"start\": 57248}, {\"end\": 57729, \"kind\": \"table_row\", \"start\": 57610}]",
+        "token_count": 180,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 10.16403009054519,
+          "dense": 0.5452336668968201,
+          "rrf": 0.025779967159277502,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 27
+        },
+        "score": 0.025779967159277502
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "633ad03aa52d3b20c86ef273f42a36783bd6c80d329217fc6fa06f2ff0d407c4",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n| DAY & TIME | PROGRAM |\n| --- | --- |\n| 8:30 am (4 hrs) M, W, Sa | Guided Discovery Hike: Vernal Fall Footbridge Difficulty: strenuous. |",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+        "source_span_json": "[{\"end\": 37857, \"kind\": \"table_header\", \"start\": 37818}, {\"end\": 37956, \"kind\": \"table_row\", \"start\": 37857}]",
+        "token_count": 63,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "source_span": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 10.49799721095293,
+          "dense": 0.5324360728263855,
+          "rrf": 0.024806892453951276,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 39
+        },
+        "score": 0.024806892453951276
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n it. Additional fire restrictions may go into effect, depending on Curry Village Parking conditions. Yosemite Valley can be extremely busy, especially on weekends and holidays. Waterfalls peak during spring snowmelt and dry up in Arrive early in the morning or late in the afternoon to avoid long lines at park entrances. summer. Yosemite Valley parking can completely fill by late morning. Once you find a parking space, keep it. Bridalveil Fall, Vernal Fall, and Nevada Fall Walk, bike, or use free Valley shuttles to get around (page 6.) If Yosemite Valley parking is full, typically flow year-round but are low by late explore other areas of the park and return later in the day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+        "source_span_json": "[{\"end\": 1638, \"kind\": \"paragraph\", \"start\": 751}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 8.81994300272542,
+          "dense": 0.5466023087501526,
+          "rrf": 0.02478580171358629,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 26
+        },
+        "score": 0.02478580171358629
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "976ff41b915639585a21069965d8ffd6c8d6507f281499f8fbca09a129aaa939",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\nashed pets welcome pets NOT allowed pets are also allowed on paved bike paths, shown on the map in solid green. 10 11 Experience Your America Yosemite National Park Yosemite Guide September 23 \u2013 November 24, 2026",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 54616, \"kind\": \"paragraph\", \"start\": 54404}]",
+        "token_count": 64,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 54616,
+            "kind": "paragraph",
+            "start": 54404
+          }
+        ],
+        "source_span": [
+          {
+            "end": 54616,
+            "kind": "paragraph",
+            "start": 54404
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 8.382893090683886,
+          "dense": 0.558902382850647,
+          "rrf": 0.02475171886936593,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 25,
+          "dense": 17
+        },
+        "score": 0.02475171886936593
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0d751f98ea11867a30a49b6ee44043a9f9291f3848e0d9702049ea742eec0baf",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n trail. Use the map above to plan incline refer to map your hike. Pets and bicycles are NOT allowed. Sections closest to the river may be muddy or flooded. wheelchair-accessible paved path or boardwalk leashed pets welcome 10 Experience Your America Yosemite National Park Yosemite Guide May 7 \u2013 June 10, 2025 11",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 54566, \"kind\": \"paragraph\", \"start\": 54254}]",
+        "token_count": 87,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 54566,
+            "kind": "paragraph",
+            "start": 54254
+          }
+        ],
+        "source_span": [
+          {
+            "end": 54566,
+            "kind": "paragraph",
+            "start": 54254
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 7.263238008875003,
+          "dense": 0.5800859332084656,
+          "rrf": 0.024501173708920188,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 36,
+          "dense": 11
+        },
+        "score": 0.024501173708920188
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Keep Your Pet Safe\n\nKeep Your Pet Safe\n\nWildlife can pose a threat to pets in Yosemite, both directly and indirectly. Keeping your pet attended and on a six-foot leash as well as fully vaccinated will reduce the chances of injury or disease. Rabies and distemper have been detected in park wildlife.",
+        "heading_path": "Pets > Keep Your Pet Safe",
+        "source_span_json": "[{\"end\": 2410, \"kind\": \"paragraph\", \"start\": 2392}, {\"end\": 2671, \"kind\": \"paragraph\", \"start\": 2412}]",
+        "token_count": 67,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 2410,
+            "kind": "paragraph",
+            "start": 2392
+          },
+          {
+            "end": 2671,
+            "kind": "paragraph",
+            "start": 2412
+          }
+        ],
+        "source_span": [
+          {
+            "end": 2410,
+            "kind": "paragraph",
+            "start": 2392
+          },
+          {
+            "end": 2671,
+            "kind": "paragraph",
+            "start": 2412
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 8.351053902232573,
+          "dense": 0.5519641637802124,
+          "rrf": 0.0238230289279637,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 26,
+          "dense": 22
+        },
+        "score": 0.0238230289279637
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips\n\nPlan Ahead Before Packing your Pet Pets are allowed in Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members are best left at home. Find out what you can (and can\u2019t) do with your pet.\n\nPrepare to Disconnect Cellular service is limited . Don\u2019t be surprised if you can\u2019t receive calls or texts in the park.\n\nDrive responsibly Observe posted speed limits and use pullouts to take pictures and let other cars pass.\n\nTips for a Fun Visit Learn how to visit Yosemite in a way that is fun, memorable, and safe.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips",
+        "source_span_json": "[{\"end\": 3012, \"kind\": \"paragraph\", \"start\": 2760}, {\"end\": 3133, \"kind\": \"paragraph\", \"start\": 3014}, {\"end\": 3239, \"kind\": \"paragraph\", \"start\": 3135}, {\"end\": 3332, \"kind\": \"paragraph\", \"start\": 3241}]",
+        "token_count": 132,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3012,
+            "kind": "paragraph",
+            "start": 2760
+          },
+          {
+            "end": 3133,
+            "kind": "paragraph",
+            "start": 3014
+          },
+          {
+            "end": 3239,
+            "kind": "paragraph",
+            "start": 3135
+          },
+          {
+            "end": 3332,
+            "kind": "paragraph",
+            "start": 3241
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3012,
+            "kind": "paragraph",
+            "start": 2760
+          },
+          {
+            "end": 3133,
+            "kind": "paragraph",
+            "start": 3014
+          },
+          {
+            "end": 3239,
+            "kind": "paragraph",
+            "start": 3135
+          },
+          {
+            "end": 3332,
+            "kind": "paragraph",
+            "start": 3241
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 7.021680504488907,
+          "dense": 0.5687597393989563,
+          "rrf": 0.023822791864028976,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 37,
+          "dense": 14
+        },
+        "score": 0.023822791864028976
+      }
+    ],
+    "reranked": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.028938340398177,
+          "dense": 0.6132901906967163,
+          "rrf": 0.03009207275993712,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 13,
+          "dense": 1
+        },
+        "score": 0.03009207275993712,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.698883877862574,
+          "dense": 0.5739251375198364,
+          "rrf": 0.029827662395050816,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 13
+        },
+        "score": 0.029827662395050816,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Allowed\n\nWhere Pets Are Allowed\n\nIn developed areas\n\nOn fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).\n\nIn all campgrounds except walk-in campgrounds (e.g., Camp 4) and in group campsites",
+        "heading_path": "Pets > Where Pets Are Allowed",
+        "source_span_json": "[{\"end\": 166, \"kind\": \"paragraph\", \"start\": 144}, {\"end\": 186, \"kind\": \"paragraph\", \"start\": 168}, {\"end\": 481, \"kind\": \"paragraph\", \"start\": 188}, {\"end\": 566, \"kind\": \"paragraph\", \"start\": 483}]",
+        "token_count": 102,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "source_span": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 11.221211284617816,
+          "dense": 0.5834852457046509,
+          "rrf": 0.029437229437229435,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 10
+        },
+        "score": 0.029437229437229435,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "93e9653483d09935b2cc23cb392e336426ac2ee711ae14058bc9f0bf93107f5e",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets\n\nPets\n\nIf you bring your pet to Yosemite, please protect your pet, other people, and park wildlife by abiding by these regulations:",
+        "heading_path": "Pets",
+        "source_span_json": "[{\"end\": 16, \"kind\": \"paragraph\", \"start\": 12}, {\"end\": 142, \"kind\": \"paragraph\", \"start\": 18}]",
+        "token_count": 32,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "source_span": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.957029599890408,
+          "dense": 0.596685528755188,
+          "rrf": 0.0288981288981289,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 5
+        },
+        "score": 0.0288981288981289,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Not Allowed\n\nWhere Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)\n\nOn unplowed roads covered in snow\n\nIn wilderness and all other undeveloped areas\n\nOn all meadows, beaches, and waterways\n\nIn public buildings\n\nOn shuttle buses\n\nIn lodging areas (including Housekeeping Camp)\n\nIn all walk-in and group campgrounds/campsites, including Camp 4\n\nIn any other areas, as signed\n\nThere are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed.",
+        "heading_path": "Pets > Where Pets Are Not Allowed",
+        "source_span_json": "[{\"end\": 1120, \"kind\": \"paragraph\", \"start\": 1094}, {\"end\": 1238, \"kind\": \"paragraph\", \"start\": 1122}, {\"end\": 1273, \"kind\": \"paragraph\", \"start\": 1240}, {\"end\": 1320, \"kind\": \"paragraph\", \"start\": 1275}, {\"end\": 1360, \"kind\": \"paragraph\", \"start\": 1322}, {\"end\": 1381, \"kind\": \"paragraph\", \"start\": 1362}, {\"end\": 1399, \"kind\": \"paragraph\", \"start\": 1383}, {\"end\": 1447, \"kind\": \"paragraph\", \"start\": 1401}, {\"end\": 1513, \"kind\": \"paragraph\", \"start\": 1449}, {\"end\": 1544, \"kind\": \"paragraph\", \"start\": 1515}, {\"end\": 1712, \"kind\": \"paragraph\", \"start\": 1546}]",
+        "token_count": 152,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 19.261309237072513,
+          "dense": 0.5569204688072205,
+          "rrf": 0.02889344262295082,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 20
+        },
+        "score": 0.02889344262295082,
+        "post_rank": 5
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "63601c63c2a1eea37b7dc3a5e1297df8ad6667fe1bdda95430defb3361fbe7f9",
+        "doc_id": "5dba9801a99e400243666cee286514f2bb3394ee9ddccc0253c5bc76403f81b3",
+        "text": "Heading: Your Safety > Pets\n\nPets\n\nSome visitors choose to bring pets along on their vacations. In Yosemite, pets have a few rules to follow .",
+        "heading_path": "Your Safety > Pets",
+        "source_span_json": "[{\"end\": 1601, \"kind\": \"paragraph\", \"start\": 1597}, {\"end\": 1710, \"kind\": \"paragraph\", \"start\": 1603}]",
+        "token_count": 31,
+        "content_hash": "25e11a766870efdb2ea1e6502e1da792da40efc2d7fa231d4ca3446440b2cc05",
+        "crawled_at": "2026-10-10T02:48:14.667132+00:00",
+        "effective_date": "2025-12-03",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+        "title": "Safety - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1601,
+            "kind": "paragraph",
+            "start": 1597
+          },
+          {
+            "end": 1710,
+            "kind": "paragraph",
+            "start": 1603
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1601,
+            "kind": "paragraph",
+            "start": 1597
+          },
+          {
+            "end": 1710,
+            "kind": "paragraph",
+            "start": 1603
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 8.905367454985603,
+          "dense": 0.5901357531547546,
+          "rrf": 0.02803921568627451,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 15,
+          "dense": 8
+        },
+        "score": 0.02803921568627451,
+        "post_rank": 6
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cacd14d12c0174ce63fbf8e652608e2ba51e2081e69e99d1d4f598348cd51fea",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km; Happy Isles; Come prepared with your own approved bear is wheelchair-accessible. Expect heavy spray in spring. paved with gentle Shuttle Stop 6 section has heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Continue up 1500 ft (450 m) elev. gain Shuttle Stop 16 canister\u2014or rent one at an open wilderness center. Stay behind barriers. Rocks at the base of the waterfall incline to Clark Point for more great views of Vernal and Nevada Falls, then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51187, \"kind\": \"paragraph\", \"start\": 50416}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 8.388434631229927,
+          "dense": 0.6042342185974121,
+          "rrf": 0.027673192771084338,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 23,
+          "dense": 4
+        },
+        "score": 0.027673192771084338,
+        "post_rank": 7
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7\n\n maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or inside Available for iOS park buildings. and Android. Pets must be leashed at all times. Yosemite National Park website Properly dispose of pet waste. Turn You are driving in wildlife habitat. www.nps.gov/yose to page 10 for pet-friendly walks in Follow posted speed limits, Yosemite Valley. Social Media drive carefully, and watch @YosemiteNPS Service dogs are allowed anywhere that for animals crossing the road. visitors can go. A service dog is trained to perform a specific task to assist a person \u201cRed Bear, Dead Bear\u201d signs on park roads with a disability. Emotional support, Enjoy Your mark places where bears have been hit. therapy, and companion animals are all subject to pet regulations. National Park!",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+        "source_span_json": "[{\"end\": 60360, \"kind\": \"paragraph\", \"start\": 59532}]",
+        "token_count": 189,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "source_span": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 7.92747174736299,
+          "dense": 0.6099653244018555,
+          "rrf": 0.02724014336917563,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 30,
+          "dense": 2
+        },
+        "score": 0.02724014336917563,
+        "post_rank": 8
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cbaef24dd3e0bd4f5cbfff124d84a652cc4afc1cdca4025ab73151e0917ea081",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips > Pets\n\nPets\n\nThinking about bringing your four-legged friend on vacation? Learn more about Yosemite's pet policies.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips > Pets",
+        "source_span_json": "[{\"end\": 3951, \"kind\": \"paragraph\", \"start\": 3947}, {\"end\": 4055, \"kind\": \"paragraph\", \"start\": 3953}]",
+        "token_count": 33,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 8.21922378526778,
+          "dense": 0.606976330280304,
+          "rrf": 0.027236652236652236,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 28,
+          "dense": 3
+        },
+        "score": 0.027236652236652236,
+        "post_rank": 9
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "dcf2e59e089c278bd3e4dab11a5ccfa5868ec2f9de6c4f17e4e837b8a8bd7705",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Become a B.A.R.K. Ranger\n\nPlanning on visiting Yosemite with your dog? Ranger Nicole explains how to become a Yosemite B.A.R.K. Ranger and visit the park safely with your pet.",
+        "heading_path": "Pets > Become a B.A.R.K. Ranger",
+        "source_span_json": "[{\"end\": 4002, \"kind\": \"paragraph\", \"start\": 3853}]",
+        "token_count": 44,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 8.756727899382915,
+          "dense": 0.5739775896072388,
+          "rrf": 0.026709401709401708,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 18,
+          "dense": 12
+        },
+        "score": 0.026709401709401708,
+        "post_rank": 10
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f601721cfc84b4e5b2379a238e3881a2e4021342e40cbf24353d4d1100b81681",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 56972, \"kind\": \"table_row\", \"start\": 56779}, {\"end\": 57248, \"kind\": \"table_row\", \"start\": 56972}]",
+        "token_count": 186,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 11.669805996933825,
+          "dense": 0.536047637462616,
+          "rrf": 0.026182294223531334,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": 37
+        },
+        "score": 0.026182294223531334,
+        "post_rank": 11
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "81e79818cf8f8c79b25bc6d8dad332d305f3143f9c481b9a3bca7e508d445006",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 56477, \"kind\": \"table_row\", \"start\": 56135}, {\"end\": 56596, \"kind\": \"table_row\", \"start\": 56477}]",
+        "token_count": 179,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 10.21003276445068,
+          "dense": 0.5435655117034912,
+          "rrf": 0.025856389986824768,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 9,
+          "dense": 28
+        },
+        "score": 0.025856389986824768,
+        "post_rank": 12
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8c78bcc0bcfccbcab7792e25b2619717e23c2dc64283c50e163cf2444d4d72c5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 55859, \"kind\": \"table_row\", \"start\": 55666}, {\"end\": 56135, \"kind\": \"table_row\", \"start\": 55859}]",
+        "token_count": 188,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 11.625591676752789,
+          "dense": 0.5339290499687195,
+          "rrf": 0.02582908163265306,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": 38
+        },
+        "score": 0.02582908163265306,
+        "post_rank": 13
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "e0e1eda0913438fe7676cb5e80659f99d988fae06938612f7c38ec009da82882",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs and winter closures may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 57610, \"kind\": \"table_row\", \"start\": 57248}, {\"end\": 57729, \"kind\": \"table_row\", \"start\": 57610}]",
+        "token_count": 180,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 10.16403009054519,
+          "dense": 0.5452336668968201,
+          "rrf": 0.025779967159277502,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 27
+        },
+        "score": 0.025779967159277502,
+        "post_rank": 14
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "633ad03aa52d3b20c86ef273f42a36783bd6c80d329217fc6fa06f2ff0d407c4",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n| DAY & TIME | PROGRAM |\n| --- | --- |\n| 8:30 am (4 hrs) M, W, Sa | Guided Discovery Hike: Vernal Fall Footbridge Difficulty: strenuous. |",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+        "source_span_json": "[{\"end\": 37857, \"kind\": \"table_header\", \"start\": 37818}, {\"end\": 37956, \"kind\": \"table_row\", \"start\": 37857}]",
+        "token_count": 63,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "source_span": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 10.49799721095293,
+          "dense": 0.5324360728263855,
+          "rrf": 0.024806892453951276,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 39
+        },
+        "score": 0.024806892453951276,
+        "post_rank": 15
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n it. Additional fire restrictions may go into effect, depending on Curry Village Parking conditions. Yosemite Valley can be extremely busy, especially on weekends and holidays. Waterfalls peak during spring snowmelt and dry up in Arrive early in the morning or late in the afternoon to avoid long lines at park entrances. summer. Yosemite Valley parking can completely fill by late morning. Once you find a parking space, keep it. Bridalveil Fall, Vernal Fall, and Nevada Fall Walk, bike, or use free Valley shuttles to get around (page 6.) If Yosemite Valley parking is full, typically flow year-round but are low by late explore other areas of the park and return later in the day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+        "source_span_json": "[{\"end\": 1638, \"kind\": \"paragraph\", \"start\": 751}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 8.81994300272542,
+          "dense": 0.5466023087501526,
+          "rrf": 0.02478580171358629,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 26
+        },
+        "score": 0.02478580171358629,
+        "post_rank": 16
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "976ff41b915639585a21069965d8ffd6c8d6507f281499f8fbca09a129aaa939",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\nashed pets welcome pets NOT allowed pets are also allowed on paved bike paths, shown on the map in solid green. 10 11 Experience Your America Yosemite National Park Yosemite Guide September 23 \u2013 November 24, 2026",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 54616, \"kind\": \"paragraph\", \"start\": 54404}]",
+        "token_count": 64,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 54616,
+            "kind": "paragraph",
+            "start": 54404
+          }
+        ],
+        "source_span": [
+          {
+            "end": 54616,
+            "kind": "paragraph",
+            "start": 54404
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 8.382893090683886,
+          "dense": 0.558902382850647,
+          "rrf": 0.02475171886936593,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 25,
+          "dense": 17
+        },
+        "score": 0.02475171886936593,
+        "post_rank": 17
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0d751f98ea11867a30a49b6ee44043a9f9291f3848e0d9702049ea742eec0baf",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n trail. Use the map above to plan incline refer to map your hike. Pets and bicycles are NOT allowed. Sections closest to the river may be muddy or flooded. wheelchair-accessible paved path or boardwalk leashed pets welcome 10 Experience Your America Yosemite National Park Yosemite Guide May 7 \u2013 June 10, 2025 11",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 54566, \"kind\": \"paragraph\", \"start\": 54254}]",
+        "token_count": 87,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 54566,
+            "kind": "paragraph",
+            "start": 54254
+          }
+        ],
+        "source_span": [
+          {
+            "end": 54566,
+            "kind": "paragraph",
+            "start": 54254
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 7.263238008875003,
+          "dense": 0.5800859332084656,
+          "rrf": 0.024501173708920188,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 36,
+          "dense": 11
+        },
+        "score": 0.024501173708920188,
+        "post_rank": 18
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Keep Your Pet Safe\n\nKeep Your Pet Safe\n\nWildlife can pose a threat to pets in Yosemite, both directly and indirectly. Keeping your pet attended and on a six-foot leash as well as fully vaccinated will reduce the chances of injury or disease. Rabies and distemper have been detected in park wildlife.",
+        "heading_path": "Pets > Keep Your Pet Safe",
+        "source_span_json": "[{\"end\": 2410, \"kind\": \"paragraph\", \"start\": 2392}, {\"end\": 2671, \"kind\": \"paragraph\", \"start\": 2412}]",
+        "token_count": 67,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 2410,
+            "kind": "paragraph",
+            "start": 2392
+          },
+          {
+            "end": 2671,
+            "kind": "paragraph",
+            "start": 2412
+          }
+        ],
+        "source_span": [
+          {
+            "end": 2410,
+            "kind": "paragraph",
+            "start": 2392
+          },
+          {
+            "end": 2671,
+            "kind": "paragraph",
+            "start": 2412
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 8.351053902232573,
+          "dense": 0.5519641637802124,
+          "rrf": 0.0238230289279637,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 26,
+          "dense": 22
+        },
+        "score": 0.0238230289279637,
+        "post_rank": 19
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips\n\nPlan Ahead Before Packing your Pet Pets are allowed in Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members are best left at home. Find out what you can (and can\u2019t) do with your pet.\n\nPrepare to Disconnect Cellular service is limited . Don\u2019t be surprised if you can\u2019t receive calls or texts in the park.\n\nDrive responsibly Observe posted speed limits and use pullouts to take pictures and let other cars pass.\n\nTips for a Fun Visit Learn how to visit Yosemite in a way that is fun, memorable, and safe.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips",
+        "source_span_json": "[{\"end\": 3012, \"kind\": \"paragraph\", \"start\": 2760}, {\"end\": 3133, \"kind\": \"paragraph\", \"start\": 3014}, {\"end\": 3239, \"kind\": \"paragraph\", \"start\": 3135}, {\"end\": 3332, \"kind\": \"paragraph\", \"start\": 3241}]",
+        "token_count": 132,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3012,
+            "kind": "paragraph",
+            "start": 2760
+          },
+          {
+            "end": 3133,
+            "kind": "paragraph",
+            "start": 3014
+          },
+          {
+            "end": 3239,
+            "kind": "paragraph",
+            "start": 3135
+          },
+          {
+            "end": 3332,
+            "kind": "paragraph",
+            "start": 3241
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3012,
+            "kind": "paragraph",
+            "start": 2760
+          },
+          {
+            "end": 3133,
+            "kind": "paragraph",
+            "start": 3014
+          },
+          {
+            "end": 3239,
+            "kind": "paragraph",
+            "start": 3135
+          },
+          {
+            "end": 3332,
+            "kind": "paragraph",
+            "start": 3241
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 7.021680504488907,
+          "dense": 0.5687597393989563,
+          "rrf": 0.023822791864028976,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 37,
+          "dense": 14
+        },
+        "score": 0.023822791864028976,
+        "post_rank": 20
+      }
+    ],
+    "final": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.028938340398177,
+          "dense": 0.6132901906967163,
+          "rrf": 0.03009207275993712,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 13,
+          "dense": 1
+        },
+        "score": 0.03009207275993712,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.698883877862574,
+          "dense": 0.5739251375198364,
+          "rrf": 0.029827662395050816,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": 13
+        },
+        "score": 0.029827662395050816,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Allowed\n\nWhere Pets Are Allowed\n\nIn developed areas\n\nOn fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake).\n\nIn all campgrounds except walk-in campgrounds (e.g., Camp 4) and in group campsites",
+        "heading_path": "Pets > Where Pets Are Allowed",
+        "source_span_json": "[{\"end\": 166, \"kind\": \"paragraph\", \"start\": 144}, {\"end\": 186, \"kind\": \"paragraph\", \"start\": 168}, {\"end\": 481, \"kind\": \"paragraph\", \"start\": 188}, {\"end\": 566, \"kind\": \"paragraph\", \"start\": 483}]",
+        "token_count": 102,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "source_span": [
+          {
+            "end": 166,
+            "kind": "paragraph",
+            "start": 144
+          },
+          {
+            "end": 186,
+            "kind": "paragraph",
+            "start": 168
+          },
+          {
+            "end": 481,
+            "kind": "paragraph",
+            "start": 188
+          },
+          {
+            "end": 566,
+            "kind": "paragraph",
+            "start": 483
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 11.221211284617816,
+          "dense": 0.5834852457046509,
+          "rrf": 0.029437229437229435,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 6,
+          "dense": 10
+        },
+        "score": 0.029437229437229435,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "93e9653483d09935b2cc23cb392e336426ac2ee711ae14058bc9f0bf93107f5e",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets\n\nPets\n\nIf you bring your pet to Yosemite, please protect your pet, other people, and park wildlife by abiding by these regulations:",
+        "heading_path": "Pets",
+        "source_span_json": "[{\"end\": 16, \"kind\": \"paragraph\", \"start\": 12}, {\"end\": 142, \"kind\": \"paragraph\", \"start\": 18}]",
+        "token_count": 32,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "source_span": [
+          {
+            "end": 16,
+            "kind": "paragraph",
+            "start": 12
+          },
+          {
+            "end": 142,
+            "kind": "paragraph",
+            "start": 18
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 8.957029599890408,
+          "dense": 0.596685528755188,
+          "rrf": 0.0288981288981289,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 5
+        },
+        "score": 0.0288981288981289,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Where Pets Are Not Allowed\n\nWhere Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)\n\nOn unplowed roads covered in snow\n\nIn wilderness and all other undeveloped areas\n\nOn all meadows, beaches, and waterways\n\nIn public buildings\n\nOn shuttle buses\n\nIn lodging areas (including Housekeeping Camp)\n\nIn all walk-in and group campgrounds/campsites, including Camp 4\n\nIn any other areas, as signed\n\nThere are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed.",
+        "heading_path": "Pets > Where Pets Are Not Allowed",
+        "source_span_json": "[{\"end\": 1120, \"kind\": \"paragraph\", \"start\": 1094}, {\"end\": 1238, \"kind\": \"paragraph\", \"start\": 1122}, {\"end\": 1273, \"kind\": \"paragraph\", \"start\": 1240}, {\"end\": 1320, \"kind\": \"paragraph\", \"start\": 1275}, {\"end\": 1360, \"kind\": \"paragraph\", \"start\": 1322}, {\"end\": 1381, \"kind\": \"paragraph\", \"start\": 1362}, {\"end\": 1399, \"kind\": \"paragraph\", \"start\": 1383}, {\"end\": 1447, \"kind\": \"paragraph\", \"start\": 1401}, {\"end\": 1513, \"kind\": \"paragraph\", \"start\": 1449}, {\"end\": 1544, \"kind\": \"paragraph\", \"start\": 1515}, {\"end\": 1712, \"kind\": \"paragraph\", \"start\": 1546}]",
+        "token_count": 152,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1120,
+            "kind": "paragraph",
+            "start": 1094
+          },
+          {
+            "end": 1238,
+            "kind": "paragraph",
+            "start": 1122
+          },
+          {
+            "end": 1273,
+            "kind": "paragraph",
+            "start": 1240
+          },
+          {
+            "end": 1320,
+            "kind": "paragraph",
+            "start": 1275
+          },
+          {
+            "end": 1360,
+            "kind": "paragraph",
+            "start": 1322
+          },
+          {
+            "end": 1381,
+            "kind": "paragraph",
+            "start": 1362
+          },
+          {
+            "end": 1399,
+            "kind": "paragraph",
+            "start": 1383
+          },
+          {
+            "end": 1447,
+            "kind": "paragraph",
+            "start": 1401
+          },
+          {
+            "end": 1513,
+            "kind": "paragraph",
+            "start": 1449
+          },
+          {
+            "end": 1544,
+            "kind": "paragraph",
+            "start": 1515
+          },
+          {
+            "end": 1712,
+            "kind": "paragraph",
+            "start": 1546
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 19.261309237072513,
+          "dense": 0.5569204688072205,
+          "rrf": 0.02889344262295082,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": 20
+        },
+        "score": 0.02889344262295082,
+        "post_rank": 5
+      }
+    ],
+    "candidate_count": 20,
+    "eligible_count": 1377,
+    "shortfall": false,
+    "requested_candidates": 20,
+    "filters": {
+      "parks": [
+        "yose"
+      ]
+    },
+    "rerank_input_tokens": null,
+    "score_types": {
+      "dense": "cosine",
+      "bm25": "BM25Okapi",
+      "rrf": "sum(1/(60+rank))",
+      "rerank": "raw model score (not calibrated probability)"
+    },
+    "timings": {
+      "load_ms": 54.539083037525415,
+      "retrieval_ms": 48.41399984434247,
+      "rerank_ms": 0.0,
+      "total_ms": 102.97462507151067
+    }
+  }
+}

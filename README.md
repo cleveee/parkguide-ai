@@ -2,7 +2,7 @@
 
 ParkGuide answers questions about Yosemite, Yellowstone, and Grand Canyon from saved official NPS sources. The local application, Azure embeddings, retrieval pipeline, and real evaluation runners are implemented. The course benchmark awaits human verification of the 40 source-authored gold drafts.
 
-The three workstreams are [corpus/database, retrieval/chat, and evaluation](docs/PLAN.md). Python, one SQLite file, NumPy exact search and BM25 keep the pipeline simple. The primary interface is a small React + TypeScript web app served by a thin loopback FastAPI bridge; Streamlit remains an optional legacy tool. One existing Azure resource generates embeddings with `text-embedding-3-small` and answers/claim review with `gpt-6-luna-2026-09-22`; a pinned CrossEncoder reranks locally. There is no cloud database; an optional [Vercel hosted profile](docs/VERCEL.md) is prepared but not deployed from this repository.
+The three workstreams are [corpus/database, retrieval/chat, and evaluation](docs/PLAN.md). Python, one SQLite file, NumPy exact search and BM25 keep the pipeline simple. The primary interface is a small React + TypeScript web app served by FastAPI; Streamlit remains an optional legacy tool. One existing Azure resource generates embeddings with `text-embedding-3-small` and answers/claim review with `gpt-6-luna-2026-09-22`; a pinned CrossEncoder reranks locally. The [live demo](https://parkguide-ai-dh24.vercel.app/) uses the [Vercel hosted profile](docs/VERCEL.md) and a frozen read-only copy of SQLite, without a cloud database service.
 
 ## Run locally
 
@@ -20,6 +20,8 @@ Choose a park (Yosemite, Yellowstone or Grand Canyon) before chatting; the selec
 Only claims that passed source review are shown. Numbered citations open the saved excerpt, the reviewer's verbatim witnesses (labelled as an AI judgment) and a separate link to the current official NPS page. **Sources used** groups cited passages by saved page. The inspector (side panel on wide screens, sheet on smaller ones) has **Evidence**, **Retrieval** (query, filters, counts, cosine/BM25/RRF/reranker ranking scores, timings) and **Data flow** (embedding cache status, returned models, tokens, estimated cost, refusal reasons) tabs, with JSON copy/download. **Corpus** in the sidebar browses the read-only database. **How it works** explains what leaves the machine. [Park scope and verification](docs/PARK_SCOPE.md) describes the enforced boundaries and AI-review limits; [frontend references](docs/FRONTEND_REFERENCES.md) record component origins and licenses.
 
 Select Yosemite and ask “What distance should I keep from a bear outside developed areas?”, then “What should I do if that bear is in a developed area?” Ask about Yellowstone to see the scope refusal, or an imaginary Blue Lantern Lagoon submarine tour to see a source-gap refusal. Select another park to begin its separate conversation. These examples are non-gold diagnostics.
+
+Follow-up retrieval retains the conversation subject while keyword search emphasizes a new concrete detail, such as a pet's leash length. Refused off-park exchanges do not erase valid earlier context. Missing references ask for clarification; recognized live/future-status and private-booking requests explain the source limitation and next step. A failed request restores the question when the composer is still empty. Chat requests stop waiting after 110 seconds, without automatically resending a potentially paid request. [Hosted visitor testing](docs/HOSTED_USER_TESTING.md) preserves source-first conversations, unsuccessful iterations, source checks and provisional semantic assessments.
 
 ### Vercel hosted profile
 
@@ -45,13 +47,14 @@ PARKGUIDE_PYTHON=/Users/robin/.cache/codex-runtimes/codex-primary-runtime/depend
 .venv/bin/python -m pytest -q
 .venv/bin/python -m pip check
 npm --prefix web ci && npm --prefix web run build   # typecheck + production build
+node --test web/tests/api.test.mjs                 # request failure and timeout recovery
 ```
 
 The web app needs Node.js (verified with Node 26.7 / npm 11.19); `web/package-lock.json` pins the frontend packages. `tests/test_web.py` covers the API bridge offline with stubbed model calls.
 
 Elsewhere use `PARKGUIDE_PYTHON=python3.12 bash scripts/setup.sh`. Setup installs `requirements-full.lock`, initializes SQLite without deleting existing rows, and makes no model calls. `PARKGUIDE_CORE_ONLY=1` selects `requirements-core.lock`; reranking then requires the optional packages. Locks were resolved on macOS ARM64; verify compatibility elsewhere. Pinned model weights download on first use and remain cached.
 
-Create a private `.env` from `.env.example`, mode `0600`; this machine is already configured. Never print or commit keys. [Azure verification](docs/AZURE.md) records the existing ReviewDoc dev/staging resource. The same Azure endpoint and key serve both deployment names. The ignored `.env` needs only the four variables in `.env.example`; there is no direct OpenAI API configuration or fallback. [Generation documentation](docs/GENERATION.md) records the verified Luna snapshot and request settings. The database and UI stay local.
+Create a private `.env` from `.env.example`, mode `0600`; this machine is already configured. Never print or commit keys. [Azure verification](docs/AZURE.md) records the existing ReviewDoc dev/staging resource. The same Azure endpoint and key serve both deployment names. The ignored `.env` needs only the four variables in `.env.example`; there is no direct OpenAI API configuration or fallback. [Generation documentation](docs/GENERATION.md) records the verified Luna snapshot and request settings. Hosted credentials remain server-only; the database is never served as a public asset.
 
 ## Pipeline commands
 

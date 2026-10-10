@@ -18,9 +18,43 @@ DEFAULT_RERANKER = "cross-encoder/ms-marco-MiniLM-L6-v2"
 DEFAULT_RERANKER_REVISION = "233902d25c440f23af6f7d6e94d2946bac0bee0a"
 _RERANKERS = {}
 
+# Function words otherwise outrank visitor subjects in short FAQ headings
+# (for example, "Can I ... my ..." matched reservation FAQs for a pet question).
+# Apply the same lexical normalization to queries and saved passages. Dense
+# vectors and their frozen build identity are deliberately unchanged.
+_STOP_WORDS = set("a an and are as at be been but by can could did do does for from had has have he her hers him his how i if in is it its me my of on or our she should that the their them there these they this those to was we were what when where which who will with would you your".split())
+_LEXICAL_FORMS = {
+    "dog": "pet", "dogs": "pet", "pets": "pet",
+    "carried": "carry", "carrying": "carry",
+}
+_CONTEXT_ONLY = set("about also instead same different more long far much many time go one two allowed permitted possible safe open closed today tomorrow yesterday now week weekend next last spring summer fall autumn winter january february march april may june july august september october november december monday tuesday wednesday thursday friday saturday sunday am pm yosemite yellowstone grand canyon take bring still along continue need know tell explain please say mean walk ride park onto around not no yes yet then use work again".split())
+
 
 def _tokens(text):
-    return re.findall(r"[a-z0-9]+", text.lower())
+    return [_LEXICAL_FORMS.get(token, token) for token in re.findall(r"[a-z0-9]+", text.lower())
+            if token not in _STOP_WORDS]
+
+
+def _keyword_inputs(query, filters):
+    """Retain context without giving old topics a second fusion contribution.
+
+    Follow-up keywords retain each inherited term once, including companions or
+    vehicles. Concrete current terms limit only the BM25 candidate branch; dense
+    search still uses the full resolved conversation without that restriction.
+    Bare pronoun/date follow-ups keep context without a lexical eligibility rule.
+    """
+    scoped = (filters or {}).get("parks", [])
+    if len(scoped) == 1:
+        query = re.sub(r"^(?:Yosemite|Yellowstone|Grand Canyon):\s*", "", query, flags=re.I)
+    current, separator, previous = query.partition(" Previous topic: ")
+    if not separator:
+        return query, []
+    current_tokens = list(dict.fromkeys(_tokens(current)))
+    keywords = list(dict.fromkeys(current_tokens + _tokens(previous)))
+    current_terms = [token for token in current_tokens
+                     if token not in _CONTEXT_ONLY
+                     and not re.fullmatch(r"\d+(?:st|nd|rd|th|am|pm)?", token)]
+    return " ".join(keywords), current_terms
 
 
 def _park(url):
@@ -98,14 +132,19 @@ def retrieve(db, query, query_vector=None, mode="hybrid", build_id=None, filters
     bm25_scores = np.zeros(len(chunks))
     dense_scores = np.zeros(len(chunks))
     ranks = {}
+    keyword_query, keyword_current_terms = _keyword_inputs(query, filters)
 
-    def rank(scores):
-        return sorted(range(len(chunks)), key=lambda i: (-float(scores[i]), chunks[i]["chunk_id"]))[:per_retriever_fetch]
+    def rank(scores, eligible=None):
+        indices = range(len(chunks)) if eligible is None else eligible
+        return sorted(indices, key=lambda i: (-float(scores[i]), chunks[i]["chunk_id"]))[:per_retriever_fetch]
 
     if mode in {"bm25", "hybrid"}:
         corpus_tokens = [_tokens(chunk["text"]) or ["__empty__"] for chunk in chunks]
-        bm25_scores = BM25Okapi(corpus_tokens).get_scores(_tokens(query))
-        ranks["bm25"] = rank(bm25_scores)
+        bm25_scores = BM25Okapi(corpus_tokens).get_scores(_tokens(keyword_query))
+        current_terms = set(keyword_current_terms)
+        eligible = [i for i, tokens in enumerate(corpus_tokens)
+                    if not current_terms or current_terms.intersection(tokens)]
+        ranks["bm25"] = rank(bm25_scores, eligible)
     if mode in {"dense", "hybrid"}:
         vector = np.asarray(query_vector, dtype=np.float32)
         if vector.shape != (manifest["dimension"],) or not np.isfinite(vector).all():
@@ -157,4 +196,4 @@ def retrieve(db, query, query_vector=None, mode="hybrid", build_id=None, filters
         candidate["rank"] = position
         candidate["post_rank"] = position
     rerank_ms = (perf_counter() - start) * 1000
-    return {"build_id": build_id, "mode": mode, "candidates": candidates, "reranked": reranked, "final": reranked[:final_count], "candidate_count": len(candidates), "eligible_count": len(chunks), "shortfall": len(candidates) < candidate_count, "requested_candidates": candidate_count, "filters": filters or {}, "rerank_input_tokens": pair_lengths if rerank else None, "score_types": {"dense": "cosine", "bm25": "BM25Okapi", "rrf": f"sum(1/({rrf_k}+rank))", "rerank": "raw model score (not calibrated probability)"}, "timings": {"load_ms": load_ms, "retrieval_ms": retrieval_ms, "rerank_ms": rerank_ms if rerank else 0.0, "total_ms": (perf_counter() - total_start) * 1000}}
+    return {"build_id": build_id, "mode": mode, "keyword_query": keyword_query if mode in {"bm25", "hybrid"} else None, "keyword_current_terms": keyword_current_terms if mode in {"bm25", "hybrid"} else None, "keyword_candidate_count": len(ranks["bm25"]) if "bm25" in ranks else None, "candidates": candidates, "reranked": reranked, "final": reranked[:final_count], "candidate_count": len(candidates), "eligible_count": len(chunks), "shortfall": len(candidates) < candidate_count, "requested_candidates": candidate_count, "filters": filters or {}, "rerank_input_tokens": pair_lengths if rerank else None, "score_types": {"dense": "cosine", "bm25": "BM25Okapi", "rrf": f"sum(1/({rrf_k}+rank))", "rerank": "raw model score (not calibrated probability)"}, "timings": {"load_ms": load_ms, "retrieval_ms": retrieval_ms, "rerank_ms": rerank_ms if rerank else 0.0, "total_ms": (perf_counter() - total_start) * 1000}}

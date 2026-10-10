@@ -1,0 +1,22 @@
+{
+  "kind": "AI provisional source-span review, separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 18,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 0,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 15,
+    "fully_supported": 15,
+    "partially_supported": 0,
+    "note": "All delivered claims independently compared with stored source text. This remains AI provisional, not human-verified accuracy."
+  },
+  "observed_regressions_vs_candidate_2": [],
+  "cost_estimate_including_reservations_usd": 0.0164376,
+  "reserved_provider_failed_attempts": 2,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "08e67a44fe799ca1da3cb35940a5cfbc42961c9569a581c8e86bb48f44852524",
+  "assessment_sha256": "922a1cdf886cb7117f33abfaa056b62989aecb924781992d3c66a226244870a4",
+  "selection_note": "All frozen diagnostic expectations passed in this hosted-profile candidate run. Repeated suite was used for development; not an independent benchmark, universal reliability guarantee, or proof of deployment."
+}

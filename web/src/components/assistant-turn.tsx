@@ -1,4 +1,5 @@
-import { ChevronDownIcon, CircleAlertIcon, CircleHelpIcon, PanelRightIcon, RotateCcwIcon, ShieldCheckIcon } from "lucide-react"
+import { useEffect, useState } from "react"
+import { ChevronDownIcon, CircleAlertIcon, CircleHelpIcon, ExternalLinkIcon, PanelRightIcon, RotateCcwIcon, ShieldCheckIcon } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 
 import { Message, MessageAction, MessageActions, MessageContent } from "@/components/ai-elements/message"
@@ -32,7 +33,7 @@ function StatusLine({ response }: { response: ChatTurn }) {
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
         <ShieldCheckIcon className="size-3.5 text-primary" aria-hidden />
         <span>
-          Source review passed for {response.claims.length} {response.claims.length === 1 ? "claim" : "claims"}
+          AI-checked against saved NPS sources
           {withheld > 0 && ` · ${withheld} unsupported ${withheld === 1 ? "claim" : "claims"} withheld`}
         </span>
       </p>
@@ -42,7 +43,7 @@ function StatusLine({ response }: { response: ChatTurn }) {
     return (
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
         <CircleHelpIcon className="size-3.5" aria-hidden />
-        {response.reason?.category === "local_preflight" ? "Clarification needed · local check, nothing sent to Azure" : "Clarification needed"}
+        A little more detail will help
       </p>
     )
   }
@@ -55,14 +56,14 @@ function StatusLine({ response }: { response: ChatTurn }) {
 }
 
 const REFUSAL_LABELS: Record<ReasonCategory, string> = {
-  local_preflight: "Not answered · a recognized pattern stopped it locally; nothing was sent to Azure for this turn",
-  scope_check: "Withheld · local search returned evidence outside the selected park",
-  validation_failure: "Withheld · failed local validation",
-  review_failure: "Withheld · source review did not complete",
-  review_rejected: "Withheld · no drafted claim passed source review",
-  no_evidence: "Not answered · no matching saved passages",
-  model_refusal: "Not answered · the answer model declined",
-  model_clarification: "Clarification needed",
+  local_preflight: "This needs a different source",
+  scope_check: "I couldn't verify the sources for this park",
+  validation_failure: "I couldn't verify an answer",
+  review_failure: "The source check couldn't finish",
+  review_rejected: "I couldn't confirm the answer from the saved sources",
+  no_evidence: "No matching information in the saved sources",
+  model_refusal: "Not enough information in the saved sources",
+  model_clarification: "A little more detail will help",
 }
 
 function LedgerNote({ window }: { window: LedgerWindow | undefined }) {
@@ -87,12 +88,18 @@ export function UserTurn({ question }: { question: string }) {
 }
 
 export function PendingTurn({ park, onStop }: { park: string; onStop: () => void }) {
+  const [seconds, setSeconds] = useState(0)
+  useEffect(() => {
+    const started = Date.now()
+    const timer = setInterval(() => setSeconds(Math.floor((Date.now() - started) / 1000)), 1000)
+    return () => clearInterval(timer)
+  }, [])
   return (
     <Message from="assistant">
       <MessageContent className="w-full max-w-xl gap-3">
         <div role="status" aria-live="polite" className="flex items-center gap-2 text-muted-foreground">
           <Spinner />
-          <span>Searching saved {parkName(park)} sources, then drafting and reviewing claims…</span>
+          <span>{seconds >= 20 ? "Still checking the saved sources…" : `Looking up your question in saved ${parkName(park)} sources…`}</span>
         </div>
         <div className="space-y-2" aria-hidden>
           <Skeleton className="h-3 w-11/12" />
@@ -100,7 +107,8 @@ export function PendingTurn({ park, onStop }: { park: string; onStop: () => void
           <Skeleton className="h-3 w-7/12" />
         </div>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
-          <span className="text-pretty">Nothing is shown until source review finishes.</span>
+          <span className="text-pretty">{seconds >= 20 ? "This is taking longer than usual. You can stop waiting below." : "The answer appears after its source check."}</span>
+          <span className="tabular-nums" aria-label={`${seconds} seconds elapsed`}>{seconds}s</span>
           <Button variant="outline" size="xs" onClick={onStop} title="Stops this browser from waiting; the server keeps working on the request">
             Stop waiting
           </Button>
@@ -161,7 +169,7 @@ export function ErrorTurn({ turn, onRetry, canRetry }: { turn: Extract<TurnState
           <LedgerNote window={details?.ledger_window} />
           {!details?.ledger_window && code !== "busy" && (
             <p className="text-xs text-pretty text-muted-foreground">
-              No paid-call record was returned for this failure, so any spend is unknown here; the local budget ledger still records it.
+              No usage record was returned for this request; its cost is unknown here.
             </p>
           )}
           {retryable ? (
@@ -220,12 +228,22 @@ export function AssistantTurn({
           ) : (
             <div className="space-y-1.5">
               <p className="text-[0.938rem] leading-relaxed text-pretty">{response.text}</p>
-              {response.reason && <p className="text-xs text-pretty text-muted-foreground">{response.reason.detail}</p>}
+              {response.status === "refusal" && response.reason?.code !== "selected_park_mismatch" && (
+                <a
+                  href={`https://www.nps.gov/${response.selected_park}/planyourvisit/${["live_information_unavailable", "dated_information_unavailable"].includes(response.reason?.code ?? "") ? "conditions" : "index"}.htm`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-ring"
+                >
+                  {["live_information_unavailable", "dated_information_unavailable"].includes(response.reason?.code ?? "") ? "Check current NPS alerts and conditions" : `Visit official ${parkName(response.selected_park)} information`}
+                  <ExternalLinkIcon className="size-3.5" aria-hidden />
+                </a>
+              )}
             </div>
           )}
           {response.history.scope_reset && (
             <p className="text-xs text-pretty text-muted-foreground">
-              Earlier turns mentioned another park, so the server used none of the {response.history.messages_received} prior messages as context.
+              Messages about another park were excluded. {response.history.messages_used} of {response.history.messages_received} prior messages remain in context.
             </p>
           )}
           {response.sources.length > 0 && (

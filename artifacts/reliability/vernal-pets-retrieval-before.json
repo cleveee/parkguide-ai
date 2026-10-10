@@ -1,0 +1,2252 @@
+{
+  "question": "Yosemite: Can I carry my dog to Vernal Fall?",
+  "stage": "baseline",
+  "source_expectation": "pets.htm Where Pets Are Not Allowed includes Vernal Fall and even if carried",
+  "retrieval": {
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "mode": "hybrid",
+    "candidates": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.059025810350505,
+          "dense": 0.6132901906967163,
+          "rrf": 0.028298204527712725,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 24,
+          "dense": 1
+        },
+        "score": 0.028298204527712725
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.76324703129245,
+          "dense": 0.5739251375198364,
+          "rrf": 0.027984344422700584,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 13
+        },
+        "score": 0.027984344422700584
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cacd14d12c0174ce63fbf8e652608e2ba51e2081e69e99d1d4f598348cd51fea",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km; Happy Isles; Come prepared with your own approved bear is wheelchair-accessible. Expect heavy spray in spring. paved with gentle Shuttle Stop 6 section has heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Continue up 1500 ft (450 m) elev. gain Shuttle Stop 16 canister\u2014or rent one at an open wilderness center. Stay behind barriers. Rocks at the base of the waterfall incline to Clark Point for more great views of Vernal and Nevada Falls, then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51187, \"kind\": \"paragraph\", \"start\": 50416}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 8.521461873102028,
+          "dense": 0.6042342185974121,
+          "rrf": 0.026736111111111113,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 30,
+          "dense": 4
+        },
+        "score": 0.026736111111111113
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "dcf2e59e089c278bd3e4dab11a5ccfa5868ec2f9de6c4f17e4e837b8a8bd7705",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Become a B.A.R.K. Ranger\n\nPlanning on visiting Yosemite with your dog? Ranger Nicole explains how to become a Yosemite B.A.R.K. Ranger and visit the park safely with your pet.",
+        "heading_path": "Pets > Become a B.A.R.K. Ranger",
+        "source_span_json": "[{\"end\": 4002, \"kind\": \"paragraph\", \"start\": 3853}]",
+        "token_count": 44,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 9.53651582174761,
+          "dense": 0.5739775896072388,
+          "rrf": 0.02638888888888889,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 20,
+          "dense": 12
+        },
+        "score": 0.02638888888888889
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n it. Additional fire restrictions may go into effect, depending on Curry Village Parking conditions. Yosemite Valley can be extremely busy, especially on weekends and holidays. Waterfalls peak during spring snowmelt and dry up in Arrive early in the morning or late in the afternoon to avoid long lines at park entrances. summer. Yosemite Valley parking can completely fill by late morning. Once you find a parking space, keep it. Bridalveil Fall, Vernal Fall, and Nevada Fall Walk, bike, or use free Valley shuttles to get around (page 6.) If Yosemite Valley parking is full, typically flow year-round but are low by late explore other areas of the park and return later in the day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+        "source_span_json": "[{\"end\": 1638, \"kind\": \"paragraph\", \"start\": 751}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 11.577505476235318,
+          "dense": 0.5466023087501526,
+          "rrf": 0.02571241401899771,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 11,
+          "dense": 26
+        },
+        "score": 0.02571241401899771
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f601721cfc84b4e5b2379a238e3881a2e4021342e40cbf24353d4d1100b81681",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 56972, \"kind\": \"table_row\", \"start\": 56779}, {\"end\": 57248, \"kind\": \"table_row\", \"start\": 56972}]",
+        "token_count": 186,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 12.125537839630061,
+          "dense": 0.536047637462616,
+          "rrf": 0.02523465148484382,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 7,
+          "dense": 37
+        },
+        "score": 0.02523465148484382
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8c78bcc0bcfccbcab7792e25b2619717e23c2dc64283c50e163cf2444d4d72c5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 55859, \"kind\": \"table_row\", \"start\": 55666}, {\"end\": 56135, \"kind\": \"table_row\", \"start\": 55859}]",
+        "token_count": 188,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 12.088010800944978,
+          "dense": 0.5339290499687195,
+          "rrf": 0.02490996398559424,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 38
+        },
+        "score": 0.02490996398559424
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "81e79818cf8f8c79b25bc6d8dad332d305f3143f9c481b9a3bca7e508d445006",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 56477, \"kind\": \"table_row\", \"start\": 56135}, {\"end\": 56596, \"kind\": \"table_row\", \"start\": 56477}]",
+        "token_count": 179,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 10.527634217049297,
+          "dense": 0.5435655117034912,
+          "rrf": 0.02452153110047847,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 28
+        },
+        "score": 0.02452153110047847
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "e0e1eda0913438fe7676cb5e80659f99d988fae06938612f7c38ec009da82882",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs and winter closures may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 57610, \"kind\": \"table_row\", \"start\": 57248}, {\"end\": 57729, \"kind\": \"table_row\", \"start\": 57610}]",
+        "token_count": 180,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 10.451680981385666,
+          "dense": 0.5452336668968201,
+          "rrf": 0.024481265860576206,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 17,
+          "dense": 27
+        },
+        "score": 0.024481265860576206
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5749a787c50de6e59283bf29d54ba315e09a3146de8b79c6c81a07f16f44c358",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n o r n P a o , i & n t H R w o y a d 4 , 1 il C re View scenic viewpoint e picnic area k Backpacking Yosemite A wilderness permit is required for all overnight trips into Yosemite\u2019s Wilderness. Visit go.nps.gov/WildPermits for information. BRIDALVEIL FALL Take a short stroll to the base of HAPPY ISLES TO VERNAL FALL FOOTBRIDGE (OUT & BACK) 1\u22121.5 hrs. Hike the short but very steep first 1.6 mi/2.6 km; Happy Isles; B ac ri c d e a s l s v i e b i l l e F v a i l e l. w A in g g e n ar t e le a , i n w cl h in il e e l a e a st d e s e t p",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 49116, \"kind\": \"paragraph\", \"start\": 48574}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 49116,
+            "kind": "paragraph",
+            "start": 48574
+          }
+        ],
+        "source_span": [
+          {
+            "end": 49116,
+            "kind": "paragraph",
+            "start": 48574
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 10.993712322188511,
+          "dense": 0.5407407283782959,
+          "rrf": 0.024266201685556526,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 33
+        },
+        "score": 0.024266201685556526
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "510bcd562124f1dfd22e1e2b21c3d52dce50ab087374eae8ea34ea2aadd19f01",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135 hours. Hike the John Muir Trail to the 5 mi/8 km; Happy Isles; COOK\u2019S MEADOW LOOP Take a relaxed stroll and footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. Follow \u2022Yosemite Valley Wilderness Center: Open 8 am \u2013 5 pm enjoy views of Yosemite Falls, Half Dome, and the 1 fl a m t i p /1 a . v 6 e m km en ; t & Shuttle Stop 6 the Mist Trail another steep mile to the top of Nevada Fall. Return the same way. 2000 ft/600 m elev. gain Shuttle Stop ",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51692, \"kind\": \"paragraph\", \"start\": 51027}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51692,
+            "kind": "paragraph",
+            "start": 51027
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51692,
+            "kind": "paragraph",
+            "start": 51027
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 10.222485393135722,
+          "dense": 0.5422966480255127,
+          "rrf": 0.024056467876692595,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 18,
+          "dense": 29
+        },
+        "score": 0.024056467876692595
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "633ad03aa52d3b20c86ef273f42a36783bd6c80d329217fc6fa06f2ff0d407c4",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n| DAY & TIME | PROGRAM |\n| --- | --- |\n| 8:30 am (4 hrs) M, W, Sa | Guided Discovery Hike: Vernal Fall Footbridge Difficulty: strenuous. |",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+        "source_span_json": "[{\"end\": 37857, \"kind\": \"table_header\", \"start\": 37818}, {\"end\": 37956, \"kind\": \"table_row\", \"start\": 37857}]",
+        "token_count": 63,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "source_span": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 11.124504500221946,
+          "dense": 0.5324360728263855,
+          "rrf": 0.02398989898989899,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 12,
+          "dense": 39
+        },
+        "score": 0.02398989898989899
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "a48d8e1803ca617331acd05917ee8dabdb37ebce21e4abaf7661eb1ba1857e68",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 5\n\n12:30 \u2212 4:30 pm Ask-a-Climber (*starts Sep 6) Stop by to view climbers on El Capitan through spotting scopes and discover the world of free, 1 W pm (2 hrs) Tuolumne Wild and Scenic River Walk Dog Lake parking lot. Easy stroll. \u2022 Aug 17\u221221 | Watercolor Nature Journaling daily* vertical adventure on Yosemite\u2019s big walls. West side of El Capitan bridge (use shuttle stop 9.) NPS drop-in only with Sylvia Eneriz 2 pm (2 hrs) \u2022 Aug 24\u221228 | Watercolor with Jessica de Jesus 1 pm (1 hr) Ranger Walk: Wild About Bears Learn about bears in Yosemite with a ranger (no bear sightings expected.) Meet in front of NPS free, M Forest Walk Meet at Dog Lake parking lot. Easy stroll. \u2022 Aug 31",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 5",
+        "source_span_json": "[{\"end\": 33827, \"kind\": \"paragraph\", \"start\": 33149}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 33827,
+            "kind": "paragraph",
+            "start": 33149
+          }
+        ],
+        "source_span": [
+          {
+            "end": 33827,
+            "kind": "paragraph",
+            "start": 33149
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 8.05752095846734,
+          "dense": 0.541424572467804,
+          "rrf": 0.02150786308973173,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 34,
+          "dense": 32
+        },
+        "score": 0.02150786308973173
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "48980c25c096bad8f85d90d791e7232feb5a099485a0d6f3c79c964fa5447d19",
+        "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+        "text": "Heading: Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?\n\nHow can I cancel or change my reservation?\n\nCall 877/444-6777 to change or cancel your reservation. You can also log in to recreation.gov to cancel your reservation.\n\nLast updated: September 13, 2023",
+        "heading_path": "Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?",
+        "source_span_json": "[{\"end\": 6039, \"kind\": \"paragraph\", \"start\": 5997}, {\"end\": 6162, \"kind\": \"paragraph\", \"start\": 6041}, {\"end\": 6196, \"kind\": \"paragraph\", \"start\": 6164}]",
+        "token_count": 67,
+        "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+        "crawled_at": "2026-10-10T02:49:22.312572+00:00",
+        "effective_date": "2023-09-13",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+        "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 6039,
+            "kind": "paragraph",
+            "start": 5997
+          },
+          {
+            "end": 6162,
+            "kind": "paragraph",
+            "start": 6041
+          },
+          {
+            "end": 6196,
+            "kind": "paragraph",
+            "start": 6164
+          }
+        ],
+        "source_span": [
+          {
+            "end": 6039,
+            "kind": "paragraph",
+            "start": 5997
+          },
+          {
+            "end": 6162,
+            "kind": "paragraph",
+            "start": 6041
+          },
+          {
+            "end": 6196,
+            "kind": "paragraph",
+            "start": 6164
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 15.66699639040333,
+          "dense": 0.27010267972946167,
+          "rrf": 0.01639344262295082,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": null
+        },
+        "score": 0.01639344262295082
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "530cd57ddf1bbb9bfa70a5740d2592c63d046465c71b24794a528f6ae3cd1a5c",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > Can I change my reservation?\n\nCan I change my reservation?\n\nIf you make a reservation and want to change it during the early access period, you can modify your reservation if space is available. Once the early access period is over, you can\u2019t modify or cancel your reservation until the appropriate on-sale date.",
+        "heading_path": "North Pines Campground Early Access Lottery > Can I change my reservation?",
+        "source_span_json": "[{\"end\": 7181, \"kind\": \"paragraph\", \"start\": 7153}, {\"end\": 7435, \"kind\": \"paragraph\", \"start\": 7183}]",
+        "token_count": 72,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 7181,
+            "kind": "paragraph",
+            "start": 7153
+          },
+          {
+            "end": 7435,
+            "kind": "paragraph",
+            "start": 7183
+          }
+        ],
+        "source_span": [
+          {
+            "end": 7181,
+            "kind": "paragraph",
+            "start": 7153
+          },
+          {
+            "end": 7435,
+            "kind": "paragraph",
+            "start": 7183
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 15.040301382900768,
+          "dense": 0.24864022433757782,
+          "rrf": 0.016129032258064516,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": null
+        },
+        "score": 0.016129032258064516
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7\n\n maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or inside Available for iOS park buildings. and Android. Pets must be leashed at all times. Yosemite National Park website Properly dispose of pet waste. Turn You are driving in wildlife habitat. www.nps.gov/yose to page 10 for pet-friendly walks in Follow posted speed limits, Yosemite Valley. Social Media drive carefully, and watch @YosemiteNPS Service dogs are allowed anywhere that for animals crossing the road. visitors can go. A service dog is trained to perform a specific task to assist a person \u201cRed Bear, Dead Bear\u201d signs on park roads with a disability. Emotional support, Enjoy Your mark places where bears have been hit. therapy, and companion animals are all subject to pet regulations. National Park!",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+        "source_span_json": "[{\"end\": 60360, \"kind\": \"paragraph\", \"start\": 59532}]",
+        "token_count": 189,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "source_span": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 7.421301435819494,
+          "dense": 0.6099653244018555,
+          "rrf": 0.016129032258064516,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": null,
+          "dense": 2
+        },
+        "score": 0.016129032258064516
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4b33a27152d34661dfabe3a8f3e986daff81a1a14307502ae5ab9328952164cc",
+        "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+        "text": "Heading: Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?\n\nThe campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+        "heading_path": "Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+        "source_span_json": "[{\"end\": 1146, \"kind\": \"paragraph\", \"start\": 1001}]",
+        "token_count": 77,
+        "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+        "crawled_at": "2026-10-10T02:49:22.312572+00:00",
+        "effective_date": "2023-09-13",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+        "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1146,
+            "kind": "paragraph",
+            "start": 1001
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1146,
+            "kind": "paragraph",
+            "start": 1001
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 14.594509421660767,
+          "dense": 0.3108813464641571,
+          "rrf": 0.015873015873015872,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": null
+        },
+        "score": 0.015873015873015872
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cbaef24dd3e0bd4f5cbfff124d84a652cc4afc1cdca4025ab73151e0917ea081",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips > Pets\n\nPets\n\nThinking about bringing your four-legged friend on vacation? Learn more about Yosemite's pet policies.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips > Pets",
+        "source_span_json": "[{\"end\": 3951, \"kind\": \"paragraph\", \"start\": 3947}, {\"end\": 4055, \"kind\": \"paragraph\", \"start\": 3953}]",
+        "token_count": 33,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 2.078315469097894,
+          "dense": 0.606976330280304,
+          "rrf": 0.015873015873015872,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": null,
+          "dense": 3
+        },
+        "score": 0.015873015873015872
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "932e5ce15e47b6971de97bf6340fef2867e831d0b0c0392c86b1c07fb8e84610",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > What if I\u2019m not available to make a reservation during my time slot?\n\nWhat if I\u2019m not available to make a reservation during my time slot?\n\nIf you miss your time slot, you can make a reservation (if any are available) until the end of the early access period (February 2). Otherwise, you will have to wait until the next general on-sale date.",
+        "heading_path": "North Pines Campground Early Access Lottery > What if I\u2019m not available to make a reservation during my time slot?",
+        "source_span_json": "[{\"end\": 4806, \"kind\": \"paragraph\", \"start\": 4738}, {\"end\": 5010, \"kind\": \"paragraph\", \"start\": 4808}]",
+        "token_count": 87,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4806,
+            "kind": "paragraph",
+            "start": 4738
+          },
+          {
+            "end": 5010,
+            "kind": "paragraph",
+            "start": 4808
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4806,
+            "kind": "paragraph",
+            "start": 4738
+          },
+          {
+            "end": 5010,
+            "kind": "paragraph",
+            "start": 4808
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 12.791439911109709,
+          "dense": 0.2267199158668518,
+          "rrf": 0.015625,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": null
+        },
+        "score": 0.015625
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5fec8cff10bb5a108fa31216ca03d0f30802e565327e1b3c5f54f1acba7a7e62",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > How can I increase my odds of success during the early access period?\n\nHow can I increase my odds of success during the early access period?\n\nYou will be able to view availability starting January 2, but will not be able to make a reservation until your time slot begins. Be sure to check availability before your time slot begins so you can adjust your dates or sites accordingly. Being awarded an early access time slot does not guarantee you will get a reservation of your choice. Reservations will still be in high demand.",
+        "heading_path": "North Pines Campground Early Access Lottery > How can I increase my odds of success during the early access period?",
+        "source_span_json": "[{\"end\": 4350, \"kind\": \"paragraph\", \"start\": 4281}, {\"end\": 4736, \"kind\": \"paragraph\", \"start\": 4352}]",
+        "token_count": 114,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4350,
+            "kind": "paragraph",
+            "start": 4281
+          },
+          {
+            "end": 4736,
+            "kind": "paragraph",
+            "start": 4352
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4350,
+            "kind": "paragraph",
+            "start": 4281
+          },
+          {
+            "end": 4736,
+            "kind": "paragraph",
+            "start": 4352
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 12.773399945316447,
+          "dense": 0.1910766065120697,
+          "rrf": 0.015384615384615385,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 5,
+          "dense": null
+        },
+        "score": 0.015384615384615385
+      }
+    ],
+    "reranked": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.059025810350505,
+          "dense": 0.6132901906967163,
+          "rrf": 0.028298204527712725,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 24,
+          "dense": 1
+        },
+        "score": 0.028298204527712725,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.76324703129245,
+          "dense": 0.5739251375198364,
+          "rrf": 0.027984344422700584,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 13
+        },
+        "score": 0.027984344422700584,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cacd14d12c0174ce63fbf8e652608e2ba51e2081e69e99d1d4f598348cd51fea",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km; Happy Isles; Come prepared with your own approved bear is wheelchair-accessible. Expect heavy spray in spring. paved with gentle Shuttle Stop 6 section has heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Continue up 1500 ft (450 m) elev. gain Shuttle Stop 16 canister\u2014or rent one at an open wilderness center. Stay behind barriers. Rocks at the base of the waterfall incline to Clark Point for more great views of Vernal and Nevada Falls, then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51187, \"kind\": \"paragraph\", \"start\": 50416}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 8.521461873102028,
+          "dense": 0.6042342185974121,
+          "rrf": 0.026736111111111113,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 30,
+          "dense": 4
+        },
+        "score": 0.026736111111111113,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "dcf2e59e089c278bd3e4dab11a5ccfa5868ec2f9de6c4f17e4e837b8a8bd7705",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Become a B.A.R.K. Ranger\n\nPlanning on visiting Yosemite with your dog? Ranger Nicole explains how to become a Yosemite B.A.R.K. Ranger and visit the park safely with your pet.",
+        "heading_path": "Pets > Become a B.A.R.K. Ranger",
+        "source_span_json": "[{\"end\": 4002, \"kind\": \"paragraph\", \"start\": 3853}]",
+        "token_count": 44,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 9.53651582174761,
+          "dense": 0.5739775896072388,
+          "rrf": 0.02638888888888889,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 20,
+          "dense": 12
+        },
+        "score": 0.02638888888888889,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n it. Additional fire restrictions may go into effect, depending on Curry Village Parking conditions. Yosemite Valley can be extremely busy, especially on weekends and holidays. Waterfalls peak during spring snowmelt and dry up in Arrive early in the morning or late in the afternoon to avoid long lines at park entrances. summer. Yosemite Valley parking can completely fill by late morning. Once you find a parking space, keep it. Bridalveil Fall, Vernal Fall, and Nevada Fall Walk, bike, or use free Valley shuttles to get around (page 6.) If Yosemite Valley parking is full, typically flow year-round but are low by late explore other areas of the park and return later in the day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+        "source_span_json": "[{\"end\": 1638, \"kind\": \"paragraph\", \"start\": 751}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 11.577505476235318,
+          "dense": 0.5466023087501526,
+          "rrf": 0.02571241401899771,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 11,
+          "dense": 26
+        },
+        "score": 0.02571241401899771,
+        "post_rank": 5
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "f601721cfc84b4e5b2379a238e3881a2e4021342e40cbf24353d4d1100b81681",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 56972, \"kind\": \"table_row\", \"start\": 56779}, {\"end\": 57248, \"kind\": \"table_row\", \"start\": 56972}]",
+        "token_count": 186,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 56972,
+            "kind": "table_row",
+            "start": 56779
+          },
+          {
+            "end": 57248,
+            "kind": "table_row",
+            "start": 56972
+          }
+        ],
+        "pre_rank": 6,
+        "rank": 6,
+        "scores": {
+          "bm25": 12.125537839630061,
+          "dense": 0.536047637462616,
+          "rrf": 0.02523465148484382,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 7,
+          "dense": 37
+        },
+        "score": 0.02523465148484382,
+        "post_rank": 6
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "8c78bcc0bcfccbcab7792e25b2619717e23c2dc64283c50e163cf2444d4d72c5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | Hiking to Vernal Fall & Nevada Fall Several routes are possible through this corridor. All routes start and end at Happy Isles (shuttle stop 16.) | round-trip (to & from Happy Isles) |  |\n|  | SHORTEST: Vernal Fall Footbridge (1\u22121.5 hrs) Hike the short but very steep first section of the John Muir Trail (JMT) for views of Vernal Fall from the footbridge. Return the same way. | distance: 1.6 mi, 2.6 km elev. gain: 380 ft, 115 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 55859, \"kind\": \"table_row\", \"start\": 55666}, {\"end\": 56135, \"kind\": \"table_row\", \"start\": 55859}]",
+        "token_count": 188,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 55859,
+            "kind": "table_row",
+            "start": 55666
+          },
+          {
+            "end": 56135,
+            "kind": "table_row",
+            "start": 55859
+          }
+        ],
+        "pre_rank": 7,
+        "rank": 7,
+        "scores": {
+          "bm25": 12.088010800944978,
+          "dense": 0.5339290499687195,
+          "rrf": 0.02490996398559424,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 8,
+          "dense": 38
+        },
+        "score": 0.02490996398559424,
+        "post_rank": 7
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "81e79818cf8f8c79b25bc6d8dad332d305f3143f9c481b9a3bca7e508d445006",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n| Column 1 | illI TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+        "source_span_json": "[{\"end\": 55666, \"kind\": \"table_header\", \"start\": 55569}, {\"end\": 56477, \"kind\": \"table_row\", \"start\": 56135}, {\"end\": 56596, \"kind\": \"table_row\", \"start\": 56477}]",
+        "token_count": 179,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "source_span": [
+          {
+            "end": 55666,
+            "kind": "table_header",
+            "start": 55569
+          },
+          {
+            "end": 56477,
+            "kind": "table_row",
+            "start": 56135
+          },
+          {
+            "end": 56596,
+            "kind": "table_row",
+            "start": 56477
+          }
+        ],
+        "pre_rank": 8,
+        "rank": 8,
+        "scores": {
+          "bm25": 10.527634217049297,
+          "dense": 0.5435655117034912,
+          "rrf": 0.02452153110047847,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 16,
+          "dense": 28
+        },
+        "score": 0.02452153110047847,
+        "post_rank": 8
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "e0e1eda0913438fe7676cb5e80659f99d988fae06938612f7c38ec009da82882",
+        "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n| Column 1 | TRAIL | DISTANCE & ELEVATION GAIN | STARTING POINT |\n| --- | --- | --- | --- |\n|  | LONGER: Top of Vernal Fall (2\u20134 hrs) Past the footbridge, climb the steep steps of the Mist Trail to the top of Vernal Fall. Expect heavy spray and slippery stairs in spring. Return the same way OR continue to Clark Point for views of Nevada Fall and a dry descent along the JMT. Trail repairs and winter closures may affect route; check map above. |  |  |\n|  | Out-and-back on Mist Trail | distance: 2.4 mi, 3.8 km elev. gain: 1000 ft, 300 m | Happy Isles; Shuttle Stop 16 |\n",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+        "source_span_json": "[{\"end\": 56779, \"kind\": \"table_header\", \"start\": 56687}, {\"end\": 57610, \"kind\": \"table_row\", \"start\": 57248}, {\"end\": 57729, \"kind\": \"table_row\", \"start\": 57610}]",
+        "token_count": 180,
+        "content_hash": "ba1ec1ffeb695fb2831c5ea4caa4a8f226d57e18fc334cd2234a9725e020b9b1",
+        "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+        "effective_date": "2026-09-21",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 8",
+        "source_spans": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "source_span": [
+          {
+            "end": 56779,
+            "kind": "table_header",
+            "start": 56687
+          },
+          {
+            "end": 57610,
+            "kind": "table_row",
+            "start": 57248
+          },
+          {
+            "end": 57729,
+            "kind": "table_row",
+            "start": 57610
+          }
+        ],
+        "pre_rank": 9,
+        "rank": 9,
+        "scores": {
+          "bm25": 10.451680981385666,
+          "dense": 0.5452336668968201,
+          "rrf": 0.024481265860576206,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 17,
+          "dense": 27
+        },
+        "score": 0.024481265860576206,
+        "post_rank": 9
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5749a787c50de6e59283bf29d54ba315e09a3146de8b79c6c81a07f16f44c358",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n o r n P a o , i & n t H R w o y a d 4 , 1 il C re View scenic viewpoint e picnic area k Backpacking Yosemite A wilderness permit is required for all overnight trips into Yosemite\u2019s Wilderness. Visit go.nps.gov/WildPermits for information. BRIDALVEIL FALL Take a short stroll to the base of HAPPY ISLES TO VERNAL FALL FOOTBRIDGE (OUT & BACK) 1\u22121.5 hrs. Hike the short but very steep first 1.6 mi/2.6 km; Happy Isles; B ac ri c d e a s l s v i e b i l l e F v a i l e l. w A in g g e n ar t e le a , i n w cl h in il e e l a e a st d e s e t p",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 49116, \"kind\": \"paragraph\", \"start\": 48574}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 49116,
+            "kind": "paragraph",
+            "start": 48574
+          }
+        ],
+        "source_span": [
+          {
+            "end": 49116,
+            "kind": "paragraph",
+            "start": 48574
+          }
+        ],
+        "pre_rank": 10,
+        "rank": 10,
+        "scores": {
+          "bm25": 10.993712322188511,
+          "dense": 0.5407407283782959,
+          "rrf": 0.024266201685556526,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 14,
+          "dense": 33
+        },
+        "score": 0.024266201685556526,
+        "post_rank": 10
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "510bcd562124f1dfd22e1e2b21c3d52dce50ab087374eae8ea34ea2aadd19f01",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135 hours. Hike the John Muir Trail to the 5 mi/8 km; Happy Isles; COOK\u2019S MEADOW LOOP Take a relaxed stroll and footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. Follow \u2022Yosemite Valley Wilderness Center: Open 8 am \u2013 5 pm enjoy views of Yosemite Falls, Half Dome, and the 1 fl a m t i p /1 a . v 6 e m km en ; t & Shuttle Stop 6 the Mist Trail another steep mile to the top of Nevada Fall. Return the same way. 2000 ft/600 m elev. gain Shuttle Stop ",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51692, \"kind\": \"paragraph\", \"start\": 51027}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51692,
+            "kind": "paragraph",
+            "start": 51027
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51692,
+            "kind": "paragraph",
+            "start": 51027
+          }
+        ],
+        "pre_rank": 11,
+        "rank": 11,
+        "scores": {
+          "bm25": 10.222485393135722,
+          "dense": 0.5422966480255127,
+          "rrf": 0.024056467876692595,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 18,
+          "dense": 29
+        },
+        "score": 0.024056467876692595,
+        "post_rank": 11
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "633ad03aa52d3b20c86ef273f42a36783bd6c80d329217fc6fa06f2ff0d407c4",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n| DAY & TIME | PROGRAM |\n| --- | --- |\n| 8:30 am (4 hrs) M, W, Sa | Guided Discovery Hike: Vernal Fall Footbridge Difficulty: strenuous. |",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+        "source_span_json": "[{\"end\": 37857, \"kind\": \"table_header\", \"start\": 37818}, {\"end\": 37956, \"kind\": \"table_row\", \"start\": 37857}]",
+        "token_count": 63,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "source_span": [
+          {
+            "end": 37857,
+            "kind": "table_header",
+            "start": 37818
+          },
+          {
+            "end": 37956,
+            "kind": "table_row",
+            "start": 37857
+          }
+        ],
+        "pre_rank": 12,
+        "rank": 12,
+        "scores": {
+          "bm25": 11.124504500221946,
+          "dense": 0.5324360728263855,
+          "rrf": 0.02398989898989899,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 12,
+          "dense": 39
+        },
+        "score": 0.02398989898989899,
+        "post_rank": 12
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "a48d8e1803ca617331acd05917ee8dabdb37ebce21e4abaf7661eb1ba1857e68",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 5\n\n12:30 \u2212 4:30 pm Ask-a-Climber (*starts Sep 6) Stop by to view climbers on El Capitan through spotting scopes and discover the world of free, 1 W pm (2 hrs) Tuolumne Wild and Scenic River Walk Dog Lake parking lot. Easy stroll. \u2022 Aug 17\u221221 | Watercolor Nature Journaling daily* vertical adventure on Yosemite\u2019s big walls. West side of El Capitan bridge (use shuttle stop 9.) NPS drop-in only with Sylvia Eneriz 2 pm (2 hrs) \u2022 Aug 24\u221228 | Watercolor with Jessica de Jesus 1 pm (1 hr) Ranger Walk: Wild About Bears Learn about bears in Yosemite with a ranger (no bear sightings expected.) Meet in front of NPS free, M Forest Walk Meet at Dog Lake parking lot. Easy stroll. \u2022 Aug 31",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 5",
+        "source_span_json": "[{\"end\": 33827, \"kind\": \"paragraph\", \"start\": 33149}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 33827,
+            "kind": "paragraph",
+            "start": 33149
+          }
+        ],
+        "source_span": [
+          {
+            "end": 33827,
+            "kind": "paragraph",
+            "start": 33149
+          }
+        ],
+        "pre_rank": 13,
+        "rank": 13,
+        "scores": {
+          "bm25": 8.05752095846734,
+          "dense": 0.541424572467804,
+          "rrf": 0.02150786308973173,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 34,
+          "dense": 32
+        },
+        "score": 0.02150786308973173,
+        "post_rank": 13
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "48980c25c096bad8f85d90d791e7232feb5a099485a0d6f3c79c964fa5447d19",
+        "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+        "text": "Heading: Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?\n\nHow can I cancel or change my reservation?\n\nCall 877/444-6777 to change or cancel your reservation. You can also log in to recreation.gov to cancel your reservation.\n\nLast updated: September 13, 2023",
+        "heading_path": "Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?",
+        "source_span_json": "[{\"end\": 6039, \"kind\": \"paragraph\", \"start\": 5997}, {\"end\": 6162, \"kind\": \"paragraph\", \"start\": 6041}, {\"end\": 6196, \"kind\": \"paragraph\", \"start\": 6164}]",
+        "token_count": 67,
+        "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+        "crawled_at": "2026-10-10T02:49:22.312572+00:00",
+        "effective_date": "2023-09-13",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+        "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 6039,
+            "kind": "paragraph",
+            "start": 5997
+          },
+          {
+            "end": 6162,
+            "kind": "paragraph",
+            "start": 6041
+          },
+          {
+            "end": 6196,
+            "kind": "paragraph",
+            "start": 6164
+          }
+        ],
+        "source_span": [
+          {
+            "end": 6039,
+            "kind": "paragraph",
+            "start": 5997
+          },
+          {
+            "end": 6162,
+            "kind": "paragraph",
+            "start": 6041
+          },
+          {
+            "end": 6196,
+            "kind": "paragraph",
+            "start": 6164
+          }
+        ],
+        "pre_rank": 14,
+        "rank": 14,
+        "scores": {
+          "bm25": 15.66699639040333,
+          "dense": 0.27010267972946167,
+          "rrf": 0.01639344262295082,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 1,
+          "dense": null
+        },
+        "score": 0.01639344262295082,
+        "post_rank": 14
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "530cd57ddf1bbb9bfa70a5740d2592c63d046465c71b24794a528f6ae3cd1a5c",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > Can I change my reservation?\n\nCan I change my reservation?\n\nIf you make a reservation and want to change it during the early access period, you can modify your reservation if space is available. Once the early access period is over, you can\u2019t modify or cancel your reservation until the appropriate on-sale date.",
+        "heading_path": "North Pines Campground Early Access Lottery > Can I change my reservation?",
+        "source_span_json": "[{\"end\": 7181, \"kind\": \"paragraph\", \"start\": 7153}, {\"end\": 7435, \"kind\": \"paragraph\", \"start\": 7183}]",
+        "token_count": 72,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 7181,
+            "kind": "paragraph",
+            "start": 7153
+          },
+          {
+            "end": 7435,
+            "kind": "paragraph",
+            "start": 7183
+          }
+        ],
+        "source_span": [
+          {
+            "end": 7181,
+            "kind": "paragraph",
+            "start": 7153
+          },
+          {
+            "end": 7435,
+            "kind": "paragraph",
+            "start": 7183
+          }
+        ],
+        "pre_rank": 15,
+        "rank": 15,
+        "scores": {
+          "bm25": 15.040301382900768,
+          "dense": 0.24864022433757782,
+          "rrf": 0.016129032258064516,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 2,
+          "dense": null
+        },
+        "score": 0.016129032258064516,
+        "post_rank": 15
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7\n\n maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or inside Available for iOS park buildings. and Android. Pets must be leashed at all times. Yosemite National Park website Properly dispose of pet waste. Turn You are driving in wildlife habitat. www.nps.gov/yose to page 10 for pet-friendly walks in Follow posted speed limits, Yosemite Valley. Social Media drive carefully, and watch @YosemiteNPS Service dogs are allowed anywhere that for animals crossing the road. visitors can go. A service dog is trained to perform a specific task to assist a person \u201cRed Bear, Dead Bear\u201d signs on park roads with a disability. Emotional support, Enjoy Your mark places where bears have been hit. therapy, and companion animals are all subject to pet regulations. National Park!",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+        "source_span_json": "[{\"end\": 60360, \"kind\": \"paragraph\", \"start\": 59532}]",
+        "token_count": 189,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "source_span": [
+          {
+            "end": 60360,
+            "kind": "paragraph",
+            "start": 59532
+          }
+        ],
+        "pre_rank": 16,
+        "rank": 16,
+        "scores": {
+          "bm25": 7.421301435819494,
+          "dense": 0.6099653244018555,
+          "rrf": 0.016129032258064516,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": null,
+          "dense": 2
+        },
+        "score": 0.016129032258064516,
+        "post_rank": 16
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "4b33a27152d34661dfabe3a8f3e986daff81a1a14307502ae5ab9328952164cc",
+        "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+        "text": "Heading: Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?\n\nThe campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+        "heading_path": "Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+        "source_span_json": "[{\"end\": 1146, \"kind\": \"paragraph\", \"start\": 1001}]",
+        "token_count": 77,
+        "content_hash": "137d15f4c033b4cf2d53718a09d0b339987a684449638ce7e33e505eb3336369",
+        "crawled_at": "2026-10-10T02:49:22.312572+00:00",
+        "effective_date": "2023-09-13",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+        "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 1146,
+            "kind": "paragraph",
+            "start": 1001
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1146,
+            "kind": "paragraph",
+            "start": 1001
+          }
+        ],
+        "pre_rank": 17,
+        "rank": 17,
+        "scores": {
+          "bm25": 14.594509421660767,
+          "dense": 0.3108813464641571,
+          "rrf": 0.015873015873015872,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 3,
+          "dense": null
+        },
+        "score": 0.015873015873015872,
+        "post_rank": 17
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cbaef24dd3e0bd4f5cbfff124d84a652cc4afc1cdca4025ab73151e0917ea081",
+        "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+        "text": "Heading: Plan Your Visit > Top Trip Planning Tips > Pets\n\nPets\n\nThinking about bringing your four-legged friend on vacation? Learn more about Yosemite's pet policies.",
+        "heading_path": "Plan Your Visit > Top Trip Planning Tips > Pets",
+        "source_span_json": "[{\"end\": 3951, \"kind\": \"paragraph\", \"start\": 3947}, {\"end\": 4055, \"kind\": \"paragraph\", \"start\": 3953}]",
+        "token_count": 33,
+        "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+        "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+        "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "source_span": [
+          {
+            "end": 3951,
+            "kind": "paragraph",
+            "start": 3947
+          },
+          {
+            "end": 4055,
+            "kind": "paragraph",
+            "start": 3953
+          }
+        ],
+        "pre_rank": 18,
+        "rank": 18,
+        "scores": {
+          "bm25": 2.078315469097894,
+          "dense": 0.606976330280304,
+          "rrf": 0.015873015873015872,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": null,
+          "dense": 3
+        },
+        "score": 0.015873015873015872,
+        "post_rank": 18
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "932e5ce15e47b6971de97bf6340fef2867e831d0b0c0392c86b1c07fb8e84610",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > What if I\u2019m not available to make a reservation during my time slot?\n\nWhat if I\u2019m not available to make a reservation during my time slot?\n\nIf you miss your time slot, you can make a reservation (if any are available) until the end of the early access period (February 2). Otherwise, you will have to wait until the next general on-sale date.",
+        "heading_path": "North Pines Campground Early Access Lottery > What if I\u2019m not available to make a reservation during my time slot?",
+        "source_span_json": "[{\"end\": 4806, \"kind\": \"paragraph\", \"start\": 4738}, {\"end\": 5010, \"kind\": \"paragraph\", \"start\": 4808}]",
+        "token_count": 87,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4806,
+            "kind": "paragraph",
+            "start": 4738
+          },
+          {
+            "end": 5010,
+            "kind": "paragraph",
+            "start": 4808
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4806,
+            "kind": "paragraph",
+            "start": 4738
+          },
+          {
+            "end": 5010,
+            "kind": "paragraph",
+            "start": 4808
+          }
+        ],
+        "pre_rank": 19,
+        "rank": 19,
+        "scores": {
+          "bm25": 12.791439911109709,
+          "dense": 0.2267199158668518,
+          "rrf": 0.015625,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 4,
+          "dense": null
+        },
+        "score": 0.015625,
+        "post_rank": 19
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "5fec8cff10bb5a108fa31216ca03d0f30802e565327e1b3c5f54f1acba7a7e62",
+        "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+        "text": "Heading: North Pines Campground Early Access Lottery > How can I increase my odds of success during the early access period?\n\nHow can I increase my odds of success during the early access period?\n\nYou will be able to view availability starting January 2, but will not be able to make a reservation until your time slot begins. Be sure to check availability before your time slot begins so you can adjust your dates or sites accordingly. Being awarded an early access time slot does not guarantee you will get a reservation of your choice. Reservations will still be in high demand.",
+        "heading_path": "North Pines Campground Early Access Lottery > How can I increase my odds of success during the early access period?",
+        "source_span_json": "[{\"end\": 4350, \"kind\": \"paragraph\", \"start\": 4281}, {\"end\": 4736, \"kind\": \"paragraph\", \"start\": 4352}]",
+        "token_count": 114,
+        "content_hash": "58a01adbe2ed44b2c0fa2934ab801ed7976b514d9038890cca753313de9f996e",
+        "crawled_at": "2026-10-10T02:49:26.047494+00:00",
+        "effective_date": "2025-11-06",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+        "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4350,
+            "kind": "paragraph",
+            "start": 4281
+          },
+          {
+            "end": 4736,
+            "kind": "paragraph",
+            "start": 4352
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4350,
+            "kind": "paragraph",
+            "start": 4281
+          },
+          {
+            "end": 4736,
+            "kind": "paragraph",
+            "start": 4352
+          }
+        ],
+        "pre_rank": 20,
+        "rank": 20,
+        "scores": {
+          "bm25": 12.773399945316447,
+          "dense": 0.1910766065120697,
+          "rrf": 0.015384615384615385,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 5,
+          "dense": null
+        },
+        "score": 0.015384615384615385,
+        "post_rank": 20
+      }
+    ],
+    "final": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c3a9053fc9ac89b1e2562e12bdf0b3ae9438ca55957600bef8458a21798f889d",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n V O e T r n a a ll l o F w a e ll d f . rom the footbridge. Return the same way. 400 ft/120 m elev. gain Shuttle Stop 16 Wilderness centers open in spring. If a permit parking area or closer to the base of the fall. Stay behind barriers. with gentle incline HAPPY ISLES TO TOP OF VERNAL FALL (OUT & BACK) 2\u20133 hours. Hike the John Muir Trail to the footbridge, reservation is required but the appropriate wilderness Southside Drive 2.4 mi/3.8 km; Happy Isles; Rocks at the base of the waterfall are very slick and then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50059, \"kind\": \"paragraph\", \"start\": 49334}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50059,
+            "kind": "paragraph",
+            "start": 49334
+          }
+        ],
+        "pre_rank": 1,
+        "rank": 1,
+        "scores": {
+          "bm25": 9.059025810350505,
+          "dense": 0.6132901906967163,
+          "rrf": 0.028298204527712725,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 24,
+          "dense": 1
+        },
+        "score": 0.028298204527712725,
+        "post_rank": 1
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This section has center is not open, find instructions for permit pickup dangerous. heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Return the same way. 1000 ft/300 m elev. gain Shuttle Stop 16 at go.nps.gov/wildconditions. LOWER YOSEMITE FALL A short but rewarding trail HAPPY ISLES TO TOP OF VERNAL FALL (LOOP VIA CLARK PT) 2\u20134 hours. Hike the John Muir Trail to the to the base of Yosemite Falls. The east side of the loop 1 mi/1.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km;",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 50549, \"kind\": \"paragraph\", \"start\": 49866}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "source_span": [
+          {
+            "end": 50549,
+            "kind": "paragraph",
+            "start": 49866
+          }
+        ],
+        "pre_rank": 2,
+        "rank": 2,
+        "scores": {
+          "bm25": 11.76324703129245,
+          "dense": 0.5739251375198364,
+          "rrf": 0.027984344422700584,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 10,
+          "dense": 13
+        },
+        "score": 0.027984344422700584,
+        "post_rank": 2
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "cacd14d12c0174ce63fbf8e652608e2ba51e2081e69e99d1d4f598348cd51fea",
+        "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+        "text": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n.6 km; footbridge, then continue onto the Mist Trail. Climb a series of very steep steps to the top of Vernal Fall. This 3.7 mi/6 km; Happy Isles; Come prepared with your own approved bear is wheelchair-accessible. Expect heavy spray in spring. paved with gentle Shuttle Stop 6 section has heavy spray and slippery steps; wear shoes with good traction and expect to be soaked. Continue up 1500 ft (450 m) elev. gain Shuttle Stop 16 canister\u2014or rent one at an open wilderness center. Stay behind barriers. Rocks at the base of the waterfall incline to Clark Point for more great views of Vernal and Nevada Falls, then enjoy a dry descent to the footbridge. are very slick and dangerous. Wilderness Permit Pickup Locations HAPPY ISLES TO TOP OF NEVADA FALL (OUT & BACK) 4\u20135",
+        "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+        "source_span_json": "[{\"end\": 51187, \"kind\": \"paragraph\", \"start\": 50416}]",
+        "token_count": 200,
+        "content_hash": "64d5677d571151cf72a9488a8715b9cfa34d5f24ea4058dae269f93ec4890794",
+        "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+        "effective_date": "2025-04-23",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+        "title": "Yosemite Guide - Volume 50, Issue 4",
+        "source_spans": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "source_span": [
+          {
+            "end": 51187,
+            "kind": "paragraph",
+            "start": 50416
+          }
+        ],
+        "pre_rank": 3,
+        "rank": 3,
+        "scores": {
+          "bm25": 8.521461873102028,
+          "dense": 0.6042342185974121,
+          "rrf": 0.026736111111111113,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 30,
+          "dense": 4
+        },
+        "score": 0.026736111111111113,
+        "post_rank": 3
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "dcf2e59e089c278bd3e4dab11a5ccfa5868ec2f9de6c4f17e4e837b8a8bd7705",
+        "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+        "text": "Heading: Pets > Become a B.A.R.K. Ranger\n\nPlanning on visiting Yosemite with your dog? Ranger Nicole explains how to become a Yosemite B.A.R.K. Ranger and visit the park safely with your pet.",
+        "heading_path": "Pets > Become a B.A.R.K. Ranger",
+        "source_span_json": "[{\"end\": 4002, \"kind\": \"paragraph\", \"start\": 3853}]",
+        "token_count": 44,
+        "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "effective_date": "2026-06-24",
+        "page_type": "html",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_spans": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "source_span": [
+          {
+            "end": 4002,
+            "kind": "paragraph",
+            "start": 3853
+          }
+        ],
+        "pre_rank": 4,
+        "rank": 4,
+        "scores": {
+          "bm25": 9.53651582174761,
+          "dense": 0.5739775896072388,
+          "rrf": 0.02638888888888889,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 20,
+          "dense": 12
+        },
+        "score": 0.02638888888888889,
+        "post_rank": 4
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "chunk_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+        "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+        "text": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n it. Additional fire restrictions may go into effect, depending on Curry Village Parking conditions. Yosemite Valley can be extremely busy, especially on weekends and holidays. Waterfalls peak during spring snowmelt and dry up in Arrive early in the morning or late in the afternoon to avoid long lines at park entrances. summer. Yosemite Valley parking can completely fill by late morning. Once you find a parking space, keep it. Bridalveil Fall, Vernal Fall, and Nevada Fall Walk, bike, or use free Valley shuttles to get around (page 6.) If Yosemite Valley parking is full, typically flow year-round but are low by late explore other areas of the park and return later in the day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation",
+        "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+        "source_span_json": "[{\"end\": 1638, \"kind\": \"paragraph\", \"start\": 751}]",
+        "token_count": 200,
+        "content_hash": "6552c4406cb1e22937f1bfe76981f22fb5c84e38d401b2ab16232ce473b26259",
+        "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+        "effective_date": "2026-08-13",
+        "page_type": "pdf",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+        "title": "Yosemite Guide - Volume 51, Issue 7",
+        "source_spans": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "source_span": [
+          {
+            "end": 1638,
+            "kind": "paragraph",
+            "start": 751
+          }
+        ],
+        "pre_rank": 5,
+        "rank": 5,
+        "scores": {
+          "bm25": 11.577505476235318,
+          "dense": 0.5466023087501526,
+          "rrf": 0.02571241401899771,
+          "rerank": null
+        },
+        "retriever_ranks": {
+          "bm25": 11,
+          "dense": 26
+        },
+        "score": 0.02571241401899771,
+        "post_rank": 5
+      }
+    ],
+    "candidate_count": 20,
+    "eligible_count": 1377,
+    "shortfall": false,
+    "requested_candidates": 20,
+    "filters": {
+      "parks": [
+        "yose"
+      ]
+    },
+    "rerank_input_tokens": null,
+    "score_types": {
+      "dense": "cosine",
+      "bm25": "BM25Okapi",
+      "rrf": "sum(1/(60+rank))",
+      "rerank": "raw model score (not calibrated probability)"
+    },
+    "timings": {
+      "load_ms": 355.2898750640452,
+      "retrieval_ms": 46.42212484031916,
+      "rerank_ms": 0.0,
+      "total_ms": 401.7370839137584
+    }
+  }
+}

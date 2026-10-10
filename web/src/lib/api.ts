@@ -168,6 +168,9 @@ export interface ChatTurn {
     retrieval: {
       ran: boolean
       query: string | null
+      keyword_query?: string | null
+      keyword_current_terms?: string[] | null
+      keyword_candidate_count?: number | null
       filters: { parks: string[]; source_url_count: number }
       mode: string | null
       build_id: string | null
@@ -323,33 +326,90 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  let response: Response
+async function request<T>(path: string, init?: RequestInit, timeoutMs = 20_000): Promise<T> {
+  const controller = new AbortController()
+  const cancel = () => controller.abort(init?.signal?.reason)
+  if (init?.signal?.aborted) cancel()
+  else init?.signal?.addEventListener("abort", cancel, { once: true })
+  let timedOut = false
+  const timer = setTimeout(() => {
+    timedOut = true
+    controller.abort()
+  }, timeoutMs)
   try {
-    response = await fetch(path, { credentials: "same-origin", ...init })
+    const response = await fetch(path, { credentials: "same-origin", ...init, signal: controller.signal })
+    let body: unknown = null
+    try {
+      body = await response.json()
+    } catch (error) {
+      if (controller.signal.aborted) throw error
+    }
+    if (!response.ok) {
+      const error = (body as { error?: { code?: string; message?: string; details?: ErrorDetails } } | null)?.error
+      throw new ApiError(
+        response.status,
+        error?.code ?? "http_error",
+        error?.message ?? (response.status >= 500 ? "ParkGuide is temporarily unavailable. Please try again shortly." : `The server returned HTTP ${response.status}.`),
+        error?.details ?? null,
+      )
+    }
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      throw new ApiError(response.status, "invalid_response", "ParkGuide returned an unreadable response. Please try again.")
+    }
+    return body as T
   } catch (error) {
+    if (timedOut) throw new ApiError(0, "request_timeout", "The request took too long. The server may still be finishing it; wait a moment before retrying.")
     if (error instanceof DOMException && error.name === "AbortError") throw error
-    throw new ApiError(0, "network_error", "The local ParkGuide server could not be reached. Is it still running?")
+    if (error instanceof ApiError) throw error
+    throw new ApiError(0, "network_error", "ParkGuide could not be reached. Check your connection and try again.")
+  } finally {
+    clearTimeout(timer)
+    init?.signal?.removeEventListener("abort", cancel)
   }
-  let body: unknown = null
-  try {
-    body = await response.json()
-  } catch {
-    body = null
-  }
-  if (!response.ok) {
-    const error = (body as { error?: { code?: string; message?: string; details?: ErrorDetails } } | null)?.error
-    throw new ApiError(
-      response.status,
-      error?.code ?? "http_error",
-      error?.message ?? `The server returned HTTP ${response.status}.`,
-      error?.details ?? null,
-    )
-  }
-  return body as T
 }
 
-export const getMeta = () => request<Meta>("/api/meta")
+const object = (value: unknown): value is Record<string, unknown> => Boolean(value) && typeof value === "object" && !Array.isArray(value)
+const strings = (value: unknown): value is string[] => Array.isArray(value) && value.every((item) => typeof item === "string")
+const numbers = (value: unknown): value is number[] => Array.isArray(value) && value.every((item) => typeof item === "number" && Number.isFinite(item))
+const objects = (value: unknown, check: (item: Record<string, unknown>) => boolean): boolean => Array.isArray(value) && value.every((item) => object(item) && check(item))
+const invalidResponse = () => new ApiError(200, "invalid_response", "ParkGuide returned an incomplete response. Please try again.")
+
+// Guard the structures rendered by the app before a successful HTTP response
+// enters React state. Source support and citation integrity remain server checks.
+function validChatTurn(value: unknown): value is ChatTurn {
+  if (!object(value) || !PARKS.some((park) => park.code === value.selected_park)
+      || !["answer", "refusal", "clarification"].includes(String(value.status))
+      || typeof value.text !== "string" || typeof value.history_content !== "string"
+      || typeof value.turn_id !== "string" || typeof value.question !== "string"
+      || !object(value.history) || !object(value.timing)
+      || !(value.reason === null || (object(value.reason) && typeof value.reason.code === "string" && typeof value.reason.category === "string" && typeof value.reason.detail === "string"))
+      || !objects(value.claims, (claim) => typeof claim.number === "number" && typeof claim.text === "string" && numbers(claim.source_numbers))
+      || !objects(value.sources, (page) => typeof page.number === "number" && typeof page.title === "string" && typeof page.source_url === "string"
+        && objects(page.passages, (passage) => typeof passage.chunk_id === "string" && typeof passage.saved_text === "string" && typeof passage.excerpt === "string"
+          && numbers(passage.claim_numbers) && objects(passage.source_spans, (span) => typeof span.start === "number" && typeof span.end === "number")
+          && objects(passage.reviewer_witnesses, (witness) => typeof witness.claim_number === "number" && typeof witness.quote === "string")))
+      || !object(value.inspector)) return false
+  const detail = value.inspector
+  if (!object(detail.retrieval) || !object(detail.embedding) || !object(detail.generation) || !object(detail.review)
+      || !object(detail.ledger_window) || typeof detail.ledger_window.captured !== "boolean"
+      || !strings(detail.guard_errors) || !strings(detail.integrity_errors)) return false
+  const retrieval = detail.retrieval
+  return object(retrieval.filters) && strings(retrieval.filters.parks) && object(retrieval.timings_ms)
+    && (retrieval.keyword_current_terms == null || strings(retrieval.keyword_current_terms))
+    && object(retrieval.score_labels) && strings(retrieval.context_ids)
+    && objects(retrieval.candidates, (item) => typeof item.chunk_id === "string" && typeof item.snippet === "string" && object(item.scores) && object(item.retriever_ranks))
+    && (!detail.ledger_window.captured || (object(detail.ledger_window.by_kind) && Object.values(detail.ledger_window.by_kind).every(object)))
+}
+
+export const getMeta = async () => {
+  const value = await request<unknown>("/api/meta")
+  if (!object(value) || !objects(value.parks, (park) => typeof park.code === "string" && typeof park.name === "string")
+      || !object(value.chat) || typeof value.chat.ready !== "boolean" || !object(value.totals)
+      || !Array.isArray(value.builds) || !object(value.models) || !object(value.models.embedding)
+      || !object(value.models.generation) || !object(value.models.reranker) || !object(value.models.azure_resource)
+      || !object(value.runtime) || !object(value.runtime.budget) || !object(value.retrieval) || !object(value.local_persistence)) throw invalidResponse()
+  return value as unknown as Meta
+}
 
 export function listDocuments(params: { park?: ParkCode; q?: string; page_type?: string; has_table?: boolean; offset: number; limit: number }, signal?: AbortSignal) {
   const query = new URLSearchParams()
@@ -377,10 +437,13 @@ export const MAX_QUESTION_CHARS = 1000
 export const MAX_HISTORY_MESSAGES = 12
 export const MAX_HISTORY_CONTENT_CHARS = 4000
 
-export const postChat = (body: { selected_park: ParkCode; question: string; history: HistoryMessage[] }, signal: AbortSignal) =>
-  request<ChatTurn>("/api/chat", {
+export const postChat = async (body: { selected_park: ParkCode; question: string; history: HistoryMessage[] }, signal: AbortSignal) => {
+  const value = await request<unknown>("/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
     signal,
-  })
+  }, 110_000)
+  if (!validChatTurn(value)) throw invalidResponse()
+  return value
+}

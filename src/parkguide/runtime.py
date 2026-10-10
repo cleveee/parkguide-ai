@@ -75,8 +75,8 @@ def runtime_profile():
             "rerank_enabled": False,
             "rerank_reason": "The hosted Vercel bundle does not install the optional PyTorch cross-encoder (size and cold start). "
                              "Retrieval is hybrid NumPy cosine + BM25 with reciprocal-rank fusion and the same five-passage context.",
-            "evaluation_note": "Recent selected-park web checks used the local cross-encoder reranker. Historical development stages used several local retrieval variants. "
-                               "They do not measure this hosted profile's retrieval accuracy.",
+            "evaluation_note": "Historical local evaluations do not measure this hosted profile's retrieval accuracy. "
+                               "Separate hosted visitor diagnostics are recorded in the project report; their AI assessments are not human verification.",
             "budget": {"cap_usd": cap, "scope": "per_instance",
                        "note": "Ledger lives in /tmp on each Vercel instance; it resets when the instance is recycled and is not "
                                "shared across concurrently running instances. It is not a global spending limit. Use deployment protection and provider rate/quota controls to manage exposure; Azure budget alerts alone do not enforce a hard cap."},

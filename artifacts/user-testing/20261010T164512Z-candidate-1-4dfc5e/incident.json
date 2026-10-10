@@ -1,0 +1,11 @@
+{
+  "kind": "local_candidate_http_origin_harness_incident",
+  "affected_attempt": "H01.1",
+  "http_status": 403,
+  "error_code": "origin_not_allowed",
+  "request_origin": "http://127.0.0.1:8515",
+  "observed": "GET metadata succeeded but the first POST was rejected; runner stopped and retained its conservative $0.025 unreported-usage reservation.",
+  "resolution": "Root corrected the loopback harness at port8515; reported a successful HTTP200 same-origin probe with hosted runtime/reranking off and zero ledger events. Full candidate rerun has a new folder and stage candidate-1b.",
+  "scope": "Local test shim issue, not a measured chatbot semantic regression. Original failed run remains immutable.",
+  "human_review_pending": true
+}

@@ -1,0 +1,17 @@
+{
+  "id": "20261010T175228Z-candidate-3-5722c0",
+  "completed_at": "2026-10-10T17:54:14.728695+00:00",
+  "turns": 18,
+  "requested_turns": 18,
+  "stopped_reason": null,
+  "estimated_cost_or_reservations_usd": 0.016437599999999997,
+  "all_ledgers_captured": true,
+  "http_200": 18,
+  "allowed_statuses": 18,
+  "source_identity_failures": 0,
+  "semantic_accuracy": "not computed; review individual answers against frozen source spans",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "turns_sha256": "08e67a44fe799ca1da3cb35940a5cfbc42961c9569a581c8e86bb48f44852524",
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c"
+}

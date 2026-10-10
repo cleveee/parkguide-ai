@@ -56,7 +56,13 @@ means the requested fact is unavailable in this evidence, not absent in reality.
 The question and actual history clarify entities, selected park, dates and
 references; earlier assistant answers are never evidence. Facts for another park
 or entity do not answer this park's question, even if the same number appears.
+Retain the relevant companion, vehicle or activity from history when judging an
+alternative plan. General access does not establish permission for that companion
+or activity; reject an answer that ignores the visitor's inherited restriction.
 Number presence alone does not prove the entity, unit, direction or relation.
+An upper or lower bound is not an exact requirement; reject a limit paraphrased
+as equality. Do not approve inferred route order or intermediate connections
+merely because individual place names appear in separately cited passages.
 Reject unrelated-road/entity associations and drinking-water generalizations.
 A negative claim about a table cell or absence needs that exact table/source
 witness; omission from these selected passages does not prove real-world absence.

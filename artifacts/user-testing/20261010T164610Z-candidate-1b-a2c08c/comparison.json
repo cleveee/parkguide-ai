@@ -1,0 +1,159 @@
+{
+  "baseline": "artifacts/user-testing/20261010T164035Z-baseline-c5e32e",
+  "candidate": "artifacts/user-testing/20261010T164610Z-candidate-1b-a2c08c",
+  "kind": "same frozen questions, actual newly generated conversation histories, AI provisional source assessment",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "cases": [
+    {
+      "case_turn": "H01.1",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Pets are allowed on the paved road to Mirror Lake, but not on the unpaved trail around it.",
+      "candidate_text": "Dogs are allowed on the paved road to Mirror Lake, but not the unpaved trail around the lake."
+    },
+    {
+      "case_turn": "H01.2",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Pets are allowed only on the paved road, not the unpaved trail around Mirror Lake.",
+      "candidate_text": "Pets are allowed only on the paved road, not the unpaved trail around Mirror Lake."
+    },
+    {
+      "case_turn": "H01.3",
+      "baseline_grade": "partial",
+      "candidate_grade": "fail",
+      "direction": "regressed",
+      "baseline_text": "The leash should be six feet long.",
+      "candidate_text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "H02.1",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Which place, date, or detail in Yosemite National Park do you mean?",
+      "candidate_text": "Which place, date, or detail in Yosemite National Park do you mean?"
+    },
+    {
+      "case_turn": "H02.2",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "You may run your generator from 7\u20139 am, noon\u20132 pm, and 5\u20137 pm; not at other times.",
+      "candidate_text": "In Yosemite campgrounds, you may run a generator from 7\u20139 am, noon\u20132 pm, and 5\u20137 pm only."
+    },
+    {
+      "case_turn": "H02.3",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Quiet hours are 10 pm to 6 am.",
+      "candidate_text": "Quiet hours are 10 pm to 6 am."
+    },
+    {
+      "case_turn": "H03.1",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "No. Swimming or bathing is illegal in water entirely of thermal origin in Yellowstone.",
+      "candidate_text": "No. Swimming or bathing in water entirely of thermal origin is illegal in Yellowstone."
+    },
+    {
+      "case_turn": "H03.2",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Thermal runoff can be extremely hot and cause burns. Do not touch thermal features.",
+      "candidate_text": "Thermal runoff can be extremely hot and cause burns; do not touch it."
+    },
+    {
+      "case_turn": "H03.3",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "This conversation is for Yellowstone National Park. Choose another park in the selector to ask about it.",
+      "candidate_text": "This conversation is for Yellowstone National Park. Choose another park in the selector to ask about it."
+    },
+    {
+      "case_turn": "H04.1",
+      "baseline_grade": "partial",
+      "candidate_grade": "pass",
+      "direction": "improved",
+      "baseline_text": "The road from Mammoth Hot Springs to the Northeast Entrance, through Cooke City, is generally open year-round to regular cars.",
+      "candidate_text": "The road between Mammoth Hot Springs and the Northeast Entrance is generally open year-round to regular vehicles, weather permitting."
+    },
+    {
+      "case_turn": "H04.2",
+      "baseline_grade": "pass",
+      "candidate_grade": "partial",
+      "direction": "regressed",
+      "baseline_text": "The route is generally open year-round, but only weather permitting; the saved passage cannot confirm it will be open January 15, 2027.",
+      "candidate_text": "I could not find enough supporting information in the saved Yellowstone sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "H04.3",
+      "baseline_grade": "partial",
+      "candidate_grade": "partial",
+      "direction": "unchanged",
+      "baseline_text": "I could not find enough supporting information in the saved Yellowstone sources to answer that. Please check the official NPS information.",
+      "candidate_text": "I could not find enough supporting information in the saved Yellowstone sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "H05.1",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Yes. Leashed dogs are allowed on trails above the rim.",
+      "candidate_text": "Yes. Leashed dogs are allowed on trails above the rim."
+    },
+    {
+      "case_turn": "H05.2",
+      "baseline_grade": "fail",
+      "candidate_grade": "pass",
+      "direction": "improved",
+      "baseline_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information.",
+      "candidate_text": "Pets are not allowed below the rim on inner canyon trails. Pets are not allowed below the rim, including on inner canyon trails."
+    },
+    {
+      "case_turn": "H05.3",
+      "baseline_grade": "fail",
+      "candidate_grade": "pass",
+      "direction": "improved",
+      "baseline_text": "Which place, date, or detail in Grand Canyon National Park do you mean?",
+      "candidate_text": "Pets are not permitted on park shuttle buses."
+    },
+    {
+      "case_turn": "H06.1",
+      "baseline_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "baseline_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+      "candidate_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead."
+    },
+    {
+      "case_turn": "H06.2",
+      "baseline_grade": "fail",
+      "candidate_grade": "partial",
+      "direction": "improved",
+      "baseline_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information.",
+      "candidate_text": "The South Kaibab Trail is described as lacking water."
+    },
+    {
+      "case_turn": "H06.3",
+      "baseline_grade": "partial",
+      "candidate_grade": "partial",
+      "direction": "unchanged",
+      "baseline_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information.",
+      "candidate_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information."
+    }
+  ],
+  "ordinal_directions": {
+    "improved": 4,
+    "regressed": 2,
+    "unchanged": 12
+  },
+  "interpretation": "Mixed result. Preserve real pet-followup fixes and route precision gain; correct leash regression and incomplete table/date/refusal recovery before selection. Small development suite, multiple changed factors, no benchmark or causal accuracy claim."
+}

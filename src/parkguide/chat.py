@@ -26,7 +26,20 @@ _CALENDAR = re.compile(rf"\b(?:{_MONTHS}\.?\s*(?:\d{{1,2}}(?:st|nd|rd|th)?\b)?|s
 _YEAR = re.compile(r"\b20\d{2}(?:\s*[-–]\s*(?:20)?\d{2})?\b")
 _ISO_DATE = re.compile(r"\b(20\d{2})-(\d{2})-(\d{2})\b")
 _NUMERIC_DATE = re.compile(r"\b(\d{1,2})/(\d{1,2})/(20\d{2})\b")
+_WRITTEN_DATE = re.compile(rf"\b({_MONTHS})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?\s*,?\s*(20\d{{2}})\b", re.I)
+_RELATIVE_DATE = re.compile(r"\b(?:today|tonight|tomorrow|yesterday|right now|this (?:week|weekend)|next (?:week|weekend))\b", re.I)
 _COMPARISON = re.compile(r"\b(?:compare|comparison|both|their|each|versus|vs|differ|difference|two)\b", re.I)
+_PLACE = re.compile(r"\b([a-z][a-z'’-]*)\s+(?:falls?|springs?|lake|creek|river|valley|village|point|meadow|loop|trail|road)\b", re.I)
+_PLACE_NON_NAMES = {"a", "an", "the", "in", "during", "this", "next", "last", "for", "until", "after", "before", "through", "early", "late", "and", "or", "about"}
+
+
+def _place_spans(text):
+    """Preserve names such as Yosemite Fall and May Lake during slot removal."""
+    return [match.span() for match in _PLACE.finditer(text) if match.group(1).lower() not in _PLACE_NON_NAMES]
+
+
+def _outside_places(match, spans):
+    return not any(match.start() < end and match.end() > start for start, end in spans)
 
 
 def _positive_parks(text):
@@ -40,8 +53,10 @@ def _positive_parks(text):
 
 
 def _follow_up(text):
+    # Existential "there" introduces a subject; it does not refer to the last one.
+    references = re.sub(r"\b(?:is|are|was|were|be|been)\s+there\b", "", text, flags=re.I)
     return bool(re.search(r"^(?:and\b|also\b|what about\b|how about\b|instead\b|I mean(?:t)?\b|actually\b)", text, re.I)
-                or re.search(r"\b(?:it|its|that|those|there|their|them|same|these|both|each|former|latter)\b", text, re.I)
+                or re.search(r"\b(?:it|its|that|those|there|they|their|them|he|him|his|she|her|hers|same|these|both|each|former|latter|instead)\b", references, re.I)
                 or _COMPARISON.search(text)
                 or not re.sub(r"[\s,?.!-]", "", _topic_text(text)))
 
@@ -50,10 +65,13 @@ def _topic_text(text):
     """Keep user subjects; park/date constraints are maintained separately."""
     text = _ISO_DATE.sub(" ", text)
     text = _NUMERIC_DATE.sub(" ", text)
-    text = _CALENDAR.sub(" ", text)
+    text = _RELATIVE_DATE.sub(" ", text)
+    places = _place_spans(text)
+    text = _CALENDAR.sub(lambda match: " " if _outside_places(match, places) else match.group(), text)
     text = _YEAR.sub(" ", text)
     for pattern in PARKS.values():
-        text = re.sub(pattern + r"(?:['’]s)?", " ", text, flags=re.I)
+        places = _place_spans(text)
+        text = re.sub(pattern + r"(?:['’]s)?", lambda match: " " if _outside_places(match, places) else match.group(), text, flags=re.I)
     return re.sub(r"\s+", " ", text).strip(" ,?.")
 
 
@@ -67,7 +85,11 @@ def _context_date(text, calendar, year):
             return date.strftime("%B") + f" {date.day}", str(date.year)
         except ValueError:
             return None, None
-    dates = _CALENDAR.findall(text)
+    relative = _RELATIVE_DATE.search(text)
+    if relative:
+        return relative.group(), None
+    places = _place_spans(text)
+    dates = [match.group() for match in _CALENDAR.finditer(text) if _outside_places(match, places)]
     years = _YEAR.findall(text)
     return (" / ".join(dates) if dates else calendar, " / ".join(years) if years else year)
 
@@ -78,15 +100,23 @@ def resolve_query(question, history):
     Assistant answers never become retrieval evidence. The first subject and
     three recent follow-ups bound the inherited topic without losing its anchor.
     """
-    users = [message["content"] for message in history if message["role"] == "user"]
+    users = []
+    clarification = False
+    for message in history:
+        if message["role"] == "assistant":
+            clarification = bool(re.match(r"^(?:which|where|what|when)\b.*\?", message["content"], re.I | re.S))
+        elif message["role"] == "user":
+            users.append((message["content"], clarification))
+            clarification = False
     parks, mentioned, topics = [], [], []
     calendar = year = None
     previous_topics = []
     inherit = False
-    for text in [*users, question]:
+    for text, answers_clarification in [*users, (question, clarification)]:
         explicit = _positive_parks(text)
         comparison = bool(_COMPARISON.search(text))
-        inherit = bool(topics) and _follow_up(text)
+        short_reply = answers_clarification and len(text.split()) <= 12 and not re.search(r"\?|^(?:can|could|do|does|is|are|what|where|when|how|why|tell)\b", text, re.I)
+        inherit = bool(topics) and (_follow_up(text) or short_reply)
         if not inherit:
             topics, calendar, year = [], None, None
         previous_topics = list(topics)
@@ -147,25 +177,87 @@ def preflight_response(question, history, filters):
         return {"action": "refuse", "answer": "I cannot access private bookings, item records, or live assignments. Please contact the park's official reservation or lost-property service.", "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "private_record_lookup"}
     if re.search(r'\b(?:dose|dosage)\b',question,re.I) and re.search(r'\b(?:my|me|personal|I)\b',question,re.I):
         return {"action":"refuse","answer":"I cannot give a personal medication dose or clear you to continue hiking. Please seek a qualified medical professional; contact park emergency assistance if urgent.","claims":[],"usage":{},"elapsed_ms":0,"preflight_reason":"personal_medical_request"}
+    if not any(message["role"] == "user" for message in history):
+        parks = filters.get("parks", [])
+        location = f" in {PARK_NAMES[parks[0]]} National Park" if len(parks) == 1 else ""
+        text = question.strip().rstrip("?.!")
+        message = None
+        if re.fullmatch(r"how (?:long|much time) (?:(?:does|will|would) (?:it|that|this|the (?:hike|walk|drive|trip)) take|is (?:it|that|this|the (?:hike|walk|drive|trip)))", text, re.I):
+            message = f"Which trail, drive, or activity{location} do you mean?"
+        elif re.search(r"\b(?:closest|nearest)\b", text, re.I) and (
+                not re.search(r"\b(?:to|from|near|at|in)\s+\w", _topic_text(text), re.I)
+                or re.search(r"\b(?:to|from|near)\s+(?:me|us|here)\b", text, re.I)):
+            message = f"What is your starting location or reference point{location}?"
+        elif re.fullmatch(r"(?:(?:can|may) I (?:bring|take|use) (?:it|that|this|them|those)|(?:is|are) (?:it|that|this|they|those) (?:open|allowed|permitted|safe|accessible|available)|where (?:is|are) (?:it|that|this|they|those))", text, re.I):
+            message = f"Which place or item{location} do you mean?"
+        if message:
+            return {"action": "clarify", "answer": message, "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "missing_reference"}
     if not history and not filters.get('parks') and len(question.split()) <= 8 and re.search(r'\b(?:it|that|there|closest)\b|\bgo in\b', question, re.I):
         return {"action": "clarify", "answer": "Which park, entrance, place, or item do you mean? If distance matters, please give your starting location.", "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "missing_reference"}
     return None
 
 
-def scoped_preflight(question, selected_park):
+def _future_status_request(question):
+    """Recognize explicit future dates without rejecting historical lookups."""
+    if (not re.search(r"\b(?:will|confirm|definitely|guarantee)\b", question, re.I)
+            or not re.search(r"\b(?:open|reopen|closed|conditions?)\b", question, re.I)):
+        return False
+    today = datetime.now(timezone.utc).date()
+    years = [int(year) for year in re.findall(r"\b(20\d{2})\b", question)]
+    if any(year > today.year for year in years):
+        return True
+    if today.year not in years:
+        return False
+    dates = [(match.group(), "%Y-%m-%d") for match in _ISO_DATE.finditer(question)]
+    dates += [(match.group(), "%m/%d/%Y") for match in _NUMERIC_DATE.finditer(question)]
+    dates += [(f"{match[1][:3]} {match[2]} {match[3]}", "%b %d %Y") for match in _WRITTEN_DATE.finditer(question)]
+    for text, format in dates:
+        try:
+            if datetime.strptime(text, format).date() > today:
+                return True
+        except ValueError:
+            continue
+    return False
+
+
+def scoped_preflight(question, selected_park, resolved_question=None):
     """Keep an explicit UI scope and unavailable live/private lookups local."""
     name = PARK_NAMES[selected_park]
     if any(park != selected_park for park in _positive_parks(question)):
         return {"action": "refuse", "answer": f"This conversation is for {name} National Park. Choose another park in the selector to ask about it.",
                 "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "selected_park_mismatch"}
-    if re.search(r"\b(?:right now|today|tonight|currently|real[- ]time|live availability|this week|current (?:weather|conditions|closures|availability|vacancies|price))\b", question, re.I):
+    if _future_status_request(question):
+        return {"action": "refuse", "answer": f"I cannot confirm opening status or conditions for your requested travel date from the saved {name} sources. Check the park's official updates for that date and confirm with the park before traveling.",
+                "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "dated_information_unavailable"}
+    live_time = re.search(r"\b(?:right now|today|tonight|tomorrow|currently|at the moment|this (?:week|weekend)|current|latest)\b", question, re.I)
+    date_reply = re.sub(r"^(?:and|what about|how about)\b", "", question, flags=re.I).strip()
+    live_question = resolved_question if resolved_question and not _topic_text(date_reply) else question
+    live_state = re.search(r"\b(?:open|opening|closed|closures?|weather|forecast|conditions?|availability|available|vacancies|vacancy|price|prices|fees?|costs?|hours|traffic|delays?|crowds?|busy|wait|alerts?|updates?|temperature|snow|ice|flood|wildfire|smoke|safe|unsafe|passable|accessible|operating|running|sold out|fire restrictions)\b", live_question, re.I)
+    visit_permission = re.search(r"\b(?:can|could|may|should) (?:I|we) (?:visit|enter|hike|camp|drive|swim|go)\b", live_question, re.I)
+    if (re.search(r"\b(?:real[- ]time|live (?:availability|conditions|weather|updates?|status))\b", question, re.I)
+            or live_time and (live_state or visit_permission)):
         return {"action": "refuse", "answer": f"I cannot verify live conditions, availability, or current updates for {name} from the saved database. Please check the park's official information.",
                 "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "live_information_unavailable"}
-    if (re.search(r"\b(?:my|our)\s+(?:(?:private|personal)\s+)?(?:reservation|booking|permit|passport)\b", question, re.I)
-            and re.search(r"\b(?:look\s*up|retrieve|check|find|confirm|status|number|assigned|assignment)\b", question, re.I)):
-        return {"action": "refuse", "answer": "The saved public-source database contains no personal reservation or permit records. Please use the official reservation service.",
+    # Facility names can sit between ownership and the record ("my Bridge Bay
+    # reservation"). Do not cross a verb into a general question about rules.
+    if (re.search(r"\b(?:my|our)\s+(?:(?!(?:needs?|requires?|have|has|is|are|can|could|should|will|would|does|do)\b)[\w'’-]+\s+){0,6}(?:reservation|booking|permit|passport)\b", question, re.I)
+            and re.search(r"\b(?:look\s*up|retrieve|check|find|confirm|status|number|assigned|assignment|paid|payment)\b", question, re.I)):
+        return {"action": "refuse", "answer": "The saved public-source database contains no personal reservation or permit records. For a booking or payment check, use your booking provider's official website or contact its reservation service.",
                 "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "private_record_lookup"}
     return None
+
+
+def scoped_history(history, selected_park):
+    """Drop foreign-park exchanges without losing earlier selected-park context."""
+    retained = []
+    keep_turn = True
+    for message in history:
+        foreign = any(park != selected_park for park in _positive_parks(message["content"]))
+        if message["role"] == "user":
+            keep_turn = not foreign
+        if keep_turn and not foreign:
+            retained.append(message)
+    return retained
 
 
 def sources_within_park(trace, selected_park):
@@ -245,10 +337,9 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
     # Keep each saved trace limited to what actually preceded this request.
     # Evaluation and the UI append later turns to their own mutable history.
     history = deepcopy(history or [])
-    history_scope_reset = bool(selected_park and any(
-        park != selected_park for message in history for park in _positive_parks(message["content"])))
-    if history_scope_reset:
-        history = []
+    in_scope_history = scoped_history(history, selected_park) if selected_park else history
+    history_scope_reset = in_scope_history != history
+    history = in_scope_history
     settings = config()
     default_generator=generator is None
     if rerank is None:
@@ -264,7 +355,7 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
         if selected_park not in _positive_parks(retrieval_query):
             retrieval_query = f"{PARK_NAMES[selected_park]}: {retrieval_query}"
         generation_question = f"Selected park: {PARK_NAMES[selected_park]} National Park. Answer only for this park from its saved passages.\nVisitor question: {question}"
-    preflight = scoped_preflight(question, selected_park) if selected_park else None
+    preflight = scoped_preflight(question, selected_park, retrieval_query) if selected_park else None
     if retriever is None and not closed_book and preflight is None:
         filters = table_followup_filters(question, history, filters, ROOT / settings['database'])
     if preflight is None and not closed_book:

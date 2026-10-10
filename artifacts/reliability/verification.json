@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-10-10T17:53:28.254914+00:00",
+  "scope": "Independent non-gold visitor-experience diagnostics; no human verification or sealed-test use",
+  "offline_verification": {
+    "python_tests": {
+      "passed": 474,
+      "seconds": 4.84
+    },
+    "browser_request_tests": {
+      "passed": 10
+    },
+    "typescript_and_vite_build": "passed",
+    "frontend_lint": {
+      "exit_code": 0,
+      "pre_existing_fast_refresh_warnings": 11
+    },
+    "build_warning": "Existing JavaScript bundle exceeds 500kB; build succeeded"
+  },
+  "database": {
+    "sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+    "documents": 155,
+    "chunks": 5405,
+    "vectors": 5405,
+    "builds": 2,
+    "frozen_bundle_check": "passed"
+  },
+  "browser_recovery": {
+    "browser": "Codex in-app browser",
+    "origin": "http://127.0.0.1:8515",
+    "network_loss": "Showed friendly error and restored submitted question in composer",
+    "network_override_restored": true,
+    "screenshot": "network-recovery.jpg"
+  },
+  "local_candidate_harness": {
+    "origin": "http://127.0.0.1:8515",
+    "profile": "hosted, reranking off, read-only SQLite, isolated ephemeral ledger",
+    "origin_shim": "Loopback-only HTTP shim in temporary harness; production guard unchanged"
+  },
+  "human_review": false,
+  "manual_browser_checks": [
+    {
+      "response": "candidate-vernal-ui-response.json",
+      "question": "Can I carry my dog to Vernal Fall?",
+      "status": "answer",
+      "claims": [
+        "Dogs are not allowed on the trail to Vernal Fall, even when carried."
+      ],
+      "all_cited_passages_match_sqlite": true,
+      "semantic_assessment": "supported by the cited pets.htm text; AI assessment",
+      "cost_estimate_usd": 0.000695326
+    },
+    {
+      "response": "candidate-static-today-ui-response.json",
+      "question": "I'm visiting today. What are the pet leash rules?",
+      "status": "answer",
+      "claims": [
+        "Pets must be leashed no longer than six feet or otherwise physically restrained.",
+        "Leashed pets cannot be left unattended."
+      ],
+      "all_cited_passages_match_sqlite": true,
+      "semantic_assessment": "supported by the cited pets.htm text; AI assessment",
+      "cost_estimate_usd": 0.0006671699999999999
+    }
+  ]
+}

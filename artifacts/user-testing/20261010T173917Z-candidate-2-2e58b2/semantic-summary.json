@@ -1,0 +1,29 @@
+{
+  "kind": "AI provisional source-span review, separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 16,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 2,
+  "turns": 18,
+  "failure_types": {
+    "answerable_review_refusal": 1,
+    "supported_claim_does_not_answer_pet_followup": 1
+  },
+  "claim_support": {
+    "delivered_claims": 12,
+    "fully_supported": 12,
+    "partially_supported": 0,
+    "note": "H05.3 has a grounded but nonresponsive claim. Support does not establish conversation correctness."
+  },
+  "regressions_vs_candidate_1": [
+    "H05.3 pet shuttle follow-up now ignores pet restriction",
+    "H06.2 Cedar Ridge table now all claims withheld"
+  ],
+  "cost_estimate_including_reservations_usd": 0.01611816,
+  "reserved_provider_failed_attempts": 2,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "f8599ba304c4b29946cffc895faa793538defde8178e2f74ee1f974480165789",
+  "assessment_sha256": "1d16fa5512ba243915f99e910d81ec4a949e27b2d5acf38166db5b54191182e7",
+  "selection_note": "Not ready for selection unchanged: two semantic failures remain, including a nonresponsive pet shuttle answer. This is not a gold benchmark."
+}

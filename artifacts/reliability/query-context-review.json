@@ -1,0 +1,3039 @@
+{
+  "kind": "offline_query_context_mechanism_comparison",
+  "source_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/user-testing/20261010T173917Z-candidate-2-2e58b2",
+  "database": "/Users/robin/Build/Personal/parkguide-ai/data/parkguide.sqlite",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "retrieval_source_sha256": "516137e50979adfd60a7dd3e3dd64ad212e4e951bf848b8bd29e0ce70f229903",
+  "paid_calls": 0,
+  "method": "Existing retrieval implementation with only _keyword_query substituted in this isolated process. Normalized latest tokens receive weight N via repetition; inherited tokens are normalized, deduplicated, and included once if absent from current tokens. All dense queries and existing cached vectors remain unchanged. No reranking. Named source-pattern presence is a mechanical retrieval diagnostic, not semantic answer accuracy.",
+  "limits": [
+    "Generic diagnostics have no cached embeddings; only BM25 was compared for those cases.",
+    "No generation or review calls. No inference of final answer quality.",
+    "Earliest-anchor variant uses the saved first user turn; production currently does not delimit topic turns in its query string."
+  ],
+  "cases": [
+    {
+      "id": "H01.3",
+      "origin": "saved actual candidate-2 turn",
+      "query": "Yosemite: How long can his leash be? Previous topic: Can I walk my pet dog on the paved road to Mirror Lake And can we continue onto the unpaved trail around the lake",
+      "park": "yose",
+      "anchor": "Can I walk my pet dog on the paved road to Mirror Lake?",
+      "target": "leash_limit",
+      "embedding": {
+        "query_sha256": "8f2e0ae12d9be0cb207d5de58de70e9b53aeef5d590cf8d5744c1b2318e820dd",
+        "cache_exists": true,
+        "path": "/tmp/parkguide-user-testing-20261010/embedding-cache/4ee7c2983e1b30ebd4e1ff778ac2fb261fe37ffb6819fc733698f1922ed31d51/8f2e0ae12d9be0cb207d5de58de70e9b53aeef5d590cf8d5744c1b2318e820dd.npy",
+        "vector_sha256": "57e0cc26ad6f62026ae9a0e592f8af9976c1017834dcdb6265dd7de4437381f2",
+        "cache_validated": true
+      },
+      "variants": {
+        "candidate2_latest_only": {
+          "keyword_query": "How long can his leash be?",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 8.992830922176896,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.391219483821797,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.11658110550937,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "44d6b72b1ffab9047a4e8cac159c6547e84a0636f28759444a0bb5d2e2f6475a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+                  "heading": "North Pines Campground Early Access Lottery > How long are the reservation time slots? How many people will be assigned to each window?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 6.198689108731231,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "320454f38169e4d56ef9247c7e248ab83d2f24e93a3b820fbffe3108197034b6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Slacklines, Hammocks, Clotheslines, etc.",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.149864395538077,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.11658110550937,
+                    "dense": 0.5525853633880615,
+                    "rrf": 0.028693528693528692,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 8.992830922176896,
+                    "dense": 0.5265904068946838,
+                    "rrf": 0.02788769549651404,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "41eda87b6cdb1271c4172999d8717115a6a9d607d72be8e593f923f59064c05e",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 0.0,
+                    "dense": 0.6342099905014038,
+                    "rrf": 0.01639344262295082,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 0.0,
+                    "dense": 0.6337145566940308,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.391219483821797,
+                    "dense": 0.44443851709365845,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "full_resolved": {
+          "keyword_query": "Yosemite: How long can his leash be? Previous topic: Can I walk my pet dog on the paved road to Mirror Lake And can we continue onto the unpaved trail around the lake",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 8,
+              "target_in_top5": false
+            }
+          }
+        },
+        "deduplicated_all": {
+          "keyword_query": "long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest2_deduplicated_history": {
+          "keyword_query": "long leash long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 5,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest3_deduplicated_history": {
+          "keyword_query": "long leash long leash long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 4,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest4_deduplicated_history": {
+          "keyword_query": "long leash long leash long leash long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest2_earliest_anchor": {
+          "keyword_query": "long leash long leash walk pet paved road mirror lake",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest3_earliest_anchor": {
+          "keyword_query": "long leash long leash long leash walk pet paved road mirror lake",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            }
+          }
+        },
+        "concrete_latest2_clean_history": {
+          "keyword_query": "leash leash pet paved road mirror lake unpaved trail",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 8,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 10,
+              "target_in_top5": false
+            }
+          }
+        },
+        "concrete_latest4_clean_history": {
+          "keyword_query": "leash leash leash leash pet paved road mirror lake unpaved trail",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 4,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            }
+          }
+        },
+        "concrete_latest_balanced_clean_history": {
+          "keyword_query": "leash leash leash leash leash leash leash pet paved road mirror lake unpaved trail",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            }
+          }
+        },
+        "current_match_gate_dedup": {
+          "keyword_query": "long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "bm25_current_term_gate": [
+            "leash"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 4,
+              "final": [
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.664132174442004,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.991764118144236,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "469c9fe91c58a17b04b981c43bf5c2035ea0f336c41cd316e64f1f3ef5e404b1",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Become a B.A.R.K. Ranger",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.232057391822613,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": 0.5525853633880615,
+                    "rrf": 0.028693528693528692,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3,
+                    "dense": 18
+                  }
+                },
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.664132174442004,
+                    "dense": 0.5265904068946838,
+                    "rrf": 0.02788769549651404,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1,
+                    "dense": 27
+                  }
+                },
+                {
+                  "chunk_id": "41eda87b6cdb1271c4172999d8717115a6a9d607d72be8e593f923f59064c05e",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 36.66493831548617,
+                    "dense": 0.6342099905014038,
+                    "rrf": 0.01639344262295082,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": null,
+                    "dense": 1
+                  }
+                },
+                {
+                  "chunk_id": "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 36.66493831548617,
+                    "dense": 0.6337145566940308,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": null,
+                    "dense": 2
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.991764118144236,
+                    "dense": 0.44443851709365845,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2,
+                    "dense": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "current_match_gate_concrete2_dedup": {
+          "keyword_query": "long leash leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "bm25_current_term_gate": [
+            "leash"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 4
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20
+            }
+          }
+        },
+        "latest_with_owned_anchor": {
+          "keyword_query": "long leash pet",
+          "owned_anchor_tokens": [
+            "pet"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.664132174442004,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.991764118144236,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "469c9fe91c58a17b04b981c43bf5c2035ea0f336c41cd316e64f1f3ef5e404b1",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Become a B.A.R.K. Ranger",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.232057391822613,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "02266bc838ba7b8982e0bd96d9952babba038675be0a94c004035d8b4c1626c6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Not Allowed",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 6.834530264502541,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false,
+              "final": [
+                {
+                  "chunk_id": "93e9653483d09935b2cc23cb392e336426ac2ee711ae14058bc9f0bf93107f5e",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 6.73244658915389,
+                    "dense": 0.5964220762252808,
+                    "rrf": 0.02964426877470356,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 6,
+                    "dense": 9
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.7817376842492045,
+                    "dense": 0.6320825815200806,
+                    "rrf": 0.029386529386529386,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 14,
+                    "dense": 3
+                  }
+                },
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": 0.5525853633880615,
+                    "rrf": 0.028693528693528692,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3,
+                    "dense": 18
+                  }
+                },
+                {
+                  "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.863263077629421,
+                    "dense": 0.6137753129005432,
+                    "rrf": 0.02862400327131466,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 13,
+                    "dense": 7
+                  }
+                },
+                {
+                  "chunk_id": "63601c63c2a1eea37b7dc3a5e1297df8ad6667fe1bdda95430defb3361fbe7f9",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+                  "heading": "Your Safety > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 6.705553545556429,
+                    "dense": 0.5690773725509644,
+                    "rrf": 0.028258706467661692,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 7,
+                    "dense": 15
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "implemented_current_match_gate": {
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 4,
+              "final": [
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.664132174442004,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.991764118144236,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "469c9fe91c58a17b04b981c43bf5c2035ea0f336c41cd316e64f1f3ef5e404b1",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Become a B.A.R.K. Ranger",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.232057391822613,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "da5be190555233ad4937592c73840b06bed780fdf5e9502ae86d64070d3711e6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Keep Your Pet Safe",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.635107287655831,
+                    "dense": 0.5525853633880615,
+                    "rrf": 0.028693528693528692,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3,
+                    "dense": 18
+                  }
+                },
+                {
+                  "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed > Additionally:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.664132174442004,
+                    "dense": 0.5265904068946838,
+                    "rrf": 0.02788769549651404,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1,
+                    "dense": 27
+                  }
+                },
+                {
+                  "chunk_id": "41eda87b6cdb1271c4172999d8717115a6a9d607d72be8e593f923f59064c05e",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 36.66493831548617,
+                    "dense": 0.6342099905014038,
+                    "rrf": 0.01639344262295082,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": null,
+                    "dense": 1
+                  }
+                },
+                {
+                  "chunk_id": "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 36.66493831548617,
+                    "dense": 0.6337145566940308,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": null,
+                    "dense": 2
+                  }
+                },
+                {
+                  "chunk_id": "6222e8602da53a379e570c153cb016aec6dbbd91f4f49fe2003645c449049001",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Pets",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.991764118144236,
+                    "dense": 0.44443851709365845,
+                    "rrf": 0.016129032258064516,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2,
+                    "dense": null
+                  }
+                }
+              ]
+            }
+          },
+          "keyword_query": "long leash walk pet paved road mirror lake continue onto unpaved trail around",
+          "keyword_current_terms": [
+            "leash"
+          ],
+          "keyword_candidate_count": 4
+        }
+      }
+    },
+    {
+      "id": "H05.3",
+      "origin": "saved actual candidate-2 turn",
+      "query": "Grand Canyon: Could we ride a park shuttle bus instead? Previous topic: Can I take my pet dog along the trails above the South Rim What if I carry him down an inner canyon trail below the rim",
+      "park": "grca",
+      "anchor": "Can I take my pet dog along the trails above the South Rim?",
+      "target": "pet_shuttle_prohibition",
+      "embedding": {
+        "query_sha256": "9557e5b9f27d2b3107c2a7726c17dde4fa0877bf75522a4c65cc59f9053226b6",
+        "cache_exists": true,
+        "path": "/tmp/parkguide-user-testing-20261010/embedding-cache/4ee7c2983e1b30ebd4e1ff778ac2fb261fe37ffb6819fc733698f1922ed31d51/9557e5b9f27d2b3107c2a7726c17dde4fa0877bf75522a4c65cc59f9053226b6.npy",
+        "vector_sha256": "677b3d7566e34ae6e8ee5f942c98f07aa4364d3f5f7e35b3fa3d37186d502de0",
+        "cache_validated": true
+      },
+      "variants": {
+        "candidate2_latest_only": {
+          "keyword_query": "Could we ride a park shuttle bus instead?",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 17,
+              "target_in_top5": false,
+              "final": [
+                {
+                  "chunk_id": "0852e775b396627245a87f1fd1340cacaad19ac178df3fb64edfc8772619ce07",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List > Shuttle Bus Home Page",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.773761229595745,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "819ed3b659ea26e1ef045042e112c2a3242f50e4a698877dff7da08e272168d5",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > Bicycling on the South Rim",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.53994929486634,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "37887df572da55956b5a2d1a0c7dd9eeb82ed23c5a427d27187c9f98c6e36b5a",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > General Things to Know When Riding Park Shuttle Buses",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.435180175464533,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.34564340965171,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "afc04603a09057b27410e76ce5418be1f50ddd8a07ad7674153e5a59ba57d242",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.167377656700124,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 8,
+              "target_in_top5": false,
+              "final": [
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.34564340965171,
+                    "dense": 0.6032788753509521,
+                    "rrf": 0.028782894736842105,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "ed94bfb235458730a8a6e57a74efd1f92817c091b4d96f5fcdcc1930593827a2",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+                  "heading": "Grand Canyon National Park Operations Update > Free Shuttle Bus - Routes in Operation",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.750380046702915,
+                    "dense": 0.6194273233413696,
+                    "rrf": 0.028594771241830064,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "68b9e1f02a232c30b01214e4dfd521a4eb1117a639a51849c24dd04d8b2f7b89",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > History of the Shuttle Bus System",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.988456090194145,
+                    "dense": 0.6663145422935486,
+                    "rrf": 0.026881720430107527,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "ffddd14ca2148a9dfe3efe10fbada23d69a398c889a60331598c0be41da91ce6",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+                  "heading": "Grand Canyon National Park Operations Update > Free Shuttle Bus - Routes in Operation",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.478419300716904,
+                    "dense": 0.6072442531585693,
+                    "rrf": 0.026856524873828405,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "37887df572da55956b5a2d1a0c7dd9eeb82ed23c5a427d27187c9f98c6e36b5a",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > General Things to Know When Riding Park Shuttle Buses",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.435180175464533,
+                    "dense": 0.5817904472351074,
+                    "rrf": 0.026625704045058884,
+                    "rerank": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "full_resolved": {
+          "keyword_query": "Grand Canyon: Could we ride a park shuttle bus instead? Previous topic: Can I take my pet dog along the trails above the South Rim What if I carry him down an inner canyon trail below the rim",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "deduplicated_all": {
+          "keyword_query": "ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_deduplicated_history": {
+          "keyword_query": "ride park shuttle bus instead ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 4,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_deduplicated_history": {
+          "keyword_query": "ride park shuttle bus instead ride park shuttle bus instead ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 9,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest4_deduplicated_history": {
+          "keyword_query": "ride park shuttle bus instead ride park shuttle bus instead ride park shuttle bus instead ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 9,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 4,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_earliest_anchor": {
+          "keyword_query": "ride park shuttle bus instead ride park shuttle bus instead take pet along trails above south rim",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 12,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_earliest_anchor": {
+          "keyword_query": "ride park shuttle bus instead ride park shuttle bus instead ride park shuttle bus instead take pet along trails above south rim",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 13,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            }
+          }
+        },
+        "concrete_latest2_clean_history": {
+          "keyword_query": "shuttle bus shuttle bus pet trails above south rim carry down inner trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest4_clean_history": {
+          "keyword_query": "shuttle bus shuttle bus shuttle bus shuttle bus pet trails above south rim carry down inner trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 4,
+              "target_in_top5": true
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest_balanced_clean_history": {
+          "keyword_query": "shuttle bus shuttle bus shuttle bus shuttle bus shuttle bus pet trails above south rim carry down inner trail below",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 6,
+              "target_in_top5": false
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "current_match_gate_dedup": {
+          "keyword_query": "ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "bm25_current_term_gate": [
+            "shuttle",
+            "bus"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 25.90307585809544,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "819ed3b659ea26e1ef045042e112c2a3242f50e4a698877dff7da08e272168d5",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > Bicycling on the South Rim",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.40367032833129,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "d2466bfcf7500a0f1c41254fcd48b9063afff6dabdfc26b73c4586303534b634",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/lodging.htm",
+                  "heading": "Lodging > South Rim Shuttle Bus Service",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.392139883501184,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "ca39ddb3942123ae67ef1365a4a6406f47a690a2890c9e9ba34af19ca895ca84",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/hiking-faq.htm",
+                  "heading": "Hiking FAQ",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.315361474453255,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.4529684936081,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 25.90307585809544,
+                    "dense": 0.6693053245544434,
+                    "rrf": 0.03278688524590164,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1,
+                    "dense": 1
+                  }
+                },
+                {
+                  "chunk_id": "68b9e1f02a232c30b01214e4dfd521a4eb1117a639a51849c24dd04d8b2f7b89",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > History of the Shuttle Bus System",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.226136916260614,
+                    "dense": 0.6663145422935486,
+                    "rrf": 0.02878726010616578,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 19,
+                    "dense": 2
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.4529684936081,
+                    "dense": 0.6032788753509521,
+                    "rrf": 0.02854251012145749,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5,
+                    "dense": 16
+                  }
+                },
+                {
+                  "chunk_id": "69fb6461a3187406074e981e31e325048dbbbabec47f03cb4105d715c8de608d",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm",
+                  "heading": "Grand Canyon Visitor Center > Walking",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.76995524502026,
+                    "dense": 0.6061952114105225,
+                    "rrf": 0.027417840375586856,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 11,
+                    "dense": 15
+                  }
+                },
+                {
+                  "chunk_id": "ed94bfb235458730a8a6e57a74efd1f92817c091b4d96f5fcdcc1930593827a2",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+                  "heading": "Grand Canyon National Park Operations Update > Free Shuttle Bus - Routes in Operation",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.54859486665943,
+                    "dense": 0.6194273233413696,
+                    "rrf": 0.026754075124025514,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 23,
+                    "dense": 8
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "current_match_gate_concrete2_dedup": {
+          "keyword_query": "ride park shuttle bus instead shuttle bus take pet along trails above south rim carry down inner canyon trail below",
+          "bm25_current_term_gate": [
+            "shuttle",
+            "bus"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20
+            }
+          }
+        },
+        "latest_with_owned_anchor": {
+          "keyword_query": "ride park shuttle bus instead pet",
+          "owned_anchor_tokens": [
+            "pet"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "0852e775b396627245a87f1fd1340cacaad19ac178df3fb64edfc8772619ce07",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List > Shuttle Bus Home Page",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.773761229595745,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "9005e9f6d31b881db4a6caec2d2b48b1ac3c70835a30a0ad6c6abc84f555da49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Etiquette",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 12.876584405002202,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "819ed3b659ea26e1ef045042e112c2a3242f50e4a698877dff7da08e272168d5",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > Bicycling on the South Rim",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.53994929486634,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "37887df572da55956b5a2d1a0c7dd9eeb82ed23c5a427d27187c9f98c6e36b5a",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > General Things to Know When Riding Park Shuttle Buses",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.435180175464533,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.34564340965171,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 10.611084136006292,
+                    "dense": 0.6693053245544434,
+                    "rrf": 0.030886196246139225,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 9,
+                    "dense": 1
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 11.34564340965171,
+                    "dense": 0.6032788753509521,
+                    "rrf": 0.02854251012145749,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5,
+                    "dense": 16
+                  }
+                },
+                {
+                  "chunk_id": "ed94bfb235458730a8a6e57a74efd1f92817c091b4d96f5fcdcc1930593827a2",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+                  "heading": "Grand Canyon National Park Operations Update > Free Shuttle Bus - Routes in Operation",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.750380046702915,
+                    "dense": 0.6194273233413696,
+                    "rrf": 0.02821939586645469,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 14,
+                    "dense": 8
+                  }
+                },
+                {
+                  "chunk_id": "9005e9f6d31b881db4a6caec2d2b48b1ac3c70835a30a0ad6c6abc84f555da49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Etiquette",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 12.876584405002202,
+                    "dense": 0.5864300727844238,
+                    "rrf": 0.02749266862170088,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2,
+                    "dense": 28
+                  }
+                },
+                {
+                  "chunk_id": "6bc1c981f61d0884778e7c5c49a46b092e5bfd08296425d06e4ec6eb4a736a49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > Tips for a great visit with your pet",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.132685949471714,
+                    "dense": 0.6186472177505493,
+                    "rrf": 0.026838432635534086,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 21,
+                    "dense": 9
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "implemented_current_match_gate": {
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 25.90307585809544,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "819ed3b659ea26e1ef045042e112c2a3242f50e4a698877dff7da08e272168d5",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > Bicycling on the South Rim",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.40367032833129,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "d2466bfcf7500a0f1c41254fcd48b9063afff6dabdfc26b73c4586303534b634",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/lodging.htm",
+                  "heading": "Lodging > South Rim Shuttle Bus Service",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.392139883501184,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "ca39ddb3942123ae67ef1365a4a6406f47a690a2890c9e9ba34af19ca895ca84",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/hiking-faq.htm",
+                  "heading": "Hiking FAQ",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 20.315361474453255,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.4529684936081,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            },
+            "hybrid": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 25.90307585809544,
+                    "dense": 0.6693053245544434,
+                    "rrf": 0.03278688524590164,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1,
+                    "dense": 1
+                  }
+                },
+                {
+                  "chunk_id": "68b9e1f02a232c30b01214e4dfd521a4eb1117a639a51849c24dd04d8b2f7b89",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > History of the Shuttle Bus System",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 13.226136916260614,
+                    "dense": 0.6663145422935486,
+                    "rrf": 0.02878726010616578,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 19,
+                    "dense": 2
+                  }
+                },
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.4529684936081,
+                    "dense": 0.6032788753509521,
+                    "rrf": 0.02854251012145749,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5,
+                    "dense": 16
+                  }
+                },
+                {
+                  "chunk_id": "69fb6461a3187406074e981e31e325048dbbbabec47f03cb4105d715c8de608d",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm",
+                  "heading": "Grand Canyon Visitor Center > Walking",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.76995524502026,
+                    "dense": 0.6061952114105225,
+                    "rrf": 0.027417840375586856,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 11,
+                    "dense": 15
+                  }
+                },
+                {
+                  "chunk_id": "ed94bfb235458730a8a6e57a74efd1f92817c091b4d96f5fcdcc1930593827a2",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+                  "heading": "Grand Canyon National Park Operations Update > Free Shuttle Bus - Routes in Operation",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.54859486665943,
+                    "dense": 0.6194273233413696,
+                    "rrf": 0.026754075124025514,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 23,
+                    "dense": 8
+                  }
+                }
+              ]
+            }
+          },
+          "keyword_query": "ride park shuttle bus instead take pet along trails above south rim carry down inner canyon trail below",
+          "keyword_current_terms": [
+            "shuttle",
+            "bus"
+          ],
+          "keyword_candidate_count": 40
+        }
+      }
+    },
+    {
+      "id": "generic_bring",
+      "origin": "new offline diagnostic, no model call",
+      "query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+      "park": "grca",
+      "anchor": "Can my dog ride a Grand Canyon park shuttle?",
+      "target": "pet_shuttle_prohibition",
+      "embedding": {
+        "query_sha256": "040d36832643425caa3af153313bfc1681c07cd0cde9592a8c66e2d729f7283d",
+        "cache_exists": false
+      },
+      "variants": {
+        "candidate2_latest_only": {
+          "keyword_query": "Can I bring him along?",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": null,
+              "target_in_top5": false,
+              "final": [
+                {
+                  "chunk_id": "a806119d2bcc4beda99b53998522baa4b1541cccee229c78101a8187ca25d5df",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/things2do.htm",
+                  "heading": "Things To Do > Did You Bring Your Bicycle?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.4593261477150445,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "f314b0415692c49ddbe156ef2c8a28747d99135b494ba2e11cf6bbb01b9d3428",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/safe-water.htm",
+                  "heading": "Safe Drinking Water > Bring the Cleared Water to a Roiling Boil for One Full Minute",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.3705126881754515,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "69fb6461a3187406074e981e31e325048dbbbabec47f03cb4105d715c8de608d",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm",
+                  "heading": "Grand Canyon Visitor Center > Walking",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.884508631971201,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "8439d33b52d8a3f5cea3c9f993965379ac6b1d7615a7c048324b7101682de904",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/hike-tips.htm",
+                  "heading": "Hiking Tips - Hike Smart > HIKE SMART For a safe and enjoyable hike prepare before you arrive.",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.682167459274682,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "b13bba7e0c1739fbedb14f8e06cf01387f43ee5d762cc4ca9fdbd4402face17b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/sunrise_set_moon.htm",
+                  "heading": "Sunrise/ Sunset Times and Moon Phases > How Do I Get Out to the Viewpoints? > Overlooks Along Desert View Drive",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.471455423907662,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "full_resolved": {
+          "keyword_query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "deduplicated_all": {
+          "keyword_query": "bring along pet ride park shuttle parks grand canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_deduplicated_history": {
+          "keyword_query": "bring along bring along pet ride park shuttle parks grand canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 10,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest3_deduplicated_history": {
+          "keyword_query": "bring along bring along bring along pet ride park shuttle parks grand canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": null,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest4_deduplicated_history": {
+          "keyword_query": "bring along bring along bring along bring along pet ride park shuttle parks grand canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": null,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest2_earliest_anchor": {
+          "keyword_query": "bring along bring along pet ride park shuttle",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 8,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest3_earliest_anchor": {
+          "keyword_query": "bring along bring along bring along pet ride park shuttle",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": null,
+              "target_in_top5": false
+            }
+          }
+        },
+        "concrete_latest2_clean_history": {
+          "keyword_query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest4_clean_history": {
+          "keyword_query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest_balanced_clean_history": {
+          "keyword_query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true
+            }
+          }
+        },
+        "current_match_gate_dedup": {
+          "keyword_query": "bring along pet ride park shuttle parks grand canyon",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.215638329568794,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 11.209849613825662,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "69fcf544fd8e1cd2bcff4f85fbf8caae41603f5ad2f631eef88db23f7d15fb3f",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+                  "heading": "Safety > Your Vehicle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.32879993531386,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "6bc1c981f61d0884778e7c5c49a46b092e5bfd08296425d06e4ec6eb4a736a49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > Tips for a great visit with your pet",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.94004604084377,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "0852e775b396627245a87f1fd1340cacaad19ac178df3fb64edfc8772619ce07",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List > Shuttle Bus Home Page",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.442320397236628,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "current_match_gate_concrete2_dedup": {
+          "keyword_query": "bring along pet ride park shuttle parks grand canyon",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20
+            }
+          }
+        },
+        "latest_with_owned_anchor": {
+          "keyword_query": "Can I bring him along? Previous topic: Can my dog ride a park shuttle Parks: Grand Canyon",
+          "owned_anchor_tokens": [
+            "pet"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.215638329568794,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 11.209849613825662,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "69fcf544fd8e1cd2bcff4f85fbf8caae41603f5ad2f631eef88db23f7d15fb3f",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+                  "heading": "Safety > Your Vehicle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.32879993531386,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "6bc1c981f61d0884778e7c5c49a46b092e5bfd08296425d06e4ec6eb4a736a49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > Tips for a great visit with your pet",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.94004604084377,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "0852e775b396627245a87f1fd1340cacaad19ac178df3fb64edfc8772619ce07",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List > Shuttle Bus Home Page",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.442320397236628,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "implemented_current_match_gate": {
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 2,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "82229f306b51ca2b30a6c2d8666a53313be3012e16ad676496a02de70c28807b",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/bicycling.htm",
+                  "heading": "Bicycling and E-Bike Information > South Rim: Park in Tusayan & Ride the Shuttle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.215638329568794,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > On the South Rim > Pets are not permitted:",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 11.209849613825662,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "69fcf544fd8e1cd2bcff4f85fbf8caae41603f5ad2f631eef88db23f7d15fb3f",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/safety.htm",
+                  "heading": "Safety > Your Vehicle",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 10.32879993531386,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "6bc1c981f61d0884778e7c5c49a46b092e5bfd08296425d06e4ec6eb4a736a49",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/pets.htm",
+                  "heading": "Pets > Tips for a great visit with your pet",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.94004604084377,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "0852e775b396627245a87f1fd1340cacaad19ac178df3fb64edfc8772619ce07",
+                  "source_url": "https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm",
+                  "heading": "South Rim Shuttle Bus Routes \u2014 Fall 2026 > Shuttle Bus Route List > Shuttle Bus Home Page",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.442320397236628,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          },
+          "keyword_query": "bring along pet ride park shuttle parks grand canyon",
+          "keyword_current_terms": [],
+          "keyword_candidate_count": 40
+        }
+      }
+    },
+    {
+      "id": "generic_duration",
+      "origin": "new offline diagnostic, no model call",
+      "query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+      "park": "yose",
+      "anchor": "Tell me about the Lower Yosemite Fall trail.",
+      "target": "named_fall_place",
+      "embedding": {
+        "query_sha256": "9113682ab08ecbc8bf2996999639ad19798591dcd22dcf083bb2ce1c5ab73266",
+        "cache_exists": false
+      },
+      "variants": {
+        "candidate2_latest_only": {
+          "keyword_query": "How long does it take?",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": null,
+              "target_in_top5": false,
+              "final": [
+                {
+                  "chunk_id": "44d6b72b1ffab9047a4e8cac159c6547e84a0636f28759444a0bb5d2e2f6475a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+                  "heading": "North Pines Campground Early Access Lottery > How long are the reservation time slots? How many people will be assigned to each window?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 6.198689108731231,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "320454f38169e4d56ef9247c7e248ab83d2f24e93a3b820fbffe3108197034b6",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+                  "heading": "Campground Regulations > Slacklines, Hammocks, Clotheslines, etc.",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.149864395538077,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "249d85f587ff31406a9c5f60ed7f4013b498a57451e43b4054e172c7842439ce",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 3",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.712593783477571,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "7a2a532417c32f51a2702f0aba2181d1b8f203329dafd1f403ab0ee62febc85a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+                  "heading": "Current Conditions > Road Status",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.687159881301635,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "8f57b537db346e60b751b26cdd8b9254e78d05fa7b4726ab1a6dcdff99d3bf0e",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 2",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 4.668837600684159,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "full_resolved": {
+          "keyword_query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "deduplicated_all": {
+          "keyword_query": "long take tell about lower yosemite fall trail parks",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_deduplicated_history": {
+          "keyword_query": "long take long take tell about lower yosemite fall trail parks",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_deduplicated_history": {
+          "keyword_query": "long take long take long take tell about lower yosemite fall trail parks",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest4_deduplicated_history": {
+          "keyword_query": "long take long take long take long take tell about lower yosemite fall trail parks",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 7,
+              "target_in_top5": false
+            }
+          }
+        },
+        "latest2_earliest_anchor": {
+          "keyword_query": "long take long take tell about lower yosemite fall trail",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_earliest_anchor": {
+          "keyword_query": "long take long take long take tell about lower yosemite fall trail",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 3,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest2_clean_history": {
+          "keyword_query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest4_clean_history": {
+          "keyword_query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest_balanced_clean_history": {
+          "keyword_query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "current_match_gate_dedup": {
+          "keyword_query": "long take tell about lower yosemite fall trail parks",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "bc35d51f8e84c7cb1d26ae41dc23362e621c0418a33bce065edb6f6ec77d1684",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.698324644004554,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ca61d05ee45e73049b5be7a09be32c9719085ac025805ac4ec9d35efefb13736",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.698324644004554,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.000348528589061,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "ead862b2d089112995ec4882dce2de68b9821bd9957a137e939622629d90d7aa",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.916927462166441,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "e00ce31c50e9649d00af07ef1b3e8a79099fbe878bf47bf4fb86e5e789638ff3",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/app.htm",
+                  "heading": "NPS App > Features",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.76428778089381,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "current_match_gate_concrete2_dedup": {
+          "keyword_query": "long take tell about lower yosemite fall trail parks",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20
+            }
+          }
+        },
+        "latest_with_owned_anchor": {
+          "keyword_query": "How long does it take? Previous topic: Tell me about the Lower Yosemite Fall trail Parks: Yosemite",
+          "owned_anchor_tokens": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "bc35d51f8e84c7cb1d26ae41dc23362e621c0418a33bce065edb6f6ec77d1684",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 16.114884230882815,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ca61d05ee45e73049b5be7a09be32c9719085ac025805ac4ec9d35efefb13736",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 16.114884230882815,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "fd7c2bccd5126b196aee56590d51f0ba20c4e2a4510c058e67b68dde857b8dae",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/brochures.htm",
+                  "heading": "OVERVIEW: Back Side of Brochure > MAP and TEXT: Yosemite Basics > MAP: Yosemite Valley Trails",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 15.149571625890857,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 14.521024546673754,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "789a0ffec30763be8a92e44bb7efd184db9517268e03aeb8955f6df8379816ec",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+                  "heading": "Campgrounds > Campfires and Wood Smoke",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 14.334732397626626,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "implemented_current_match_gate": {
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "bc35d51f8e84c7cb1d26ae41dc23362e621c0418a33bce065edb6f6ec77d1684",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.698324644004554,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ca61d05ee45e73049b5be7a09be32c9719085ac025805ac4ec9d35efefb13736",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.698324644004554,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 13.000348528589061,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "ead862b2d089112995ec4882dce2de68b9821bd9957a137e939622629d90d7aa",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.916927462166441,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "e00ce31c50e9649d00af07ef1b3e8a79099fbe878bf47bf4fb86e5e789638ff3",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/app.htm",
+                  "heading": "NPS App > Features",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 12.76428778089381,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          },
+          "keyword_query": "long take tell about lower yosemite fall trail parks",
+          "keyword_current_terms": [],
+          "keyword_candidate_count": 40
+        }
+      }
+    },
+    {
+      "id": "generic_still",
+      "origin": "new offline diagnostic, no model call",
+      "query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+      "park": "yose",
+      "anchor": "Can I carry my dog on the trail to Vernal Fall in Yosemite?",
+      "target": "carried_pet_trail_prohibition",
+      "embedding": {
+        "query_sha256": "dab4f280b13ce26a9f824b6d80e54819125a05375849f05b80a26c33614b9b05",
+        "cache_exists": false
+      },
+      "variants": {
+        "candidate2_latest_only": {
+          "keyword_query": "Is that still allowed?",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 5,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "82a4941e75f1282bdb496e63cc09530588ecb1e787e94de2d24183cdaee6b574",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+                  "heading": "Frequently Asked Questions about Campground Reservations > I made a reservation for a tent-only nonelectric campsite but have an RV or other vehicle I sleep in. Can I still use the campsite?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 9.770258193413428,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "d2ac865ce2be088f2c54330eeb337f41eb2eb112bbc87c2774d30b99d0f04ad7",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+                  "heading": "Frequently Asked Questions about Campground Reservations > I made a reservation for an RV nonelectric campsite but only have a tent. Can I still use the campsite?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.560434075846791,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "4b33a27152d34661dfabe3a8f3e986daff81a1a14307502ae5ab9328952164cc",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+                  "heading": "Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 7.01460031092554,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "e3e9ad93c6fc548614439a383d50cd3f9287f75cfbf8204b4e8280a21748927a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/nrrs.htm",
+                  "heading": "How to Make a Campground Reservation > Still Having Trouble Finding a Reservation?",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 5.57288118488331,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                },
+                {
+                  "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Not Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 5.175958787775075,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "full_resolved": {
+          "keyword_query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "deduplicated_all": {
+          "keyword_query": "still allowed carry pet trail vernal fall parks yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_deduplicated_history": {
+          "keyword_query": "still allowed still allowed carry pet trail vernal fall parks yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_deduplicated_history": {
+          "keyword_query": "still allowed still allowed still allowed carry pet trail vernal fall parks yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest4_deduplicated_history": {
+          "keyword_query": "still allowed still allowed still allowed still allowed carry pet trail vernal fall parks yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest2_earliest_anchor": {
+          "keyword_query": "still allowed still allowed carry pet trail vernal fall",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "latest3_earliest_anchor": {
+          "keyword_query": "still allowed still allowed still allowed carry pet trail vernal fall",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest2_clean_history": {
+          "keyword_query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest4_clean_history": {
+          "keyword_query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "concrete_latest_balanced_clean_history": {
+          "keyword_query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true
+            }
+          }
+        },
+        "current_match_gate_dedup": {
+          "keyword_query": "still allowed carry pet trail vernal fall parks yosemite",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Not Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 26.602416343180558,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.858233965653806,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "097c0adff56f4f3c18816a0b72512602cb27f4d843603d84457e9358cfa54edd",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/seasonal.htm",
+                  "heading": "Historical Seasonal Opening and Closing Dates > Trails",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.623408249582237,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "b515adeef0a9e3dedafc53a22a51e8c4b8fe0c9153c417a67903a44ab4afd45a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+                  "heading": "Current Conditions > Trails and Wilderness Conditions > Yosemite Valley Area",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.510480790203077,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.375356266164184,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "current_match_gate_concrete2_dedup": {
+          "keyword_query": "still allowed carry pet trail vernal fall parks yosemite",
+          "bm25_current_term_gate": [],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20
+            }
+          }
+        },
+        "latest_with_owned_anchor": {
+          "keyword_query": "Is that still allowed? Previous topic: Can I carry my dog on the trail to Vernal Fall in Parks: Yosemite",
+          "owned_anchor_tokens": [
+            "pet"
+          ],
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "final": [
+                {
+                  "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Not Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 26.602416343180558,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.858233965653806,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "097c0adff56f4f3c18816a0b72512602cb27f4d843603d84457e9358cfa54edd",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/seasonal.htm",
+                  "heading": "Historical Seasonal Opening and Closing Dates > Trails",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.623408249582237,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "b515adeef0a9e3dedafc53a22a51e8c4b8fe0c9153c417a67903a44ab4afd45a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+                  "heading": "Current Conditions > Trails and Wilderness Conditions > Yosemite Valley Area",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.510480790203077,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.375356266164184,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "implemented_current_match_gate": {
+          "runs": {
+            "bm25": {
+              "first_target_rank_in_20": 1,
+              "target_in_top5": true,
+              "candidate_count": 20,
+              "final": [
+                {
+                  "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Not Allowed",
+                  "target_match": true,
+                  "scores": {
+                    "bm25": 26.602416343180558,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 1
+                  }
+                },
+                {
+                  "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+                  "heading": "Pets > Where Pets Are Allowed",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 19.858233965653806,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 2
+                  }
+                },
+                {
+                  "chunk_id": "097c0adff56f4f3c18816a0b72512602cb27f4d843603d84457e9358cfa54edd",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/seasonal.htm",
+                  "heading": "Historical Seasonal Opening and Closing Dates > Trails",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.623408249582237,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 3
+                  }
+                },
+                {
+                  "chunk_id": "b515adeef0a9e3dedafc53a22a51e8c4b8fe0c9153c417a67903a44ab4afd45a",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+                  "heading": "Current Conditions > Trails and Wilderness Conditions > Yosemite Valley Area",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.510480790203077,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 4
+                  }
+                },
+                {
+                  "chunk_id": "c29718a4786683aa1c606a97d7120d1c5d9ebb8b8d784fde8c6fc38b4aa72afb",
+                  "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+                  "heading": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+                  "target_match": false,
+                  "scores": {
+                    "bm25": 15.375356266164184,
+                    "dense": null,
+                    "rrf": null,
+                    "rerank": null
+                  },
+                  "retriever_ranks": {
+                    "bm25": 5
+                  }
+                }
+              ]
+            }
+          },
+          "keyword_query": "still allowed carry pet trail vernal fall parks yosemite",
+          "keyword_current_terms": [],
+          "keyword_candidate_count": 40
+        }
+      }
+    }
+  ],
+  "additional_mechanism": "Concrete-token diagnostics strip existing _CONTEXT_ONLY plus take bring still along continue need know tell explain please say mean walk ride park onto around. Weight current concrete tokens and deduplicate clean inherited context. If no concrete current token survives, preserve full inherited query.",
+  "current_match_gate_mechanism": "Isolated copied retrieval function, no production edit: BM25 ranks include only passages containing any concrete latest token when one exists. Keyword query retains deduplicated inherited tokens. Variants compare no boost with one additional copy of concrete latest terms. Dense ranks, full query/vector, RRF and cap stay unchanged. Generic follow-ups have an empty gate and retain all context.",
+  "owned_anchor_mechanism": "Bounded diagnostic: retain current normalized deduplicated words and my/our noun phrases cut at common prepositions/verbs when concrete current tokens exist. Generic follow-ups or cases without an owned phrase retain the full query. No boost or rank change.",
+  "owned_anchor_pattern": "\\b(?:my|our)\\s+(.+?)(?=\\s+(?:on|in|at|to|from|along|across|into|onto|around|above|below|with|without|by|through|under|over|near|for|and|or|but|is|are|was|were|has|have|will|can|could|should|would|does|do|ride|walk|take|bring|go)\\b|[?.!,;]|$)",
+  "recommendation": {
+    "mechanism": "Retain deduplicated latest and inherited lexical tokens. When latest has concrete tokens, filter the BM25 branch to passages matching any of those current tokens. Keep the full-history dense query and all dense ranks unchanged; generic follow-ups retain unfiltered context. No additional retriever, reranker, weighting threshold, or final-selection lane.",
+    "evidence_variant": "current_match_gate_dedup",
+    "why": "Fixed query-token weighting and the owned-subject anchor can put the leash passage first in BM25 while still dropping it from the five fused results. Old-topic passages receive a second RRF contribution for very weak lexical overlap. Filtering history-only lexical matches removes that contribution while dense search continues to retrieve broad context.",
+    "exact_cached_hybrid_target_ranks": {
+      "H01.3": 2,
+      "H05.3": 1
+    },
+    "generic_bm25_target_ranks": {
+      "generic_bring": 2,
+      "generic_duration": 1,
+      "generic_still": 1
+    },
+    "limits": [
+      "Diagnostic eligibility initially filtered the top-40 BM25 list. Production applies it before the fetch cap; this was compared using the exact cached vectors and preserves target ranks 2 and 1.",
+      "Lexical matching needs current-word normalization; semantic paraphrases may only be found by the unchanged dense branch.",
+      "Only the two saved actual follow-up vectors were available for exact hybrid comparison; synthetic generic follow-ups used BM25 only.",
+      "No generation or claim review was run, so these are retrieval diagnostics rather than answer accuracy results."
+    ]
+  },
+  "implemented_source_sha256": "4c11c0c4437d8c7c34779adeff9eb85beaea722191f9346625824bf871a6ca3c",
+  "implementation_note": "Current-match eligibility is applied before the top-40 BM25 fetch cap, avoiding loss of matching passages below that cap. Exact cached hybrid target ranks match the post-cap diagnostic: H01.3 rank 2, H05.3 rank 1.",
+  "artifact_detail": "Final-passage details retained for original candidate2, recommended gate, rejected owned anchor, and implemented gate. Other variants retain keyword query and rank outcomes.",
+  "focused_tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_store_retrieval.py",
+    "passed": 36,
+    "paid_calls": 0
+  }
+}

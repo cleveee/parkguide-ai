@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import { MapPinIcon, RotateCcwIcon, TreesIcon } from "lucide-react"
 
 import { Conversation, ConversationContent, ConversationScrollButton } from "@/components/ai-elements/conversation"
@@ -133,6 +133,8 @@ export function ChatView({
   const controller = usePromptInputController()
   const [notice, setNotice] = useState<string | null>(null)
   const value = controller.textInput.value
+  const latestDraft = useRef(value)
+  useLayoutEffect(() => { latestDraft.current = value }, [value])
   const tooLong = value.length > MAX_QUESTION_CHARS
   const disabled = !park || !chatReady
 
@@ -142,7 +144,9 @@ export function ChatView({
     if (!question || pending || disabled || question.length > MAX_QUESTION_CHARS) throw new Error("not sent")
     setNotice(null)
     void onSend(question).then((result) => {
-      if (result.restore && !controller.textInput.value) controller.textInput.setInput(question)
+      // Read the current draft after the request settles, not the value captured
+      // when Send was clicked. Never overwrite a new question typed meanwhile.
+      if (result.restore && !latestDraft.current) controller.textInput.setInput(question)
     })
   }
 

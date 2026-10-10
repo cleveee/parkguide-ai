@@ -168,7 +168,14 @@ function RetrievalTab({ turn }: { turn: ChatTurn }) {
     <div className="space-y-5">
       <Section title="Query">
         <p className="rounded-md bg-muted/60 p-2 font-mono text-xs break-words">{retrieval.query}</p>
+        {retrieval.keyword_query && retrieval.keyword_query !== retrieval.query && (
+          <div className="space-y-1 text-xs">
+            <p className="text-muted-foreground">Keyword search keeps earlier subjects and removes repeated terms. For concrete follow-ups, matches must include a current subject. Semantic search uses the full context above.</p>
+            <p className="rounded-md bg-muted/60 p-2 font-mono break-words">{retrieval.keyword_query}</p>
+          </div>
+        )}
         <dl>
+          {Boolean(retrieval.keyword_current_terms?.length) && <Row label="Keyword match requires any of" value={retrieval.keyword_current_terms!.join(", ")} />}
           <Row label="Park filter" value={retrieval.filters.parks.map(parkName).join(", ") || "None"} />
           {retrieval.filters.source_url_count > 0 && <Row label="Table-page URL filter" value={`${retrieval.filters.source_url_count} pages`} />}
           <Row label="Mode" value={retrieval.mode ?? NOT_CAPTURED} />
@@ -350,7 +357,7 @@ function DataFlowTab({ turn }: { turn: ChatTurn }) {
           </p>
           <p>
             {turn.history.scope_reset
-              ? "Earlier turns mentioned another park, so the shared path used none of them as context."
+              ? "Messages mentioning another park were excluded; the remaining selected-park context was preserved."
               : `${turn.history.messages_used} prior message(s) were used as conversation context.`}
           </p>
         </Step>
@@ -497,4 +504,3 @@ export function Inspector({ turn }: { turn: ChatTurn | null }) {
     </Tabs>
   )
 }
-

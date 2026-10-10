@@ -832,6 +832,9 @@ def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, sel
             "retrieval": {
                 "ran": retrieval_ran,
                 "query": result.get("retrieval_query") if retrieval_ran else None,
+                "keyword_query": trace.get("keyword_query") if retrieval_ran else None,
+                "keyword_current_terms": trace.get("keyword_current_terms") if retrieval_ran else None,
+                "keyword_candidate_count": trace.get("keyword_candidate_count") if retrieval_ran else None,
                 "filters": {"parks": [park for park in filters.get("parks", []) if park in PARK_CODES],
                             "source_url_count": len(filters.get("source_url", [])) if isinstance(filters.get("source_url"), list) else 0},
                 "mode": trace.get("mode"), "build_id": trace.get("build_id"), "build_strategy": build["strategy"],

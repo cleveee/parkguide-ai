@@ -1,5 +1,6 @@
 """Selected-park and unavailable-evidence boundaries, without provider calls."""
 from copy import deepcopy
+from datetime import datetime, timezone
 import json
 from types import SimpleNamespace
 from unittest.mock import Mock
@@ -127,6 +128,169 @@ def test_selected_park_overrides_previous_park_and_reaches_both_queries():
     assert all("/yose/" in context["source_url"] for context in calls["contexts"])
     assert calls["generation_history"] == []
     assert history == original_history
+
+
+def test_rejected_other_park_turn_does_not_erase_the_valid_topic():
+    history = [
+        {"role": "user", "content": "What are the pet rules in Yosemite?"},
+        {"role": "assistant", "content": "Pets must remain on a leash."},
+        {"role": "user", "content": "What about Yellowstone?"},
+        {"role": "assistant", "content": "This conversation is for Yosemite National Park. Choose another park in the selector to ask about it."},
+    ]
+    original = deepcopy(history)
+    result = grounded_answer("How long does it need to be?", history)
+    assert result["history_scope_reset"] is True
+    assert result["history"] == history[:2]
+    assert "pet rules" in result["retrieval_query"]
+    assert "Yellowstone" not in result["retrieval_query"]
+    assert history == original
+
+
+def test_assistant_other_park_mention_does_not_erase_a_valid_user_topic():
+    history = [
+        {"role": "user", "content": "What are the pet rules in Yosemite?"},
+        {"role": "assistant", "content": "Select Yellowstone separately to discuss that park."},
+    ]
+    result = grounded_answer("How long does it need to be?", history)
+    assert result["history"] == history[:1]
+    assert "pet rules" in result["retrieval_query"]
+    assert result["history_scope_reset"] is True
+
+
+@pytest.mark.parametrize("question,expected_detail", [
+    ("How long does it take?", "trail, drive, or activity"),
+    ("How long is the hike?", "trail, drive, or activity"),
+    ("What is the closest campground?", "starting location"),
+    ("Which campground is nearest to me?", "starting location"),
+    ("Can I bring it?", "place or item"),
+])
+def test_selected_park_does_not_resolve_a_missing_place_or_item(question, expected_detail):
+    result = grounded_answer(question, embedder=forbidden, retriever=forbidden,
+                             generator=forbidden, reviewer=forbidden)
+    assert result["response"]["action"] == "clarify"
+    assert result["response"]["preflight_reason"] == "missing_reference"
+    assert expected_detail in result["rendered"]
+    assert "Yosemite" in result["rendered"]
+    assert result["contexts"] == []
+
+
+@pytest.mark.parametrize("question", [
+    "How long does the Lower Yosemite Fall hike take?",
+    "What campground is closest to Yosemite Valley?",
+    "Are there toilets at the visitor center?",
+])
+def test_concrete_question_is_not_mistaken_for_an_unresolved_pronoun(question):
+    result = grounded_answer(question)
+    assert result["response"]["action"] == "answer"
+    assert "preflight_reason" not in result["response"]
+
+
+@pytest.mark.parametrize("question", [
+    "What are the pet rules today?",
+    "I am visiting today. Where are pets allowed?",
+    "How should I store food tonight?",
+    "How far should I stay from bears today?",
+])
+def test_visit_date_does_not_block_static_source_grounded_rules(question):
+    result = grounded_answer(question)
+    assert result["response"]["action"] == "answer"
+    assert "preflight_reason" not in result["response"]
+    assert result["citation_review"] is not None
+
+
+@pytest.mark.parametrize("question", [
+    "Is Tioga Road open today?",
+    "Are campsites available tonight?",
+    "What are current weather conditions?",
+    "Is the trail safe tomorrow?",
+    "Can I drive Tioga Road today?",
+    "What are the entrance opening hours today?",
+    "What is the latest road update?",
+    "Show live availability.",
+])
+def test_live_state_requests_still_refuse_before_any_model_or_retrieval_call(question):
+    result = grounded_answer(question, embedder=forbidden, retriever=forbidden,
+                             generator=forbidden, reviewer=forbidden)
+    assert result["response"]["action"] == "refuse"
+    assert result["response"]["preflight_reason"] == "live_information_unavailable"
+    assert result["contexts"] == []
+
+
+@pytest.mark.parametrize("question", ["Today?", "What about today?", "And tomorrow?"])
+def test_date_only_followup_does_not_bypass_live_status_boundary(question):
+    history = [{"role": "user", "content": "Was Tioga Road open in July 2025?"}]
+    result = grounded_answer(question, history, embedder=forbidden, retriever=forbidden,
+                             generator=forbidden, reviewer=forbidden)
+    assert result["response"]["action"] == "refuse"
+    assert result["response"]["preflight_reason"] == "live_information_unavailable"
+
+
+@pytest.fixture
+def fixed_trip_request_date(monkeypatch):
+    class FixedDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return cls(2026, 10, 10, 12, tzinfo=timezone.utc)
+
+    monkeypatch.setattr("parkguide.chat.datetime", FixedDateTime)
+
+
+@pytest.mark.parametrize("question", [
+    "We moved our trip to January 15, 2027. Will that route definitely be open that day?",
+    "Actually, my hike is July 18, 2027. Can you confirm this trail will be open then?",
+    "Can you guarantee the road conditions on November 15, 2026?",
+    "Will the route be closed on 2026-12-15?",
+    "Can you confirm the trail will be open on 12/15/2026?",
+])
+def test_future_travel_status_has_an_explicit_date_limitation(question, fixed_trip_request_date):
+    result = grounded_answer(question, embedder=forbidden, retriever=forbidden,
+                             generator=forbidden, reviewer=forbidden)
+    assert result["response"]["action"] == "refuse"
+    assert result["response"]["preflight_reason"] == "dated_information_unavailable"
+    assert "cannot confirm" in result["rendered"]
+    assert "requested travel date" in result["rendered"]
+    assert "official updates" in result["rendered"]
+    assert result["contexts"] == []
+
+
+@pytest.mark.parametrize("question", [
+    "Can you confirm whether Tioga Road was open on July 18, 2025?",
+    "Can you confirm whether the road was closed on January 15, 2026?",
+    "Can you confirm whether the road was open on 2026-01-15?",
+    "Can you confirm whether the road was open on 1/15/2026?",
+    "My trip is July 18, 2027. What are the pet rules?",
+    "Will I need to keep my dog on a leash on July 18, 2027?",
+    "What does the saved 2027 schedule say about road opening dates?",
+])
+def test_dated_guard_preserves_historical_and_static_source_questions(question, fixed_trip_request_date):
+    result = grounded_answer(question)
+    assert result["response"]["action"] == "answer"
+    assert "preflight_reason" not in result["response"]
+
+
+@pytest.mark.parametrize("question", [
+    "Can you also confirm whether my private Bridge Bay reservation BB-9274 is paid?",
+    "Please check our Bridge Bay campground booking status.",
+    "Is my lower pines campground reservation paid?",
+])
+def test_private_reservation_with_facility_name_stops_before_paid_work(question):
+    result = grounded_answer(question, selected_park="yell", embedder=forbidden,
+                             retriever=forbidden, generator=forbidden, reviewer=forbidden)
+    assert result["response"]["action"] == "refuse"
+    assert result["response"]["preflight_reason"] == "private_record_lookup"
+    assert "booking provider's official website" in result["rendered"]
+    assert result["contexts"] == []
+
+
+@pytest.mark.parametrize("question", [
+    "Can you confirm whether my dog needs a reservation for a campsite?",
+    "Can you confirm the general reservation rules at Bridge Bay?",
+    "What are the payment rules for reserving a campsite?",
+])
+def test_private_lookup_guard_preserves_general_reservation_rules(question):
+    result = grounded_answer(question)
+    assert result["response"]["action"] == "answer"
+    assert "preflight_reason" not in result["response"]
 
 
 @pytest.mark.parametrize("park,name", [("yose", "Yosemite"), ("yell", "Yellowstone"), ("grca", "Grand Canyon")])

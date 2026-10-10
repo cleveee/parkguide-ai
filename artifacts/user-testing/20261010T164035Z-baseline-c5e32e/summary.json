@@ -1,0 +1,17 @@
+{
+  "id": "20261010T164035Z-baseline-c5e32e",
+  "completed_at": "2026-10-10T16:42:32.988162+00:00",
+  "turns": 18,
+  "requested_turns": 18,
+  "stopped_reason": null,
+  "estimated_cost_or_reservations_usd": 0.012921153999999999,
+  "all_ledgers_captured": true,
+  "http_200": 18,
+  "allowed_statuses": 15,
+  "source_identity_failures": 0,
+  "semantic_accuracy": "not computed; review individual answers against frozen source spans",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "turns_sha256": "a60291107c8631c0a35662c7f83c09dfa2496fc467616a470bb9f8c72a59083b",
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c"
+}
