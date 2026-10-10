@@ -80,9 +80,13 @@ function Sidebar({
         <label htmlFor={`${id}-park`} className="text-xs font-medium text-muted-foreground">
           Park
         </label>
-        <div className="flex items-center gap-1">
+        <div className="flex min-w-0 items-center gap-1">
           <Select value={park ?? ""} onValueChange={(value) => onPark(value as ParkCode)}>
-            <SelectTrigger id={`${id}-park`} className="w-full bg-background">
+            <SelectTrigger
+              id={`${id}-park`}
+              className="min-w-0 flex-1 bg-background *:data-[slot=select-value]:block *:data-[slot=select-value]:min-w-0 *:data-[slot=select-value]:truncate"
+              title={park ? `${parkName(park)} National Park` : "Choose a park"}
+            >
               <SelectValue placeholder="Choose a park" />
             </SelectTrigger>
             <SelectContent>
@@ -96,7 +100,7 @@ function Sidebar({
           {park && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon-sm" aria-label="Clear selected park" onClick={() => onPark(null)}>
+                <Button variant="ghost" size="icon-sm" className="shrink-0" aria-label="Clear selected park" onClick={() => onPark(null)}>
                   <XIcon />
                 </Button>
               </TooltipTrigger>
