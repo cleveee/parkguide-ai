@@ -152,6 +152,7 @@ def test_hosted_meta_exposes_profile(hosted):
 def test_packaging_configuration():
     pyproject = tomllib.loads((ROOT / "pyproject.toml").read_text())
     assert pyproject["tool"]["vercel"]["entrypoint"] == "server:app"
+    assert pyproject["project"]["requires-python"] == ">=3.12,<3.14"
     runtime_deps = " ".join(pyproject["project"]["dependencies"]).lower()
     requirements = " ".join(line for line in (ROOT / "requirements.txt").read_text().lower().splitlines()
                             if not line.startswith("#"))
@@ -163,6 +164,9 @@ def test_packaging_configuration():
     assert vercel["framework"] == "fastapi"
     function = vercel["functions"]["server.py"]
     assert len(function["excludeFiles"]) <= 256
+    # A real hosted build returned 404 for JS/CSS when only index.html was bundled.
+    assert "public/**" in function["includeFiles"]
+    assert "public/assets" not in function["excludeFiles"]
     for path in ("data/parkguide.sqlite", "data/evaluation/gold-draft-manifest.json",
                  "data/evaluation/gold-drafts.jsonl", "config/**", "vendor/tiktoken/**"):
         assert path in function["includeFiles"]
@@ -170,6 +174,7 @@ def test_packaging_configuration():
         assert path in function["excludeFiles"]
     assert "prepare_vercel.py" in vercel["buildCommand"]
     ignore = (ROOT / ".vercelignore").read_text().splitlines()
+    assert "public/" not in ignore
     assert {"app.py", "data/raw/", "artifacts/", "data/evaluation/*", ".env"} <= set(ignore)
     assert {"!data/evaluation/gold-draft-manifest.json", "!data/evaluation/gold-drafts.jsonl"} <= set(ignore)
 

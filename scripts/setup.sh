@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PARKGUIDE_PYTHON="${PARKGUIDE_PYTHON:-python3}"
-"$PARKGUIDE_PYTHON" -c 'import sys; assert (3, 11) <= sys.version_info[:2] < (3, 14), "Use Python 3.12 (supported: 3.11–3.13)"'
+"$PARKGUIDE_PYTHON" -c 'import sys; assert (3, 12) <= sys.version_info[:2] < (3, 14), "Use Python 3.12 (supported: 3.12–3.13)"'
 "$PARKGUIDE_PYTHON" -m venv .venv
 PARKGUIDE_LOCK=requirements-full.lock
 if [[ "${PARKGUIDE_CORE_ONLY:-0}" == "1" ]]; then

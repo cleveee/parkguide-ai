@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "parkguide-ai"
 version = "0.0.1"
 description = "Local educational RAG chatbot with source traces and saved evaluation"
-requires-python = ">=3.11,<3.14"
+requires-python = ">=3.12,<3.14"
 # Runtime serving dependencies only (also the Vercel install; see requirements.txt
 # for exact pins). Ingestion, Streamlit and reranking are extras; the local
 # setup installs requirements-full.lock and is unchanged.

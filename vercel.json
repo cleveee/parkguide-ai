@@ -4,8 +4,8 @@
   "functions": {
     "server.py": {
       "maxDuration": 120,
-      "includeFiles": "{data/parkguide.sqlite,data/evaluation/gold-draft-manifest.json,data/evaluation/gold-drafts.jsonl,config/**,vendor/tiktoken/**,src/**,public/index.html}",
-      "excludeFiles": "{web/**,artifacts/**,tests/**,app.py,data/raw/**,data/embedding-cache/**,data/diagnostics/**,{reports,docs,dashboard,scripts,.pytest_cache}/**,public/assets/**,data/*.json*,data/evaluation/{G*,diagnostic*,dialogues*,gold-authored*},**/__pycache__/**}"
+      "includeFiles": "{data/parkguide.sqlite,data/evaluation/gold-draft-manifest.json,data/evaluation/gold-drafts.jsonl,config/**,vendor/tiktoken/**,src/**,public/**}",
+      "excludeFiles": "{web/**,artifacts/**,tests/**,app.py,data/raw/**,data/embedding-cache/**,data/diagnostics/**,{reports,docs,dashboard,scripts,.pytest_cache}/**,data/*.json*,data/evaluation/{G*,diagnostic*,dialogues*,gold-authored*},**/__pycache__/**}"
     }
   },
   "headers": [

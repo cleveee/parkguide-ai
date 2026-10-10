@@ -1,0 +1,140 @@
+Browser tab: 15, Title: "ParkGuide", URL: "https://parkguide-ai-dh24.vercel.app/".
+1 AXWebArea ParkGuide, URL: parkguide-ai-dh24.vercel.app/
+	2 container root
+		3 container
+			4 text ParkGuide Saved official NPS sources Park
+			5 combo box (collapsed) Park, Value: Yellowstone National Park, ID: sidebar-park, Secondary Actions: Expand
+				32 container
+					33 text Yellowstone  National Park
+			34 button Clear selected park
+			35 container Latest capture: Oct 9, 2026, 9:50 PM CDT
+				36 text 40  documents ·  captured under 24 hours ago
+			7 container Main
+				8 button New conversation
+				9 button Chat
+				10 button Corpus
+				11 button How it works
+			12 text Conversation history stays in this tab's memory and clears on reload. Saved pages are a snapshot, not live conditions.
+		13 container
+			14 heading Yellowstone National Park, Value: 1
+				15 text Yellowstone National Park
+			16 text Answers use only this park's saved NPS sources
+			17 checkbox Description: Close inspector, Value: 1
+		18 container
+			19 container Conversation
+				45 text How far should I stay from bison and elk?
+				46 text Source review passed for  1 claim
+				47 container
+					48 text Stay at least 25 yards (23 meters) from bison and elk.
+					49 button Open saved evidence for source 1
+				50 button (collapsed) Sources used · 1 saved page, Secondary Actions: Expand
+					51 text Sources used · 
+					52 text 1
+					53 text  saved 
+					54 text page
+				55 text 4.31 s
+				56 button Inspect this turn
+			27 container
+				28 text entry area (settable) Question about Yellowstone
+				44 text Yellowstone  National Park Enter to send · Shift+Enter for a new line
+				30 button (disabled) Send question
+			31 text Answers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions.
+		57 container Inspector
+			58 tab group
+				59 tab (selectable, settable, boolean) Evidence, Value: 0, ID: radix-_r_n_-trigger-evidence
+				60 tab (selectable, settable, boolean) Retrieval, Value: 0, ID: radix-_r_n_-trigger-retrieval
+				61 tab (selected, settable, boolean) Data flow, Value: 1, ID: radix-_r_n_-trigger-flow
+			62 button Copy JSON
+			63 button Download
+			64 container
+				65 text “ How far should I stay from bison and elk? ”
+				66 container Description: Data flow, ID: radix-_r_n_-content-flow
+					67 content list
+						68 container
+							69 heading Question sent to the ParkGuide server function, Value: 4
+								70 text Question sent to the ParkGuide server function
+							71 text Browser ↔ server  ·  ran Question and selected park ( Yellowstone ), plus  0  prior message(s) from this tab's memory. 0 prior message(s) were used as conversation context.
+						72 container
+							73 heading Preflight checks, Value: 4
+								74 text Preflight checks
+							75 text Server function  ·  ran No recognized other-park, live-information or private-record pattern matched. These checks only recognize certain wordings, so a different phrasing can continue to the steps below.
+						76 container
+							77 heading Query embedding, Value: 4
+								78 text Query embedding
+							79 text Azure (remote)  ·  ran The budget ledger recorded an embedding call to Azure during this request. Cache files for this query hash were  absent  just before the call (a file observation; another process could change it). query sha256  747a7218cd92abf1389b2faae8327d198b71278463607760d6d45f689af870ff Embedding step wall time  196 ms
+						80 container
+							81 heading Search: SQLite + NumPy cosine + BM25 + fusion, Value: 4
+								82 text Search: SQLite + NumPy cosine + BM25 + fusion
+							83 text Server function  ·  ran 20  candidates from  850  saved  Yellowstone  passages · scoring 45 ms
+						84 container
+							85 heading Reranking (cross-encoder, offline), Value: 4
+								86 text Reranking (cross-encoder, offline)
+							87 text Server function  ·  not run Not installed in the hosted version; ranking is reciprocal-rank fusion only.
+						88 container
+							89 heading Answer drafting (Luna), Value: 4
+								90 text Answer drafting (Luna)
+							91 text Azure (remote)  ·  ran Sent: question,  5  selected snippet(s) and bounded prior conversation. Returned model:  gpt-6-luna-2026-09-22 Final successful call:  2,354  in /  94  out tokens · 1.27 s  · est.  $0.000339
+						92 container
+							93 heading Claim source review (Luna, cited passages only), Value: 4
+								94 text Claim source review (Luna, cited passages only)
+							95 text Azure (remote)  ·  ran All drafted claims passed source review. Returned model:  gpt-6-luna-2026-09-22 Successful review call:  2,333  in /  64  out tokens · 1.07 s  · est.  $0.000318
+						96 container
+							97 heading Citation, number, quotation, source-identity and review-integrity checks, Value: 4
+								98 text Citation, number, quotation, source-identity and review-integrity checks
+							99 text Server function  ·  ran
+						100 container
+							101 heading Result returned to the browser, Value: 4
+								102 text Result returned to the browser
+							103 text Browser ↔ server  ·  ran Reviewed answer with 1 claim(s) and 1 saved source page(s).
+					104 container
+						105 heading Paid-call ledger window (this request), Value: 3
+							106 text Paid-call ledger window (this request)
+						107 definition list
+							108 container Recorded events
+								109 text Recorded events
+							110 text 3
+							111 container Estimated cost, all recorded events
+								112 text Estimated cost, all recorded events
+							113 text $0.000658
+						114 definition list
+							115 text Embedding
+							116 container Events · reported / failed / unsettled
+								117 text Events · reported / failed / unsettled
+							118 text 1 · 1 / 0 / 0
+							119 container Tokens in / out (reported only)
+								120 text Tokens in / out (reported only)
+							121 text 14 / 0
+							122 container Estimated cost
+								123 text Estimated cost
+							124 text $3.08e-7
+						125 definition list
+							126 text Generation (answer drafting and claim review)
+							127 container Events · reported / failed / unsettled
+								128 text Events · reported / failed / unsettled
+							129 text 2 · 2 / 0 / 0
+							130 container Tokens in / out (reported only)
+								131 text Tokens in / out (reported only)
+							132 text 4,687 / 158
+							133 container Estimated cost
+								134 text Estimated cost
+							135 text $0.000657
+						136 text Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls. The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here. On Vercel the ledger is per instance and ephemeral.
+					137 container
+						138 heading Timing (nested wall times), Value: 3
+							139 text Timing (nested wall times)
+						140 definition list
+							141 container Server handler, Help: Whole request on the server, including evidence validation
+								142 text Server handler
+							143 text 4.15 s
+							144 container ⤷ Shared answer call, Help: Measured by the bridge around parkguide.chat.answer
+								145 text ⤷ Shared answer call
+							146 text 4.14 s
+							147 container ⤷ Pipeline, self-reported, Help: Includes retry waits and any first-use reranker load
+								148 text ⤷ Pipeline, self-reported
+							149 text 4.14 s
+							150 container ⤷ Retrieval total, Help: Index load + scoring + rerank; excludes embedding
+								151 text ⤷ Retrieval total
+							152 text 376 ms
+						153 text Each row contains the rows below it. Per-call timings above are for successful calls only. “Not captured” means no value was recorded, which is different from zero.
+
+The focused UI element is 61 tab (selected, settable, boolean) Data flow, Value: 1, ID: radix-_r_n_-trigger-flow

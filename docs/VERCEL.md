@@ -2,7 +2,7 @@
 
 ParkGuide can run as one native FastAPI project on Vercel at the repository root. The entry point is `server.py`, a thin wrapper around `parkguide.web.app`. The legacy Streamlit `app.py` is never the entry point, and it is not uploaded. This profile serves the same React app and the same shared `parkguide.chat.answer` path. It uses the same frozen SQLite database and the one approved Azure resource. It creates no database service, Azure resource or Vercel Services/Large Functions setup.
 
-This document covers preparation only. Importing the project, adding credentials and deploying are done by Robin. A live deployment has not been created or verified.
+Robin authorized CLI deployment on October 10, 2026. The production project is `cleveees-projects/parkguide-ai-dh24`, at https://parkguide-ai-dh24.vercel.app. Azure variables are configured server-side for production and preview. Live checks and their limits are recorded in `artifacts/deployment/vercel-live-checks.json`.
 
 ## Import settings
 
@@ -65,16 +65,10 @@ The hosted bundle does not include PyTorch or sentence-transformers. This keeps 
 
 ## Bundle contents
 
-`.vercelignore` keeps the following out of the upload: `.env*`, virtual environments, `node_modules`, `app.py`, `dashboard/`, `tests/`, the lock files, `data/raw/`, `data/embedding-cache/`, `data/diagnostics/`, `data/documents.jsonl`, `artifacts/`, `reports/`, `docs/`, and all evaluation files except the two gold-seal files. The `functions["server.py"]` include/exclude globs in `vercel.json` also remove `web/`, `scripts/`, `public/assets/` and caches from the function. Python dependencies come from `requirements.txt`, whose pins match `requirements-full.lock`, and from the matching bounded `[project].dependencies`. Ingestion (`ingest`), Streamlit (`app`) and reranking (`rerank`) are optional extras that the hosted install does not include. Local setup (`scripts/setup.sh` with the full lock) is unchanged.
+`.vercelignore` keeps the following out of the upload: `.env*`, virtual environments, `node_modules`, `app.py`, `dashboard/`, `tests/`, the lock files, `data/raw/`, `data/embedding-cache/`, `data/diagnostics/`, `data/documents.jsonl`, `artifacts/`, `reports/`, `docs/`, and all evaluation files except the two gold-seal files. The `functions["server.py"]` include/exclude globs in `vercel.json` remove `web/`, `scripts/` and caches from the function. All generated `public/**` files are included so the existing FastAPI handler can serve the frontend if CDN routing does not handle a file. An actual deployment with only `public/index.html` included returned 404 for JavaScript and CSS; these assets must stay bundled. Vercel selected the bounded `[project].dependencies` in `pyproject.toml` and resolved them with uv. `requirements.txt` records matching local pins but is not authoritative for that resolver. The declared Python minimum is 3.12 because NumPy 2.5 requires it; declaring 3.11 caused the first hosted build to fail universal dependency resolution. Ingestion (`ingest`), Streamlit (`app`) and reranking (`rerank`) are optional extras that the hosted install does not include. Local setup (`scripts/setup.sh` with the full lock) is unchanged.
 
-## Not verified here
+## Live verification
 
-These remain unverified until the project is imported and built on Vercel:
+The CLI production build reached `READY`. The database hash and all counts passed during the hosted build, and `/api/health` reported `"profile": "vercel"`. `/api/meta` and the park-filtered corpus endpoint returned 200 with the saved database contents. JavaScript and CSS returned 200 after correcting asset inclusion. The final verification record includes browser and chat observations.
 
-- an actual Vercel build;
-- the measured function size;
-- how `.vercelignore` negation and `includeFiles` behave on Vercel;
-- the cold-start time;
-- a live hosted chat.
-
-Check them after import, and check that `/api/health` reports `"profile": "vercel"`.
+These checks are a deployment smoke test, not a retrieval accuracy evaluation or a repeatable cold-start benchmark. Human gold review and sealed-test boundaries are unchanged. npm reported seven high-severity advisories in the shadcn scaffolding dependency chain; those dependency findings were not changed during this deployment.

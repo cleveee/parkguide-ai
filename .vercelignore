@@ -9,7 +9,6 @@
 venv/
 web/node_modules/
 web/dist/
-public/
 **/__pycache__/
 .pytest_cache/
 
