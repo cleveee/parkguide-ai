@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { CHAT_STORAGE_KEY, LEGACY_CHAT_STORAGE_KEY, loadChats, saveChats, createConversation, withActiveTurns, startConversation, selectConversation } from '../src/lib/chat-storage.ts'
+import { CHAT_STORAGE_KEY, LEGACY_CHAT_STORAGE_KEY, loadChats, saveChats, createConversation, withActiveTurns, startConversation, selectConversation, closeConversation } from '../src/lib/chat-storage.ts'
 function setWindow(t, value) {
   globalThis.window = value
   t.after(() => { delete globalThis.window })
@@ -118,4 +118,39 @@ test('blocked storage and quota errors leave conversation usable', (t) => {
   assert.equal(saveChats(library('yose', [done()])), false)
   setWindow(t, { localStorage: { setItem() { throw new Error('quota') } } })
   assert.equal(saveChats(library('yose', [done()])), false)
+})
+
+test('closing an inactive chat preserves the active reply and persists removal', (t) => {
+  storage(t)
+  const first = library('yose', [done()])
+  const saved = startConversation(first, active(first).turns, 'yell')
+  const pending = { id: 'pending', park: 'yell', question: 'Bison?', phase: 'pending', startedAt: 1 }
+  const closed = closeConversation(saved, [pending], first.activeId)
+  assert.equal(closed.activeId, saved.activeId)
+  assert.deepEqual(active(closed).turns, [pending])
+  assert.equal(closed.conversations.length, 1)
+  assert.equal(saveChats(closed), true)
+  assert.equal(loadChats().conversations.some(chat => chat.id === first.activeId), false)
+})
+test('closing active chat opens a remaining chat with its park and full content', () => {
+  const first = library('yose', [done()])
+  const saved = startConversation(first, active(first).turns, 'yell')
+  const closed = closeConversation(saved, [], saved.activeId)
+  assert.equal(closed.activeId, first.activeId)
+  assert.deepEqual(active(closed), active(first))
+})
+test('closing the final chat creates an empty chat for the same park', (t) => {
+  storage(t)
+  const first = library('yose', [done()])
+  const closed = closeConversation(first, active(first).turns, first.activeId)
+  assert.notEqual(closed.activeId, first.activeId)
+  assert.equal(closed.conversations.length, 1)
+  assert.equal(active(closed).park, 'yose')
+  assert.deepEqual(active(closed).turns, [])
+  saveChats(closed)
+  assert.deepEqual(loadChats(), closed)
+})
+test('closing an unknown chat does not change the collection', () => {
+  const saved = library()
+  assert.equal(closeConversation(saved, [], 'missing'), saved)
 })

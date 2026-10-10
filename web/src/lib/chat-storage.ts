@@ -93,3 +93,14 @@ export function selectConversation(saved: SavedChats, turns: TurnState[], id: st
   if (!saved.conversations.some((chat) => chat.id === id)) return saved
   return { ...withActiveTurns(saved, stopPendingTurns(turns)), activeId: id }
 }
+
+/** Remove one saved chat while retaining the latest active turns. */
+export function closeConversation(saved: SavedChats, turns: TurnState[], id: string): SavedChats {
+  if (!saved.conversations.some((chat) => chat.id === id)) return saved
+  const snapshot = withActiveTurns(saved, turns)
+  const conversations = snapshot.conversations.filter((chat) => chat.id !== id)
+  if (id !== saved.activeId) return { ...snapshot, conversations }
+  if (conversations.length) return { ...snapshot, activeId: conversations[0].id, conversations }
+  const conversation = createConversation(snapshot.conversations.find((chat) => chat.id === id)!.park)
+  return { version: 2, activeId: conversation.id, conversations: [conversation] }
+}
