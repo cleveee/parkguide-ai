@@ -1,0 +1,20 @@
+{
+  "kind": "AI provisional source-span review; separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 17,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 1,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 14,
+    "fully_supported": 14,
+    "partially_supported": 0
+  },
+  "cost_estimate_including_reservations_usd": 0.019999440000000004,
+  "reserved_provider_failed_attempts": 3,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "e9d0b024c92a32f114b192e48c16abceda51a5c15ac651c9c9a9ca3cdd1f7ce8",
+  "assessment_sha256": "a4eff4e745fdf598825953ca9d887ab9511094b03c0a086bbfb8cbb6a67a4073",
+  "interpretation": "17 original expectations pass; H06.2 remains failed because generation omits necessary legend evidence from its citation list, despite retrieving it."
+}

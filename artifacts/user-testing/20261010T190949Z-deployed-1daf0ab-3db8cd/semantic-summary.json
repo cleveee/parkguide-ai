@@ -1,0 +1,29 @@
+{
+  "kind": "AI provisional production-alias review of unchanged original18, not independent benchmark",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 17,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 1,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 12,
+    "fully_supported": 12,
+    "partially_supported": 0
+  },
+  "observed_regressions_vs_candidate7": [
+    "H01.2 answerable unpaved Mirror Lake followup entirely withheld"
+  ],
+  "cost_estimate_including_reservations_usd": 0.017049513999999998,
+  "failed_attempts": 2,
+  "http_latency_ms": {
+    "p50": 3370.1,
+    "p95": 33780.61,
+    "maximum": 34138.8,
+    "method": "linear interpolation over all18 actual HTTP requests including provider retries"
+  },
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "63c1bb48e5bdf6821c2210ef13bd842e80595afd1af3331797d32876c17f9b0f",
+  "assessment_sha256": "3264465ce6fda5cb7dd8a7b60a77228ebceb5f2f8811b864317b1ac1d7a26e5f",
+  "interpretation": "Production delivers17of18 expected useful answers/boundaries; all surviving claims are source-supported. Preserve the answerable refusal despite earlier full passes."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "20261010T191153Z-deployed-1daf0ab-pet-trails-260807",
+  "completed_at": "2026-10-10T19:12:41.841534+00:00",
+  "turns": 3,
+  "requested_turns": 3,
+  "stopped_reason": null,
+  "estimated_cost_or_reservations_usd": 0.005730334,
+  "all_ledgers_captured": true,
+  "http_200": 3,
+  "allowed_statuses": 2,
+  "source_identity_failures": 0,
+  "semantic_accuracy": "not computed; review individual answers against frozen source spans",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "turns_sha256": "9ca8bea74875ce7ec5e653f214449cf7a69c130470693ed27e4b054f31a3efe7",
+  "suite_sha256": "4388fed600ffe92cf1a059e75f23c94d9f7f0a5f25bb521e507e0ec687043d48"
+}

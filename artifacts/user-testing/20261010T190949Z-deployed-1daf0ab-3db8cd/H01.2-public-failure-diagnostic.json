@@ -1,0 +1,62 @@
+{
+  "question": "And can we continue onto the unpaved trail around the lake?",
+  "actual_history": [
+    {
+      "role": "user",
+      "content": "Can I walk my pet dog on the paved road to Mirror Lake?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, dogs are allowed on the paved road to Mirror Lake, unless signs prohibit pets. [Pets - Yosemite National Park (U.S. National Park Service)](https://www.nps.gov/yose/planyourvisit/pets.htm)"
+    }
+  ],
+  "response": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+  "reason": {
+    "code": "all_claims_withheld",
+    "category": "review_rejected",
+    "detail": "The AI source review rejected every drafted claim."
+  },
+  "review": {
+    "status": "all_withheld",
+    "model": "gpt-6-luna-2026-09-22",
+    "input_tokens": 3594,
+    "output_tokens": 83,
+    "elapsed_ms": 1273.7,
+    "cost_estimate_usd": 0.00048108,
+    "withheld_claims": 1
+  },
+  "final_context": [
+    {
+      "chunk_id": "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+      "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7"
+    },
+    {
+      "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "heading_path": "Pets > Where Pets Are Allowed"
+    },
+    {
+      "chunk_id": "41eda87b6cdb1271c4172999d8717115a6a9d607d72be8e593f923f59064c05e",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+      "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6"
+    },
+    {
+      "chunk_id": "39ecd87b6e43fe3b5544a2a8061985dd0bccbbb3d084e85f4cdede91e30e2161",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+      "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7"
+    },
+    {
+      "chunk_id": "0d751f98ea11867a30a49b6ee44043a9f9291f3848e0d9702049ea742eec0baf",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+      "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7"
+    }
+  ],
+  "supporting_frozen_expectation_refs": [
+    "yose_paved_pets"
+  ],
+  "finding": "Correct explicit unpaved-pet prohibition was in context; source review withheld all claims. Rejected text/reasons are not public, so precise cause remains unknown.",
+  "no_semantic_retry": true,
+  "human_verified": false,
+  "benchmark_eligible": false
+}

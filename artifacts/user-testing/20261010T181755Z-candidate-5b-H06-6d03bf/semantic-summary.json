@@ -1,0 +1,19 @@
+{
+  "kind": "AI provisional targeted original H06 dialogue; not a complete18-turn rerun",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 1,
+  "partial_precision_or_coverage": 2,
+  "semantic_failures": 0,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 2,
+    "fully_supported_by_claim_citations": 0,
+    "partial_citation_context": 2
+  },
+  "cost_estimate_including_reservations_usd": 0.001479,
+  "reserved_provider_failed_attempts": 0,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "2ee2ed65d4e150231692ad41156ca86a49f106184a2f33517b2b8409e94972c3",
+  "assessment_sha256": "0e58a07dab857f1a64035a281619b563af0424457da8557d1ce36a95dcc81adc"
+}

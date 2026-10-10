@@ -1,0 +1,24 @@
+{
+  "kind": "AI provisional source-span review; separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 17,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 1,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 13,
+    "fully_supported": 13,
+    "partially_supported": 0,
+    "note": "Every delivered claim compared with saved source passages; answerability failures remain separate."
+  },
+  "observed_regressions_vs_candidate_3": [
+    "H06.2 source-scoped table-absence draft improperly withheld"
+  ],
+  "cost_estimate_including_reservations_usd": 0.02014728,
+  "reserved_provider_failed_attempts": 3,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "64daf572070b4d0053823ac867dc2eaf513a937d0d1f7df366081d04abdbc83c",
+  "assessment_sha256": "df47bd0f3e4674c2806c253068fefe6fe50aee62a233c65ead406943c9ec2984",
+  "interpretation": "17 of18 original expectations pass. A review-stage over-refusal regressed after earlier passing runs. No retry substitutes for this result."
+}

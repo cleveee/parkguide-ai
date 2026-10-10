@@ -1,0 +1,28 @@
+{
+  "kind": "Initial deployment provenance; production alias may advance to frontend-only descendant during batch",
+  "recorded_at": "2026-10-10T19:11:19.674587+00:00",
+  "root_control_plane_evidence": "artifacts/reliability/deployment-1daf0ab.json",
+  "root_control_plane_evidence_sha256": "4d59b17ad9ceea8656dcd12fee9c36b2e9d76d3a32e78e3a38fcb38165aff659",
+  "verified_before_test_at": "2026-10-10T19:09:15.948201+00:00",
+  "initial_code_commit": "1daf0ab661f711c3f49977255792073af8002c57",
+  "initial_deployment": {
+    "id": "dpl_2tz7j6E3ysNbKjAte5GzhQ1irRJG",
+    "url": "parkguide-ai-dh24-lsj1fapof-cleveees-projects.vercel.app",
+    "readyState": "READY",
+    "aliases": [
+      "parkguide-ai-dh24.vercel.app",
+      "parkguide-ai-dh24-cleveees-projects.vercel.app",
+      "parkguide-ai-dh24-git-main-cleveees-projects.vercel.app"
+    ],
+    "createdAt": 1791659141514
+  },
+  "origin": "https://parkguide-ai-dh24.vercel.app",
+  "active_build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "provenance_limits": "Chat API proves observed runtime/build and answers, not exact git SHA. Final alias/deployment lineage will be recorded separately by root with its working CLI.",
+  "independent_control_plane_attempts": {
+    "MCP_alias_lookup": "403 scope authorization failure",
+    "mapped_CLI_fallback": "vercel command unavailable in agent PATH; no further fallback attempted"
+  },
+  "human_review_pending": true,
+  "benchmark_eligible": false
+}

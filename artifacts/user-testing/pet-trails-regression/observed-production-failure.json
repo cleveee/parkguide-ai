@@ -1,0 +1,81 @@
+{
+  "assessed_at": "2026-10-10T18:06:41.397816+00:00",
+  "kind": "independent_AI_audit_of_observed_manual_production_failure",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "grade": "fail",
+  "failure_type": "cross_claim_exception_scope_contradiction",
+  "observed_response_path": "artifacts/reliability/production-pet-trails-ui-response.json",
+  "observed_response_sha256": "98747fbe4c587bc0f897afeec5d3240f287f384717466f1d494311e05b981a4f",
+  "observed_turn_id": "d9e645a7e0eb419089132b25ff6bfb7d",
+  "question": "Are pets allowed on trails?",
+  "history_messages_received": 0,
+  "actual_status": "answer",
+  "actual_text": "Pets are prohibited on trails, except the Wawona Meadow Loop. Pets are allowed on certain paved trails, including Bridalveil Fall and Lower Yosemite Fall trails.",
+  "claim_assessment": [
+    {
+      "number": 1,
+      "scope_support": "incomplete and overbroad when judged against all retrieved source text",
+      "reason": "The prohibited-trails passage names Wawona, but the allowed-routes passage also permits named paved trails. Treating Wawona as the sole trail exception excludes allowed routes described by the next claim."
+    },
+    {
+      "number": 2,
+      "scope_support": "supported in isolation",
+      "reason": "The allowed-routes source explicitly names Bridalveil Fall and Lower Yosemite Fall. This sentence makes the first sentence overbroad; it does not repair its exclusive exception statement."
+    }
+  ],
+  "rationale": "Generation and per-claim review failed to reconcile source categories across the whole answer. Both relevant chunks were retrieved and delivered: allowed-routes at rank1 and prohibited-trails at rank3. No missing retrieval or source identity error explains this output.",
+  "source_identity_checks": {
+    "source_identity_errors": [],
+    "all_public_sources_match_frozen_db": true,
+    "semantic_support": "not established by identity checks; separate AI provisional review required"
+  },
+  "source_evidence_refs": [
+    "yose_general_most_trails",
+    "yose_paved_exceptions",
+    "yose_wawona_and_restricted_trails",
+    "yose_leash_upper_bound",
+    "yose_other_allowed_routes"
+  ],
+  "review_status": {
+    "status": "passed",
+    "model": "gpt-6-luna-2026-09-22",
+    "input_tokens": 3206,
+    "output_tokens": 112,
+    "elapsed_ms": 1191.7,
+    "cost_estimate_usd": 0.00045191999999999997,
+    "withheld_claims": 0
+  },
+  "observed_probe_ledger": {
+    "captured": true,
+    "events": 3,
+    "cost_estimate_usd": 0.000856758,
+    "by_kind": {
+      "embedding": {
+        "events": 1,
+        "reported_usage": 1,
+        "failed_attempts": 0,
+        "unsettled_reservations": 0,
+        "input_tokens": 9,
+        "output_tokens": 0,
+        "events_without_token_usage": 0,
+        "cost_estimate_usd": 1.9799999999999997e-07
+      },
+      "generation": {
+        "events": 2,
+        "reported_usage": 2,
+        "failed_attempts": 0,
+        "unsettled_reservations": 0,
+        "input_tokens": 5733,
+        "output_tokens": 281,
+        "events_without_token_usage": 0,
+        "cost_estimate_usd": 0.0008565599999999999
+      }
+    },
+    "includes_reserved_maximums": false,
+    "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+    "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here. On Vercel the ledger is per instance and ephemeral."
+  },
+  "cost_accounting_note": "This root-run manual probe is outside the five full-suite runner totals; do not double-count it when root aggregates costs.",
+  "frozen_suite_boundary": "The original 18-turn suite remains unchanged and its production pass is preserved. This additional failure shows that pass did not cover every broad-rule interaction."
+}

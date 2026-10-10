@@ -1,0 +1,100 @@
+{
+  "kind": "AI provisional diagnosis of preserved failure",
+  "trace_path": "/tmp/parkguide-candidate-4-traces/7068ed83fbff4be78cef440e8b450bb7.json",
+  "trace_sha256": "f4c3da2dafbd82fd824aed5479afef479688c5fe736540daf56b81a7c78dad0c",
+  "trace_timestamp": "2026-10-10T18:13:44.827437+00:00",
+  "question": "Which Yosemite trails can I walk with my pet dog?",
+  "raw_response": {
+    "action": "answer",
+    "answer": "Leashed dogs are allowed on the paved Bridalveil Fall and Lower Yosemite Fall trails, the paved Cook’s Meadow path, and the paved road to Mirror Lake. Dogs are not allowed on unpaved hiking trails, including the Mirror Lake loop.",
+    "claims": [
+      {
+        "text": "Leashed dogs are allowed on the paved Bridalveil Fall and Lower Yosemite Fall trails, the paved Cook’s Meadow path, and the paved road to Mirror Lake.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      },
+      {
+        "text": "Dogs are not allowed on unpaved hiking trails, including the Mirror Lake loop.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+          "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2466,
+      "output_tokens": 247
+    },
+    "elapsed_ms": 2303.6,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "f5d26e90711e2326e9987569f46f4a226ade785ea8e959787c22a25052e0b3dd",
+    "cost_estimate_usd": 0.00044412
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": false,
+        "reason": "The cited source allows pets on these paved routes only when signs do not prohibit them. The claim omits that applicable signage condition, so its permission is overbroad.",
+        "supporting_quotes": []
+      },
+      {
+        "claim_index": 1,
+        "supported": true,
+        "reason": "The guide says pets are not allowed on hiking trails, and the pets page specifically excludes the unpaved trail around Mirror Lake from the paved-road permission.",
+        "supporting_quotes": [
+          {
+            "evidence_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+            "quote": "maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or"
+          },
+          {
+            "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+            "quote": "Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not"
+          },
+          {
+            "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+            "quote": "Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3728,
+      "output_tokens": 134
+    },
+    "elapsed_ms": 1753.7,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "c71074d7ce332623b7fe65d24d1c590dcf8805fc5c6ea762cfccaf19da27be48",
+    "cost_estimate_usd": 0.00052776,
+    "withheld_claims": 1
+  },
+  "delivered_response": {
+    "action": "answer",
+    "answer": "Dogs are not allowed on unpaved hiking trails, including the Mirror Lake loop.",
+    "claims": [
+      {
+        "text": "Dogs are not allowed on unpaved hiking trails, including the Mirror Lake loop.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+          "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2466,
+      "output_tokens": 247
+    },
+    "elapsed_ms": 2303.6,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "f5d26e90711e2326e9987569f46f4a226ade785ea8e959787c22a25052e0b3dd",
+    "cost_estimate_usd": 0.0009718799999999999
+  },
+  "assessment": "Permission-list claim was withheld for omitted signage. Remaining restriction did not answer the permitted-route question and overgeneralized a category.",
+  "human_verified": false,
+  "benchmark_eligible": false
+}

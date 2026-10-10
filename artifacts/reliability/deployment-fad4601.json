@@ -1,0 +1,72 @@
+{
+  "verified_at": "2026-10-10T18:00:58.695423+00:00",
+  "code_commit": "fad4601a0a73d78e6cdb8edeb4e263bbd6109b25",
+  "deployment": {
+    "id": "dpl_5UhJQY5QcDF5wPkgy1XbwjmPME4n",
+    "url": "parkguide-ai-dh24-cwee3emkj-cleveees-projects.vercel.app",
+    "readyState": "READY",
+    "aliases": [
+      "parkguide-ai-dh24.vercel.app",
+      "parkguide-ai-dh24-cleveees-projects.vercel.app",
+      "parkguide-ai-dh24-git-main-cleveees-projects.vercel.app"
+    ],
+    "createdAt": 1791655029869
+  },
+  "github_status": {
+    "context": "Vercel \u2013 parkguide-ai-dh24",
+    "state": "success",
+    "description": "Deployment has completed",
+    "target_url": "https://vercel.com/cleveees-projects/parkguide-ai-dh24/5UhJQY5QcDF5wPkgy1XbwjmPME4n"
+  },
+  "production_origin": "https://parkguide-ai-dh24.vercel.app",
+  "assets": [
+    {
+      "path": "/assets/index-re20fuAW.js",
+      "sha256": "9cb50b7e4ec51679f6714e1b1dad799437b49b383158f92aa5663f718d676d34",
+      "matches_local_build": true
+    },
+    {
+      "path": "/assets/index-lbs3yIpN.css",
+      "sha256": "6a811c1533fcf212343559ef5e6fbd752cc5d2278afd715c78f00f8a3df90876",
+      "matches_local_build": true
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "dist_built": true,
+    "profile": "vercel"
+  },
+  "meta_runtime": {
+    "profile": "vercel",
+    "rerank_enabled": false,
+    "rerank_reason": "The hosted Vercel bundle does not install the optional PyTorch cross-encoder (size and cold start). Retrieval is hybrid NumPy cosine + BM25 with reciprocal-rank fusion and the same five-passage context.",
+    "evaluation_note": "Historical local evaluations do not measure this hosted profile's retrieval accuracy. Separate hosted visitor diagnostics are recorded in the project report; their AI assessments are not human verification.",
+    "budget": {
+      "cap_usd": 5.0,
+      "scope": "per_instance",
+      "note": "Ledger lives in /tmp on each Vercel instance; it resets when the instance is recycled and is not shared across concurrently running instances. It is not a global spending limit. Use deployment protection and provider rate/quota controls to manage exposure; Azure budget alerts alone do not enforce a hard cap."
+    },
+    "state_storage": "/tmp/parkguide (ephemeral, per instance)",
+    "request_serialization": "one answer at a time per instance; instances do not coordinate"
+  },
+  "active_build": {
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "active": true,
+    "strategy": "structure",
+    "created_at": "2026-10-10T03:49:58.065777+00:00",
+    "chunk_count": 3707,
+    "vector_count": 3707,
+    "dimension": 1536,
+    "embedding_deployment": "text-embedding-3-small",
+    "target_tokens": 200,
+    "overlap_tokens": 40
+  },
+  "totals": {
+    "documents": 155,
+    "html": 150,
+    "pdf": 5,
+    "table_documents": 45,
+    "chunks_all_builds": 5405,
+    "vectors_all_builds": 5405
+  }
+}

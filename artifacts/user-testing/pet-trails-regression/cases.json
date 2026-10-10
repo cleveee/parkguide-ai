@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-10-10T18:06:41.294354+00:00",
+  "kind": "post_observation_non_gold_regression_cases",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "author": "AI agent; no human semantic certification",
+  "provenance": "Added after observing the manual production broad-rule failure. Sources and expectations were inspected/saved before any new requests for these variants. This is a targeted regression set, not a pre-answer independent test.",
+  "observed_seed_response": "artifacts/reliability/production-pet-trails-ui-response.json",
+  "observed_seed_sha256": "98747fbe4c587bc0f897afeec5d3240f287f384717466f1d494311e05b981a4f",
+  "original_frozen_18_suite": "artifacts/user-testing/source-first-cases.json",
+  "original_frozen_18_suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "active_build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "evidence": {
+    "yose_general_most_trails": {
+      "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+      "content_hash": "c2a3903604c8b18d8bbf722110b82a995ec92f1f9c627252a1d3b10bc0a4ccb8",
+      "crawled_at": "2026-10-10T02:44:54.433051+00:00",
+      "spans": [
+        {
+          "block_index": 11,
+          "end": 3012,
+          "heading_path": "Plan Your Visit > Top Trip Planning Tips",
+          "kind": "paragraph",
+          "start": 2760,
+          "text": "Plan Ahead Before Packing your Pet Pets are allowed in Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members are best left at home. Find out what you can (and can\u2019t) do with your pet."
+        }
+      ]
+    },
+    "yose_paved_exceptions": {
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+      "spans": [
+        {
+          "block_index": 3,
+          "end": 166,
+          "heading_path": "Pets > Where Pets Are Allowed",
+          "kind": "paragraph",
+          "start": 144,
+          "text": "Where Pets Are Allowed"
+        },
+        {
+          "block_index": 4,
+          "end": 186,
+          "heading_path": "Pets > Where Pets Are Allowed",
+          "kind": "paragraph",
+          "start": 168,
+          "text": "In developed areas"
+        },
+        {
+          "block_index": 5,
+          "end": 481,
+          "heading_path": "Pets > Where Pets Are Allowed",
+          "kind": "paragraph",
+          "start": 188,
+          "text": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+        }
+      ]
+    },
+    "yose_wawona_and_restricted_trails": {
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+      "spans": [
+        {
+          "block_index": 13,
+          "end": 1120,
+          "heading_path": "Pets > Where Pets Are Not Allowed",
+          "kind": "paragraph",
+          "start": 1094,
+          "text": "Where Pets Are Not Allowed"
+        },
+        {
+          "block_index": 14,
+          "end": 1238,
+          "heading_path": "Pets > Where Pets Are Not Allowed",
+          "kind": "paragraph",
+          "start": 1122,
+          "text": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+        },
+        {
+          "block_index": 23,
+          "end": 1712,
+          "heading_path": "Pets > Where Pets Are Not Allowed",
+          "kind": "paragraph",
+          "start": 1546,
+          "text": "There are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed."
+        }
+      ]
+    },
+    "yose_leash_upper_bound": {
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+      "spans": [
+        {
+          "block_index": 8,
+          "end": 680,
+          "heading_path": "Pets > Where Pets Are Allowed > Additionally:",
+          "kind": "paragraph",
+          "start": 583,
+          "text": "pets must be restrained on a leash not more than six feet long or otherwise physically restrained"
+        }
+      ]
+    },
+    "yose_other_allowed_routes": {
+      "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+      "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "content_hash": "ffa12e684550555c16687d4ae5ebde61dccea807dfeec528969f4ec5279fac23",
+      "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+      "spans": [
+        {
+          "block_index": 42,
+          "end": 5721,
+          "heading_path": "Pets > Harmful Algal Blooms",
+          "kind": "paragraph",
+          "start": 5636,
+          "text": "There are a few additional (very obscure and unsigned) places where pets are allowed:"
+        },
+        {
+          "block_index": 43,
+          "end": 5867,
+          "heading_path": "Pets > Harmful Algal Blooms",
+          "kind": "paragraph",
+          "start": 5723,
+          "text": "Wawona: Wawona Meadow Loop, Chowchilla Mountain Road, and Four Mile and Eleven Mile fire roads (but not the Four Mile Trail in Yosemite Valley)."
+        },
+        {
+          "block_index": 44,
+          "end": 6170,
+          "heading_path": "Pets > Harmful Algal Blooms",
+          "kind": "paragraph",
+          "start": 5869,
+          "text": "Hodgdon Meadow: Carlon Road from the trailhead to Hodgdon Meadow (but not to Carlon Falls) and on the Old Big Oak Flat Road from Hodgdon Meadow to Tuolumne Grove parking lot (but not on the Old Big Oak Flat Road trail). Dogs are allowed on the road within Tuolumne Grove, but not on the nature trail.."
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "RPT01",
+      "park": "yose",
+      "topic": "Broad trail rule must reconcile all supported exceptions",
+      "provenance_note": "Exact question from the observed manual failure; already seen before authoring this regression set.",
+      "turns": [
+        {
+          "question": "Are pets allowed on trails?",
+          "acceptable_statuses": [
+            "answer"
+          ],
+          "required_semantics": [
+            "Give one coherent rule: pets are not allowed on most hiking trails, while the source-described paved routes and the Wawona Meadow Loop are allowed exceptions.",
+            "Mention both the paved-route allowance (with at least one concrete named example such as Bridalveil Fall or Lower Yosemite Fall) and Wawona Meadow Loop; do not present either as the only exception.",
+            "If stating the general paved-route permission, preserve the restriction where signs prohibit pets. A clearly labeled short list of known permitted routes need not claim exhaustive coverage.",
+            "If discussing prohibited examples, correctly keep Vernal Fall and the unpaved Mirror Lake loop prohibited; carrying a pet creates no exception.",
+            "If leash length is supplied, preserve the maximum of six feet.",
+            "Read all delivered claims together: a broad prohibition must already incorporate or clearly defer to all supported exception categories instead of contradicting the next sentence."
+          ],
+          "forbidden_semantics": [
+            "Pets are prohibited on all trails except Wawona Meadow Loop, even if later followed by a separate paved-trail allowance.",
+            "All trails or all paved hiking trails are pet-friendly.",
+            "All Yosemite trails are prohibited to pets or refusal despite available general-rule and exception evidence.",
+            "Authorize Vernal Fall or the unpaved trail around Mirror Lake for a regular pet, including carried pets."
+          ],
+          "evidence_refs": [
+            "yose_general_most_trails",
+            "yose_paved_exceptions",
+            "yose_wawona_and_restricted_trails",
+            "yose_leash_upper_bound",
+            "yose_other_allowed_routes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RPT02",
+      "park": "yose",
+      "topic": "Broad trail rule must reconcile all supported exceptions",
+      "provenance_note": "Natural paraphrase authored after the seed failure; no live answer observed for this wording at authoring.",
+      "turns": [
+        {
+          "question": "Can I take my dog hiking in Yosemite, or are all the trails off limits?",
+          "acceptable_statuses": [
+            "answer"
+          ],
+          "required_semantics": [
+            "Give one coherent rule: pets are not allowed on most hiking trails, while the source-described paved routes and the Wawona Meadow Loop are allowed exceptions.",
+            "Mention both the paved-route allowance (with at least one concrete named example such as Bridalveil Fall or Lower Yosemite Fall) and Wawona Meadow Loop; do not present either as the only exception.",
+            "If stating the general paved-route permission, preserve the restriction where signs prohibit pets. A clearly labeled short list of known permitted routes need not claim exhaustive coverage.",
+            "If discussing prohibited examples, correctly keep Vernal Fall and the unpaved Mirror Lake loop prohibited; carrying a pet creates no exception.",
+            "If leash length is supplied, preserve the maximum of six feet.",
+            "Read all delivered claims together: a broad prohibition must already incorporate or clearly defer to all supported exception categories instead of contradicting the next sentence."
+          ],
+          "forbidden_semantics": [
+            "Pets are prohibited on all trails except Wawona Meadow Loop, even if later followed by a separate paved-trail allowance.",
+            "All trails or all paved hiking trails are pet-friendly.",
+            "All Yosemite trails are prohibited to pets or refusal despite available general-rule and exception evidence.",
+            "Authorize Vernal Fall or the unpaved trail around Mirror Lake for a regular pet, including carried pets."
+          ],
+          "evidence_refs": [
+            "yose_general_most_trails",
+            "yose_paved_exceptions",
+            "yose_wawona_and_restricted_trails",
+            "yose_leash_upper_bound",
+            "yose_other_allowed_routes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RPT03",
+      "park": "yose",
+      "topic": "Broad trail rule must reconcile all supported exceptions",
+      "provenance_note": "Natural route-selection variant authored after the seed failure; no live answer observed for this wording at authoring.",
+      "turns": [
+        {
+          "question": "Which Yosemite trails can I walk with my pet dog?",
+          "acceptable_statuses": [
+            "answer"
+          ],
+          "required_semantics": [
+            "Give one coherent rule: pets are not allowed on most hiking trails, while the source-described paved routes and the Wawona Meadow Loop are allowed exceptions.",
+            "Mention both the paved-route allowance (with at least one concrete named example such as Bridalveil Fall or Lower Yosemite Fall) and Wawona Meadow Loop; do not present either as the only exception.",
+            "If stating the general paved-route permission, preserve the restriction where signs prohibit pets. A clearly labeled short list of known permitted routes need not claim exhaustive coverage.",
+            "If discussing prohibited examples, correctly keep Vernal Fall and the unpaved Mirror Lake loop prohibited; carrying a pet creates no exception.",
+            "If leash length is supplied, preserve the maximum of six feet.",
+            "Read all delivered claims together: a broad prohibition must already incorporate or clearly defer to all supported exception categories instead of contradicting the next sentence."
+          ],
+          "forbidden_semantics": [
+            "Pets are prohibited on all trails except Wawona Meadow Loop, even if later followed by a separate paved-trail allowance.",
+            "All trails or all paved hiking trails are pet-friendly.",
+            "All Yosemite trails are prohibited to pets or refusal despite available general-rule and exception evidence.",
+            "Authorize Vernal Fall or the unpaved trail around Mirror Lake for a regular pet, including carried pets."
+          ],
+          "evidence_refs": [
+            "yose_general_most_trails",
+            "yose_paved_exceptions",
+            "yose_wawona_and_restricted_trails",
+            "yose_leash_upper_bound",
+            "yose_other_allowed_routes"
+          ]
+        }
+      ]
+    }
+  ]
+}

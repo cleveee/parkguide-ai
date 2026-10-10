@@ -1,0 +1,92 @@
+{
+  "trace_path": "/tmp/parkguide-candidate-4-traces/0dc9cfe6bb00463092110ff4162cff86.json",
+  "trace_sha256": "316cdc210c794d34356b38acc2e54d78525fbbd87833bf7e47e54c989334547c",
+  "timestamp": "2026-10-10T19:01:07.527269+00:00",
+  "raw_response": {
+    "action": "answer",
+    "answer": "Leashed dogs may walk the paved Bridalveil Fall and Lower Yosemite Fall trails. Dogs are also allowed on the paved Cook’s Meadow trail and paved road to Mirror Lake, but not its unpaved loop.",
+    "claims": [
+      {
+        "text": "Leashed dogs may walk the paved Bridalveil Fall and Lower Yosemite Fall trails.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      },
+      {
+        "text": "Dogs are also allowed on the paved Cook’s Meadow trail and paved road to Mirror Lake, but not its unpaved loop.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2575,
+      "output_tokens": 200
+    },
+    "elapsed_ms": 2409.3,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "fc166ec6d8f0de45ae1e85e9cccc12ada280eb6021de896bda28bbf5f6ab9dab",
+    "cost_estimate_usd": 0.000429
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": false,
+        "reason": "The source permits pets on these trails only as part of its fully paved access rule, with an exception where signs prohibit pets. It does not establish that leashes are required or that these trails are paved.",
+        "supporting_quotes": []
+      },
+      {
+        "claim_index": 1,
+        "supported": false,
+        "reason": "The source supports the paved Cook’s Meadow trail and paved road to Mirror Lake, and excludes the unpaved loop. But it does not establish that dogs are allowed there without the fully paved access rule’s exception for signs prohibiting pets.",
+        "supporting_quotes": []
+      }
+    ],
+    "citation_contract": "witness-selected-v1",
+    "citation_selections": [
+      {
+        "claim_index": 0,
+        "original_evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ],
+        "final_evidence_ids": []
+      },
+      {
+        "claim_index": 1,
+        "original_evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ],
+        "final_evidence_ids": []
+      }
+    ],
+    "usage": {
+      "input_tokens": 2282,
+      "output_tokens": 136
+    },
+    "elapsed_ms": 1668.7,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "171222a0c39ce30c7c4ee0fc4a511ee032a81f93b45f8e4f5783d7ee118a89cf",
+    "cost_estimate_usd": 0.00035543999999999994,
+    "withheld_claims": 2
+  },
+  "delivered_response": {
+    "action": "refuse",
+    "answer": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "claims": [],
+    "usage": {
+      "input_tokens": 2575,
+      "output_tokens": 200
+    },
+    "elapsed_ms": 2409.3,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "fc166ec6d8f0de45ae1e85e9cccc12ada280eb6021de896bda28bbf5f6ab9dab",
+    "cost_estimate_usd": 0.00078444
+  },
+  "human_verified": false,
+  "benchmark_eligible": false
+}

@@ -1,0 +1,282 @@
+{
+  "kind": "Independent public delivered-citation and exact SQLite witness audit",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "turns_sha256": "63c1bb48e5bdf6821c2210ef13bd842e80595afd1af3331797d32876c17f9b0f",
+  "internal_original_final_trace_available": false,
+  "limitation": "Production payload exposes final delivered witnesses but not rejected drafts or original evidence-ID selection. Do not infer original/final equality from these public fields.",
+  "records": [
+    {
+      "case_turn": "H01.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Yes, dogs are allowed on the paved road to Mirror Lake, unless signs prohibit pets.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "witnesses": [
+                "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower",
+                "Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H01.2",
+      "claims": []
+    },
+    {
+      "case_turn": "H01.3",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "The leash must be no more than six feet long.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+              "witnesses": [
+                "pets must be restrained on a leash not more than six feet long or otherwise physically restrained"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H02.1",
+      "claims": []
+    },
+    {
+      "case_turn": "H02.2",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "In Yosemite campgrounds, generators may run from 7–9 am, noon–2 pm, and 5–7 pm.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+              "witnesses": [
+                "use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm.",
+                "9 am, noon to 2 pm, and 5 pm to 7 pm. Generator use is not allowed at other times."
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H02.3",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Yosemite campground quiet hours are 10 pm to 6 am.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+              "witnesses": [
+                "Quiet hours are from 10 pm to 6 am. Generator use is allowed only from 7 am to 9 am,"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H03.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "No. Swimming or bathing in water entirely of thermal origin is illegal in Yellowstone.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "578ca8d6381eeaf66ecf0964a58ff33938c0aa9c144b0392cfb1481f56e075d2",
+              "witnesses": [
+                "thermal features in Yellowstone, it is illegal to swim or bathe in any water that is entirely of thermal origin."
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H03.2",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "No. Thermal runoff can be extremely hot and cause burns; do not touch it.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "578ca8d6381eeaf66ecf0964a58ff33938c0aa9c144b0392cfb1481f56e075d2",
+              "witnesses": [
+                "Even thermal runoff can be extremely hot and cause burns. Hot springs also contain algae, bacteria, and fungi found nowhere",
+                "nowhere else in the world; coming in contact with these life forms can destroy them. Resist the temptation to touch!"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H03.3",
+      "claims": []
+    },
+    {
+      "case_turn": "H04.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "The road between Mammoth Hot Springs and the Northeast Entrance is generally open year-round to regular traffic, weather permitting.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "4c84c45b36bd47156c82236e8bd5e2a8b6632afd9deccb10070ca3a98bb4571f",
+              "witnesses": [
+                "The road between Mammoth Hot Springs and the northeast entrance is the only park road typically open to regular traffic",
+                "is the only park road typically open to regular traffic year-round, weather permitting (closes in winter east of Cooke"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H04.2",
+      "claims": []
+    },
+    {
+      "case_turn": "H04.3",
+      "claims": []
+    },
+    {
+      "case_turn": "H05.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Yes. Leashed dogs are allowed on trails above the rim.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50",
+              "witnesses": [
+                "Leashed pets are allowed on trails above the rim, Mather Campground, Desert View Campground, Trailer Village, and throughout developed areas."
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H05.2",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "No. Pets are not allowed below the rim on inner canyon trails; service animals assisting people with disabilities are permitted.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+              "witnesses": [
+                "of Grand Canyon, service animals are permitted if they are assisting their humans who have disabilities. It is highly recommended"
+              ]
+            },
+            {
+              "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+              "witnesses": [
+                "Below the rim (on inner canyon trails)."
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H05.3",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "No. Pets are not permitted on park shuttle buses.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+              "witnesses": [
+                "Pets are not permitted:",
+                "On park shuttle buses."
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H06.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "witnesses": [
+                "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |",
+                "| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |",
+                "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H06.2",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "No drinking water is indicated at Cedar Ridge in the saved trail table.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "witnesses": [
+                "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |",
+                "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+              ]
+            },
+            {
+              "chunk_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+              "witnesses": [
+                "DW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "H06.3",
+      "claims": []
+    }
+  ]
+}

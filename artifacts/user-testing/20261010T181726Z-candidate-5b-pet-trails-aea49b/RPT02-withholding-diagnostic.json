@@ -1,0 +1,87 @@
+{
+  "trace_path": "/tmp/parkguide-candidate-4-traces/302c7f8b06a54a0fac8bac1a447e0bb0.json",
+  "trace_sha256": "4b2ac283c5f2fa7b73cd9c94bfd882469ae48bdd317a4897625f170fc2632568",
+  "timestamp": "2026-10-10T18:17:35.220297+00:00",
+  "raw_response": {
+    "action": "answer",
+    "answer": "Most Yosemite trails are off limits to pets. Dogs may use fully paved paths, including Bridalveil Fall and Lower Yosemite Fall trails.",
+    "claims": [
+      {
+        "text": "Most Yosemite trails are off limits to pets.",
+        "evidence_ids": [
+          "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9"
+        ]
+      },
+      {
+        "text": "Dogs may use fully paved paths, including Bridalveil Fall and Lower Yosemite Fall trails.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2950,
+      "output_tokens": 164
+    },
+    "elapsed_ms": 2081.5,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "4f54a78fbc0769d1f7b2a222c7f0fc45d48d4d7e3bbe1f73f31e8727583fec91",
+    "cost_estimate_usd": 0.0004524
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "reason": "The source states pets are not allowed on most Yosemite trails, matching the claim's qualified wording.",
+        "supporting_quotes": [
+          {
+            "evidence_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+            "quote": "Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members"
+          }
+        ]
+      },
+      {
+        "claim_index": 1,
+        "supported": false,
+        "reason": "The source permits these named trails only as part of fully paved routes and subject to signs prohibiting pets; the claim omits those conditions and overgeneralizes to fully paved paths.",
+        "supporting_quotes": []
+      }
+    ],
+    "usage": {
+      "input_tokens": 3179,
+      "output_tokens": 111
+    },
+    "elapsed_ms": 1683.9,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "ed33ebccbc97bd3366c3315df1fd1ff7bd0f8d5d115b65f70b5e9a081b5450db",
+    "cost_estimate_usd": 0.00044807999999999995,
+    "withheld_claims": 1
+  },
+  "delivered_response": {
+    "action": "answer",
+    "answer": "Most Yosemite trails are off limits to pets.",
+    "claims": [
+      {
+        "text": "Most Yosemite trails are off limits to pets.",
+        "evidence_ids": [
+          "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2950,
+      "output_tokens": 164
+    },
+    "elapsed_ms": 2081.5,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "4f54a78fbc0769d1f7b2a222c7f0fc45d48d4d7e3bbe1f73f31e8727583fec91",
+    "cost_estimate_usd": 0.0009004799999999999
+  },
+  "human_verified": false,
+  "benchmark_eligible": false
+}

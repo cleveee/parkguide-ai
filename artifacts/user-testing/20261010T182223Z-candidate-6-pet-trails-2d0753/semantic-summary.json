@@ -1,0 +1,20 @@
+{
+  "kind": "AI provisional scoped development diagnosis; not a complete18-turn rerun",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 0,
+  "partial_precision_or_coverage": 1,
+  "semantic_failures": 2,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 2,
+    "fully_supported_by_claim_citations": 2,
+    "partial_citation_context": 0
+  },
+  "cost_estimate_including_reservations_usd": 0.0024174,
+  "reserved_provider_failed_attempts": 0,
+  "suite_sha256": "4388fed600ffe92cf1a059e75f23c94d9f7f0a5f25bb521e507e0ec687043d48",
+  "turns_sha256": "d0fefb16fcd7a0dd7de18f34dad8515e33a26043c336af979aea956c363901aa",
+  "assessment_sha256": "42969842e235390d54e64af77d29d9fefefee933fcb886e0597997f7ae149194",
+  "interpretation": "Two supplemental questions refuse; one is useful/source-supported but incomplete under the unchanged coverage rubric. Unsafe scope is blocked, not solved at generation."
+}

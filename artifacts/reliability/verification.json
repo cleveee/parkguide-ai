@@ -1,15 +1,16 @@
 {
-  "timestamp": "2026-10-10T17:53:28.254914+00:00",
+  "timestamp": "2026-10-10T19:16:12.783952+00:00",
   "scope": "Independent non-gold visitor-experience diagnostics; no human verification or sealed-test use",
   "offline_verification": {
     "python_tests": {
-      "passed": 474,
-      "seconds": 4.84
+      "passed": 508,
+      "seconds": 4.88,
+      "scope": "candidate 7 including HTML-cache patch"
     },
     "browser_request_tests": {
       "passed": 10
     },
-    "typescript_and_vite_build": "passed",
+    "typescript_and_vite_build": "passed on d5724ac, including source-card refinement",
     "frontend_lint": {
       "exit_code": 0,
       "pre_existing_fast_refresh_warnings": 11
@@ -34,7 +35,8 @@
   "local_candidate_harness": {
     "origin": "http://127.0.0.1:8515",
     "profile": "hosted, reranking off, read-only SQLite, isolated ephemeral ledger",
-    "origin_shim": "Loopback-only HTTP shim in temporary harness; production guard unchanged"
+    "origin_shim": "Loopback-only HTTP shim in temporary harness; production guard unchanged",
+    "server_stopped_after_testing": true
   },
   "human_review": false,
   "manual_browser_checks": [
@@ -60,6 +62,89 @@
       "all_cited_passages_match_sqlite": true,
       "semantic_assessment": "supported by the cited pets.htm text; AI assessment",
       "cost_estimate_usd": 0.0006671699999999999
+    },
+    {
+      "response": "candidate-live-status-ui-response.json",
+      "question": "Which trails are open right now?",
+      "status": "refusal",
+      "reason": "live_information_unavailable",
+      "official_next_step": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+      "recorded_paid_events": 0,
+      "cost_estimate_usd": 0.0
     }
-  ]
+  ],
+  "related_guidance_ui": {
+    "method": "Browser replay of the recorded candidate-6 RPT03 public API response; no provider request",
+    "response_fixture": "artifacts/user-testing/20261010T182223Z-candidate-6-pet-trails-2d0753/turns.jsonl",
+    "screenshot": "related-guidance-ui-replay.jpg",
+    "observed": "Refusal displayed two related official selected-park NPS links separately from claim citations",
+    "network_interception_cleared": true,
+    "temporary_tab_closed": true
+  },
+  "citation_contract_review": {
+    "root_reviewed": true,
+    "selected_park_contract": "witness-selected-v1",
+    "default_contract": "all-cited-v1",
+    "checks": "Own original citations only; nonempty exact quotes; unchanged claim text; explicit table legend required; strict final citation validation",
+    "semantic_guarantee": false
+  },
+  "shell_cache_fix": {
+    "commit": "677f677",
+    "offline_verification": "Equal-size HTML with identical normalized timestamps returns current shell; no validators; Cache-Control:no-store; hashed assets stay immutable",
+    "cases": 8
+  },
+  "production_final_ui": {
+    "origin": "https://parkguide-ai-dh24.vercel.app/",
+    "loaded_script": "/assets/index-Csfjgjoj.js",
+    "question": "Can I carry my dog to Vernal Fall?",
+    "response": "production-final-ui-response.json",
+    "screenshot": "production-final-ui.jpg",
+    "status": "answer",
+    "claims": 1,
+    "source_identity": {
+      "source_identity_errors": [],
+      "all_public_sources_match_frozen_db": true,
+      "semantic_support": "not established by identity checks; separate AI provisional review required"
+    },
+    "semantic_review": "AI provisional: exact NPS passage explicitly prohibits the Vernal Fall trail even if carried",
+    "human_review": false,
+    "fresh_provider_request": true,
+    "replayed_response": false,
+    "network_override_used": false,
+    "http_latency_seconds": 4.76,
+    "scope": "Additional root browser spot check; excluded from the 21-turn runner totals",
+    "ledger_window": {
+      "captured": true,
+      "events": 3,
+      "cost_estimate_usd": 0.0007760859999999999,
+      "by_kind": {
+        "embedding": {
+          "events": 1,
+          "reported_usage": 1,
+          "failed_attempts": 0,
+          "unsettled_reservations": 0,
+          "input_tokens": 13,
+          "output_tokens": 0,
+          "events_without_token_usage": 0,
+          "cost_estimate_usd": 2.86e-07
+        },
+        "generation": {
+          "events": 2,
+          "reported_usage": 2,
+          "failed_attempts": 0,
+          "unsettled_reservations": 0,
+          "input_tokens": 5605,
+          "output_tokens": 172,
+          "events_without_token_usage": 0,
+          "cost_estimate_usd": 0.0007757999999999999
+        }
+      },
+      "includes_reserved_maximums": false,
+      "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+      "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here. On Vercel the ledger is per instance and ephemeral."
+    }
+  },
+  "production_release_verification": "deployment-1daf0ab.json",
+  "latest_frontend_release_verification": "deployment-d5724ac.json",
+  "deployment_lineage": "deployment-lineage.json"
 }

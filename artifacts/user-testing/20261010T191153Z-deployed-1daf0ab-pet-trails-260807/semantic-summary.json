@@ -1,0 +1,20 @@
+{
+  "kind": "AI provisional post-observation supplemental production regression review",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 0,
+  "partial_precision_or_coverage": 2,
+  "semantic_failures": 1,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 2,
+    "fully_supported": 2,
+    "partially_supported": 0
+  },
+  "cost_estimate_including_reservations_usd": 0.005730334,
+  "failed_attempts": 1,
+  "suite_sha256": "4388fed600ffe92cf1a059e75f23c94d9f7f0a5f25bb521e507e0ec687043d48",
+  "turns_sha256": "9ca8bea74875ce7ec5e653f214449cf7a69c130470693ed27e4b054f31a3efe7",
+  "assessment_sha256": "ca6435e2a4cd129cb104e3aa62afa7e501efe6f7633a0cc73648031d71d36af7",
+  "interpretation": "Surviving claims are coherent/source-supported; no supplemental answer meets full frozen coverage. RPT02 loses permitted examples versus candidate7, and RPT03 remains an answerable refusal."
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "Exact successful test turn, not a separate probe",
+  "turns_sha256": "1507db880ebb054d615b8b71515f671e24e4aefbbda7459fbed267125e5f4fbe",
+  "record": {
+    "case_turn": "H06.2",
+    "trace_path": "/tmp/parkguide-candidate-4-traces/1d563d61d0a948f796ee4ec003084d7b.json",
+    "trace_sha256": "c4da9c66fe972154c79b5c4f67baed8d734b249a4f250c4c3226554884bab51c",
+    "trace_timestamp": "2026-10-10T19:00:46.531669+00:00",
+    "citation_contract": "witness-selected-v1",
+    "claims": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "unchanged_claim_text": "No drinking water is indicated at Cedar Ridge in the saved trail table.",
+        "original_evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ],
+        "final_evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ],
+        "removed_evidence_ids": [],
+        "witnesses": [
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+          },
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+          },
+          {
+            "evidence_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+            "quote": "DW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station"
+          }
+        ],
+        "exact_SQLite_witness_match": true,
+        "within_original_claim_ownership": true,
+        "claim_text_unchanged": true
+      }
+    ]
+  },
+  "finding": "Unchanged claim and complete table/legend citations observed. No citation was removed in this turn; do not attribute the successful answer to redundant-citation removal.",
+  "human_verified": false,
+  "benchmark_eligible": false
+}

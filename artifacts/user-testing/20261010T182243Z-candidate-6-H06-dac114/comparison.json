@@ -1,0 +1,39 @@
+{
+  "candidate": "artifacts/user-testing/20261010T182243Z-candidate-6-H06-dac114",
+  "previous": "artifacts/user-testing/20261010T181755Z-candidate-5b-H06-6d03bf",
+  "kind": "same frozen scoped questions, actual generated histories",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "cases": [
+    {
+      "case_turn": "H06.1",
+      "prior_grade": "partial",
+      "candidate_grade": "pass",
+      "direction": "improved",
+      "prior_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+      "candidate_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead."
+    },
+    {
+      "case_turn": "H06.2",
+      "prior_grade": "partial",
+      "candidate_grade": "fail",
+      "direction": "regressed",
+      "prior_text": "The saved trail table does not indicate drinking-water availability at Cedar Ridge.",
+      "candidate_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "H06.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling.",
+      "candidate_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling."
+    }
+  ],
+  "ordinal_directions": {
+    "improved": 1,
+    "regressed": 1,
+    "unchanged": 1
+  },
+  "interpretation": "Distance now has complete citation context; future-date boundary passes. Water refuses after reviewer fails to witness every cited passage, so the dialogue is2pass/1fail."
+}

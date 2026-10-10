@@ -1,0 +1,63 @@
+{
+  "trace_path": "/tmp/parkguide-candidate-4-traces/1d1fa90d3dcd4eb6b8bae49badd6a2fe.json",
+  "trace_sha256": "b6f85b486ec4a3f0e647e0056a0c725712a95ed654fa83629ffe71d24f15de3c",
+  "timestamp": "2026-10-10T18:22:27.046804+00:00",
+  "raw_response": {
+    "action": "answer",
+    "answer": "No. Pets are not allowed on Yosemite trails, except the Wawona Meadow Loop.",
+    "claims": [
+      {
+        "text": "No. Pets are not allowed on Yosemite trails, except the Wawona Meadow Loop.",
+        "evidence_ids": [
+          "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2778,
+      "output_tokens": 104
+    },
+    "elapsed_ms": 1581.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "f3602b6fdbf8c05d46489c68158c2ad34bc8cb24991bbfc74960ab35d9afddaa",
+    "cost_estimate_usd": 0.00039576
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": false,
+        "reason": "The source says pets are allowed on the Wawona Meadow Loop, but does not establish that this is the only trail exception. The claim overstates the exception as exclusive.",
+        "supporting_quotes": []
+      }
+    ],
+    "usage": {
+      "input_tokens": 2499,
+      "output_tokens": 66
+    },
+    "elapsed_ms": 1667.9,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "97d754470f7a0c9719ab9b5718e05ddbf42d840840008aab8e24c5df95eb4752",
+    "cost_estimate_usd": 0.00033948,
+    "withheld_claims": 1
+  },
+  "delivered_response": {
+    "action": "refuse",
+    "answer": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "claims": [],
+    "usage": {
+      "input_tokens": 2778,
+      "output_tokens": 104
+    },
+    "elapsed_ms": 1581.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "f3602b6fdbf8c05d46489c68158c2ad34bc8cb24991bbfc74960ab35d9afddaa",
+    "cost_estimate_usd": 0.0007352400000000001
+  },
+  "human_verified": false,
+  "benchmark_eligible": false
+}

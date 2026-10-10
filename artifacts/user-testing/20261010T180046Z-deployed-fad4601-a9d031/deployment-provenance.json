@@ -1,0 +1,12 @@
+{
+  "kind": "deployment identity from root-verified Vercel evidence plus direct alias conversation run",
+  "code_commit": "fad4601a0a73d78e6cdb8edeb4e263bbd6109b25",
+  "deployment_id": "dpl_5UhJQY5QcDF5wPkgy1XbwjmPME4n",
+  "deployment_url": "parkguide-ai-dh24-cwee3emkj-cleveees-projects.vercel.app",
+  "production_origin": "https://parkguide-ai-dh24.vercel.app",
+  "ready_state": "READY",
+  "root_verification_artifact": "artifacts/reliability/deployment-fad4601.json",
+  "root_verification_sha256": "79480ae834f4269f6e0fcde102a6909fb77fc8767d2a8a1dec6afad7a7a50372",
+  "directly_observed_by_this_runner": "All18 same-origin API requests and source/build/runtime readback on production alias",
+  "limitation": "Deployment control-plane identity comes from the linked root verification; the chat API itself does not attest a Git SHA."
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "AI provisional post-observation supplemental regression review",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 0,
+  "partial_precision_or_coverage": 3,
+  "semantic_failures": 0,
+  "turns": 3,
+  "cross_claim_coherence_pass": 3,
+  "claim_support": {
+    "delivered_claims": 6,
+    "fully_supported": 5,
+    "partially_supported": 1,
+    "note": "RPT02 drops a material signage qualifier from its category-wide paved permission."
+  },
+  "cost_estimate_including_reservations_usd": 0.002755414,
+  "reserved_provider_failed_attempts": 0,
+  "suite_sha256": "4388fed600ffe92cf1a059e75f23c94d9f7f0a5f25bb521e507e0ec687043d48",
+  "turns_sha256": "0e296123916b603025fc5cf04e41f0fc9acb1aaaae2774ecdb933762211c095f",
+  "assessment_sha256": "110ee02ed8479c7a733be291fdfe71e505fc5a29853341a504d9e1025f6cbf12",
+  "interpretation": "All three avoid the observed cross-claim contradiction. None completely meets the unchanged pre-run coverage rubric. Missing context is reported separately, not supplied from outside generation evidence."
+}

@@ -1,0 +1,131 @@
+{
+  "kind": "Public status and context only; no rejected drafts or detailed review reasons available",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "records": [
+    {
+      "case_turn": "RPT01.1",
+      "review": {
+        "status": "passed",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 2591,
+        "output_tokens": 60,
+        "elapsed_ms": 1040.4,
+        "cost_estimate_usd": 0.00034692,
+        "withheld_claims": 0
+      },
+      "reason": null,
+      "final_context": [
+        {
+          "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+          "heading_path": "Pets > Where Pets Are Allowed"
+        },
+        {
+          "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7"
+        },
+        {
+          "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+          "heading_path": "Pets > Where Pets Are Not Allowed"
+        },
+        {
+          "chunk_id": "976ff41b915639585a21069965d8ffd6c8d6507f281499f8fbca09a129aaa939",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7"
+        },
+        {
+          "chunk_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+          "heading_path": "Plan Your Visit > Top Trip Planning Tips"
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT02.1",
+      "review": {
+        "status": "partially_withheld",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 3277,
+        "output_tokens": 121,
+        "elapsed_ms": 1523.1,
+        "cost_estimate_usd": 0.00046584,
+        "withheld_claims": 1
+      },
+      "reason": null,
+      "final_context": [
+        {
+          "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7"
+        },
+        {
+          "chunk_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+          "heading_path": "Plan Your Visit > Top Trip Planning Tips"
+        },
+        {
+          "chunk_id": "b78b1f66fd1ced523e428d6dde1cabfc663c1441743ce496dc5a920ecbec93ae",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7"
+        },
+        {
+          "chunk_id": "95d5495392ba87ce4c44d289f5a0d1a61c878242810262f5d4266dcb15686a56",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7"
+        },
+        {
+          "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+          "heading_path": "Pets > Where Pets Are Allowed"
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT03.1",
+      "review": {
+        "status": "all_withheld",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 2281,
+        "output_tokens": 137,
+        "elapsed_ms": 1669.9,
+        "cost_estimate_usd": 0.00035591999999999997,
+        "withheld_claims": 2
+      },
+      "reason": {
+        "code": "all_claims_withheld",
+        "category": "review_rejected",
+        "detail": "The AI source review rejected every drafted claim."
+      },
+      "final_context": [
+        {
+          "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7"
+        },
+        {
+          "chunk_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+          "heading_path": "Pets > Where Pets Are Allowed"
+        },
+        {
+          "chunk_id": "cbaef24dd3e0bd4f5cbfff124d84a652cc4afc1cdca4025ab73151e0917ea081",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+          "heading_path": "Plan Your Visit > Top Trip Planning Tips > Pets"
+        },
+        {
+          "chunk_id": "0d751f98ea11867a30a49b6ee44043a9f9291f3848e0d9702049ea742eec0baf",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+          "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7"
+        },
+        {
+          "chunk_id": "93e9653483d09935b2cc23cb392e336426ac2ee711ae14058bc9f0bf93107f5e",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+          "heading_path": "Pets"
+        }
+      ]
+    }
+  ]
+}

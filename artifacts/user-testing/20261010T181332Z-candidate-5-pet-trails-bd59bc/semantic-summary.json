@@ -1,0 +1,21 @@
+{
+  "kind": "AI provisional post-observation supplemental regression review",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 0,
+  "partial_precision_or_coverage": 2,
+  "semantic_failures": 1,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 4,
+    "fully_supported": 3,
+    "partially_supported": 1,
+    "note": "RPT03 supports the specific Mirror Lake exclusion but insufficiently qualifies its broader category ban."
+  },
+  "cost_estimate_including_reservations_usd": 0.0026253599999999998,
+  "reserved_provider_failed_attempts": 0,
+  "suite_sha256": "4388fed600ffe92cf1a059e75f23c94d9f7f0a5f25bb521e507e0ec687043d48",
+  "turns_sha256": "c734d2e869747aaccae15cef7411f682571abf69f2fd92238eea4922010b050b",
+  "assessment_sha256": "113a978157c63d35f301c514a6a5fe12cc110802122aacf1a623ce000efc54bc",
+  "interpretation": "Signage improves in RPT02; RPT01 remains incomplete, and RPT03 regresses to a nonresponsive broad prohibition. No replacement retries."
+}

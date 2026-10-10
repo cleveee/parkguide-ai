@@ -1,0 +1,134 @@
+{
+  "kind": "Independent mechanical audit of original/final claims and exact SQLite witnesses; semantic assessment remains separate",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "turns_sha256": "b3b861a1d4f22bb2b97c93aa51655156ede0a8ad214f90b46424a824a0fac51f",
+  "records": [
+    {
+      "case_turn": "RPT01.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/b28fc0d28d164303a7a6891bf10a966c.json",
+      "trace_sha256": "2d3fa5ab73ad16ab665faa61c3b6d7e118325cb6595b9615ce2455d4162892f4",
+      "trace_timestamp": "2026-10-10T19:00:59.616103+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Pets are generally not allowed on Yosemite trails, with the Wawona Meadow Loop as an exception.",
+          "original_evidence_ids": [
+            "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+          ],
+          "final_evidence_ids": [
+            "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+              "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT02.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/d0f8b052710749fa81d3ee0a9d9ce155.json",
+      "trace_sha256": "56b2a8a3421852771b6a9d971640e270549642ffa5a92bdcbfef19480c7d9b76",
+      "trace_timestamp": "2026-10-10T19:01:03.189857+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Dogs are not allowed on most Yosemite trails.",
+          "original_evidence_ids": [
+            "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9"
+          ],
+          "final_evidence_ids": [
+            "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+              "quote": "Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "unchanged_claim_text": "Permitted paved routes include Bridalveil Fall and Lower Yosemite Fall trails, unless signs prohibit pets.",
+          "original_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "final_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower"
+            },
+            {
+              "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "quote": "signed as not allowing pets), including Bridalveil Fall trail, Lower Yosemite Fall trail, paved trail through Cook's Meadow (including"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT03.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/0dc9cfe6bb00463092110ff4162cff86.json",
+      "trace_sha256": "316cdc210c794d34356b38acc2e54d78525fbbd87833bf7e47e54c989334547c",
+      "trace_timestamp": "2026-10-10T19:01:07.527269+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "unchanged_claim_text": "Leashed dogs may walk the paved Bridalveil Fall and Lower Yosemite Fall trails.",
+          "original_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "final_evidence_ids": [],
+          "removed_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "witnesses": [],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        },
+        {
+          "claim_index": 1,
+          "supported": false,
+          "unchanged_claim_text": "Dogs are also allowed on the paved Cook’s Meadow trail and paved road to Mirror Lake, but not its unpaved loop.",
+          "original_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "final_evidence_ids": [],
+          "removed_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "witnesses": [],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ]
+    }
+  ]
+}

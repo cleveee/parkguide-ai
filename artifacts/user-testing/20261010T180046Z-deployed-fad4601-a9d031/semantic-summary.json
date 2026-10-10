@@ -1,0 +1,28 @@
+{
+  "kind": "AI provisional source-span review of production alias, separate from automatic status checks",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 18,
+  "partial_precision_or_recovery": 0,
+  "semantic_failures": 0,
+  "turns": 18,
+  "claim_support": {
+    "delivered_claims": 14,
+    "fully_supported": 14,
+    "partially_supported": 0,
+    "note": "Delivered claims independently compared with frozen source text. AI provisional; no human certification."
+  },
+  "observed_regressions_vs_candidate_3": [],
+  "cost_estimate_including_reservations_usd": 0.015995434,
+  "reserved_provider_failed_attempts": 2,
+  "http_latency_ms": {
+    "p50": 3020.6000000000004,
+    "p95": 33223.57,
+    "maximum": 33454.6,
+    "method": "linear interpolation over all18 HTTP requests, including2 provider retry cases"
+  },
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "bdc0438606a46c6df330fc004ab5ad4a2bed6000f83da8f6f56942ec8b1edbc0",
+  "assessment_sha256": "ba7e330b8d71be9afc72894e028a84990db349eccb0eb407b08bda8e359ad5d4",
+  "interpretation": "All frozen diagnostic expectations passed on the production alias. Repeated development suite, not independent benchmark or universal reliability guarantee. Two slow requests with provider retries remain visible."
+}

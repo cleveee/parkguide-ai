@@ -1,0 +1,19 @@
+{
+  "kind": "AI provisional scoped candidate7 assessment; unchanged questions and expectations",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 3,
+  "partial_precision_or_coverage": 0,
+  "semantic_failures": 0,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 2,
+    "fully_supported_by_claim_citations": 2,
+    "partial_citation_context": 0
+  },
+  "cost_estimate_including_reservations_usd": 0.00166884,
+  "failed_attempts": 0,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "1507db880ebb054d615b8b71515f671e24e4aefbbda7459fbed267125e5f4fbe",
+  "assessment_sha256": "c6346d9273dbd078ee085704c301d55afa01579c2f219ca939b6a1acf442366a"
+}

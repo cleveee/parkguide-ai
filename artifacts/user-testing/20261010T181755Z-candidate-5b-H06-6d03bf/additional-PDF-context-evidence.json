@@ -1,0 +1,18 @@
+{
+  "kind": "post-answer independent source audit of selected alternative PDF evidence",
+  "source_url": "https://www.nps.gov/grca/planyourvisit/upload/intro-bc-hike.pdf",
+  "doc_id": "0d023e1b0ce3ea7b2f9808cfdf4378ff53817c6f0e4e23095cf7bf3ae1c2e952",
+  "content_hash": "4eebe276bc3ebb2147a1c01f369fb60969b1eb30a291ae6c1cc616134415f61d",
+  "full_source_block": {
+    "end": 7770,
+    "heading_path": "Introduction to Backcountry Hiking > PDF page 4",
+    "kind": "paragraph",
+    "start": 5912,
+    "text": "Hiking and Camping North Kaibab Trailhead: elevation 8240ft (2511m) Information Destination Elevation Change from Top Distance one-way Time Roundtrip Coconino 790ft (240m) 0.7mi (1.1km) 1–2 hours Overlook Supai Tunnel 1400ft (425m) 2.0mi (3.2km) 2–4 hours Redwall Bridge 2200ft (670m) 2.6mi (4.2km) 4–6 hours Roaring Springs 3280ft (1000m) 4.7mi (7.6km) 6–9 hours Day Use Area Manzanita 3840ft (1170m) 5.1mi (8.2km) 7–10 hours Rest Area Cottonwood 4200ft (1280m) 6.5mi (10.5km) 2 days Campground Ribbon Falls 4480ft (1365m) 7.9mi (12.7km) 2 days Phantom Ranch 5740ft (1750m) 13.6mi (21.9km) 3–4 days Ranger Station Bright Angel 5740ft (1750m) 13.7mi (22.0km) 3–4 days Campground South Kaibab Trailhead: elevation 7200ft (2195m) Destination Elevation Changefrom Top Distance one-way Time Roundtrip Ooh Aah Point 790ft (230m) 0.9mi (1.4km) 1–2 hours Cedar Ridge 1120ft (340m) 1.5mi (2.4km) 2–4 hours Skeleton Point 2040ft (620m) 3.0mi (4.8km) 4–6 hours The Tip Off 3280ft (1100m) 4.4mi (7.1km) 6–9 hours North Kaibab Trail 4700ft (1430m) 6.8mi (10.9km) 2 Days junction Bright Angel 4700ft (1430m) 7.0mi (11.3km) 2 Days Campground Bright Angel Trailhead: elevation 6840ft (2085m) Destination Elevation Change from Top Distance one-way Time Roundtrip Lower Tunnel 590ft (180m) 0.9mi (1.4km) 1–2 hours 1½-Mile Resthouse 1120ft (340m) 1.5mi (2.4km) 2–4 hours 3-Mile Resthouse 2120ft (645m) 3.0mi (4.8km) 4–6 hours Havasupai Gardens 3040ft (925m) 4.5mi (7.2km) 6–9 hours Campground Plateau Point 3080ft (940m) 6.1mi (9.8km) 9–12 hours River Resthouse 4340ft (1320m) 7.7mi (12.4km) 12+ hours North Kaibab Trail 4340ft (1320m) 9.3mi (15.0km) 2 days junction The Bright Angel Trail follows Bright Angel Fault down Garden Creek Canyon on a well- Bright Angel 4340ft (1320m) 9.5mi (15.3km) 2 Days maintained trail; ”easiest” trail, but still Campground incredibly steep."
+  },
+  "cited_chunk_start": 6609,
+  "cited_chunk_end": 7023,
+  "finding": "Full source confirms South Kaibab heading immediately before the cited chunk; the fragment and its reviewer witnesses omit that heading.",
+  "human_verified": false,
+  "benchmark_eligible": false
+}

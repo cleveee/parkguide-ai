@@ -1,0 +1,51 @@
+{
+  "kind": "Independent public delivered-citation and exact SQLite witness audit",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "turns_sha256": "9ca8bea74875ce7ec5e653f214449cf7a69c130470693ed27e4b054f31a3efe7",
+  "internal_original_final_trace_available": false,
+  "records": [
+    {
+      "case_turn": "RPT01.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Pets are generally not allowed on Yosemite trails, with the Wawona Meadow Loop as an exception.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+              "witnesses": [
+                "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT02.1",
+      "claims": [
+        {
+          "claim_number": 1,
+          "claim_text": "Dogs are not allowed on most Yosemite trails.",
+          "final_cited_passages": [
+            {
+              "chunk_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+              "witnesses": [
+                "Yosemite on leashes and in most campgrounds, but they are not allowed on most trails. Sometimes these furry family members"
+              ]
+            }
+          ],
+          "all_exact_SQLite_matches": true,
+          "every_final_citation_has_bound_witness": true
+        }
+      ]
+    },
+    {
+      "case_turn": "RPT03.1",
+      "claims": []
+    }
+  ]
+}

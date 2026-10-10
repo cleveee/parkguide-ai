@@ -1,0 +1,437 @@
+{
+  "kind": "Independent mechanical original/final claim audit; source semantics reviewed separately",
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "turns_sha256": "47e0e011c3348fc25dda193cc37dfb3f006fefb718c818f706f4a416c2ae809a",
+  "records": [
+    {
+      "case_turn": "H01.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/313f81ffb52343dc91dbd9b7ab4e62a1.json",
+      "trace_sha256": "8793ed0c3798ea5f1d59b8442f0c9a6e38204741d5a3b9e9504506081ea84936",
+      "trace_timestamp": "2026-10-10T19:01:38.533878+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Yes, dogs are allowed on the paved road to Mirror Lake, unless signs prohibit pets.",
+          "original_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "final_evidence_ids": [
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "quote": "On fully paved roads, sidewalks, and bicycle paths (except when signed as not allowing pets), including Bridalveil Fall trail, Lower"
+            },
+            {
+              "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "quote": "Yosemite Fall trail, paved trail through Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H01.2",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/f94fb88ce10841c3bcc02dd44a416d40.json",
+      "trace_sha256": "61697ec3f735321ca06f926ae17a8acaa7a65285924e5c7e0561cf2b95d32dad",
+      "trace_timestamp": "2026-10-10T19:01:41.956821+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "No. Pets are allowed on the paved road, but not on the unpaved trail around Mirror Lake.",
+          "original_evidence_ids": [
+            "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "final_evidence_ids": [
+            "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+            "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "240ccc92cfeb03a44b19d82e235b11b3fbb128d904d5037f89e54f177c9077ef",
+              "quote": ".5 mi (7 km) loop around the lake. *Pets are allowed only on the paved road. Vehicles with a valid"
+            },
+            {
+              "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+              "quote": "Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H01.3",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/7ec5fcf3d36744bba33803af4a0082dd.json",
+      "trace_sha256": "6f5e328e2d3144b88b33e01f97f9a5835006a8b6dc911e89b577cf81abe2929a",
+      "trace_timestamp": "2026-10-10T19:01:44.938984+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Your dog’s leash must be no more than six feet long.",
+          "original_evidence_ids": [
+            "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb"
+          ],
+          "final_evidence_ids": [
+            "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "aae71ce58167d4920648de75a92c38e5b8a6028f70cca75ae9a107bd045b0bfb",
+              "quote": "pets must be restrained on a leash not more than six feet long or otherwise physically restrained"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H02.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/7f892337236b4cbe85637a9163072dd6.json",
+      "trace_sha256": "75f74fc3aee16f12c6d2a9e8f9875a51e0bcdffddb61438235a7ca4e3c7c47c4",
+      "trace_timestamp": "2026-10-10T19:01:47.167702+00:00",
+      "citation_contract": null,
+      "claims": [],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H02.2",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/71fab9b658ca4a24a87218dd7c16d5af.json",
+      "trace_sha256": "e0f4332828ec4bd9bc82f2a6ce2c38fb62fae46e34e5e7f35bdf5279bbe83e71",
+      "trace_timestamp": "2026-10-10T19:01:50.524953+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "You may run your generator from 7–9 am, noon–2 pm, and 5–7 pm.",
+          "original_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "final_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+              "quote": "use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "unchanged_claim_text": "Generator use is not allowed at other times.",
+          "original_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "final_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+              "quote": "9 am, noon to 2 pm, and 5 pm to 7 pm. Generator use is not allowed at other times."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H02.3",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/206770f2303d43faaccabe4c56c1618f.json",
+      "trace_sha256": "913e5adf55c3f1849813517f19f99ae0719ba9fad8f0a00b5aead07d8e97fe6c",
+      "trace_timestamp": "2026-10-10T19:02:23.735242+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Yosemite campground quiet hours are 10 pm to 6 am.",
+          "original_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "final_evidence_ids": [
+            "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+              "quote": "Quiet hours are from 10 pm to 6 am. Generator use is allowed only from 7 am to 9 am,"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H03.1",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H03.2",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H03.3",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H04.1",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H04.2",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H04.3",
+      "original_final_internal_trace_available": false,
+      "coverage_note": "Harness records Yosemite and Grand Canyon internal traces only. Public delivered claims and exact source witnesses were independently audited."
+    },
+    {
+      "case_turn": "H05.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/874582bf915a40b9b94ae02676a35999.json",
+      "trace_sha256": "ff8155d7db6e4f7ce0db225dea0c638a5801d4cfb8db547a4d4dae23404102c1",
+      "trace_timestamp": "2026-10-10T19:03:08.599901+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Yes. Leashed dogs are allowed on trails above the rim.",
+          "original_evidence_ids": [
+            "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50"
+          ],
+          "final_evidence_ids": [
+            "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50",
+              "quote": "Heading: Pets > On the South Rim > Pets are permitted:"
+            },
+            {
+              "evidence_id": "3f47ad50ebcf527c0788daa090e50fdd05de8f78d453ab5e0ded5c30cfc6cf50",
+              "quote": "Leashed pets are allowed on trails above the rim, Mather Campground, Desert View Campground, Trailer Village, and throughout developed areas."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H05.2",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/9427e88188884642b72fb0fdad86d6cb.json",
+      "trace_sha256": "523fec255ef92316cf28abed87799346e5e7bdf4e23091bf6749bd11147b927f",
+      "trace_timestamp": "2026-10-10T19:03:12.812477+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "No. Pets are not allowed below the rim on inner canyon trails; service animals assisting people with disabilities are permitted.",
+          "original_evidence_ids": [
+            "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+            "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e"
+          ],
+          "final_evidence_ids": [
+            "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+            "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+              "quote": "Pets are not allowed below the canyon rim"
+            },
+            {
+              "evidence_id": "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+              "quote": "of Grand Canyon, service animals are permitted if they are assisting their humans who have disabilities. It is highly recommended"
+            },
+            {
+              "evidence_id": "0f1c02dc455e35c45bfd164195b0d3b2c7941c90bf7faf255f698b0715adc07b",
+              "quote": "assisting their humans who have disabilities. It is highly recommended for the safety of your service dog that you check"
+            },
+            {
+              "evidence_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+              "quote": "Below the rim (on inner canyon trails)."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H05.3",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/7be43d56ed834aa2a1735b9732d699ee.json",
+      "trace_sha256": "e0ee958e351a33b92cb34d178f1a2a41d445052a978915efb611bf7afcc62c73",
+      "trace_timestamp": "2026-10-10T19:03:16.590993+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "No. Pets are not permitted on park shuttle buses.",
+          "original_evidence_ids": [
+            "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e"
+          ],
+          "final_evidence_ids": [
+            "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "13690942822eec2fe7fabf49750cd458620e5e56669fa5a4a60e57e16fc7b96e",
+              "quote": "On park shuttle buses."
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H06.1",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/216b9addd930470faa24e0ccb56309d6.json",
+      "trace_sha256": "73787f554bf7965483179edb350c4106dc688f9339086efa772ca8826a1ef53f",
+      "trace_timestamp": "2026-10-10T19:03:51.446923+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+          "original_evidence_ids": [
+            "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45"
+          ],
+          "final_evidence_ids": [
+            "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+            },
+            {
+              "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "quote": "| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |"
+            },
+            {
+              "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H06.2",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/4585fdc935eb44959eab60164c815aed.json",
+      "trace_sha256": "ab5b0526b6c65320240c8ed1cb32a546a126cb0905175e7b91f4b3f09202973e",
+      "trace_timestamp": "2026-10-10T19:03:54.831545+00:00",
+      "citation_contract": "witness-selected-v1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "unchanged_claim_text": "No drinking water is indicated at Cedar Ridge in the saved trail table.",
+          "original_evidence_ids": [
+            "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+          ],
+          "final_evidence_ids": [
+            "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+          ],
+          "removed_evidence_ids": [],
+          "witnesses": [
+            {
+              "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+            },
+            {
+              "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+              "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+            },
+            {
+              "evidence_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+              "quote": "DW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station"
+            }
+          ],
+          "exact_SQLite_witness_match": true,
+          "within_original_claim_ownership": true,
+          "claim_text_unchanged": true
+        }
+      ],
+      "original_final_internal_trace_available": true
+    },
+    {
+      "case_turn": "H06.3",
+      "trace_path": "/tmp/parkguide-candidate-4-traces/0d7509d159ab4f008d47a9e922c66512.json",
+      "trace_sha256": "2357bd6963f611dfc37c90321babbb6647edb8a7c005f322bd2a581618f79fbb",
+      "trace_timestamp": "2026-10-10T19:03:54.848219+00:00",
+      "citation_contract": null,
+      "claims": [],
+      "original_final_internal_trace_available": true
+    }
+  ],
+  "coverage": {
+    "turns_with_internal_trace": 12,
+    "turns_without_internal_trace": 6
+  }
+}

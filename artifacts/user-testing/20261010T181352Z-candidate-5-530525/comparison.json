@@ -1,0 +1,159 @@
+{
+  "candidate": "artifacts/user-testing/20261010T181352Z-candidate-5-530525",
+  "prior_candidate": "artifacts/user-testing/20261010T180846Z-candidate-4-22ab89",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "kind": "same frozen questions and actual new histories",
+  "cases": [
+    {
+      "case_turn": "H01.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Dogs are allowed on the paved road to Mirror Lake, but not the unpaved trail around it.",
+      "candidate_text": "Dogs are allowed on the paved road to Mirror Lake, but not the unpaved trail around it."
+    },
+    {
+      "case_turn": "H01.2",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Pets are allowed only on the paved road, not the unpaved trail around Mirror Lake.",
+      "candidate_text": "Pets are not allowed on the unpaved trail around Mirror Lake."
+    },
+    {
+      "case_turn": "H01.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "His leash can be no more than six feet long.",
+      "candidate_text": "His leash can be no more than six feet long."
+    },
+    {
+      "case_turn": "H02.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Which place, date, or detail in Yosemite National Park do you mean?",
+      "candidate_text": "Which place, date, or detail in Yosemite National Park do you mean?"
+    },
+    {
+      "case_turn": "H02.2",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Run your generator only from 7–9 am, noon–2 pm, or 5–7 pm.",
+      "candidate_text": "Generator use is allowed from 7–9 am, noon–2 pm, and 5–7 pm, and prohibited at other times."
+    },
+    {
+      "case_turn": "H02.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Quiet hours are from 10 pm to 6 am.",
+      "candidate_text": "Quiet hours are from 10 pm to 6 am."
+    },
+    {
+      "case_turn": "H03.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Swimming or bathing in water entirely of thermal origin is illegal in Yellowstone.",
+      "candidate_text": "Swimming or bathing in water entirely of thermal origin is illegal in Yellowstone."
+    },
+    {
+      "case_turn": "H03.2",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "No. Do not dip your hand in thermal runoff; it can be extremely hot and cause burns.",
+      "candidate_text": "Thermal runoff can be extremely hot and cause burns. Do not touch thermal features."
+    },
+    {
+      "case_turn": "H03.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "This conversation is for Yellowstone National Park. Choose another park in the selector to ask about it.",
+      "candidate_text": "This conversation is for Yellowstone National Park. Choose another park in the selector to ask about it."
+    },
+    {
+      "case_turn": "H04.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "The road between Mammoth Hot Springs and the Northeast Entrance is generally open year-round to regular cars, weather permitting.",
+      "candidate_text": "The road between Mammoth Hot Springs and the Northeast Entrance is generally open year-round to regular cars, weather permitting."
+    },
+    {
+      "case_turn": "H04.2",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Yellowstone sources. Check the park's official updates for that date and confirm with the park before traveling.",
+      "candidate_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Yellowstone sources. Check the park's official updates for that date and confirm with the park before traveling."
+    },
+    {
+      "case_turn": "H04.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "The saved public-source database contains no personal reservation or permit records. For a booking or payment check, use your booking provider's official website or contact its reservation service.",
+      "candidate_text": "The saved public-source database contains no personal reservation or permit records. For a booking or payment check, use your booking provider's official website or contact its reservation service."
+    },
+    {
+      "case_turn": "H05.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Yes. Leashed dogs are allowed on trails above the rim.",
+      "candidate_text": "Leashed dogs are allowed on trails above the rim."
+    },
+    {
+      "case_turn": "H05.2",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Pets are not allowed below the rim on inner canyon trails. Service animals assisting people with disabilities are permitted below the rim.",
+      "candidate_text": "Dogs are not allowed below the rim on inner canyon trails. Service animals assisting people with disabilities are permitted below the rim."
+    },
+    {
+      "case_turn": "H05.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Pets are not permitted on park shuttle buses.",
+      "candidate_text": "Pets are not permitted on park shuttle buses."
+    },
+    {
+      "case_turn": "H06.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+      "candidate_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead."
+    },
+    {
+      "case_turn": "H06.2",
+      "prior_grade": "fail",
+      "candidate_grade": "fail",
+      "direction": "unchanged",
+      "prior_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information.",
+      "candidate_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "H06.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling.",
+      "candidate_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling."
+    }
+  ],
+  "ordinal_directions": {
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 18
+  },
+  "interpretation": "Grades match candidate4, but H06.2 failure mechanism changed from over-strict review to incomplete generation citation set."
+}

@@ -1,0 +1,36 @@
+{
+  "previous": "artifacts/user-testing/20261010T182243Z-candidate-6-H06-dac114",
+  "candidate": "artifacts/user-testing/20261010T190038Z-candidate-7-H06-ff95a5",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "cases": [
+    {
+      "case_turn": "H06.1",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+      "candidate_text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead."
+    },
+    {
+      "case_turn": "H06.2",
+      "prior_grade": "fail",
+      "candidate_grade": "pass",
+      "direction": "improved",
+      "prior_text": "I could not find enough supporting information in the saved Grand Canyon sources to answer that. Please check the official NPS information.",
+      "candidate_text": "No drinking water is indicated at Cedar Ridge in the saved trail table."
+    },
+    {
+      "case_turn": "H06.3",
+      "prior_grade": "pass",
+      "candidate_grade": "pass",
+      "direction": "unchanged",
+      "prior_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling.",
+      "candidate_text": "I cannot confirm opening status or conditions for your requested travel date from the saved Grand Canyon sources. Check the park's official updates for that date and confirm with the park before traveling."
+    }
+  ],
+  "ordinal_directions": {
+    "unchanged": 2,
+    "improved": 1
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "trace_path": "/tmp/parkguide-candidate-4-traces/2ce2f1f464344d6889de5fde841c1f8a.json",
+  "trace_sha256": "553527ef98a33483f1a5449e21984ac398ad218dfb0b40ab5048721d52751691",
+  "timestamp": "2026-10-10T18:17:39.214367+00:00",
+  "raw_response": {
+    "action": "answer",
+    "answer": "Leashed dogs may use the paved Bridalveil Fall and Lower Yosemite Fall trails, Cook’s Meadow path, and paved road to Mirror Lake. Dogs are not allowed on the unpaved trail around Mirror Lake.",
+    "claims": [
+      {
+        "text": "Leashed dogs may use the paved Bridalveil Fall and Lower Yosemite Fall trails, Cook’s Meadow path, and paved road to Mirror Lake.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      },
+      {
+        "text": "Dogs are not allowed on the unpaved trail around Mirror Lake.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2551,
+      "output_tokens": 197
+    },
+    "elapsed_ms": 2113.5,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "28078460d026364f538d569b65d78cf00476f2b42043686875e170d7fc84fe9c",
+    "cost_estimate_usd": 0.00042432
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": false,
+        "reason": "The cited passage permits these routes only as fully paved paths in developed areas and except where signs prohibit pets. The claim omits those conditions and says leashed, which the passage does not establish.",
+        "supporting_quotes": []
+      },
+      {
+        "claim_index": 1,
+        "supported": true,
+        "reason": "The passage explicitly excludes the unpaved trail around Mirror Lake from the listed pet-allowed routes.",
+        "supporting_quotes": [
+          {
+            "evidence_id": "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73",
+            "quote": "Cook's Meadow (including boardwalks), and the paved road to Mirror Lake (but not the unpaved trail around Mirror Lake)."
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2192,
+      "output_tokens": 114
+    },
+    "elapsed_ms": 1657.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "7efaaf5699515f21e05ff336ca2b7d24e9cc1b1ef82080e4129ebf672ac1a2c1",
+    "cost_estimate_usd": 0.00033143999999999996,
+    "withheld_claims": 1
+  },
+  "delivered_response": {
+    "action": "answer",
+    "answer": "Dogs are not allowed on the unpaved trail around Mirror Lake.",
+    "claims": [
+      {
+        "text": "Dogs are not allowed on the unpaved trail around Mirror Lake.",
+        "evidence_ids": [
+          "ed008ee81bc9b0ab3b75eab4ea0d482d2e614a22bc4ec8d2fd07de9878857f73"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2551,
+      "output_tokens": 197
+    },
+    "elapsed_ms": 2113.5,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "28078460d026364f538d569b65d78cf00476f2b42043686875e170d7fc84fe9c",
+    "cost_estimate_usd": 0.00075576
+  },
+  "human_verified": false,
+  "benchmark_eligible": false
+}

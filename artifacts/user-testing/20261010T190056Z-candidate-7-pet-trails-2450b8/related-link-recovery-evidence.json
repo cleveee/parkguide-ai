@@ -1,0 +1,19 @@
+{
+  "kind": "Code and response-data inspection; browser rendering verification belongs to root",
+  "component": "web/src/components/assistant-turn.tsx",
+  "case_turn": "RPT03.1",
+  "derived_navigation_links": [
+    {
+      "url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+      "title": "Pets - Yosemite National Park (U.S. National Park Service)"
+    },
+    {
+      "url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+      "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)"
+    }
+  ],
+  "finding": "Refusal can direct visitors to same-park official NPS pages already in retrieved context. These are navigation aids, not numbered claim evidence, and do not change the failure grade.",
+  "browser_render_verified_by_this_agent": false,
+  "human_verified": false,
+  "benchmark_eligible": false
+}

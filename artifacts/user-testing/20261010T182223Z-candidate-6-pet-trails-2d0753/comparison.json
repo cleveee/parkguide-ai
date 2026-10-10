@@ -1,0 +1,38 @@
+{
+  "candidate": "artifacts/user-testing/20261010T182223Z-candidate-6-pet-trails-2d0753",
+  "previous": "artifacts/user-testing/20261010T181726Z-candidate-5b-pet-trails-aea49b",
+  "kind": "same frozen scoped questions, actual generated histories",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "cases": [
+    {
+      "case_turn": "RPT01.1",
+      "prior_grade": "pass",
+      "candidate_grade": "fail",
+      "direction": "regressed",
+      "prior_text": "Pets are not allowed on most trails. Permitted examples include the paved Bridalveil Fall and Lower Yosemite Fall trails, and Wawona Meadow Loop.",
+      "candidate_text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information."
+    },
+    {
+      "case_turn": "RPT02.1",
+      "prior_grade": "partial",
+      "candidate_grade": "partial",
+      "direction": "unchanged",
+      "prior_text": "Most Yosemite trails are off limits to pets.",
+      "candidate_text": "Dogs are not allowed on most Yosemite trails. Permitted examples include paved trails at Bridalveil Fall and Lower Yosemite Fall, unless signs prohibit pets."
+    },
+    {
+      "case_turn": "RPT03.1",
+      "prior_grade": "fail",
+      "candidate_grade": "fail",
+      "direction": "unchanged",
+      "prior_text": "Dogs are not allowed on the unpaved trail around Mirror Lake.",
+      "candidate_text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information."
+    }
+  ],
+  "ordinal_directions": {
+    "regressed": 1,
+    "unchanged": 2
+  },
+  "interpretation": "Two supplemental questions refuse; one is useful/source-supported but incomplete under the unchanged coverage rubric. Unsafe scope is blocked, not solved at generation."
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "Exact full-suite successful test turn, not replaced by scoped probe",
+  "turns_sha256": "47e0e011c3348fc25dda193cc37dfb3f006fefb718c818f706f4a416c2ae809a",
+  "record": {
+    "case_turn": "H06.2",
+    "trace_path": "/tmp/parkguide-candidate-4-traces/4585fdc935eb44959eab60164c815aed.json",
+    "trace_sha256": "ab5b0526b6c65320240c8ed1cb32a546a126cb0905175e7b91f4b3f09202973e",
+    "trace_timestamp": "2026-10-10T19:03:54.831545+00:00",
+    "citation_contract": "witness-selected-v1",
+    "claims": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "unchanged_claim_text": "No drinking water is indicated at Cedar Ridge in the saved trail table.",
+        "original_evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ],
+        "final_evidence_ids": [
+          "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+          "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411"
+        ],
+        "removed_evidence_ids": [],
+        "witnesses": [
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |"
+          },
+          {
+            "evidence_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+            "quote": "| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |"
+          },
+          {
+            "evidence_id": "16eed24e4ac74129e9f7ff68c1f105ed4fdb97d67168a07e26f16b919aef9411",
+            "quote": "DW = drinking water; TF = Toilet Facilities; EP = Emergency Phone; RS = Ranger Station"
+          }
+        ],
+        "exact_SQLite_witness_match": true,
+        "within_original_claim_ownership": true,
+        "claim_text_unchanged": true
+      }
+    ],
+    "original_final_internal_trace_available": true
+  },
+  "finding": "Original and final row/header+legend IDs are identical and have exact witnesses; no redundant citation removal occurred in this turn.",
+  "human_verified": false,
+  "benchmark_eligible": false
+}

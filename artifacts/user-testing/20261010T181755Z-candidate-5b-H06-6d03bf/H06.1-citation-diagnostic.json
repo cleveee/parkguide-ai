@@ -1,0 +1,84 @@
+{
+  "trace_path": "/tmp/parkguide-candidate-4-traces/6dfa2339c4ab44c9b39cec4de616f8f5.json",
+  "trace_sha256": "3b8febf05e36399d37df74e4cfdb61b2767277636eb67d4a06394ad73fe086ca",
+  "timestamp": "2026-10-10T18:17:58.812505+00:00",
+  "raw_response": {
+    "action": "answer",
+    "answer": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+    "claims": [
+      {
+        "text": "Cedar Ridge is 1.5 miles one way from the South Kaibab Trailhead.",
+        "evidence_ids": [
+          "27f524d33f57def9e933ccb1d8e63d0c34f9cf54d871bdc721f66feeb6c52ba1"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2973,
+      "output_tokens": 106
+    },
+    "elapsed_ms": 1961.2,
+    "model": "gpt-6-luna-2026-09-22",
+    "requested_model": "gpt-6-luna",
+    "provider": "azure_openai",
+    "prompt_sha256": "5336b7dd6b7cd2f38b63e71cddd6833a169dbbb365b26d94a8e5a5a26f3278c1",
+    "cost_estimate_usd": 0.00042036
+  },
+  "citation_review": {
+    "decisions": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "reason": "The table lists Cedar Ridge at 1.5 miles under the one-way distance column; the South Kaibab trail context is identified by the table heading.",
+        "supporting_quotes": [
+          {
+            "evidence_id": "27f524d33f57def9e933ccb1d8e63d0c34f9cf54d871bdc721f66feeb6c52ba1",
+            "quote": "head: elevation 7200ft (2195m) Destination Elevation Changefrom Top Distance one-way Time Roundtrip Ooh Aah Point 790ft (230m) 0.9mi ("
+          },
+          {
+            "evidence_id": "27f524d33f57def9e933ccb1d8e63d0c34f9cf54d871bdc721f66feeb6c52ba1",
+            "quote": "(1.4km) 1–2 hours Cedar Ridge 1120ft (340m) 1.5mi (2.4km) 2–4 hours Skeleton Point 2040ft (620m)"
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2409,
+      "output_tokens": 78
+    },
+    "elapsed_ms": 1444.1,
+    "model": "gpt-6-luna-2026-09-22",
+    "prompt_sha256": "c677401c1d72271e51f78f0efe66c2a2738749ba736fa9f7f0839b0f849d4687",
+    "cost_estimate_usd": 0.00033588,
+    "withheld_claims": 0
+  },
+  "final_passages": [
+    {
+      "rank": 1,
+      "chunk_id": "8f9db49f1e0b89aa67979e5685d12280d8595781bd65da153167c505acb2cc45",
+      "text": "Heading: Backcountry Trail Distances > Corridor Trails Distances\n\n| Distance Via: | Distance from Rim (mi/km) | Elevation (ft/m) | DW | TF | EP | RS | Other |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Phantom Ranch | 9.9/15.9 | 2546/776 | Y | Y | Y | Y | reservation required for food and lodging |\n| South Kaibab Trailhead to: |  | 7260/2213 |  |  |  |  |  |\n| Cedar Ridge | 1.5/2.4 | 6120/1865 |  | Y |  |  |  |\n| Skeleton Point | 3/4.8 | 5220/1591 |  |  |  |  |  |\n"
+    },
+    {
+      "rank": 2,
+      "chunk_id": "fb0b99ebd52d2f09ec1e44f9b41173742d2d6bc56d8f8ae31791613f7684be4d",
+      "text": "Heading: Day Hiking > North Rim Day Hikes\n\nBridle Trail This trail follows the road as it connects the Grand Canyon Lodge with the North Kaibab Trailhead, a distance of 1.2 miles / 2 km one-way. Pets on leash and bicycles are permitted on this hard-packed trail."
+    },
+    {
+      "rank": 3,
+      "chunk_id": "67701d028b1894dc9fcbfaea246255be02f74341776c74ece2e895575589d177",
+      "text": "Heading: How Do I Travel to the North Rim? > Approximate Driving Distances and Directions to NORTH RIM, Grand Canyon from:\n\nContinue east on Rt 389 for 33 miles/ 53 km to the junction with US 89a.\n\nContinue east on US 89a for 30/ miles 48 km. to the junction with Rt 67.\n\nDrive south on Rt 67 for 43 miles/ 70 km directly to the North Rim.\n\nFrom Salt Lake City, UT - 392 miles / 631 kilometers\n\nTake I-15 south to Cedar City, UT.\n\nFrom Cedar City, take Highway 14 east to Highway 89.\n\nTake Highway 89 south to Kanab, UT.\n\nFrom Kanab, take Highway 89Alt south to Jacob Lake, AZ.\n\nFrom Jacob Lake, take Highway 67 south to the North Rim.\n\nFrom Denver, CO - 690 miles / 1110 kilometers"
+    },
+    {
+      "rank": 4,
+      "chunk_id": "27f524d33f57def9e933ccb1d8e63d0c34f9cf54d871bdc721f66feeb6c52ba1",
+      "text": "Heading: Introduction to Backcountry Hiking > PDF page 4\n\nhead: elevation 7200ft (2195m) Destination Elevation Changefrom Top Distance one-way Time Roundtrip Ooh Aah Point 790ft (230m) 0.9mi (1.4km) 1–2 hours Cedar Ridge 1120ft (340m) 1.5mi (2.4km) 2–4 hours Skeleton Point 2040ft (620m) 3.0mi (4.8km) 4–6 hours The Tip Off 3280ft (1100m) 4.4mi (7.1km) 6–9 hours North Kaibab Trail 4700ft (1430m) 6.8mi (10.9km) 2 Days junction Bright Angel 4700ft (1430m) 7.0mi (11.3km) 2"
+    },
+    {
+      "rank": 5,
+      "chunk_id": "e9751ca5f4ba8bf6d5566ffd454fc925aa275ec2c8bcf30aa9ed9fdbb27fc9b7",
+      "text": "Heading: Bicycling and E-Bike Information > Bicycling on the South Rim: S. Kaibab Trailhead & Yaki Point\n\nLooking for a scenic, yet shorter cycling opportunity? Follow the paved Greenway Trail to the South Kaibab Trailhead and then ride along Yaki Point Road to Yaki Point. Access the Greenway near Grand Canyon Visitor Center and follow the South Kaibab Trailhead signs. In about 2.4 miles (3.9 km), you will come to the trailhead parking area. From here, turn right and follow the trailhead road until you come to Yaki Point Road. Make a left and follow it 0.5 miles (0.8 km) to Yaki Point. There are plenty of spectacular canyon views along the Greenway Trail and once you reach Yaki Point. Like Hermit Road, private vehicle restrictions eliminate most traffic. Shuttle and tour buses do utilize Yaki Point Road, so cyclists should pull"
+    }
+  ],
+  "human_verified": false,
+  "benchmark_eligible": false
+}

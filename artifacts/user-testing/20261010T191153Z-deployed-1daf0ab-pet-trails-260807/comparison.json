@@ -1,0 +1,38 @@
+{
+  "previous": "artifacts/user-testing/20261010T190056Z-candidate-7-pet-trails-2450b8",
+  "deployed_run": "artifacts/user-testing/20261010T191153Z-deployed-1daf0ab-pet-trails-260807",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "cases": [
+    {
+      "case_turn": "RPT01.1",
+      "prior_grade": "partial",
+      "deployed_grade": "partial",
+      "direction": "unchanged",
+      "prior_text": "Pets are generally not allowed on Yosemite trails, with the Wawona Meadow Loop as an exception.",
+      "deployed_text": "Pets are generally not allowed on Yosemite trails, with the Wawona Meadow Loop as an exception."
+    },
+    {
+      "case_turn": "RPT02.1",
+      "prior_grade": "partial",
+      "deployed_grade": "partial",
+      "direction": "unchanged",
+      "prior_text": "Dogs are not allowed on most Yosemite trails. Permitted paved routes include Bridalveil Fall and Lower Yosemite Fall trails, unless signs prohibit pets.",
+      "deployed_text": "Dogs are not allowed on most Yosemite trails."
+    },
+    {
+      "case_turn": "RPT03.1",
+      "prior_grade": "fail",
+      "deployed_grade": "fail",
+      "direction": "unchanged",
+      "prior_text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+      "deployed_text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information."
+    }
+  ],
+  "ordinal_directions": {
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 3
+  },
+  "qualitative_regression": "RPT02 remains partial but now omits all permitted examples after partial withholding; unchanged ordinal grade does not mean identical usefulness."
+}

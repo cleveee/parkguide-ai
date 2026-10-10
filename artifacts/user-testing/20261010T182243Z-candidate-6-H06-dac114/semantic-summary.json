@@ -1,0 +1,22 @@
+{
+  "kind": "AI provisional scoped development diagnosis; not a complete18-turn rerun",
+  "human_review_pending": true,
+  "benchmark_eligible": false,
+  "full_semantic_and_helpfulness_pass": 2,
+  "partial_precision_or_coverage": 0,
+  "semantic_failures": 1,
+  "turns": 3,
+  "claim_support": {
+    "delivered_claims": 1,
+    "fully_supported_by_claim_citations": 1,
+    "partial_citation_context": 0
+  },
+  "cost_estimate_including_reservations_usd": 0.0018412799999999998,
+  "reserved_provider_failed_attempts": 0,
+  "suite_sha256": "bf70ee1824515883da95e237132b41f8c59fe467f0eda49a0829054bf591660c",
+  "turns_sha256": "d2393012841aba26f13e0fef0df06fa0dc46344f85c795b09dd745737bebce10",
+  "assessment_sha256": "ad30bbdb7ae6f22fc07f80f77aa68126fb9fc4438d7e5ec666ad045b9f83a4db",
+  "interpretation": "Distance now has complete citation context; future-date boundary passes. Water refuses after reviewer fails to witness every cited passage, so the dialogue is2pass/1fail.",
+  "failed_attempt_note": "The table turn reports one failed generation/review event for invalid claim-review response; token usage was captured. This is a review-validation failure, not evidence of a network retry.",
+  "failed_attempts_with_usage_recorded": 1
+}

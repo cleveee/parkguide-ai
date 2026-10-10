@@ -1,0 +1,80 @@
+{
+  "verified_at": "2026-10-10T19:09:15.948201+00:00",
+  "code_commit": "1daf0ab661f711c3f49977255792073af8002c57",
+  "deployment": {
+    "id": "dpl_2tz7j6E3ysNbKjAte5GzhQ1irRJG",
+    "url": "parkguide-ai-dh24-lsj1fapof-cleveees-projects.vercel.app",
+    "readyState": "READY",
+    "aliases": [
+      "parkguide-ai-dh24.vercel.app",
+      "parkguide-ai-dh24-cleveees-projects.vercel.app",
+      "parkguide-ai-dh24-git-main-cleveees-projects.vercel.app"
+    ],
+    "createdAt": 1791659141514
+  },
+  "github_status": {
+    "context": "Vercel \u2013 parkguide-ai-dh24",
+    "state": "success",
+    "description": "Deployment has completed",
+    "target_url": "https://vercel.com/cleveees-projects/parkguide-ai-dh24/2tz7j6E3ysNbKjAte5GzhQ1irRJG"
+  },
+  "production_origin": "https://parkguide-ai-dh24.vercel.app",
+  "assets": [
+    {
+      "path": "/assets/index-Csfjgjoj.js",
+      "sha256": "767adb07b7d59e6ef727d6348a683023af189c4ec6557079e73b2ed4fa2c18e1",
+      "matches_local_build": true
+    },
+    {
+      "path": "/assets/index-lbs3yIpN.css",
+      "sha256": "6a811c1533fcf212343559ef5e6fbd752cc5d2278afd715c78f00f8a3df90876",
+      "matches_local_build": true
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "dist_built": true,
+    "profile": "vercel"
+  },
+  "shell_cache": {
+    "headers": {
+      "Cache-Control": "no-store",
+      "ETag": null,
+      "Last-Modified": null
+    },
+    "legacy_conditional_request": "200 with current HTML"
+  },
+  "meta_runtime": {
+    "profile": "vercel",
+    "rerank_enabled": false,
+    "rerank_reason": "The hosted Vercel bundle does not install the optional PyTorch cross-encoder (size and cold start). Retrieval is hybrid NumPy cosine + BM25 with reciprocal-rank fusion and the same five-passage context.",
+    "evaluation_note": "Historical local evaluations do not measure this hosted profile's retrieval accuracy. Separate hosted visitor diagnostics are recorded in the project report; their AI assessments are not human verification.",
+    "budget": {
+      "cap_usd": 5.0,
+      "scope": "per_instance",
+      "note": "Ledger lives in /tmp on each Vercel instance; it resets when the instance is recycled and is not shared across concurrently running instances. It is not a global spending limit. Use deployment protection and provider rate/quota controls to manage exposure; Azure budget alerts alone do not enforce a hard cap."
+    },
+    "state_storage": "/tmp/parkguide (ephemeral, per instance)",
+    "request_serialization": "one answer at a time per instance; instances do not coordinate"
+  },
+  "active_build": {
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "active": true,
+    "strategy": "structure",
+    "created_at": "2026-10-10T03:49:58.065777+00:00",
+    "chunk_count": 3707,
+    "vector_count": 3707,
+    "dimension": 1536,
+    "embedding_deployment": "text-embedding-3-small",
+    "target_tokens": 200,
+    "overlap_tokens": 40
+  },
+  "totals": {
+    "documents": 155,
+    "html": 150,
+    "pdf": 5,
+    "table_documents": 45,
+    "chunks_all_builds": 5405,
+    "vectors_all_builds": 5405
+  }
+}
