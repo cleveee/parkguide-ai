@@ -187,6 +187,22 @@ export function ChatView({
                     onInspect={() => onInspect(turn.id)}
                   />
                 )}
+                {turn.phase === "done" && turn.response.status === "answer" && turn.id === turns.at(-1)?.id && !pending
+                  && Boolean(turn.response.suggested_questions?.length) && (
+                  <div className="space-y-2" role="group" aria-label="Suggested follow-up questions">
+                    <p className="text-xs font-medium text-muted-foreground">Explore next</p>
+                    {turn.response.suggested_questions?.slice(0, 3).map((suggestion) => (
+                      <Button key={suggestion.id} variant="outline" disabled={disabled}
+                        className="h-auto w-full justify-start py-2 text-left whitespace-normal" onClick={() => {
+                          controller.textInput.setInput(suggestion.question)
+                          document.querySelector<HTMLTextAreaElement>("textarea[name=message]")?.focus()
+                        }}>
+                        {suggestion.question}
+                      </Button>
+                    ))}
+                    <p className="text-xs text-muted-foreground">Choose a question to edit and send. Based on saved NPS sources.</p>
+                  </div>
+                )}
               </div>
             ))
           )}

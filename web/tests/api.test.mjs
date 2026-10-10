@@ -99,3 +99,34 @@ test('structured server failures retain their reason and usage record', async (t
   t.mock.method(globalThis, 'fetch', async () => Response.json({ error: { code: 'busy', message: 'Try again shortly.', details } }, { status: 409 }))
   await assert.rejects(getMeta(), (error) => error.code === 'busy' && error.status === 409 && error.details.ledger_window.captured === false)
 })
+
+function supportedSuggestion() {
+  return { id: 'pets-leash', question: 'How long should my pet’s leash be in Yosemite?',
+    source_url: 'https://www.nps.gov/yose/planyourvisit/pets.htm', supporting_quote: 'Keep pets on a six-foot leash.', evidence_ids: ['saved-chunk'] }
+}
+
+test('supported follow-ups are accepted on answers and old responses still work', async (t) => {
+  const response = refusal()
+  response.status = 'answer'
+  response.suggested_questions = [supportedSuggestion()]
+  t.mock.method(globalThis, 'fetch', async () => Response.json(response))
+  assert.deepEqual((await postChat(question, new AbortController().signal)).suggested_questions, response.suggested_questions)
+})
+
+test('unbounded, unsupported, duplicate and foreign-park suggestions fail closed', async (t) => {
+  for (const mutate of [
+    value => { value.suggested_questions = Array.from({ length: 4 }, () => supportedSuggestion()) },
+    value => { value.suggested_questions[0].evidence_ids = [] },
+    value => { value.suggested_questions[0].supporting_quote = '' },
+    value => { value.suggested_questions[0].source_url = 'https://www.nps.gov/yell/planyourvisit/pets.htm' },
+    value => { value.suggested_questions.push(supportedSuggestion()) },
+    value => { value.status = 'refusal' },
+  ]) {
+    const response = refusal()
+    response.status = 'answer'
+    response.suggested_questions = [supportedSuggestion()]
+    mutate(response)
+    t.mock.method(globalThis, 'fetch', async () => Response.json(response))
+    await assert.rejects(postChat(question, new AbortController().signal), error => error.code === 'invalid_response')
+  }
+})

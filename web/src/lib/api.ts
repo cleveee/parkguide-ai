@@ -151,6 +151,14 @@ export interface Candidate {
   snippet: string
 }
 
+export interface SuggestedQuestion {
+  id: string
+  question: string
+  source_url: string
+  supporting_quote: string
+  evidence_ids: string[]
+}
+
 export interface ChatTurn {
   turn_id: string
   selected_park: ParkCode
@@ -160,6 +168,7 @@ export interface ChatTurn {
   claims: Claim[]
   sources: SourcePage[]
   history_content: string
+  suggested_questions?: SuggestedQuestion[]
   history_evidence_ids?: string[]
   history_scope_reset: boolean
   runtime?: TurnRuntime
@@ -378,6 +387,29 @@ const invalidResponse = () => new ApiError(200, "invalid_response", "ParkGuide r
 
 // Guard the structures rendered by the app before a successful HTTP response
 // enters React state. Source support and citation integrity remain server checks.
+function validSuggestions(value: unknown, park: unknown): boolean {
+  if (value === undefined) return true
+  if (!Array.isArray(value) || value.length > 3) return false
+  const questions = new Set<string>()
+  const ids = new Set<string>()
+  return value.every((item) => {
+    if (!object(item) || typeof item.id !== "string" || !/^[A-Za-z0-9_-]{1,80}$/.test(item.id) || ids.has(item.id) || typeof item.question !== "string" || !item.question.trim() || item.question.length > 1000
+      || typeof item.supporting_quote !== "string" || !item.supporting_quote.trim() || item.supporting_quote.length > 2000
+      || !strings(item.evidence_ids) || item.evidence_ids.length < 1 || item.evidence_ids.length > 5
+      || item.evidence_ids.some((id) => !/^[A-Za-z0-9_-]{1,128}$/.test(id)) || typeof item.source_url !== "string") return false
+    try {
+      const url = new URL(item.source_url)
+      if (url.protocol !== "https:" || url.host !== "www.nps.gov" || url.username || url.password
+        || !url.pathname.startsWith(`/${park}/planyourvisit/`)) return false
+    } catch { return false }
+    const key = item.question.trim().toLowerCase()
+    if (questions.has(key)) return false
+    questions.add(key)
+    ids.add(item.id)
+    return true
+  })
+}
+
 export function validChatTurn(value: unknown): value is ChatTurn {
   if (!object(value) || !PARKS.some((park) => park.code === value.selected_park)
       || !["answer", "refusal", "clarification"].includes(String(value.status))
@@ -391,6 +423,8 @@ export function validChatTurn(value: unknown): value is ChatTurn {
         && objects(page.passages, (passage) => typeof passage.chunk_id === "string" && typeof passage.saved_text === "string" && typeof passage.excerpt === "string"
           && numbers(passage.claim_numbers) && objects(passage.source_spans, (span) => typeof span.start === "number" && typeof span.end === "number")
           && objects(passage.reviewer_witnesses, (witness) => typeof witness.claim_number === "number" && typeof witness.quote === "string")))
+      || !validSuggestions(value.suggested_questions, value.selected_park)
+      || (value.status !== "answer" && Array.isArray(value.suggested_questions) && value.suggested_questions.length > 0)
       || !object(value.inspector)) return false
   const detail = value.inspector
   if (!object(detail.retrieval) || !object(detail.embedding) || !object(detail.generation) || !object(detail.review)
