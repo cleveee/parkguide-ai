@@ -78,6 +78,34 @@ def _eligible(chunk, filters):
     return True
 
 
+def saved_evidence(db, chunk_ids, *, build_id=None, filters=None):
+    """Reload prior citation hints from SQLite; never accept browser passage text."""
+    if not chunk_ids:
+        return None
+    manifest = get_manifest(db, build_id)
+    identifiers = list(dict.fromkeys(chunk_ids))[:5]
+    marks = ",".join("?" for _ in identifiers)
+    with _connection(db, readonly=True) as connection:
+        rows = connection.execute(
+            f"SELECT * FROM chunks WHERE build_id=? AND chunk_id IN ({marks})",
+            [manifest["build_id"], *identifiers]).fetchall()
+    chunks = {}
+    for row in rows:
+        chunk = dict(row)
+        chunk.update(manifest["document_snapshot"][chunk["doc_id"]])
+        chunk["source_spans"] = json.loads(chunk["source_span_json"])
+        chunk["source_span"] = chunk["source_spans"]
+        if _eligible(chunk, filters):
+            chunks[chunk["chunk_id"]] = chunk
+    # Stale or foreign hints fall back to normal search; never partially reuse.
+    if len(chunks) != len(identifiers):
+        return None
+    passages = [chunks[identifier] for identifier in identifiers]
+    return {"build_id": manifest["build_id"], "mode": "saved_evidence", "evidence_reuse": True,
+            "candidates": passages, "final": passages, "candidate_count": len(passages),
+            "filters": filters or {}, "timings": {}}
+
+
 def load_reranker(model=DEFAULT_RERANKER, revision=None):
     if revision is None:
         configuration = Path(__file__).resolve().parents[2] / "config/project.json"
@@ -98,7 +126,7 @@ def load_reranker(model=DEFAULT_RERANKER, revision=None):
     return _RERANKERS[key]
 
 
-def retrieve(db, query, query_vector=None, mode="hybrid", build_id=None, filters=None, rerank=False, reranker=None, *, candidate_count=20, per_retriever_fetch=40, final_count=5, rrf_k=60):
+def retrieve(db, query, query_vector=None, mode="hybrid", build_id=None, filters=None, rerank=False, reranker=None, *, candidate_count=20, per_retriever_fetch=40, final_count=5, rrf_k=60, lexical_query=None):
     if mode not in {"bm25", "dense", "hybrid"}:
         raise ValueError("Retrieval mode must be bm25, dense, or hybrid")
     if candidate_count < 20 or not 1 <= final_count <= 5 or per_retriever_fetch < candidate_count:
@@ -132,7 +160,7 @@ def retrieve(db, query, query_vector=None, mode="hybrid", build_id=None, filters
     bm25_scores = np.zeros(len(chunks))
     dense_scores = np.zeros(len(chunks))
     ranks = {}
-    keyword_query, keyword_current_terms = _keyword_inputs(query, filters)
+    keyword_query, keyword_current_terms = _keyword_inputs(lexical_query or query, filters)
 
     def rank(scores, eligible=None):
         indices = range(len(chunks)) if eligible is None else eligible

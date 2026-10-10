@@ -1,0 +1,43 @@
+# Conversation repair implementation
+
+October 10, 2026. The verification below was performed locally in the existing checkout. Robin subsequently reviewed the browser result and authorized committing and pushing these changes to main.
+
+The reported exchange was a conversation failure: “I don't understand” replaced the pet/trail subject, and “the thing you just said” then searched for generic conversation words. A model clarification was replaced by a generic place/date question. The browser was already sending history; the failure was in how that history was used before retrieval.
+
+## Behavior
+
+- `dialogue.py` asks the existing pinned Azure Luna deployment for a constrained action: `search_new`, `search_followup`, `explain_previous`, or `clarify`. It generates no visitor-facing facts. Clarifications use bounded templates for place, date, subject or the previous answer.
+- This optional decision has one attempt and a ten-second timeout. Safe provider/schema failures fall back to local resolution. Budget failures remain hard limits. Common confusion phrases preserve the subject even without the model decision.
+- For a factual follow-up, the model supplies a complete question for semantic search and answer interpretation. Keyword search retains the original resolved user terms and its concrete-detail eligibility rule. RRF weights and the corpus are unchanged.
+- The web response includes up to five delivered citation IDs. The browser returns these as optional `evidence_ids` on assistant history messages. They are untrusted hints: explanation requests reload every ID from the requested active build, apply the current park/source filters, and reject stale or foreign sets. Browser passage text and earlier assistant prose never become factual evidence. Missing hints use normal search.
+- Requests to simplify, such as “I don't understand,” reuse those passages. Requests for more information keep the subject and search again for additional source-supported conditions or examples.
+- Each factual explanation still passes generation, source review, quotation/citation checks and the web bridge's stored-passage validation. The generation schema enumerates the supplied evidence IDs to reduce citation transcription errors.
+- Generation and source review distinguish ordinary pets from disability-assisting service animals. The exception for service animals does not erase an ordinary-pet restriction or establish that the visitor's dog qualifies.
+
+Conversation state remains in browser memory. The model uses the same Azure resource, pinned model, settings and budget as the existing app. The router adds a paid call to eligible selected-park follow-ups; explanation reuse avoids another query embedding and ranking pass. Its usage/cost and reused IDs are recorded in `result.dialogue` and the public inspector JSON. The shared ledger includes these calls.
+
+## Verification
+
+The offline suite passes **536 Python tests**. The **10 Node request tests**, TypeScript/Vite production build and lint pass. Lint still reports the existing Fast Refresh export warnings. New contracts cover multiple repair turns, new subjects, absent references, bounded/invalid plans, pinned model/usage, timeout configuration, preserved lexical ranking, stale/foreign citation hints, source reload without embedding/ranking, history metadata transport and hard budget limits.
+
+Real calls use `scripts/check_conversation_repairs.py`, the frozen corpus and the hosted retrieval configuration (reranker disabled), locally. Each dialogue carries the actual preceding replies. The saved `run.json` records the questions, expectations, source-code hashes and configuration hash. No gold or sealed-test questions are opened. Independent dialogues may run with two workers; each conversation's turns remain sequential.
+
+Preserved development attempts:
+
+- [Initial screenshot replay](../artifacts/conversation-repairs/20261010T194324Z/summary.json): all three actions recovered. Direct source inspection found overly broad wording in the third reply despite its successful AI review. Explanation instructions were tightened.
+- [First wider run](../artifacts/conversation-repairs/20261010T194516Z/summary.json): 14/18 operational checks passed. This revealed a malformed citation, ordinary-pet/service-animal confusion, and incorrect test expectations for a duration/source-gap case.
+- [Second wider run](../artifacts/conversation-repairs/20261010T194930Z/summary.json): 15/18 operational checks passed. Source ID constraints and the animal-category correction improved the Grand Canyon exchange. Semantic query rewrites still weakened some lexical follow-ups; preserving the original keyword inputs addressed that regression.
+- [Wider run before the final expansion change](../artifacts/conversation-repairs/20261010T195331Z/summary.json): all **18/18 operational checks** passed across six real three-turn dialogues. The source-code hashes were unchanged through this run. This includes confusion, animal/topic changes, carrying a pet, a shuttle alternative, ambiguity then clarification, live-status refusal, a new subject after refusal, and park-scope refusal. The [earlier browser inspector](../artifacts/conversation-repairs/browser-before-expansion.json) confirms `explain_previous` and `saved_evidence` reuse. That browser check also revealed that requesting more information mostly repeated the same answer; expansion now performs a fresh contextual search.
+- [Final expansion replay](../artifacts/conversation-repairs/20261010T195856Z/summary.json): **2/3 operational checks** passed. The first pet-policy reply was withheld by the model source checker even though its rejection reason itself acknowledged the cited Wawona exception. Both follow-ups retained the pet/trail subject; the last performed `search_followup` and added paved-route and trail-specific examples. The failed first turn remains archived. This exposes source-checker inconsistency separately from conversation resolution.
+
+The final local browser replay completed all three screenshot turns with answers. “I don't understand” simplified the existing pet/trail answer; the exact “more info” message added paved-route and trail-specific examples. The [final inspector export](../artifacts/conversation-repairs/browser-final-turn.json) records all four preceding messages received and used, `search_followup`, hybrid retrieval, two delivered passage IDs, and no deterministic guard errors. The [browser screenshot](../artifacts/conversation-repairs/browser-final-conversation.jpg) shows the expanded reply. Source hashes still match the final expansion replay. These successful browser turns do not erase the earlier source-checker failure or prove the delivered wording is complete: the last answer still states a broad trail prohibition before listing exceptions.
+
+The datasets changed between these development attempts, so these counts are not a paired accuracy comparison. Original failed attempts and expectations remain untouched. A saved-source audit found no dedicated Yellowstone pet page and no ordinary-pet-in-car rule; clauses about attended service animals or pet food do not establish that rule. The last park-scope question now expects a source-gap refusal. The initial duration clarification case was replaced by a source-supported item clarification case; the original results remain archived.
+
+The wider run's shared ledger window increased by about **$0.0500 estimated**, including concurrent local browser checks and conservative reservations for failed calls. This is not a per-dialogue charge or a billing statement. Total estimated committed project spend at that window's end was $0.8400 of the existing $5 limit. The final expansion replay's shared window added about $0.0031, ending at $0.8431 before the last browser checks.
+
+## Limits
+
+Operational checks establish action selection, citation guards and park scope. They do **not** establish complete factual accuracy. AI source review can still accept overbroad wording, and retrieval can omit applicable exceptions from another saved passage. In particular, broad Yosemite pet-rule replies remain capable of saying pets cannot use trails without mentioning the permitted exceptions. The conversation repair solves the lost-subject/explanation failure; it does not certify the entire chatbot or the corpus's coverage. Human gold verification and the formal benchmark remain pending.
+
+No database rebuild, crawl, corpus re-embedding, provider switch, account operation or production deployment was performed. The local preview runs on a separately owned loopback server at port 8524 with reranking disabled; the existing server at port 8513 was left alone.

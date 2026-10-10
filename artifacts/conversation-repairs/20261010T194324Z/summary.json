@@ -1,0 +1,21 @@
+{
+  "scope": "local real Azure calls, frozen corpus, hosted retrieval profile (reranker off)",
+  "grading": "operational checks and AI source review; no human accuracy score",
+  "turns": 3,
+  "checks_passed": 3,
+  "estimated_incremental_usd": 0.002282477999999921,
+  "budget_before": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.753467744,
+    "remaining_estimated_usd": 4.246532256,
+    "events": 1005,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "budget_after": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.755750222,
+    "remaining_estimated_usd": 4.244249778,
+    "events": 1014,
+    "basis": "published prices and provider token usage; not a billing statement"
+  }
+}

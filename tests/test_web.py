@@ -166,6 +166,26 @@ def ask(client, question="What are the pet rules?", park="yose", history=None, *
     return client.post("/api/chat", json=body, headers=ORIGIN)
 
 
+def test_answer_citation_hints_roundtrip_as_history_metadata(env):
+    client, state = env
+    first = ask(client).json()
+    identifiers = first['history_evidence_ids']
+    assert identifiers and set(identifiers) == {passage['chunk_id'] for page in first['sources'] for passage in page['passages']}
+    history = [{'role': 'user', 'content': first['question']},
+               {'role': 'assistant', 'content': first['history_content'], 'evidence_ids': identifiers}]
+    second = ask(client, 'I dont understand', history=history)
+    assert second.status_code == 200
+    assert state['calls'][-1]['history'][-1]['evidence_ids'] == identifiers
+
+
+@pytest.mark.parametrize('hints', [['bad/id'], ['x'] * 6, [''], ['x' * 129]])
+def test_unbounded_or_malformed_evidence_hints_rejected(env, hints):
+    client, _ = env
+    response = ask(client, history=[{'role': 'user', 'content': 'Pets?'},
+                                   {'role': 'assistant', 'content': 'Earlier reply.', 'evidence_ids': hints}])
+    assert response.status_code == 422
+
+
 # --- request schema --------------------------------------------------------
 
 @pytest.mark.parametrize("body", [

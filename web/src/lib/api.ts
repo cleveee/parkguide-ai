@@ -159,6 +159,7 @@ export interface ChatTurn {
   claims: Claim[]
   sources: SourcePage[]
   history_content: string
+  history_evidence_ids?: string[]
   history_scope_reset: boolean
   runtime?: TurnRuntime
   reason: { code: string; category: ReasonCategory; detail: string } | null
@@ -380,6 +381,7 @@ function validChatTurn(value: unknown): value is ChatTurn {
   if (!object(value) || !PARKS.some((park) => park.code === value.selected_park)
       || !["answer", "refusal", "clarification"].includes(String(value.status))
       || typeof value.text !== "string" || typeof value.history_content !== "string"
+      || (value.history_evidence_ids !== undefined && (!strings(value.history_evidence_ids) || value.history_evidence_ids.length > 5))
       || typeof value.turn_id !== "string" || typeof value.question !== "string"
       || !object(value.history) || !object(value.timing)
       || !(value.reason === null || (object(value.reason) && typeof value.reason.code === "string" && typeof value.reason.category === "string" && typeof value.reason.detail === "string"))
@@ -431,6 +433,7 @@ export const getPassages = (docId: string, offset = 0, limit = 20) =>
 export interface HistoryMessage {
   role: "user" | "assistant"
   content: string
+  evidence_ids?: string[]
 }
 
 export const MAX_QUESTION_CHARS = 1000

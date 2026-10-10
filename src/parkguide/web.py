@@ -179,6 +179,15 @@ class HistoryMessage(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
     role: Literal["user", "assistant"]
     content: str
+    evidence_ids: list[str] = Field(default_factory=list, max_length=5)
+
+    @model_validator(mode="after")
+    def evidence_hints(self) -> "HistoryMessage":
+        if self.evidence_ids and self.role != "assistant":
+            raise ValueError("only assistant messages may include evidence hints")
+        if any(not identifier or len(identifier) > 128 or not re.fullmatch(r"[A-Za-z0-9_-]+", identifier) for identifier in self.evidence_ids):
+            raise ValueError("invalid evidence hint")
+        return self
 
     @field_validator("content")
     @classmethod
@@ -818,6 +827,7 @@ def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, sel
         "sources": sources,
         # Sent back by the browser as the assistant turn; never used as evidence.
         "history_content": result.get("rendered", "") if delivered else text,
+        "history_evidence_ids": list(dict.fromkeys(cited_ids))[:5] if delivered else [],
         "history_scope_reset": bool(result.get("history_scope_reset")),
         "runtime": _turn_runtime(),
         "reason": _refusal_reason(result, review_summary, stale, integrity_errors),
@@ -829,6 +839,8 @@ def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, sel
         "history": {"messages_received": history_received, "messages_used": len(history_used),
                     "scope_reset": bool(result.get("history_scope_reset"))},
         "inspector": {
+            "dialogue": {key: result.get("dialogue", {}).get(key) for key in
+                         ("action", "method", "elapsed_ms", "model", "usage", "cost_estimate_usd", "reused_evidence_ids", "error")},
             "retrieval": {
                 "ran": retrieval_ran,
                 "query": result.get("retrieval_query") if retrieval_ran else None,
@@ -900,7 +912,7 @@ def run_chat(request: ChatRequest) -> dict:
         override = rerank_override()
         try:
             result = core.answer(
-                request.question, [message.model_dump() for message in request.history],
+                request.question, [message.model_dump(exclude_defaults=True) for message in request.history],
                 mode="hybrid", build_id=build["build_id"], selected_park=request.selected_park,
                 embedder=_observed_embedder(observation), **({} if override is None else {"rerank": override}),
             )

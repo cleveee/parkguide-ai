@@ -88,6 +88,10 @@ or entity do not answer this park's question, even if the same number appears.
 Retain the relevant companion, vehicle or activity from history when judging an
 alternative plan. General access does not establish permission for that companion
 or activity; reject an answer that ignores the visitor's inherited restriction.
+Ordinary pets and disability-assisting service animals are separate categories.
+A service-animal permission does not contradict a rule explicitly about pets.
+Do not assume the visitor's dog is a service animal. A service-animal permission
+alone is irrelevant to whether that visitor may carry their pet below the rim.
 Number presence alone does not prove the entity, unit, direction or relation.
 An upper or lower bound is not an exact requirement; reject a limit paraphrased
 as equality. Do not approve inferred route order or intermediate connections

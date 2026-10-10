@@ -13,6 +13,7 @@ from .embedding_cache import cached_embed
 from .guards import render_claims, validate_answer
 from .runtime import ROOT, config, digest
 from .source_links import official_source_url
+from .dialogue import explanation_request, detail_request
 
 PARKS = {"yose": r"\byosemite\b", "yell": r"\byellowstone\b", "grca": r"\bgrand canyon\b"}
 PARK_NAMES = {"yose": "Yosemite", "yell": "Yellowstone", "grca": "Grand Canyon"}
@@ -55,7 +56,8 @@ def _positive_parks(text):
 def _follow_up(text):
     # Existential "there" introduces a subject; it does not refer to the last one.
     references = re.sub(r"\b(?:is|are|was|were|be|been)\s+there\b", "", text, flags=re.I)
-    return bool(re.search(r"^(?:and\b|also\b|what about\b|how about\b|instead\b|I mean(?:t)?\b|actually\b)", text, re.I)
+    return bool(explanation_request(text)
+                or re.search(r"^(?:and\b|also\b|what about\b|how about\b|instead\b|I mean(?:t)?\b|actually\b)", text, re.I)
                 or re.search(r"\b(?:it|its|that|those|there|they|their|them|he|him|his|she|her|hers|same|these|both|each|former|latter|instead)\b", references, re.I)
                 or _COMPARISON.search(text)
                 or not re.sub(r"[\s,?.!-]", "", _topic_text(text)))
@@ -127,18 +129,21 @@ def resolve_query(question, history):
         elif comparison and mentioned:
             parks = mentioned[-2:] if re.search(r"\b(?:both|two)\b", text, re.I) else mentioned[:]
         calendar, year = _context_date(text, calendar, year)
-        topic = _topic_text(text)
+        # Confusion is a request about the existing subject, not a new subject.
+        topic = "" if explanation_request(text) else _topic_text(text)
         if topic:
             topics.append(topic)
         if len(topics) > 4:
             topics = [topics[0], *topics[-3:]]
-    query = question
+    explaining = explanation_request(question) and bool(previous_topics)
+    query = " ".join(previous_topics) if explaining else question
     # Negated alternatives are history constraints, not extra retrieval targets.
     for pattern in PARKS.values():
         query = re.sub(r"\b(?:not|except|excluding|rather than|instead of)\s+" + pattern, "", query, flags=re.I)
     additions = []
     if inherit and previous_topics:
-        additions.append("Previous topic: " + " ".join(previous_topics))
+        if not explaining:
+            additions.append("Previous topic: " + " ".join(previous_topics))
         if re.search(r'\b(?:whenever|anytime|any time)\b', ' '.join(previous_topics), re.I) and re.search(r'\b(?:entrance|station|enter|go in)\b', question + ' ' + ' '.join(previous_topics), re.I):
             additions.append('Topic: entrance opening hours')
         if calendar or year:
@@ -182,7 +187,9 @@ def preflight_response(question, history, filters):
         location = f" in {PARK_NAMES[parks[0]]} National Park" if len(parks) == 1 else ""
         text = question.strip().rstrip("?.!")
         message = None
-        if re.fullmatch(r"how (?:long|much time) (?:(?:does|will|would) (?:it|that|this|the (?:hike|walk|drive|trip)) take|is (?:it|that|this|the (?:hike|walk|drive|trip)))", text, re.I):
+        if explanation_request(question):
+            message = "Which answer or topic would you like me to explain?"
+        elif re.fullmatch(r"how (?:long|much time) (?:(?:does|will|would) (?:it|that|this|the (?:hike|walk|drive|trip)) take|is (?:it|that|this|the (?:hike|walk|drive|trip)))", text, re.I):
             message = f"Which trail, drive, or activity{location} do you mean?"
         elif re.search(r"\b(?:closest|nearest)\b", text, re.I) and (
                 not re.search(r"\b(?:to|from|near|at|in)\s+\w", _topic_text(text), re.I)
@@ -326,9 +333,28 @@ def paid_claim_review(question, claims, contexts, history, settings, *, citation
         return review
 
 
+def paid_dialogue_plan(question, history, selected_park, settings):
+    from .dialogue import plan_dialogue
+    budget = Budget()
+    upper = len(json.dumps([question, history]).encode()) + 6000
+    # The optional language decision gets one short attempt. Local resolution
+    # handles a failure, without adding a retry chain before the answer call.
+    reservation = budget.reserve('generation', upper, settings['generation']['max_output_tokens'])
+    try:
+        plan = plan_dialogue(question, history, selected_park)
+    except Exception as error:
+        usage = getattr(error, 'usage', None)
+        cost = budget.settle(reservation, usage.get('input_tokens') if usage else None,
+                             usage.get('output_tokens', 0) if usage else 0, error=True)
+        error.cost_estimate_usd = cost
+        raise
+    plan['cost_estimate_usd'] = budget.settle(reservation, plan['usage']['input_tokens'], plan['usage']['output_tokens'])
+    return plan
+
+
 def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
            generator=None, embedder=None, retriever=None, reviewer=None, closed_book=False, enforce_gate=True,
-           selected_park=None):
+           selected_park=None, planner=None):
     started = time.perf_counter()
     if selected_park is not None and (not isinstance(selected_park, str) or selected_park not in PARK_NAMES):
         raise ValueError("Select one supported park: yose, yell, or grca")
@@ -361,14 +387,57 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
         filters = table_followup_filters(question, history, filters, ROOT / settings['database'])
     if preflight is None and not closed_book:
         preflight = preflight_response(question, history, filters)
+    lexical_query = retrieval_query
+    dialogue = {"action": "explain_previous" if history and explanation_request(question) and not detail_request(question) else
+               "search_followup" if history and detail_request(question) or "Previous topic:" in retrieval_query else "search_new",
+               "method": "local", "cost_estimate_usd": 0}
+    if history and not closed_book and preflight is None and (planner or default_generator and selected_park):
+        from .dialogue import validate_plan, clarification
+        try:
+            planned = planner(question, history, selected_park) if planner else paid_dialogue_plan(question, history, selected_park, settings)
+            checked = validate_plan({key: planned[key] for key in ("action", "search_query", "clarification_kind")})
+            # A planner cannot alter the visitor's selected park through a query.
+            if selected_park and any(park != selected_park for park in _positive_parks(checked['search_query'])):
+                from .generation import GenerationError
+                raise GenerationError("dialogue_query_outside_selected_park", usage=planned.get('usage'))
+            dialogue = {**planned, **checked, "method": "model"}
+            if checked['action'].startswith('search'):
+                retrieval_query = checked['search_query']
+                generation_question += f"\nConversation-resolved visitor question (context only, not evidence): {retrieval_query}"
+                if selected_park and selected_park not in _positive_parks(retrieval_query):
+                    retrieval_query = f"{PARK_NAMES[selected_park]}: {retrieval_query}"
+            elif checked['action'] == 'clarify':
+                preflight = {"action": "clarify", "answer": clarification(checked['clarification_kind'], PARK_NAMES.get(selected_park, "the park")),
+                             "claims": [], "usage": {}, "elapsed_ms": 0, "preflight_reason": "dialogue_clarification"}
+        except Exception as error:
+            # Provider/schema errors have safe codes; budget/configuration
+            # RuntimeErrors remain hard limits and must never be bypassed.
+            if isinstance(error, RuntimeError) and not getattr(error, 'code', None):
+                raise
+            dialogue = {**dialogue, "method": "local_fallback", "error": getattr(error, 'code', 'dialogue_plan_failed'),
+                        "usage": getattr(error, 'usage', None) or {},
+                        "cost_estimate_usd": getattr(error, 'cost_estimate_usd', 0)}
+    if dialogue['action'] == 'explain_previous':
+        generation_question += "\nExplain the previous answer in simpler everyday language using the supplied sources. Keep its subject, qualifiers and exceptions; do not ask the visitor to repeat the topic. When a rule has an exception, the rule sentence itself must say generally or most. Put each distinct fact in a separate claim of at most 18 words."
+    elif detail_request(question):
+        generation_question += "\nThe visitor requests additional detail about the same subject. Add relevant conditions or permitted examples explicitly supported by the supplied passages, beyond merely repeating the last answer. Preserve qualifiers and exceptions. Never invent reasons or details absent from these sources."
     if retriever is None:
         from .retrieval import retrieve
         retriever = retrieve
     trace = {"candidates": [], "final": [], "timings": {}, "candidate_count": 0}
     if not closed_book and preflight is None:
-        vector = None if mode == "bm25" else (embedder or cached_embed)([retrieval_query])[0]
-        trace = retriever(ROOT / settings["database"], retrieval_query, vector,
-                          mode=mode, build_id=build_id, filters=filters, rerank=rerank)
+        if dialogue['action'] == 'explain_previous' and retriever.__module__ == 'parkguide.retrieval':
+            from .dialogue import previous_evidence_ids
+            from .retrieval import saved_evidence
+            reused = saved_evidence(ROOT / settings['database'], previous_evidence_ids(history), build_id=build_id, filters=filters)
+            if reused:
+                trace = reused
+        if not trace.get('evidence_reuse'):
+            vector = None if mode == "bm25" else (embedder or cached_embed)([retrieval_query])[0]
+            options = {'lexical_query': lexical_query} if dialogue['action'] == 'search_followup' and retriever.__module__ == 'parkguide.retrieval' else {}
+            trace = retriever(ROOT / settings["database"], retrieval_query, vector,
+                              mode=mode, build_id=build_id, filters=filters, rerank=rerank, **options)
+    dialogue['reused_evidence_ids'] = [item['chunk_id'] for item in trace['final']] if trace.get('evidence_reuse') else []
     scope_errors = []
     if selected_park and not sources_within_park(trace, selected_park):
         scope_errors.append("selected_park_source_scope_violation")
@@ -491,6 +560,7 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
               "filters": filters, "retrieval": trace, "contexts": contexts,
               "response": payload, "raw_response": original, "rendered": rendered,
               "citation_review": review_trace,
+              "dialogue": dialogue,
               "source_derivation": derivation,
               "guard_errors": errors, "config_hash": digest(settings),
               "elapsed_ms": round((time.perf_counter() - started) * 1000, 1),

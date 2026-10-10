@@ -1,0 +1,22 @@
+{
+  "scope": "local real Azure calls, frozen corpus, hosted retrieval profile (reranker off)",
+  "grading": "operational checks and AI source review; no human accuracy score",
+  "turns": 3,
+  "checks_passed": 2,
+  "estimated_ledger_delta_usd": 0.0030545739999999766,
+  "cost_note": "Shared local ledger window; may include concurrent local browser checks.",
+  "budget_before": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.839998766,
+    "remaining_estimated_usd": 4.160001234,
+    "events": 1173,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "budget_after": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.84305334,
+    "remaining_estimated_usd": 4.15694666,
+    "events": 1183,
+    "basis": "published prices and provider token usage; not a billing statement"
+  }
+}

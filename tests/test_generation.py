@@ -60,6 +60,7 @@ def test_grounded_answer_uses_only_declared_claims_and_preserves_usage():
     assert sent["temperature"] == 0
     assert result["provider"] == "azure_openai" and result["requested_model"] == DEPLOYMENT
     assert sent["response_format"]["json_schema"]["strict"] is True
+    assert sent['response_format']['json_schema']['schema']['properties']['claims']['items']['properties']['evidence_ids']['items']['enum'] == ['c1']
     assert "private-fixture-key" not in json.dumps(sent)
 
 

@@ -65,7 +65,8 @@ export function useChat(park: ParkCode | null) {
         // would make every later request fail; skip the whole pair.
         if (!turn.question.trim() || !turn.response.history_content.trim()) continue
         history.push({ role: "user", content: turn.question.slice(0, MAX_HISTORY_CONTENT_CHARS) })
-        history.push({ role: "assistant", content: turn.response.history_content.slice(0, MAX_HISTORY_CONTENT_CHARS) })
+        history.push({ role: "assistant", content: turn.response.history_content.slice(0, MAX_HISTORY_CONTENT_CHARS),
+          ...(turn.response.history_evidence_ids?.length ? { evidence_ids: turn.response.history_evidence_ids } : {}) })
       }
       const bounded = history.slice(-MAX_HISTORY_MESSAGES)
       const id = nextId()

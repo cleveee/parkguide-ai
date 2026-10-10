@@ -1,0 +1,282 @@
+{
+  "exported_at": "2026-10-10T19:57:47.567Z",
+  "history_storage": "browser_memory_only",
+  "turn": {
+    "turn_id": "12cbabae519d4939bab55fcf01ed79d6",
+    "selected_park": "yose",
+    "question": "the thing you just said, i need more info.",
+    "status": "answer",
+    "text": "Pets generally aren’t allowed on Yosemite trails, even when carried. Pets are allowed on the Wawona Meadow Loop.",
+    "claims": [
+      {
+        "number": 1,
+        "text": "Pets generally aren’t allowed on Yosemite trails, even when carried.",
+        "source_numbers": [
+          1
+        ],
+        "review": {
+          "reason": "The source says pets are barred on trails even when carried, while identifying the Wawona Meadow Loop as an exception; “generally” correctly qualifies the rule."
+        }
+      },
+      {
+        "number": 2,
+        "text": "Pets are allowed on the Wawona Meadow Loop.",
+        "source_numbers": [
+          1
+        ],
+        "review": {
+          "reason": "The source explicitly allows pets on the Wawona Meadow Loop."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "number": 1,
+        "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+        "park": "yose",
+        "page_type": "html",
+        "effective_date": "2026-06-24",
+        "crawled_at": "2026-10-10T02:48:12.562728+00:00",
+        "captured_label": "Oct 09, 2026, 09:48 PM CDT",
+        "passages": [
+          {
+            "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+            "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+            "heading_path": "Pets > Where Pets Are Not Allowed",
+            "excerpt": "Where Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop",
+            "excerpt_leading_omission": false,
+            "excerpt_truncated": true,
+            "saved_text": "Heading: Pets > Where Pets Are Not Allowed\n\nWhere Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)\n\nOn unplowed roads covered in snow\n\nIn wilderness and all other undeveloped areas\n\nOn all meadows, beaches, and waterways\n\nIn public buildings\n\nOn shuttle buses\n\nIn lodging areas (including Housekeeping Camp)\n\nIn all walk-in and group campgrounds/campsites, including Camp 4\n\nIn any other areas, as signed\n\nThere are no exceptions to these pet regulations for carried pets (in arms, carriers, strollers, backpacks, etc.) in the areas of the park where pets are not allowed.",
+            "pdf_start_page": null,
+            "passage_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+            "source_spans": [
+              {
+                "start": 1094,
+                "end": 1120,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1122,
+                "end": 1238,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1240,
+                "end": 1273,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1275,
+                "end": 1320,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1322,
+                "end": 1360,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1362,
+                "end": 1381,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1383,
+                "end": 1399,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1401,
+                "end": 1447,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1449,
+                "end": 1513,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1515,
+                "end": 1544,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1546,
+                "end": 1712,
+                "kind": "paragraph"
+              }
+            ],
+            "claim_numbers": [
+              1,
+              2
+            ],
+            "reviewer_witnesses": [
+              {
+                "claim_number": 1,
+                "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+              },
+              {
+                "claim_number": 2,
+                "quote": "On trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "history_content": "Pets generally aren’t allowed on Yosemite trails, even when carried. [Pets - Yosemite National Park (U.S. National Park Service)](https://www.nps.gov/yose/planyourvisit/pets.htm)\n\nPets are allowed on the Wawona Meadow Loop. [Pets - Yosemite National Park (U.S. National Park Service)](https://www.nps.gov/yose/planyourvisit/pets.htm)",
+    "history_evidence_ids": [
+      "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+    ],
+    "history_scope_reset": false,
+    "runtime": {
+      "profile": "local",
+      "rerank_enabled": true,
+      "rerank_reason": "Local profile: the pinned cross-encoder reranks selected-park candidates offline from its local cache.",
+      "evaluation_note": "Saved evaluations were run with this local profile.",
+      "budget_scope": "local_shared_ledger"
+    },
+    "reason": null,
+    "timing": {
+      "answer_call_ms": 5477.9,
+      "pipeline_ms": 5477.7,
+      "server_ms": 5494.9
+    },
+    "history": {
+      "messages_received": 4,
+      "messages_used": 4,
+      "scope_reset": false
+    },
+    "inspector": {
+      "dialogue": {
+        "action": "explain_previous",
+        "method": "model",
+        "elapsed_ms": 2144.7,
+        "model": "gpt-6-luna-2026-09-22",
+        "usage": {
+          "input_tokens": 583,
+          "output_tokens": 25
+        },
+        "cost_estimate_usd": 0.00008496,
+        "reused_evidence_ids": [
+          "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+        ],
+        "error": null
+      },
+      "retrieval": {
+        "ran": true,
+        "query": "Yosemite: Are pets allowed on trails",
+        "keyword_query": null,
+        "keyword_current_terms": null,
+        "keyword_candidate_count": null,
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "mode": "saved_evidence",
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "build_strategy": "structure",
+        "rerank_enabled": false,
+        "eligible_count": null,
+        "candidate_count": 1,
+        "requested_candidates": null,
+        "final_count": 1,
+        "context_count": 1,
+        "shortfall": null,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        },
+        "score_labels": {
+          "dense": "Cosine similarity (query vs. stored vector)",
+          "bm25": "BM25 Okapi lexical score",
+          "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+          "rerank": "Cross-encoder reranker raw score (not a probability)"
+        },
+        "candidates": [
+          {
+            "chunk_id": "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207",
+            "doc_id": "2d272df1a55609053d3482ef6d035dfbe4c6097ded4b68bb6df8802f1b1e74e2",
+            "title": "Pets - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Pets > Where Pets Are Not Allowed",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": null,
+            "post_rank": null,
+            "scores": {
+              "dense": null,
+              "bm25": null,
+              "rrf": null,
+              "rerank": null
+            },
+            "retriever_ranks": {},
+            "in_context": true,
+            "cited": true,
+            "snippet": "Heading: Pets > Where Pets Are Not Allowed\n\nWhere Pets Are Not Allowed\n\nOn trails, including the trail to Vernal Fall, even if carried (however, pets are allowed on the Wawona Meadow Loop)\n\nOn unplowed roads covered in snow\n\nIn wilderness and all other undeveloped areas\n\nOn all meadows, beaches, and waterways\n\nIn public buildings\n\nOn shuttle buses\n\nIn lodgin"
+          }
+        ],
+        "context_ids": [
+          "0a57f7704b38f670b90beb72a1f2989c81b962c4fe349506e6b6db2e871d5207"
+        ],
+        "context_selection": null
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2135,
+        "output_tokens": 165,
+        "elapsed_ms": 1617.5,
+        "cost_estimate_usd": 0.0003552
+      },
+      "review": {
+        "status": "passed",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 3055,
+        "output_tokens": 110,
+        "elapsed_ms": 1449.4,
+        "cost_estimate_usd": 0.00043259999999999994,
+        "withheld_claims": 0
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 4,
+        "cost_estimate_usd": 0.00401352,
+        "by_kind": {
+          "generation": {
+            "events": 4,
+            "reported_usage": 3,
+            "failed_attempts": 0,
+            "unsettled_reservations": 1,
+            "input_tokens": 5773,
+            "output_tokens": 300,
+            "events_without_token_usage": 1,
+            "cost_estimate_usd": 0.00401352
+          }
+        },
+        "includes_reserved_maximums": true,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here. On Vercel the ledger is per instance and ephemeral."
+      },
+      "guard_errors": [],
+      "integrity_errors": [],
+      "derivation": null,
+      "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+      "timestamp": "2026-10-10T19:56:10.962794+00:00"
+    }
+  }
+}
