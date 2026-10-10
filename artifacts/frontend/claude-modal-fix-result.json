@@ -1,0 +1,110 @@
+{
+  "duration_api_ms": 2760069,
+  "stop_reason": "end_turn",
+  "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+  "total_cost_usd": 25.630370799999998,
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 9106,
+    "cache_read_input_tokens": 3386984,
+    "output_tokens": 5700,
+    "output_tokens_details": {
+      "thinking_tokens": 1466
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 9106,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 685,
+        "cache_read_input_tokens": 568123,
+        "cache_creation_input_tokens": 1533,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1533
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 482,
+      "outputTokens": 300805,
+      "thinkingTokens": 73259,
+      "cacheReadInputTokens": 75271230,
+      "cacheCreationInputTokens": 569656,
+      "webSearchRequests": 0,
+      "costUSD": 25.629521999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-5-5": {
+      "inputTokens": 2383,
+      "outputTokens": 1221,
+      "thinkingTokens": 722,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0008488,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 11,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "I fixed the stacked-modal problem in `web/src/App.tsx`. The typecheck and production build pass and lint shows no errors. I haven't reproduced it in a browser, so your recheck is still needed.\n\n**Cause:** the narrow-screen Inspector sheet opened whenever the window was narrow and the inspector was on, even if the evidence dialog was already showing. Because it mounted second, it became the top layer for Escape. The first Escape went to the sheet and turned the inspector off; only the second closed the evidence. The mobile Menu sheet could stack the same way.\n\n**Fix:**\n- **One modal at a time:** both sheets now open only when no evidence, How it works or confirmation dialog is showing. The Menu sheet is also hidden at 768 px and wider, where the sidebar is visible.\n- **No state loss on resize:** a sheet now changes state only when the user dismisses the visible sheet itself. A breakpoint change or another dialog can't switch the inspector or menu off. The inspector's open/closed setting is kept, so the desktop side panel comes back when the window widens, and on a narrow screen the sheet appears once the other dialog closes.\n- **Confirmation from the menu:** asking to switch park or start a new conversation now closes the mobile menu before the confirmation opens. Cancelling leaves the menu closed.\n\nChat turns, park, evidence, inspect actions and park resets are otherwise unchanged.\n\n**What you should see in the recheck:**\n1. At 1280 px, open the Inspector and then a citation's evidence. Resize to 375 px: no sheet appears. Resize back and press Escape once: the evidence closes and the inspector panel is still open.\n2. If you close the evidence while at 375 px instead, the Inspector sheet appears on its own, and one Escape closes it.\n\nThe rebuilt bundle is served from disk, so a browser reload picks it up without restarting the server. I didn't rerun the Python tests because no Python file changed. The write-up is in `artifacts/frontend/claude-modal-fix-summary.md`.",
+  "ttft_ms": 4267,
+  "type": "result",
+  "duration_ms": 62821,
+  "uuid": "b4ea0300-0465-4f7f-9168-cbd80897d6d4",
+  "ttft_stream_ms": 3030,
+  "time_to_request_ms": 113,
+  "first_content_frame_ms": 3031,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "non_gold_diagnostic",
+  "dataset_hash": "cedb447dc97b0e9b1c150156880e830622fa1555d4969c6b1e162ec7f2f1d2a0",
+  "config_hash": "5e22b3585a029b259f5ff746c1d8906d8791faccf1b653422ab25d391257c205",
+  "code_hash": "32eaa5a01a199d0e547fa46c3cb2ef6e2f18447e6f642821d9f9304298966a9c",
+  "configurations": [
+    {
+      "name": "B0",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "closed_book": true
+    },
+    {
+      "name": "B1",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "mode": "bm25",
+      "rerank": false
+    },
+    {
+      "name": "B2",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "mode": "dense",
+      "rerank": false
+    },
+    {
+      "name": "B3",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": false
+    }
+  ],
+  "request_concurrency": 2,
+  "latency_policy": "two concurrent queries per variant; measured end-to-end with cache state retained"
+}

@@ -1,0 +1,699 @@
+{
+  "checked_at_utc": "2026-10-10T15:36:23.503136+00:00",
+  "health": {
+    "http": 200,
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+    "body": {
+      "status": "ok",
+      "dist_built": true
+    }
+  },
+  "meta": {
+    "http": 200,
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+    "body": {
+      "parks": [
+        {
+          "code": "yose",
+          "name": "Yosemite",
+          "documents": 56,
+          "html": 53,
+          "pdf": 3,
+          "table_documents": 9,
+          "active_chunks": 1377,
+          "captured_earliest": "2026-10-10T02:44:54.433051+00:00",
+          "captured_latest": "2026-10-10T02:50:24.703800+00:00"
+        },
+        {
+          "code": "yell",
+          "name": "Yellowstone",
+          "documents": 40,
+          "html": 40,
+          "pdf": 0,
+          "table_documents": 5,
+          "active_chunks": 850,
+          "captured_earliest": "2026-10-10T02:44:55.691074+00:00",
+          "captured_latest": "2026-10-10T02:50:05.283387+00:00"
+        },
+        {
+          "code": "grca",
+          "name": "Grand Canyon",
+          "documents": 59,
+          "html": 57,
+          "pdf": 2,
+          "table_documents": 31,
+          "active_chunks": 1480,
+          "captured_earliest": "2026-10-10T02:44:56.443010+00:00",
+          "captured_latest": "2026-10-10T02:50:20.283473+00:00"
+        }
+      ],
+      "totals": {
+        "documents": 155,
+        "html": 150,
+        "pdf": 5,
+        "table_documents": 45,
+        "chunks_all_builds": 5405,
+        "vectors_all_builds": 5405
+      },
+      "active_build": {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "active": true,
+        "strategy": "structure",
+        "created_at": "2026-10-10T03:49:58.065777+00:00",
+        "chunk_count": 3707,
+        "vector_count": 3707,
+        "dimension": 1536,
+        "embedding_deployment": "text-embedding-3-small",
+        "target_tokens": 200,
+        "overlap_tokens": 40
+      },
+      "builds": [
+        {
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "active": true,
+          "strategy": "structure",
+          "created_at": "2026-10-10T03:49:58.065777+00:00",
+          "chunk_count": 3707,
+          "vector_count": 3707,
+          "dimension": 1536,
+          "embedding_deployment": "text-embedding-3-small",
+          "target_tokens": 200,
+          "overlap_tokens": 40
+        },
+        {
+          "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+          "active": false,
+          "strategy": "fixed",
+          "created_at": "2026-10-10T03:45:44.384220+00:00",
+          "chunk_count": 1698,
+          "vector_count": 1698,
+          "dimension": 1536,
+          "embedding_deployment": "text-embedding-3-small",
+          "target_tokens": 200,
+          "overlap_tokens": 40
+        }
+      ],
+      "models": {
+        "embedding": {
+          "deployment": "text-embedding-3-small",
+          "dimension": 1536
+        },
+        "generation": {
+          "model": "gpt-6-luna-2026-09-22",
+          "deployment": "gpt-6-luna"
+        },
+        "reranker": {
+          "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+          "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+        },
+        "azure_resource": {
+          "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+          "embedding_deployment": "text-embedding-3-small",
+          "generation_deployment": "gpt-6-luna",
+          "generation_store_requested": false
+        }
+      },
+      "local_persistence": {
+        "conversation_text": "browser tab memory only; sent to this server per request and not stored by it",
+        "embedding_cache": "data/embedding-cache/: SHA-256 of each embedded retrieval query, its vector and metadata (no query text)",
+        "budget_ledger": "artifacts/api-ledger.json: kind, time, status, tokens and estimated cost of each paid call (no text)"
+      },
+      "retrieval": {
+        "mode": "hybrid",
+        "strategy": "structure",
+        "candidate_count": 20,
+        "final_context_count": 5,
+        "rrf_k": 60,
+        "selected_park_rerank": true,
+        "context_token_budget": 1600
+      },
+      "chat": {
+        "ready": true,
+        "reason": null
+      },
+      "history_storage": "browser_memory_only",
+      "generated_at": "2026-10-10T15:36:23.502571+00:00"
+    }
+  },
+  "local_refusals": [
+    {
+      "http": 200,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+      "body": {
+        "turn_id": "80ec533e851f4a65845bae2e50016415",
+        "selected_park": "yose",
+        "question": "What food-storage rules apply at Yellowstone National Park?",
+        "status": "refusal",
+        "text": "This conversation is for Yosemite National Park. Choose another park in the selector to ask about it.",
+        "claims": [],
+        "sources": [],
+        "history_content": "This conversation is for Yosemite National Park. Choose another park in the selector to ask about it.",
+        "history_scope_reset": false,
+        "reason": {
+          "code": "selected_park_mismatch",
+          "category": "local_preflight",
+          "detail": "Stopped by a local check before any embedding, search or model call."
+        },
+        "timing": {
+          "answer_call_ms": 0.8,
+          "pipeline_ms": 0.8,
+          "server_ms": 6.6
+        },
+        "history": {
+          "messages_received": 0,
+          "messages_used": 0,
+          "scope_reset": false
+        },
+        "inspector": {
+          "retrieval": {
+            "ran": false,
+            "query": null,
+            "filters": {
+              "parks": [
+                "yose"
+              ],
+              "source_url_count": 0
+            },
+            "mode": null,
+            "build_id": null,
+            "build_strategy": "structure",
+            "rerank_enabled": true,
+            "eligible_count": null,
+            "candidate_count": 0,
+            "requested_candidates": null,
+            "final_count": 0,
+            "context_count": 0,
+            "shortfall": null,
+            "timings_ms": {
+              "load_ms": null,
+              "retrieval_ms": null,
+              "rerank_ms": null,
+              "total_ms": null
+            },
+            "score_labels": {
+              "dense": "Cosine similarity (query vs. stored vector)",
+              "bm25": "BM25 Okapi lexical score",
+              "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+              "rerank": "Cross-encoder reranker raw score (not a probability)"
+            },
+            "candidates": [],
+            "context_ids": [],
+            "context_selection": null
+          },
+          "embedding": {
+            "status": "not_requested",
+            "elapsed_ms": null,
+            "query_sha256": null,
+            "cache_file_present_before_call": null,
+            "deployment": "text-embedding-3-small"
+          },
+          "generation": {
+            "ran": false,
+            "returned_model": null,
+            "requested_deployment": null,
+            "input_tokens": null,
+            "output_tokens": null,
+            "elapsed_ms": null,
+            "cost_estimate_usd": null
+          },
+          "review": {
+            "status": "not_run"
+          },
+          "ledger_window": {
+            "captured": true,
+            "events": 0,
+            "cost_estimate_usd": 0.0,
+            "by_kind": {},
+            "includes_reserved_maximums": false,
+            "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+            "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+          },
+          "guard_errors": [],
+          "integrity_errors": [],
+          "derivation": null,
+          "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+          "timestamp": "2026-10-10T15:36:23.511429+00:00"
+        }
+      }
+    },
+    {
+      "http": 200,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+      "body": {
+        "turn_id": "6476085248d24dce8a3041e2752bd024",
+        "selected_park": "yose",
+        "question": "What is the current weather in Yosemite right now?",
+        "status": "refusal",
+        "text": "I cannot verify live conditions, availability, or current updates for Yosemite from the saved database. Please check the park's official information.",
+        "claims": [],
+        "sources": [],
+        "history_content": "I cannot verify live conditions, availability, or current updates for Yosemite from the saved database. Please check the park's official information.",
+        "history_scope_reset": false,
+        "reason": {
+          "code": "live_information_unavailable",
+          "category": "local_preflight",
+          "detail": "Stopped by a local check before any embedding, search or model call."
+        },
+        "timing": {
+          "answer_call_ms": 0.5,
+          "pipeline_ms": 0.5,
+          "server_ms": 6.4
+        },
+        "history": {
+          "messages_received": 0,
+          "messages_used": 0,
+          "scope_reset": false
+        },
+        "inspector": {
+          "retrieval": {
+            "ran": false,
+            "query": null,
+            "filters": {
+              "parks": [
+                "yose"
+              ],
+              "source_url_count": 0
+            },
+            "mode": null,
+            "build_id": null,
+            "build_strategy": "structure",
+            "rerank_enabled": true,
+            "eligible_count": null,
+            "candidate_count": 0,
+            "requested_candidates": null,
+            "final_count": 0,
+            "context_count": 0,
+            "shortfall": null,
+            "timings_ms": {
+              "load_ms": null,
+              "retrieval_ms": null,
+              "rerank_ms": null,
+              "total_ms": null
+            },
+            "score_labels": {
+              "dense": "Cosine similarity (query vs. stored vector)",
+              "bm25": "BM25 Okapi lexical score",
+              "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+              "rerank": "Cross-encoder reranker raw score (not a probability)"
+            },
+            "candidates": [],
+            "context_ids": [],
+            "context_selection": null
+          },
+          "embedding": {
+            "status": "not_requested",
+            "elapsed_ms": null,
+            "query_sha256": null,
+            "cache_file_present_before_call": null,
+            "deployment": "text-embedding-3-small"
+          },
+          "generation": {
+            "ran": false,
+            "returned_model": null,
+            "requested_deployment": null,
+            "input_tokens": null,
+            "output_tokens": null,
+            "elapsed_ms": null,
+            "cost_estimate_usd": null
+          },
+          "review": {
+            "status": "not_run"
+          },
+          "ledger_window": {
+            "captured": true,
+            "events": 0,
+            "cost_estimate_usd": 0.0,
+            "by_kind": {},
+            "includes_reserved_maximums": false,
+            "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+            "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+          },
+          "guard_errors": [],
+          "integrity_errors": [],
+          "derivation": null,
+          "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+          "timestamp": "2026-10-10T15:36:23.521903+00:00"
+        }
+      }
+    },
+    {
+      "http": 200,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+      "body": {
+        "turn_id": "05bbd5725b3f4739b534f5cec8c8b68b",
+        "selected_park": "yose",
+        "question": "Look up my booking FAKE123456.",
+        "status": "refusal",
+        "text": "The saved public-source database contains no personal reservation or permit records. Please use the official reservation service.",
+        "claims": [],
+        "sources": [],
+        "history_content": "The saved public-source database contains no personal reservation or permit records. Please use the official reservation service.",
+        "history_scope_reset": false,
+        "reason": {
+          "code": "private_record_lookup",
+          "category": "local_preflight",
+          "detail": "Stopped by a local check before any embedding, search or model call."
+        },
+        "timing": {
+          "answer_call_ms": 0.6,
+          "pipeline_ms": 0.6,
+          "server_ms": 5.7
+        },
+        "history": {
+          "messages_received": 0,
+          "messages_used": 0,
+          "scope_reset": false
+        },
+        "inspector": {
+          "retrieval": {
+            "ran": false,
+            "query": null,
+            "filters": {
+              "parks": [
+                "yose"
+              ],
+              "source_url_count": 0
+            },
+            "mode": null,
+            "build_id": null,
+            "build_strategy": "structure",
+            "rerank_enabled": true,
+            "eligible_count": null,
+            "candidate_count": 0,
+            "requested_candidates": null,
+            "final_count": 0,
+            "context_count": 0,
+            "shortfall": null,
+            "timings_ms": {
+              "load_ms": null,
+              "retrieval_ms": null,
+              "rerank_ms": null,
+              "total_ms": null
+            },
+            "score_labels": {
+              "dense": "Cosine similarity (query vs. stored vector)",
+              "bm25": "BM25 Okapi lexical score",
+              "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+              "rerank": "Cross-encoder reranker raw score (not a probability)"
+            },
+            "candidates": [],
+            "context_ids": [],
+            "context_selection": null
+          },
+          "embedding": {
+            "status": "not_requested",
+            "elapsed_ms": null,
+            "query_sha256": null,
+            "cache_file_present_before_call": null,
+            "deployment": "text-embedding-3-small"
+          },
+          "generation": {
+            "ran": false,
+            "returned_model": null,
+            "requested_deployment": null,
+            "input_tokens": null,
+            "output_tokens": null,
+            "elapsed_ms": null,
+            "cost_estimate_usd": null
+          },
+          "review": {
+            "status": "not_run"
+          },
+          "ledger_window": {
+            "captured": true,
+            "events": 0,
+            "cost_estimate_usd": 0.0,
+            "by_kind": {},
+            "includes_reserved_maximums": false,
+            "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+            "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+          },
+          "guard_errors": [],
+          "integrity_errors": [],
+          "derivation": null,
+          "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+          "timestamp": "2026-10-10T15:36:23.532803+00:00"
+        }
+      }
+    }
+  ],
+  "ordered_pagination": {
+    "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+    "first_source_offsets": [
+      0,
+      12,
+      734,
+      1109,
+      1133,
+      1798
+    ],
+    "pages": [
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "strategy_note": "active build only",
+        "total": 18,
+        "offset": 0,
+        "limit": 3,
+        "passages": [
+          {
+            "position": 1,
+            "chunk_id": "38011453b5ca3fb5d1406fd2016d66c4e0139aac2e9c4bdb0c362c438dfc3313",
+            "heading_path": "Contact Us",
+            "text": "Heading: Contact Us\n\nContact Us",
+            "token_count": 7,
+            "source_spans": [
+              {
+                "start": 0,
+                "end": 10,
+                "kind": "paragraph"
+              }
+            ]
+          },
+          {
+            "position": 2,
+            "chunk_id": "e0a2d35c88eb09c11acd18e63ff5fc32f7f3c9f805588aa766ca51267ddd362b",
+            "heading_path": "Bears and Food Storage",
+            "text": "Heading: Bears and Food Storage\n\nBears and Food Storage\n\n\u00a9 Jeffrey Brooker\n\nYosemite National Park is home to hundreds of American black bears ; these bears have a voracious appetite. They also are incredibly curious and have an amazing sense of smell. This combination tempts them to seek our high-calorie food. Sometimes bears that routinely get our food become aggressive, and sometimes have to be killed as a result. By storing your food properly, you can prevent a bear's unnecessary death.\n\nPlease note that these food storage regulations have the force and effect of federal law: Failure to store your food properly may result in impoundment of your food or car and/or a fine of up to $5,000 and/or removal from your campsite or lodging facility.",
+            "token_count": 155,
+            "source_spans": [
+              {
+                "start": 12,
+                "end": 34,
+                "kind": "paragraph"
+              },
+              {
+                "start": 36,
+                "end": 53,
+                "kind": "paragraph"
+              },
+              {
+                "start": 55,
+                "end": 474,
+                "kind": "paragraph"
+              },
+              {
+                "start": 476,
+                "end": 732,
+                "kind": "paragraph"
+              }
+            ]
+          },
+          {
+            "position": 3,
+            "chunk_id": "0cb9bf3c4652264fe6f87de61062843e3248883d36faa088fde2e212e1e11fe8",
+            "heading_path": "Bears and Food Storage > What is Food?",
+            "text": "Heading: Bears and Food Storage > What is Food?\n\nWhat is Food?\n\n\"Food\" includes any item with a scent, regardless of packaging. This may include items that you do not consider food, such as\n\ncanned goods\n\nbottles\n\ndrinks\n\nsoaps\n\ncosmetics\n\ntoiletries\n\ntrash\n\nice chests (even when empty, and even if certified as bear resistant)\n\nunwashed items used for preparing or eating meals.\n\nAll these items must be stored properly.",
+            "token_count": 100,
+            "source_spans": [
+              {
+                "start": 734,
+                "end": 747,
+                "kind": "paragraph"
+              },
+              {
+                "start": 749,
+                "end": 874,
+                "kind": "paragraph"
+              },
+              {
+                "start": 876,
+                "end": 888,
+                "kind": "paragraph"
+              },
+              {
+                "start": 890,
+                "end": 897,
+                "kind": "paragraph"
+              },
+              {
+                "start": 899,
+                "end": 905,
+                "kind": "paragraph"
+              },
+              {
+                "start": 907,
+                "end": 912,
+                "kind": "paragraph"
+              },
+              {
+                "start": 914,
+                "end": 923,
+                "kind": "paragraph"
+              },
+              {
+                "start": 925,
+                "end": 935,
+                "kind": "paragraph"
+              },
+              {
+                "start": 937,
+                "end": 942,
+                "kind": "paragraph"
+              },
+              {
+                "start": 944,
+                "end": 1013,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1015,
+                "end": 1065,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1067,
+                "end": 1107,
+                "kind": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "strategy_note": "active build only",
+        "total": 18,
+        "offset": 3,
+        "limit": 3,
+        "passages": [
+          {
+            "position": 4,
+            "chunk_id": "0852d03ffb37c814338cd60e5e872558426b87ad97c6bb676e78423e425a6db8",
+            "heading_path": "Bears and Food Storage > How to Store Your Food",
+            "text": "Heading: Bears and Food Storage > How to Store Your Food\n\nHow to Store Your Food",
+            "token_count": 18,
+            "source_spans": [
+              {
+                "start": 1109,
+                "end": 1131,
+                "kind": "paragraph"
+              }
+            ]
+          },
+          {
+            "position": 5,
+            "chunk_id": "f5aa1235096f3403fcc9bc677668e0b33a00c4286f2b465f6e9d05410d2453bb",
+            "heading_path": "Bears and Food Storage > How to Store Your Food > Cars, Trucks, and RVs",
+            "text": "Heading: Bears and Food Storage > How to Store Your Food > Cars, Trucks, and RVs\n\nCars, Trucks, and RVs\n\nDuring daylight hours only , you may store food inside your car or truck (out of sight, with windows completely closed).\n\nDo not leave food in a pickup truck bed or strapped to the outside of a vehicle at any time.\n\nDo not store food in your car (including trunk) or truck after dark: use a food locker . Remember to clear your car of food wrappers, crumbs in baby seats, and baby wipes--and even canned food and drinks. Think about packing all your food and related items together for easy removal from your car upon arriving in Yosemite.\n\nFood lockers are available at Curry Village parking lots and at nearly all trailhead parking areas.",
+            "token_count": 160,
+            "source_spans": [
+              {
+                "start": 1133,
+                "end": 1154,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1156,
+                "end": 1276,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1278,
+                "end": 1370,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1372,
+                "end": 1695,
+                "kind": "paragraph"
+              },
+              {
+                "start": 1697,
+                "end": 1796,
+                "kind": "paragraph"
+              }
+            ]
+          },
+          {
+            "position": 6,
+            "chunk_id": "ec4352216d42c24d1ef384221ccf62356eb265ee265eed67cedde5c1527a7df7",
+            "heading_path": "Bears and Food Storage > How to Store Your Food > Cars, Trucks, and RVs",
+            "text": "Heading: Bears and Food Storage > How to Store Your Food > Cars, Trucks, and RVs\n\nYou may store food out of sight in hard-sided trailers and RVs, as long as windows, doors, and vents are closed when you're not there. Hard-sided RVs are those made entirely of solid, non-pliable material (e.g., no cloth pop-outs) Food may not be stored in pop-up or tent trailers, or other soft-sided campers.\n\n\u00a9 Ross J. Guscette (via Creative Commons CC BY-NC-ND)",
+            "token_count": 114,
+            "source_spans": [
+              {
+                "start": 1798,
+                "end": 2108,
+                "kind": "paragraph"
+              },
+              {
+                "start": 2110,
+                "end": 2163,
+                "kind": "paragraph"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "yosemite_pdf_filter": {
+    "http": 200,
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'",
+    "body": {
+      "total": 3,
+      "offset": 0,
+      "limit": 25,
+      "items": [
+        {
+          "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+          "title": "Yosemite Guide - Volume 50, Issue 4",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+          "park": "yose",
+          "page_type": "pdf",
+          "has_table": true,
+          "effective_date": "2025-04-23",
+          "crawled_at": "2026-10-10T02:45:30.348515+00:00",
+          "captured_label": "Oct 09, 2026, 09:45 PM CDT",
+          "active_chunks": 120
+        },
+        {
+          "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+          "title": "Yosemite Guide - Volume 51, Issue 7",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+          "park": "yose",
+          "page_type": "pdf",
+          "has_table": true,
+          "effective_date": "2026-08-13",
+          "crawled_at": "2026-10-10T02:45:57.306805+00:00",
+          "captured_label": "Oct 09, 2026, 09:45 PM CDT",
+          "active_chunks": 134
+        },
+        {
+          "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+          "title": "Yosemite Guide - Volume 51, Issue 8",
+          "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+          "park": "yose",
+          "page_type": "pdf",
+          "has_table": true,
+          "effective_date": "2026-09-21",
+          "crawled_at": "2026-10-10T02:45:43.939458+00:00",
+          "captured_label": "Oct 09, 2026, 09:45 PM CDT",
+          "active_chunks": 135
+        }
+      ]
+    }
+  },
+  "ledger_before_events": 983,
+  "ledger_after_events": 983
+}

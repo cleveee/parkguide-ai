@@ -1,0 +1,100 @@
+{
+  "exported_at": "2026-10-10T15:48:17.057Z",
+  "history_storage": "browser_memory_only",
+  "turn": {
+    "turn_id": "dc9c276e781248c7b98eaa7f35ecfcdb",
+    "selected_park": "yose",
+    "question": "What food-storage rules apply at Yellowstone National Park?",
+    "status": "refusal",
+    "text": "This conversation is for Yosemite National Park. Choose another park in the selector to ask about it.",
+    "claims": [],
+    "sources": [],
+    "history_content": "This conversation is for Yosemite National Park. Choose another park in the selector to ask about it.",
+    "history_scope_reset": false,
+    "reason": {
+      "code": "selected_park_mismatch",
+      "category": "local_preflight",
+      "detail": "Stopped by a local check before any embedding, search or model call."
+    },
+    "timing": {
+      "answer_call_ms": 0.7,
+      "pipeline_ms": 0.7,
+      "server_ms": 5.6
+    },
+    "history": {
+      "messages_received": 6,
+      "messages_used": 6,
+      "scope_reset": false
+    },
+    "inspector": {
+      "retrieval": {
+        "ran": false,
+        "query": null,
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "mode": null,
+        "build_id": null,
+        "build_strategy": "structure",
+        "rerank_enabled": true,
+        "eligible_count": null,
+        "candidate_count": 0,
+        "requested_candidates": null,
+        "final_count": 0,
+        "context_count": 0,
+        "shortfall": null,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        },
+        "score_labels": {
+          "dense": "Cosine similarity (query vs. stored vector)",
+          "bm25": "BM25 Okapi lexical score",
+          "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+          "rerank": "Cross-encoder reranker raw score (not a probability)"
+        },
+        "candidates": [],
+        "context_ids": [],
+        "context_selection": null
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": false,
+        "returned_model": null,
+        "requested_deployment": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_ms": null,
+        "cost_estimate_usd": null
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 0,
+        "cost_estimate_usd": 0,
+        "by_kind": {},
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      },
+      "guard_errors": [],
+      "integrity_errors": [],
+      "derivation": null,
+      "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+      "timestamp": "2026-10-10T15:48:16.223494+00:00"
+    }
+  }
+}

@@ -1,0 +1,1994 @@
+{
+  "verified_at_utc": "2026-10-10T16:00:49.030568+00:00",
+  "summary": "397 offline tests and TypeScript/production build passed. Real three-turn web conversation: two cited answers and one absent-information refusal, with 0/2/4 prior messages. Three recognized local refusals made zero Azure calls. Source previews, corpus filters/pagination, park resets, cancellation/busy recovery, mobile scrolling/wrapping, reduced motion and the responsive modal fix were checked in the browser.",
+  "implementation": {
+    "owner": "Claude Code CLI, supervised by Codex",
+    "requested_primary_model": "claude-opus-5-5",
+    "cli_version": "2.1.296",
+    "components": "Actual Vercel AI Elements Conversation, Message, Sources and PromptInput; shadcn/Radix primitives",
+    "provenance": "docs/FRONTEND_REFERENCES.md",
+    "licenses": {
+      "AI_Elements": "Apache-2.0",
+      "shadcn_and_Radix": "MIT"
+    },
+    "receipts": [
+      {
+        "path": "artifacts/frontend/claude-model-probe.json",
+        "sha256": "31b778540a8a3a6dd1f5d586ca632b8a2052ce461452bbab62aded88b5a98ce0",
+        "session_id": "5d548ba0-2355-4ee1-a997-521e8523e316",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 1662,
+        "num_turns": 1,
+        "cli_reported_cost_estimate_usd": 0.013655,
+        "models": [
+          "claude-opus-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 2,
+            "outputTokens": 13,
+            "cacheReadInputTokens": 535,
+            "cacheCreationInputTokens": 1660,
+            "webSearchRequests": 0,
+            "costUSD": 0.013655,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 0,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-implementation-result.json",
+        "sha256": "5b96f00a5c2962542926fc9d67d252ad117067776e1ec5dc9aed58365cd96b8e",
+        "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 1796472,
+        "num_turns": 260,
+        "cli_reported_cost_estimate_usd": 12.4973314,
+        "models": [
+          "claude-opus-5-5",
+          "claude-haiku-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 292,
+            "outputTokens": 176396,
+            "cacheReadInputTokens": 30320173,
+            "cacheCreationInputTokens": 362920,
+            "webSearchRequests": 0,
+            "costUSD": 12.4964826,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 46293,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          },
+          "claude-haiku-5-5": {
+            "inputTokens": 2383,
+            "outputTokens": 1221,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0,
+            "webSearchRequests": 0,
+            "costUSD": 0.0008488,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 722,
+            "canonicalModel": "claude-haiku-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-contract-review.json",
+        "sha256": "caa5d76ceca0d5673d162b5b6e6139fb97c89f008e301f5e5100dd84173ab971",
+        "session_id": "5801d311-e288-460c-9f8b-8044e0093127",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 232210,
+        "num_turns": 18,
+        "cli_reported_cost_estimate_usd": 0.9447444,
+        "models": [
+          "claude-opus-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 16,
+            "outputTokens": 19561,
+            "cacheReadInputTokens": 267222,
+            "cacheCreationInputTokens": 62502,
+            "webSearchRequests": 0,
+            "costUSD": 0.9447444,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 13134,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-code-review.json",
+        "sha256": "a0b4fc3fdcf95e553104dfb7d82c35724595522f2fbbcd4414287e31984d14a4",
+        "session_id": "5801d311-e288-460c-9f8b-8044e0093127",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 190477,
+        "num_turns": 20,
+        "cli_reported_cost_estimate_usd": 1.9612945999999998,
+        "models": [
+          "claude-opus-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 40,
+            "outputTokens": 37731,
+            "thinkingTokens": 25899,
+            "cacheReadInputTokens": 1440293,
+            "cacheCreationInputTokens": 114807,
+            "webSearchRequests": 0,
+            "costUSD": 1.9612945999999998,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-refinement-result.json",
+        "sha256": "a5d4049d8d7bceb42424c2e0ca3ae5269d625bb12574d7ecb5414824c1eb6246",
+        "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 933368,
+        "num_turns": 161,
+        "cli_reported_cost_estimate_usd": 21.980066199999992,
+        "models": [
+          "claude-opus-5-5",
+          "claude-haiku-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 432,
+            "outputTokens": 274517,
+            "thinkingTokens": 68604,
+            "cacheReadInputTokens": 61579107,
+            "cacheCreationInputTokens": 521416,
+            "webSearchRequests": 0,
+            "costUSD": 21.979217399999992,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          },
+          "claude-haiku-5-5": {
+            "inputTokens": 2383,
+            "outputTokens": 1221,
+            "thinkingTokens": 722,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0,
+            "webSearchRequests": 0,
+            "costUSD": 0.0008488,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-frontend-review.json",
+        "sha256": "cb52c00550d0b0b708395b0c36d18364bbcdc59d75085224460014623b09ecab",
+        "session_id": "bee0b2b4-e9e5-4caf-845e-b1f6c2d8314a",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 404776,
+        "num_turns": 41,
+        "cli_reported_cost_estimate_usd": 1.7262645999999997,
+        "models": [
+          "claude-opus-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 48,
+            "outputTokens": 27185,
+            "cacheReadInputTokens": 1581103,
+            "cacheCreationInputTokens": 108269,
+            "webSearchRequests": 0,
+            "costUSD": 1.7262645999999997,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 18012,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-final-ui-result.json",
+        "sha256": "4972f66d6786059d2ba0d4c70fdd287b7a2155610a62c7fbf12bc965272db073",
+        "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 188807,
+        "num_turns": 47,
+        "cli_reported_cost_estimate_usd": 24.766077999999997,
+        "models": [
+          "claude-opus-5-5",
+          "claude-haiku-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 470,
+            "outputTokens": 295105,
+            "thinkingTokens": 71793,
+            "cacheReadInputTokens": 71884246,
+            "cacheCreationInputTokens": 560550,
+            "webSearchRequests": 0,
+            "costUSD": 24.765229199999997,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          },
+          "claude-haiku-5-5": {
+            "inputTokens": 2383,
+            "outputTokens": 1221,
+            "thinkingTokens": 722,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0,
+            "webSearchRequests": 0,
+            "costUSD": 0.0008488,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-final-api-review.json",
+        "sha256": "7f10fc97f4429bb496497c200c93d9a712e7954aef629906acc5921fd01fe214",
+        "session_id": "5801d311-e288-460c-9f8b-8044e0093127",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 113312,
+        "num_turns": 6,
+        "cli_reported_cost_estimate_usd": 2.6167097999999998,
+        "models": [
+          "claude-opus-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 48,
+            "outputTokens": 48789,
+            "thinkingTokens": 34151,
+            "cacheReadInputTokens": 1981569,
+            "cacheCreationInputTokens": 155553,
+            "webSearchRequests": 0,
+            "costUSD": 2.6167097999999998,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        }
+      },
+      {
+        "path": "artifacts/frontend/claude-modal-fix-result.json",
+        "sha256": "30473c6c11ae3144a8cf26c73d834a243d96478d6e1b5eaabac41d621c8cd623",
+        "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+        "result": "success",
+        "is_error": false,
+        "duration_ms": 62821,
+        "num_turns": 11,
+        "cli_reported_cost_estimate_usd": 25.630370799999998,
+        "models": [
+          "claude-opus-5-5",
+          "claude-haiku-5-5"
+        ],
+        "usage": {
+          "claude-opus-5-5": {
+            "inputTokens": 482,
+            "outputTokens": 300805,
+            "thinkingTokens": 73259,
+            "cacheReadInputTokens": 75271230,
+            "cacheCreationInputTokens": 569656,
+            "webSearchRequests": 0,
+            "costUSD": 25.629521999999998,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "canonicalModel": "claude-opus-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          },
+          "claude-haiku-5-5": {
+            "inputTokens": 2383,
+            "outputTokens": 1221,
+            "thinkingTokens": 722,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0,
+            "webSearchRequests": 0,
+            "costUSD": 0.0008488,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000
+          }
+        }
+      }
+    ],
+    "usage_note": "CLI development usage is separate from ParkGuide Azure calls. The first implementation run also records the CLI WebFetch summarization helper model; principal implementation and review runs used Opus 5.5."
+  },
+  "runtime": {
+    "url": "http://127.0.0.1:8513/",
+    "frontend": "React 19.3.0 / TypeScript 6.0.3 / Vite 8.3.4 / Tailwind 4.3.3 / motion 14.1.0",
+    "bridge": "FastAPI 0.141.1 on loopback Uvicorn",
+    "models": {
+      "embedding": {
+        "deployment": "text-embedding-3-small",
+        "dimension": 1536
+      },
+      "generation": {
+        "model": "gpt-6-luna-2026-09-22",
+        "deployment": "gpt-6-luna"
+      },
+      "reranker": {
+        "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+        "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+      },
+      "azure_resource": {
+        "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+        "embedding_deployment": "text-embedding-3-small",
+        "generation_deployment": "gpt-6-luna",
+        "generation_store_requested": false
+      }
+    },
+    "history_storage": "browser_memory_only",
+    "local_persistence": {
+      "conversation_text": "browser tab memory only; sent to this server per request and not stored by it",
+      "embedding_cache": "data/embedding-cache/: SHA-256 of each embedded retrieval query, its vector and metadata (no query text)",
+      "budget_ledger": "artifacts/api-ledger.json: kind, time, status, tokens and estimated cost of each paid call (no text)"
+    },
+    "corpus_totals": {
+      "documents": 155,
+      "html": 150,
+      "pdf": 5,
+      "table_documents": 45,
+      "chunks_all_builds": 5405,
+      "vectors_all_builds": 5405
+    },
+    "parks": [
+      {
+        "code": "yose",
+        "name": "Yosemite",
+        "documents": 56,
+        "html": 53,
+        "pdf": 3,
+        "table_documents": 9,
+        "active_chunks": 1377,
+        "captured_earliest": "2026-10-10T02:44:54.433051+00:00",
+        "captured_latest": "2026-10-10T02:50:24.703800+00:00"
+      },
+      {
+        "code": "yell",
+        "name": "Yellowstone",
+        "documents": 40,
+        "html": 40,
+        "pdf": 0,
+        "table_documents": 5,
+        "active_chunks": 850,
+        "captured_earliest": "2026-10-10T02:44:55.691074+00:00",
+        "captured_latest": "2026-10-10T02:50:05.283387+00:00"
+      },
+      {
+        "code": "grca",
+        "name": "Grand Canyon",
+        "documents": 59,
+        "html": 57,
+        "pdf": 2,
+        "table_documents": 31,
+        "active_chunks": 1480,
+        "captured_earliest": "2026-10-10T02:44:56.443010+00:00",
+        "captured_latest": "2026-10-10T02:50:20.283473+00:00"
+      }
+    ],
+    "active_build": {
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "active": true,
+      "strategy": "structure",
+      "created_at": "2026-10-10T03:49:58.065777+00:00",
+      "chunk_count": 3707,
+      "vector_count": 3707,
+      "dimension": 1536,
+      "embedding_deployment": "text-embedding-3-small",
+      "target_tokens": 200,
+      "overlap_tokens": 40
+    }
+  },
+  "checks": {
+    "offline_tests": {
+      "total_passed": 397,
+      "prior_core": 290,
+      "new_api": 107,
+      "artifact": "artifacts/frontend/supervisor-offline-tests.json"
+    },
+    "typecheck_and_build": {
+      "passed": true,
+      "artifact": "artifacts/frontend/supervisor-web-build-final.json",
+      "js_kb": 606.72,
+      "js_gzip_kb": 187.43,
+      "css_kb": 81.41,
+      "remaining_warning": "Single JS bundle exceeds the build tool 500 kB advisory"
+    },
+    "browser_console_errors": [],
+    "conversation": {
+      "expected_actions_matched": 3,
+      "attempted_turns": 3,
+      "scope": "Non-gold operational checks, not an accuracy benchmark"
+    },
+    "recognized_local_refusals": 3,
+    "new_conversation": {
+      "text": "Ask about visiting Yosemite\n\n56 saved NPS documents · 1,377 indexed passages · snapshot Oct 9, 2026, 9:50 PM CDT (captured under 24 hours ago)\n\nSaved pages are a snapshot, not live conditions.\n\nHow should I store food overnight at a campground?\nAre pets allowed on trails?\nCan I fly a drone in the park?\nYosemite National Park\nEnter to send · Shift+Enter for a new line\nAnswers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions.",
+      "oldInspectButtons": 0,
+      "oldEvidenceButtons": 0
+    },
+    "park_clear": {
+      "mobileConfirmation": {
+        "alertDialogs": 1,
+        "otherDialogs": 0,
+        "overlayStyles": {
+          "animation": "1e-05s",
+          "transition": "1e-05s"
+        },
+        "text": "Clear the selected park?\n\nThis clears the current conversation and its evidence from this tab. It cannot be undone. A reply still in progress on the server will be ignored, but the server keeps working on it (including any paid calls), and a new question gets a “busy” reply until it finishes.\n\nCancel\nClear conversation"
+      },
+      "result": {
+        "text": "ParkGuide\n\nNo park selected\n\nChoose a park to start\n\nAnswers come only from that park's saved official NPS pages, with every delivered claim checked against its cited passage.\n\nYosemite\nYellowstone\nGrand Canyon\nNo park selected\nAnswers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions.",
+        "sendEnabled": false,
+        "oldInspectButtons": 0
+      }
+    },
+    "cancellation": {
+      "visibleText": "ParkGuide\n\nSaved official NPS sources\n\nPark\nYellowstone National Park\n\n40 documents · captured under 24 hours ago\n\nNew conversation\nChat\nCorpus\nHow it works\n\nConversation history stays in this tab's memory and clears on reload. Saved pages are a snapshot, not live conditions.\n\nYellowstone National Park\n\nAnswers use only this park's saved NPS sources\n\nWhat is the current weather in Yellowstone right now?\n\nServer busy: this question was not processed\n\nAnother question is still being processed by this server (possibly one you stopped waiting for; stopping in the browser does not stop the server). Try again shortly.\n\nRetry\nYellowstone National Park\nEnter to send · Shift+Enter for a new line\nAnswers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions.",
+      "oldEvidenceButtons": 0,
+      "busyVisible": true
+    },
+    "after_cancellation": {
+      "question": "What is the current weather in Yellowstone right now?",
+      "selected_park": "yell",
+      "status": "refusal",
+      "claims": [],
+      "source_pages": 0,
+      "reason": {
+        "code": "live_information_unavailable",
+        "category": "local_preflight",
+        "detail": "Stopped by a local check before any embedding, search or model call."
+      },
+      "history": {
+        "messages_received": 0,
+        "messages_used": 0,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 2.7,
+        "pipeline_ms": 2.7,
+        "server_ms": 16.4
+      },
+      "retrieval": {
+        "query": null,
+        "filters": {
+          "parks": [
+            "yell"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": null,
+        "eligible_count": null,
+        "candidate_count": 0,
+        "final_count": 0,
+        "context_count": 0,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        }
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": false,
+        "returned_model": null,
+        "requested_deployment": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_ms": null,
+        "cost_estimate_usd": null
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 0,
+        "cost_estimate_usd": 0,
+        "by_kind": {},
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    },
+    "modal_resize": {
+      "narrow": {
+        "dialogs": 1,
+        "titles": [
+          "1Bears and Food Storage - Yosemite National Park (U.S. National Park Service)\n\nYosemite · "
+        ]
+      },
+      "remainingDialogs": 0,
+      "inspectorStillOpen": true
+    },
+    "mobile_flow": [
+      {
+        "clientHeight": 593,
+        "scrollHeight": 1745,
+        "scrollTop": 1151.5
+      }
+    ],
+    "mobile_evidence": {
+      "bottom": 812,
+      "height": 812,
+      "pageScrollWidth": 375,
+      "pageWidth": 375,
+      "scrollHeight": 812,
+      "scrollers": [
+        {
+          "height": 648,
+          "scrollHeight": 802
+        }
+      ],
+      "top": 0
+    },
+    "mobile_long_word": {
+      "longWordParagraphs": [
+        {
+          "height": 280,
+          "overflowWrap": "anywhere",
+          "scrollHeight": 280,
+          "scrollWidth": 294,
+          "width": 294
+        }
+      ],
+      "pageScrollWidth": 375,
+      "pageWidth": 375
+    },
+    "corpus": "Search, 3 Yosemite PDFs, 9 Yosemite table-bearing documents, 45 all-park table documents, 25/20 document pagination, 10/8 source-passage pagination and stored content hash checked"
+  },
+  "turns": [
+    {
+      "question": "At Yosemite, how far should I stay from a bear when I am outside developed areas?",
+      "selected_park": "yose",
+      "status": "answer",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Stay at least 50 yards from bears outside developed areas.",
+          "source_numbers": [
+            1
+          ],
+          "review": {
+            "reason": "The passage says that when seeing a bear outside developed areas, remain at least 50 yards away."
+          }
+        }
+      ],
+      "source_pages": 1,
+      "reason": null,
+      "history": {
+        "messages_received": 0,
+        "messages_used": 0,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 3814.4,
+        "pipeline_ms": 3814.3,
+        "server_ms": 3823.3
+      },
+      "retrieval": {
+        "query": "At Yosemite, how far should I stay from a bear when I am outside developed areas?",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "timings_ms": {
+          "load_ms": 269.7265411261469,
+          "retrieval_ms": 26.117125060409307,
+          "rerank_ms": 195.72829199023545,
+          "total_ms": 491.57549999654293
+        }
+      },
+      "embedding": {
+        "status": "azure_request_recorded",
+        "elapsed_ms": 742.8,
+        "query_sha256": "13e41fdca9c8677d290d0b7e164ecb6067477ae261a2ad111c119c1766a944e1",
+        "cache_file_present_before_call": false,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2422,
+        "output_tokens": 90,
+        "elapsed_ms": 1173.5,
+        "cost_estimate_usd": 0.00034464
+      },
+      "review": {
+        "status": "passed",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 1771,
+        "output_tokens": 59,
+        "elapsed_ms": 1278.1,
+        "cost_estimate_usd": 0.00024792,
+        "withheld_claims": 0
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 3,
+        "cost_estimate_usd": 0.000592956,
+        "by_kind": {
+          "embedding": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 18,
+            "output_tokens": 0,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 3.9599999999999995e-07
+          },
+          "generation": {
+            "events": 2,
+            "reported_usage": 2,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 4193,
+            "output_tokens": 149,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.00059256
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    },
+    {
+      "question": "And what should I do if the bear is in a developed area?",
+      "selected_park": "yose",
+      "status": "answer",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Yell very loudly and aggressively to scare the bear away.",
+          "source_numbers": [
+            1
+          ],
+          "review": {
+            "reason": "The Yosemite passage says to scare away a bear in a developed area by yelling very loudly and aggressively."
+          }
+        }
+      ],
+      "source_pages": 1,
+      "reason": null,
+      "history": {
+        "messages_received": 2,
+        "messages_used": 2,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 12601.6,
+        "pipeline_ms": 12601.5,
+        "server_ms": 12611.1
+      },
+      "retrieval": {
+        "query": "And what should I do if the bear is in a developed area? Previous topic: At , how far should I stay from a bear when I am outside developed areas Parks: Yosemite",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "timings_ms": {
+          "load_ms": 322.4729581270367,
+          "retrieval_ms": 27.948584174737334,
+          "rerank_ms": 247.0319161657244,
+          "total_ms": 597.4572910927236
+        }
+      },
+      "embedding": {
+        "status": "azure_request_recorded",
+        "elapsed_ms": 8080,
+        "query_sha256": "0f9de4d24faad5f8bb6b92f035a71ee50cacda30eb34ea1a734d975e81e63302",
+        "cache_file_present_before_call": false,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2490,
+        "output_tokens": 90,
+        "elapsed_ms": 2085.5,
+        "cost_estimate_usd": 0.00035279999999999996
+      },
+      "review": {
+        "status": "passed",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 1854,
+        "output_tokens": 59,
+        "elapsed_ms": 1673.8,
+        "cost_estimate_usd": 0.00025788,
+        "withheld_claims": 0
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 3,
+        "cost_estimate_usd": 0.0006114720000000001,
+        "by_kind": {
+          "embedding": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 36,
+            "output_tokens": 0,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 7.919999999999999e-07
+          },
+          "generation": {
+            "events": 2,
+            "reported_usage": 2,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 4344,
+            "output_tokens": 149,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.00061068
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    },
+    {
+      "question": "At Blue Lantern Lagoon in Yosemite, what are the submarine departure times?",
+      "selected_park": "yose",
+      "status": "refusal",
+      "claims": [],
+      "source_pages": 0,
+      "reason": {
+        "code": "model_refused",
+        "category": "model_refusal",
+        "detail": "The answer model declined to answer from the selected passages."
+      },
+      "history": {
+        "messages_received": 4,
+        "messages_used": 4,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 4176.3,
+        "pipeline_ms": 4176.2,
+        "server_ms": 4185.6
+      },
+      "retrieval": {
+        "query": "At Blue Lantern Lagoon in Yosemite, what are the submarine departure times?",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "timings_ms": {
+          "load_ms": 251.3561670202762,
+          "retrieval_ms": 26.1137499473989,
+          "rerank_ms": 180.21541717462242,
+          "total_ms": 457.6892089098692
+        }
+      },
+      "embedding": {
+        "status": "azure_request_recorded",
+        "elapsed_ms": 1944.9,
+        "query_sha256": "0af478f49986c7e786c2e110e2c39e92038ae86c9c6eac071fb68337fa39e703",
+        "cache_file_present_before_call": false,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2742,
+        "output_tokens": 34,
+        "elapsed_ms": 1683,
+        "cost_estimate_usd": 0.00034943999999999996
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 2,
+        "cost_estimate_usd": 0.00034976999999999995,
+        "by_kind": {
+          "embedding": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 15,
+            "output_tokens": 0,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 3.2999999999999996e-07
+          },
+          "generation": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 2742,
+            "output_tokens": 34,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.00034943999999999996
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    }
+  ],
+  "local_refusals": [
+    {
+      "question": "What food-storage rules apply at Yellowstone National Park?",
+      "selected_park": "yose",
+      "status": "refusal",
+      "claims": [],
+      "source_pages": 0,
+      "reason": {
+        "code": "selected_park_mismatch",
+        "category": "local_preflight",
+        "detail": "Stopped by a local check before any embedding, search or model call."
+      },
+      "history": {
+        "messages_received": 6,
+        "messages_used": 6,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 0.7,
+        "pipeline_ms": 0.7,
+        "server_ms": 5.6
+      },
+      "retrieval": {
+        "query": null,
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": null,
+        "eligible_count": null,
+        "candidate_count": 0,
+        "final_count": 0,
+        "context_count": 0,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        }
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": false,
+        "returned_model": null,
+        "requested_deployment": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_ms": null,
+        "cost_estimate_usd": null
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 0,
+        "cost_estimate_usd": 0,
+        "by_kind": {},
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    },
+    {
+      "question": "What is the current weather in Yosemite right now?",
+      "selected_park": "yose",
+      "status": "refusal",
+      "claims": [],
+      "source_pages": 0,
+      "reason": {
+        "code": "live_information_unavailable",
+        "category": "local_preflight",
+        "detail": "Stopped by a local check before any embedding, search or model call."
+      },
+      "history": {
+        "messages_received": 6,
+        "messages_used": 6,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 0.7,
+        "pipeline_ms": 0.7,
+        "server_ms": 7.1
+      },
+      "retrieval": {
+        "query": null,
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": null,
+        "eligible_count": null,
+        "candidate_count": 0,
+        "final_count": 0,
+        "context_count": 0,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        }
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": false,
+        "returned_model": null,
+        "requested_deployment": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_ms": null,
+        "cost_estimate_usd": null
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 0,
+        "cost_estimate_usd": 0,
+        "by_kind": {},
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    },
+    {
+      "question": "Look up my booking FAKE123456.",
+      "selected_park": "yose",
+      "status": "refusal",
+      "claims": [],
+      "source_pages": 0,
+      "reason": {
+        "code": "private_record_lookup",
+        "category": "local_preflight",
+        "detail": "Stopped by a local check before any embedding, search or model call."
+      },
+      "history": {
+        "messages_received": 8,
+        "messages_used": 8,
+        "scope_reset": false
+      },
+      "timing_ms": {
+        "answer_call_ms": 0.8,
+        "pipeline_ms": 0.8,
+        "server_ms": 6.4
+      },
+      "retrieval": {
+        "query": null,
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "build_id": null,
+        "eligible_count": null,
+        "candidate_count": 0,
+        "final_count": 0,
+        "context_count": 0,
+        "timings_ms": {
+          "load_ms": null,
+          "retrieval_ms": null,
+          "rerank_ms": null,
+          "total_ms": null
+        }
+      },
+      "embedding": {
+        "status": "not_requested",
+        "elapsed_ms": null,
+        "query_sha256": null,
+        "cache_file_present_before_call": null,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": false,
+        "returned_model": null,
+        "requested_deployment": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_ms": null,
+        "cost_estimate_usd": null
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 0,
+        "cost_estimate_usd": 0,
+        "by_kind": {},
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      }
+    }
+  ],
+  "cache_observation": {
+    "question": "At Yosemite, how far should I stay from a bear when I am outside developed areas?",
+    "selected_park": "yose",
+    "status": "answer",
+    "claims": [
+      {
+        "number": 1,
+        "text": "Stay at least 50 yards from bears outside developed areas.",
+        "source_numbers": [
+          1
+        ],
+        "review": {
+          "reason": "The passage says that when seeing a bear outside developed areas, remain at least 50 yards away."
+        }
+      }
+    ],
+    "source_pages": 1,
+    "reason": null,
+    "history": {
+      "messages_received": 0,
+      "messages_used": 0,
+      "scope_reset": false
+    },
+    "timing_ms": {
+      "answer_call_ms": 5613.5,
+      "pipeline_ms": 5613.4,
+      "server_ms": 5631.6
+    },
+    "retrieval": {
+      "query": "At Yosemite, how far should I stay from a bear when I am outside developed areas?",
+      "filters": {
+        "parks": [
+          "yose"
+        ],
+        "source_url_count": 0
+      },
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "eligible_count": 1377,
+      "candidate_count": 20,
+      "final_count": 5,
+      "context_count": 5,
+      "timings_ms": {
+        "load_ms": 1305.6760840117931,
+        "retrieval_ms": 118.48779208958149,
+        "rerank_ms": 507.4084580410272,
+        "total_ms": 1931.5894169267267
+      }
+    },
+    "embedding": {
+      "status": "no_azure_request_recorded",
+      "elapsed_ms": 5.1,
+      "query_sha256": "13e41fdca9c8677d290d0b7e164ecb6067477ae261a2ad111c119c1766a944e1",
+      "cache_file_present_before_call": true,
+      "deployment": "text-embedding-3-small"
+    },
+    "generation": {
+      "ran": true,
+      "returned_model": "gpt-6-luna-2026-09-22",
+      "requested_deployment": "gpt-6-luna",
+      "input_tokens": 2422,
+      "output_tokens": 90,
+      "elapsed_ms": 1743.9,
+      "cost_estimate_usd": 0.00034464
+    },
+    "review": {
+      "status": "passed",
+      "model": "gpt-6-luna-2026-09-22",
+      "input_tokens": 1771,
+      "output_tokens": 59,
+      "elapsed_ms": 1691.7,
+      "cost_estimate_usd": 0.00024792,
+      "withheld_claims": 0
+    },
+    "ledger_window": {
+      "captured": true,
+      "events": 2,
+      "cost_estimate_usd": 0.00059256,
+      "by_kind": {
+        "generation": {
+          "events": 2,
+          "reported_usage": 2,
+          "failed_attempts": 0,
+          "unsettled_reservations": 0,
+          "input_tokens": 4193,
+          "output_tokens": 149,
+          "events_without_token_usage": 0,
+          "cost_estimate_usd": 0.00059256
+        }
+      },
+      "includes_reserved_maximums": false,
+      "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+      "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+    }
+  },
+  "api_usage": {
+    "ledger_before": {
+      "recorded_at_utc": "2026-10-10T15:42:30.083626+00:00",
+      "events": 984,
+      "estimated_committed_usd": 0.7485990260000001,
+      "last_event_utc": "2026-10-10T15:36:38.714369+00:00",
+      "basis": "Published prices/provider usage/reserved failed-call estimates, not an invoice; excludes Claude CLI usage"
+    },
+    "ledger_after": {
+      "cap_usd": 5,
+      "events": 1001,
+      "estimated_committed_usd": 0.752635688,
+      "remaining_estimated_usd": 4.247364312,
+      "last_event_utc": "2026-10-10T15:58:26.179955+00:00",
+      "basis": "Published-price estimates and provider usage, with conservative failed-call reservations; not an invoice"
+    },
+    "events": [
+      {
+        "id": "81350730dbf5406f8970b36eb851b37a",
+        "kind": "embedding",
+        "timestamp": "2026-10-10T15:43:22.923794+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 3.9599999999999995e-07,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "text-embedding-3-small",
+          "region": "eastus2",
+          "input_per_million_usd": 0.022,
+          "output_per_million_usd": 0.0,
+          "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+          "basis": "list-price estimate",
+          "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+          "global_standard_reference_input_per_million_usd": 0.02,
+          "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+          "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+          "retail_price_unit": "1K tokens",
+          "retail_price_global_usd": 2e-05,
+          "retail_price_regional_usd": 2.2e-05,
+          "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+          "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+        },
+        "input_tokens": 18,
+        "output_tokens": 0
+      },
+      {
+        "id": "b919aa7c23a4475d99b94b144cac7cc6",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:43:24.161308+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00034464,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2422,
+        "output_tokens": 90
+      },
+      {
+        "id": "78bd3fe22eff4cbcba04548b797a647f",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:43:25.374268+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00024792,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 1771,
+        "output_tokens": 59
+      },
+      {
+        "id": "9a737c183fcc49a2aefa12c4d0ac18e2",
+        "kind": "embedding",
+        "timestamp": "2026-10-10T15:45:34.440411+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 7.919999999999999e-07,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "text-embedding-3-small",
+          "region": "eastus2",
+          "input_per_million_usd": 0.022,
+          "output_per_million_usd": 0.0,
+          "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+          "basis": "list-price estimate",
+          "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+          "global_standard_reference_input_per_million_usd": 0.02,
+          "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+          "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+          "retail_price_unit": "1K tokens",
+          "retail_price_global_usd": 2e-05,
+          "retail_price_regional_usd": 2.2e-05,
+          "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+          "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+        },
+        "input_tokens": 36,
+        "output_tokens": 0
+      },
+      {
+        "id": "9d68ef8625614cf7a212399791663faf",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:45:43.123594+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.0003528,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2490,
+        "output_tokens": 90
+      },
+      {
+        "id": "ce5b4d340c084e2db29b64cb187a2308",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:45:45.280052+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00025788,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 1854,
+        "output_tokens": 59
+      },
+      {
+        "id": "c57b5d9b84974c558e282706d7d11fae",
+        "kind": "embedding",
+        "timestamp": "2026-10-10T15:47:26.075886+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 3.2999999999999996e-07,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "text-embedding-3-small",
+          "region": "eastus2",
+          "input_per_million_usd": 0.022,
+          "output_per_million_usd": 0.0,
+          "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+          "basis": "list-price estimate",
+          "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+          "global_standard_reference_input_per_million_usd": 0.02,
+          "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+          "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+          "retail_price_unit": "1K tokens",
+          "retail_price_global_usd": 2e-05,
+          "retail_price_regional_usd": 2.2e-05,
+          "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+          "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+        },
+        "input_tokens": 15,
+        "output_tokens": 0
+      },
+      {
+        "id": "493b63a55c974f03ae963d3d3f08e2ee",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:47:28.485588+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00034943999999999996,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2742,
+        "output_tokens": 34
+      },
+      {
+        "id": "6c6c14edd9a843fba28b7ee2b27c7dfc",
+        "kind": "embedding",
+        "timestamp": "2026-10-10T15:51:19.825766+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 2.6400000000000003e-07,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "text-embedding-3-small",
+          "region": "eastus2",
+          "input_per_million_usd": 0.022,
+          "output_per_million_usd": 0.0,
+          "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+          "basis": "list-price estimate",
+          "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+          "global_standard_reference_input_per_million_usd": 0.02,
+          "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+          "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+          "retail_price_unit": "1K tokens",
+          "retail_price_global_usd": 2e-05,
+          "retail_price_regional_usd": 2.2e-05,
+          "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+          "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+        },
+        "input_tokens": 12,
+        "output_tokens": 0
+      },
+      {
+        "id": "9c44117fec9644d9a14bcca104233028",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:51:30.470735+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00039047999999999996,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2629,
+        "output_tokens": 125
+      },
+      {
+        "id": "b017adadeb6c47159f0407715f28dfd8",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:51:32.929888+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00031284000000000005,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2177,
+        "output_tokens": 86
+      },
+      {
+        "id": "c3cf19d675464e2589e63ef5c0a0c695",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:53:56.330923+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00034464,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2422,
+        "output_tokens": 90
+      },
+      {
+        "id": "ae3f8314f9de4b1ab892c4c27f722133",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:53:58.170101+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00024792,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 1771,
+        "output_tokens": 59
+      },
+      {
+        "id": "d496a4154d224062aae28a134ea9ea0f",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:56:19.509083+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00034464,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2422,
+        "output_tokens": 90
+      },
+      {
+        "id": "c28ceba7a0b24a7d9c5ab0004c0c2efe",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:56:23.445759+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00024851999999999996,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 1771,
+        "output_tokens": 60
+      },
+      {
+        "id": "6d08860a7e3644b9b4b752903e924193",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:58:24.752830+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00034464,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2422,
+        "output_tokens": 90
+      },
+      {
+        "id": "dd1e1e0d62d64a9dbc148868355fc603",
+        "kind": "generation",
+        "timestamp": "2026-10-10T15:58:26.179955+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00024851999999999996,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 1771,
+        "output_tokens": 60
+      }
+    ],
+    "incremental_cost_estimate_usd": 0.004036662,
+    "scope_note": "Entire recorded browser-verification ledger window, including the canceled server request and repeated preview calls. This is not an exclusive sum of displayed turns; concurrent CLI/legacy work would also appear. A preview tab closed before one repeated answer could be exported; its recorded calls remain in this window."
+  },
+  "boundaries": {
+    "core_config_corpus_gold_unchanged": true,
+    "credential_matches_in_new_frontend_and_proof": 0,
+    "check": "artifacts/frontend/supervisor-boundary-check.json",
+    "human_gold_verified": 0,
+    "human_gold_total": 40,
+    "held_out_test_consumed": false,
+    "accuracy_claimed": false
+  },
+  "limitations": [
+    "AI source review and verbatim witness checks do not establish human-verified accuracy or guarantee every paraphrase.",
+    "Local preflight recognizes patterns; an alternative fake booking phrasing was refused after retrieval/generation, not before Azure.",
+    "Saved PDF extraction can contain layout artifacts; the reader displays the stored extraction honestly.",
+    "Source pages are dated snapshots. Azure retention is governed by the resource terms; store=false is not a no-retention guarantee.",
+    "Abort stops browser waiting; the server continues and can spend.",
+    "Cost is estimated; generation ledger kind combines drafting and review, and concurrent processes can affect window attribution."
+  ],
+  "source_manifest": [
+    {
+      "path": "artifacts/ui/web-app-after-cancellation.json",
+      "sha256": "07a7680b84bc5a99a1b1b5194afb8f5f13cebfb493271285db360262b218ee44"
+    },
+    {
+      "path": "artifacts/ui/web-app-browser-proof.json",
+      "sha256": "de27e96ae1f56613fc5608142697bb0fd9a67c5f11b078b43f89a242924c69e4"
+    },
+    {
+      "path": "artifacts/ui/web-app-cancellation-proof.json",
+      "sha256": "01681b0ca5139790f7f8b1c059794e25ee342e3961f418998666f74ea25c45fc"
+    },
+    {
+      "path": "artifacts/ui/web-app-cancellation.png",
+      "sha256": "7f0714f0c4bbe8214af5f237c821695b402ecb9dfb398c3a8980fe3f80bceffb"
+    },
+    {
+      "path": "artifacts/ui/web-app-clear-park-proof.json",
+      "sha256": "384d22846d78a4ecc57ce4efad511c96c7940b1edcccb87738cbdfc2c29e294a"
+    },
+    {
+      "path": "artifacts/ui/web-app-corpus-reader-proof.json",
+      "sha256": "1e9f9a019e501ef4778f4798e19d7b832a62ae3adec41a8b7f83038e9656c95f"
+    },
+    {
+      "path": "artifacts/ui/web-app-corpus-reader.png",
+      "sha256": "1c0af98a7ce9d1213f6f0bbe477fbd16e9903bf3ac4298724e3145fe3d1cb052"
+    },
+    {
+      "path": "artifacts/ui/web-app-deliverable-turn.json",
+      "sha256": "0b4236391ed7e2fcd60605e17b7d77d6fc3c0982b0142df344c80ed0a0242540"
+    },
+    {
+      "path": "artifacts/ui/web-app-final-cached-turn.json",
+      "sha256": "7a512d4c9239780e815a5dd1514f6255f6ba55236316b8d07ca036acd5a8d3a1"
+    },
+    {
+      "path": "artifacts/ui/web-app-ledger-before.json",
+      "sha256": "b9e662642a3927f76208ea90bedcb14d622775274868b5861440ff53b57506c1"
+    },
+    {
+      "path": "artifacts/ui/web-app-local-refusal-1.json",
+      "sha256": "7985207e9ca5f87f2aea6bc51efc82293d8564a6a8c484049c7ae68f386e831f"
+    },
+    {
+      "path": "artifacts/ui/web-app-local-refusal-2.json",
+      "sha256": "a63e64d4dc0f69c69f12a20ae8043cc0d472e80fe1160443b36760ce0cd9214a"
+    },
+    {
+      "path": "artifacts/ui/web-app-local-refusal-3.json",
+      "sha256": "3236c40e3171658a9153a8125ce84e7767310aa94cb959291c03e4165594af7c"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-chat-proof.json",
+      "sha256": "52ac649622c54f9af26d2ab02ed4ec8615849acabf676f0c617304f358c95cc4"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-chat.png",
+      "sha256": "eb82420a7b66be1dde568c0fac59db10ccb0a6675776dedce5b0e85e747ccbfb"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-evidence-proof.json",
+      "sha256": "ff53082b0e275d3ddd2f066ff86d953fe125740e0b290a5abab072ec951b1926"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-evidence.png",
+      "sha256": "19c724b1c5e3adabc7e8e3c1671a43f98785dbd02717ae7c463236493fdad74f"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-flow-proof.json",
+      "sha256": "8898e3ef7c982f5b8de9f5f0e9235acd2cb439e9677d050a9c0199ec49ddd23d"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-flow.png",
+      "sha256": "4ed06d31e36c5b064124a5d3cbe62c79a729d8f107a02baf0caaf2a8837243dd"
+    },
+    {
+      "path": "artifacts/ui/web-app-mobile-long-word-turn.json",
+      "sha256": "6c25693bcb4195c67c1bd76bb3273f9de612a759639d0cf778e3ad0f26d426ec"
+    },
+    {
+      "path": "artifacts/ui/web-app-modal-resize-proof.json",
+      "sha256": "608d98f137532698a6385057edfc2ff06a6d4f5c85480366f55558d1819f4b86"
+    },
+    {
+      "path": "artifacts/ui/web-app-new-conversation-proof.json",
+      "sha256": "89bbf0fecb0ec85cfc693e03f662697a118cda02dd985f7df8e647859e93e3e7"
+    },
+    {
+      "path": "artifacts/ui/web-app-park-banners.json",
+      "sha256": "a00c326eb210899ae27e6e8e99fc3b8201e2df1686373866ded13687ee2ca3f8"
+    },
+    {
+      "path": "artifacts/ui/web-app-pdf-filter-proof.txt",
+      "sha256": "f913cdbb4acaa0874025d1d08c27e484bcc4c55f5ac5f85a92939d360cd0bbea"
+    },
+    {
+      "path": "artifacts/ui/web-app-pdf-reader-proof.json",
+      "sha256": "c0b9449b79f1b455c4405aab6f011587eda9099b6548a65c319e961b197fadd3"
+    },
+    {
+      "path": "artifacts/ui/web-app-preview.png",
+      "sha256": "c0910f21674fa713b329e501c29b325086860b165208b4f5e294cf8b79df6e07"
+    },
+    {
+      "path": "artifacts/ui/web-app-source-preview.json",
+      "sha256": "50705d0517789447278205e8d7236c6a008f91aca5c85fff2b8dbc0970c8c7f7"
+    },
+    {
+      "path": "artifacts/ui/web-app-source-preview.png",
+      "sha256": "959b6d159624f4e2b51b355b3b7a36344a1a245a8dd7775e3fc404447920dfa7"
+    },
+    {
+      "path": "artifacts/ui/web-app-table-filter-proof.json",
+      "sha256": "544752a64de55a7cec07a69f2ef62dccb8d1b745dec59445d4999bb558a76016"
+    },
+    {
+      "path": "artifacts/ui/web-app-turn-1-flow.txt",
+      "sha256": "3110b1e65ea542fa379d0b9623223d476d9db83154281097f1d685d3fc72bb1e"
+    },
+    {
+      "path": "artifacts/ui/web-app-turn-1.json",
+      "sha256": "944a4620a311e88b7569c517c3457019e8ee5d3dc16b167e947b453a480ceac6"
+    },
+    {
+      "path": "artifacts/ui/web-app-turn-2.json",
+      "sha256": "2ca8ca381253b6554c0c20d98edd986b2c404ceef42a19b75e25959a29e95516"
+    },
+    {
+      "path": "artifacts/ui/web-app-turn-3-flow.txt",
+      "sha256": "10fbf159a8e0bc6267a76209c6350708169a8d15555725d4b4bf1fa1476aa897"
+    },
+    {
+      "path": "artifacts/ui/web-app-turn-3.json",
+      "sha256": "c2bb8845e49a6b1c051edc2301487987fbe19a0a40fbfd76ba80c3099100c42f"
+    },
+    {
+      "path": "artifacts/frontend/web-readonly-api-verification.json",
+      "sha256": "c5b5c8cd0546beb95b6998ca0635207e1dc2c12ef76b856c70f150af7399fc39"
+    },
+    {
+      "path": "artifacts/frontend/web-private-phrase-observation.json",
+      "sha256": "8f6308d67b32724031581c5de52c9d3f3579eefd02746ca55f86c839f3f3cf51"
+    },
+    {
+      "path": "artifacts/frontend/supervisor-offline-tests.json",
+      "sha256": "8667335ac80396fd7d8dc21b7ec9b6ca4581b5c7d042217a16052cdfa5e1ba3a"
+    },
+    {
+      "path": "artifacts/frontend/supervisor-web-build-final.json",
+      "sha256": "75bcc8290589f19540f438556d8b5bf5f429d03ab61993329802cb6430180967"
+    },
+    {
+      "path": "artifacts/frontend/supervisor-boundary-check.json",
+      "sha256": "17f921af502f9fff2925da50af71ce11b7ea870c028eb6bb26c6b5c360db56e9"
+    },
+    {
+      "path": "artifacts/frontend/claude-final-api-review.md",
+      "sha256": "febfef1694cff4cf9b29e3c80cfe8cc598aa0d1f110df84c2667a8d3a7f9a3b4"
+    },
+    {
+      "path": "docs/FRONTEND_REFERENCES.md",
+      "sha256": "8b1373b97d04270d586cb191967fe10b3484eccf425cdf08be8d05a4d1676550"
+    }
+  ],
+  "frontend_source_manifest": [
+    {
+      "path": "web/src/App.tsx",
+      "sha256": "44dd5804a3bcdeacbb623ead9eb0174bca801c5a0255f044954601ad80230685"
+    },
+    {
+      "path": "web/src/components/ai-elements/LICENSE",
+      "sha256": "9e30c6e86588f4023d3336695481494dc4dcb67a64dd9a4b48b404c37e0e0f61"
+    },
+    {
+      "path": "web/src/components/ai-elements/conversation.tsx",
+      "sha256": "357efac309a7aa8543731bfde401efeffdc43ad9b3ff352b3f40c73b3cdfa4b1"
+    },
+    {
+      "path": "web/src/components/ai-elements/message.tsx",
+      "sha256": "44e7c3920535c18c92f3991badabe685c7d928b40c04ebef2d15669c74243ccd"
+    },
+    {
+      "path": "web/src/components/ai-elements/prompt-input.tsx",
+      "sha256": "c819f3eff1eeef1cb00665f18b52128d4a98b163f856dff9781f1d5942c69d8d"
+    },
+    {
+      "path": "web/src/components/ai-elements/sources.tsx",
+      "sha256": "0bf755b9b92cc7768d789c1eb9bac125bda2c93887139e558a317e696c1da042"
+    },
+    {
+      "path": "web/src/components/assistant-turn.tsx",
+      "sha256": "fe166acfdada280470cfa52da2b270136ad5e94c66be203ab215dd3490882a44"
+    },
+    {
+      "path": "web/src/components/chat-view.tsx",
+      "sha256": "fa586e00440dab5f51eae69f7b00ad8ffc3237c65cb1e619ed8c33d9db0e2644"
+    },
+    {
+      "path": "web/src/components/corpus-browser.tsx",
+      "sha256": "51badfedceef03ee788863a7e37e1131e9d4b7adddc79e1ba3443a4b6b56c23e"
+    },
+    {
+      "path": "web/src/components/evidence-dialog.tsx",
+      "sha256": "a12d6b8e11c94a50a472f7d69d9765a2e433478a04855018ba4fb2784a28d98d"
+    },
+    {
+      "path": "web/src/components/how-it-works.tsx",
+      "sha256": "12adb9a5713fb8d5d6dc59ab02ae18b34eddd9d4a832bbd324c1938a3e81128b"
+    },
+    {
+      "path": "web/src/components/inspector.tsx",
+      "sha256": "59e6d120434c28a066deabb8903095efd5a3b248984337133fadd13d03477e7f"
+    },
+    {
+      "path": "web/src/components/source-card.tsx",
+      "sha256": "77fd84456a1889c6ebba69726f5af676041251d76c07e952401bac614e2293be"
+    },
+    {
+      "path": "web/src/components/ui/alert-dialog.tsx",
+      "sha256": "2df4db805fa294f84ec039fd268c3a1cd31c2dded800efc806cd106c753a5df0"
+    },
+    {
+      "path": "web/src/components/ui/alert.tsx",
+      "sha256": "798218fddd9446e86b9e9e53a80a86c0026c3e0f9f68ffdcd1c2d902fa115043"
+    },
+    {
+      "path": "web/src/components/ui/badge.tsx",
+      "sha256": "ac24435d9954a37fd7e72815e565fc9b68ffc2170cf221a7042cb529ba041e9d"
+    },
+    {
+      "path": "web/src/components/ui/button-group.tsx",
+      "sha256": "3ceb1e76f3097f1ef35fd4634ed09d09512a0d5dc668c67ccd63e019dceae0e5"
+    },
+    {
+      "path": "web/src/components/ui/button.tsx",
+      "sha256": "eff75f2b1fdf9b57e57f472f63679a411826224ab361ed221dd5ccf8152cd027"
+    },
+    {
+      "path": "web/src/components/ui/collapsible.tsx",
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "path": "web/src/components/ui/command.tsx",
+      "sha256": "e8da9aa53faab49c6b5ea3416bd3744a38f1f16d8f4a1cc698fc1294f92dccf7"
+    },
+    {
+      "path": "web/src/components/ui/dialog.tsx",
+      "sha256": "2ac8e227b1ca78e708c254acac1838579ab4bfd8b0963908072174df3c36a2ae"
+    },
+    {
+      "path": "web/src/components/ui/dropdown-menu.tsx",
+      "sha256": "6736020468451cd9ff28816c144bfd4fd4732c38d52d74237e7833a40aa589e1"
+    },
+    {
+      "path": "web/src/components/ui/hover-card.tsx",
+      "sha256": "5a552128dcb892440ded184c48d409c72258f3a02316504d312dce6678bc4d84"
+    },
+    {
+      "path": "web/src/components/ui/input-group.tsx",
+      "sha256": "2c9657447b7ce2c6753aa7b4dbda13340cac90f21c6b913527df747954070b60"
+    },
+    {
+      "path": "web/src/components/ui/input.tsx",
+      "sha256": "a387752d3db4ac3f76893b216ee7fd7374b2dcc8f2edaa2d38faf6f7af125399"
+    },
+    {
+      "path": "web/src/components/ui/scroll-area.tsx",
+      "sha256": "976f98295cb2e308f49d26efee73c7e514452992f4c57d943cb75e388a12e170"
+    },
+    {
+      "path": "web/src/components/ui/select.tsx",
+      "sha256": "e2f5271c590ac7332a6a506fd6febecc5ab93338d3e6251ad2ed28f4a651af3f"
+    },
+    {
+      "path": "web/src/components/ui/separator.tsx",
+      "sha256": "e2f6737a9ea8231bfd2ae948bbe394295e659e15deddbf9257d6442436327518"
+    },
+    {
+      "path": "web/src/components/ui/sheet.tsx",
+      "sha256": "61e5e276135263674e055b78cb85bebda7f3e3ae36cbe8925c8d0e31c30d4eb7"
+    },
+    {
+      "path": "web/src/components/ui/skeleton.tsx",
+      "sha256": "8110bba70d0cb9fe968c0b7bd092ad12258caef40b028b4a87f402bdab907faf"
+    },
+    {
+      "path": "web/src/components/ui/spinner.tsx",
+      "sha256": "900f722c961fa6e1c28104809d56831c9056dc69599e49d364cc13a6f33966a3"
+    },
+    {
+      "path": "web/src/components/ui/table.tsx",
+      "sha256": "24c4df80dbf8a12cfd1f9b13f9d874b79b117c756b69f9e787c625d3a88b4b88"
+    },
+    {
+      "path": "web/src/components/ui/tabs.tsx",
+      "sha256": "1497ab1e6bc68c0a046579c4ccbe5fb3cb962963984f565b9d775af925541e99"
+    },
+    {
+      "path": "web/src/components/ui/textarea.tsx",
+      "sha256": "fa0ce5e86f2d8315e120edcddf036f9c7d1c764fb3252576e42450786932c662"
+    },
+    {
+      "path": "web/src/components/ui/tooltip.tsx",
+      "sha256": "e5993a46ce5fa29a4d158b469856553a85ea09c813df7ce2884e06001ec3454e"
+    },
+    {
+      "path": "web/src/index.css",
+      "sha256": "7d76ab7a2bf1fa2ac167a654867f9fdc508785d951757d6d7d8259f3a383fd88"
+    },
+    {
+      "path": "web/src/lib/api.ts",
+      "sha256": "1265e7d8d7dad0360a0ee6998dbd0a13f1c1806d9e57f2e329c4a2f3486c0c93"
+    },
+    {
+      "path": "web/src/lib/format.ts",
+      "sha256": "dc744aff87bf7ad61df79d4f61af25beeb918356fe530b8350c83ee0c8903d60"
+    },
+    {
+      "path": "web/src/lib/use-chat.ts",
+      "sha256": "5b21cb5de9d8536d1ca43d3ecc660d38b1a6ed44457d86d76746aa18cfc8ea0d"
+    },
+    {
+      "path": "web/src/lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "path": "web/src/main.tsx",
+      "sha256": "c323d060c0cebc0762baea7fd5f15d0189c5f35d5cf99ed9dc1f48bce61c0fcb"
+    },
+    {
+      "path": "src/parkguide/web.py",
+      "sha256": "ae63aa338ea8070a3f6453f6bb26e910ed414ac84e110c56d61d26a03ae47791"
+    }
+  ]
+}

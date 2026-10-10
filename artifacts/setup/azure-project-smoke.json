@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "checked_at_utc": "2026-10-10T02:24:32.176535+00:00",
+  "test_kind": "project_adapter_synthetic_batch",
+  "input_count": 2,
+  "input_sha256": [
+    "3904d51b8c624aefd17f1f27bd3cffdf9f22f55df65aa7a8d38663938277f959",
+    "4a201cc341c485540250b6ba52b3d9718b502dddee16f254875b74cfda69290b"
+  ],
+  "model": "text-embedding-3-small",
+  "dimension": 1536,
+  "dtype": "float32",
+  "finite": true,
+  "normalized_l2_norms": [
+    1.0,
+    1.0
+  ],
+  "usage": {
+    "prompt_tokens": 22,
+    "total_tokens": 22
+  },
+  "elapsed_ms": 3346.8,
+  "vector_file_sha256": "3f62cba31e7a5e5bef516e24a290cdbcdf6b25498daceb5009b0f87e007dae81",
+  "limitations": [
+    "Synthetic inputs only; no throughput, retrieval, or generation assessment"
+  ]
+}

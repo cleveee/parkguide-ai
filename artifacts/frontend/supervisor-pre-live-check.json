@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-10T15:24:58.935845+00:00",
+  "branch": "main",
+  "last_commit": "bdbba39 Initial working ParkGuide Azure RAG PoC",
+  "remote_count": 1,
+  "changed_baseline_protected_paths": {
+    "AGENTS.md": "1d540ee2b9bda66c404e0133679896c4c906640085cdb1fe58465d4153ce9297",
+    "app.py": "1045ab21222141deafa8b0bcbe2db07d6a5751a980f6ba966743df69ccf5833c"
+  },
+  "ledger_before": {
+    "events": 976,
+    "estimated_committed_usd": 0.746827504,
+    "last_event_utc": "2026-10-10T15:19:50.899986+00:00"
+  },
+  "existing_core_modules_preserved": true
+}

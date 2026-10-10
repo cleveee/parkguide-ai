@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-10",
+  "primary_reference": {
+    "url": "https://elements.ai-sdk.dev/examples/chatbot",
+    "published_components": [
+      "Conversation",
+      "Message",
+      "Sources",
+      "PromptInput"
+    ],
+    "observed_behavior": "Used 2 sources disclosure expands official reference links without disrupting the thread; calm text-first answer layout; bottom composer and suggestion chips. Demo content is illustrative, not ParkGuide facts.",
+    "preview_measurement": {
+      "width_px": 946,
+      "height_px": 600,
+      "source_trigger_font_px": 12,
+      "body_font": "Geist with fallback"
+    },
+    "screenshot": "artifacts/frontend/ai-elements-reference.png"
+  },
+  "secondary_reference": {
+    "url": "https://www.assistant-ui.com/elements/sources",
+    "observed_behavior": "Compact source chips and document badges; static pill can reveal cards with snippets and publication metadata. Default favicons call DuckDuckGo: ParkGuide must use a local icon, not an external favicon request."
+  },
+  "adaptation": "Use actual MIT component source from Vercel AI Elements and shadcn/ui. Retain local typography, reviewed-output-only answers, exact saved NPS source evidence, explicitly measured metrics, and one shared Azure resource. No AI Gateway or browser model API."
+}

@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-10T14:45:48.837Z",
+  "report_path": "dashboard/index.html",
+  "report_sha256": "76d7ae6ac3760a94c9922b4c852dd7a827e277741e705221b3805e65c4f54b9b",
+  "data_path": "dashboard/run-data.json",
+  "data_sha256": "d208aebc4d040c32be4a4354152490bf43c52932f3a70aed88c989234b9670ea",
+  "browser_proof_path": "artifacts/ui/park-dashboard-browser-proof.json",
+  "browser_proof_sha256": "e6a582c504590341ae8451062e81f94e50497aad9b78061970997ac03b9d37fa",
+  "screenshot_path": "artifacts/ui/park-dashboard-preview.png",
+  "screenshot_sha256": "c8c58eb2e562055840b5b4048358c2afe48330b5a15235e319d48408fa8256d4",
+  "checks": {
+    "inline_export_identical": true,
+    "all_110_provenance_hashes_current": true,
+    "current_azure_model_visible": true,
+    "current_290_test_count_visible": true,
+    "source_proof_image_loaded": true,
+    "no_browser_errors": true,
+    "no_key_in_html": true,
+    "no_git_remote": true
+  },
+  "paid_api_calls_in_this_dashboard_check": 0,
+  "human_accuracy_validation": "pending"
+}

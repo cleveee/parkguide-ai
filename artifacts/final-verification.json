@@ -1,0 +1,27 @@
+{
+  "repo": "/Users/robin/Build/Personal/parkguide-ai",
+  "baseline_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/runs/20261010T042905Z-54d33f15",
+  "dialogue_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/dialogues/7bbd1b0ccdb649edbaf2b64ccc9797e3",
+  "code_hash": "32eaa5a01a199d0e547fa46c3cb2ef6e2f18447e6f642821d9f9304298966a9c",
+  "pytest_passed": 126,
+  "pip_check": "No broken requirements found",
+  "browser": "actual three table turns, source equation/claim review trace, private-record refusal, default rerank off",
+  "browser_proof": "artifacts/ui/browser-verification.txt",
+  "screenshot": "artifacts/ui/three-turn-chat.jpg",
+  "human_verified_gold": 0,
+  "sealed_test_created": false,
+  "final_test_consumed": false,
+  "api_estimated_committed_usd": 0.388879216,
+  "ai_review": {
+    "selected_diagnostic_clear_correct": 12,
+    "selected_diagnostic_total": 12,
+    "dialogue_clear_correct": 16,
+    "dialogue_uncertain": 2,
+    "dialogue_total": 18,
+    "selected_plus_dialogue_supported_claims": 36,
+    "selected_plus_dialogue_claims": 38,
+    "human_verified": false,
+    "quality_gates_confirmed": false
+  },
+  "semantic_review_sha256": "4ba4836a0275ec7940e61287c2fdd4dc1af7e4c67d4de1b8068776372f4e4d0c"
+}

@@ -1,0 +1,38 @@
+{
+  "B3": {
+    "items": 12,
+    "errors": 0,
+    "grading_status": "HUMAN_REVIEW_PENDING",
+    "recall_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "recall_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "mrr": {
+      "mean": 0.78125,
+      "denominator": 8
+    },
+    "ndcg_10": {
+      "mean": 0.8365670081520384,
+      "denominator": 8
+    },
+    "evidence_coverage_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "evidence_coverage_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "diagnostic_passes": 4,
+    "action_correct": 7,
+    "latency_p50_ms": 1844.1,
+    "latency_p95_ms": 3542.4899999999993,
+    "generation_cost_estimate_usd": 0.0126952,
+    "answer_accuracy": null,
+    "citation_semantic_support": null
+  }
+}

@@ -1,13 +1,44 @@
+# Environments, dependencies and compiled builds
 .venv/
+venv/
+environments/
+node_modules/
+dist/
+build/
+.vite/
+.next/
+coverage/
 __pycache__/
 *.py[cod]
 *.egg-info/
-.pytest_cache/
+*.tsbuildinfo
+
+# Credentials and machine metadata
 .env
 .env.*
 !.env.example
-data/
-artifacts/
-models/
-references/
 .DS_Store
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+
+# Runtime locks and transient database sidecars
+artifacts/api-ledger.lock
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.pid
+*.sock
+
+# Corpus, SQLite, embeddings, meaningful caches and run evidence are versioned.
+
+# The prebuilt POC database is required in clones; no re-embedding is needed.
+!/data/
+!/data/parkguide.sqlite
+
+# Keep reports, run traces, screenshots and index-build metadata as evidence.
+# These directory rules do not override the credential/build exclusions above.
+!/reports/
+!/artifacts/
+!/docs/
+!/references/

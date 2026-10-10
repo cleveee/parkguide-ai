@@ -1,0 +1,122 @@
+INITIAL
+- button "New conversation" [disabled]:
+  - paragraph: New conversation
+- generic "keyboard_arrow_right Search settings":
+  - generic: keyboard_arrow_right
+  - paragraph: Search settings
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Choose a park to explore its saved official NPS information.
+- paragraph: Park
+- combobox "Park"
+- button "Open":
+- status:
+  - paragraph: Choose a park to start a conversation.
+- textbox "Choose a park first" [disabled]
+- button "Send message" [disabled]:
+SELECTED
+- log:
+  - generic: 3 options available.
+  - generic: Yosemite National Park
+  - generic: Yosemite National Park, selected
+- log
+- button "New conversation":
+  - paragraph: New conversation
+- generic "keyboard_arrow_right Search settings":
+  - generic: keyboard_arrow_right
+  - paragraph: Search settings
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Choose a park to explore its saved official NPS information.
+- paragraph: Park
+- combobox "Park" [active]: Yosemite National Park
+- button "Clear value":
+- button "Open":
+- status:
+  - paragraph:
+    - strong: "Selected park: Yosemite National Park"
+  - paragraph: Answers use only this park's saved NPS sources.
+- paragraph: Missing information is withheld. Official links show current pages; saved sources do not verify live conditions. Ask a ranger for safety-sensitive decisions.
+- textbox "Ask about visiting Yosemite"
+- button "Send message" [disabled]:
+MISMATCH
+- log
+- log
+- button "New conversation":
+  - paragraph: New conversation
+- generic "keyboard_arrow_right Search settings":
+  - generic: keyboard_arrow_right
+  - paragraph: Search settings
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Choose a park to explore its saved official NPS information.
+- paragraph: Park
+- combobox "Park": Yosemite National Park
+- button "Clear value":
+- button "Open":
+- status:
+  - paragraph:
+    - strong: "Selected park: Yosemite National Park"
+  - paragraph: Answers use only this park's saved NPS sources.
+- paragraph: Missing information is withheld. Official links show current pages; saved sources do not verify live conditions. Ask a ranger for safety-sensitive decisions.
+- generic: face
+- generic "Chat message from user":
+  - paragraph: How far should I stay from bears in Yellowstone?
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph: This conversation is for Yosemite National Park. Choose another park in the selector to ask about it.
+  - generic "keyboard_arrow_right Search trace and other retrieved passages":
+    - generic: keyboard_arrow_right
+    - paragraph: Search trace and other retrieved passages
+- textbox "Ask about visiting Yosemite" [active]
+- button "Send message" [disabled]:
+PARK CHANGE
+- log:
+  - generic: 3 options available.
+  - generic: Yosemite National Park, selected
+  - generic: Grand Canyon National Park
+  - generic: Grand Canyon National Park, selected
+- log
+- button "New conversation":
+  - paragraph: New conversation
+- generic "keyboard_arrow_right Search settings":
+  - generic: keyboard_arrow_right
+  - paragraph: Search settings
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Choose a park to explore its saved official NPS information.
+- paragraph: Park
+- combobox "Park" [active]: Grand Canyon National Park
+- button "Clear value":
+- button "Open":
+- status:
+  - paragraph:
+    - strong: "Selected park: Grand Canyon National Park"
+  - paragraph: Answers use only this park's saved NPS sources.
+- paragraph: Missing information is withheld. Official links show current pages; saved sources do not verify live conditions. Ask a ranger for safety-sensitive decisions.
+- textbox "Ask about visiting Grand Canyon"
+- button "Send message" [disabled]:

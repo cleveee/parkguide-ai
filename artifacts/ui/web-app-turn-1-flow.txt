@@ -1,0 +1,91 @@
+Question sent to the local server (127.0.0.1)
+Browser ↔ local server · ran
+
+Question and selected park (Yosemite), plus 0 prior message(s) from this tab's memory.
+
+0 prior message(s) were used as conversation context.
+
+Preflight checks
+This computer · ran
+No recognized other-park, live-information or private-record pattern matched. These checks only recognize certain wordings, so a different phrasing can continue to the steps below.
+Query embedding
+Azure (remote) · ran
+
+The budget ledger recorded an embedding call to Azure during this request.
+
+Cache files for this query hash were absent just before the call (a file observation; another process could change it).
+
+query sha256 13e41fdca9c8677d290d0b7e164ecb6067477ae261a2ad111c119c1766a944e1
+
+Embedding step wall time 743 ms
+
+Search: SQLite + NumPy cosine + BM25 + fusion
+This computer · ran
+
+20 candidates from 1,377 saved Yosemite passages · scoring 26 ms
+
+Reranking (cross-encoder, offline)
+This computer · ran
+
+196 ms
+
+Answer drafting (Luna)
+Azure (remote) · ran
+
+Sent: question, 5 selected snippet(s) and bounded prior conversation.
+
+Returned model: gpt-6-luna-2026-09-22
+
+Final successful call: 2,422 in / 90 out tokens · 1.17 s · est. $0.000345
+
+Claim source review (Luna, cited passages only)
+Azure (remote) · ran
+
+All drafted claims passed source review.
+
+Returned model: gpt-6-luna-2026-09-22
+
+Successful review call: 1,771 in / 59 out tokens · 1.28 s · est. $0.000248
+
+Citation, number, quotation, source-identity and review-integrity checks
+This computer · ran
+Result returned to the browser
+Browser ↔ local server · ran
+Reviewed answer with 1 claim(s) and 1 saved source page(s).
+Paid-call ledger window (this request)
+Recorded events
+3
+Estimated cost, all recorded events
+$0.000593
+
+Embedding
+
+Events · reported / failed / unsettled
+1 · 1 / 0 / 0
+Tokens in / out (reported only)
+18 / 0
+Estimated cost
+$3.96e-7
+
+Generation (answer drafting and claim review)
+
+Events · reported / failed / unsettled
+2 · 2 / 0 / 0
+Tokens in / out (reported only)
+4,193 / 149
+Estimated cost
+$0.000593
+
+Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls. The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here.
+
+Timing (nested wall times)
+Server handler
+3.82 s
+⤷ Shared answer call
+3.81 s
+⤷ Pipeline, self-reported
+3.81 s
+⤷ Retrieval total
+492 ms
+
+Each row contains the rows below it. Per-call timings above are for successful calls only. “Not captured” means no value was recorded, which is different from zero.

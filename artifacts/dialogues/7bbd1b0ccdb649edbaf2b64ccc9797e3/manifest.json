@@ -1,0 +1,11 @@
+{
+  "kind": "non_gold_dialogue_diagnostic",
+  "dataset_hash": "f8b55abcbd94df5bcf9dc12c4f28394411420a033007e7d405d0dd159dfb0446",
+  "config_hash": "5e22b3585a029b259f5ff746c1d8906d8791faccf1b653422ab25d391257c205",
+  "code_hash": "32eaa5a01a199d0e547fa46c3cb2ef6e2f18447e6f642821d9f9304298966a9c",
+  "mode": "hybrid",
+  "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "rerank": false,
+  "history": "actual preceding assistant responses; per-turn snapshot",
+  "latency_policy": "sequential turns; query embedding cache retained"
+}

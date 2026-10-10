@@ -1,0 +1,166 @@
+{
+  "kind": "PROVISIONAL_AI_NON_GOLD_CONVERSATION_CLUSTER_ANALYSIS",
+  "review_file": "/Users/robin/Build/Personal/parkguide-ai/artifacts/reviews/latest-semantic-review.jsonl",
+  "review_sha256": "4ba4836a0275ec7940e61287c2fdd4dc1af7e4c67d4de1b8068776372f4e4d0c",
+  "dialogue_folder": "/Users/robin/Build/Personal/parkguide-ai/artifacts/dialogues/7bbd1b0ccdb649edbaf2b64ccc9797e3",
+  "dialogue_results_sha256": "77aeeeb943a12a704d84f8d86dfe2246db43c6479fb28b224d64fe7d21cad2a3",
+  "dialogue_manifest_sha256": "ad5c8d524d5e36dd717a7f58ae4e19415b017096966dd100b7003041f6c90252",
+  "config_hash": "5e22b3585a029b259f5ff746c1d8906d8791faccf1b653422ab25d391257c205",
+  "code_hash": "32eaa5a01a199d0e547fa46c3cb2ef6e2f18447e6f642821d9f9304298966a9c",
+  "per_dialogue": [
+    {
+      "dialogue_id": "T01",
+      "item_ids": [
+        "T01-1",
+        "T01-2",
+        "T01-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 3,
+      "incorrect": 0,
+      "uncertain": 0,
+      "supported_claims": 3,
+      "unsupported_claims": 0,
+      "uncertain_claims": 0,
+      "total_claims": 3
+    },
+    {
+      "dialogue_id": "T02",
+      "item_ids": [
+        "T02-1",
+        "T02-2",
+        "T02-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 2,
+      "incorrect": 0,
+      "uncertain": 1,
+      "supported_claims": 2,
+      "unsupported_claims": 0,
+      "uncertain_claims": 1,
+      "total_claims": 3
+    },
+    {
+      "dialogue_id": "T03",
+      "item_ids": [
+        "T03-1",
+        "T03-2",
+        "T03-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 3,
+      "incorrect": 0,
+      "uncertain": 0,
+      "supported_claims": 4,
+      "unsupported_claims": 0,
+      "uncertain_claims": 0,
+      "total_claims": 4
+    },
+    {
+      "dialogue_id": "T04",
+      "item_ids": [
+        "T04-1",
+        "T04-2",
+        "T04-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 3,
+      "incorrect": 0,
+      "uncertain": 0,
+      "supported_claims": 4,
+      "unsupported_claims": 0,
+      "uncertain_claims": 0,
+      "total_claims": 4
+    },
+    {
+      "dialogue_id": "T05",
+      "item_ids": [
+        "T05-1",
+        "T05-2",
+        "T05-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 2,
+      "incorrect": 0,
+      "uncertain": 1,
+      "supported_claims": 5,
+      "unsupported_claims": 1,
+      "uncertain_claims": 0,
+      "total_claims": 6
+    },
+    {
+      "dialogue_id": "T06",
+      "item_ids": [
+        "T06-1",
+        "T06-2",
+        "T06-3"
+      ],
+      "turns": 3,
+      "clearly_correct": 3,
+      "incorrect": 0,
+      "uncertain": 0,
+      "supported_claims": 3,
+      "unsupported_claims": 0,
+      "uncertain_claims": 0,
+      "total_claims": 3
+    }
+  ],
+  "clearly_correct_fraction_all_attempted_turns": {
+    "numerator": 16,
+    "denominator": 18,
+    "fraction": 0.8888888888888888,
+    "ci95": [
+      0.7777777777777778,
+      1.0
+    ],
+    "cluster_count": 6,
+    "valid_draws": 10000,
+    "zero_denominator_draws": 0,
+    "degenerate": false,
+    "seed": 633,
+    "samples": 10000
+  },
+  "observed_turn_labels": {
+    "clearly_correct": 16,
+    "incorrect": 0,
+    "uncertain": 2,
+    "total": 18,
+    "uncertain_item_ids": [
+      "T02-1",
+      "T05-3"
+    ]
+  },
+  "supported_claim_fraction_all_delivered_claims": {
+    "numerator": 21,
+    "denominator": 23,
+    "fraction": 0.9130434782608695,
+    "ci95": [
+      0.8181818181818182,
+      1.0
+    ],
+    "cluster_count": 6,
+    "valid_draws": 10000,
+    "zero_denominator_draws": 0,
+    "degenerate": false,
+    "seed": 633,
+    "samples": 10000
+  },
+  "observed_claim_labels": {
+    "supported": 21,
+    "unsupported": 1,
+    "uncertain": 1,
+    "total": 23
+  },
+  "pipeline_errors": 0,
+  "actual_history_snapshot_verified": true,
+  "human_answer_accuracy": null,
+  "human_citation_support": null,
+  "method": "10,000 percentile bootstrap draws with seed 633 by default. Each draw samples six whole dialogues with replacement, preserves every turn/claim in each chosen cluster, and computes a ratio of total numerators to total denominators.",
+  "limits": [
+    "All labels are source-based AI proposals on non-gold development diagnostics; human semantic verification remains pending.",
+    "Uncertain turns and claims remain in their total denominators and are not counted clearly correct/supported or relabeled incorrect/unsupported.",
+    "The interval describes sampling variation of the fixed AI labels, not human accuracy, judge correctness, annotation uncertainty or held-out performance.",
+    "Six authored dialogues are a small, non-random development set; clustering accounts for within-dialogue dependence only.",
+    "There is no before/after causal comparison or claimed final acceptance in this analysis."
+  ]
+}

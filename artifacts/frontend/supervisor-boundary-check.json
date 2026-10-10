@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-10-10T15:54:37.465617+00:00",
+  "protected_changes": [],
+  "files_scanned": 117,
+  "secret_matches": [],
+  "env_mode": "0o600",
+  "env_git_ignored": true,
+  "scan_note": "Matched real configured credential values without printing them; excluded existing .env itself"
+}

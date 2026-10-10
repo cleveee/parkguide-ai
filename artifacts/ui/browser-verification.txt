@@ -1,0 +1,69 @@
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- button "New conversation":
+  - paragraph: New conversation
+- paragraph: Search
+- combobox "Search": hybrid
+- button "Open":
+- checkbox "Rerank passages"
+- paragraph: Rerank passages
+- banner:
+  - button "keyboard_double_arrow_right":
+    - generic: keyboard_double_arrow_right
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Explore Yosemite, Yellowstone, and Grand Canyon using saved official NPS sources.
+- status:
+  - paragraph: Answers describe a saved source snapshot. Check current official notices and ask a ranger for safety-sensitive decisions.
+- generic: face
+- generic "Chat message from user":
+  - paragraph: According to Grand Canyon's saved South Kaibab table, how far below the rim is Cedar Ridge?
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph:
+    - text: Cedar Ridge is 1.5 miles (2.4 km) from the rim and 6120 feet (1865 m) elevation.
+    - link "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)":
+      - /url: https://www.nps.gov/grca/planyourvisit/trail-distances.htm
+  - generic "keyboard_arrow_right Sources and search trace":
+    - generic: keyboard_arrow_right
+    - paragraph: Sources and search trace
+- generic: face
+- generic "Chat message from user":
+  - paragraph: Does it have drinking water marked in that table?
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph:
+    - text: Cedar Ridge has no drinking water marked in the South Kaibab Trail table.
+    - link "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)":
+      - /url: https://www.nps.gov/grca/planyourvisit/trail-distances.htm
+  - generic "keyboard_arrow_right Sources and search trace":
+    - generic: keyboard_arrow_right
+    - paragraph: Sources and search trace
+- generic: face
+- generic "Chat message from user":
+  - paragraph: How much farther from the rim is Skeleton Point than that spot?
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph:
+    - text: The difference in Distance from Rim between Skeleton Point and Cedar Ridge is 1.5 mi (3 - 1.5 = 1.5 mi).
+    - link "Backcountry Trail Distances - Grand Canyon National Park (U.S. National Park Service)":
+      - /url: https://www.nps.gov/grca/planyourvisit/trail-distances.htm
+  - generic "keyboard_arrow_right Sources and search trace":
+    - generic: keyboard_arrow_right
+    - paragraph: Sources and search trace
+- generic: face
+- generic "Chat message from user":
+  - paragraph: Look up my private Mather booking ZX9401 and tell me the site assignment.
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph: I cannot access private bookings, item records, or live assignments. Please contact the park's official reservation or lost-property service.
+  - generic "keyboard_arrow_right Sources and search trace":
+    - generic: keyboard_arrow_right
+    - paragraph: Sources and search trace
+- textbox "Ask about visiting a park" [active]
+- button "Send message" [disabled]:

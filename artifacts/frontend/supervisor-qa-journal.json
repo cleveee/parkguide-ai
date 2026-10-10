@@ -1,0 +1,75 @@
+{
+  "started_at_utc": "2026-10-10T15:40:06.712682+00:00",
+  "implementation": "Claude Code CLI, primary model claude-opus-5-5",
+  "supervision": "Codex root; actual loopback API/browser verification",
+  "offline": {
+    "checked_at_utc": "2026-10-10T15:39:08.886361+00:00",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "elapsed_ms": 2866.2,
+    "stdout": "........................................................................ [ 18%]\n........................................................................ [ 36%]\n........................................................................ [ 54%]\n........................................................................ [ 72%]\n........................................................................ [ 90%]\n.....................................                                    [100%]\n397 passed in 2.57s\n",
+    "stderr": "",
+    "scope": "Independent root execution of all offline tests; no live/accuracy claim",
+    "pip_check": {
+      "exit_code": 0,
+      "output": "No broken requirements found.\n"
+    }
+  },
+  "read_only_api": {
+    "path": "artifacts/frontend/web-readonly-api-verification.json",
+    "health_http": 200,
+    "documents": 155,
+    "active_structure_chunks": 3707,
+    "all_build_chunks_and_vectors": 5405,
+    "ordered_source_offsets": [
+      0,
+      12,
+      734,
+      1109,
+      1133,
+      1798
+    ],
+    "recognized_local_refusals": 3,
+    "ledger_events_for_each": 0
+  },
+  "preflight_pattern_boundary": {
+    "path": "artifacts/frontend/web-private-phrase-observation.json",
+    "status": "refusal",
+    "reason": "model_refused",
+    "retrieval_ran": true,
+    "known_generation_events": 1,
+    "observed_cost_estimate_usd": 0.000336,
+    "scope": "Invented booking ID only; no human accuracy label or universal local privacy guarantee"
+  },
+  "mobile_before_fix": {
+    "viewport": [
+      375,
+      812
+    ],
+    "result": "failed",
+    "dialog_height": 690,
+    "inner_viewport_height": 1597,
+    "inner_scroll_height": 1597,
+    "screenshot": "artifacts/frontend/mobile-flow-before-fix.png",
+    "fix_verification": "pending"
+  },
+  "remaining": [
+    "Final frontend build",
+    "Live three-turn conversation",
+    "Citation/witness/source preview",
+    "Inspector scores/timings/cost/data flow",
+    "Local refusals in UI",
+    "Park/conversation/cancellation resets",
+    "Corpus filters/PDF/reader pages",
+    "Mobile/reduced motion/focus/browser errors",
+    "Report rebuild with measured proof"
+  ],
+  "accuracy_boundary": "Human gold review 0/40; sealed held-out evaluation unused; operational checks are not accuracy measurements"
+}

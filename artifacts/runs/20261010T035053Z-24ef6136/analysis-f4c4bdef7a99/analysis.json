@@ -1,0 +1,1364 @@
+{
+  "kind": "PAIRED_NON_GOLD_DIAGNOSTIC_ANALYSIS",
+  "run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/runs/20261010T035053Z-24ef6136",
+  "dataset": "/Users/robin/Build/Personal/parkguide-ai/data/evaluation/diagnostic.jsonl",
+  "results_sha256": "aed02e8ad665e71c7229d23d34f88ae375f6cac23e88a038ca3482d1da9d72b4",
+  "dataset_hash": "cedb447dc97b0e9b1c150156880e830622fa1555d4969c6b1e162ec7f2f1d2a0",
+  "config_hash": "9936f38d7265bca7c8d6ca44515ee4ba5e0d97b306a37137216bddda1c5883e1",
+  "total_items_per_configuration": 12,
+  "seed": 633,
+  "samples": 10000,
+  "limits": [
+    "AI-authored diagnostic labels are unverified; semantic answer accuracy/citation support remain unknown.",
+    "Lexical pass is the saved action/fact-word-overlap/guard heuristic, not semantic correctness; paraphrases can fail it.",
+    "Metric intervals resample exact paired item IDs. These exploratory intervals do not adjust for multiple comparisons or annotation uncertainty.",
+    "Chunk-level relevance denominators change after re-chunking; immutable-source evidence coverage complements them.",
+    "Provider errors remain visible; missing numeric metrics are excluded with IDs, while lexical error outcomes count as failures.",
+    "B0 provisional subset uses completed answerable items failing the lexical diagnostic, not demonstrated prior-knowledge errors."
+  ],
+  "pairs": {
+    "B1->B2": {
+      "factor": "BM25 to dense retrieval representation",
+      "configurations": {
+        "B1": {
+          "name": "B1",
+          "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+          "mode": "bm25",
+          "rerank": false
+        },
+        "B2": {
+          "name": "B2",
+          "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+          "mode": "dense",
+          "rerank": false
+        }
+      },
+      "metrics": {
+        "evidence_coverage_5": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "evidence_coverage_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "recall_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "mrr": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.875,
+            "after_mean": 0.55,
+            "difference": -0.325,
+            "ci95": [
+              -0.5625,
+              -0.1
+            ],
+            "positive_interval": false,
+            "negative_interval": true,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "ndcg_10": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.9077324383928644,
+            "after_mean": 0.6621780785943642,
+            "difference": -0.2455543597985002,
+            "ci95": [
+              -0.42935077628197926,
+              -0.0766433990956823
+            ],
+            "positive_interval": false,
+            "negative_interval": true,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "provisional_lexical_pass": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "excluded_item_ids": [],
+          "comparison": {
+            "before_mean": 0.3333333333333333,
+            "after_mean": 0.25,
+            "difference": -0.08333333333333333,
+            "ci95": [
+              -0.3333333333333333,
+              0.16666666666666666
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 12,
+            "seed": 633,
+            "samples": 10000
+          }
+        }
+      }
+    },
+    "B2->C1": {
+      "factor": "fixed to structure-aware chunks",
+      "configurations": {
+        "B2": {
+          "name": "B2",
+          "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+          "mode": "dense",
+          "rerank": false
+        },
+        "C1": {
+          "name": "C1",
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "mode": "dense",
+          "rerank": false
+        }
+      },
+      "metrics": {
+        "evidence_coverage_5": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "evidence_coverage_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "recall_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "mrr": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.55,
+            "after_mean": 0.8541666666666666,
+            "difference": 0.3041666666666667,
+            "ci95": [
+              0.08333333333333333,
+              0.5125
+            ],
+            "positive_interval": true,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "ndcg_10": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.6621780785943642,
+            "after_mean": 0.8913662191964322,
+            "difference": 0.22918814060206802,
+            "ci95": [
+              0.060277179899250105,
+              0.3839557022092036
+            ],
+            "positive_interval": true,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "provisional_lexical_pass": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "excluded_item_ids": [],
+          "comparison": {
+            "before_mean": 0.25,
+            "after_mean": 0.5,
+            "difference": 0.25,
+            "ci95": [
+              0.0,
+              0.5
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 12,
+            "seed": 633,
+            "samples": 10000
+          }
+        }
+      }
+    },
+    "C1->C2": {
+      "factor": "dense to hybrid fusion",
+      "configurations": {
+        "C1": {
+          "name": "C1",
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "mode": "dense",
+          "rerank": false
+        },
+        "C2": {
+          "name": "C2",
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "mode": "hybrid",
+          "rerank": false
+        }
+      },
+      "metrics": {
+        "evidence_coverage_5": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "evidence_coverage_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "recall_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "mrr": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.8541666666666666,
+            "after_mean": 0.8541666666666666,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "ndcg_10": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.8913662191964322,
+            "after_mean": 0.8913662191964322,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "provisional_lexical_pass": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "excluded_item_ids": [],
+          "comparison": {
+            "before_mean": 0.5,
+            "after_mean": 0.4166666666666667,
+            "difference": -0.08333333333333333,
+            "ci95": [
+              -0.25,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 12,
+            "seed": 633,
+            "samples": 10000
+          }
+        }
+      }
+    },
+    "C2->B3": {
+      "factor": "hybrid to hybrid plus reranking",
+      "configurations": {
+        "C2": {
+          "name": "C2",
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "mode": "hybrid",
+          "rerank": false
+        },
+        "B3": {
+          "name": "B3",
+          "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+          "mode": "hybrid",
+          "rerank": true
+        }
+      },
+      "metrics": {
+        "evidence_coverage_5": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "evidence_coverage_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "recall_20": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 1.0,
+            "after_mean": 1.0,
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": true,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "mrr": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.8541666666666666,
+            "after_mean": 0.78125,
+            "difference": -0.07291666666666666,
+            "ci95": [
+              -0.21875,
+              0.04166666666666667
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "ndcg_10": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008"
+          ],
+          "excluded_item_ids": [
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "comparison": {
+            "before_mean": 0.8913662191964322,
+            "after_mean": 0.8365670081520384,
+            "difference": -0.05479921104439368,
+            "ci95": [
+              -0.16343299184796148,
+              0.03273243839286438
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 8,
+            "seed": 633,
+            "samples": 10000
+          }
+        },
+        "provisional_lexical_pass": {
+          "item_ids": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "excluded_item_ids": [],
+          "comparison": {
+            "before_mean": 0.4166666666666667,
+            "after_mean": 0.4166666666666667,
+            "difference": 0.0,
+            "ci95": [
+              -0.25,
+              0.25
+            ],
+            "positive_interval": false,
+            "negative_interval": false,
+            "degenerate": false,
+            "paired_denominator": 12,
+            "seed": 633,
+            "samples": 10000
+          }
+        }
+      }
+    }
+  },
+  "actions": {
+    "B0": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "action_agreement": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "B1": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 9,
+        "refuse": 2,
+        "clarify": 1
+      },
+      "action_agreement": {
+        "numerator": 9,
+        "denominator": 12,
+        "rate": 0.75
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "B2": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "refuse": 3,
+        "answer": 8,
+        "clarify": 1
+      },
+      "action_agreement": {
+        "numerator": 8,
+        "denominator": 12,
+        "rate": 0.6666666666666666
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 2,
+        "denominator": 8,
+        "rate": 0.25
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "B3": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 8,
+        "refuse": 3,
+        "clarify": 1
+      },
+      "action_agreement": {
+        "numerator": 9,
+        "denominator": 12,
+        "rate": 0.75
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "C1": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 9,
+        "refuse": 2,
+        "clarify": 1
+      },
+      "action_agreement": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "C2": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 9,
+        "refuse": 2,
+        "clarify": 1
+      },
+      "action_agreement": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    }
+  },
+  "reranking": {
+    "item_ids": [
+      "D001",
+      "D002",
+      "D003",
+      "D004",
+      "D005",
+      "D006",
+      "D007",
+      "D008"
+    ],
+    "same_request_top5_evidence_change": {
+      "before_mean": 1.0,
+      "after_mean": 1.0,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_interval": false,
+      "negative_interval": false,
+      "degenerate": true,
+      "paired_denominator": 8,
+      "seed": 633,
+      "samples": 10000
+    },
+    "same_request_pool20_evidence_change": {
+      "before_mean": 1.0,
+      "after_mean": 1.0,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_interval": false,
+      "negative_interval": false,
+      "degenerate": true,
+      "paired_denominator": 8,
+      "seed": 633,
+      "samples": 10000
+    },
+    "rerank_latency_ms": {
+      "completed_denominator": 12,
+      "mean": 283.8125694543123,
+      "p50": 263.86112452019006,
+      "p95": 381.7538402392529
+    },
+    "latency_note": "Actual saved local stage timing; may include cold model loading and two-query contention. No extra calls.",
+    "candidate_pool_limit": "Reordering cannot recover evidence absent from the original 20-candidate pool."
+  },
+  "b0_incorrect_provisional_subset": {
+    "item_ids": [
+      "D001",
+      "D002",
+      "D003",
+      "D004",
+      "D005",
+      "D006",
+      "D007",
+      "D008"
+    ],
+    "denominator": 8,
+    "b0_provider_errors_excluded": [],
+    "metric_by_configuration": {
+      "B0": {
+        "evidence_coverage_5": {
+          "mean": null,
+          "denominator": 0
+        },
+        "evidence_coverage_20": {
+          "mean": null,
+          "denominator": 0
+        },
+        "recall_20": {
+          "mean": null,
+          "denominator": 0
+        },
+        "mrr": {
+          "mean": null,
+          "denominator": 0
+        },
+        "ndcg_10": {
+          "mean": null,
+          "denominator": 0
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.0,
+          "denominator": 8
+        }
+      },
+      "B1": {
+        "evidence_coverage_5": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "evidence_coverage_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "recall_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "mrr": {
+          "mean": 0.875,
+          "denominator": 8
+        },
+        "ndcg_10": {
+          "mean": 0.9077324383928644,
+          "denominator": 8
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.5,
+          "denominator": 8
+        }
+      },
+      "B2": {
+        "evidence_coverage_5": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "evidence_coverage_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "recall_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "mrr": {
+          "mean": 0.55,
+          "denominator": 8
+        },
+        "ndcg_10": {
+          "mean": 0.6621780785943642,
+          "denominator": 8
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.375,
+          "denominator": 8
+        }
+      },
+      "B3": {
+        "evidence_coverage_5": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "evidence_coverage_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "recall_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "mrr": {
+          "mean": 0.78125,
+          "denominator": 8
+        },
+        "ndcg_10": {
+          "mean": 0.8365670081520384,
+          "denominator": 8
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.625,
+          "denominator": 8
+        }
+      },
+      "C1": {
+        "evidence_coverage_5": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "evidence_coverage_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "recall_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "mrr": {
+          "mean": 0.8541666666666666,
+          "denominator": 8
+        },
+        "ndcg_10": {
+          "mean": 0.8913662191964322,
+          "denominator": 8
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.75,
+          "denominator": 8
+        }
+      },
+      "C2": {
+        "evidence_coverage_5": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "evidence_coverage_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "recall_20": {
+          "mean": 1.0,
+          "denominator": 8
+        },
+        "mrr": {
+          "mean": 0.8541666666666666,
+          "denominator": 8
+        },
+        "ndcg_10": {
+          "mean": 0.8913662191964322,
+          "denominator": 8
+        },
+        "provisional_lexical_pass": {
+          "mean": 0.625,
+          "denominator": 8
+        }
+      }
+    }
+  },
+  "answer_accuracy": null,
+  "semantic_citation_support": null,
+  "human_review_status": "HUMAN_REVIEW_PENDING"
+}

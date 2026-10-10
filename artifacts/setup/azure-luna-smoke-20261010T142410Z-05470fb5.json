@@ -1,0 +1,63 @@
+{
+  "checked_at_utc": "2026-10-10T14:24:08.983288+00:00",
+  "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+  "requested_model": "gpt-6-luna-2026-09-22",
+  "requested_deployment": "gpt-6-luna",
+  "direct_openai_requests": 0,
+  "ledger_before": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.55022468,
+    "remaining_estimated_usd": 4.44977532,
+    "events": 836,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "attempts": [
+    {
+      "ledger_event_id": "840ba76983e94e97ab98ff07869d67dd",
+      "options": {
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "max_completion_tokens": 128,
+        "store": false
+      },
+      "http_status": 200,
+      "returned_model": "gpt-6-luna-2026-09-22",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 14
+      },
+      "cost_estimate_usd": 1.368e-05,
+      "finish_reason": "stop",
+      "validated": true,
+      "elapsed_ms": 1416.9
+    }
+  ],
+  "verified_request_options": {
+    "temperature": 0,
+    "reasoning_effort": "none",
+    "max_completion_tokens": 128,
+    "store": false
+  },
+  "embedding": {
+    "ledger_event_id": "16b6fe0ebf6d46f4a3fd32801edf5125",
+    "returned_model": "text-embedding-3-small",
+    "dimension": 1536,
+    "dtype": "float32",
+    "finite": true,
+    "l2_norm": 1.0,
+    "usage": {
+      "prompt_tokens": 8,
+      "total_tokens": 8
+    },
+    "elapsed_ms": 431.0,
+    "cost_estimate_usd": 1.76e-07
+  },
+  "ledger_after": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.5502385360000001,
+    "remaining_estimated_usd": 4.449761464,
+    "events": 838,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "passed": true
+}

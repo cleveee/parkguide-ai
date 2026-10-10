@@ -1,0 +1,924 @@
+{
+  "kind": "CURRENT_CANDIDATE_NON_GOLD_ANALYSIS",
+  "current_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/runs/20261010T040558Z-c2f6c2da",
+  "initial_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/runs/20261010T035053Z-24ef6136",
+  "dataset_hash": "cedb447dc97b0e9b1c150156880e830622fa1555d4969c6b1e162ec7f2f1d2a0",
+  "input_sha256": {
+    "current_manifest": "04e5d346e6cde79256cc76f6a73020f6c7c19a50b1b59130fe6a710dae3c525b",
+    "current_results": "22236d25567d511497ad9492724f7f062704a112bdfc5774f924da6056006775",
+    "initial_manifest": "93b2713404d004032a33487e5e5d7013bec6c417feb95a9b83b0c767e8077c5e",
+    "initial_results": "aed02e8ad665e71c7229d23d34f88ae375f6cac23e88a038ca3482d1da9d72b4",
+    "diagnostic_dataset": "53c1551e25eb9bd2264c9e90de04a871704ba58073680b3b0ab781e6c0c75816"
+  },
+  "seed": 633,
+  "samples": 10000,
+  "items_per_variant": 12,
+  "current_config_hash": "8cbad7c3bf6186b0ef36789ed9c49ad0171cbd5288c2490e33317b7ee1efd51f",
+  "current_code_hash": "d24aa6b766b9c89fef57abc5f61038182296f7d0d786017424db9266a0476f94",
+  "initial_config_hash": "9936f38d7265bca7c8d6ca44515ee4ba5e0d97b306a37137216bddda1c5883e1",
+  "initial_code_hash": null,
+  "current_configurations": {
+    "B3": {
+      "name": "B3",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": false
+    },
+    "R1": {
+      "name": "R1",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": true
+    }
+  },
+  "initial_C2_configuration": {
+    "name": "C2",
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "mode": "hybrid",
+    "rerank": false
+  },
+  "paired_controls": {
+    "completed_paired_item_ids": [
+      "D001",
+      "D002",
+      "D003",
+      "D004",
+      "D005",
+      "D006",
+      "D007",
+      "D008",
+      "D009",
+      "D010",
+      "D011",
+      "D012"
+    ],
+    "provider_or_pipeline_errors_excluded": [],
+    "generator_models": [
+      "gpt-4.1-mini-2025-04-14"
+    ],
+    "local_preflight_without_generator_item_ids": [
+      "D010",
+      "D011",
+      "D012"
+    ],
+    "original_candidate_order_content_and_query_match": true,
+    "shared_build": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "prompt_control_note": "Shared recorded config/code hashes; full request hashes include differing retrieved context. No unrecorded template identity is inferred."
+  },
+  "B3_to_R1_paired_metrics": {
+    "evidence_coverage_5": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "excluded_item_ids": [
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 1.0,
+        "after_mean": 1.0,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": true,
+        "paired_denominator": 8,
+        "seed": 633,
+        "samples": 10000
+      }
+    },
+    "evidence_coverage_20": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "excluded_item_ids": [
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 1.0,
+        "after_mean": 1.0,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": true,
+        "paired_denominator": 8,
+        "seed": 633,
+        "samples": 10000
+      }
+    },
+    "recall_20": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "excluded_item_ids": [
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 1.0,
+        "after_mean": 1.0,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": true,
+        "paired_denominator": 8,
+        "seed": 633,
+        "samples": 10000
+      }
+    },
+    "mrr": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "excluded_item_ids": [
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 0.8541666666666666,
+        "after_mean": 0.78125,
+        "difference": -0.07291666666666666,
+        "ci95": [
+          -0.21875,
+          0.04166666666666667
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 8,
+        "seed": 633,
+        "samples": 10000
+      }
+    },
+    "ndcg_10": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "excluded_item_ids": [
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 0.8913662191964322,
+        "after_mean": 0.8365670081520384,
+        "difference": -0.05479921104439368,
+        "ci95": [
+          -0.16343299184796148,
+          0.03273243839286438
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 8,
+        "seed": 633,
+        "samples": 10000
+      }
+    },
+    "provisional_lexical_pass": {
+      "item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "excluded_item_ids": [],
+      "comparison": {
+        "before_mean": 0.4166666666666667,
+        "after_mean": 0.4166666666666667,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": true,
+        "paired_denominator": 12,
+        "seed": 633,
+        "samples": 10000
+      }
+    }
+  },
+  "original_pool_ceiling": {
+    "item_rows": [
+      {
+        "item_id": "D001",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D002",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D003",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D004",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D005",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D006",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D007",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      },
+      {
+        "item_id": "D008",
+        "original_candidate_count": 20,
+        "original_candidate_recall_20": 1.0,
+        "post_rerank_recall_20": 1.0,
+        "original_source_evidence_coverage_20": 1.0,
+        "post_source_evidence_coverage_20": 1.0
+      }
+    ],
+    "denominator": 8,
+    "recall_20_provenance": "Saved selected B3 has no reranking and preserves original candidate ordering; its Recall@20 uses the run's full indexed relevance universe. Same candidate membership is validated for R1.",
+    "limitation": "Reranking cannot retrieve missing chunks or source spans outside the original candidate pool."
+  },
+  "same_request_reranking": {
+    "item_ids": [
+      "D001",
+      "D002",
+      "D003",
+      "D004",
+      "D005",
+      "D006",
+      "D007",
+      "D008"
+    ],
+    "same_request_top5_evidence_change": {
+      "before_mean": 1.0,
+      "after_mean": 1.0,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_interval": false,
+      "negative_interval": false,
+      "degenerate": true,
+      "paired_denominator": 8,
+      "seed": 633,
+      "samples": 10000
+    },
+    "same_request_pool20_evidence_change": {
+      "before_mean": 1.0,
+      "after_mean": 1.0,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_interval": false,
+      "negative_interval": false,
+      "degenerate": true,
+      "paired_denominator": 8,
+      "seed": 633,
+      "samples": 10000
+    },
+    "rerank_latency_ms": {
+      "completed_denominator": 9,
+      "mean": 339.94493985341654,
+      "p50": 352.8407500125468,
+      "p95": 381.59364983439445
+    },
+    "latency_note": "Actual saved local stage timing; may include cold model loading and two-query contention. No extra calls.",
+    "candidate_pool_limit": "Reordering cannot recover evidence absent from the original 20-candidate pool."
+  },
+  "latency_pairs": {
+    "end_to_end_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "excluded_item_ids": [],
+      "comparison": {
+        "before_mean": 1439.4333333333336,
+        "after_mean": 1553.5999999999997,
+        "difference": 114.16666666666664,
+        "ci95": [
+          -14.806875000000094,
+          239.95041666666668
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 12,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 1589.0,
+      "after_p50": 1890.2,
+      "before_p95": 2905.31,
+      "after_p95": 2787.83
+    },
+    "generation_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "excluded_item_ids": [],
+      "comparison": {
+        "before_mean": 1144.2333333333333,
+        "after_mean": 1087.125,
+        "difference": -57.10833333333334,
+        "ci95": [
+          -172.16062499999998,
+          69.88312499999992
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 12,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 1352.0,
+      "after_p50": 1266.15,
+      "before_p95": 1993.9499999999998,
+      "after_p95": 2094.28
+    },
+    "load_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "excluded_item_ids": [
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 141.86984238525233,
+        "after_mean": 109.91844902228978,
+        "difference": -31.951393362962538,
+        "ci95": [
+          -145.83354518334897,
+          55.67396320920024
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 9,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 62.83074989914894,
+      "after_p50": 113.95391705445945,
+      "before_p95": 427.5300082284957,
+      "after_p95": 143.05259976536036
+    },
+    "retrieval_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "excluded_item_ids": [
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 70.94338432782226,
+        "after_mean": 68.83524076288774,
+        "difference": -2.1081435649345317,
+        "ci95": [
+          -39.35723614671992,
+          28.66477396649618
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 9,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 39.965332951396704,
+      "after_p50": 64.41016681492329,
+      "before_p95": 166.50735000148413,
+      "after_p95": 116.85982504859567
+    },
+    "rerank_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "excluded_item_ids": [
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 0.0,
+        "after_mean": 339.94493985341654,
+        "difference": 339.94493985341654,
+        "ci95": [
+          304.59940754291085,
+          364.77252728913703
+        ],
+        "positive_interval": true,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 9,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 0.0,
+      "after_p50": 352.8407500125468,
+      "before_p95": 0.0,
+      "after_p95": 381.59364983439445
+    },
+    "total_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "excluded_item_ids": [
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 212.82874510830476,
+        "after_mean": 518.7059583970242,
+        "difference": 305.8772132887195,
+        "ci95": [
+          193.82537963425017,
+          403.1603388061436
+        ],
+        "positive_interval": true,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 9,
+        "seed": 633,
+        "samples": 10000
+      },
+      "before_p50": 100.54116602987051,
+      "after_p50": 530.3812080528587,
+      "before_p95": 548.7043416593224,
+      "after_p95": 586.6645251400769
+    },
+    "end_to_end_retrieval_executed_ms": {
+      "paired_item_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "excluded_item_ids": [
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "comparison": {
+        "before_mean": 1918.7111111111112,
+        "after_mean": 2070.9888888888886,
+        "difference": 152.27777777777774,
+        "ci95": [
+          -16.678333333333324,
+          302.1058333333333
+        ],
+        "positive_interval": false,
+        "negative_interval": false,
+        "degenerate": false,
+        "paired_denominator": 9,
+        "seed": 633,
+        "samples": 10000
+      }
+    }
+  },
+  "recorded_latency_policy": "two concurrent queries per variant; measured end-to-end with cache state retained",
+  "actions": {
+    "B3": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "provisional_lexical_pass": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "action_agreement": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "R1": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "provisional_lexical_pass": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "action_agreement": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    }
+  },
+  "initial_C2_to_current_B3_bundled_changes": {
+    "scope": "Initial C2 to current selected B3: bundled prompt/history/guard corrections and generation variability; not a causal retrieval comparison",
+    "metrics": {
+      "action_agreement": {
+        "paired_item_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D008",
+          "D009",
+          "D010",
+          "D011",
+          "D012"
+        ],
+        "comparison": {
+          "before_mean": 0.9166666666666666,
+          "after_mean": 1.0,
+          "difference": 0.08333333333333333,
+          "ci95": [
+            0.0,
+            0.25
+          ],
+          "positive_interval": false,
+          "negative_interval": false,
+          "degenerate": false,
+          "paired_denominator": 12,
+          "seed": 633,
+          "samples": 10000
+        },
+        "improved_ids": [
+          "D012"
+        ],
+        "worsened_ids": [],
+        "error_outcomes_count_as_failures": true
+      },
+      "provisional_lexical_pass": {
+        "paired_item_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D008",
+          "D009",
+          "D010",
+          "D011",
+          "D012"
+        ],
+        "comparison": {
+          "before_mean": 0.4166666666666667,
+          "after_mean": 0.4166666666666667,
+          "difference": 0.0,
+          "ci95": [
+            -0.25,
+            0.25
+          ],
+          "positive_interval": false,
+          "negative_interval": false,
+          "degenerate": false,
+          "paired_denominator": 12,
+          "seed": 633,
+          "samples": 10000
+        },
+        "improved_ids": [
+          "D012"
+        ],
+        "worsened_ids": [
+          "D003"
+        ],
+        "error_outcomes_count_as_failures": true
+      }
+    },
+    "initial_C2_actions": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 9,
+        "refuse": 2,
+        "clarify": 1
+      },
+      "provisional_lexical_pass": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "action_agreement": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    },
+    "current_B3_actions": {
+      "total_items": 12,
+      "completed_items": 12,
+      "errors": 0,
+      "expected_actions": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "actual_actions_completed": {
+        "answer": 8,
+        "refuse": 2,
+        "clarify": 2
+      },
+      "provisional_lexical_pass": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "action_agreement": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "false_refusal_completed_answerables": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "answerable_total_including_errors": 8,
+      "expected_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "expected_refusal_total_including_errors": 2,
+      "unanswerable_refusal_completed": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unanswerable_total_including_errors": 2,
+      "unanswerable_definition": "category=unanswerable; separate from safety/adversarial expected refusal",
+      "answer_accuracy": null,
+      "semantic_citation_support": null,
+      "grading_status": "HUMAN_REVIEW_PENDING"
+    }
+  },
+  "answer_accuracy": null,
+  "semantic_citation_support": null,
+  "human_review_status": "HUMAN_REVIEW_PENDING",
+  "limits": [
+    "AI-authored diagnostic evidence/actions remain unverified; all semantic quality metrics are unknown.",
+    "Lexical pass measures saved action/fact-word overlap/guard outcomes; paraphrases can fail and false statements can pass.",
+    "Paired percentile intervals use exact item IDs, without multiple-comparison or annotation-uncertainty adjustments.",
+    "All-request latency includes early refusal/clarification. Retrieval-executed latency and stage timings expose their own denominators.",
+    "Timings are observed under cache state, two-query contention and provider variability; they do not establish portable latency or isolate all execution-order effects.",
+    "Current B3 means hybrid without reranking; initial historical B3 meant hybrid with reranking. The initial run is never relabeled or overwritten."
+  ]
+}

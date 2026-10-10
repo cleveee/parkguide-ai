@@ -1,0 +1,26 @@
+{
+  "implementation_owner": "Claude Code CLI / claude-opus-5-5",
+  "verification_owner": "Codex root / real localhost browser and independent API checks",
+  "journeys": [
+    "No selected park: disabled chat, real corpus metadata",
+    "Yosemite: selected banner and correct 56-document/1,377-structure-chunk scope",
+    "Actual cited answer and one genuine follow-up, never a displayed draft",
+    "Source preview: stored excerpt/date/heading/official URL/reviewer witnesses",
+    "Retrieval inspector: actual query, candidates/scores/counts/timing; no confidence probabilities",
+    "Data flow: one Azure resource, local search/rerank, bounded history, cited-only review, skipped steps for local refusals",
+    "Fictional absent fact: controlled refusal and no delivered Sources used cards",
+    "Wrong park, current conditions and personal records: local refusals with zero model usage",
+    "Switch/clear/new conversation: no stale chat or source panel; ignore old pending response",
+    "Read-only corpus browser: exact SQLite counts, search/pagination/HTML/PDF/table details",
+    "Keyboard focus/escape/selection; narrow viewport and no horizontal overflow",
+    "Runtime error logs; typecheck/production build; original guards plus meaningful offline API tests",
+    "Report update: preserve historical evidence; separate current UI proof, new request ledger window and Claude model/run attribution"
+  ],
+  "cost_boundary": "Existing $5 ParkGuide API cap; Claude CLI usage recorded separately; no gold or sealed test use",
+  "immutable_baselines": [
+    "data/corpus_summary.json",
+    "data/evaluation/gold-drafts.jsonl",
+    "config/project.json"
+  ],
+  "source_archive": "artifacts/frontend/pre-web-source.zip"
+}

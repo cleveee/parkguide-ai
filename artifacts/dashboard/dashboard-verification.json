@@ -1,0 +1,33 @@
+{
+  "html": "/Users/robin/Build/Personal/parkguide-ai/dashboard/index.html",
+  "dashboard_url": "http://127.0.0.1:8512/",
+  "payload_sha256": "b9f2e6e6a99f856a01f431a4c2657a7a5c93998b491eb21854633c2bce7b5447",
+  "html_sha256": "a6aba43eaa3e3a27d5eaf3bd3098ee1402839a7aa8938de3f21300ab98efe240",
+  "source_hashes_verified": 79,
+  "source_documents": 155,
+  "stages": 7,
+  "attempted_evaluation_rows": 305,
+  "completed": 304,
+  "application_errors": 1,
+  "unattempted_planned_turns": 1,
+  "final_ai_reviews": 66,
+  "human_verified_gold": 0,
+  "held_out_test_consumed": false,
+  "browser_checks": [
+    "PDF filter=5",
+    "table filter=45",
+    "Yosemite filter=56",
+    "stage 1 issues filter=9 of 89",
+    "stage 2 rerank label verified",
+    "stage 6 no baseline correctly shown",
+    "final dialogue filter=18 of 66",
+    "latest AI review table matches raw labels",
+    "current and historical ledgers distinct",
+    "no page horizontal overflow at observed viewport",
+    "no console errors or warnings"
+  ],
+  "json_export": "Adjacent JSON file HTTP 200 and payload matches embedded HTML; blob download event unavailable in in-app browser, replaced with direct JSON link",
+  "screenshot": "artifacts/dashboard/dashboard-preview.png",
+  "api_calls_for_dashboard": 0,
+  "note": "126 pipeline tests are historical implementation evidence; dashboard verification uses artifact reconciliation and actual browser checks."
+}

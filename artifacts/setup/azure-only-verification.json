@@ -1,0 +1,148 @@
+{
+  "verified_at_utc": "2026-10-10T14:38:30.519009+00:00",
+  "configuration": {
+    "phase": "local_poc_human_review_pending",
+    "database": "data/parkguide.sqlite",
+    "embedding": {
+      "provider": "azure_openai",
+      "deployment": "text-embedding-3-small",
+      "observed_model": "text-embedding-3-small",
+      "dimension": 1536,
+      "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+      "model_version": "not_exposed_by_embedding_response",
+      "api_style": "v1",
+      "normalization": "l2",
+      "dtype": "float32",
+      "batch_size": 16,
+      "preprocessing_version": "text-preserve-v1",
+      "cache_by": [
+        "text_sha256",
+        "embedding_config_sha256"
+      ],
+      "identity_fields": [
+        "provider",
+        "endpoint",
+        "api_style",
+        "deployment",
+        "observed_model",
+        "model_version",
+        "dimension",
+        "normalization",
+        "dtype",
+        "preprocessing_version"
+      ]
+    },
+    "generation": {
+      "provider": "azure_openai",
+      "model": "gpt-6-luna-2026-09-22",
+      "deployment": "gpt-6-luna",
+      "accepted_response_models": [
+        "gpt-6-luna-2026-09-22"
+      ],
+      "max_output_tokens": 1000,
+      "temperature": 0,
+      "reasoning_effort": "none",
+      "review_claims": true
+    },
+    "chunking": {
+      "strategies": [
+        "fixed",
+        "structure"
+      ],
+      "body_target_tokens": 200,
+      "overlap_tokens": 40,
+      "tokenizer": "cl100k_base",
+      "preserve_table_headers": true
+    },
+    "retrieval": {
+      "candidate_count": 20,
+      "per_retriever_fetch": 40,
+      "final_context_count": 5,
+      "rrf_k": 60,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "context_token_budget": 1600,
+      "default_rerank": false,
+      "selected_park_rerank": true,
+      "selection_basis": "Initial paired diagnostic showed no evidence lift and extra rerank latency; shorter-prompt hybrid candidate had 12/12 expected actions. Human gold validation pending."
+    },
+    "evaluation": {
+      "split_seed": 633,
+      "gold_count": 40,
+      "dev_count": 24,
+      "test_count": 16,
+      "dialogue_count": 6,
+      "min_user_turns_per_dialogue": 3,
+      "max_dev_cycles": 10,
+      "no_improvement_limit": 3,
+      "bootstrap_samples": 10000,
+      "proposed_api_budget_usd": 5.0,
+      "budget_status": "approved_implementation_plan",
+      "transient_retries": 2
+    }
+  },
+  "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+  "endpoint_binding": {
+    "single_resource": true,
+    "generation_endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com/openai/v1/chat/completions",
+    "embedding_endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com/openai/v1/embeddings",
+    "shared_key": true,
+    "environment_names": [
+      "AZURE_OPENAI_API_KEY",
+      "AZURE_OPENAI_EMBEDDING_DEPLOYMENT",
+      "AZURE_OPENAI_ENDPOINT",
+      "AZURE_OPENAI_GENERATION_DEPLOYMENT"
+    ],
+    "env_mode": "0600",
+    "direct_openai_configuration": false,
+    "fallback_provider": false,
+    "api_keys_included": false
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "total_passed": 290,
+    "elapsed_seconds": 1.18,
+    "network_calls": 0,
+    "pip_check": "No broken requirements found."
+  },
+  "database": {
+    "documents": 155,
+    "chunks": 5405,
+    "embeddings": 5405,
+    "index_builds": 2
+  },
+  "foreign_key_errors": 0,
+  "component_hashes": {
+    "app.py": "184cea2601bd6a4b02d7fdf942901750435a0c5f37cefddde5994f7a7083650b",
+    "src/parkguide/__init__.py": "bacbeab4d9eabfff390b4006b03b52cf4c690c3e3dd977463417aa93b123c780",
+    "src/parkguide/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/parkguide/azure.py": "098b2a4b7d7da688e450557587d756f06bee9f1398e039edce2a489dac5fa9f7",
+    "src/parkguide/budget.py": "665e28841600a9639344eceb4ab80ee8391cf427dbeba51ff40fe9822c5835d7",
+    "src/parkguide/chat.py": "8aeb06cf2bc5b36bfed6a28b87a1e90ab5248a16bcdb0b38a5cf962ab7f5d53a",
+    "src/parkguide/chunking.py": "79357613e5d35d5e8269cf6adaa60252b1f7e6ea7e01775236b07d952062b222",
+    "src/parkguide/claim_review.py": "652fcf86710b5b2ecd7491c9dc043d3869a9ad78e4c7ea22189950e0e064c0c2",
+    "src/parkguide/cli.py": "6c7f370a6435bf71a64baafa172af9592d9dd0d908d76df6c52e358630174f17",
+    "src/parkguide/embedding_cache.py": "585e04a6cf1d45851dd0ea0ec6dbac8aa8cd1f7865a5a1475e857e29eb769b12",
+    "src/parkguide/evaluation.py": "afe6d401b243a8bd01bda8bc99f6e9985d0619bbfc6bcd135010b31f665f17a3",
+    "src/parkguide/generation.py": "9d58aed0c2dcbd46782e6e5ce4ced369fd9bd5b0052e4bff37c5273d9f16a661",
+    "src/parkguide/guards.py": "b7c3cf0b1aca6189091320da6599c5876c6b33f2eb74e227f6628578de834026",
+    "src/parkguide/ingest.py": "d6342018ca9dedeb6813475c8be0d26bd09d8735f881ae8580ba661343f45462",
+    "src/parkguide/reports.py": "82dca0e81a8ac5684e8682aac6f257db953aa1be318f4e6a3a01956dd4241fbd",
+    "src/parkguide/retrieval.py": "024480e484c02559d4ff3fd3b5282c458c01dd451f9b27533775a3f5d4bacb0a",
+    "src/parkguide/runtime.py": "9d703b34679addcb74d5ef35428dd4ad163f1d3519ffa3894c9680c96d940d5c",
+    "src/parkguide/source_links.py": "aa016f5cb9ec2ca6b23511fe8ecb14f176667579b60f619f69f72f76af278517",
+    "src/parkguide/store.py": "d7c8118cff9d5ca696ba1918d1c7d723087472b956375f6950e6b9f28feb298c",
+    "src/parkguide/table_math.py": "f269f86c7dbde36cc0d1483110bd05f1856c860da7caed571c17433304cf3439",
+    "config/project.json": "02f52c44bc41038e7f55c45f9f61defe5d1a7e94316b484a4c30c6e1b36b2253",
+    "config/pricing.json": "8309da55422764191733cba15521eef41b9d47174559f80c9c9b30071e731136"
+  },
+  "corpus_sha256": "2d1285fed3c6b9960496999daa4dff4656df40c20c10d89c821c913db8d9589d",
+  "gold_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+  "human_verified_gold": 0,
+  "formal_test_created_or_consumed": false,
+  "live_smoke_artifact": "artifacts/setup/azure-luna-smoke-20261010T142410Z-05470fb5.json",
+  "latest_scope_run": {
+    "folder": "artifacts/park-scope/20261010T143500Z-50f15a2d",
+    "summary_sha256": "094fa121bdff48c2b1bf46166a0b2494b52e31932d1769a2a9cc2fc0972a1676"
+  }
+}

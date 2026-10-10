@@ -1,0 +1,82 @@
+{
+  "question": "Can I fly a recreational drone in the park?",
+  "retrieval_query": "Yosemite: Can I fly a recreational drone in the park?",
+  "rerank": true,
+  "timings": {
+    "load_ms": 277.05000014975667,
+    "retrieval_ms": 22.2978750243783,
+    "rerank_ms": 5774.473499972373,
+    "total_ms": 6073.834458133206
+  },
+  "final": [
+    {
+      "id": "9fdbaf2a8d811159ca263b06959af0ea6cfafc29ea5a6e535dba24f2138b1bb3",
+      "url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+      "heading": "Heading: Your Safety > Air Delivery and Unmanned Aircraft",
+      "scores": {
+        "bm25": 2.483105924934301,
+        "dense": 0.69209885597229,
+        "rrf": 0.01639344262295082,
+        "rerank": 5.755653381347656
+      }
+    },
+    {
+      "id": "b78b1f66fd1ced523e428d6dde1cabfc663c1441743ce496dc5a920ecbec93ae",
+      "url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+      "heading": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+      "scores": {
+        "bm25": 2.4057521979647873,
+        "dense": 0.566382110118866,
+        "rrf": 0.016129032258064516,
+        "rerank": 1.5786439180374146
+      }
+    },
+    {
+      "id": "60ca164023f5014e58d171a2b0014a8a918a558493e23583cd85099a776421c9",
+      "url": "https://www.nps.gov/yose/planyourvisit/safety.htm",
+      "heading": "Heading: Your Safety > Special Protection for Special Places",
+      "scores": {
+        "bm25": 2.4284234976985535,
+        "dense": 0.5000848770141602,
+        "rrf": 0.015384615384615385,
+        "rerank": -2.3101723194122314
+      }
+    },
+    {
+      "id": "68b420e22a60264e8d8f767602216320e0ebbe44cc60f30bfbf6d7ab04d56d2b",
+      "url": "https://www.nps.gov/yose/planyourvisit/authorizedguides.htm",
+      "heading": "Heading: Authorized Guiding and Transportation Companies > Authorized Guiding and Transportation Companies",
+      "scores": {
+        "bm25": 14.930549141131788,
+        "dense": 0.3682697117328644,
+        "rrf": 0.01639344262295082,
+        "rerank": -3.0326433181762695
+      }
+    },
+    {
+      "id": "f517bdb6a75a0cb7cf28f07785a3c1f9bb6781dc7eeeaa13f651a7e886a2a739",
+      "url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "heading": "Heading: Campgrounds > Campfires and Wood Smoke",
+      "scores": {
+        "bm25": 5.538653741466858,
+        "dense": 0.48631829023361206,
+        "rrf": 0.015151515151515152,
+        "rerank": -3.358729362487793
+      }
+    }
+  ],
+  "ledger_before": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.5500864400000001,
+    "remaining_estimated_usd": 4.44991356,
+    "events": 835,
+    "basis": "published prices and provider token usage; not a billing statement"
+  },
+  "ledger_after": {
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.5500864400000001,
+    "remaining_estimated_usd": 4.44991356,
+    "events": 835,
+    "basis": "published prices and provider token usage; not a billing statement"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "cap_usd": 5.0,
+  "estimated_committed_usd": 0.743718758,
+  "remaining_estimated_usd": 4.256281242,
+  "events": 964,
+  "basis": "published prices and provider token usage; not a billing statement",
+  "recorded_at_utc": "2026-10-10T14:37:48.965505+00:00",
+  "last_event_utc": "2026-10-10T14:36:55.213820+00:00"
+}

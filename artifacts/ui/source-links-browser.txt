@@ -1,0 +1,49 @@
+- button "New conversation":
+  - paragraph: New conversation
+- paragraph: Search
+- combobox "Search": hybrid
+- button "Open":
+- checkbox "Rerank passages"
+- paragraph: Rerank passages
+- banner:
+  - button "keyboard_double_arrow_right":
+    - generic: keyboard_double_arrow_right
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "ParkGuide" [level=1]:
+  - text: ParkGuide
+  - link "Link to heading":
+    - /url: "#park-guide"
+- paragraph: Explore Yosemite, Yellowstone, and Grand Canyon using saved official NPS sources.
+- status:
+  - paragraph: Answers describe a saved source snapshot. Check current official notices and ask a ranger for safety-sensitive decisions.
+- generic: face
+- generic "Chat message from user":
+  - paragraph: How far should I stay from a bear in Yellowstone?
+- generic: smart_toy
+- generic "Chat message from assistant":
+  - paragraph:
+    - text: Always stay at least 100 yards (91 m) away from bears in Yellowstone.
+    - link "Current Conditions - Yellowstone National Park (U.S. National Park Service)":
+      - /url: https://www.nps.gov/yell/planyourvisit/conditions.htm
+  - paragraph:
+    - strong: Sources used
+  - paragraph: Official links open the current page. Saved excerpts below describe the snapshot used for this answer.
+  - link "1. Current Conditions - Yellowstone National Park (U.S. National Park Service)":
+    - /url: https://www.nps.gov/yell/planyourvisit/conditions.htm
+    - paragraph: 1. Current Conditions - Yellowstone National Park (U.S. National Park Service)
+  - paragraph: "HTML · Source date: 2026-09-29 · Saved: Oct 09, 2026, 09:48 PM CDT"
+  - generic "keyboard_arrow_down View 1 cited passage" [active]:
+    - generic: keyboard_arrow_down
+    - paragraph: View 1 cited passage
+  - generic: Current Conditions > Alerts > Wildlife
+  - paragraph: Cited for claim 1
+  - generic: …in Yellowstone are wild and unpredictable, no matter how calm they appear to be. Always stay at least 100 yards (91 m) away from bears…
+  - paragraph: "Saved text offsets: 3573–3581; 3583–4003; 4005–4037"
+  - paragraph: Excerpts total at most 25 words per source page. Full saved passages remain in the run evidence.
+  - generic "keyboard_arrow_right Search trace and other retrieved passages":
+    - generic: keyboard_arrow_right
+    - paragraph: Search trace and other retrieved passages
+- textbox "Ask about visiting a park"
+- button "Send message" [disabled]:

@@ -1,0 +1,59 @@
+{
+  "kind": "synthetic local integration smoke, fixture document/query vectors, real pinned CPU CrossEncoder, not course evaluation",
+  "timestamp_utc": "2026-10-10T03:44:41.164945+00:00",
+  "build_id": "145229f76412323e3a6b6cf1ce31dc4461e7a22885b5f33b14614644a4bbb45e",
+  "requested_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "candidate_count": 20,
+  "final_count": 5,
+  "rerank_input_tokens": [
+    24,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27
+  ],
+  "top_doc": "synthetic-00",
+  "scores": [
+    [
+      "synthetic-00",
+      6.846957683563232
+    ],
+    [
+      "synthetic-16",
+      -11.24931526184082
+    ],
+    [
+      "synthetic-18",
+      -11.249946594238281
+    ],
+    [
+      "synthetic-13",
+      -11.254379272460938
+    ],
+    [
+      "synthetic-17",
+      -11.255300521850586
+    ]
+  ],
+  "timings": {
+    "load_ms": 0.6639580242335796,
+    "retrieval_ms": 0.6532499101012945,
+    "rerank_ms": 7401.201792061329,
+    "total_ms": 7402.532249921933
+  }
+}

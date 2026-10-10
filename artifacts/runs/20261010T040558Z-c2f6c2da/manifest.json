@@ -1,0 +1,22 @@
+{
+  "kind": "non_gold_diagnostic",
+  "dataset_hash": "cedb447dc97b0e9b1c150156880e830622fa1555d4969c6b1e162ec7f2f1d2a0",
+  "config_hash": "8cbad7c3bf6186b0ef36789ed9c49ad0171cbd5288c2490e33317b7ee1efd51f",
+  "code_hash": "d24aa6b766b9c89fef57abc5f61038182296f7d0d786017424db9266a0476f94",
+  "configurations": [
+    {
+      "name": "B3",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": false
+    },
+    {
+      "name": "R1",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": true
+    }
+  ],
+  "request_concurrency": 2,
+  "latency_policy": "two concurrent queries per variant; measured end-to-end with cache state retained"
+}

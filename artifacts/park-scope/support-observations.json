@@ -1,0 +1,66 @@
+[
+  {
+    "run_id": "20261010T140930Z-a2c13daf",
+    "results_sha256": "7c0d0f8ebe9f8c00ffe565113a2dccea68281bf83f703b2974b2b2703cbe5fe3",
+    "dialogue_id": "P05",
+    "turn": 1,
+    "kind": "AI audit observation; human adjudication pending",
+    "human_review_pending": true,
+    "finding": "An operational expected-action match concealed an unsupported drone claim. Its five cited saved passages concern trip planning, pets/transport, camping limits and guide material; none supplies the drone prohibition. The later stricter reviewer withheld the unsupported answer. A separate local reranking check recovered the actual drone rule from the unchanged database. This is an AI audit observation, with human adjudication pending.",
+    "cited_ids": [
+      "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+      "c62d7f90716006d2da3333c4037b1a0a36de45a394c17834c6cb2c253e2cb499",
+      "3f27e0b16e14e91211c438a2bb16dfd5be8e586e4ed97cddc331a656217a61ce",
+      "6cfe963bf3a2a53a6285e56ac5eac6bfa962d65ab40f213eb4231e8a1c15f454",
+      "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd"
+    ],
+    "cited_source_urls": [
+      "https://www.nps.gov/yose/planyourvisit/index.htm",
+      "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+      "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+      "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+      "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf"
+    ],
+    "raw_review": {
+      "decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "None of the provided Yosemite National Park passages mention recreational drones or their allowance, confirming no mention of recreational drones allowed in the park.",
+          "supporting_quotes": [
+            {
+              "evidence_id": "0512d9f22f14fe6baafbbe675503ff64befddf4a54df9fe63b841845d4bd06d9",
+              "quote": "Plan Ahead Before Packing your Pet Pets are allowed in Yosemite on leashes and in most campgrounds, but they are not allowed on most trails."
+            },
+            {
+              "evidence_id": "c62d7f90716006d2da3333c4037b1a0a36de45a394c17834c6cb2c253e2cb499",
+              "quote": "leashed pets welcome pets NOT allowed pets are also allowed on paved bike paths"
+            },
+            {
+              "evidence_id": "3f27e0b16e14e91211c438a2bb16dfd5be8e586e4ed97cddc331a656217a61ce",
+              "quote": "Bicycles are NOT run from 9 am to 7 pm (last bus leaves the 9 El Capitan EV charging is available at no cost"
+            },
+            {
+              "evidence_id": "6cfe963bf3a2a53a6285e56ac5eac6bfa962d65ab40f213eb4231e8a1c15f454",
+              "quote": "There is a 30-night camping limit within Yosemite National Park in a calendar year"
+            },
+            {
+              "evidence_id": "d90a1b435deea468939eaf9134c986320fe26114b6c20552830e3c4eb6d21cfd",
+              "quote": "Yosemite Valley can be extremely busy, especially on weekends and holidays."
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 2480,
+        "output_tokens": 385
+      },
+      "elapsed_ms": 2765.7,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "prompt_sha256": "f871e74d8e570f821b19f1f8e9c29080690f8132da6ff49a3c939a83b0492d7a",
+      "cost_estimate_usd": 0.001608,
+      "withheld_claims": 0
+    },
+    "root_review_timestamp": "2026-10-10T14:28:23.999607+00:00"
+  }
+]

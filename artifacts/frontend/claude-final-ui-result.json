@@ -1,0 +1,110 @@
+{
+  "duration_api_ms": 2702892,
+  "stop_reason": "end_turn",
+  "session_id": "524cde8a-3c1b-4ea0-a462-ce60d7273109",
+  "total_cost_usd": 24.766077999999997,
+  "usage": {
+    "input_tokens": 38,
+    "cache_creation_input_tokens": 39134,
+    "cache_read_input_tokens": 10305139,
+    "output_tokens": 20588,
+    "output_tokens_details": {
+      "thinking_tokens": 3189
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 39134,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1093,
+        "cache_read_input_tokens": 556723,
+        "cache_creation_input_tokens": 3827,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3827
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 470,
+      "outputTokens": 295105,
+      "thinkingTokens": 71793,
+      "cacheReadInputTokens": 71884246,
+      "cacheCreationInputTokens": 560550,
+      "webSearchRequests": 0,
+      "costUSD": 24.765229199999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-5-5": {
+      "inputTokens": 2383,
+      "outputTokens": 1221,
+      "thinkingTokens": 722,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0008488,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 47,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "I've fixed the remaining frontend problems. The typecheck and build pass, lint has no errors, and all 397 Python tests still pass. No browser re-check has been done: the 375\u00d7812 dialog fix in particular needs re-measuring.\n\nChecked against the current files, the reviewer's points about API types, error details, history counts and the persistence wording were already fixed in the last pass, so I left them alone.\n\n**Fixed in this pass (all in `web/src`):**\n- **Mobile dialog overflow:** How it works and the evidence dialog now have a bounded height and one scrolling body, instead of content spilling past the bottom of the screen. User text, claims, witness quotes, excerpts and error text now wrap long words.\n- **Source cards:** each card leads with the verified reviewer witness quotes. The word-overlap snippet follows, labelled \"Context excerpt (chosen by word overlap, not by the reviewer)\". The evidence dialog uses the same order.\n- **Retry and Stop:**\n  - Error cards keep the server message and the recorded spend, or say the spend is unknown when the server sent none.\n  - Retry is hidden for errors that would fail the same way again (validation, budget, pricing, configuration and similar).\n  - Other errors offer \"Retry (may spend again)\" with a warning.\n  - The send button no longer stops a reply; \"Stop waiting\" is the only stop control. The stopped-turn note and the clear-conversation confirmation say the server keeps working (and may still spend) and that a new question will get \"busy\" until it finishes.\n- **History:** other-park refusals are still left out, and any pair with blank text is now skipped. A reply for the wrong park now shows as an error instead of spinning forever.\n- **Metadata failure:** the footer shows the real load error and its code, with a Reload metadata button. If the server reports chat isn't ready, it shows the server's reason code; the hard-coded gold-draft sentence is gone.\n- **`formatUsd`:** a positive cost never displays as zero. Very small values use scientific notation (for example `$1.20e-7`).\n- **Local-check wording:** How it works and the Data flow now say the checks only catch recognized phrasings, and that a differently worded request can go on to search, drafting and review. The per-turn Data flow is the record of what actually happened, which matches the FAKE-LOCAL-123 case.\n\nThe backend was not touched, so the running server doesn't need a restart; a browser reload picks up the new bundle.\n\nThe dashboard hook is unchanged: it still shows \"pending\" until `artifacts/ui/web-app-verification.json` exists, and I didn't write that file or edit `dashboard/index.html`. The summary records the fields the builder reads (`verified_at_utc`, `summary`, optional `api_usage.ledger_after.events`) and a suggested shape for the file, with every value to come from your real browser checks.\n\nStill open: real conversations, refusals and cancellation in the browser, and keyboard and screen-reader behavior. The core pattern checks still miss differently worded private or live requests; only the wording changed, since core modules were off-limits. The bundle remains a single ~607 kB chunk.\n\nThe full details are in `artifacts/frontend/claude-final-ui-summary.md`. I'm stopping here for your browser tests and report rebuild.",
+  "ttft_ms": 2869,
+  "type": "result",
+  "duration_ms": 188807,
+  "uuid": "36740319-f19c-4b24-b0b8-4f4a166e28d2",
+  "ttft_stream_ms": 2626,
+  "time_to_request_ms": 108,
+  "first_content_frame_ms": 2626,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "non_gold_diagnostic",
+  "dataset_hash": "cedb447dc97b0e9b1c150156880e830622fa1555d4969c6b1e162ec7f2f1d2a0",
+  "config_hash": "9936f38d7265bca7c8d6ca44515ee4ba5e0d97b306a37137216bddda1c5883e1",
+  "configurations": [
+    {
+      "name": "B0",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "closed_book": true
+    },
+    {
+      "name": "B1",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "mode": "bm25",
+      "rerank": false
+    },
+    {
+      "name": "B2",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "mode": "dense",
+      "rerank": false
+    },
+    {
+      "name": "C1",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "dense",
+      "rerank": false
+    },
+    {
+      "name": "C2",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": false
+    },
+    {
+      "name": "B3",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "mode": "hybrid",
+      "rerank": true
+    }
+  ],
+  "request_concurrency": 2,
+  "latency_policy": "two concurrent queries per variant; measured end-to-end with cache state retained"
+}

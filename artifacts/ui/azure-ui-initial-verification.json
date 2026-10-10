@@ -1,0 +1,74 @@
+{
+  "verified_at_utc": "2026-10-10T14:35:38.959941+00:00",
+  "phase": "Initial Azure browser answer before cited-only reviewer input tightening",
+  "url": "http://127.0.0.1:8511/",
+  "selected_park": "yose",
+  "observed_response": "Keep at least 50 yards from a bear outside developed areas.",
+  "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+  "human_review_pending": true,
+  "api_usage": {
+    "ledger_before": {
+      "cap_usd": 5.0,
+      "estimated_committed_usd": 0.726167438,
+      "remaining_estimated_usd": 4.273832562,
+      "events": 931,
+      "basis": "published prices and provider token usage; not a billing statement",
+      "recorded_at_utc": "2026-10-10T14:32:46.635603+00:00",
+      "last_event_utc": "2026-10-10T14:32:05.357572+00:00"
+    },
+    "events": [
+      {
+        "id": "0d505fbd77cd4918aed2641e365a2db4",
+        "kind": "generation",
+        "timestamp": "2026-10-10T14:33:37.866553+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00033408,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 2324,
+        "output_tokens": 92
+      },
+      {
+        "id": "5f5ef16af53d479fb8afd89b01a33e48",
+        "kind": "generation",
+        "timestamp": "2026-10-10T14:33:39.724205+00:00",
+        "status": "reported_usage",
+        "cost_estimate_usd": 0.00084984,
+        "rates": {
+          "provider": "azure_openai",
+          "model": "gpt-6-luna-2026-09-22",
+          "region": "eastus2",
+          "input_per_million_usd": 0.12,
+          "output_per_million_usd": 0.6,
+          "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "basis": "conservative published Standard short-context estimate",
+          "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+          "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+          "billing_confirmed": false,
+          "deployment_sku_confirmed": false,
+          "global_standard_reference_input_per_million_usd": 0.1,
+          "global_standard_reference_output_per_million_usd": 0.5,
+          "evidence": "artifacts/setup/azure-luna-discovery.json"
+        },
+        "input_tokens": 6772,
+        "output_tokens": 62
+      }
+    ],
+    "incremental_cost_estimate_usd": 0.00118392,
+    "end_event_index_exclusive": 933
+  }
+}

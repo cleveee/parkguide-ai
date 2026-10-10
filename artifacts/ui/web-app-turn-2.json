@@ -1,0 +1,701 @@
+{
+  "exported_at": "2026-10-10T15:47:25.661Z",
+  "history_storage": "browser_memory_only",
+  "turn": {
+    "turn_id": "e5e845993d5f4b6299372c7934a66368",
+    "selected_park": "yose",
+    "question": "And what should I do if the bear is in a developed area?",
+    "status": "answer",
+    "text": "Yell very loudly and aggressively to scare the bear away.",
+    "claims": [
+      {
+        "number": 1,
+        "text": "Yell very loudly and aggressively to scare the bear away.",
+        "source_numbers": [
+          1
+        ],
+        "review": {
+          "reason": "The Yosemite passage says to scare away a bear in a developed area by yelling very loudly and aggressively."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "number": 1,
+        "title": "Bears and Food Storage - Yosemite National Park (U.S. National Park Service)",
+        "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+        "park": "yose",
+        "page_type": "html",
+        "effective_date": "2024-03-14",
+        "crawled_at": "2026-10-10T02:48:00.506595+00:00",
+        "captured_label": "Oct 09, 2026, 09:48 PM CDT",
+        "passages": [
+          {
+            "chunk_id": "c52a95a59bf0d5efc36130f22f290f6334dec42cea26a80ef6c24c7c72f6fe25",
+            "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+            "heading_path": "Bears and Food Storage > Bear Encounters",
+            "excerpt": "lengths).\n\nIf you see a bear in a developed area or if a bear approaches you, scare it away by yelling very loudly and aggressively",
+            "excerpt_leading_omission": true,
+            "excerpt_truncated": true,
+            "saved_text": "Heading: Bears and Food Storage > Bear Encounters\n\nBear Encounters\n\nIf you see a bear outside of developed areas, keep your distance: Remain at least 50 yards (four shuttle bus lengths).\n\nIf you see a bear in a developed area or if a bear approaches you, scare it away by yelling very loudly and aggressively.\n\nFind out more about what to do if you see a bear .\n\nLast updated: March 14, 2024",
+            "pdf_start_page": null,
+            "passage_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+            "source_spans": [
+              {
+                "start": 3918,
+                "end": 3933,
+                "kind": "paragraph"
+              },
+              {
+                "start": 3935,
+                "end": 4053,
+                "kind": "paragraph"
+              },
+              {
+                "start": 4055,
+                "end": 4176,
+                "kind": "paragraph"
+              },
+              {
+                "start": 4178,
+                "end": 4228,
+                "kind": "paragraph"
+              },
+              {
+                "start": 4230,
+                "end": 4258,
+                "kind": "paragraph"
+              }
+            ],
+            "claim_numbers": [
+              1
+            ],
+            "reviewer_witnesses": [
+              {
+                "claim_number": 1,
+                "quote": "bear in a developed area or if a bear approaches you, scare it away by yelling very loudly and aggressively."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "history_content": "Yell very loudly and aggressively to scare the bear away. [Bears and Food Storage - Yosemite National Park (U.S. National Park Service)](https://www.nps.gov/yose/planyourvisit/bears.htm)",
+    "history_scope_reset": false,
+    "reason": null,
+    "timing": {
+      "answer_call_ms": 12601.6,
+      "pipeline_ms": 12601.5,
+      "server_ms": 12611.1
+    },
+    "history": {
+      "messages_received": 2,
+      "messages_used": 2,
+      "scope_reset": false
+    },
+    "inspector": {
+      "retrieval": {
+        "ran": true,
+        "query": "And what should I do if the bear is in a developed area? Previous topic: At , how far should I stay from a bear when I am outside developed areas Parks: Yosemite",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "mode": "hybrid",
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "build_strategy": "structure",
+        "rerank_enabled": true,
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "requested_candidates": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "shortfall": false,
+        "timings_ms": {
+          "load_ms": 322.4729581270367,
+          "retrieval_ms": 27.948584174737334,
+          "rerank_ms": 247.0319161657244,
+          "total_ms": 597.4572910927236
+        },
+        "score_labels": {
+          "dense": "Cosine similarity (query vs. stored vector)",
+          "bm25": "BM25 Okapi lexical score",
+          "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+          "rerank": "Cross-encoder reranker raw score (not a probability)"
+        },
+        "candidates": [
+          {
+            "chunk_id": "c52a95a59bf0d5efc36130f22f290f6334dec42cea26a80ef6c24c7c72f6fe25",
+            "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+            "title": "Bears and Food Storage - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Bears and Food Storage > Bear Encounters",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 1,
+            "post_rank": 1,
+            "scores": {
+              "dense": 0.6528511047363281,
+              "bm25": 55.76113818995995,
+              "rrf": 0.032266458495966696,
+              "rerank": 6.0178914070129395
+            },
+            "retriever_ranks": {
+              "bm25": 1,
+              "dense": 3
+            },
+            "in_context": true,
+            "cited": true,
+            "snippet": "Heading: Bears and Food Storage > Bear Encounters\n\nBear Encounters\n\nIf you see a bear outside of developed areas, keep your distance: Remain at least 50 yards (four shuttle bus lengths).\n\nIf you see a bear in a developed area or if a bear approaches you, scare it away by yelling very loudly and aggressively.\n\nFind out more about what to do if you see a bear "
+          },
+          {
+            "chunk_id": "09cb4d898277789389ca61b8ddb8e11811a42bc39205552fb9fde5944434d8b6",
+            "doc_id": "d3c698548239b241d60e836f5f0e582beb628e8ef8104052f9fd1136281ebf5c",
+            "title": "Current Conditions - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Current Conditions > Seasonal Information",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 5,
+            "post_rank": 2,
+            "scores": {
+              "dense": 0.5485752820968628,
+              "bm25": 33.430817031301814,
+              "rrf": 0.02964254577157803,
+              "rerank": 0.527053952217102
+            },
+            "retriever_ranks": {
+              "bm25": 2,
+              "dense": 14
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Current Conditions > Seasonal Information\n\nSeasonal Information\n\nRivers & Waterfalls : Yosemite Falls is dry while Vernal Fall, Nevada Fall, and Bridalveil Fall are low.\n\nBears : Bears remain active in all areas of the park. Be sure to store your food properly , dispose of trash in bearproof dumpsters/trash cans, and remain at least 50 yards from be"
+          },
+          {
+            "chunk_id": "232bec52eece354178932e9bc840c775def58477f802951eca91cd64ea72db97",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 6,
+            "post_rank": 3,
+            "scores": {
+              "dense": 0.5813659429550171,
+              "bm25": 27.431130516660026,
+              "rrf": 0.029437229437229435,
+              "rerank": -3.248746633529663
+            },
+            "retriever_ranks": {
+              "bm25": 6,
+              "dense": 10
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n. Bears can easily break into vehicles in search of food. Store food inside a bear-proof DO: Lock your vehicle and keep all locker, in a hotel room or hard-sided cabin, or windows closed when you are away. Keep in a hard-sided RV with all windows and doors food*, drinks, and coolers hidden from sight"
+          },
+          {
+            "chunk_id": "74dcd90c2e0e4a5bbf7203165f555dcc177d47613e22ce3569a3266277cf4066",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 2",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 3,
+            "post_rank": 4,
+            "scores": {
+              "dense": 0.6866709589958191,
+              "bm25": 24.75988894427166,
+              "rrf": 0.03021353930031804,
+              "rerank": -3.323270797729492
+            },
+            "retriever_ranks": {
+              "bm25": 11,
+              "dense": 2
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 2\n\n, and anything else with a scent. All must be properly stored. If you see a bear in the park, email [email redacted] or call the Save-a-Bear hotline at 209/372-0322. To learn more about food storage and bears, visit KeepBearsWild.org. It’s illegal to approach or feed any wild animal in Yosemite, incl"
+          },
+          {
+            "chunk_id": "148534e991f5527fd20e87654c4fbf6c7aeca9760869adcb1c23546274b0cdd7",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 2,
+            "post_rank": 5,
+            "scores": {
+              "dense": 0.693562388420105,
+              "bm25": 25.392167577720194,
+              "rrf": 0.031099324975891997,
+              "rerank": -3.432995080947876
+            },
+            "retriever_ranks": {
+              "bm25": 8,
+              "dense": 1
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n properly stored. If you see a bear in the park, email [email redacted] or call the Save-a-Bear hotline at 209/372-0322. To learn more about food storage and bears, visit KeepBearsWild.org. It’s illegal to approach or feed any wild animal in Yosemite, including birds, squirrels, and deer. Wildlife ca"
+          },
+          {
+            "chunk_id": "7ecd252425553b8fc9aa6b381828d9c5ea791cbe6b6451a59f421fb5bd456739",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 2",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 4,
+            "post_rank": 6,
+            "scores": {
+              "dense": 0.5864490270614624,
+              "bm25": 27.794807223206767,
+              "rrf": 0.029877369007803793,
+              "rerank": -3.9837942123413086
+            },
+            "retriever_ranks": {
+              "bm25": 5,
+              "dense": 9
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 2\n\n your vehicle at while hiking or picnicking. night. Bears can easily break into vehicles in search of food. Store food inside a bear-proof DO: Lock your vehicle and keep all locker, in a hotel room or hard-sided cabin, or windows closed when you are away. Keep in a hard-sided RV with all windows and "
+          },
+          {
+            "chunk_id": "684ecfd825229d47f4f43e1020253f958e21089a93d410ecd89546ea0fa84868",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 2",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 7,
+            "post_rank": 7,
+            "scores": {
+              "dense": 0.6020215749740601,
+              "bm25": 24.856724861514493,
+              "rrf": 0.029437229437229435,
+              "rerank": -5.007497787475586
+            },
+            "retriever_ranks": {
+              "bm25": 10,
+              "dense": 6
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 2\n\nYosemite Essentials Keep Bears Wild Store Food Properly To a bear, “food” includes trash, toiletries, and anything else with a scent. All must be properly stored. During the Day While hiking or picnicking, always Vernal Fall keep your food within arm’s reach. When away from your vehicle, lock it and "
+          },
+          {
+            "chunk_id": "2a17be54e4c378c1142247bcdc71bbc24a80403c64216768e5c7d8d34f858463",
+            "doc_id": "1b6d367a2015c2e33dc2d9956fa2224b2648581d7f4729135e557b24af271b1f",
+            "title": "Eating & Sleeping - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Eating & Sleeping > Eating",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/eatingsleeping.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 8,
+            "post_rank": 8,
+            "scores": {
+              "dense": 0.529376745223999,
+              "bm25": 28.147858736113758,
+              "rrf": 0.02797067901234568,
+              "rerank": -5.246470928192139
+            },
+            "retriever_ranks": {
+              "bm25": 4,
+              "dense": 21
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Eating & Sleeping > Eating\n\nEating\n\nYosemite has numerous food options all year in Yosemite Valley and seasonally at Wawona, Badger Pass, Glacier Point, White Wolf, and Tuolumne Meadows. Additionally, groceries are available all year in Yosemite Valley, Wawona, Crane Flat, and El Portal, and seasonally at Tuolumne Meadows. Picnic areas are available"
+          },
+          {
+            "chunk_id": "5ca0e80fe2dd65ccda3f8071e431a0fd1fadbc355045251e0e756fe38ad372d6",
+            "doc_id": "85ccc9cbbb49a7fb4f54a9afeaa7d030c4a9a9d06b90ee2c507d55444bae3b16",
+            "title": "Brochures - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "OVERVIEW: Back Side of Brochure > MAP: YNP Text by Quadrant Overview > RELATED TEXT",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/brochures.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 9,
+            "post_rank": 9,
+            "scores": {
+              "dense": 0.560619592666626,
+              "bm25": 20.05222039394563,
+              "rrf": 0.025793650793650792,
+              "rerank": -5.449079513549805
+            },
+            "retriever_ranks": {
+              "bm25": 24,
+              "dense": 12
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: OVERVIEW: Back Side of Brochure > MAP: YNP Text by Quadrant Overview > RELATED TEXT\n\nRELATED TEXT\n\nRivers and waterfalls are beautiful but treacherous, especially in early spring and summer when water is high. Be alert for undercut banks and slippery rocks. Fast currents and cold water are a deadly combination. Do not swim above waterfalls or in swi"
+          },
+          {
+            "chunk_id": "971ab6bcb85d24e6011fbad32ba1aa7fd3292b27e0277a519fdcc71b1fd4071b",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 1",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 17,
+            "post_rank": 10,
+            "scores": {
+              "dense": 0.6037395000457764,
+              "bm25": 16.35491002546096,
+              "rrf": 0.015384615384615385,
+              "rerank": -6.356011390686035
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 5
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 1\n\n day. summer. Many other waterfalls, including Yosemite Falls, can dry up completely. Park only in designated parking spaces or in a paved turnout, pulled completely off the road. Vehicles parked on vegetation or blocking traffic are subject to citation and may be towed. Sign up for Yosemite traffic "
+          },
+          {
+            "chunk_id": "d1fff24bffba94096b8c98f9966fb5880cb5002f31c4ad26379438bbbb387e57",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 2",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 19,
+            "post_rank": 11,
+            "scores": {
+              "dense": 0.5961841344833374,
+              "bm25": 16.944305619691225,
+              "rrf": 0.014925373134328358,
+              "rerank": -6.410612106323242
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 7
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 2\n\n, and established fire rings. Never leave a fire unattended—extinguish the fire completely before you leave it. Additional fire restrictions may be in effect, depending on conditions. Expect winter trail conditions by November. Winter road closures, seasonal trail closures, and winter trail condition"
+          },
+          {
+            "chunk_id": "28870cf74a92839416e0e51814c953c1d4346e2552d65dfc7e83670252ce3d6e",
+            "doc_id": "6922c31771d90218b72770a099133708c80333e6664d7e5bcd69bffe3fb78ec7",
+            "title": "Bears and Food Storage - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Bears and Food Storage > How to Store Your Food > Backpacking in the Wilderness",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/bears.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 12,
+            "post_rank": 12,
+            "scores": {
+              "dense": 0.5232999324798584,
+              "bm25": 23.146928853469944,
+              "rrf": 0.02478580171358629,
+              "rerank": -6.865983009338379
+            },
+            "retriever_ranks": {
+              "bm25": 16,
+              "dense": 26
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Bears and Food Storage > How to Store Your Food > Backpacking in the Wilderness\n\nBackpacking in the Wilderness\n\nBear resistant food containers (\"bear canisters\") are required for overnight hikers throughout the wilderness (counterbalance food hangs are no longer legal). In Yosemite and the southern Sierra, bear canisters are the only effective and p"
+          },
+          {
+            "chunk_id": "967e0502e6279064c268faa34f616b5f76db117d589b322d54db587e9abb6982",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 14,
+            "post_rank": 13,
+            "scores": {
+              "dense": 0.5222052931785583,
+              "bm25": 18.02359047214557,
+              "rrf": 0.02248326386257421,
+              "rerank": -7.734134674072266
+            },
+            "retriever_ranks": {
+              "bm25": 31,
+              "dense": 27
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n s g u e m t a m p e e r! rmit C gr h o o u o p s ’s e a t b h il e it y r i a g n h d t e tr x a p i e l r f ie o n r c y e o u le r v el. P fr a u c it k p o e u el t s , a a ll n t d r a to sh ile , t i n p c a lu p d e i r n . g H u n m ut a s n h ells, Tioga Road 1 1 . m 6 i km e r e C k w o Ten"
+          },
+          {
+            "chunk_id": "90f2f89c36ee486262a36e567eefecd64b39df25918ef6f23db8f7fab8a592d4",
+            "doc_id": "b5fb13ae2598c521506e8a090df0e7dac7fffc30ffaf760a50d611ce7e08ae9f",
+            "title": "Plan Your Visit - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Plan Your Visit > Top Trip Planning Tips",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/index.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 16,
+            "post_rank": 14,
+            "scores": {
+              "dense": 0.6060346961021423,
+              "bm25": 12.48772079585104,
+              "rrf": 0.015625,
+              "rerank": -7.808323860168457
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 4
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Plan Your Visit > Top Trip Planning Tips\n\nDownload and Install our Free Park App Before you Get Here Be sure to follow prompts for downloading offline content. Cell service in the park is limited, and you'll want to have content available on your phone so it's accessible anywhere in the park.\n\nKeep Wildlife Wild Do not approach or feed animals (or l"
+          },
+          {
+            "chunk_id": "4d0bdbb4a76687dd5c1da00751d501625941822132b54880415bb44f9a15b56b",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 2",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 13,
+            "post_rank": 15,
+            "scores": {
+              "dense": 0.5416804552078247,
+              "bm25": 18.63215126748083,
+              "rrf": 0.024222968043192763,
+              "rerank": -7.89193058013916
+            },
+            "retriever_ranks": {
+              "bm25": 29,
+              "dense": 17
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 2\n\n in a hotel room or hard-sided cabin Expect seasonal road closures. Expect Yosemite Valley to be busy. with doors and windows closed. Tioga Road and Glacier Point Road close to vehicles Arrive early to avoid long lines at entrances and to Food may also be stored inside a each winter and usually open "
+          },
+          {
+            "chunk_id": "9d248b1271541f7e63e9036d423a90a0c5c7c9106f4df05d18f267f17b669d2d",
+            "doc_id": "2207736716ae3c98b7f7ce69e8c4021a1f21231fa41db8072bb1323d65d18c33",
+            "title": "Basic Information - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Basic Information",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/basicinfo.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 11,
+            "post_rank": 16,
+            "scores": {
+              "dense": 0.5269355773925781,
+              "bm25": 22.31311430361738,
+              "rrf": 0.025015634771732333,
+              "rerank": -7.941911697387695
+            },
+            "retriever_ranks": {
+              "bm25": 18,
+              "dense": 22
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Basic Information\n\nBasic Information\n\nYosemite National Park includes nearly 1,200 square miles of mountainous scenery, including high cliffs, deep valleys, tall waterfalls, ancient giant sequoias, and a large wilderness . Millions of people visit Yosemite each year to experience its beauty and its many opportunities for enjoyment .\n\nLearn some tips"
+          },
+          {
+            "chunk_id": "37dbdd18ce9954b3b78ddc68db98907e4ba076da372c836b6d288908ba0724ff",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 10,
+            "post_rank": 17,
+            "scores": {
+              "dense": 0.5947282910346985,
+              "bm25": 17.58961282320393,
+              "rrf": 0.025122549019607844,
+              "rerank": -8.866024017333984
+            },
+            "retriever_ranks": {
+              "bm25": 36,
+              "dense": 8
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n 4 7.2 km Stay off domes and other exposed places Keep food within arm’s reach at all times. 1536 m 3 0.4 mi • 8 W am a w – o 5 n p a m V . i A si f t t o er r O C c e t n 1 te 4 r , s ( e p l e f- r r m eg it is t p e i r c k fo u r p p c e l r o m s i e ts s o O n c t t h 1 e 4 ) when there is a ch"
+          },
+          {
+            "chunk_id": "b119df5b9f33952606e3d908f41ae4f12e318147b4fd3615b70b46d143154061",
+            "doc_id": "17fc9ca4870f3476e11311507781c8a811b07e30e30de4b78a6bdce9e53b8c3b",
+            "title": "Hiking Safety - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Hiking Safety",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/hikingsafety.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 15,
+            "post_rank": 18,
+            "scores": {
+              "dense": 0.481139600276947,
+              "bm25": 28.81964383674425,
+              "rrf": 0.015873015873015872,
+              "rerank": -9.031363487243652
+            },
+            "retriever_ranks": {
+              "bm25": 3,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Hiking Safety\n\nHiking Safety\n\nCarry a headlamp on every hike, even short day hikes\n\nCarry and drink plenty of water (a minimum of 1 quart every 2 hours)\n\nSturdy footwear with good traction might save an ankle\n\nMinor/moderate health or medical issues can be easily exacerbated by hiking up the steep Valley trails—know your limits and pay attention to "
+          },
+          {
+            "chunk_id": "82a4941e75f1282bdb496e63cc09530588ecb1e787e94de2d24183cdaee6b574",
+            "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+            "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Frequently Asked Questions about Campground Reservations > I made a reservation for a tent-only nonelectric campsite but have an RV or other vehicle I sleep in. Can I still use the campsite?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 20,
+            "post_rank": 19,
+            "scores": {
+              "dense": 0.2292485237121582,
+              "bm25": 25.0961383195149,
+              "rrf": 0.014492753623188406,
+              "rerank": -10.31877326965332
+            },
+            "retriever_ranks": {
+              "bm25": 9,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Frequently Asked Questions about Campground Reservations > I made a reservation for a tent-only nonelectric campsite but have an RV or other vehicle I sleep in. Can I still use the campsite?\n\nI made a reservation for a tent-only nonelectric campsite but have an RV or other vehicle I sleep in. Can I still use the campsite?\n\nRVs are not allowed in ten"
+          },
+          {
+            "chunk_id": "8df5cf09e62af1003acaa48c1a78633eb5fbe974223932d4c1f635594ca2571d",
+            "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+            "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Frequently Asked Questions about Campground Reservations > When can I check in? Can I check in after hours? What if I'm late?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 18,
+            "post_rank": 20,
+            "scores": {
+              "dense": 0.2786433696746826,
+              "bm25": 27.007548870095537,
+              "rrf": 0.014925373134328358,
+              "rerank": -10.981335639953613
+            },
+            "retriever_ranks": {
+              "bm25": 7,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Frequently Asked Questions about Campground Reservations > When can I check in? Can I check in after hours? What if I'm late?\n\nWhen can I check in? Can I check in after hours? What if I'm late?"
+          }
+        ],
+        "context_ids": [
+          "c52a95a59bf0d5efc36130f22f290f6334dec42cea26a80ef6c24c7c72f6fe25",
+          "09cb4d898277789389ca61b8ddb8e11811a42bc39205552fb9fde5944434d8b6",
+          "232bec52eece354178932e9bc840c775def58477f802951eca91cd64ea72db97",
+          "74dcd90c2e0e4a5bbf7203165f555dcc177d47613e22ce3569a3266277cf4066",
+          "148534e991f5527fd20e87654c4fbf6c7aeca9760869adcb1c23546274b0cdd7"
+        ],
+        "context_selection": null
+      },
+      "embedding": {
+        "status": "azure_request_recorded",
+        "elapsed_ms": 8080,
+        "query_sha256": "0f9de4d24faad5f8bb6b92f035a71ee50cacda30eb34ea1a734d975e81e63302",
+        "cache_file_present_before_call": false,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2490,
+        "output_tokens": 90,
+        "elapsed_ms": 2085.5,
+        "cost_estimate_usd": 0.00035279999999999996
+      },
+      "review": {
+        "status": "passed",
+        "model": "gpt-6-luna-2026-09-22",
+        "input_tokens": 1854,
+        "output_tokens": 59,
+        "elapsed_ms": 1673.8,
+        "cost_estimate_usd": 0.00025788,
+        "withheld_claims": 0
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 3,
+        "cost_estimate_usd": 0.0006114720000000001,
+        "by_kind": {
+          "embedding": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 36,
+            "output_tokens": 0,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 7.919999999999999e-7
+          },
+          "generation": {
+            "events": 2,
+            "reported_usage": 2,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 4344,
+            "output_tokens": 149,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.00061068
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      },
+      "guard_errors": [],
+      "integrity_errors": [],
+      "derivation": null,
+      "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+      "timestamp": "2026-10-10T15:45:47.034907+00:00"
+    }
+  }
+}

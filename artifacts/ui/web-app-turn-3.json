@@ -1,0 +1,628 @@
+{
+  "exported_at": "2026-10-10T15:47:44.415Z",
+  "history_storage": "browser_memory_only",
+  "turn": {
+    "turn_id": "6a31df1f09ab4b2d8e6ae9b8e97d2a02",
+    "selected_park": "yose",
+    "question": "At Blue Lantern Lagoon in Yosemite, what are the submarine departure times?",
+    "status": "refusal",
+    "text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "claims": [],
+    "sources": [],
+    "history_content": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "history_scope_reset": false,
+    "reason": {
+      "code": "model_refused",
+      "category": "model_refusal",
+      "detail": "The answer model declined to answer from the selected passages."
+    },
+    "timing": {
+      "answer_call_ms": 4176.3,
+      "pipeline_ms": 4176.2,
+      "server_ms": 4185.6
+    },
+    "history": {
+      "messages_received": 4,
+      "messages_used": 4,
+      "scope_reset": false
+    },
+    "inspector": {
+      "retrieval": {
+        "ran": true,
+        "query": "At Blue Lantern Lagoon in Yosemite, what are the submarine departure times?",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "mode": "hybrid",
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "build_strategy": "structure",
+        "rerank_enabled": true,
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "requested_candidates": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "shortfall": false,
+        "timings_ms": {
+          "load_ms": 251.3561670202762,
+          "retrieval_ms": 26.1137499473989,
+          "rerank_ms": 180.21541717462242,
+          "total_ms": 457.6892089098692
+        },
+        "score_labels": {
+          "dense": "Cosine similarity (query vs. stored vector)",
+          "bm25": "BM25 Okapi lexical score",
+          "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+          "rerank": "Cross-encoder reranker raw score (not a probability)"
+        },
+        "candidates": [
+          {
+            "chunk_id": "7bb8920d810438e6117312969fb9f5130363505be4c0b37421f058b51b996570",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 4",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 5,
+            "post_rank": 1,
+            "scores": {
+              "dense": 0.5202436447143555,
+              "bm25": 3.9405482233660845,
+              "rrf": 0.016129032258064516,
+              "rerank": -3.8869810104370117
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 2
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 4\n\n| T 4 YARTS Yosemite Valley to Sonora departs 2–3x daily summer only $ YARTS.com to Merced | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 | Column 7 |\n| --- | --- | --- | --- | --- | --- | --- |\n NOT allowed on shuttles. Service dogs are legally permitted anywhere that visitors can go. Emotio"
+          },
+          {
+            "chunk_id": "ddd4ccb0bd2b10f4e393787fd31f912e754f4f6c2b31f1f61c7fa053cc6a1d70",
+            "doc_id": "027617d4d5172c99c4bcd6095ead82e38fc7f3c17704eb3361f00d0451804d6d",
+            "title": "Traffic in Yosemite National Park - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Traffic in Yosemite National Park > Entrance Stations",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/traffic.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 3,
+            "post_rank": 2,
+            "scores": {
+              "dense": 0.4550858736038208,
+              "bm25": 11.448737396555327,
+              "rrf": 0.01639344262295082,
+              "rerank": -4.603130340576172
+            },
+            "retriever_ranks": {
+              "bm25": 1,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Traffic in Yosemite National Park > Entrance Stations\n\nEntrance Stations\n\nAny time spring through fall, delays at entrance stations are common. In addition to the real-time wait times listed below, plan accordingly for the remaining two entrance stations:\n\nHetch Hetchy Entrance: varies depending on if Hetch Hetchy parking is full (but could be up to"
+          },
+          {
+            "chunk_id": "c4dff6bef07ac6557cd7386e7b886d660a0977ba4cc630d838ac6eb4b9a39144",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 5",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 13,
+            "post_rank": 3,
+            "scores": {
+              "dense": 0.5073896646499634,
+              "bm25": 3.9750194479472003,
+              "rrf": 0.015151515151515152,
+              "rerank": -5.524420261383057
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 6
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 5\n\n888/413-8869, or stop by the Yosemite Valley Lodge YH $ 10 am – 4 pm Parsons Memorial Lodge at the Soda Springs Meet a ranger, learn the history of Yosemite’s high country. Locations Yosemite Exploration Center & Theater, (2 hrs) daily front desk. Departs from the Yosemite Valley Lodge. tickets at Tr"
+          },
+          {
+            "chunk_id": "6766b3da35ce453078d575f519dbaa146cae4c69b2a9bd54c5fa8e372fd8f083",
+            "doc_id": "3f8708ee5b083a4ff097073cfc27a55aa9a561a66c33862e183a42dea65c3227",
+            "title": "Campgrounds - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Campgrounds > Campfires and Wood Smoke",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 9,
+            "post_rank": 4,
+            "scores": {
+              "dense": 0.4082418382167816,
+              "bm25": 8.390737630734595,
+              "rrf": 0.015625,
+              "rerank": -6.10597562789917
+            },
+            "retriever_ranks": {
+              "bm25": 4,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Campgrounds > Campfires and Wood Smoke\n\nReservations: campgrounds requiring reservations are usually full from around April through September. You should make a reservation as early as possible. If you don't have reservations, find out more about camping without reservations .\n\nElectrical, water, and sewer hookups are not available in Yosemite, alth"
+          },
+          {
+            "chunk_id": "908d7ba416fde4dbe0d1a225779d49951725aeae81d34746fd9833e0c43d6f72",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 4",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 14,
+            "post_rank": 5,
+            "scores": {
+              "dense": 0.5062621831893921,
+              "bm25": 2.431278533074979,
+              "rrf": 0.014925373134328358,
+              "rerank": -6.417017459869385
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 7
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 4\n\n am – 5 pm. Rotating Yosemite US Post Office Clinic required for dinner. Dinner reservations strongly recommended: 209/372- Mariposa exhibits, park film, books & gifts. The Spirit of Yosemite (23 min) runs on Valley C Li o b u r n ar t y y 5 D Ki e t g ch n e a n n’s the hour/half-hour 9:30 am – 4 pm"
+          },
+          {
+            "chunk_id": "678a1e6cd681d511bc3c23bb7299151d5634b613ce58b9ec1a67db30a95fc14e",
+            "doc_id": "06f77cba9c3a72ed64ff610adafceada3a04537ed3027c084333e5ac6cf2b598",
+            "title": "Campground Reservations - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Campground Reservations > Camping in Yosemite",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/camping.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 4,
+            "post_rank": 6,
+            "scores": {
+              "dense": 0.4163287281990051,
+              "bm25": 9.673719682419943,
+              "rrf": 0.016129032258064516,
+              "rerank": -6.566440582275391
+            },
+            "retriever_ranks": {
+              "bm25": 2,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Campground Reservations > Camping in Yosemite\n\nCamping in Yosemite\n\nMaking a Reservation\n\nCampground Reservation FAQ\n\nCamping Without a Reservation\n\nCampgrounds\n\nCamping Regulations\n\nYosemite National Park has 13 popular campgrounds , all of which are on a reservation system from April through October. During winter, Camp 4, Wawona, and Hodgdon Mead"
+          },
+          {
+            "chunk_id": "474161cfb6aba99585534d3044e84c08300626fee2aab6092de157667838e06c",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 16,
+            "post_rank": 7,
+            "scores": {
+              "dense": 0.5059703588485718,
+              "bm25": 4.562816164393861,
+              "rrf": 0.014705882352941176,
+              "rerank": -6.597163677215576
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 8
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\nazing experience under Yosemite’s $ DAY & TIME PROGRAM • November 8 – January 9, 2027 | Earth is Home II: F & Sa night sky. Learn about star science, constellations, cultural stories, and mythology. Your naturalist will use a laser pointer to YC register at A World of Color—Photographs by Kerik Koukl"
+          },
+          {
+            "chunk_id": "4b38f6370418211685ba157a56e9f57db25697c8a900f01618ac5bbe1037de8a",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 5",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 1,
+            "post_rank": 8,
+            "scores": {
+              "dense": 0.481515109539032,
+              "bm25": 6.648689764415799,
+              "rrf": 0.02188995215311005,
+              "rerank": -7.002116680145264
+            },
+            "retriever_ranks": {
+              "bm25": 28,
+              "dense": 35
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 5\n\n Change in Yosemite, YH F, Sa drop-in only All programs are hosted by NPS. Programs are free; no registration required. Saturdays: Yosemite’s Firefall. 8:30 pm (1.5 hrs) Yosemite After Dark Grab a flashlight and join a Yosemite Naturalist for an interactive nature walk at night! $ DAY & TIME PROGRAM "
+          },
+          {
+            "chunk_id": "f47980489c42dc4c9ed04c8f5d5b235ab01515bbe8fc65f679f08664781bd98b",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 20,
+            "post_rank": 9,
+            "scores": {
+              "dense": 0.5016727447509766,
+              "bm25": 4.012670483200187,
+              "rrf": 0.014285714285714285,
+              "rerank": -7.0258026123046875
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 10
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\n change due to weather. after Sep 27. We look forward to welcoming you back 8:30 am & 1:30 pm Glacier Point Tour (*until Oct 11) On this four-hour bus tour, you’ll go from Yosemite Valley to Glacier Point—a 3,200-foot elevation gain. One-way tickets for hikers available (4 hrs) daily* (dropoff only, "
+          },
+          {
+            "chunk_id": "046dae8a3878656b21905fac3dd98a42f15d7d73dd5b632d43a39b7b2b18f3e5",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 2,
+            "post_rank": 10,
+            "scores": {
+              "dense": 0.5204789042472839,
+              "bm25": 4.577382890254887,
+              "rrf": 0.01639344262295082,
+              "rerank": -7.108126640319824
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 1
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\n at the Yosemite Valley Lodge front desk. heritage-center 209/372-4542 DAY & TIME PROGRAM Programs Near Crane Flat 10 am, 11 am, 1 pm, Yosemite Conservation Heritage Center 10 am – 4 Valley Floor Tour Experience the highlights of Yosemite Valley with a naturalist or park ranger on a bus or open-air t"
+          },
+          {
+            "chunk_id": "89eba07daf5ecc6bc4f2de8ed6d1a4bedc51b64f267d05e0acbb0f1062a4bb44",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 5",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 11,
+            "post_rank": 11,
+            "scores": {
+              "dense": 0.5079207420349121,
+              "bm25": 3.7261597191954814,
+              "rrf": 0.015384615384615385,
+              "rerank": -7.409477710723877
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 5
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 5\n\n s e t 6 a & t t 7 h ) e , DAY & TIME PROGRAM h 20 e 9 r / i 3 t 7 a 2 g -4 e 5 - 4 c 2 enter Tu with your DSLR camera. register in advance at yosemite.org/art. 11 am (1 hr) Giant Sequoia Hike Meet in Tuolumne Grove. Allow time to hike 1 mile from the trailhead to reach the M, W, Th grove before the "
+          },
+          {
+            "chunk_id": "f558f7351883928dd515fe4597876004f7a073a2f8c2b38bac4e2a07a24cabf8",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 7,
+            "post_rank": 12,
+            "scores": {
+              "dense": 0.5156689286231995,
+              "bm25": 4.222837370379323,
+              "rrf": 0.015873015873015872,
+              "rerank": -7.455231189727783
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 3
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\nIDGE daily* in Yosemite National Park. Lunch is included. 10 am – 12 pm* Jr. Ranger Discovery Table (*until Nov 1) Drop in anytime to talk with a ranger and start or finish daily earning a Jr. Ranger badge. Located at the Tuolumne Grove Trailhead. *no program Oct 9 Sep 23, 24, 25, 26 Moonlight Tour ("
+          },
+          {
+            "chunk_id": "27972ba46eb8a62f0d7cda80cde34c427a0ba839eff387e131f6130dc058601a",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 18,
+            "post_rank": 13,
+            "scores": {
+              "dense": 0.502501368522644,
+              "bm25": 3.7742471126194395,
+              "rrf": 0.014492753623188406,
+              "rerank": -7.6388044357299805
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 9
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\n Giant Sequoia Hike (*until Nov 1) Meet at the Tuolumne Grove Trailhead. Total hike is 2.5 miles roundtrip M, W, Th* with 500 feet of elevation change. Bring water. *no program Sep 30 or Oct 12 immersive environmental science programs that ignite curiosity and foster deep connections with nature. 6:3"
+          },
+          {
+            "chunk_id": "42596149221d57742a2c63af9adc73ce1cfe8a27db1a487c849cbdd3b52a8876",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 8,
+            "post_rank": 14,
+            "scores": {
+              "dense": 0.5106320381164551,
+              "bm25": 2.973048286139932,
+              "rrf": 0.015625,
+              "rerank": -7.706931114196777
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 4
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n| DAY & TIME | Column 2 | PROGRAM | HOST | FEE? | REGISTER? |\n| --- | --- | --- | --- | --- | --- |\n| 2 pm (15 min) Daily* |  | Family Ranger Talk Topics vary. Meet in front of the Yosemite Valley Welcome Center (shuttle stops 1/2/4.) *Subject to change, based on staffing. | NPS | free | no; drop-in "
+          },
+          {
+            "chunk_id": "67c7273fde286ac3804bbf6d7cc4062bdba3baa02dd02bc324adb0e9127de4c6",
+            "doc_id": "8dc9e453ca684c867993b01b5ed286183e93e809b875d2c4f69ae5a98b3ab97a",
+            "title": "Yosemite Guide - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Yosemite Guide > Where to Go and What to Do in Yosemite National Park > 2024",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/guide.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 17,
+            "post_rank": 15,
+            "scores": {
+              "dense": 0.4261949062347412,
+              "bm25": 7.834924503817636,
+              "rrf": 0.014705882352941176,
+              "rerank": -8.315102577209473
+            },
+            "retriever_ranks": {
+              "bm25": 8,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide > Where to Go and What to Do in Yosemite National Park > 2024\n\n2024"
+          },
+          {
+            "chunk_id": "bab2724f84e7195dc362b9a3fdc967bbb066154326dc67e96b9147d61fc07fd0",
+            "doc_id": "8dc9e453ca684c867993b01b5ed286183e93e809b875d2c4f69ae5a98b3ab97a",
+            "title": "Yosemite Guide - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Yosemite Guide > Where to Go and What to Do in Yosemite National Park > 2025",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/guide.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 19,
+            "post_rank": 16,
+            "scores": {
+              "dense": 0.4214763939380646,
+              "bm25": 7.834924503817636,
+              "rrf": 0.014492753623188406,
+              "rerank": -8.390816688537598
+            },
+            "retriever_ranks": {
+              "bm25": 9,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide > Where to Go and What to Do in Yosemite National Park > 2025\n\n2025"
+          },
+          {
+            "chunk_id": "2a17be54e4c378c1142247bcdc71bbc24a80403c64216768e5c7d8d34f858463",
+            "doc_id": "1b6d367a2015c2e33dc2d9956fa2224b2648581d7f4729135e557b24af271b1f",
+            "title": "Eating & Sleeping - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Eating & Sleeping > Eating",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/eatingsleeping.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 6,
+            "post_rank": 17,
+            "scores": {
+              "dense": 0.31561732292175293,
+              "bm25": 9.065873069189216,
+              "rrf": 0.015873015873015872,
+              "rerank": -9.41240119934082
+            },
+            "retriever_ranks": {
+              "bm25": 3,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Eating & Sleeping > Eating\n\nEating\n\nYosemite has numerous food options all year in Yosemite Valley and seasonally at Wawona, Badger Pass, Glacier Point, White Wolf, and Tuolumne Meadows. Additionally, groceries are available all year in Yosemite Valley, Wawona, Crane Flat, and El Portal, and seasonally at Tuolumne Meadows. Picnic areas are available"
+          },
+          {
+            "chunk_id": "6013cb3633b270ebf5261150dc3d5e5890e1938de83aea337a04992db08a72d5",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 10,
+            "post_rank": 18,
+            "scores": {
+              "dense": 0.3444587290287018,
+              "bm25": 8.356763276148083,
+              "rrf": 0.015384615384615385,
+              "rerank": -9.571481704711914
+            },
+            "retriever_ranks": {
+              "bm25": 5,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 7\n\n maps and information Pets are NOT allowed with you while you on hiking trails, on explore the park. shuttles, or inside Available for iOS park buildings. and Android. Pets must be leashed at all times. Yosemite National Park website Properly dispose of pet waste. Turn You are driving in wildlife hab"
+          },
+          {
+            "chunk_id": "e80cf62f38b53495c0af3c08a1c085df9a1a80c18c2490a6db07220111102706",
+            "doc_id": "682576230187e76804abbc830ca51f0eb438b71f5d7c6535626e14c9470b050c",
+            "title": "Tioga and Glacier Point Roads Plowing and Road Opening Update - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Tioga and Glacier Point Roads Plowing and Road Opening Update > Answers to Frequently Asked Questions",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/tioga.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 15,
+            "post_rank": 19,
+            "scores": {
+              "dense": 0.3534000515937805,
+              "bm25": 7.854663461695956,
+              "rrf": 0.014925373134328358,
+              "rerank": -10.089617729187012
+            },
+            "retriever_ranks": {
+              "bm25": 7,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Tioga and Glacier Point Roads Plowing and Road Opening Update > Answers to Frequently Asked Questions\n\nAnswers to Frequently Asked Questions\n\nHow can I drive to Yosemite from Las Vegas or Death Valley when the Tioga Road is closed?\n\nWhat are the historical opening dates for the Tioga and Glacier Point Roads?\n\nWhat are the historical opening dates fo"
+          },
+          {
+            "chunk_id": "bd131ea89ef5dfdc9003427c14c4c496e00d531a9063f4e78138e742a9b43d72",
+            "doc_id": "47d17c659cbfed2732ff24d0859d7a4cf644560de34d6dec511a577078dafb82",
+            "title": "Campground Regulations - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Campground Regulations > Quiet and Generator Hours",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 12,
+            "post_rank": 20,
+            "scores": {
+              "dense": 0.29911234974861145,
+              "bm25": 8.290619910806317,
+              "rrf": 0.015151515151515152,
+              "rerank": -10.665779113769531
+            },
+            "retriever_ranks": {
+              "bm25": 6,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Campground Regulations > Quiet and Generator Hours\n\nQuiet and Generator Hours\n\nQuiet hours are from 10 pm to 6 am. Generator use is allowed only from 7 am to 9 am, noon to 2 pm, and 5 pm to 7 pm. Generator use is not allowed at other times."
+          }
+        ],
+        "context_ids": [
+          "7bb8920d810438e6117312969fb9f5130363505be4c0b37421f058b51b996570",
+          "ddd4ccb0bd2b10f4e393787fd31f912e754f4f6c2b31f1f61c7fa053cc6a1d70",
+          "c4dff6bef07ac6557cd7386e7b886d660a0977ba4cc630d838ac6eb4b9a39144",
+          "6766b3da35ce453078d575f519dbaa146cae4c69b2a9bd54c5fa8e372fd8f083",
+          "908d7ba416fde4dbe0d1a225779d49951725aeae81d34746fd9833e0c43d6f72"
+        ],
+        "context_selection": null
+      },
+      "embedding": {
+        "status": "azure_request_recorded",
+        "elapsed_ms": 1944.9,
+        "query_sha256": "0af478f49986c7e786c2e110e2c39e92038ae86c9c6eac071fb68337fa39e703",
+        "cache_file_present_before_call": false,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2742,
+        "output_tokens": 34,
+        "elapsed_ms": 1683,
+        "cost_estimate_usd": 0.00034943999999999996
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 2,
+        "cost_estimate_usd": 0.00034976999999999995,
+        "by_kind": {
+          "embedding": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 15,
+            "output_tokens": 0,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 3.2999999999999996e-7
+          },
+          "generation": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 2742,
+            "output_tokens": 34,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.00034943999999999996
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      },
+      "guard_errors": [],
+      "integrity_errors": [],
+      "derivation": null,
+      "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+      "timestamp": "2026-10-10T15:47:30.247105+00:00"
+    }
+  }
+}

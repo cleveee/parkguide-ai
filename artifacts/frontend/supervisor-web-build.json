@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-10T15:41:55.474017+00:00",
+  "command": [
+    "npm",
+    "--prefix",
+    "web",
+    "run",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_ms": 1842.2,
+  "stdout": "\n> web@0.0.0 build\n> tsc -b && vite build\n\nvite v8.3.4 building client environment for production...\ntransforming...\n\u2713 2463 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.53 kB \u2502 gzip:   0.32 kB\ndist/assets/index-DQrhACQv.css   81.38 kB \u2502 gzip:  13.26 kB\ndist/assets/index-DQgno7YM.js   606.55 kB \u2502 gzip: 187.33 kB\n\n\u2713 built in 185ms\n",
+  "stderr": "[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+  "scope": "Root independent TypeScript and production build of stable final UI"
+}

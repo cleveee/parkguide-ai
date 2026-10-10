@@ -1,0 +1,16 @@
+{
+  "mobileConfirmation": {
+    "alertDialogs": 1,
+    "otherDialogs": 0,
+    "overlayStyles": {
+      "animation": "1e-05s",
+      "transition": "1e-05s"
+    },
+    "text": "Clear the selected park?\n\nThis clears the current conversation and its evidence from this tab. It cannot be undone. A reply still in progress on the server will be ignored, but the server keeps working on it (including any paid calls), and a new question gets a “busy” reply until it finishes.\n\nCancel\nClear conversation"
+  },
+  "result": {
+    "text": "ParkGuide\n\nNo park selected\n\nChoose a park to start\n\nAnswers come only from that park's saved official NPS pages, with every delivered claim checked against its cited passage.\n\nYosemite\nYellowstone\nGrand Canyon\nNo park selected\nAnswers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions.",
+    "sendEnabled": false,
+    "oldInspectButtons": 0
+  }
+}

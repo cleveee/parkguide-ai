@@ -1,0 +1,9 @@
+{
+  "folder": "/Users/robin/Build/Personal/parkguide-ai/artifacts/dialogues/0fb35cc9bcf74793bfe0bf53cc12abfe",
+  "dialogues": 6,
+  "attempted_turns": 17,
+  "actual_turns": 16,
+  "errors": 1,
+  "aborted_after": "T06-2",
+  "grading_status": "HUMAN_REVIEW_PENDING"
+}

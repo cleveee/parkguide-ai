@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Edit(.env)",
+      "Write(.env)",
+      "Read(data/evaluation/**)",
+      "Edit(data/**)",
+      "Write(data/**)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(printenv *)",
+      "Bash(env *)"
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "verified_at_utc": "2026-10-10T13:46:51.725676+00:00",
+  "scope": "Source-link presentation update; no seven-stage diagnostic rerun or held-out test",
+  "test_suite": {
+    "passed": 126,
+    "elapsed_seconds": 1.05,
+    "command": ".venv/bin/python -m pytest -q"
+  },
+  "historical_replay": {
+    "attempts": 305,
+    "responses_with_sources": 196,
+    "source_page_cards": 307,
+    "cited_passages": 336
+  },
+  "final_selected_replay": {
+    "attempts": 30,
+    "responses_with_sources": 23,
+    "source_page_cards": 32,
+    "cited_passages": 33
+  },
+  "offline_checks": {
+    "verbatim_excerpts": true,
+    "max_words_per_page": 25,
+    "official_urls_only": true,
+    "deduplicated_pages_retain_passages": true,
+    "unknown_or_conflicting_ids_excluded": true,
+    "withheld_and_uncited_claims_excluded": true,
+    "pdf_recorded_starting_page_anchor": true,
+    "nonanswers_and_closed_book_excluded": true
+  },
+  "streamlit_apptest": {
+    "exceptions": 0,
+    "provider_calls": 0,
+    "cases": [
+      "Actual saved T02/3 table calculation, one page and one passage",
+      "Actual saved T05/3 food-storage answer, one page and two passages",
+      "Refusal with no source cards"
+    ]
+  },
+  "live_ui": {
+    "url": "http://127.0.0.1:8511/",
+    "question": "How far should I stay from a bear in Yellowstone?",
+    "delivered_action": "answer",
+    "source_page_cards": 1,
+    "cited_passages": 1,
+    "visible_source_date": "2026-09-29",
+    "visible_saved_time": "Oct 09, 2026, 09:48 PM CDT",
+    "source_card_expanded": true,
+    "body_horizontal_overflow": false,
+    "console_errors_after_restart": 0,
+    "restart_note": "Four health errors during the controlled server stop precede the new server startup; no errors followed restart."
+  },
+  "official_link_target": {
+    "url": "https://www.nps.gov/yell/planyourvisit/conditions.htm",
+    "title": "Current Conditions - Yellowstone National Park (U.S. National Park Service)",
+    "heading": "Current Conditions",
+    "result": "Official page visibly loaded after clicking source card"
+  },
+  "api_usage": {
+    "ledger_before": {
+      "events": 710,
+      "estimated_committed_usd": 0.38999003800000004
+    },
+    "ledger_after": {
+      "events": 713,
+      "estimated_committed_usd": 0.39179188000000004,
+      "cap_usd": 5.0,
+      "last_event_utc": "2026-10-10T13:43:34.316429+00:00"
+    },
+    "incremental_cost_estimate_usd": 0.001801842,
+    "events": [
+      {
+        "kind": "embedding",
+        "timestamp": "2026-10-10T13:43:31.081776+00:00",
+        "status": "reported_usage",
+        "input_tokens": 11,
+        "output_tokens": 0,
+        "cost_estimate_usd": 2.4199999999999997e-07,
+        "purpose": "query embedding"
+      },
+      {
+        "kind": "generation",
+        "timestamp": "2026-10-10T13:43:32.351858+00:00",
+        "status": "reported_usage",
+        "input_tokens": 2199,
+        "output_tokens": 95,
+        "cost_estimate_usd": 0.0010316,
+        "purpose": "answer generation"
+      },
+      {
+        "kind": "generation",
+        "timestamp": "2026-10-10T13:43:34.316429+00:00",
+        "status": "reported_usage",
+        "input_tokens": 1741,
+        "output_tokens": 46,
+        "cost_estimate_usd": 0.0007700000000000001,
+        "purpose": "claim review"
+      }
+    ],
+    "basis": "Published prices and actual returned token usage; not an invoice. Separate 34-token connectivity probes are excluded."
+  },
+  "unchanged_stage_results": [
+    {
+      "path": "artifacts/runs/20261010T035053Z-24ef6136/results.jsonl",
+      "sha256": "aed02e8ad665e71c7229d23d34f88ae375f6cac23e88a038ca3482d1da9d72b4"
+    },
+    {
+      "path": "artifacts/dialogues/0fb35cc9bcf74793bfe0bf53cc12abfe/results.jsonl",
+      "sha256": "f9132be4ed8895bd4ec739af9574bbd213c2fcdd5fa16defe7b609cc0055a481"
+    },
+    {
+      "path": "artifacts/runs/20261010T035725Z-8c776193/results.jsonl",
+      "sha256": "d0813f2ab82ded77eb02bb4ea7baac1edff3e95b43798e5dbb3a7662381a495e"
+    },
+    {
+      "path": "artifacts/dialogues/76bc1319edfe49fd9c0012acaf23874c/results.jsonl",
+      "sha256": "fed6a93fb2372ad2080e83d7d1db30fe8c821aba5505329118bf8482cf926719"
+    },
+    {
+      "path": "artifacts/runs/20261010T040247Z-dc2a2179/results.jsonl",
+      "sha256": "b4591a36576ea9ce23c1f66bc80ab0f661d015572ee7883598628905b10ce6a7"
+    },
+    {
+      "path": "artifacts/dialogues/c8d32418bf6f4b60b1d41775c7013305/results.jsonl",
+      "sha256": "92bf3ce05003f9b255efa47e8a5d5d54e33925b19c710f6b6867a70afaadc5d4"
+    },
+    {
+      "path": "artifacts/runs/20261010T040558Z-c2f6c2da/results.jsonl",
+      "sha256": "22236d25567d511497ad9492724f7f062704a112bdfc5774f924da6056006775"
+    },
+    {
+      "path": "artifacts/dialogues/5a0b86138efd4a4bb97169b3dac9189d/results.jsonl",
+      "sha256": "5c41ec4a67c0d0faeac4009c24a8488949c445c4151ed099973c14c595c71090"
+    },
+    {
+      "path": "artifacts/runs/20261010T041405Z-bc625da3/results.jsonl",
+      "sha256": "f12602c9ab4c9a851dbeee6c0f733c996f23eb61aca6b28e529cdd12fab1dcc6"
+    },
+    {
+      "path": "artifacts/dialogues/8cb819b194d84a0abbd6cbc36fe5b16a/results.jsonl",
+      "sha256": "fd215d8f1ee16e5e755d1836aecdfb879f0a24532ceebc1cf6967c9b4e23b1ab"
+    },
+    {
+      "path": "artifacts/dialogues/6f5e4b660ba54af1b34d6a7ab74f8952/results.jsonl",
+      "sha256": "c7215bb1a550d5c20900ff186e21108fa3b505da4d1d7f10434a4f86a1ef561e"
+    },
+    {
+      "path": "artifacts/runs/20261010T042905Z-54d33f15/results.jsonl",
+      "sha256": "29b0eb113a99ca83641342507c9ba4bc28e25d6bdd1d08ee16dbfef0c0ae7c20"
+    },
+    {
+      "path": "artifacts/dialogues/7bbd1b0ccdb649edbaf2b64ccc9797e3/results.jsonl",
+      "sha256": "77aeeeb943a12a704d84f8d86dfe2246db43c6479fb28b224d64fe7d21cad2a3"
+    }
+  ],
+  "review_rows": 66,
+  "human_verified_by_this_update": 0,
+  "held_out_test_consumed": false,
+  "component_and_evidence_hashes": [
+    {
+      "path": "app.py",
+      "sha256": "28d0ed6cd89b81499eb560290b11364d2114ed21a466ee4ef52e392d19c35aa8"
+    },
+    {
+      "path": "src/parkguide/source_links.py",
+      "sha256": "aa016f5cb9ec2ca6b23511fe8ecb14f176667579b60f619f69f72f76af278517"
+    },
+    {
+      "path": "scripts/build_dashboard.py",
+      "sha256": "bdb840118c25af27cd9dc1e52a3265c7621470b0162b964f3957ec76e3117939"
+    },
+    {
+      "path": "dashboard/template.html",
+      "sha256": "294832064d0472be048e65e53f5098c6897785c3da075d06b1c96cb3a09b52d9"
+    },
+    {
+      "path": "artifacts/ui/source-links-preview.png",
+      "sha256": "8d4113afbd90074801700d9dd8c0a5ea16f5e76c4c415f368a0a55391c22d834"
+    },
+    {
+      "path": "artifacts/ui/source-links-browser.txt",
+      "sha256": "54a5af5a8cdfedd95fa58c05f8e31b06d4335286596f866cda41427ee972a55f"
+    },
+    {
+      "path": "artifacts/dashboard/stage-audit.json",
+      "sha256": "fc3e2e4cf5083fa3dd83bce58fd222323500c3d568bdee10bf2b8c852da2c093"
+    },
+    {
+      "path": "artifacts/dashboard/technical-audit.json",
+      "sha256": "b8c474bd7d9cd96d8cb9c08583dae3cfdccbaf06ded1586ed68ed46b7936e84a"
+    },
+    {
+      "path": "artifacts/reviews/latest-semantic-review.jsonl",
+      "sha256": "4ba4836a0275ec7940e61287c2fdd4dc1af7e4c67d4de1b8068776372f4e4d0c"
+    },
+    {
+      "path": "artifacts/ui/source-link-review.md",
+      "sha256": "28728d25d278b0a1d69bd08ac3497d19e37d7bf02156105324183ba3904ac5df"
+    },
+    {
+      "path": "artifacts/dashboard/source-links-report-preview.png",
+      "sha256": "d28c3a8b0c69851aeb38e961fdc3fb767e21fc91baca7fc00cd79e4ece913c85"
+    }
+  ],
+  "dashboard_browser_verification": {
+    "status": "passed",
+    "verified_at_utc": "2026-10-10T13:48:44.253097+00:00",
+    "url": "http://127.0.0.1:8512/",
+    "stage_1": {
+      "rendered_attempts": 89,
+      "source_page_cards": 102,
+      "closed_book_source_cards": 0,
+      "nonanswer_source_cards": 0
+    },
+    "stage_7": {
+      "rendered_attempts": 66,
+      "nonanswer_source_cards": 0,
+      "closed_book_source_cards": 0
+    },
+    "grouping_check": {
+      "response": "T05 / 3",
+      "page_cards": 1,
+      "cited_passages": 2,
+      "both_saved_excerpts_visible": true
+    },
+    "pdf_anchor": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf#page=3",
+    "source_card_urls_official": true,
+    "console_errors": 0,
+    "body_horizontal_overflow": false,
+    "original_stage_totals": {
+      "single_turn_attempted": 180,
+      "dialogue_attempted": 125,
+      "dialogue_planned": 126,
+      "dialogue_unattempted": 1,
+      "completed": 304,
+      "errors": 1,
+      "successful_generation_and_review_cost_estimate_usd": 0.36094400000000004,
+      "generation_input_tokens": 547309,
+      "generation_output_tokens": 44569,
+      "claim_review_input_tokens": 153307,
+      "claim_review_output_tokens": 5867
+    },
+    "screenshot": "artifacts/dashboard/source-links-report-preview.png"
+  }
+}

@@ -11,3 +11,5 @@ Use subagents for scoped implementation, evaluation, and independent review when
 Continue actual development and evaluation through multiple measured stages and six live conversations of at least three user turns each. Read docs/EVALUATION.md for gates and limits. Reaching a budget or iteration limit is incomplete work, not success. If a real human dependency blocks a stage, continue independent work and report exactly what remains.
 
 Keep code small and explicit: Python, sqlite3, NumPy, rank-bm25, Streamlit, direct provider SDK, JSONL artifacts. Add a framework or service only when an observed limitation justifies it.
+
+Robin subsequently authorized the initial working-state commit and publication to the public personal repository `cleveee/parkguide-ai` on October 10, followed by inclusion of non-secret project data, reports, documentation, meaningful caches and saved run evidence. This authorizes that archive publication; credentials, environments, dependency directories, compiled builds and runtime locks remain excluded. Keep the running application local. See docs/REPOSITORY_DATA.md for the dated snapshot and its limits.

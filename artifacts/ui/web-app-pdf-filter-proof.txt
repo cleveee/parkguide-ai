@@ -1,0 +1,52 @@
+Saved corpus
+
+Read-only view of the local SQLite database. Previews show stored text; links go to the current official NPS pages.
+
+All parks
+Yosemite
+(selected for chat)
+Yellowstone
+Grand Canyon
+Yosemite · stored documents
+Documents
+56
+HTML
+53
+PDF
+3
+With tables
+9
+Active-build passages
+1,377
+
+Latest capture Oct 9, 2026, 9:50 PM CDT (captured under 24 hours ago). Passages count only the active structure build for Yosemite.
+
+All stored chunk builds
+
+5,405 chunks · 5,405 vectors across all parks
+
+Build	Strategy	Chunks	Vectors	Dimensions	Embedding	Created
+e372e28772f9Active · used by chat	structure	3,707	3,707	1,536	text-embedding-3-small	Oct 9, 2026
+5a6a37ba5cdd	fixed	1,698	1,698	1,536	text-embedding-3-small	Oct 9, 2026
+PDF
+Tables: any
+Document	Park	Type	Passages	Captured
+Yosemite Guide - Volume 50, Issue 4
+
+/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf
+
+	Yosemite	PDF
+	120	Oct 9, 2026
+Yosemite Guide - Volume 51, Issue 7
+
+/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf
+
+	Yosemite	PDF
+	134	Oct 9, 2026
+Yosemite Guide - Volume 51, Issue 8
+
+/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf
+
+	Yosemite	PDF
+	135	Oct 9, 2026
+3 documents

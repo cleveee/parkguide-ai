@@ -1,0 +1,44 @@
+{
+  "kind": "warm synthetic local integration smoke, fixture vectors, real CPU CrossEncoder, not course performance",
+  "timestamp_utc": "2026-10-10T03:46:36.611830+00:00",
+  "requested_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "initial_load_ms": 7357.374749844894,
+  "runs": [
+    {
+      "candidate_count": 20,
+      "final_count": 5,
+      "longest_pair_tokens": 27,
+      "top_doc": "synthetic-00",
+      "timings": {
+        "load_ms": 2.8234580531716347,
+        "retrieval_ms": 0.6841660942882299,
+        "rerank_ms": 166.712166974321,
+        "total_ms": 170.22604099474847
+      }
+    },
+    {
+      "candidate_count": 20,
+      "final_count": 5,
+      "longest_pair_tokens": 27,
+      "top_doc": "synthetic-00",
+      "timings": {
+        "load_ms": 0.949040986597538,
+        "retrieval_ms": 0.35683298483490944,
+        "rerank_ms": 30.89991700835526,
+        "total_ms": 32.211583107709885
+      }
+    },
+    {
+      "candidate_count": 20,
+      "final_count": 5,
+      "longest_pair_tokens": 27,
+      "top_doc": "synthetic-00",
+      "timings": {
+        "load_ms": 1.0177921503782272,
+        "retrieval_ms": 0.35229185596108437,
+        "rerank_ms": 29.50854110531509,
+        "total_ms": 30.882500112056732
+      }
+    }
+  ]
+}

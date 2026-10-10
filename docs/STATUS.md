@@ -1,6 +1,6 @@
 # ParkGuide implementation status
 
-**The local PoC now uses one existing Azure resource for embeddings, answers and claim review.** Formal course evaluation remains HUMAN_REVIEW_PENDING. The repo is `/Users/robin/Build/Personal/parkguide-ai`, local `main`, with zero commits and no remote. Nothing has been deployed or submitted.
+**The local PoC now uses one existing Azure resource for embeddings, answers and claim review.** Formal course evaluation remains HUMAN_REVIEW_PENDING. The repo is `/Users/robin/Build/Personal/parkguide-ai`, on `main`, with a public archive at [cleveee/parkguide-ai](https://github.com/cleveee/parkguide-ai). The initial working Azure/Streamlit version is commit `bdbba39`; the [repository data snapshot](REPOSITORY_DATA.md) documents publication of non-secret corpus, database, caches and run evidence. Nothing has been deployed or submitted.
 
 Open [ParkGuide](http://127.0.0.1:8511) and the [updated run dashboard](../dashboard/index.html). The UI requires one park, clearly indicates it, filters every search to that park and clears history when the selection changes. Every delivered factual claim requires cited saved passages and mandatory AI support review. Missing, live, private and wrong-park information is withheld. AI review can still make semantic mistakes or over-refuse; it is not a guarantee of correctness.
 
@@ -43,7 +43,7 @@ The full API ledger remains below the approved $5 cap. The dashboard includes hi
 1. Review all 40 gold drafts against saved source spans and mark the actual verifier/date. Use `data/evaluation/GOLD_REVIEW.md`; original sealed content is archived at `data/evaluation/gold-authored-original.jsonl` with its original hash. Do not replace human review with model judgments.
 2. Confirm at least 15 real failure labels from `reports/failure-review.jsonl`. The 22 proposals are actual observed initial outputs, each tied to its immutable run/item. No human label has been filled.
 3. Run the reviewed seeded 24/16 split; develop only on 24 dev items. Review the proposed gates, prepare a genuinely approved acceptance record using `scripts/prepare_final_review.py`, then run B0–B3 once on the same 16 held-out items. Acceptance tracks live source/chunk/vector content, code/configuration, and dataset hashes.
-4. Complete the classroom demonstration and deferred team/GitHub deliverables when separately authorized. User local-only instructions take precedence over the course's shared-remote workflow for this phase.
+4. Complete the classroom demonstration and remaining team/course deliverables when separately authorized. Robin authorized a public GitHub code/data archive on October 10; that publication is separate from a course submission or deployment.
 
 Known limits: rotated PDF chart headers, possible PDF column interleaving, pattern-based contact redaction, source age, incomplete alternative-evidence judgments, and an AI reviewer that can falsely approve an unsupported claim. Historical dialogue traces through stage6 contain later turns due to mutable-history aliasing; their real requests used preceding history, and the stage7 traces fix the snapshot error. The user-requested example.com crawler contact remains a course contact-email exception.
 

@@ -1,0 +1,727 @@
+{
+  "audit_timestamp_utc": "2026-10-10T13:24:22.727865+00:00",
+  "scope": "Read-only inspection of saved evidence/live SQLite/ledger/runtime; no API calls, secrets or source writes.",
+  "technical_config": {
+    "phase": "local_poc_human_review_pending",
+    "database": "data/parkguide.sqlite",
+    "embedding": {
+      "provider": "azure_openai",
+      "deployment": "text-embedding-3-small",
+      "observed_model": "text-embedding-3-small",
+      "dimension": 1536,
+      "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+      "model_version": "not_exposed_by_embedding_response",
+      "api_style": "v1",
+      "normalization": "l2",
+      "dtype": "float32",
+      "batch_size": 16,
+      "preprocessing_version": "text-preserve-v1",
+      "cache_by": [
+        "text_sha256",
+        "embedding_config_sha256"
+      ],
+      "identity_fields": [
+        "provider",
+        "endpoint",
+        "api_style",
+        "deployment",
+        "observed_model",
+        "model_version",
+        "dimension",
+        "normalization",
+        "dtype",
+        "preprocessing_version"
+      ]
+    },
+    "generation": {
+      "provider": "openai",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "max_output_tokens": 1000,
+      "temperature": 0,
+      "review_claims": true
+    },
+    "chunking": {
+      "strategies": [
+        "fixed",
+        "structure"
+      ],
+      "body_target_tokens": 200,
+      "overlap_tokens": 40,
+      "tokenizer": "cl100k_base",
+      "preserve_table_headers": true
+    },
+    "retrieval": {
+      "candidate_count": 20,
+      "per_retriever_fetch": 40,
+      "final_context_count": 5,
+      "rrf_k": 60,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "context_token_budget": 1600,
+      "default_rerank": false,
+      "selection_basis": "Initial paired diagnostic showed no evidence lift and extra rerank latency; shorter-prompt hybrid candidate had 12/12 expected actions. Human gold validation pending."
+    },
+    "evaluation": {
+      "split_seed": 633,
+      "gold_count": 40,
+      "dev_count": 24,
+      "test_count": 16,
+      "dialogue_count": 6,
+      "min_user_turns_per_dialogue": 3,
+      "max_dev_cycles": 10,
+      "no_improvement_limit": 3,
+      "bootstrap_samples": 10000,
+      "proposed_api_budget_usd": 5.0,
+      "budget_status": "approved_implementation_plan",
+      "transient_retries": 2
+    }
+  },
+  "crawler_config": {
+    "allowed_host": "www.nps.gov",
+    "seeds": [
+      "https://www.nps.gov/yose/planyourvisit/index.htm",
+      "https://www.nps.gov/yell/planyourvisit/index.htm",
+      "https://www.nps.gov/grca/planyourvisit/index.htm",
+      "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+      "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+      "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+      "https://www.nps.gov/yose/planyourvisit/guide.htm",
+      "https://www.nps.gov/grca/planyourvisit/maps.htm",
+      "https://www.nps.gov/grca/planyourvisit/upload/RimTrail.pdf"
+    ],
+    "allowed_path_prefixes": [
+      "/yose/planyourvisit/",
+      "/yell/planyourvisit/",
+      "/grca/planyourvisit/"
+    ],
+    "additional_public_pdf_paths": [],
+    "minimum_html_documents": 150,
+    "minimum_pdf_documents": 5,
+    "minimum_table_documents": 3,
+    "requests_per_second": 1,
+    "crawler_user_agent": "ParkGuideAI-CoursePOC/0.1",
+    "crawler_contact_email": "parkguide-poc@example.com",
+    "crawler_contact_is_placeholder": true,
+    "skip_person_directories": true,
+    "personal_contact_policy": "redact_or_drop",
+    "robots_required": true,
+    "robots_allowed": null,
+    "corpus_fetched": true,
+    "instructor_domain_approval": "approved",
+    "approval_provenance": "Robin confirmed instructor approval on 2026-10-09",
+    "contact_provenance": "Robin requested a fake address; example.com is a documented placeholder"
+  },
+  "corpus": {
+    "status": "complete",
+    "captured_at_utc": "2026-10-10T02:50:24.805175+00:00",
+    "targets": {
+      "html": 150,
+      "pdf": 5,
+      "table_documents": 3
+    },
+    "counts": {
+      "usable_html": 150,
+      "usable_pdf": 5,
+      "usable_table_documents": 45,
+      "discovered_urls": 398,
+      "visited_urls": 218,
+      "fetched_this_run": 144,
+      "request_attempts_this_run": 145,
+      "duplicate_documents_this_run": 0,
+      "rejected_this_run": 1,
+      "request_attempts_all_runs": 158
+    },
+    "rejections": [
+      {
+        "url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Braille-Brochure_11-15-21-2.brf",
+        "reason": "extraction_or_saved_data_failure"
+      }
+    ],
+    "documents_path": "data/documents.jsonl",
+    "raw_manifest_path": "data/raw/manifest.jsonl",
+    "limits": {
+      "requests_per_second": 1.0,
+      "max_request_attempts": 287
+    },
+    "crawler_contact_is_placeholder": true,
+    "limitations": [
+      "Public contact text redacted by email/phone patterns; this is not comprehensive name/PII detection",
+      "Extracted document dates may be publication/update dates, not proof of present applicability",
+      "PDF table extraction and sampled normalized content still require human inspection",
+      "The user explicitly selected a placeholder crawler contact; this does not satisfy the course's working-contact expectation"
+    ],
+    "normalized_corpus_sha256": "2d1285fed3c6b9960496999daa4dff4656df40c20c10d89c821c913db8d9589d",
+    "normalization_qa": {
+      "nps_layout_tables_unwrapped": true,
+      "html_merged_cells_expanded": true,
+      "offline_reextracted_html": 150,
+      "changed_documents_merged_header_fix": 3,
+      "known_pdf_rotated_header_limitation": "Tonto_Distances.pdf retains reversed rotated column-label glyph ordering; avoid those labels without raw PDF review"
+    },
+    "source": "data/corpus_summary.json",
+    "documents_source": "data/documents.jsonl",
+    "raw_source": "data/raw/manifest.jsonl",
+    "by_park": [
+      {
+        "park": "Yosemite",
+        "code": "yose",
+        "documents": 56,
+        "html": 53,
+        "pdf": 3,
+        "table_documents": 9,
+        "normalized_characters": 431505
+      },
+      {
+        "park": "Yellowstone",
+        "code": "yell",
+        "documents": 40,
+        "html": 40,
+        "pdf": 0,
+        "table_documents": 5,
+        "normalized_characters": 181957
+      },
+      {
+        "park": "Grand Canyon",
+        "code": "grca",
+        "documents": 59,
+        "html": 57,
+        "pdf": 2,
+        "table_documents": 31,
+        "normalized_characters": 362619
+      }
+    ],
+    "normalized_jsonl_bytes": 5511539,
+    "normalized_characters": 976081,
+    "unique_source_urls": 155,
+    "unique_content_hashes": 155,
+    "document_characters": {
+      "count": 155,
+      "sum": 976081,
+      "min": 159.0,
+      "max": 95526.0,
+      "mean": 6297.296774193548,
+      "p50": 3010.0,
+      "p95": 19548.09999999995
+    },
+    "blocks_by_kind": {
+      "paragraph": 8233,
+      "table": 115
+    },
+    "documents_with_effective_date": 155,
+    "earliest_extracted_effective_date": "2019-05-14",
+    "latest_extracted_effective_date": "2026-10-09",
+    "capture_first_utc": "2026-10-10T02:44:54.433051+00:00",
+    "capture_last_utc": "2026-10-10T02:50:24.703800+00:00",
+    "capture_manifest_elapsed_seconds": 331.089232,
+    "raw_manifest_entries": 158,
+    "raw_kind_counts": {
+      "robots": 2,
+      "document": 156
+    },
+    "raw_bytes_sum": 28669492,
+    "raw_unique_blobs": 157,
+    "raw_checksum_mismatches": 0,
+    "counter_scope": "Final resumed-crawl telemetry; discovered/visited bookkeeping is not HTTP request count. 158 raw entries include two robots and 156 document captures, one rejected; 155 normalized usable documents. Capture timestamp span is not full setup wall time."
+  },
+  "index_builds": [
+    {
+      "strategy": "fixed",
+      "build_id": "5a6a37ba5cdd3e57bc888a77df31752630c3c6d79e1dbbc9a56f82db6ada8627",
+      "created_at_utc": "2026-10-10T03:45:44.384220+00:00",
+      "active": false,
+      "statistics": {
+        "chunk_count": 1698,
+        "document_count": 155,
+        "tokens": 327898,
+        "minimum": 48,
+        "maximum": 200,
+        "mean": 193.10836277974087,
+        "p50": 200.0,
+        "p95": 200.0
+      },
+      "live_tokens": {
+        "count": 1698,
+        "sum": 327898,
+        "min": 48.0,
+        "max": 200.0,
+        "mean": 193.10836277974087,
+        "p50": 200.0,
+        "p95": 200.0
+      },
+      "live_vector_count": 1698,
+      "dimension": 1536,
+      "dtype": "float32",
+      "all_finite": true,
+      "norm_min": 1.0,
+      "norm_max": 1.0000001192092896,
+      "chunker": {
+        "strategy": "fixed",
+        "target": 200,
+        "overlap": 40,
+        "version": "parkguide-chunks-v1",
+        "tokenizer": "cl100k_base"
+      },
+      "distance": "cosine",
+      "embedding_identity": {
+        "provider": "azure_openai",
+        "deployment": "text-embedding-3-small",
+        "observed_model": "text-embedding-3-small",
+        "dimension": 1536,
+        "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+        "model_version": "not_exposed_by_embedding_response",
+        "api_style": "v1",
+        "normalization": "l2",
+        "dtype": "float32",
+        "batch_size": 16,
+        "preprocessing_version": "text-preserve-v1",
+        "cache_by": [
+          "text_sha256",
+          "embedding_config_sha256"
+        ],
+        "identity_fields": [
+          "provider",
+          "endpoint",
+          "api_style",
+          "deployment",
+          "observed_model",
+          "model_version",
+          "dimension",
+          "normalization",
+          "dtype",
+          "preprocessing_version"
+        ]
+      },
+      "vector_sha256": "5efcb19be8f136916c25ecafe240ff09ab5037cb70c35bbf87e2f38024b57b17",
+      "ordered_chunk_ids_sha256": "c28f28fbe4de72b456365c72543bcf71e3cbf832afd0265393baaae845b16e48",
+      "source": "artifacts/builds/fixed.json",
+      "manifest_sha256": "6e699f2dc22d12216776e01d6ea397ef6970e368f9be50b5dcc5aa38c5656a43",
+      "basis": "Saved manifest statistics plus read-only live SQLite tokens/vectors; ID arrays summarized. Summed chunk tokens include overlap and repeated headers, not unique corpus tokens."
+    },
+    {
+      "strategy": "structure",
+      "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+      "created_at_utc": "2026-10-10T03:49:58.065777+00:00",
+      "active": true,
+      "statistics": {
+        "chunk_count": 3707,
+        "document_count": 155,
+        "tokens": 324448,
+        "minimum": 5,
+        "maximum": 200,
+        "mean": 87.52306447261937,
+        "p50": 62.0,
+        "p95": 200.0
+      },
+      "live_tokens": {
+        "count": 3707,
+        "sum": 324448,
+        "min": 5.0,
+        "max": 200.0,
+        "mean": 87.52306447261937,
+        "p50": 62.0,
+        "p95": 200.0
+      },
+      "live_vector_count": 3707,
+      "dimension": 1536,
+      "dtype": "float32",
+      "all_finite": true,
+      "norm_min": 1.0,
+      "norm_max": 1.0000001192092896,
+      "chunker": {
+        "strategy": "structure",
+        "target": 200,
+        "overlap": 40,
+        "version": "parkguide-chunks-v1",
+        "tokenizer": "cl100k_base"
+      },
+      "distance": "cosine",
+      "embedding_identity": {
+        "provider": "azure_openai",
+        "deployment": "text-embedding-3-small",
+        "observed_model": "text-embedding-3-small",
+        "dimension": 1536,
+        "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+        "model_version": "not_exposed_by_embedding_response",
+        "api_style": "v1",
+        "normalization": "l2",
+        "dtype": "float32",
+        "batch_size": 16,
+        "preprocessing_version": "text-preserve-v1",
+        "cache_by": [
+          "text_sha256",
+          "embedding_config_sha256"
+        ],
+        "identity_fields": [
+          "provider",
+          "endpoint",
+          "api_style",
+          "deployment",
+          "observed_model",
+          "model_version",
+          "dimension",
+          "normalization",
+          "dtype",
+          "preprocessing_version"
+        ]
+      },
+      "vector_sha256": "2753d89c490cae798f15000ee0649b858d5baad201cdf533b94859ed86455762",
+      "ordered_chunk_ids_sha256": "187a91830e591c025b1132671583a4cc9c67badc4afeaf922ae1d10332019f7a",
+      "source": "artifacts/builds/structure.json",
+      "manifest_sha256": "491d80ad08d793b85124f93f2749f5f255edb7c48a8cfd241304abdfe6d58aa1",
+      "basis": "Saved manifest statistics plus read-only live SQLite tokens/vectors; ID arrays summarized. Summed chunk tokens include overlap and repeated headers, not unique corpus tokens."
+    }
+  ],
+  "database": {
+    "source": "data/parkguide.sqlite",
+    "read_only": true,
+    "file_bytes": 56664064,
+    "schema_version": "1",
+    "tables": {
+      "metadata": 1,
+      "documents": 155,
+      "index_builds": 2,
+      "chunks": 5405,
+      "embeddings": 5405
+    },
+    "active_builds": 1,
+    "foreign_key_errors": 0,
+    "integrity_check": "ok",
+    "orphan_vectors": 0,
+    "chunks_without_vectors": 0,
+    "vector_blob_bytes": 33208320,
+    "basis": "Live read-only SELECT and PRAGMA at audit timestamp"
+  },
+  "migration": {
+    "source": "artifacts/migration/proof.json",
+    "previous_build_count": 1,
+    "previous_chunk_count": 1698,
+    "deleted_previous": true,
+    "active_build": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "integrity": {
+      "documents": 155,
+      "index_builds": 1,
+      "chunks": 3707,
+      "embeddings": 3707,
+      "foreign_key_errors": 0,
+      "orphan_vectors": 0,
+      "chunks_without_vectors": 0,
+      "active_builds": 1
+    },
+    "previous_build_rows_remaining": 0,
+    "network_requests": 0,
+    "normalized_sources_reused": true,
+    "basis": "Disposable database-copy offline migration proof; main intentionally retains both builds."
+  },
+  "providers_setup": [
+    {
+      "source": "artifacts/setup/azure-independent-smoke.json",
+      "auth": "Azure resource API key via api-key header",
+      "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com/openai/v1/embeddings",
+      "environment": "dev/staging per repo resource map; no prod request",
+      "requested_deployment": "text-embedding-3-small",
+      "api_route": "v1",
+      "api_version_query": null,
+      "configured_legacy_api_version": "2025-04-01-preview",
+      "input_count": 1,
+      "checked_at_utc": "2026-10-10T02:19:33.300214+00:00",
+      "http_status": 200,
+      "elapsed_ms": 1411.7,
+      "response_model": "text-embedding-3-small",
+      "returned_count": 1,
+      "dimensions": 1536,
+      "finite": true,
+      "l2_norm": 1.00019418,
+      "usage": {
+        "prompt_tokens": 12,
+        "total_tokens": 12
+      },
+      "success": true,
+      "limitations": [
+        "One request only; does not verify capacity or sustained rate limits.",
+        "Underlying deployed model revision not exposed by response.",
+        "No application corpus, chat, or evaluation data was submitted.",
+        "Report transcribed from completed probe output; vector not persisted."
+      ]
+    },
+    {
+      "source": "artifacts/setup/azure-project-smoke.json",
+      "success": true,
+      "checked_at_utc": "2026-10-10T02:24:32.176535+00:00",
+      "test_kind": "project_adapter_synthetic_batch",
+      "input_count": 2,
+      "model": "text-embedding-3-small",
+      "dimension": 1536,
+      "dtype": "float32",
+      "finite": true,
+      "normalized_l2_norms": [
+        1.0,
+        1.0
+      ],
+      "usage": {
+        "prompt_tokens": 22,
+        "total_tokens": 22
+      },
+      "elapsed_ms": 3346.8,
+      "vector_file_sha256": "3f62cba31e7a5e5bef516e24a290cdbcdf6b25498daceb5009b0f87e007dae81",
+      "limitations": [
+        "Synthetic inputs only; no throughput, retrieval, or generation assessment"
+      ]
+    }
+  ],
+  "cost": {
+    "source": "artifacts/api-ledger.json",
+    "ledger_sha256": "b0110f6c5d4c30f085b457ef206699adb2f68e9ab288f95f9894eecf0f8bb83a",
+    "events": 710,
+    "unique_event_ids": 710,
+    "first_event_utc": "2026-10-10T02:53:50.256671+00:00",
+    "last_event_utc": "2026-10-10T13:16:38.893802+00:00",
+    "cap_usd": 5.0,
+    "estimated_committed_usd": 0.38999003800000004,
+    "remaining_estimated_usd": 4.610009962,
+    "budget_used_percent": 7.79980076,
+    "known_usage_events": 707,
+    "unknown_usage_events": 3,
+    "known_usage_estimate_usd": 0.38654457400000003,
+    "unknown_upper_reservations_usd": 0.003445463999999999,
+    "input_tokens_known": 1368436,
+    "output_tokens_known": 51654,
+    "by_kind_status": [
+      {
+        "kind": "embedding",
+        "status": "provider_error_reserved",
+        "events": 3,
+        "known_usage_events": 0,
+        "unknown_usage_events": 3,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_committed_usd": 0.003445463999999999,
+        "provider": "azure_openai",
+        "model": "text-embedding-3-small"
+      },
+      {
+        "kind": "embedding",
+        "status": "reported_usage",
+        "events": 347,
+        "known_usage_events": 347,
+        "unknown_usage_events": 0,
+        "input_tokens": 644117,
+        "output_tokens": 0,
+        "estimated_committed_usd": 0.014170573999999998,
+        "provider": "azure_openai",
+        "model": "text-embedding-3-small"
+      },
+      {
+        "kind": "generation",
+        "status": "provider_error_reserved",
+        "events": 2,
+        "known_usage_events": 2,
+        "unknown_usage_events": 0,
+        "input_tokens": 4687,
+        "output_tokens": 126,
+        "estimated_committed_usd": 0.0020764,
+        "provider": "openai",
+        "model": "gpt-4.1-mini-2025-04-14"
+      },
+      {
+        "kind": "generation",
+        "status": "reported_usage",
+        "events": 358,
+        "known_usage_events": 358,
+        "unknown_usage_events": 0,
+        "input_tokens": 719632,
+        "output_tokens": 51528,
+        "estimated_committed_usd": 0.3702976,
+        "provider": "openai",
+        "model": "gpt-4.1-mini-2025-04-14"
+      }
+    ],
+    "pricing": {
+      "currency": "USD",
+      "verified_on": "2026-10-09",
+      "billing_confirmed": false,
+      "embedding": {
+        "provider": "azure_openai",
+        "model": "text-embedding-3-small",
+        "region": "eastus2",
+        "input_per_million_usd": 0.022,
+        "output_per_million_usd": 0.0,
+        "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+        "basis": "list-price estimate",
+        "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+        "global_standard_reference_input_per_million_usd": 0.02,
+        "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+        "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+        "retail_price_unit": "1K tokens",
+        "retail_price_global_usd": 2e-05,
+        "retail_price_regional_usd": 2.2e-05,
+        "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+        "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input_per_million_usd": 0.4,
+        "output_per_million_usd": 1.6,
+        "cached_input_per_million_usd": 0.1,
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "basis": "list-price estimate",
+        "selection": "Official standard synchronous text-token rates. Budget counts all input at uncached rate conservatively; no Batch discount assumed.",
+        "credential_billing_environment": "unspecified local AI vendor credential; test/production account designation not established",
+        "billing_confirmed": false
+      },
+      "budget_policy": {
+        "implementation_cap_usd": 5.0,
+        "include_embeddings_generation_and_optional_judging": true,
+        "actual_invoice_reconciliation": "not performed",
+        "note": "Amounts computed from actual token usage and these rates are dated list-price estimates, not confirmed billing. Root integration owns reservations, retries, spend totals, and stopping before the cap. Adapter reports usage only."
+      }
+    },
+    "implementation_close_estimate_usd": 0.388879216,
+    "implementation_close_source": "artifacts/final-verification.json",
+    "later_live_events": [
+      {
+        "kind": "embedding",
+        "status": "reported_usage",
+        "timestamp": "2026-10-10T13:16:37.477210+00:00",
+        "input_tokens": 1,
+        "output_tokens": 0,
+        "estimated_usd": 2.2e-08
+      },
+      {
+        "kind": "generation",
+        "status": "provider_error_reserved",
+        "timestamp": "2026-10-10T13:16:38.893802+00:00",
+        "input_tokens": 2677,
+        "output_tokens": 25,
+        "estimated_usd": 0.0011108
+      }
+    ],
+    "connectivity_separate_known_tokens": 34,
+    "connectivity_separate_estimate_usd": 7.48e-07,
+    "basis": "Each mutable final-state reservation counted once by unique ID. Failed generation entries with returned usage are known priced usage, not unknown reservation. Three failed embedding entries retain upper reservations. Embedding kind combines index and query; generation combines response and review, ledger lacks subtype. Independently authorized smoke probes outside ledger. Current ledger includes two later live-app events after final verification. Published-price estimate not invoice; discounts unassumed."
+  },
+  "gold": {
+    "source": "data/evaluation/gold-drafts.jsonl",
+    "seal": {
+      "count": 40,
+      "sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+      "frozen_at": "2026-10-10T03:46:33.629102+00:00",
+      "status": "HUMAN_REVIEW_PENDING",
+      "chatbot_outputs_seen_before_authoring": false
+    },
+    "count": 40,
+    "categories": {
+      "factual": 15,
+      "multi_hop": 6,
+      "comparative": 4,
+      "temporal": 4,
+      "unanswerable": 8,
+      "ambiguous_adversarial": 3
+    },
+    "expected_actions": {
+      "answer": 30,
+      "refuse": 8,
+      "clarify": 2
+    },
+    "unique_families": 40,
+    "human_verified": 0,
+    "human_verifier_present": 0,
+    "evidence_spans": 54,
+    "unique_evidence_documents": 33,
+    "original_archive": "data/evaluation/gold-authored-original.jsonl",
+    "archive_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+    "draft_sha256": "15117b5270cf0ffee2917b5fa2ab87496e3be4628860cda7bf77e6b933a8de47",
+    "archive_matches_seal": true,
+    "dev_target": 24,
+    "test_target": 16,
+    "split_seed": 633,
+    "split_created": false,
+    "final_test_consumed": false,
+    "failure_review_source": "reports/failure-review.jsonl",
+    "failure_proposals": 22,
+    "human_failure_labels": 0,
+    "required_human_failure_labels": 15,
+    "basis": "Actual gold fields/seal counted; no dev/test split files exist, corroborated final-verification. No AI grade counted as human review."
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "sqlite": "3.53.1",
+    "packages": {
+      "requests": "2.34.2",
+      "beautifulsoup4": "4.15.0",
+      "pdfplumber": "0.11.10",
+      "numpy": "2.5.3",
+      "rank-bm25": "0.2.2",
+      "streamlit": "1.65.0",
+      "openai": "3.28.0",
+      "tiktoken": "0.14.0",
+      "python-dotenv": "1.2.4",
+      "pytest": "9.1.1",
+      "sentence-transformers": "6.1.0",
+      "torch": "2.14.1",
+      "transformers": "5.19.0"
+    },
+    "core_lock": "requirements-core.lock",
+    "full_lock": "requirements-full.lock",
+    "declared_python_range": ">=3.11,<3.14",
+    "verification": {
+      "repo": "/Users/robin/Build/Personal/parkguide-ai",
+      "baseline_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/runs/20261010T042905Z-54d33f15",
+      "dialogue_run": "/Users/robin/Build/Personal/parkguide-ai/artifacts/dialogues/7bbd1b0ccdb649edbaf2b64ccc9797e3",
+      "code_hash": "32eaa5a01a199d0e547fa46c3cb2ef6e2f18447e6f642821d9f9304298966a9c",
+      "pytest_passed": 126,
+      "pip_check": "No broken requirements found",
+      "browser": "actual three table turns, source equation/claim review trace, private-record refusal, default rerank off",
+      "browser_proof": "artifacts/ui/browser-verification.txt",
+      "screenshot": "artifacts/ui/three-turn-chat.jpg",
+      "human_verified_gold": 0,
+      "sealed_test_created": false,
+      "final_test_consumed": false,
+      "api_estimated_committed_usd": 0.388879216,
+      "ai_review": {
+        "selected_diagnostic_clear_correct": 12,
+        "selected_diagnostic_total": 12,
+        "dialogue_clear_correct": 16,
+        "dialogue_uncertain": 2,
+        "dialogue_total": 18,
+        "selected_plus_dialogue_supported_claims": 36,
+        "selected_plus_dialogue_claims": 38,
+        "human_verified": false,
+        "quality_gates_confirmed": false
+      },
+      "semantic_review_sha256": "4ba4836a0275ec7940e61287c2fdd4dc1af7e4c67d4de1b8068776372f4e4d0c"
+    },
+    "local_app_url": "http://127.0.0.1:8511/",
+    "cloud_scope": "Existing Azure/OpenAI APIs only; application/storage local, no hosted executor/cloud DB/new resources.",
+    "code_modules": 18,
+    "test_files": 9,
+    "git": {
+      "branch": "main",
+      "commits": 0,
+      "remotes": []
+    }
+  },
+  "storage": {
+    "database_bytes": 56664064,
+    "raw_files_bytes": 28732294,
+    "embedding_cache_files": 10190,
+    "embedding_cache_bytes": 36011460,
+    "embedding_cache_npy_files": 5095,
+    "model_files": 0,
+    "model_bytes": 0,
+    "basis": "Current filesystem sizes, not transfer volume; both build vectors retained.",
+    "model_project_directory_exists": false,
+    "model_cache_note": "Project models/ directory absent. Optional reranker uses default Hugging Face cache; its external cache size was not measured. Zero project model bytes does not mean reranker was not downloaded or exercised."
+  },
+  "limitations": [
+    "Gold40 human review and >=15 actual human failure labels pending; no held-out test consumed.",
+    "Snapshot source age and extracted dates do not prove current applicability.",
+    "Rotated PDF labels/column interleaving need inspection; email/phone redaction incomplete.",
+    "User placeholder contact is a course requirement exception.",
+    "Azure model revision and invoice SKU unexposed/unverified; OpenAI billing environment unspecified.",
+    "Current ledger has two later live-app events beyond implementation-close snapshot.",
+    "AI semantic review provisional; historical dialogue traces through stage6 had aliasing snapshot issue fixed stage7."
+  ]
+}

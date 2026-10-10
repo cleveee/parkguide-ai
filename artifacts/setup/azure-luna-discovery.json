@@ -1,0 +1,167 @@
+{
+  "checked_at_utc": "2026-10-10T14:20:56.855684+00:00",
+  "target_model": "gpt-6-luna-2026-09-22",
+  "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+  "paid_requests": 0,
+  "scope": "Read-only model/deployment metadata on the existing project embedding resource; no provisioning or credentials writes.",
+  "models_metadata_request": {
+    "url": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com/openai/v1/models",
+    "http_status": 200,
+    "elapsed_ms": 2020.9,
+    "record_count": 470,
+    "luna_records": [
+      {
+        "id": "gpt-6-luna-2026-09-22",
+        "object": "model",
+        "status": "succeeded",
+        "capabilities": {
+          "fine_tune": false,
+          "inference": true,
+          "completion": false,
+          "chat_completion": true,
+          "embeddings": false,
+          "global_fine_tune": false,
+          "devtier_fine_tune": false
+        },
+        "lifecycle_status": "generally-available"
+      },
+      {
+        "id": "gpt-6-luna",
+        "object": "model",
+        "status": "succeeded",
+        "capabilities": {
+          "fine_tune": false,
+          "inference": true,
+          "completion": false,
+          "chat_completion": true,
+          "embeddings": false,
+          "global_fine_tune": false,
+          "devtier_fine_tune": false
+        },
+        "lifecycle_status": "generally-available"
+      }
+    ]
+  },
+  "azure_cli_defaults": {},
+  "azure_cli_resource_lookup": {
+    "status": "unavailable",
+    "error_code": "scoped_azure_cli_read_failed",
+    "configured_account_available": false
+  },
+  "azure_retail_price_lookup": {
+    "source_url": "https://prices.azure.com/api/retail/prices?currencyCode=%27USD%27&%24filter=serviceName+eq+%27Cognitive+Services%27+and+armRegionName+eq+%27eastus2%27+and+contains%28skuName%2C%27gpt-6-luna%27%29",
+    "http_status": 200,
+    "scope": "USD Consumption list prices matching gpt-6-luna in eastus2; not account billing or deployed SKU proof.",
+    "matched_item_count": 0,
+    "records": []
+  },
+  "completed_at_utc": "2026-10-10T14:22:46.785336+00:00",
+  "deployment_readback": {
+    "confirmed": false,
+    "deployment_name": null,
+    "requested_deployment_candidate": "gpt-6-luna-2026-09-22",
+    "requested_model_family": "gpt-6-luna",
+    "requested_model_version": "2026-09-22",
+    "sku": null,
+    "status": "model_catalog_offering_confirmed_deployed_name_and_sku_unverified",
+    "limitation": "The resource models catalog describes offerings; Azure CLI has no configured account. No paid inference probe or ARM deployment readback was performed."
+  },
+  "pricing": {
+    "currency": "USD",
+    "unit": "per_1000000_tokens",
+    "billing_confirmation": false,
+    "azure_primary_source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+    "rates": [
+      {
+        "deployment_type": "GlobalStandard",
+        "context_category": "short",
+        "input": 0.1,
+        "cached_input": 0.01,
+        "cache_writes": 0.125,
+        "output": 0.5
+      },
+      {
+        "deployment_type": "GlobalStandard",
+        "context_category": "long",
+        "input": 0.2,
+        "cached_input": 0.02,
+        "cache_writes": 0.25,
+        "output": 0.75
+      },
+      {
+        "deployment_type": "DataZoneStandard_US",
+        "context_category": "short",
+        "input": 0.11,
+        "cached_input": 0.011,
+        "cache_writes": 0.1375,
+        "output": 0.55
+      },
+      {
+        "deployment_type": "DataZoneStandard_US",
+        "context_category": "long",
+        "input": 0.22,
+        "cached_input": 0.022,
+        "cache_writes": 0.275,
+        "output": 0.825
+      },
+      {
+        "deployment_type": "DataZoneStandard_EU",
+        "context_category": "short",
+        "input": 0.12,
+        "cached_input": 0.012,
+        "cache_writes": 0.15,
+        "output": 0.6
+      },
+      {
+        "deployment_type": "DataZoneStandard_EU",
+        "context_category": "long",
+        "input": 0.24,
+        "cached_input": 0.024,
+        "cache_writes": 0.3,
+        "output": 0.9
+      }
+    ],
+    "conservative_standard_short_context_estimate": {
+      "input": 0.12,
+      "output": 0.6,
+      "cache_discount_assumed": false,
+      "condition": "Covers the highest published Standard short-context rate, assuming Standard serving. Live deployment SKU and account billing remain unverified; Priority/Provisioned rates vary."
+    },
+    "openai_reference_only": {
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "standard_short_input": 0.1,
+      "standard_short_output": 0.5,
+      "note": "Documentation reference only. No direct OpenAI API request was made; Azure-specific estimates use Microsoft pricing."
+    }
+  },
+  "documented_support": {
+    "source_url": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/reasoning?tabs=python",
+    "model_version": "gpt-6-luna, 2026-09-22",
+    "structured_outputs": true,
+    "chat_completions": true,
+    "responses": true,
+    "reasoning_effort_none": true,
+    "temperature_supported_in_model_specific_matrix": true,
+    "temperature_documentation_conflict": "The lower generic Unsupported parameters paragraph says reasoning models other than Astra lack temperature; it conflicts with the specific Luna feature table. Actual deployment behavior is untested.",
+    "context_window": 1050000,
+    "maximum_input_tokens": 922000,
+    "maximum_output_tokens": 128000,
+    "openai_source_url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "openai_luna_default_reasoning_effort": "medium",
+    "openai_reasoning_levels": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "implementation_inference": "For the preserved 1000-token output cap, explicit reasoning_effort=none avoids using that budget for hidden reasoning. This is a proposed setting, not a live validation result."
+  },
+  "secret_handling": {
+    "project_credentials_read_in_memory_only": true,
+    "credentials_copied_or_modified": false,
+    "provider_error_bodies_headers_and_keys_retained": false,
+    "direct_openai_api_requests": 0
+  }
+}

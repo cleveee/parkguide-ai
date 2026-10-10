@@ -1,0 +1,9 @@
+{
+  "kind": "non_gold_dialogue_diagnostic",
+  "dataset_hash": "f8b55abcbd94df5bcf9dc12c4f28394411420a033007e7d405d0dd159dfb0446",
+  "config_hash": "9936f38d7265bca7c8d6ca44515ee4ba5e0d97b306a37137216bddda1c5883e1",
+  "mode": "hybrid",
+  "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+  "rerank": false,
+  "history": "actual preceding assistant responses"
+}

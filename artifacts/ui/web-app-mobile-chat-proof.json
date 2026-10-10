@@ -1,0 +1,14 @@
+{
+  "longWordParagraphs": [
+    {
+      "height": 280,
+      "overflowWrap": "anywhere",
+      "scrollHeight": 280,
+      "scrollWidth": 294,
+      "width": 294
+    }
+  ],
+  "pageScrollWidth": 375,
+  "pageWidth": 375,
+  "text": "What is Yosemite weather today? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\nNot answered · a recognized pattern stopped it locally; nothing was sent to Azure for this turn\n\nI cannot verify live conditions, availability, or current updates for Yosemite from the saved database. Please check the park's official information.\n\nStopped by a local check before any embedding, search or model call.\n\n91 ms\nInspect this turn\nYosemite National Park\nAnswers rely on an AI source review of saved NPS pages; check official information for safety-critical decisions."
+}

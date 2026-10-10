@@ -1,0 +1,162 @@
+{
+  "B0": {
+    "items": 12,
+    "errors": 0,
+    "grading_status": "HUMAN_REVIEW_PENDING",
+    "recall_5": {
+      "mean": null,
+      "denominator": 0
+    },
+    "recall_20": {
+      "mean": null,
+      "denominator": 0
+    },
+    "mrr": {
+      "mean": null,
+      "denominator": 0
+    },
+    "ndcg_10": {
+      "mean": null,
+      "denominator": 0
+    },
+    "evidence_coverage_5": {
+      "mean": null,
+      "denominator": 0
+    },
+    "evidence_coverage_20": {
+      "mean": null,
+      "denominator": 0
+    },
+    "diagnostic_passes": 3,
+    "action_correct": 12,
+    "latency_p50_ms": 1038.2,
+    "latency_p95_ms": 1982.82,
+    "latency_denominator": 12,
+    "latency_failure_policy": "Completed responses only; failed requests are counted separately, not assigned zero latency",
+    "generation_cost_estimate_usd": 0.004194,
+    "generation_cost_denominator": 12,
+    "generation_cost_scope": "Successful generation and successful claim-review calls only; excludes query embeddings and failed-call reservations. Whole implementation cost is in the API ledger.",
+    "answer_accuracy": null,
+    "citation_semantic_support": null
+  },
+  "B1": {
+    "items": 12,
+    "errors": 0,
+    "grading_status": "HUMAN_REVIEW_PENDING",
+    "recall_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "recall_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "mrr": {
+      "mean": 0.875,
+      "denominator": 8
+    },
+    "ndcg_10": {
+      "mean": 0.9077324383928644,
+      "denominator": 8
+    },
+    "evidence_coverage_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "evidence_coverage_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "diagnostic_passes": 3,
+    "action_correct": 11,
+    "latency_p50_ms": 2619.1000000000004,
+    "latency_p95_ms": 3226.2,
+    "latency_denominator": 12,
+    "latency_failure_policy": "Completed responses only; failed requests are counted separately, not assigned zero latency",
+    "generation_cost_estimate_usd": 0.0193004,
+    "generation_cost_denominator": 12,
+    "generation_cost_scope": "Successful generation and successful claim-review calls only; excludes query embeddings and failed-call reservations. Whole implementation cost is in the API ledger.",
+    "answer_accuracy": null,
+    "citation_semantic_support": null
+  },
+  "B2": {
+    "items": 12,
+    "errors": 0,
+    "grading_status": "HUMAN_REVIEW_PENDING",
+    "recall_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "recall_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "mrr": {
+      "mean": 0.55,
+      "denominator": 8
+    },
+    "ndcg_10": {
+      "mean": 0.6621780785943642,
+      "denominator": 8
+    },
+    "evidence_coverage_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "evidence_coverage_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "diagnostic_passes": 4,
+    "action_correct": 12,
+    "latency_p50_ms": 2661.7,
+    "latency_p95_ms": 3119.22,
+    "latency_denominator": 12,
+    "latency_failure_policy": "Completed responses only; failed requests are counted separately, not assigned zero latency",
+    "generation_cost_estimate_usd": 0.0193356,
+    "generation_cost_denominator": 12,
+    "generation_cost_scope": "Successful generation and successful claim-review calls only; excludes query embeddings and failed-call reservations. Whole implementation cost is in the API ledger.",
+    "answer_accuracy": null,
+    "citation_semantic_support": null
+  },
+  "B3": {
+    "items": 12,
+    "errors": 0,
+    "grading_status": "HUMAN_REVIEW_PENDING",
+    "recall_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "recall_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "mrr": {
+      "mean": 0.8541666666666666,
+      "denominator": 8
+    },
+    "ndcg_10": {
+      "mean": 0.8913662191964322,
+      "denominator": 8
+    },
+    "evidence_coverage_5": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "evidence_coverage_20": {
+      "mean": 1.0,
+      "denominator": 8
+    },
+    "diagnostic_passes": 5,
+    "action_correct": 12,
+    "latency_p50_ms": 2559.0,
+    "latency_p95_ms": 3633.9849999999997,
+    "latency_denominator": 12,
+    "latency_failure_policy": "Completed responses only; failed requests are counted separately, not assigned zero latency",
+    "generation_cost_estimate_usd": 0.01716,
+    "generation_cost_denominator": 12,
+    "generation_cost_scope": "Successful generation and successful claim-review calls only; excludes query embeddings and failed-call reservations. Whole implementation cost is in the API ledger.",
+    "answer_accuracy": null,
+    "citation_semantic_support": null
+  }
+}

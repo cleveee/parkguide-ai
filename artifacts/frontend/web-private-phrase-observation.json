@@ -1,0 +1,623 @@
+{
+  "checked_at_utc": "2026-10-10T15:36:40.009632+00:00",
+  "purpose": "Non-gold operational observation: finite local preflight pattern boundary, not a human accuracy label",
+  "input": {
+    "selected_park": "yose",
+    "question": "Look up my private Yosemite booking confirmation FAKE-LOCAL-123.",
+    "history": []
+  },
+  "turn": {
+    "turn_id": "308579c7d8ad457ea0d69b9e6d0134b0",
+    "selected_park": "yose",
+    "question": "Look up my private Yosemite booking confirmation FAKE-LOCAL-123.",
+    "status": "refusal",
+    "text": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "claims": [],
+    "sources": [],
+    "history_content": "I could not find enough supporting information in the saved Yosemite sources to answer that. Please check the official NPS information.",
+    "history_scope_reset": false,
+    "reason": {
+      "code": "model_refused",
+      "category": "model_refusal",
+      "detail": "The answer model declined to answer from the selected passages."
+    },
+    "timing": {
+      "answer_call_ms": 1707.6,
+      "pipeline_ms": 1707.6,
+      "server_ms": 1713.8
+    },
+    "history": {
+      "messages_received": 0,
+      "messages_used": 0,
+      "scope_reset": false
+    },
+    "inspector": {
+      "retrieval": {
+        "ran": true,
+        "query": "Look up my private Yosemite booking confirmation FAKE-LOCAL-123.",
+        "filters": {
+          "parks": [
+            "yose"
+          ],
+          "source_url_count": 0
+        },
+        "mode": "hybrid",
+        "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+        "build_strategy": "structure",
+        "rerank_enabled": true,
+        "eligible_count": 1377,
+        "candidate_count": 20,
+        "requested_candidates": 20,
+        "final_count": 5,
+        "context_count": 5,
+        "shortfall": false,
+        "timings_ms": {
+          "load_ms": 239.0004580374807,
+          "retrieval_ms": 22.43895805440843,
+          "rerank_ms": 148.33370898850262,
+          "total_ms": 409.77654210291803
+        },
+        "score_labels": {
+          "dense": "Cosine similarity (query vs. stored vector)",
+          "bm25": "BM25 Okapi lexical score",
+          "rrf": "Reciprocal-rank fusion, sum of 1/(60 + rank)",
+          "rerank": "Cross-encoder reranker raw score (not a probability)"
+        },
+        "candidates": [
+          {
+            "chunk_id": "a8442749aa721a9bf1ca28865f648e9cd79f09147972ddb21e29d4202bcb3236",
+            "doc_id": "1b6d367a2015c2e33dc2d9956fa2224b2648581d7f4729135e557b24af271b1f",
+            "title": "Eating & Sleeping - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Eating & Sleeping > Lodging > Private Lodging",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/eatingsleeping.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 3,
+            "post_rank": 1,
+            "scores": {
+              "dense": 0.4260812997817993,
+              "bm25": 11.368854818755535,
+              "rrf": 0.01639344262295082,
+              "rerank": -3.668511390686035
+            },
+            "retriever_ranks": {
+              "bm25": 1,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Eating & Sleeping > Lodging > Private Lodging\n\nPrivate Lodging\n\nIf you can't find lodging through Yosemite Hospitality, consider staying in private lodging.\n\nForesta and Wawona (private land within Yosemite) and Yosemite West (just outside of, but only accessible from, Yosemite)\n\nHighway 41 from the south: Fish Camp and Oakhurst\n\nHighway 140 from th"
+          },
+          {
+            "chunk_id": "8b2fe6172b417189b2ca5e1e6d8d1dbc4a9b88d677e26551a3de012d251594e3",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 18,
+            "post_rank": 2,
+            "scores": {
+              "dense": 0.4017913043498993,
+              "bm25": 7.532383246225714,
+              "rrf": 0.014492753623188406,
+              "rerank": -4.550838947296143
+            },
+            "retriever_ranks": {
+              "bm25": 9,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n is required. Private photography Current & Upcoming Exhibitions: guiding is also available. Visit AnselAdams.com/photography-education or call 209/372-4413. \u2022 Apr 20 \u2013 May 31 | Near and Far: A Visual Journey with Dan Burkholder Become a Yosemite Junior Ranger! \u2022 Jun 1 \u2013 Jul 12 | Symphony of Seasons:"
+          },
+          {
+            "chunk_id": "d357310cba0a50f9819c4854ee83bc141eee9dc8cd1d5cea22cbf381e86b201b",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 9,
+            "post_rank": 3,
+            "scores": {
+              "dense": 0.3844839334487915,
+              "bm25": 8.030604589578523,
+              "rrf": 0.015625,
+              "rerank": -5.8050947189331055
+            },
+            "retriever_ranks": {
+              "bm25": 4,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\n. Painting supplies (plus wine and cheese) are included. $ Location The Ansel Adams Gallery is F Hosted in partnership with Yosemite Hospitality at the Mountain Room Lounge. Register in advance at Yosemite.org/art located in Yosemite Village, open from 9 am to 5 pm daily. Experience a variety of fine"
+          },
+          {
+            "chunk_id": "0c192c4288169eb120d9b17e3ae2b83bb278efb4be1b850cf39fbd85d9e57496",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 6,
+            "post_rank": 4,
+            "scores": {
+              "dense": 0.3914620280265808,
+              "bm25": 8.03929034199084,
+              "rrf": 0.015873015873015872,
+              "rerank": -5.912003517150879
+            },
+            "retriever_ranks": {
+              "bm25": 3,
+              "dense": null
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 6\n\n Oct 1.) Experience a variety of fine arts, Yosemite Valley Sunset Walk Experience the magic of Yosemite while the setting sun lights up your favorite granite $ handcrafts, and a collection of Ansel Adams\u2019 original 5 pm* (1.5 hrs) F & Sa features. On this casual walk, our naturalists will share with "
+          },
+          {
+            "chunk_id": "2486effb175ca38c63060b76b732d4b5140286e636900dfe22b0c7f59118046b",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 3",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 2,
+            "post_rank": 5,
+            "scores": {
+              "dense": 0.48930174112319946,
+              "bm25": 1.6651552321435197,
+              "rrf": 0.01639344262295082,
+              "rerank": -5.991875648498535
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 1
+            },
+            "in_context": true,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 3\n\n c s o C ff o e f e f , e s e n a 6 c :3 k 0 s, a & m li g \u2013 h 6 t : b 3 r 0 e a p k m fa st. Yosemite Mariposa US Post Office Clinic Fine dining. Appropriate attire required County Degnan\u2019s for dinner. Dinner reservations strongly Mountain Room Lounge Valley Library 5 Kitchen Welcome Center 9 am \u2013 5"
+          },
+          {
+            "chunk_id": "411294869062ec8c1c6e0339c692111f98f43d609be2e56f9317ac9e2eb29bd6",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 1,
+            "post_rank": 6,
+            "scores": {
+              "dense": 0.4420439302921295,
+              "bm25": 6.535044607962632,
+              "rrf": 0.023024594453165882,
+              "rerank": -6.119863510131836
+            },
+            "retriever_ranks": {
+              "bm25": 18,
+              "dense": 38
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 6\n\ncoming Outdoor Adventures: near Housekeeping Camp and shuttle stop 12. \u2022 May 22 | Day Hike: Exploring Yosemite\u2019s Waterfall Wonders \u2022 May 31 \u2013 June 1 | Yosemite Field School: Cliff Ecology, Life on Vertical Terrain \u2022 June 13 \u2013 14 | Yosemite Field School: Bird-Banding Custom Adventures Private guided e"
+          },
+          {
+            "chunk_id": "6cabdb4725bb3823e4fa79d9622d2c770db470f2c76ff6d7093d26ce74922b48",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 3",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 5,
+            "post_rank": 7,
+            "scores": {
+              "dense": 0.4808501899242401,
+              "bm25": 0.9274294190593997,
+              "rrf": 0.016129032258064516,
+              "rerank": -6.120625019073486
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 2
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 3\n\n12 pm \u2013 10 pm Lodge authorized vehicles only w found, gifts, passport stamp. OpenTable.com. Beer, cocktails, & light entrees. Mo M u o n R u t e a n s i t n t a a i R u n L o r o R a o u n o m n t o g m e ren b t i a k l e s gif p t ool 6 North C si o d o e k D \u2019s r M (o ea n d e o w w ay) V W Y ill "
+          },
+          {
+            "chunk_id": "9cc290237c72ec6b2a26af71107aafde2ec727928041ae4e61a12ce6ffb4d167",
+            "doc_id": "2e866376a6afb476761024d0815cd4427ab123f0e4d3870c93fd3ed346ede2b7",
+            "title": "Authorized Guiding and Transportation Companies - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Authorized Guiding and Transportation Companies > Yosemite Park Partner Guiding Services",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/authorizedguides.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 12,
+            "post_rank": 8,
+            "scores": {
+              "dense": 0.36029714345932007,
+              "bm25": 7.846410722099044,
+              "rrf": 0.015151515151515152,
+              "rerank": -6.485858917236328
+            },
+            "retriever_ranks": {
+              "bm25": 6,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Authorized Guiding and Transportation Companies > Yosemite Park Partner Guiding Services\n\nYosemite Park Partner Guiding Services\n\nThese four organizations operate services in Yosemite National Park including some or all of the guiding services listed below.\n\nYosemite Hospitality (authorized concessioner)\n\nYosemite Conservancy (non-profit park partne"
+          },
+          {
+            "chunk_id": "d1e5baa5349ca12c499eb95e1a92be86a45c344117cb617818c2be11b58b42be",
+            "doc_id": "8dc9e453ca684c867993b01b5ed286183e93e809b875d2c4f69ae5a98b3ab97a",
+            "title": "Yosemite Guide - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Yosemite Guide",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/guide.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 7,
+            "post_rank": 9,
+            "scores": {
+              "dense": 0.47534191608428955,
+              "bm25": 2.9895885687165777,
+              "rrf": 0.015873015873015872,
+              "rerank": -6.5822906494140625
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 3
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide\n\nYosemite Guide"
+          },
+          {
+            "chunk_id": "bf57f47ed05eeef70179d7658b7a1dc75f6282a85a82c5cda05224a951c200ee",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 3",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 20,
+            "post_rank": 10,
+            "scores": {
+              "dense": 0.3861803114414215,
+              "bm25": 7.464336767310323,
+              "rrf": 0.014285714285714285,
+              "rerank": -6.659220218658447
+            },
+            "retriever_ranks": {
+              "bm25": 10,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 3\n\n INFORMATION & EXHIBITS INFORMATION & EXHIBITS INFORMATION & EXHIBITS Big Oak Flat Information Station & Lee Vining Wawona Visitor Center Opening in late May; check local listings for hours. Use Yosemite Village Parking or shuttle stops 1/2/4/5. Opening in late May; check local listings for hours. Tu"
+          },
+          {
+            "chunk_id": "ac25750f953beb1ca697a0927006d72fa0098da1258af8dd8bd2e10cdd39163f",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 17,
+            "post_rank": 11,
+            "scores": {
+              "dense": 0.4566364288330078,
+              "bm25": 0.9829733379983346,
+              "rrf": 0.014705882352941176,
+              "rerank": -7.189650535583496
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 8
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n . . r 4 3 m km i Illilo A u H r e t F a H t & a p t 1 e l a 4 p l N C 2 I 0 y p s 3 e a 3 l I 0 p n t 5 s e u t l m y e f s e r Ill t i e l s r o u 2 4 et . . t e 6 2 Cr e e m k k m n i h oJ M 0 1 . . u 8 2 P P P a i n m k a o r o m r n i i T a n m r o F V t a a o r i e a l T o r r m a t n 1 4 b i 3"
+          },
+          {
+            "chunk_id": "f0e09f8d3a952a918e99df1140f407ad1bb274d3debc3718649051a200e37d65",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 13,
+            "post_rank": 12,
+            "scores": {
+              "dense": 0.4580155313014984,
+              "bm25": 0.9829733379983346,
+              "rrf": 0.015151515151515152,
+              "rerank": -7.248875617980957
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 6
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n w p i P r t p o d i i r o n o i o n n t x u t . e s N R s r . o o v a . 0 1 d t . . o 8 2 M m k a m y i G P 7 2 2 1 o l 1 9 a i 4 9 n c f m i t t er 1 2 . . 4 3 I l m k l m i i lo A u H r e t F a H t & a p t 1 s e l a 4 p l e N C 2 I 0 y p a s 3 e a 3 s l I 0 p n t o 5 s e u t l n m y e f s e r a t "
+          },
+          {
+            "chunk_id": "c21d316f51a28aa331cb87a9f1eb4e5ee5ca1d4969a465a49c66c227cdb0a6b2",
+            "doc_id": "69c83cf00fadf371293c4608492f8a4c45ff7958023dd36df3c52bbdf1880b17",
+            "title": "Yosemite Guide - Volume 50, Issue 4",
+            "heading_path": "Yosemite Guide - Volume 50, Issue 4 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-Volume-50-4-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 11,
+            "post_rank": 13,
+            "scores": {
+              "dense": 0.45874395966529846,
+              "bm25": 0.9948901691387204,
+              "rrf": 0.015384615384615385,
+              "rerank": -7.288455963134766
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 5
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 50, Issue 4 > PDF page 7\n\n1 1 2 u 7 t o 2 . . 7 7 i e 6 2 n m m k t e m G C m f o e i t l lo l a h c s c e o a i d e n z r a a d p r P i p d t o i r o o o i n x n u t . s s N R o o v a . 0 1 d t . . o 8 2 M m k a m y i G P 7 2 2 1 o l 1 9 a i 4 9 n c f m i t t e 1 2 . . r 4 3 m km i Illilo A u H r e t F a H t & a p t 1 e l a "
+          },
+          {
+            "chunk_id": "af02b07d3fab1406969e00f2d3e51942c42179b6a99ea71b763c76dc621d4c92",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 7",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 19,
+            "post_rank": 14,
+            "scores": {
+              "dense": 0.455999493598938,
+              "bm25": 0.9380302922470557,
+              "rrf": 0.014492753623188406,
+              "rerank": -7.438117980957031
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 9
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 7\n\n 6 F 5 1 g a . 2 m f 3 l e t l k m m i J U t N p M o o o 0 0 e W T F a C j h . . s u i r v 5 8 i o n h n e s l a n n e a o t e d t m k a d c s r i m t c T k M t i a M b t n b h r i D h o a r P F e u i i e t n V i s d o a y l e i V 5 1 t e ) e r l o g i J l n o 0 5 T r e , m t n T e r n t r h 4 3 r a "
+          },
+          {
+            "chunk_id": "0cf83dfd3456d6652d19dc2e52955817ede0501516fd6fce41342ebc8276cd1a",
+            "doc_id": "934a5786cdc288b8c575b6e62d9525083af265140fc66250b554a151348b80e6",
+            "title": "Yosemite Guide - Volume 51, Issue 7",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 7 > PDF page 6",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-7-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 8,
+            "post_rank": 15,
+            "scores": {
+              "dense": 0.4716084599494934,
+              "bm25": 0.9562474154386142,
+              "rrf": 0.015625,
+              "rerank": -7.46959924697876
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 4
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 7 > PDF page 6\n\n g y 1 1 . m 6 i km 16 U O tra n p i t e l i l n c t o h w n e e d e e it k n io d d n a o s y s f a O l b lo e c w f t o o . r b e e 7 r. O am pe & n a Fr f i t . e , r S 3 a : t 3 ., 0 S p u m n. , , w & h h e o n lidays. Yo & s V e L m a it ll i t e t l e e y y S m a H 4 i a T S c m r l n o e o e "
+          },
+          {
+            "chunk_id": "14f7e3252edf9298eb06f04a00a6cab5bb1724c69cacd3addd474ba7a620e3a6",
+            "doc_id": "dd2d33c5e95bf40b4bf3ee7651d4bfbbac30bc6fc40fc89c16c98499b55721dc",
+            "title": "Yosemite Guide - Volume 51, Issue 8",
+            "heading_path": "Yosemite Guide - Volume 51, Issue 8 > PDF page 4",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Guide-51-8-508V1.pdf",
+            "page_type": "pdf",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 14,
+            "post_rank": 16,
+            "scores": {
+              "dense": 0.45665478706359863,
+              "bm25": 1.019612195448363,
+              "rrf": 0.014925373134328358,
+              "rerank": -7.689366340637207
+            },
+            "retriever_ranks": {
+              "bm25": null,
+              "dense": 7
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Yosemite Guide - Volume 51, Issue 8 > PDF page 4\n\n m e S n e \u2013 w p 5 h 2 e p 7 n m : c 9 , o S a n a m d t i : t \u2013 i 1 o 0 6 n s a p a m m ll o ; \u2013 w 1 . 2 pm 9 B G 8 a i p p f r t m m 1 & . . 8 C G 9 G r 9 i r a f o t f u s t c n & e b t r e i g y l e r O r u o , c c n c e t o t r i c 2 y l k 4 S e t : a e s 1 i s p l e s 1 , n 2 : 3 & t 8 i 0 a : "
+          },
+          {
+            "chunk_id": "48980c25c096bad8f85d90d791e7232feb5a099485a0d6f3c79c964fa5447d19",
+            "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+            "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 4,
+            "post_rank": 17,
+            "scores": {
+              "dense": 0.2738996744155884,
+              "bm25": 8.148161507533574,
+              "rrf": 0.016129032258064516,
+              "rerank": -11.257140159606934
+            },
+            "retriever_ranks": {
+              "bm25": 2,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Frequently Asked Questions about Campground Reservations > How can I cancel or change my reservation?\n\nHow can I cancel or change my reservation?\n\nCall 877/444-6777 to change or cancel your reservation. You can also log in to recreation.gov to cancel your reservation.\n\nLast updated: September 13, 2023"
+          },
+          {
+            "chunk_id": "530cd57ddf1bbb9bfa70a5740d2592c63d046465c71b24794a528f6ae3cd1a5c",
+            "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+            "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "North Pines Campground Early Access Lottery > Can I change my reservation?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 15,
+            "post_rank": 18,
+            "scores": {
+              "dense": 0.24159561097621918,
+              "bm25": 7.707126098480467,
+              "rrf": 0.014925373134328358,
+              "rerank": -11.267081260681152
+            },
+            "retriever_ranks": {
+              "bm25": 7,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: North Pines Campground Early Access Lottery > Can I change my reservation?\n\nCan I change my reservation?\n\nIf you make a reservation and want to change it during the early access period, you can modify your reservation if space is available. Once the early access period is over, you can\u2019t modify or cancel your reservation until the appropriate on-sal"
+          },
+          {
+            "chunk_id": "66caf6369968ad7f1cfc6a7d1d2f5439aca4f64ff18258e2a692a3bb9d249137",
+            "doc_id": "da7b09e5cfdde2d021c752e977bd42a4e82993c76aa01427f0047455c605b8a6",
+            "title": "North Pines Campground Early Access Lottery - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "North Pines Campground Early Access Lottery > Can I or my group reserve multiple campsites?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/lottery-pilot.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 10,
+            "post_rank": 19,
+            "scores": {
+              "dense": 0.1973756104707718,
+              "bm25": 7.962732463159474,
+              "rrf": 0.015384615384615385,
+              "rerank": -11.368364334106445
+            },
+            "retriever_ranks": {
+              "bm25": 5,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: North Pines Campground Early Access Lottery > Can I or my group reserve multiple campsites?\n\nCan I or my group reserve multiple campsites?\n\nIf you are awarded a time slot, you can make one reservation (one continuous stay in a single campsite) during the early access lottery. You won\u2019t be able to make multiple reservations, even if they are for fewe"
+          },
+          {
+            "chunk_id": "4b33a27152d34661dfabe3a8f3e986daff81a1a14307502ae5ab9328952164cc",
+            "doc_id": "061aa7f02570b9393a1db66774dea25e5e8777f60f56ee8d1866bef3b3ee03e2",
+            "title": "Campground Reservations Frequently Asked Questions - Yosemite National Park (U.S. National Park Service)",
+            "heading_path": "Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/campingfaq.htm",
+            "page_type": "html",
+            "park": "yose",
+            "in_selected_park": true,
+            "pre_rank": 16,
+            "post_rank": 20,
+            "scores": {
+              "dense": 0.18228699266910553,
+              "bm25": 7.604227621429865,
+              "rrf": 0.014705882352941176,
+              "rerank": -11.395746231079102
+            },
+            "retriever_ranks": {
+              "bm25": 8,
+              "dense": null
+            },
+            "in_context": false,
+            "cited": false,
+            "snippet": "Heading: Frequently Asked Questions about Campground Reservations > The campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?\n\nThe campsite I reserved says it accepts an RV or trailer length that's shorter than the length of my RV or trailer. Can I still use the campsite?"
+          }
+        ],
+        "context_ids": [
+          "a8442749aa721a9bf1ca28865f648e9cd79f09147972ddb21e29d4202bcb3236",
+          "8b2fe6172b417189b2ca5e1e6d8d1dbc4a9b88d677e26551a3de012d251594e3",
+          "d357310cba0a50f9819c4854ee83bc141eee9dc8cd1d5cea22cbf381e86b201b",
+          "0c192c4288169eb120d9b17e3ae2b83bb278efb4be1b850cf39fbd85d9e57496",
+          "2486effb175ca38c63060b76b732d4b5140286e636900dfe22b0c7f59118046b"
+        ],
+        "context_selection": null
+      },
+      "embedding": {
+        "status": "no_azure_request_recorded",
+        "elapsed_ms": 0.9,
+        "query_sha256": "bf468232b282fdae784ddc1a1e502c5a0f6899bd1be4fbf292330ba89822e490",
+        "cache_file_present_before_call": true,
+        "deployment": "text-embedding-3-small"
+      },
+      "generation": {
+        "ran": true,
+        "returned_model": "gpt-6-luna-2026-09-22",
+        "requested_deployment": "gpt-6-luna",
+        "input_tokens": 2640,
+        "output_tokens": 32,
+        "elapsed_ms": 1208.8,
+        "cost_estimate_usd": 0.000336
+      },
+      "review": {
+        "status": "not_run"
+      },
+      "ledger_window": {
+        "captured": true,
+        "events": 1,
+        "cost_estimate_usd": 0.000336,
+        "by_kind": {
+          "generation": {
+            "events": 1,
+            "reported_usage": 1,
+            "failed_attempts": 0,
+            "unsettled_reservations": 0,
+            "input_tokens": 2640,
+            "output_tokens": 32,
+            "events_without_token_usage": 0,
+            "cost_estimate_usd": 0.000336
+          }
+        },
+        "includes_reserved_maximums": false,
+        "basis": "Estimated from published prices and provider-reported tokens in the local budget ledger; not an invoice. Kind 'generation' covers both answer drafting and claim review calls.",
+        "limitation": "The window is every ledger event added while this request held the answer lock. A CLI or legacy Streamlit process spending at the same time would also appear here."
+      },
+      "guard_errors": [],
+      "integrity_errors": [],
+      "derivation": null,
+      "config_hash": "be2ceb39bfe27d0ad76daa97570d152d2a06f4cf1aaf8f98f488be4583c1f143",
+      "timestamp": "2026-10-10T15:36:40.004178+00:00"
+    }
+  }
+}

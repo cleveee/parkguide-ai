@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "captured_at_utc": "2026-10-10T02:50:24.805175+00:00",
+  "targets": {
+    "html": 150,
+    "pdf": 5,
+    "table_documents": 3
+  },
+  "counts": {
+    "usable_html": 150,
+    "usable_pdf": 5,
+    "usable_table_documents": 45,
+    "discovered_urls": 398,
+    "visited_urls": 218,
+    "fetched_this_run": 144,
+    "request_attempts_this_run": 145,
+    "duplicate_documents_this_run": 0,
+    "rejected_this_run": 1,
+    "request_attempts_all_runs": 158
+  },
+  "rejections": [
+    {
+      "url": "https://www.nps.gov/yose/planyourvisit/upload/Yosemite-Braille-Brochure_11-15-21-2.brf",
+      "reason": "extraction_or_saved_data_failure"
+    }
+  ],
+  "documents_path": "data/documents.jsonl",
+  "raw_manifest_path": "data/raw/manifest.jsonl",
+  "limits": {
+    "requests_per_second": 1.0,
+    "max_request_attempts": 287
+  },
+  "crawler_contact_is_placeholder": true,
+  "limitations": [
+    "Public contact text redacted by email/phone patterns; this is not comprehensive name/PII detection",
+    "Extracted document dates may be publication/update dates, not proof of present applicability",
+    "PDF table extraction and sampled normalized content still require human inspection",
+    "The user explicitly selected a placeholder crawler contact; this does not satisfy the course's working-contact expectation"
+  ],
+  "normalized_corpus_sha256": "2d1285fed3c6b9960496999daa4dff4656df40c20c10d89c821c913db8d9589d",
+  "normalization_qa": {
+    "nps_layout_tables_unwrapped": true,
+    "html_merged_cells_expanded": true,
+    "offline_reextracted_html": 150,
+    "changed_documents_merged_header_fix": 3,
+    "known_pdf_rotated_header_limitation": "Tonto_Distances.pdf retains reversed rotated column-label glyph ordering; avoid those labels without raw PDF review"
+  }
+}

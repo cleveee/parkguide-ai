@@ -1,0 +1,35 @@
+{
+  "credential_source": "/Users/robin/Build/ReviewDoc/web-app-main/.env.local",
+  "credential_variable": "AZURE_EMBEDDING_ENDPOINT_POOL",
+  "credential_selector": "eastus2",
+  "auth": "Azure resource API key via api-key header",
+  "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com/openai/v1/embeddings",
+  "environment": "dev/staging per repo resource map; no prod request",
+  "requested_deployment": "text-embedding-3-small",
+  "api_route": "v1",
+  "api_version_query": null,
+  "configured_legacy_api_version": "2025-04-01-preview",
+  "input_count": 1,
+  "input_text": "ParkGuide connectivity check: this is public, synthetic text.",
+  "input_sha256": "84fbbfc138b1a0ef644ed5e74df454c3576ebfa0d7e520c91ba40d18df2457f1",
+  "checked_at_utc": "2026-10-10T02:19:33.300214+00:00",
+  "http_status": 200,
+  "elapsed_ms": 1411.7,
+  "response_model": "text-embedding-3-small",
+  "returned_count": 1,
+  "dimensions": 1536,
+  "finite": true,
+  "l2_norm": 1.00019418,
+  "usage": {
+    "prompt_tokens": 12,
+    "total_tokens": 12
+  },
+  "success": true,
+  "limitations": [
+    "One request only; does not verify capacity or sustained rate limits.",
+    "Underlying deployed model revision not exposed by response.",
+    "No application corpus, chat, or evaluation data was submitted.",
+    "Report transcribed from completed probe output; vector not persisted."
+  ],
+  "documentation": "https://learn.microsoft.com/en-us/rest/api/microsoft-foundry/azureopenai/embeddings"
+}

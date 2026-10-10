@@ -1,0 +1,19 @@
+{
+  "text_sha256": "735c374369d5b66e83d3fbeacbd9e9b4d687e19af4839ef598c28c3754e0bf9c",
+  "embedding_config_sha256": "4ee7c2983e1b30ebd4e1ff778ac2fb261fe37ffb6819fc733698f1922ed31d51",
+  "identity": {
+    "provider": "azure_openai",
+    "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+    "api_style": "v1",
+    "deployment": "text-embedding-3-small",
+    "observed_model": "text-embedding-3-small",
+    "model_version": "not_exposed_by_embedding_response",
+    "dimension": 1536,
+    "normalization": "l2",
+    "dtype": "float32",
+    "preprocessing_version": "text-preserve-v1"
+  },
+  "returned_model": "text-embedding-3-small",
+  "vector_sha256": "895d52cb9b9f215d7063ed766cac06231419d5306e8cc27d565052825956e7ae",
+  "created_at": "2026-10-10T03:49:57.244047+00:00"
+}
