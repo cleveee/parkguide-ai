@@ -24,12 +24,12 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ApiError, PARKS, getMeta, parkName, type Meta, type ParkCode } from "@/lib/api"
 import { captureAge, formatDateTime } from "@/lib/format"
-import { loadChat, saveChat } from "@/lib/chat-storage"
+import { loadChats, saveChats, selectConversation, startConversation, withActiveTurns, type Conversation } from "@/lib/chat-storage"
 import { useChat } from "@/lib/use-chat"
 import { cn } from "@/lib/utils"
 
 type View = "chat" | "corpus"
-type PendingAction = { kind: "park"; park: ParkCode | null } | { kind: "new" }
+type PendingAction = { kind: "park"; park: ParkCode | null } | { kind: "new" } | { kind: "open"; id: string }
 
 const DESKTOP = "(min-width: 1280px)"
 const WIDE = "(min-width: 768px)"
@@ -51,6 +51,9 @@ function Sidebar({
   view,
   meta,
   hasConversation,
+  conversations,
+  activeId,
+  onOpen,
   onPark,
   onNew,
   onView,
@@ -61,6 +64,9 @@ function Sidebar({
   view: View
   meta: Meta | null
   hasConversation: boolean
+  conversations: Conversation[]
+  activeId: string
+  onOpen: (id: string) => void
   onPark: (park: ParkCode | null) => void
   onNew: () => void
   onView: (view: View) => void
@@ -68,7 +74,7 @@ function Sidebar({
 }) {
   const stats = meta?.parks.find((item) => item.code === park)
   return (
-    <div className="flex h-full flex-col gap-6 p-4">
+    <div className="flex h-full flex-col gap-6 overflow-y-auto p-4">
       <div className="flex items-center gap-2.5">
         <TreesIcon className="size-8 shrink-0 text-primary" aria-hidden />
         <div>
@@ -145,6 +151,21 @@ function Sidebar({
         </Button>
       </nav>
 
+      <nav className="shrink-0 space-y-1" aria-label="Saved conversations">
+        <p className="px-2 pb-1 text-xs font-medium text-muted-foreground">Your chats</p>
+        {conversations.map((conversation) => (
+          <Button key={conversation.id} variant="ghost" className={cn("h-auto w-full justify-start px-2 py-2 text-left", conversation.id === activeId && "bg-sidebar-accent")}
+            aria-current={conversation.id === activeId ? "page" : undefined} onClick={() => onOpen(conversation.id)}
+            title={conversation.turns[0]?.question ?? "New conversation"}>
+            <MessageSquareIcon className="shrink-0" />
+            <span className="min-w-0 flex-1">
+              <span className="block truncate">{conversation.turns[0]?.question ?? "New conversation"}</span>
+              <span className="block text-xs font-normal text-muted-foreground">{conversation.park ? parkName(conversation.park) : "Choose a park"}</span>
+            </span>
+          </Button>
+        ))}
+      </nav>
+
       <p className="mt-auto text-xs text-pretty text-muted-foreground">
         Conversation history is saved in this browser and restored on reload. Saved pages are a snapshot, not live conditions.
       </p>
@@ -153,8 +174,9 @@ function Sidebar({
 }
 
 export default function App() {
-  const [savedChat] = useState(loadChat)
-  const [park, setPark] = useState<ParkCode | null>(savedChat.park)
+  const [savedChats, setSavedChats] = useState(loadChats)
+  const activeChat = savedChats.conversations.find((item) => item.id === savedChats.activeId)!
+  const park = activeChat.park
   const [view, setView] = useState<View>("chat")
   const [meta, setMeta] = useState<Meta | null>(null)
   const [metaError, setMetaError] = useState<string | null>(null)
@@ -167,14 +189,15 @@ export default function App() {
   const desktop = useMediaQuery(DESKTOP)
   // The sidebar is visible from Tailwind's md breakpoint, where the menu sheet is unnecessary.
   const wide = useMediaQuery(WIDE)
-  const chat = useChat(park, savedChat.turns)
+  const chat = useChat(park, activeChat.turns)
+  const currentChats = useMemo(() => withActiveTurns(savedChats, chat.turns), [savedChats, chat.turns])
   const [storageFailed, setStorageFailed] = useState(false)
   useEffect(() => {
-    const failed = !saveChat(park, chat.turns)
+    const failed = !saveChats(currentChats)
     // This state reports the result of synchronizing with external browser storage.
     // oxlint-disable-next-line react/set-state-in-effect
     setStorageFailed(failed)
-  }, [park, chat.turns])
+  }, [currentChats])
 
   const loadMeta = useCallback(() => {
     getMeta()
@@ -195,26 +218,33 @@ export default function App() {
   const inspected = doneTurns.find((turn) => turn.id === inspectorTurnId) ?? doneTurns.at(-1) ?? null
   const evidenceTurn = doneTurns.find((turn) => turn.id === evidence?.turnId) ?? null
 
-  const clearConversation = useCallback(() => {
-    chat.reset()
+  const apply = (action: PendingAction) => {
+    let next = savedChats
+    if (action.kind === "open") {
+      next = selectConversation(savedChats, chat.turns, action.id)
+    } else if (action.kind === "park" && chat.turns.length === 0) {
+      next = { ...currentChats, conversations: currentChats.conversations.map((item) => item.id === currentChats.activeId ? { ...item, park: action.park } : item) }
+    } else {
+      next = startConversation(savedChats, chat.turns, action.kind === "park" ? action.park : park)
+    }
+    const selected = next.conversations.find((item) => item.id === next.activeId)!
+    chat.replace(selected.turns)
+    setSavedChats(next)
     setInspectorTurnId(null)
     setInspectorOpen(false)
     setEvidence(null)
-  }, [chat])
-
-  const apply = useCallback(
-    (action: PendingAction) => {
-      clearConversation()
-      if (action.kind === "park") setPark(action.park)
-      setMenuOpen(false)
-    },
-    [clearConversation],
-  )
+    setView("chat")
+    setMenuOpen(false)
+  }
 
   const request = (action: PendingAction) => {
     if (action.kind === "park" && action.park === park) return
-    if (chat.turns.length > 0) {
-      // The confirmation replaces the mobile menu as the single modal layer.
+    if (action.kind === "open" && action.id === savedChats.activeId) {
+      setView("chat")
+      setMenuOpen(false)
+      return
+    }
+    if (chat.pending) {
       setMenuOpen(false)
       setConfirm(action)
     } else apply(action)
@@ -238,6 +268,9 @@ export default function App() {
       view={view}
       meta={meta}
       hasConversation={chat.turns.length > 0}
+      conversations={currentChats.conversations}
+      activeId={savedChats.activeId}
+      onOpen={(id) => request({ kind: "open", id })}
       onPark={(next) => request({ kind: "park", park: next })}
       onNew={() => request({ kind: "new" })}
       onView={(next) => {
@@ -298,13 +331,13 @@ export default function App() {
                 )}
               </header>
 
-              {storageFailed && <p role="status" className="border-b px-4 py-2 text-sm">Browser storage is unavailable or full. This conversation may be lost on reload.</p>}
+              {storageFailed && <p role="status" className="border-b px-4 py-2 text-sm">Browser storage is unavailable or full. Recent chat changes may be lost on reload.</p>}
               <div className="flex min-h-0 flex-1">
                 <ResizableGroup id="conversation-layout" orientation="horizontal" className="flex-1">
                   <ResizablePanel id="conversation" minSize={desktop && inspectorOpen ? "30rem" : 0}>
                     <main className="flex h-full min-w-0 flex-col">
                       {view === "chat" ? (
-                        <PromptInputProvider>
+                        <PromptInputProvider key={`${savedChats.activeId}-${park}`}>
                           <ChatView
                             park={park}
                             meta={meta}
@@ -390,10 +423,10 @@ export default function App() {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>
-              {confirm?.kind === "new" ? "Start a new conversation?" : confirm?.kind === "park" && confirm.park ? `Switch to ${parkName(confirm.park)}?` : "Clear the selected park?"}
+              Leave the reply in progress?
             </AlertDialogTitle>
             <AlertDialogDescription>
-              This clears the current conversation and its evidence from this browser’s saved chat. It cannot be undone. A reply still in progress on the server will be ignored, but the server keeps working on it (including any paid calls), and a new question gets a “busy” reply until it finishes.
+              Your conversation and its evidence will remain in Your chats. The pending question will be marked stopped. The server may still finish the request (including paid calls), and a new question may get a “busy” reply until it finishes.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -404,7 +437,7 @@ export default function App() {
                 setConfirm(null)
               }}
             >
-              {confirm?.kind === "new" ? "Start new" : "Clear conversation"}
+              Continue
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
