@@ -24,12 +24,12 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ApiError, PARKS, getMeta, parkName, type Meta, type ParkCode } from "@/lib/api"
 import { captureAge, formatDateTime } from "@/lib/format"
-import { loadChats, saveChats, selectConversation, startConversation, withActiveTurns, type Conversation } from "@/lib/chat-storage"
+import { closeConversation, loadChats, saveChats, selectConversation, startConversation, withActiveTurns, type Conversation } from "@/lib/chat-storage"
 import { useChat } from "@/lib/use-chat"
 import { cn } from "@/lib/utils"
 
 type View = "chat" | "corpus"
-type PendingAction = { kind: "park"; park: ParkCode | null } | { kind: "new" } | { kind: "open"; id: string }
+type PendingAction = { kind: "park"; park: ParkCode | null } | { kind: "new" } | { kind: "open"; id: string } | { kind: "close"; id: string }
 
 const DESKTOP = "(min-width: 1280px)"
 const WIDE = "(min-width: 768px)"
@@ -54,6 +54,7 @@ function Sidebar({
   conversations,
   activeId,
   onOpen,
+  onClose,
   onPark,
   onNew,
   onView,
@@ -67,6 +68,7 @@ function Sidebar({
   conversations: Conversation[]
   activeId: string
   onOpen: (id: string) => void
+  onClose: (id: string) => void
   onPark: (park: ParkCode | null) => void
   onNew: () => void
   onView: (view: View) => void
@@ -154,15 +156,27 @@ function Sidebar({
       <nav className="shrink-0 space-y-1" aria-label="Saved conversations">
         <p className="px-2 pb-1 text-xs font-medium text-muted-foreground">Your chats</p>
         {conversations.map((conversation) => (
-          <Button key={conversation.id} variant="ghost" className={cn("h-auto w-full justify-start px-2 py-2 text-left", conversation.id === activeId && "bg-sidebar-accent")}
-            aria-current={conversation.id === activeId ? "page" : undefined} onClick={() => onOpen(conversation.id)}
-            title={conversation.turns[0]?.question ?? "New conversation"}>
-            <MessageSquareIcon className="shrink-0" />
-            <span className="min-w-0 flex-1">
-              <span className="block truncate">{conversation.turns[0]?.question ?? "New conversation"}</span>
-              <span className="block text-xs font-normal text-muted-foreground">{conversation.park ? parkName(conversation.park) : "Choose a park"}</span>
-            </span>
-          </Button>
+          <div key={conversation.id} className={cn("flex items-center rounded-md", conversation.id === activeId && "bg-sidebar-accent")}>
+            <Button variant="ghost" className="h-auto min-w-0 flex-1 justify-start px-2 py-2 text-left"
+              aria-current={conversation.id === activeId ? "page" : undefined} onClick={() => onOpen(conversation.id)}
+              title={conversation.turns[0]?.question ?? "New conversation"}>
+              <MessageSquareIcon className="shrink-0" />
+              <span className="min-w-0 flex-1">
+                <span className="block truncate">{conversation.turns[0]?.question ?? "New conversation"}</span>
+                <span className="block text-xs font-normal text-muted-foreground">{conversation.park ? parkName(conversation.park) : "Choose a park"}</span>
+              </span>
+            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="ghost" size="icon-sm" className="mr-1 shrink-0"
+                  aria-label={`Close chat: ${conversation.turns[0]?.question ?? "New conversation"} (${conversation.park ? parkName(conversation.park) : "No park selected"})`}
+                  onClick={() => onClose(conversation.id)}>
+                  <XIcon />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>Close chat</TooltipContent>
+            </Tooltip>
+          </div>
         ))}
       </nav>
 
@@ -220,7 +234,14 @@ export default function App() {
 
   const apply = (action: PendingAction) => {
     let next = savedChats
-    if (action.kind === "open") {
+    if (action.kind === "close") {
+      next = closeConversation(savedChats, chat.turns, action.id)
+      if (action.id !== savedChats.activeId) {
+        // Closing another chat must not interrupt this chat's reply or draft.
+        setSavedChats(next)
+        return
+      }
+    } else if (action.kind === "open") {
       next = selectConversation(savedChats, chat.turns, action.id)
     } else if (action.kind === "park" && chat.turns.length === 0) {
       next = { ...currentChats, conversations: currentChats.conversations.map((item) => item.id === currentChats.activeId ? { ...item, park: action.park } : item) }
@@ -244,7 +265,7 @@ export default function App() {
       setMenuOpen(false)
       return
     }
-    if (chat.pending) {
+    if (action.kind === "close" || chat.pending) {
       setMenuOpen(false)
       setConfirm(action)
     } else apply(action)
@@ -271,6 +292,7 @@ export default function App() {
       conversations={currentChats.conversations}
       activeId={savedChats.activeId}
       onOpen={(id) => request({ kind: "open", id })}
+      onClose={(id) => request({ kind: "close", id })}
       onPark={(next) => request({ kind: "park", park: next })}
       onNew={() => request({ kind: "new" })}
       onView={(next) => {
@@ -423,10 +445,16 @@ export default function App() {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>
-              Leave the reply in progress?
+              {confirm?.kind === "close" ? "Close this chat?" : "Leave the reply in progress?"}
             </AlertDialogTitle>
             <AlertDialogDescription>
-              Your conversation and its evidence will remain in Your chats. The pending question will be marked stopped. The server may still finish the request (including paid calls), and a new question may get a “busy” reply until it finishes.
+              {confirm?.kind === "close" ? (
+                <>This removes “{currentChats.conversations.find((item) => item.id === confirm.id)?.turns[0]?.question ?? "New conversation"}” and its messages and evidence from this browser’s saved chats. This cannot be undone.
+                  {confirm.id === savedChats.activeId && chat.pending && " The pending reply will be ignored. The server may still finish the request, including any paid calls."}
+                </>
+              ) : (
+                <>Your conversation and its evidence will remain in Your chats. The pending question will be marked stopped. The server may still finish the request (including paid calls), and a new question may get a “busy” reply until it finishes.</>
+              )}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -437,7 +465,7 @@ export default function App() {
                 setConfirm(null)
               }}
             >
-              Continue
+              {confirm?.kind === "close" ? "Close chat" : "Continue"}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
