@@ -28,21 +28,27 @@ RESPONSE_SCHEMA = {
         "additionalProperties": False,
         "properties": {
             "action": {"type": "string", "enum": ["answer", "clarify", "refuse"]},
-            "answer": {"type": "string"},
             "claims": {
                 "type": "array",
                 "items": {
                     "type": "object",
                     "additionalProperties": False,
                     "properties": {
-                        "text": {"type": "string", "description": "A brief paraphrased sentence, at most 18 words. Never copy a source sentence."},
-                        "evidence_ids": {"type": "array", "items": {"type": "string"}},
+                        "evidence_ids": {
+                            "type": "array", "items": {"type": "string"},
+                            "description": "All passages needed for this claim. For a table abbreviation, cite BOTH its row/header passage and its definition/legend passage.",
+                        },
+                        "text": {
+                            "type": "string",
+                            "description": "A brief paraphrased sentence, at most 18 words. Retain the conditions attached to this permission or rule in the cited passages, including location, season, signage and permits. Never copy a source sentence.",
+                        },
                     },
-                    "required": ["text", "evidence_ids"],
+                    "required": ["evidence_ids", "text"],
                 },
             },
+            "answer": {"type": "string"},
         },
-        "required": ["action", "answer", "claims"],
+        "required": ["action", "claims", "answer"],
     },
 }
 
@@ -75,11 +81,23 @@ Answer the precise question with the minimum necessary claims, using your own
 word order. Do not add nearby topics or extra precautions that were not asked.
 For a yes/no question, answer that question explicitly when the cited text
 establishes the yes or no; a related recommendation alone is not an answer.
-Preserve material qualifiers such as interlocking mesh or a lockable lid. Use a
-precise example or short separate claims rather than dropping required details.
-Read the relevant passages together before stating a general rule. Where the
-evidence lists exceptions, say "generally" or "most" and retain the exceptions
-relevant to the question; do not state a blanket ban followed by a contradiction.
+Preserve each claim's material qualifiers, such as interlocking mesh or a lockable
+lid. Split examples into short independently supported claims without dropping
+the conditions on any claim.
+Read all relevant passages together before stating a general rule. If any supplied
+passage gives applicable exceptions, the rule itself MUST say "generally", "most",
+or an equally explicit qualification. State relevant permitted examples separately.
+"Prohibited except X" and "only X is allowed" imply an exhaustive exception list;
+never use those forms when another supplied passage permits additional cases.
+Use "permitted examples include" for a partial list. A later exception sentence
+does not repair an overbroad first sentence. Check the claims together for this
+contradiction before returning them, even if each matches an isolated passage.
+For a broad permission question, give concrete permitted examples when supplied,
+including materially different exception categories instead of vague "specified"
+routes. Keep location, season, signage and permit conditions attached to a
+permission; each permission claim must retain its own conditions. Shorten or split
+examples to stay within the word limit. A list of permitted examples does not prove
+a blanket prohibition for an unmentioned category; do not infer such restrictions.
 Preserve bounds such as "at least", "up to", and "no more than" with numbers.
 For a rule or limit, prefer its explicit regulation over a nearby recommendation.
 Do not infer route order, intermediate places, or connections by joining separate
@@ -101,8 +119,10 @@ answer, explicitly refuse rather than using general knowledge or previous
 assistant answers. Do not imply a park is currently open or safe from old text.
 Verify each claim's entity, units, column, and date against the passage. Finding
 a number in a passage does not support reusing it for a different facility.
-Interpreting a table abbreviation requires citing both its actual row and the
-supplied legend or definition; never infer the meaning from model knowledge.
+Before returning a table claim, check that its evidence_ids include the actual
+row/header passage AND the separate definition/legend passage for any abbreviation
+used. Seeing the legend elsewhere in context does not cite it. One ID suffices
+only when that passage contains both. Never infer meanings from model knowledge.
 In particular map clock-face directions are not opening times, and depot hours
 are not entrance-station hours. Do not attach one road's closure to another.
 When the evidence says only approximate daylight hours, retain that wording.
@@ -304,7 +324,9 @@ class Generator:
 
     def generate(self, question: str, context: list[dict], history: list[dict], closed_book: bool = False) -> dict:
         messages = build_messages(question, context, history, closed_book)
-        prompt_hash = hashlib.sha256(json.dumps({"messages": messages, "schema": RESPONSE_SCHEMA}, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        # Schema property order is intentional: select evidence before drafting
+        # each claim, then repeat the completed claims in the answer field.
+        prompt_hash = hashlib.sha256(json.dumps({"messages": messages, "schema": RESPONSE_SCHEMA}, ensure_ascii=False).encode()).hexdigest()
         started = time.perf_counter()
         requested_model = self.deployment
         response = self.request(messages, RESPONSE_SCHEMA)

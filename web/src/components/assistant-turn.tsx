@@ -34,7 +34,7 @@ function StatusLine({ response }: { response: ChatTurn }) {
         <ShieldCheckIcon className="size-3.5 text-primary" aria-hidden />
         <span>
           AI-checked against saved NPS sources
-          {withheld > 0 && ` · ${withheld} unsupported ${withheld === 1 ? "claim" : "claims"} withheld`}
+          {withheld > 0 && " · Some details couldn't be confirmed"}
         </span>
       </p>
     )
@@ -201,6 +201,25 @@ export function AssistantTurn({
   onInspect: () => void
 }) {
   const response = turn.response
+  const incomplete = response.status === "refusal" || (response.inspector.review.withheld_claims ?? 0) > 0
+  // These are navigation suggestions, separate from the numbered evidence for
+  // delivered claims. Never turn retrieved-but-unverified text into an answer.
+  const related = new Map<string, string>()
+  if (incomplete) {
+    const candidates = response.inspector.retrieval.candidates
+      .filter((item) => item.in_context && item.in_selected_park)
+      .sort((a, b) => Number(b.page_type === "html") - Number(a.page_type === "html"))
+    for (const item of candidates) {
+      if (typeof item.source_url !== "string") continue
+      try {
+        const url = new URL(item.source_url)
+        if (url.protocol !== "https:" || url.host !== "www.nps.gov" || url.username || url.password
+            || !url.pathname.startsWith(`/${response.selected_park}/planyourvisit/`)) continue
+        related.set(url.href, typeof item.title === "string" ? item.title : "Official NPS guidance")
+        if (related.size === 2) break
+      } catch { /* Ignore malformed navigation suggestions. */ }
+    }
+  }
   return (
     <Appear>
       <Message from="assistant">
@@ -228,7 +247,7 @@ export function AssistantTurn({
           ) : (
             <div className="space-y-1.5">
               <p className="text-[0.938rem] leading-relaxed text-pretty">{response.text}</p>
-              {response.status === "refusal" && response.reason?.code !== "selected_park_mismatch" && (
+              {response.status === "refusal" && related.size === 0 && response.reason?.code !== "selected_park_mismatch" && (
                 <a
                   href={`https://www.nps.gov/${response.selected_park}/planyourvisit/${["live_information_unavailable", "dated_information_unavailable"].includes(response.reason?.code ?? "") ? "conditions" : "index"}.htm`}
                   target="_blank"
@@ -239,6 +258,23 @@ export function AssistantTurn({
                   <ExternalLinkIcon className="size-3.5" aria-hidden />
                 </a>
               )}
+            </div>
+          )}
+          {related.size > 0 && (
+            <div className="space-y-1.5 text-sm">
+              <p className="text-pretty text-muted-foreground">
+                {response.status === "answer" ? "For details I couldn't confirm, check these related NPS pages:" : "These related NPS pages may help:"}
+              </p>
+              <ul className="space-y-1">
+                {[...related].map(([url, title]) => (
+                  <li key={url}>
+                    <a href={url} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-ring">
+                      {title}<ExternalLinkIcon className="size-3.5 shrink-0" aria-hidden />
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
           {response.history.scope_reset && (

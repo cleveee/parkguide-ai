@@ -185,7 +185,15 @@ def source_checks(body, park):
 
 
 def run(args):
-    suite = json.loads(SUITE.read_text())
+    suite_path = Path(args.suite)
+    if not suite_path.is_absolute():
+        suite_path = ROOT / suite_path
+    suite_path = suite_path.resolve()
+    if not suite_path.is_relative_to(ARTIFACTS.resolve()):
+        raise SystemExit("Diagnostic suites must be under artifacts/user-testing; gold/final datasets are not accepted")
+    suite = json.loads(suite_path.read_text())
+    if suite.get("benchmark_eligible") is not False or suite.get("human_review_pending") is not True:
+        raise SystemExit("This runner requires an explicitly non-gold, human-review-pending diagnostic suite")
     if sha(ROOT / "data/parkguide.sqlite") != suite["database_sha256"]:
         raise SystemExit("Frozen source database changed; do not silently replace case expectations.")
     base = args.base_url.rstrip("/")
@@ -203,7 +211,9 @@ def run(args):
     if meta.get("http_status") != 200 or meta["body"].get("active_build", {}).get("build_id") != suite["active_build_id"]:
         raise SystemExit("Endpoint metadata unavailable or frozen active build differs; no chat call sent")
     manifest = {"id": identifier, "created_at": utc(), "base_url": base, "stage": args.stage,
-                "followup_of": args.followup_of, "suite_sha256": sha(SUITE), "runner_sha256": sha(__file__),
+                "followup_of": args.followup_of, "suite_sha256": sha(suite_path), "runner_sha256": sha(__file__),
+                "suite_path": str(suite_path.relative_to(ROOT)), "suite_kind": suite.get("kind"),
+                "suite_provenance": suite.get("provenance", "Source-first expectations authored before this suite's original answers."),
                 "database_sha256": suite["database_sha256"], "cases": [c["id"] for c in cases],
                 "checkout_head": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
                 "component_hashes": {str(p.relative_to(ROOT)): sha(p) for p in sorted((ROOT / "src/parkguide").glob("*.py"))},
@@ -260,7 +270,7 @@ def run(args):
                "source_identity_failures": sum(bool(r["mechanical_checks"]["source_identity_errors"]) for r in rows),
                "semantic_accuracy": "not computed; review individual answers against frozen source spans",
                "human_review_pending": True, "benchmark_eligible": False,
-               "turns_sha256": sha(folder / "turns.jsonl") if rows else None, "suite_sha256": sha(SUITE)}
+               "turns_sha256": sha(folder / "turns.jsonl") if rows else None, "suite_sha256": sha(suite_path)}
     write_json(folder / "summary.json", summary, exclusive=True)
     print(json.dumps(summary, indent=2), flush=True)
 
@@ -268,6 +278,8 @@ def run(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prepare", action="store_true", help="Save source-first expectations; makes no HTTP calls")
+    parser.add_argument("--suite", default=str(SUITE.relative_to(ROOT)),
+                        help="Non-gold diagnostic JSON under artifacts/user-testing; defaults to the frozen 18-turn suite")
     parser.add_argument("--base-url", default="https://parkguide-ai-dh24.vercel.app")
     parser.add_argument("--stage", default="baseline")
     parser.add_argument("--followup-of")

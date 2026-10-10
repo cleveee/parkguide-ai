@@ -11,7 +11,7 @@ import httpx
 from openai import APIStatusError
 import pytest
 
-from parkguide.claim_review import REVIEW_SCHEMA, build_witness_catalog, review_claims, validate_review_decisions
+from parkguide.claim_review import REVIEW_SCHEMA, WITNESS_SELECTION_CONTRACT, build_witness_catalog, review_claims, select_reviewed_citations, validate_review_decisions
 from parkguide.generation import GenerationError, Generator
 
 MODEL = "gpt-6-luna-2026-09-22"
@@ -471,3 +471,148 @@ def test_witness_enums_are_request_specific_and_global_schema_is_unchanged():
         assert result["decisions"][0]["supporting_quotes"][0] == {"evidence_id": evidence_id, "quote": text.splitlines()[0]}
     assert REVIEW_SCHEMA == original
     assert sent_schemas[0] is not sent_schemas[1] and all(schema is not REVIEW_SCHEMA for schema in sent_schemas)
+
+
+def glossary_fixture(abbreviation="DW", phrase="drinking water"):
+    header = f"| Stop | {abbreviation} |"
+    row = "| Cedar Ridge |  |"
+    definition = f"{abbreviation} = {phrase}"
+    contexts = [
+        {"chunk_id": "row", "text": f"{header}\n| --- | --- |\n{row}"},
+        {"chunk_id": "legend", "text": f"A glossary follows.\n{definition}"},
+        {"chunk_id": "extra", "text": "The route descends into the canyon."},
+    ]
+    claims = [{"text": f"The saved table does not indicate {phrase} at Cedar Ridge.",
+               "evidence_ids": ["row", "legend", "extra"]}]
+    decisions = [{"claim_index": 0, "supported": True, "reason": "The row, header and definition support the table observation.",
+                  "supporting_quotes": [{"evidence_id": "row", "quote": header},
+                                        {"evidence_id": "row", "quote": row},
+                                        {"evidence_id": "legend", "quote": definition}]}]
+    return claims, contexts, decisions
+
+
+def test_explicit_selection_trims_redundant_reference_without_mutating_draft_or_text():
+    claims, contexts, decisions = glossary_fixture()
+    original = deepcopy((claims, contexts, decisions))
+    selection = select_reviewed_citations(decisions, claims, contexts)
+    assert (claims, contexts, decisions) == original
+    assert selection["claims"] == [{"text": claims[0]["text"], "evidence_ids": ["row", "legend"]}]
+    assert selection["citation_selections"] == [{"claim_index": 0,
+        "original_evidence_ids": ["row", "legend", "extra"], "final_evidence_ids": ["row", "legend"]}]
+    assert validate_review_decisions(selection["decisions"], selection["claims"], contexts) == decisions
+    with pytest.raises(ValueError, match="missing_cited_witness"):
+        validate_review_decisions(decisions, claims, contexts)
+
+
+def test_selection_contract_is_explicit_and_keeps_full_original_cited_union_for_criticism():
+    claims, contexts, decisions = glossary_fixture()
+    catalog = build_witness_catalog(contexts)
+    wire = deepcopy(decisions)
+    wire[0]["supporting_quotes"] = [
+        {"witness_id": entry["witness_id"]} for entry in catalog
+        if any(entry["evidence_id"] == witness["evidence_id"] and entry["quote"] == witness["quote"]
+               for witness in decisions[0]["supporting_quotes"])]
+    client, create = fake({"decisions": wire})
+    result = review_claims("What does the table indicate?", claims, contexts, approved_config=CONFIG,
+                           client=client, citation_contract=WITNESS_SELECTION_CONTRACT)
+    assert result["citation_contract"] == WITNESS_SELECTION_CONTRACT
+    assert result["citation_selections"][0]["final_evidence_ids"] == ["row", "legend"]
+    sent = create.call_args.kwargs["messages"]
+    assert "CITATION CONTRACT: witness-selected-v1" in sent[0]["content"]
+    assert "for EACH cited evidence_id" not in sent[0]["content"]
+    body = json.loads(sent[-1]["content"])
+    assert body["source_passages"] == contexts and body["claims"] == claims
+    assert body["witness_catalog"] == catalog
+    client, _ = fake({"decisions": wire})
+    with pytest.raises(GenerationError) as error:
+        review_claims("What does the table indicate?", claims, contexts, approved_config=CONFIG, client=client)
+    assert error.value.review_diagnostics["validation_reason"] == "missing_cited_witness"
+
+
+@pytest.mark.parametrize(("abbreviation", "phrase"), [("DW", "drinking water"), ("EV", "electric vehicle charging"), ("NL", "night lighting")])
+@pytest.mark.parametrize("definition_cited", [True, False])
+def test_selected_table_interpretation_requires_its_own_explicit_definition_witness(abbreviation, phrase, definition_cited):
+    claims, contexts, decisions = glossary_fixture(abbreviation, phrase)
+    claims[0]["evidence_ids"] = ["row", "legend"] if definition_cited else ["row"]
+    decisions[0]["supporting_quotes"] = decisions[0]["supporting_quotes"][:2]
+    original = deepcopy((claims, contexts, decisions))
+    with pytest.raises(ValueError, match="missing_definition_witness"):
+        select_reviewed_citations(decisions, claims, contexts)
+    assert (claims, contexts, decisions) == original
+
+
+def test_arbitrary_quote_from_legend_does_not_replace_the_explicit_definition():
+    claims, contexts, decisions = glossary_fixture()
+    decisions[0]["supporting_quotes"][-1]["quote"] = "A glossary follows."
+    with pytest.raises(ValueError, match="missing_definition_witness"):
+        select_reviewed_citations(decisions, claims, contexts)
+
+
+@pytest.mark.parametrize(("kind", "reason"), [
+    ("empty", "missing_cited_witness"),
+    ("fabricated", "witness_quote_not_verbatim"),
+    ("uncited", "witness_id_not_cited"),
+    ("other_claim", "witness_id_not_cited"),
+])
+def test_selected_citations_never_accept_empty_fabricated_or_borrowed_witnesses(kind, reason):
+    claims, contexts, decisions = glossary_fixture()
+    if kind == "empty":
+        decisions[0]["supporting_quotes"] = []
+    elif kind == "fabricated":
+        decisions[0]["supporting_quotes"][-1]["quote"] = "DW = dog walking"
+    else:
+        claims[0]["evidence_ids"] = ["row"]
+        if kind == "other_claim":
+            claims.append({"text": "DW means drinking water.", "evidence_ids": ["legend"]})
+            decisions.append({"claim_index": 1, "supported": True, "reason": "The explicit definition.",
+                              "supporting_quotes": [deepcopy(decisions[0]["supporting_quotes"][-1])]})
+    with pytest.raises(ValueError, match=reason):
+        select_reviewed_citations(decisions, claims, contexts)
+
+
+def test_uncited_definition_is_a_rejection_check_and_never_sent_to_the_reviewer():
+    claims, contexts, decisions = glossary_fixture()
+    claims[0]["evidence_ids"] = ["row"]
+    catalog = build_witness_catalog(contexts[:1])
+    wire = [{"claim_index": 0, "supported": True, "reason": "This reviewer forgot the definition.",
+             "supporting_quotes": [{"witness_id": item["witness_id"]} for item in catalog]}]
+    client, create = fake({"decisions": wire})
+    with pytest.raises(GenerationError) as error:
+        review_claims("What does the table indicate?", claims, contexts, approved_config=CONFIG,
+                      client=client, citation_contract=WITNESS_SELECTION_CONTRACT)
+    assert error.value.review_diagnostics["validation_reason"] == "missing_definition_witness"
+    body = json.loads(create.call_args.kwargs["messages"][-1]["content"])
+    assert body["source_passages"] == contexts[:1]
+    assert body["witness_catalog"] == catalog
+    assert claims[0]["evidence_ids"] == ["row"]
+
+
+def test_definition_guard_is_limited_to_explicit_equals_glossary_and_table_headers():
+    claims, contexts, decisions = glossary_fixture()
+    decisions[0]["supporting_quotes"] = decisions[0]["supporting_quotes"][:2]
+    contexts[1]["text"] = "DW means drinking water."
+    assert select_reviewed_citations(decisions, claims, contexts)["claims"][0]["evidence_ids"] == ["row"]
+    contexts[1]["text"] = "DW = drinking water"
+    contexts[0]["text"] = contexts[0]["text"].replace("| --- | --- |\n", "")
+    assert select_reviewed_citations(decisions, claims, contexts)["claims"][0]["evidence_ids"] == ["row"]
+
+
+@pytest.mark.parametrize("contract", ["unrecognized", None, [], True])
+def test_unknown_review_contract_cannot_trigger_a_provider_call(contract):
+    client, create = fake()
+    with pytest.raises(GenerationError, match="invalid_claim_review_inputs"):
+        review_claims("Question", CLAIMS, CONTEXT, approved_config=CONFIG, client=client, citation_contract=contract)
+    create.assert_not_called()
+
+
+def test_witness_selection_preserves_original_claim_indices_for_rejected_claims():
+    claims, contexts, decisions = glossary_fixture()
+    claims.append({"text": "There is free food at Cedar Ridge.", "evidence_ids": ["extra"]})
+    decisions.insert(0, {"claim_index": 1, "supported": False, "reason": "The source does not establish that food claim.",
+                         "supporting_quotes": []})
+    selected = select_reviewed_citations(decisions, claims, contexts)
+    assert [decision["claim_index"] for decision in selected["decisions"]] == [0, 1]
+    assert selected["citation_selections"][0]["final_evidence_ids"] == ["row", "legend"]
+    assert selected["citation_selections"][1] == {"claim_index": 1,
+        "original_evidence_ids": ["extra"], "final_evidence_ids": []}
+    assert selected["claims"][1] == claims[1]

@@ -1,5 +1,7 @@
 """Offline privacy, grounding, and baseline contracts; no provider calls."""
 
+from copy import deepcopy
+import hashlib
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -59,6 +61,69 @@ def test_grounded_answer_uses_only_declared_claims_and_preserves_usage():
     assert result["provider"] == "azure_openai" and result["requested_model"] == DEPLOYMENT
     assert sent["response_format"]["json_schema"]["strict"] is True
     assert "private-fixture-key" not in json.dumps(sent)
+
+
+@pytest.mark.parametrize("evidence_first_response", [False, True])
+def test_evidence_first_schema_reaches_provider_without_changing_answer_contract(monkeypatch, evidence_first_response):
+    """Inspect the SDK's serialized request through an entirely offline transport."""
+    claim_text = "The saved table does not indicate drinking water at Cedar Ridge."
+    contexts = [{"chunk_id": "row", "text": "| Stop | DW |\n| Cedar Ridge |  |"},
+                {"chunk_id": "legend", "text": "DW = drinking water"}]
+    claim = {"evidence_ids": ["row", "legend"], "text": claim_text} if evidence_first_response else {
+        "text": claim_text, "evidence_ids": ["row", "legend"]}
+    payload = {"action": "answer", "claims": [claim], "answer": "Uncited prose must still be removed."} if evidence_first_response else {
+        "action": "answer", "answer": "Uncited prose must still be removed.", "claims": [claim]}
+    requests = []
+    original_client = httpx.Client
+
+    def handler(request):
+        requests.append(json.loads(request.content))
+        return httpx.Response(200, request=request, json={
+            "id": "offline-generation", "object": "chat.completion", "created": 0, "model": MODEL,
+            "choices": [{"index": 0, "finish_reason": "stop", "message": {
+                "role": "assistant", "content": json.dumps(payload),
+            }}],
+            "usage": {"prompt_tokens": 30, "completion_tokens": 20, "total_tokens": 50},
+        })
+
+    class OfflineHTTPClient(original_client):
+        def __init__(self, **kwargs):
+            super().__init__(transport=httpx.MockTransport(handler), **kwargs)
+
+    monkeypatch.setattr("parkguide.generation.httpx.Client", OfflineHTTPClient)
+    generator = Generator(CONFIG)
+    try:
+        result = generator.generate("What does the saved water column indicate?", contexts, [])
+    finally:
+        generator.close()
+    assert len(requests) == 1
+    sent = requests[0]
+    wire_schema = sent["response_format"]["json_schema"]
+    properties = wire_schema["schema"]["properties"]
+    assert list(properties) == ["action", "claims", "answer"]
+    assert list(properties["claims"]["items"]["properties"]) == ["evidence_ids", "text"]
+    assert result["action"] == "answer" and result["answer"] == claim_text
+    assert result["claims"] == [{"text": claim_text, "evidence_ids": ["row", "legend"]}]
+    assert result["usage"] == {"input_tokens": 30, "output_tokens": 20}
+    expected_hash = hashlib.sha256(json.dumps({"messages": sent["messages"], "schema": wire_schema}, ensure_ascii=False).encode()).hexdigest()
+    assert result["prompt_sha256"] == expected_hash
+
+
+def test_generation_prompt_hash_distinguishes_schema_property_order(monkeypatch):
+    from parkguide import generation
+    client, _ = fake_client(answer())
+    generator = Generator(CONFIG, client=client)
+    original = generator.generate("When does it open?", CONTEXT, [])
+    reordered_schema = deepcopy(generation.RESPONSE_SCHEMA)
+    claim = reordered_schema["schema"]["properties"]["claims"]["items"]
+    claim["properties"] = {key: claim["properties"][key] for key in ("text", "evidence_ids")}
+    # JSON Schema meaning and all values stay identical; only wire order differs.
+    assert reordered_schema == generation.RESPONSE_SCHEMA
+    monkeypatch.setattr(generation, "RESPONSE_SCHEMA", reordered_schema)
+    reordered = generator.generate("When does it open?", CONTEXT, [])
+    assert reordered["prompt_sha256"] != original["prompt_sha256"]
+    assert reordered["answer"] == original["answer"]
+    assert reordered["claims"] == original["claims"]
 
 
 @pytest.mark.parametrize("ids,code", [([], "uncited_claim"), (["invented"], "unknown_or_duplicate_evidence_id"), (["c1", "c1"], "unknown_or_duplicate_evidence_id")])

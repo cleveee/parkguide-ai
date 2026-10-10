@@ -304,14 +304,15 @@ def _retry_delay(error, attempt):
     return 60 if getattr(error, 'status_code', None) == 429 else min(2 ** attempt, 4)
 
 
-def paid_claim_review(question, claims, contexts, history, settings):
+def paid_claim_review(question, claims, contexts, history, settings, *, citation_contract=None):
     from .claim_review import review_claims
     budget=Budget()
     upper=len(json.dumps([question,claims,contexts,history]).encode())+12000
     for attempt in range(settings['evaluation']['transient_retries']+1):
         reservation=budget.reserve('generation',upper,1000)
         try:
-            review=review_claims(question,claims,contexts,history)
+            options = {"citation_contract": citation_contract} if citation_contract is not None else {}
+            review=review_claims(question,claims,contexts,history,**options)
         except Exception as error:
             usage=getattr(error,'usage',None)
             budget.settle(reservation,usage.get('input_tokens') if usage else None,usage.get('output_tokens',0) if usage else 0,error=True)
@@ -442,11 +443,21 @@ def answer(question, history=None, *, mode="hybrid", build_id=None, rerank=None,
         payload = {**payload, 'action': 'refuse', 'claims': [], 'answer': "I could not validate the source support for this answer. Please check the official information."}
     if not closed_book and payload['action']=='answer' and (reviewer is not None or (default_generator and (selected_park or settings['generation'].get('review_claims',False)))):
         try:
-            review_trace=reviewer(generation_question,payload['claims'],contexts,history) if reviewer else paid_claim_review(generation_question,payload['claims'],contexts,history,settings)
-            if selected_park:
-                from .claim_review import validate_review_decisions
+            from .claim_review import STRICT_CITATION_CONTRACT, WITNESS_SELECTION_CONTRACT, select_reviewed_citations, validate_review_decisions
+            requested_contract = WITNESS_SELECTION_CONTRACT if selected_park else STRICT_CITATION_CONTRACT
+            review_trace=reviewer(generation_question,payload['claims'],contexts,history) if reviewer else paid_claim_review(generation_question,payload['claims'],contexts,history,settings,citation_contract=requested_contract)
+            contract = review_trace.get('citation_contract', STRICT_CITATION_CONTRACT)
+            reviewed_claims = payload['claims']
+            if contract == WITNESS_SELECTION_CONTRACT:
+                selection = select_reviewed_citations(review_trace['decisions'], payload['claims'], contexts)
+                review_trace['decisions'] = selection['decisions']
+                review_trace['citation_selections'] = selection['citation_selections']
+                reviewed_claims = selection['claims']
+            elif contract != STRICT_CITATION_CONTRACT:
+                raise ValueError('invalid_citation_contract')
+            elif selected_park:
                 review_trace['decisions'] = validate_review_decisions(review_trace['decisions'], payload['claims'], contexts)
-            retained=[claim for claim,decision in zip(payload['claims'],review_trace['decisions']) if decision['supported']]
+            retained=[claim for claim,decision in zip(reviewed_claims,review_trace['decisions']) if decision['supported']]
             review_trace['withheld_claims']=len(payload['claims'])-len(retained)
             cost=payload.get('cost_estimate_usd',0)+review_trace.get('cost_estimate_usd',0)
             payload={**payload,'claims':retained,'cost_estimate_usd':cost,'answer':' '.join(claim['text'] for claim in retained)} if retained else {**payload,'action':'refuse','claims':[],'cost_estimate_usd':cost,'answer':"I could not substantiate this answer from the selected NPS passages. Please check the official source or ask a ranger."}

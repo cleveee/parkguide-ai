@@ -8,6 +8,24 @@ import time
 from .generation import GenerationError, Generator, build_messages
 
 
+STRICT_CITATION_CONTRACT = "all-cited-v1"
+WITNESS_SELECTION_CONTRACT = "witness-selected-v1"
+_STRICT_WITNESS_RULE = """For supported true,
+provide at least one supporting_quotes entry for EACH cited evidence_id, using
+a witness_catalog witness_id bound to an exact contiguous quote from its text.
+"""
+_SELECTED_WITNESS_RULE = """CITATION CONTRACT: witness-selected-v1.
+For supported true, select a nonempty minimum sufficient set of catalog witnesses
+that establishes the ENTIRE unchanged claim. Each witness must belong to that
+claim's ORIGINAL evidence_ids. The witnessed IDs become its final citations;
+redundant original IDs without necessary witnesses may be omitted. This never
+permits dropping a factual clause or condition, borrowing another claim's source,
+or using an uncited definition. Select exact row, header and definition witnesses
+when interpreting an abbreviation. Continue checking all originally supplied
+cited passages for contradictions, including those not selected as witnesses.
+"""
+
+
 REVIEW_SCHEMA = {
     "name": "parkguide_claim_review", "strict": True,
     "schema": {
@@ -28,10 +46,21 @@ REVIEW_SCHEMA = {
 }
 REVIEW_PROMPT = """Independently criticize each ParkGuide factual claim.
 Return exactly one decision per zero-based claim_index, supported true or false,
-and a concise reason (maximum 400 characters), plus supporting_quotes. Judge the
-entire claim against only its evidence_ids in source_passages. For supported true,
-provide at least one supporting_quotes entry for EACH cited evidence_id, using
-a witness_catalog witness_id bound to an exact contiguous quote from its text.
+and a concise reason (maximum 400 characters), plus supporting_quotes. Establish
+support for the entire claim using only its evidence_ids in source_passages.
+Also compare ALL claims and supplied passages for contradictions or applicable
+exceptions. Reject an overbroad general rule even if an isolated cited fragment
+states it: an applicable exception elsewhere requires qualification in the rule
+itself, such as "generally" or "most". "Prohibited except X" or "only X is allowed"
+is unsupported when other supplied evidence permits additional cases. A later
+sentence listing exceptions does not repair that overstatement. Reject the
+overstated claim, not a correctly supported specific exception. Other passages
+may reveal a contradiction but must never supply missing support for a claim.
+Reject a category-wide permission that drops an explicit location, season,
+signage or permit condition attached to it in the cited source. A named example
+does not make an otherwise unrestricted category-wide permission accurate.
+Permitted examples do not prove a blanket prohibition for an unmentioned category.
+""" + _STRICT_WITNESS_RULE + """
 Each quote must contain 1 to 25 words and supply an actual factual witness, not
 just a matching keyword. The quotes together must establish EVERY factual clause,
 including entities, units, relations, qualifiers, negations and relevant dates.
@@ -66,6 +95,10 @@ merely because individual place names appear in separately cited passages.
 Reject unrelated-road/entity associations and drinking-water generalizations.
 A negative claim about a table cell or absence needs that exact table/source
 witness; omission from these selected passages does not prove real-world absence.
+Distinguish "the table does not indicate an amenity" from "the amenity does not
+exist". The first is supported by a blank cell when the cited row, column header
+and abbreviation legend establish its meaning. Select those exact witnesses;
+do not reject that source-scoped observation as a claim of real-world absence.
 Saved historical dates do not establish current conditions or a new year's dates.
 Reject guessed negatives, current opening/closure, availability, private facts
 and outside knowledge. A plausible assertion without a cited factual witness
@@ -180,7 +213,7 @@ def _resolve_catalog_decisions(decisions, catalog):
     return resolved
 
 
-def validate_review_decisions(decisions, claims, contexts):
+def _validate_review_decisions(decisions, claims, contexts, *, require_all_cited):
     """Require complete ordered decisions with bounded, cited verbatim witnesses.
 
     Pure offline validation: quotes prove source identity, not semantic support.
@@ -225,9 +258,80 @@ def validate_review_decisions(decisions, claims, contexts):
                 raise ValueError("duplicate_review_witness")
             witnessed.add(witness["evidence_id"])
             seen_quotes.add((witness["evidence_id"], witness["quote"]))
-        if decision["supported"] and witnessed != cited:
+        if decision["supported"] and (not witnessed or (require_all_cited and witnessed != cited)):
             raise ValueError("missing_cited_witness")
     return sorted(decisions, key=lambda decision: decision["claim_index"])
+
+
+def validate_review_decisions(decisions, claims, contexts):
+    """Strict default: every cited ID of each supported claim needs a witness."""
+    return _validate_review_decisions(decisions, claims, contexts, require_all_cited=True)
+
+
+def _table_header_codes(text):
+    """Recognize abbreviations only in explicit Markdown table headers."""
+    codes = set()
+    lines = text.splitlines()
+    for header, separator in zip(lines, lines[1:]):
+        cells = [cell.strip() for cell in separator.strip().strip("|").split("|")]
+        if "|" in header and cells and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells):
+            codes.update(re.findall(r"\b[A-Z][A-Z0-9]{0,9}\b", header))
+    return codes
+
+
+def _require_selected_definitions(decisions, claims, contexts):
+    """Reject missing glossary witnesses; never add evidence or infer a meaning.
+
+    Only explicit ABBR = phrase definitions, selected table headers, and literal
+    full-phrase use in a claim trigger this guard. Uncited definitions can reveal
+    missing support but cannot become positive support or selected citations.
+    """
+    definitions = {}
+    source_text = {source["chunk_id"]: source["text"] for source in contexts}
+    for source in contexts:
+        for match in re.finditer(r"\b([A-Z][A-Z0-9]{0,9})[ \t]*=[ \t]*([^;.\n|]+)", source["text"]):
+            phrase = match.group(2).strip().rstrip(".")
+            words = re.findall(r"\b\w+\b", phrase.lower())
+            if not words or not any(word.isalpha() for word in words):
+                continue
+            definition = match.group(0).rstrip().rstrip(".")
+            definitions.setdefault((match.group(1), " ".join(words)), []).append((source["chunk_id"], definition))
+    for decision in decisions:
+        if not decision["supported"]:
+            continue
+        claim = claims[decision["claim_index"]]
+        claim_words = " " + " ".join(re.findall(r"\b\w+\b", claim["text"].lower())) + " "
+        codes = set().union(*(_table_header_codes(source_text[identifier]) for identifier in claim["evidence_ids"]))
+        for (abbreviation, phrase), definitions_for_phrase in definitions.items():
+            if abbreviation not in codes or f" {phrase} " not in claim_words:
+                continue
+            if not any(witness["evidence_id"] == identifier and definition in witness["quote"]
+                       for identifier, definition in definitions_for_phrase
+                       for witness in decision["supporting_quotes"]):
+                raise ValueError("missing_definition_witness")
+
+
+def select_reviewed_citations(decisions, claims, contexts):
+    """Explicit witness-selected contract; text and original inputs stay intact.
+
+    The projected list retains original indices, including rejected claims, so
+    callers can filter supported decisions without reassigning claim ownership.
+    """
+    decisions = _validate_review_decisions(decisions, claims, contexts, require_all_cited=False)
+    projected = deepcopy(claims)
+    selections = []
+    for decision in decisions:
+        index = decision["claim_index"]
+        original_ids = list(claims[index]["evidence_ids"])
+        witnessed = {witness["evidence_id"] for witness in decision["supporting_quotes"]}
+        final_ids = [identifier for identifier in original_ids if identifier in witnessed] if decision["supported"] else []
+        if decision["supported"]:
+            projected[index]["evidence_ids"] = final_ids
+        selections.append({"claim_index": index, "original_evidence_ids": original_ids,
+                           "final_evidence_ids": final_ids})
+    _require_selected_definitions(decisions, projected, contexts)
+    decisions = validate_review_decisions(decisions, projected, contexts)
+    return {"decisions": decisions, "claims": projected, "citation_selections": selections}
 
 
 _VALIDATION_REASONS = {
@@ -238,6 +342,7 @@ _VALIDATION_REASONS = {
     "missing_cited_witness", "unapproved_review_model", "invalid_review_choices",
     "incomplete_review_generation", "provider_review_refusal", "invalid_review_json",
     "invalid_review_payload", "unknown_review_witness_id", "duplicate_review_witness_id",
+    "missing_definition_witness",
 }
 
 
@@ -298,11 +403,15 @@ def _public_review_payload(payload):
     return {"decisions": decisions, "truncated": truncated}
 
 
-def review_claims(question, claims, contexts, history=None, *, approved_config=None, client=None):
+def review_claims(question, claims, contexts, history=None, *, approved_config=None, client=None,
+                  citation_contract=STRICT_CITATION_CONTRACT):
     """Return complete ordered AI decisions, not a semantic-support guarantee."""
+    if not isinstance(citation_contract, str) or citation_contract not in {STRICT_CITATION_CONTRACT, WITNESS_SELECTION_CONTRACT}:
+        raise GenerationError("invalid_claim_review_inputs")
     history = history or []
     base = build_messages(question, contexts, history)
-    sources = json.loads(base[-1]["content"])["source_passages"]
+    all_sources = json.loads(base[-1]["content"])["source_passages"]
+    sources = all_sources
     try:
         _cited_source_text(claims, sources)
         cited_ids = {identifier for claim in claims for identifier in claim["evidence_ids"]}
@@ -314,7 +423,8 @@ def review_claims(question, claims, contexts, history=None, *, approved_config=N
     except ValueError:
         raise GenerationError("invalid_claim_review_inputs") from None
     clean = [{"text": claim["text"], "evidence_ids": claim["evidence_ids"]} for claim in claims]
-    messages = [{"role": "system", "content": REVIEW_PROMPT}, {"role": "user", "content": json.dumps({
+    prompt = REVIEW_PROMPT.replace(_STRICT_WITNESS_RULE, _SELECTED_WITNESS_RULE, 1) if citation_contract == WITNESS_SELECTION_CONTRACT else REVIEW_PROMPT
+    messages = [{"role": "system", "content": prompt}, {"role": "user", "content": json.dumps({
         "question": question, "history": history, "claims": clean, "source_passages": sources,
         "witness_catalog": catalog,
     }, ensure_ascii=False)}]
@@ -351,7 +461,11 @@ def review_claims(question, claims, contexts, history=None, *, approved_config=N
             if not isinstance(payload, dict) or set(payload) != {"decisions"} or not isinstance(payload["decisions"], list):
                 raise ValueError("invalid_review_payload")
             resolved_payload = {"decisions": _resolve_catalog_decisions(payload["decisions"], catalog)}
-            decisions = validate_review_decisions(resolved_payload["decisions"], clean, sources)
+            if citation_contract == WITNESS_SELECTION_CONTRACT:
+                selection = select_reviewed_citations(resolved_payload["decisions"], clean, all_sources)
+                decisions = selection["decisions"]
+            else:
+                decisions = validate_review_decisions(resolved_payload["decisions"], clean, sources)
         except (AttributeError, TypeError, ValueError, IndexError) as validation_error:
             failure = GenerationError("invalid_claim_review_response", usage=usage, elapsed_ms=elapsed,
                                       model=generator.model, provider=generator.provider)
@@ -361,7 +475,8 @@ def review_claims(question, claims, contexts, history=None, *, approved_config=N
                 "review_payload": _public_review_payload(resolved_payload if resolved_payload is not None else payload),
             }
             raise failure from None
-        return {"decisions": decisions, "usage": usage,
+        return {"decisions": decisions, "citation_contract": citation_contract,
+                **({"citation_selections": selection["citation_selections"]} if citation_contract == WITNESS_SELECTION_CONTRACT else {}), "usage": usage,
                 "elapsed_ms": elapsed, "model": response.model, "prompt_sha256": prompt_hash}
     finally:
         generator.close()

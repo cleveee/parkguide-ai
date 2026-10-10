@@ -498,6 +498,60 @@ def test_each_cited_passage_needs_its_own_exact_review_witness():
     assert result["response"]["claims"] == []
 
 
+def test_explicit_witness_selection_keeps_original_draft_and_validates_final_citations():
+    from parkguide.claim_review import WITNESS_SELECTION_CONTRACT, validate_review_decisions
+    texts = {"row": "| Stop | DW |\n| --- | --- |\n| Cedar Ridge |  |",
+             "legend": "DW = drinking water", "extra": "The route descends into the canyon."}
+    contexts = [dict(passage(chunk_id=identifier), text=text) for identifier, text in texts.items()]
+    generated = payload("The saved table does not indicate drinking water at Cedar Ridge.", list(texts))
+    original = deepcopy(generated)
+    review = {"citation_contract": WITNESS_SELECTION_CONTRACT, "decisions": [{
+        "claim_index": 0, "supported": True, "reason": "Exact header, row and definition support this table observation.",
+        "supporting_quotes": [{"evidence_id": "row", "quote": "| Stop | DW |"},
+                              {"evidence_id": "row", "quote": "| Cedar Ridge |  |"},
+                              {"evidence_id": "legend", "quote": "DW = drinking water"}],
+    }], "citation_selections": [{"claim_index": 0, "final_evidence_ids": ["forged"]}]}
+    result = grounded_answer(
+        "What does the saved table indicate about drinking water at Cedar Ridge?",
+        retriever=lambda *args, **kwargs: retrieval_trace(contexts),
+        generator=lambda *args, **kwargs: generated,
+        reviewer=lambda *args, **kwargs: deepcopy(review),
+    )
+    assert result["response"]["action"] == "answer"
+    assert result["response"]["claims"] == [{"text": original["claims"][0]["text"], "evidence_ids": ["row", "legend"]}]
+    assert result["raw_response"] == original and generated == original
+    assert result["citation_review"]["citation_selections"] == [{"claim_index": 0,
+        "original_evidence_ids": ["row", "legend", "extra"], "final_evidence_ids": ["row", "legend"]}]
+    assert validate_review_decisions(result["citation_review"]["decisions"], result["response"]["claims"], contexts)
+
+
+def test_explicit_selection_cannot_bypass_required_definition_in_selected_park():
+    from parkguide.claim_review import WITNESS_SELECTION_CONTRACT
+    row = dict(passage(chunk_id="row"), text="| Stop | NL |\n| --- | --- |\n| Cedar Ridge |  |")
+    legend = dict(passage(chunk_id="legend"), text="NL = night lighting")
+    generated = payload("The saved table does not indicate night lighting at Cedar Ridge.", ["row"])
+    result = grounded_answer(
+        "What does the saved table indicate about night lighting at Cedar Ridge?",
+        retriever=lambda *args, **kwargs: retrieval_trace([row, legend]),
+        generator=lambda *args, **kwargs: deepcopy(generated),
+        reviewer=lambda *args, **kwargs: {"citation_contract": WITNESS_SELECTION_CONTRACT, "decisions": [{
+            "claim_index": 0, "supported": True, "reason": "This synthetic critic forgot the legend.",
+            "supporting_quotes": [{"evidence_id": "row", "quote": "| Cedar Ridge |  |"}],
+        }]},
+    )
+    assert result["response"]["action"] == "refuse"
+    assert result["citation_review"]["error"]["message"] == "missing_definition_witness"
+    assert result["raw_response"] == generated
+
+
+def test_unknown_citation_contract_never_relaxes_selected_park_validation():
+    def review(*args):
+        return {**supported_review(*args), "citation_contract": "unrecognized"}
+    result = grounded_answer(reviewer=review)
+    assert result["response"]["action"] == "refuse"
+    assert result["citation_review"]["error"]["message"] == "invalid_citation_contract"
+
+
 @pytest.mark.parametrize("selected", ["", "Yosemite", "YOSE", "all", "zion", ["yose"], 7])
 def test_invalid_selected_scope_rejected_before_retrieval_or_model_calls(selected):
     with pytest.raises(ValueError):
