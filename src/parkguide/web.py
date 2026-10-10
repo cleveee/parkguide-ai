@@ -37,7 +37,7 @@ from .runtime import ROOT, config, hosted, ledger_path as runtime_ledger_path, r
 from .source_links import captured_label, cited_source_pages, official_source_url
 
 HOST = "127.0.0.1"
-PORT = 8513
+PORT = int(os.environ.get("PARKGUIDE_WEB_PORT", "8513"))
 # Hosted: the build copies web/dist to public/ (CDN); the function keeps the shell.
 DIST = ROOT / ("public" if hosted() else "web/dist")
 ALLOWED_HOSTS = {f"{HOST}:{PORT}", f"localhost:{PORT}"}
@@ -991,9 +991,10 @@ def _classify(error: Exception) -> WebError:
 
 app = FastAPI(title="ParkGuide web app", docs_url=None, redoc_url=None, openapi_url=None)
 
-_CSP = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
-        "font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; "
-        "base-uri 'none'; form-action 'self'")
+_CSP = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://www.nps.gov https://fonts.googleapis.com; "
+        "img-src 'self' data: https://www.nps.gov; font-src 'self' https://www.nps.gov https://fonts.gstatic.com; "
+        "connect-src 'self'; frame-src 'self' https://www.nps.gov; frame-ancestors 'none'; object-src 'none'; "
+        "base-uri https://www.nps.gov; form-action 'self'")
 
 
 @app.middleware("http")
@@ -1096,6 +1097,20 @@ def passages(doc_id: str, offset: Annotated[int, Query(ge=0, le=100_000)] = 0,
     return _json(document_passages(_doc_id(doc_id), offset, limit))
 
 
+@app.get("/api/documents/{doc_id}/preview")
+def preview(doc_id: str, view: Literal["reader", "website"] = "reader"):
+    from .source_preview import PreviewUnavailable, source_preview
+    identifier = _doc_id(doc_id)
+    with _connect() as connection:
+        row = connection.execute("SELECT * FROM documents WHERE doc_id=?", (identifier,)).fetchone()
+    if row is None:
+        raise WebError(404, "document_not_found", "No stored document has that identifier.")
+    try:
+        return _json(source_preview(ROOT, dict(row), json.loads(row["normalized_blocks_json"]), view=view))
+    except PreviewUnavailable as error:
+        raise WebError(409, "preview_unavailable", str(error)) from error
+
+
 @app.post("/api/chat")
 def chat(request: ChatRequest):
     return _json(run_chat(request))
@@ -1135,7 +1150,7 @@ def frontend(path: str):
 def main():
     import uvicorn
     # The pinned reranker must load from the local cache: no Hugging Face
-    # network access from this process (Azure is the only remote service).
+    # network access for models (Azure is the only remote model service).
     os.environ.setdefault("HF_HUB_OFFLINE", "1")
     os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
     logging.basicConfig(level=logging.INFO)

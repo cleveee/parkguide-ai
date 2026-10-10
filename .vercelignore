@@ -19,7 +19,10 @@ tests/
 requirements-*.lock
 
 # Archived corpus, caches, run evidence and reports
-data/raw/
+# Only saved HTML is needed for the read-only source preview.
+data/raw/*.pdf
+data/raw/*.jsonl
+data/raw/*.bin
 data/embedding-cache/
 data/diagnostics/
 data/documents.jsonl

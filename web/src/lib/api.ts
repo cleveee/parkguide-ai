@@ -1,5 +1,6 @@
 // Same-origin client for the loopback FastAPI bridge. The browser never talks
-// to Azure or any other remote service; only /api/* on this origin.
+// to Azure; application data requests use /api/* on this origin. Source previews
+// load the official website's stylesheets, fonts and images separately.
 
 export type ParkCode = "yose" | "yell" | "grca"
 
@@ -426,6 +427,25 @@ export function listDocuments(params: { park?: ParkCode; q?: string; page_type?:
 
 export const getDocument = (docId: string, blockOffset = 0, blockLimit = 40) =>
   request<DocumentDetail>(`/api/documents/${encodeURIComponent(docId)}?block_offset=${blockOffset}&block_limit=${blockLimit}`)
+
+export interface SourcePreview {
+  doc_id: string
+  source_url: string
+  title: string
+  page_type: string
+  crawled_at: string | null
+  mode: "html_reader" | "html_page" | "pdf_text"
+  html: string
+  loaded_at?: string
+  content_origin?: "live"
+}
+
+export async function getSourcePreview(docId: string, signal: AbortSignal, view: "reader" | "website" = "reader"): Promise<SourcePreview> {
+  const value = await request<SourcePreview>(`/api/documents/${encodeURIComponent(docId)}/preview${view === "website" ? "?view=website" : ""}`, { signal })
+  if (value.doc_id !== docId || typeof value.html !== "string" || typeof value.source_url !== "string"
+      || typeof value.title !== "string" || !["html_reader", "html_page", "pdf_text"].includes(value.mode)) throw invalidResponse()
+  return value
+}
 
 export const getPassages = (docId: string, offset = 0, limit = 20) =>
   request<PassageList>(`/api/documents/${encodeURIComponent(docId)}/passages?offset=${offset}&limit=${limit}`)

@@ -2,6 +2,7 @@ import { ChevronDownIcon, ExternalLinkIcon, SparklesIcon } from "lucide-react"
 
 import { Source } from "@/components/ai-elements/sources"
 import { Excerpt, SourceMeta, passageLocation } from "@/components/source-card"
+import { SourcePreviewButton } from "@/components/source-preview"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -151,6 +152,7 @@ export function EvidenceDialog({
               <DialogDescription asChild>
                 <div className="space-y-2">
                   <SourceMeta page={page} />
+                  <SourcePreviewButton page={page} focusClaim={claimNumber} />
                   <p className="text-xs text-pretty">
                     This is the locally saved snapshot used for the answer (captured {formatDateTime(page.crawled_at)}), not live conditions. The
                     official page may have changed since capture.

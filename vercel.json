@@ -4,8 +4,8 @@
   "functions": {
     "server.py": {
       "maxDuration": 120,
-      "includeFiles": "{data/parkguide.sqlite,data/evaluation/gold-draft-manifest.json,data/evaluation/gold-drafts.jsonl,config/**,vendor/tiktoken/**,src/**,public/**}",
-      "excludeFiles": "{web/**,artifacts/**,tests/**,app.py,data/raw/**,data/embedding-cache/**,data/diagnostics/**,{reports,docs,dashboard,scripts,.pytest_cache}/**,data/*.json*,data/evaluation/{G*,diagnostic*,dialogues*,gold-authored*},**/__pycache__/**}"
+      "includeFiles": "{data/parkguide.sqlite,data/raw/*.html,data/evaluation/gold-draft-manifest.json,data/evaluation/gold-drafts.jsonl,config/**,vendor/tiktoken/**,src/**,public/**}",
+      "excludeFiles": "{web/**,artifacts/**,tests/**,app.py,data/raw/*.{pdf,jsonl,bin},data/embedding-cache/**,data/diagnostics/**,{reports,docs,dashboard,scripts,.pytest_cache}/**,data/*.json*,data/evaluation/{G*,diagnostic*,dialogues*,gold-authored*},**/__pycache__/**}"
     }
   },
   "headers": [
@@ -14,7 +14,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'"
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://www.nps.gov https://fonts.googleapis.com; img-src 'self' data: https://www.nps.gov; font-src 'self' https://www.nps.gov https://fonts.gstatic.com; connect-src 'self'; frame-src 'self' https://www.nps.gov; frame-ancestors 'none'; object-src 'none'; base-uri https://www.nps.gov; form-action 'self'"
         },
         {
           "key": "X-Content-Type-Options",

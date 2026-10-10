@@ -292,7 +292,7 @@ export function AssistantTurn({
               </SourcesTrigger>
               <SourcesContent className="w-full">
                 {response.sources.map((page) => (
-                  <SourceCard key={page.number} page={page} onOpen={() => onOpenEvidence(page.number)} />
+                  <SourceCard key={page.number} page={page} />
                 ))}
               </SourcesContent>
             </Sources>

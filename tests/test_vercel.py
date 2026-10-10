@@ -156,12 +156,16 @@ def test_packaging_configuration():
     runtime_deps = " ".join(pyproject["project"]["dependencies"]).lower()
     requirements = " ".join(line for line in (ROOT / "requirements.txt").read_text().lower().splitlines()
                             if not line.startswith("#"))
-    for heavy in ("torch", "sentence-transformers", "streamlit", "beautifulsoup4", "pdfplumber", "transformers"):
+    for heavy in ("torch", "sentence-transformers", "streamlit", "pdfplumber", "transformers"):
         assert heavy not in runtime_deps and heavy not in requirements
-    for needed in ("fastapi", "numpy", "rank-bm25", "openai", "httpx", "tiktoken", "requests", "python-dotenv"):
+    for needed in ("fastapi", "numpy", "rank-bm25", "openai", "httpx", "tiktoken", "requests", "python-dotenv", "beautifulsoup4"):
         assert needed in requirements
     vercel = json.loads((ROOT / "vercel.json").read_text())
     assert vercel["framework"] == "fastapi"
+    # CDN-served HTML and the local/API shell must permit the same preview assets.
+    csp = next(header["value"] for rule in vercel["headers"] for header in rule["headers"]
+               if header["key"] == "Content-Security-Policy")
+    assert csp == web._CSP
     function = vercel["functions"]["server.py"]
     assert len(function["excludeFiles"]) <= 256
     # A real hosted build returned 404 for JS/CSS when only index.html was bundled.
@@ -170,12 +174,15 @@ def test_packaging_configuration():
     for path in ("data/parkguide.sqlite", "data/evaluation/gold-draft-manifest.json",
                  "data/evaluation/gold-drafts.jsonl", "config/**", "vendor/tiktoken/**"):
         assert path in function["includeFiles"]
-    for path in ("web/**", "data/raw/**", "data/embedding-cache/**", "artifacts/**", "tests/**", "app.py"):
+    assert "data/raw/*.html" in function["includeFiles"]
+    assert "data/raw/*.{pdf,jsonl,bin}" in function["excludeFiles"]
+    for path in ("web/**", "data/embedding-cache/**", "artifacts/**", "tests/**", "app.py"):
         assert path in function["excludeFiles"]
     assert "prepare_vercel.py" in vercel["buildCommand"]
     ignore = (ROOT / ".vercelignore").read_text().splitlines()
     assert "public/" not in ignore
-    assert {"app.py", "data/raw/", "artifacts/", "data/evaluation/*", ".env"} <= set(ignore)
+    assert "data/raw/" not in ignore
+    assert {"app.py", "data/raw/*.pdf", "data/raw/*.jsonl", "artifacts/", "data/evaluation/*", ".env"} <= set(ignore)
     assert {"!data/evaluation/gold-draft-manifest.json", "!data/evaluation/gold-drafts.jsonl"} <= set(ignore)
 
 

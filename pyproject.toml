@@ -20,6 +20,7 @@ dependencies = [
   "python-dotenv>=1.2,<2",
   "fastapi>=0.141,<0.142",
   "uvicorn>=0.54,<0.55",
+  "beautifulsoup4>=4.15,<4.16",
 ]
 
 [project.optional-dependencies]

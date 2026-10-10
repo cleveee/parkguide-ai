@@ -10,3 +10,6 @@ tiktoken==0.14.0
 python-dotenv==1.2.4
 fastapi==0.141.1
 uvicorn==0.54.0
+# Read-only HTML source preview (no crawler or ingestion runs in the server).
+beautifulsoup4==4.15.0
+soupsieve==2.10
