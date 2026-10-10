@@ -1094,6 +1094,12 @@ def unknown_api(rest: str):
     return _error(404, "not_found", "Unknown API route.")
 
 
+def _frontend_shell(index: Path) -> Response:
+    # Vercel normalizes file timestamps. Equal-size builds can therefore share
+    # FileResponse validators and leave browsers on an old bundle indefinitely.
+    return Response(index.read_bytes(), media_type="text/html", headers={"Cache-Control": "no-store"})
+
+
 @app.get("/{path:path}")
 def frontend(path: str):
     """Serve only files inside web/dist; every other path gets the SPA shell."""
@@ -1105,11 +1111,13 @@ def frontend(path: str):
     if path:
         candidate = (DIST / path).resolve()
         if candidate.is_relative_to(root) and candidate.is_file():
+            if candidate == index.resolve():
+                return _frontend_shell(index)
             cache = "public, max-age=31536000, immutable" if candidate.parent == root / "assets" else "no-cache"
             return FileResponse(candidate, headers={"Cache-Control": cache})
         if "." in Path(path).name:
             return _error(404, "not_found", "Not available.")
-    return FileResponse(index, headers={"Cache-Control": "no-cache"})
+    return _frontend_shell(index)
 
 
 def main():
