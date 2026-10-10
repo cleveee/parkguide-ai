@@ -1,0 +1,25 @@
+# Measured development iterations
+
+Local implementation began October 9, 2026 (America/Chicago); run timestamps use October 10 UTC. Every dataset here is explicitly non-gold. The 40 source-authored gold drafts were sealed at 03:46:33 UTC before these outputs and remain human review pending.
+
+| Stage | Actual saved work | Finding and resulting change |
+| --- | --- | --- |
+| 1: controlled representation/chunking/retrieval | `20261010T035053Z-24ef6136`: 72 responses, six configurations; initial `0fb35cc9bcf74793bfe0bf53cc12abfe` dialogue attempt | All eight answerable diagnostic evidence units covered in candidate20. Fixed dense MRR0.550; structure dense/hybrid0.854. Reranking0.781, no established lift. Initial dialogue pipeline error and lost follow-up context prompted fixes. |
+| 2: history and prompt correction | `20261010T035725Z-8c776193`:12; `76bc1319edfe49fd9c0012acaf23874c`:18 turns | Conversations completed, but numeric/quotation guards over-refused valid paraphrases and table arithmetic. Failures retained. |
+| 3: concise generation, reranking off | `20261010T040247Z-dc2a2179`:12; `c8d32418bf6f4b60b1d41775c7013305`:18 | All12 action labels matched. Table semantics, inherited entrance question, and incomplete differences remained. |
+| 4: paired selected versus reranked candidate | `20261010T040558Z-c2f6c2da`:24; `5a0b86138efd4a4bb97169b3dac9189d`:18 | Both variants12/12 AI provisional correctness. Reranker added340ms mean stage latency (95%CI305–365) with no established evidence gain. Selected B3 keeps reranking off; R1 remains selectable. |
+| 5: source-claim review and numerical guards | `20261010T041405Z-bc625da3`:12; `8cb819b194d84a0abbd6cbc36fe5b16a`:18 | All12 action labels matched, no application errors. Paid separate reviewer withholds unsupported claims, but it incorrectly approved a map-based absence claim. It is a heuristic requiring human calibration. |
+| 6: captured table-page filtering | `6f5e4b660ba54af1b34d6a7ab74f8952`:18 | AI review found17/18 question-complete answers; table difference still omitted. Water claim was correct but cited prose rather than its row. Found mutable history trace aliasing and fixed snapshots. |
+| 7: named-row context, exact table arithmetic, trace/final-gate repairs | `20261010T042905Z-54d33f15`:48 B0–B3 diagnostic responses; `7bbd1b0ccdb649edbaf2b64ccc9797e3`:18 turns | Final current configuration was rerun across all four baselines, with identical grounded prompts/settings for B1–B3. Difference3−1.5=1.5mi is now computed from cited cells and visible in the trace; water cites its actual row. All18 turns completed, zero application errors. Current AI review: selected B3 12/12 clear correct; dialogues 16/18 clear correct and two uncertain. All human grades pending. |
+
+The initial six-variant runner used historical label **B3** for the reranking ablation. Current B3 means selected structure-aware hybrid, with reranking off. These labels are distinguished in reports and manifests; no old run is rewritten to change its meaning.
+
+Only the initial controlled representation/chunking/fusion/rerank contrasts and the stage4 paired rerank comparison isolate factors. Later stages combine integration repairs; their outcomes do not establish a causal gain for each repair. Repeated diagnostics informed tuning and are not a held-out estimate. Gold evaluation remains untouched.
+
+[Initial paired analysis](DIAGNOSTIC_ANALYSIS.md) reports structure-aware versus fixed-dense MRR+0.304 (95%CI+0.083 to+0.513) on only eight evidence-bearing diagnostic items. [Candidate reranking analysis](CANDIDATE_ANALYSIS.md) reports an inconclusive quality difference and added local CPU latency. An interval spanning zero does not establish benefit. End-to-end latency used two concurrent requests per variant and retained embedding cache state; model generation/review was live.
+
+[Current AI semantic review](LATEST_REVIEW.md) separates correctness, claim support, ambiguity, and lexical misses. Historical conversation artifacts through stage6 have mutable saved-history aliasing: later turns were appended to earlier saved histories. Actual model requests used only preceding turns; retrieval queries and answers are actual. Stage7 histories have0/2/4 preceding messages, explicit code hashes, and no future/current-response leakage.
+
+The API ledger covers embeddings, successful generation/review, and conservative reservations for unknown failed usage. Run generation-cost totals exclude query-embedding and failed-call costs; they are partial request-cost estimates. All dollars use dated published prices, not invoices.
+
+Pending: human source verification of40 gold items, human confirmation of at least15 actual observed failure labels, verified development acceptance, and one frozen16-item B0–B3 test batch. The iteration limits were not reached and no formal test questions were consumed. Further gold tuning follows human review; repeat paid diagnostics only for a new actionable failure. [Conversation analysis](CONVERSATION_ANALYSIS.md) resamples whole dialogues (10,000 draws, seed 633), retaining uncertain cases in denominators and preserving unknown human scores.

@@ -1,0 +1,35 @@
+{
+  "allowed_host": "www.nps.gov",
+  "seeds": [
+    "https://www.nps.gov/yose/planyourvisit/index.htm",
+    "https://www.nps.gov/yell/planyourvisit/index.htm",
+    "https://www.nps.gov/grca/planyourvisit/index.htm",
+    "https://www.nps.gov/yose/planyourvisit/campgrounds.htm",
+    "https://www.nps.gov/yell/planyourvisit/operating-dates.htm",
+    "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+    "https://www.nps.gov/yose/planyourvisit/guide.htm",
+    "https://www.nps.gov/grca/planyourvisit/maps.htm",
+    "https://www.nps.gov/grca/planyourvisit/upload/RimTrail.pdf"
+  ],
+  "allowed_path_prefixes": [
+    "/yose/planyourvisit/",
+    "/yell/planyourvisit/",
+    "/grca/planyourvisit/"
+  ],
+  "additional_public_pdf_paths": [],
+  "minimum_html_documents": 150,
+  "minimum_pdf_documents": 5,
+  "minimum_table_documents": 3,
+  "requests_per_second": 1,
+  "crawler_user_agent": "ParkGuideAI-CoursePOC/0.1",
+  "crawler_contact_email": "parkguide-poc@example.com",
+  "crawler_contact_is_placeholder": true,
+  "skip_person_directories": true,
+  "personal_contact_policy": "redact_or_drop",
+  "robots_required": true,
+  "robots_allowed": null,
+  "corpus_fetched": true,
+  "instructor_domain_approval": "approved",
+  "approval_provenance": "Robin confirmed instructor approval on 2026-10-09",
+  "contact_provenance": "Robin requested a fake address; example.com is a documented placeholder"
+}

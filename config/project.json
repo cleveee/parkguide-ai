@@ -1,0 +1,81 @@
+{
+  "phase": "local_poc_human_review_pending",
+  "database": "data/parkguide.sqlite",
+  "embedding": {
+    "provider": "azure_openai",
+    "deployment": "text-embedding-3-small",
+    "observed_model": "text-embedding-3-small",
+    "dimension": 1536,
+    "endpoint": "https://rd-foundry-dev-eastus2.cognitiveservices.azure.com",
+    "model_version": "not_exposed_by_embedding_response",
+    "api_style": "v1",
+    "normalization": "l2",
+    "dtype": "float32",
+    "batch_size": 16,
+    "preprocessing_version": "text-preserve-v1",
+    "cache_by": [
+      "text_sha256",
+      "embedding_config_sha256"
+    ],
+    "identity_fields": [
+      "provider",
+      "endpoint",
+      "api_style",
+      "deployment",
+      "observed_model",
+      "model_version",
+      "dimension",
+      "normalization",
+      "dtype",
+      "preprocessing_version"
+    ]
+  },
+  "generation": {
+    "provider": "azure_openai",
+    "model": "gpt-6-luna-2026-09-22",
+    "deployment": "gpt-6-luna",
+    "accepted_response_models": [
+      "gpt-6-luna-2026-09-22"
+    ],
+    "max_output_tokens": 1000,
+    "temperature": 0,
+    "reasoning_effort": "none",
+    "review_claims": true
+  },
+  "chunking": {
+    "strategies": [
+      "fixed",
+      "structure"
+    ],
+    "body_target_tokens": 200,
+    "overlap_tokens": 40,
+    "tokenizer": "cl100k_base",
+    "preserve_table_headers": true
+  },
+  "retrieval": {
+    "candidate_count": 20,
+    "per_retriever_fetch": 40,
+    "final_context_count": 5,
+    "rrf_k": 60,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "context_token_budget": 1600,
+    "default_rerank": false,
+    "selected_park_rerank": true,
+    "selection_basis": "Initial paired diagnostic showed no evidence lift and extra rerank latency; shorter-prompt hybrid candidate had 12/12 expected actions. Human gold validation pending."
+  },
+  "evaluation": {
+    "split_seed": 633,
+    "gold_count": 40,
+    "dev_count": 24,
+    "test_count": 16,
+    "dialogue_count": 6,
+    "min_user_turns_per_dialogue": 3,
+    "max_dev_cycles": 10,
+    "no_improvement_limit": 3,
+    "bootstrap_samples": 10000,
+    "proposed_api_budget_usd": 5.0,
+    "budget_status": "approved_implementation_plan",
+    "transient_retries": 2
+  }
+}

@@ -1,0 +1,52 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 645 >>
+stream
+BT /F1 14 Tf 40 740 Td (ParkGuide PDF Fixture) Tj ET
+BT /F1 10 Tf 40 712 Td (A vehicle pass covers visitors for seven days. Retain the receipt for reentry.) Tj ET
+BT /F1 10 Tf 40 694 Td (These fixture fees are invented solely for testing structured extraction.) Tj ET
+0.5 w
+40 660 m 300 660 l S
+40 630 m 300 630 l S
+40 600 m 300 600 l S
+40 570 m 300 570 l S
+40 570 m 40 660 l S
+180 570 m 180 660 l S
+300 570 m 300 660 l S
+BT /F1 10 Tf 48 640 Td (Pass) Tj ET
+BT /F1 10 Tf 188 640 Td (Price) Tj ET
+BT /F1 10 Tf 48 610 Td (Vehicle) Tj ET
+BT /F1 10 Tf 188 610 Td ($35) Tj ET
+BT /F1 10 Tf 48 580 Td (Annual) Tj ET
+BT /F1 10 Tf 188 580 Td ($70) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Title (ParkGuide PDF Fixture) /CreationDate (D:20261009000000Z) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+0000001006 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+1092
+%%EOF

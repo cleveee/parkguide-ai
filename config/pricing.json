@@ -1,0 +1,45 @@
+{
+  "currency": "USD",
+  "verified_on": "2026-10-10",
+  "billing_confirmed": false,
+  "embedding": {
+    "provider": "azure_openai",
+    "model": "text-embedding-3-small",
+    "region": "eastus2",
+    "input_per_million_usd": 0.022,
+    "output_per_million_usd": 0.0,
+    "source": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&$filter=meterId%20eq%20%27bf74adc4-0965-5bf9-b859-5db6147fc36a%27",
+    "basis": "list-price estimate",
+    "selection": "Conservative maximum of verified Microsoft regional and GlobalStandard published East US 2 rates; live deployment SKU and invoice rate not verified.",
+    "global_standard_reference_input_per_million_usd": 0.02,
+    "global_standard_reference_meter_id": "79411302-3248-56fa-acef-d3c36c861a0f",
+    "regional_reference_meter_id": "bf74adc4-0965-5bf9-b859-5db6147fc36a",
+    "retail_price_unit": "1K tokens",
+    "retail_price_global_usd": 2e-05,
+    "retail_price_regional_usd": 2.2e-05,
+    "reference_evidence": "Microsoft unauthenticated Retail Prices API returned HTTP 200, product Azure OpenAI, service Foundry Models, type Consumption, currency USD, East US 2. No account billing data accessed.",
+    "documentation": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices"
+  },
+  "generation": {
+    "provider": "azure_openai",
+    "model": "gpt-6-luna-2026-09-22",
+    "region": "eastus2",
+    "input_per_million_usd": 0.12,
+    "output_per_million_usd": 0.6,
+    "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+    "basis": "conservative published Standard short-context estimate",
+    "selection": "Highest published Standard short-context Luna rates across Global, US Data Zone and EU Data Zone. Requests stay below the long-context threshold; all input is counted uncached. Actual deployment SKU and invoice rate remain unverified.",
+    "credential_billing_environment": "existing Azure development embedding resource; same credential and endpoint",
+    "billing_confirmed": false,
+    "deployment_sku_confirmed": false,
+    "global_standard_reference_input_per_million_usd": 0.1,
+    "global_standard_reference_output_per_million_usd": 0.5,
+    "evidence": "artifacts/setup/azure-luna-discovery.json"
+  },
+  "budget_policy": {
+    "implementation_cap_usd": 5.0,
+    "include_embeddings_generation_and_optional_judging": true,
+    "actual_invoice_reconciliation": "not performed",
+    "note": "Amounts computed from actual token usage and these rates are dated list-price estimates, not confirmed billing. Root integration owns reservations, retries, spend totals, and stopping before the cap. Adapter reports usage only."
+  }
+}
