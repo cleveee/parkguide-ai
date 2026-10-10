@@ -50,6 +50,8 @@ test('reload restores park, full answer, evidence and follow-up content', (t) =>
       passage_url: 'https://www.nps.gov/yose/planyourvisit/pets.htm', source_spans: [{ start: 0, end: 21, kind: 'paragraph' }],
       claim_numbers: [1], reviewer_witnesses: [{ claim_number: 1, quote: 'Keep pets on a leash.' }] }] }]
   turn.response.history_content = 'Keep pets on a leash. [Pets](https://www.nps.gov/yose/planyourvisit/pets.htm)'
+  turn.response.suggested_questions = [{ id: 'pets-leash', question: 'How long should my pet leash be in Yosemite?',
+    source_url: 'https://www.nps.gov/yose/planyourvisit/pets.htm', supporting_quote: 'Keep pets on a leash.', evidence_ids: ['chunk'] }]
   const saved = library('yose', [turn])
   assert.equal(saveChats(saved), true)
   assert.deepEqual(loadChats(), saved)
