@@ -1,0 +1,255 @@
+{
+  "kind": "retrospective_development_pilot",
+  "new_application_calls": 0,
+  "new_evaluator_calls": 0,
+  "new_API_cost_usd": 0,
+  "semantic_reviewer_count": 1,
+  "independent_evaluator_panel_completed": false,
+  "human_verified": false,
+  "benchmark_eligible": false,
+  "groups": {
+    "baseline": {
+      "requests": 18,
+      "delivered_answers": 11,
+      "delivered_claims": 12,
+      "grade_counts": {
+        "partial": 5,
+        "pass": 10,
+        "fail": 3
+      },
+      "unsupported_claims": {
+        "numerator": 1,
+        "denominator": 12,
+        "fraction": 0.08333333333333333
+      },
+      "material_qualification_omissions": {
+        "numerator": 1,
+        "denominator": 12,
+        "fraction": 0.08333333333333333
+      },
+      "unsupported_or_materially_overbroad_answers_all_requests": {
+        "numerator": 2,
+        "denominator": 18,
+        "fraction": 0.1111111111111111
+      },
+      "unsupported_or_materially_overbroad_answers_substantive_answers": {
+        "numerator": 2,
+        "denominator": 11,
+        "fraction": 0.18181818181818182
+      },
+      "answerable_refusals": {
+        "numerator": 2,
+        "denominator": 13,
+        "fraction": 0.15384615384615385
+      },
+      "answerable_no_answer_including_clarification": {
+        "numerator": 3,
+        "denominator": 13,
+        "fraction": 0.23076923076923078
+      },
+      "correct_boundary_refusals": {
+        "numerator": 3,
+        "denominator": 4,
+        "fraction": 0.75
+      },
+      "saved_http_successes": {
+        "numerator": 18,
+        "denominator": 18,
+        "fraction": 1.0
+      },
+      "source_identity_and_witness_errors": 0,
+      "saved_review_withheld_claim_count": 1,
+      "false_rejection_rate": null,
+      "raw_draft_hallucination_rate": null,
+      "metric_limitation": "Public responses omit rejected drafts; withholding alone is not a false rejection label."
+    },
+    "later_original": {
+      "requests": 18,
+      "delivered_answers": 12,
+      "delivered_claims": 12,
+      "grade_counts": {
+        "pass": 17,
+        "fail": 1
+      },
+      "unsupported_claims": {
+        "numerator": 0,
+        "denominator": 12,
+        "fraction": 0.0
+      },
+      "material_qualification_omissions": {
+        "numerator": 0,
+        "denominator": 12,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_all_requests": {
+        "numerator": 0,
+        "denominator": 18,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_substantive_answers": {
+        "numerator": 0,
+        "denominator": 12,
+        "fraction": 0.0
+      },
+      "answerable_refusals": {
+        "numerator": 1,
+        "denominator": 13,
+        "fraction": 0.07692307692307693
+      },
+      "answerable_no_answer_including_clarification": {
+        "numerator": 1,
+        "denominator": 13,
+        "fraction": 0.07692307692307693
+      },
+      "correct_boundary_refusals": {
+        "numerator": 4,
+        "denominator": 4,
+        "fraction": 1.0
+      },
+      "saved_http_successes": {
+        "numerator": 18,
+        "denominator": 18,
+        "fraction": 1.0
+      },
+      "source_identity_and_witness_errors": 0,
+      "saved_review_withheld_claim_count": 1,
+      "false_rejection_rate": null,
+      "raw_draft_hallucination_rate": null,
+      "metric_limitation": "Public responses omit rejected drafts; withholding alone is not a false rejection label."
+    },
+    "later_supplement": {
+      "requests": 3,
+      "delivered_answers": 2,
+      "delivered_claims": 2,
+      "grade_counts": {
+        "partial": 2,
+        "fail": 1
+      },
+      "unsupported_claims": {
+        "numerator": 0,
+        "denominator": 2,
+        "fraction": 0.0
+      },
+      "material_qualification_omissions": {
+        "numerator": 0,
+        "denominator": 2,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_all_requests": {
+        "numerator": 0,
+        "denominator": 3,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_substantive_answers": {
+        "numerator": 0,
+        "denominator": 2,
+        "fraction": 0.0
+      },
+      "answerable_refusals": {
+        "numerator": 1,
+        "denominator": 3,
+        "fraction": 0.3333333333333333
+      },
+      "answerable_no_answer_including_clarification": {
+        "numerator": 1,
+        "denominator": 3,
+        "fraction": 0.3333333333333333
+      },
+      "correct_boundary_refusals": {
+        "numerator": 0,
+        "denominator": 0,
+        "fraction": null
+      },
+      "saved_http_successes": {
+        "numerator": 3,
+        "denominator": 3,
+        "fraction": 1.0
+      },
+      "source_identity_and_witness_errors": 0,
+      "saved_review_withheld_claim_count": 3,
+      "false_rejection_rate": null,
+      "raw_draft_hallucination_rate": null,
+      "metric_limitation": "Public responses omit rejected drafts; withholding alone is not a false rejection label."
+    },
+    "later_combined": {
+      "requests": 21,
+      "delivered_answers": 14,
+      "delivered_claims": 14,
+      "grade_counts": {
+        "pass": 17,
+        "fail": 2,
+        "partial": 2
+      },
+      "unsupported_claims": {
+        "numerator": 0,
+        "denominator": 14,
+        "fraction": 0.0
+      },
+      "material_qualification_omissions": {
+        "numerator": 0,
+        "denominator": 14,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_all_requests": {
+        "numerator": 0,
+        "denominator": 21,
+        "fraction": 0.0
+      },
+      "unsupported_or_materially_overbroad_answers_substantive_answers": {
+        "numerator": 0,
+        "denominator": 14,
+        "fraction": 0.0
+      },
+      "answerable_refusals": {
+        "numerator": 2,
+        "denominator": 16,
+        "fraction": 0.125
+      },
+      "answerable_no_answer_including_clarification": {
+        "numerator": 2,
+        "denominator": 16,
+        "fraction": 0.125
+      },
+      "correct_boundary_refusals": {
+        "numerator": 4,
+        "denominator": 4,
+        "fraction": 1.0
+      },
+      "saved_http_successes": {
+        "numerator": 21,
+        "denominator": 21,
+        "fraction": 1.0
+      },
+      "source_identity_and_witness_errors": 0,
+      "saved_review_withheld_claim_count": 4,
+      "false_rejection_rate": null,
+      "raw_draft_hallucination_rate": null,
+      "metric_limitation": "Public responses omit rejected drafts; withholding alone is not a false rejection label."
+    }
+  },
+  "paired_original_suite": {
+    "matched_question_ids": 18,
+    "dialogue_clusters": 6,
+    "grade_directions": {
+      "improved": 8,
+      "regressed": 1,
+      "unchanged": 9
+    },
+    "exploratory_risk_difference_after_minus_before": -0.1111111111111111,
+    "exploratory_cluster_bootstrap_percentile_ci95": [
+      -0.2222222222222222,
+      0.0
+    ],
+    "seed": 633,
+    "resamples": 10000,
+    "interpretation": "Descriptive only. Reused development cases, unblinded AI labels, changed conversation histories and multiple implementation changes prevent a causal or independent benchmark claim."
+  },
+  "verification": {
+    "total_records": 39,
+    "annotations": 39,
+    "claims_labeled": 26,
+    "passages_checked": 28,
+    "witnesses_checked": 49,
+    "mechanical_errors": 0
+  }
+}
