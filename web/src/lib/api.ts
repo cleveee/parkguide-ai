@@ -377,7 +377,7 @@ const invalidResponse = () => new ApiError(200, "invalid_response", "ParkGuide r
 
 // Guard the structures rendered by the app before a successful HTTP response
 // enters React state. Source support and citation integrity remain server checks.
-function validChatTurn(value: unknown): value is ChatTurn {
+export function validChatTurn(value: unknown): value is ChatTurn {
   if (!object(value) || !PARKS.some((park) => park.code === value.selected_park)
       || !["answer", "refusal", "clarification"].includes(String(value.status))
       || typeof value.text !== "string" || typeof value.history_content !== "string"

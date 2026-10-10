@@ -280,13 +280,13 @@ def metadata() -> dict:
     runtime = runtime_profile()
     if hosted():
         persistence = {
-            "conversation_text": "browser tab memory only; sent to this server per request and not stored by it",
+            "conversation_text": "browser localStorage; restored on reload; sent to this server per request and not stored by it",
             "embedding_cache": "/tmp/parkguide/embedding-cache/ on this instance only (ephemeral): SHA-256 of each embedded retrieval query, its vector and metadata (no query text)",
             "budget_ledger": "/tmp/parkguide/api-ledger.json on this instance only (ephemeral, not shared across instances): kind, time, status, tokens and estimated cost of each paid call (no text)",
         }
     else:
         persistence = {
-            "conversation_text": "browser tab memory only; sent to this server per request and not stored by it",
+            "conversation_text": "browser localStorage; restored on reload; sent to this server per request and not stored by it",
             "embedding_cache": "data/embedding-cache/: SHA-256 of each embedded retrieval query, its vector and metadata (no query text)",
             "budget_ledger": "artifacts/api-ledger.json: kind, time, status, tokens and estimated cost of each paid call (no text)",
         }
@@ -322,7 +322,7 @@ def metadata() -> dict:
             "context_token_budget": settings["retrieval"]["context_token_budget"],
         },
         "chat": {"ready": ready, "reason": None if ready else "gold_drafts_not_frozen"},
-        "history_storage": "browser_memory_only",
+        "history_storage": "browser_local_storage",
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
 

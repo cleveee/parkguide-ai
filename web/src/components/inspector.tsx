@@ -36,7 +36,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 function exportJson(turn: ChatTurn) {
   // The turn object already contains only reviewed output, validated stored
   // evidence and safe diagnostics produced by the local server.
-  return JSON.stringify({ exported_at: new Date().toISOString(), history_storage: "browser_memory_only", turn }, null, 2)
+  return JSON.stringify({ exported_at: new Date().toISOString(), history_storage: "browser_local_storage", turn }, null, 2)
 }
 
 function ExportButtons({ turn }: { turn: ChatTurn }) {
@@ -353,7 +353,7 @@ function DataFlowTab({ turn }: { turn: ChatTurn }) {
       <ol>
         <Step state="done" where="browser" title={hosted ? "Question sent to the ParkGuide server function" : "Question sent to the local server (127.0.0.1)"}>
           <p>
-            Question and selected park ({park}), plus {turn.history.messages_received} prior message(s) from this tab's memory.
+            Question and selected park ({park}), plus {turn.history.messages_received} prior message(s) from this browser’s saved conversation.
           </p>
           <p>
             {turn.history.scope_reset

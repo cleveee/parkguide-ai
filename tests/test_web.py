@@ -778,7 +778,7 @@ def test_metadata_reads_actual_sqlite_counts(env):
     assert meta["totals"]["chunks_all_builds"] == sum(build["chunk_count"] for build in meta["builds"])
     assert sum(park["active_chunks"] for park in meta["parks"]) == meta["active_build"]["chunk_count"]
     assert meta["chat"]["ready"] is True
-    assert meta["history_storage"] == "browser_memory_only"
+    assert meta["history_storage"] == "browser_local_storage"
 
 
 def test_missing_database_is_not_created(env, monkeypatch, tmp_path):
