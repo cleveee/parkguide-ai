@@ -97,14 +97,14 @@ export function HowItWorks({ open, onOpenChange, meta }: { open: boolean; onOpen
               </p>
               {hosted ? (
                 <p>
-                  <span className="font-medium text-foreground">What stays where.</span> Conversation text is kept in this tab's memory and is lost on reload; it is
+                  <span className="font-medium text-foreground">What stays where.</span> Conversation text is saved in this browser’s localStorage and restored on reload; it is
                   sent to the server function with each question, which does not store it. Each server instance keeps temporary derived data in{" "}
                   <code className="font-mono">/tmp</code> until it is recycled: the SHA-256 hash and vector of each embedded retrieval query (not its text), and a
                   budget ledger of each paid call's kind, time, status, tokens and estimated cost (no text).
                 </p>
               ) : (
                 <p>
-                  <span className="font-medium text-foreground">What stays where.</span> Conversation text is kept in this tab's memory and is lost on reload; it is
+                  <span className="font-medium text-foreground">What stays where.</span> Conversation text is saved in this browser’s localStorage and restored on reload; it is
                   sent to the local server with each question, which does not store it. Some derived data does persist on this computer: the local embedding cache
                   keeps the SHA-256 hash and vector of each embedded retrieval query (not its text), and the budget ledger records each paid call's kind, time,
                   status, tokens and estimated cost (no text).

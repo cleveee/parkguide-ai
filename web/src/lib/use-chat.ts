@@ -26,9 +26,9 @@ export type TurnState =
 let counter = 0
 const nextId = () => `turn-${Date.now().toString(36)}-${(counter++).toString(36)}`
 
-/** Conversation history lives only in this browser tab's memory. */
-export function useChat(park: ParkCode | null) {
-  const [turns, setTurns] = useState<TurnState[]>([])
+/** Restored turns retain the same bounded follow-up context as live turns. */
+export function useChat(park: ParkCode | null, initialTurns: TurnState[] = []) {
+  const [turns, setTurns] = useState<TurnState[]>(initialTurns)
   const [pending, setPending] = useState(false)
   // Every reset bumps the epoch; replies from an older epoch are discarded.
   const epoch = useRef(0)

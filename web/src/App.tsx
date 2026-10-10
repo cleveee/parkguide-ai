@@ -24,6 +24,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ApiError, PARKS, getMeta, parkName, type Meta, type ParkCode } from "@/lib/api"
 import { captureAge, formatDateTime } from "@/lib/format"
+import { loadChat, saveChat } from "@/lib/chat-storage"
 import { useChat } from "@/lib/use-chat"
 import { cn } from "@/lib/utils"
 
@@ -145,14 +146,15 @@ function Sidebar({
       </nav>
 
       <p className="mt-auto text-xs text-pretty text-muted-foreground">
-        Conversation history stays in this tab's memory and clears on reload. Saved pages are a snapshot, not live conditions.
+        Conversation history is saved in this browser and restored on reload. Saved pages are a snapshot, not live conditions.
       </p>
     </div>
   )
 }
 
 export default function App() {
-  const [park, setPark] = useState<ParkCode | null>(null)
+  const [savedChat] = useState(loadChat)
+  const [park, setPark] = useState<ParkCode | null>(savedChat.park)
   const [view, setView] = useState<View>("chat")
   const [meta, setMeta] = useState<Meta | null>(null)
   const [metaError, setMetaError] = useState<string | null>(null)
@@ -165,7 +167,14 @@ export default function App() {
   const desktop = useMediaQuery(DESKTOP)
   // The sidebar is visible from Tailwind's md breakpoint, where the menu sheet is unnecessary.
   const wide = useMediaQuery(WIDE)
-  const chat = useChat(park)
+  const chat = useChat(park, savedChat.turns)
+  const [storageFailed, setStorageFailed] = useState(false)
+  useEffect(() => {
+    const failed = !saveChat(park, chat.turns)
+    // This state reports the result of synchronizing with external browser storage.
+    // oxlint-disable-next-line react/set-state-in-effect
+    setStorageFailed(failed)
+  }, [park, chat.turns])
 
   const loadMeta = useCallback(() => {
     getMeta()
@@ -289,6 +298,7 @@ export default function App() {
                 )}
               </header>
 
+              {storageFailed && <p role="status" className="border-b px-4 py-2 text-sm">Browser storage is unavailable or full. This conversation may be lost on reload.</p>}
               <div className="flex min-h-0 flex-1">
                 <ResizableGroup id="conversation-layout" orientation="horizontal" className="flex-1">
                   <ResizablePanel id="conversation" minSize={desktop && inspectorOpen ? "30rem" : 0}>
@@ -383,7 +393,7 @@ export default function App() {
               {confirm?.kind === "new" ? "Start a new conversation?" : confirm?.kind === "park" && confirm.park ? `Switch to ${parkName(confirm.park)}?` : "Clear the selected park?"}
             </AlertDialogTitle>
             <AlertDialogDescription>
-              This clears the current conversation and its evidence from this tab. It cannot be undone. A reply still in progress on the server will be ignored, but the server keeps working on it (including any paid calls), and a new question gets a “busy” reply until it finishes.
+              This clears the current conversation and its evidence from this browser’s saved chat. It cannot be undone. A reply still in progress on the server will be ignored, but the server keeps working on it (including any paid calls), and a new question gets a “busy” reply until it finishes.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
