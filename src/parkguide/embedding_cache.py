@@ -9,7 +9,12 @@ import numpy as np
 
 from .azure import embed
 from .budget import Budget
-from .runtime import ROOT, config, digest
+from .runtime import ROOT, config, digest, embedding_cache_dir
+
+
+def cache_folder(settings=None):
+    settings = settings or config()["embedding"]
+    return embedding_cache_dir() / digest({name: settings[name] for name in settings["identity_fields"]})
 
 
 def cached_embed(texts):
@@ -17,7 +22,7 @@ def cached_embed(texts):
     settings = config()["embedding"]
     identity = {name: settings[name] for name in settings["identity_fields"]}
     config_hash = digest(identity)
-    folder = ROOT / "data/embedding-cache" / config_hash
+    folder = cache_folder(settings)
     folder.mkdir(parents=True, exist_ok=True)
     keys = [hashlib.sha256(text.encode()).hexdigest() for text in texts]
     vectors = {}

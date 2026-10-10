@@ -1,0 +1,3 @@
+Frozen database verified: {'documents': 155, 'chunks': 5405, 'embeddings': 5405, 'index_builds': 2}
+Tokenizer cache: vendor/tiktoken/9b5ad71b2ce5302211f9c61530b329a4922fc6a4 (1681126 bytes)
+Published 4 frontend files to public/

@@ -1,4 +1,7 @@
-"""Run with .venv/bin/streamlit run app.py --server.address 127.0.0.1"""
+"""Optional legacy Streamlit UI. The primary app is `bash scripts/run_web.sh`.
+
+Run with .venv/bin/streamlit run app.py --server.address 127.0.0.1
+"""
 import streamlit as st
 
 from parkguide.chat import PARK_NAMES, answer, gold_drafts_ready

@@ -6,14 +6,16 @@ import json
 from pathlib import Path
 import uuid
 
-from .runtime import ROOT, config
+from .runtime import ROOT, config, ledger_path
 
 
 class Budget:
-    def __init__(self, root=ROOT, cap=None):
-        self.root = Path(root)
+    def __init__(self, root=None, cap=None):
+        # Pricing always comes from root's config; the default ledger follows
+        # the runtime profile (repository locally, per-instance /tmp hosted).
+        self.root = Path(root) if root is not None else ROOT
         self.cap = cap if cap is not None else config()["evaluation"]["proposed_api_budget_usd"]
-        self.path = self.root / "artifacts/api-ledger.json"
+        self.path = ledger_path() if root is None else self.root / "artifacts/api-ledger.json"
 
     @contextmanager
     def locked(self):

@@ -8,6 +8,10 @@ build/
 .vite/
 .next/
 coverage/
+# Vercel build outputs: SPA copied from web/dist, tokenizer cache fetched at build
+/public/
+/vendor/tiktoken/
+.vercel/
 __pycache__/
 *.py[cod]
 *.egg-info/

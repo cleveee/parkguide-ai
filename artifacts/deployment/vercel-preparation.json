@@ -1,0 +1,67 @@
+{
+  "verified_at_utc": "2026-10-10T16:16:40.473705+00:00",
+  "scope": "Repository preparation; no Vercel project or deployment created",
+  "implementation": {
+    "tool": "Claude Code CLI",
+    "model": "claude-opus-5-5",
+    "session_id": "d44ca477-0c6a-48c5-9813-b93714b6987d",
+    "supervisor_fixes": [
+      "Official schema exclusion-pattern limit",
+      "Strict same-host Origin for hosted writes",
+      "Explicit FastAPI preset and Node24",
+      "Accurate historical evaluation and budget-alert limits"
+    ]
+  },
+  "checks": [
+    {
+      "name": "bundle_preparation",
+      "exit_code": 0,
+      "output": "artifacts/deployment/bundle_preparation.txt"
+    },
+    {
+      "name": "offline_tests",
+      "exit_code": 0,
+      "output": "artifacts/deployment/offline_tests.txt"
+    }
+  ],
+  "official_vercel_schema_errors": 0,
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "database_bytes": 56664064,
+  "azure_ledger_unchanged": true,
+  "frontend": {
+    "typecheck_and_build": "Fresh Vite output from tsc -b && vite build on 2026-10-10T16:14:58Z",
+    "public_assets": [
+      {
+        "path": "public/assets/index-BtxuVbP4.css",
+        "bytes": 81414,
+        "sha256": "44ebe3382e69666de8df3d499743f651fc49f8771d5836f3cffd20f3ef249b09"
+      },
+      {
+        "path": "public/assets/index-CVI-yVq_.js",
+        "bytes": 609651,
+        "sha256": "8f69be8fe5d1a9b211d4cd28ea886286539ff54305a50c3a91d6047d1763256e"
+      },
+      {
+        "path": "public/favicon.svg",
+        "bytes": 187,
+        "sha256": "2ed16a375f5b6bf4aa0fd8effa4e0543acde12d69812b10281ddfb42932af0f3"
+      },
+      {
+        "path": "public/index.html",
+        "bytes": 530,
+        "sha256": "a58f2d184ac28185877e0929ba8da255db506cac8230e3846d818f71629dc53d"
+      }
+    ],
+    "dist_public_identical": true
+  },
+  "hosted_profile": {
+    "retrieval": "hybrid cosine + BM25 + RRF, reranker disabled",
+    "database": "read-only immutable, bundled server-side",
+    "cache_and_ledger": "ephemeral per-instance /tmp",
+    "global_budget_cap": false
+  },
+  "not_verified": [
+    "Actual Vercel cloud build and bundle size",
+    "Hosted cold start and live Azure chat"
+  ]
+}

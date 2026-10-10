@@ -2,22 +2,38 @@
 
 ParkGuide answers questions about Yosemite, Yellowstone, and Grand Canyon from saved official NPS sources. The local application, Azure embeddings, retrieval pipeline, and real evaluation runners are implemented. The course benchmark awaits human verification of the 40 source-authored gold drafts.
 
-The three workstreams are [corpus/database, retrieval/chat, and evaluation](docs/PLAN.md). Python, one SQLite file, NumPy exact search, BM25, and Streamlit keep the application simple. One existing Azure resource generates embeddings with `text-embedding-3-small` and answers/claim review with `gpt-6-luna-2026-09-22`; a pinned CrossEncoder reranks locally. There is no application deployment or cloud database.
+The three workstreams are [corpus/database, retrieval/chat, and evaluation](docs/PLAN.md). Python, one SQLite file, NumPy exact search and BM25 keep the pipeline simple. The primary interface is a small React + TypeScript web app served by a thin loopback FastAPI bridge; Streamlit remains an optional legacy tool. One existing Azure resource generates embeddings with `text-embedding-3-small` and answers/claim review with `gpt-6-luna-2026-09-22`; a pinned CrossEncoder reranks locally. There is no cloud database; an optional [Vercel hosted profile](docs/VERCEL.md) is prepared but not deployed from this repository.
 
 ## Run locally
 
-The current session already serves [ParkGuide](http://127.0.0.1:8511). To start it again:
+Start the web app (it builds `web/dist` first if it is missing) and open [http://127.0.0.1:8513](http://127.0.0.1:8513):
 
 ```sh
 cd /Users/robin/Build/Personal/parkguide-ai
+bash scripts/run_web.sh            # add --build to rebuild the frontend first
+```
+
+The equivalent manual steps are `npm --prefix web ci && npm --prefix web run build`, then `.venv/bin/python -m parkguide.web`. The server binds only to 127.0.0.1:8513, serves the compiled frontend and same-origin `/api/*`, and reads the existing SQLite database. Startup never ingests, indexes or embeds anything; Azure calls happen only when you ask a question. Frontend development: start the server with `PARKGUIDE_WEB_DEV=1` (otherwise port-5173 Host/Origin values are refused), then run `npm --prefix web run dev` (Vite on 127.0.0.1:5173 proxies `/api`). The server sets `HF_HUB_OFFLINE=1`, so the pinned reranker must already be in the local Hugging Face cache. Persisted locally: query hashes and vectors in `data/embedding-cache/`, and paid-call kind, tokens and cost in `artifacts/api-ledger.json`. Conversation text stays in browser memory.
+
+Choose a park (Yosemite, Yellowstone or Grand Canyon) before chatting; the selected park is shown in the header and next to the composer. Every question goes through the shared `parkguide.chat.answer` path with that park, hybrid retrieval over the active structure-aware build, and selected-park reranking. Switching or clearing the park, or starting a new conversation, asks for confirmation and clears the conversation; replies still running on the server for an older conversation are ignored. **Stop waiting** stops the browser from waiting, but the server may still finish that request. History lives only in the browser tab's memory.
+
+Only claims that passed source review are shown. Numbered citations open the saved excerpt, the reviewer's verbatim witnesses (labelled as an AI judgment) and a separate link to the current official NPS page. **Sources used** groups cited passages by saved page. The inspector (side panel on wide screens, sheet on smaller ones) has **Evidence**, **Retrieval** (query, filters, counts, cosine/BM25/RRF/reranker ranking scores, timings) and **Data flow** (embedding cache status, returned models, tokens, estimated cost, refusal reasons) tabs, with JSON copy/download. **Corpus** in the sidebar browses the read-only database. **How it works** explains what leaves the machine. [Park scope and verification](docs/PARK_SCOPE.md) describes the enforced boundaries and AI-review limits; [frontend references](docs/FRONTEND_REFERENCES.md) record component origins and licenses.
+
+Select Yosemite and ask “What distance should I keep from a bear outside developed areas?”, then “What should I do if that bear is in a developed area?” Ask about Yellowstone to see the scope refusal, or an imaginary Blue Lantern Lagoon submarine tour to see a source-gap refusal. Select another park to begin its separate conversation. These examples are non-gold diagnostics.
+
+### Vercel hosted profile
+
+The repository can also be imported into Vercel as one FastAPI project. The entry point is `server.py`, and the hosted profile is selected by `VERCEL=1`. It serves the same app from the frozen read-only database, without the cross-encoder reranker. The saved local evaluations do not measure that retrieval profile. The hosted query cache and budget ledger live in per-instance `/tmp`, so the $5 cap applies per instance and is not global. See [docs/VERCEL.md](docs/VERCEL.md) for import settings, the four server-only Azure variables and the limits. Local behavior is unchanged.
+
+### Legacy Streamlit app
+
+The earlier Streamlit interface remains available as an optional tool; historical screenshots and proof in the reports refer to it:
+
+```sh
 .venv/bin/streamlit run app.py --server.address 127.0.0.1 --server.port 8511 --server.headless true --server.fileWatcherType none --browser.gatherUsageStats false
 ```
 
-Choose **Park** before chatting. The selected park is clearly shown above the conversation, and every search is filtered to its saved NPS sources. Changing parks starts a fresh conversation. Missing support leads to a refusal; every delivered claim needs cited source passages and checked verbatim witnesses. Live conditions and personal records cannot be verified from the saved database. [Park scope and verification](docs/PARK_SCOPE.md) describes the enforced boundaries and AI-review limits.
-
-**Sources used** appears below cited answers with official page links, source/capture dates, and expandable saved excerpts. Repeated pages share a card while retaining each cited passage; PDF passages also link to their recorded starting page. Expand **Search trace and other retrieved passages** for query, filter, review and calculation details. **New conversation** clears history within the selected park. Optional search/reranking controls are inside the sidebar's **Search settings**. [Source-link details](docs/SOURCE_LINKS.md) explain attribution.
-
-Select Yosemite and ask “What distance should I keep from a bear outside developed areas?”, then “What should I do if that bear is in a developed area?” Ask about Yellowstone to see the scope refusal, or an imaginary Blue Lantern Lagoon submarine tour to see a source-gap refusal. Select another park to begin its separate conversation. These examples are non-gold diagnostics.
+Its sidebar **Search settings** expose search/reranking ablation controls that the web app intentionally does not accept. [Source-link details](docs/SOURCE_LINKS.md) explain attribution in both interfaces.
 
 ## Setup and verification
 
@@ -28,7 +44,10 @@ PARKGUIDE_PYTHON=/Users/robin/.cache/codex-runtimes/codex-primary-runtime/depend
 .venv/bin/parkguide doctor
 .venv/bin/python -m pytest -q
 .venv/bin/python -m pip check
+npm --prefix web ci && npm --prefix web run build   # typecheck + production build
 ```
+
+The web app needs Node.js (verified with Node 26.7 / npm 11.19); `web/package-lock.json` pins the frontend packages. `tests/test_web.py` covers the API bridge offline with stubbed model calls.
 
 Elsewhere use `PARKGUIDE_PYTHON=python3.12 bash scripts/setup.sh`. Setup installs `requirements-full.lock`, initializes SQLite without deleting existing rows, and makes no model calls. `PARKGUIDE_CORE_ONLY=1` selects `requirements-core.lock`; reranking then requires the optional packages. Locks were resolved on macOS ARM64; verify compatibility elsewhere. Pinned model weights download on first use and remain cached.
 

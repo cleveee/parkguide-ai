@@ -11,12 +11,22 @@ import sqlite3
 
 import numpy as np
 
+# runtime first: it points tiktoken at the bundled cache before chunking loads it.
+from .runtime import hosted, sqlite_uri
 from .chunking import CHUNKER_VERSION, canonical_hash, chunk_documents, chunk_statistics, unpack_document
 
 
 @contextmanager
-def _connection(db):
-    connection = sqlite3.connect(str(db), timeout=30)
+def _connection(db, readonly=None):
+    """Read-write locally; read-only (never created) for the hosted bundle."""
+    if readonly is None:
+        readonly = hosted()
+    if readonly:
+        if not Path(db).is_file():
+            raise FileNotFoundError("SQLite database is missing; read-only mode never creates it")
+        connection = sqlite3.connect(sqlite_uri(db), uri=True, timeout=30)
+    else:
+        connection = sqlite3.connect(str(db), timeout=30)
     connection.row_factory = sqlite3.Row
     connection.execute("PRAGMA foreign_keys = ON")
     try:

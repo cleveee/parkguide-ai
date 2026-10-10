@@ -113,6 +113,10 @@ def build():
     park_update = read(park_evidence_path) if (ROOT / park_evidence_path).exists() else None
     azure_initial_ui_path = "artifacts/ui/azure-ui-initial-verification.json"
     azure_initial_ui = read(azure_initial_ui_path) if (ROOT / azure_initial_ui_path).exists() else None
+    # Live proof for the React/FastAPI web app is kept separate from the
+    # historical Streamlit proof; the dashboard shows "pending" without it.
+    web_app_path = "artifacts/ui/web-app-verification.json"
+    web_app_update = read(web_app_path) if (ROOT / web_app_path).exists() else None
     park_runs = []
     for folder in sorted((ROOT / "artifacts/park-scope").glob("*/summary.json")):
         summary = read(str(folder.relative_to(ROOT)))
@@ -173,6 +177,7 @@ def build():
     for label, evidence_item, time_key in (
         ("Source-link UI check", ui_update, "verified_at_utc"),
         ("Park-selector UI check", park_update, "verified_at_utc"),
+        ("Web-app check", web_app_update, "verified_at_utc"),
     ):
         if evidence_item and evidence_item.get("api_usage", {}).get("ledger_after"):
             ledger_snapshots.append({"label": label, "recorded_at": evidence_item.get(time_key), "ledger": evidence_item["api_usage"]["ledger_after"]})
@@ -195,6 +200,7 @@ def build():
         "park_scope_update": park_update, "park_scope_runs": park_runs,
         "park_support_observations": support_observations,
         "park_support_audits": support_audits, "azure_initial_ui_update": azure_initial_ui,
+        "web_app_verification": web_app_update,
         "setup_evidence": setup_evidence, "retrieval_evidence": retrieval_evidence,
         "ledger_snapshots": ledger_snapshots, "latest_ledger_snapshot": latest_ledger,
         "source_manifest": list(sources.values()),
@@ -208,6 +214,9 @@ def build():
     park_img = ROOT / "artifacts/ui/park-selector-preview.png"
     if park_update and park_img.exists():
         data["park_scope_screenshot"] = "data:image/png;base64," + base64.b64encode(park_img.read_bytes()).decode()
+    web_app_img = ROOT / "artifacts/ui/web-app-preview.png"
+    if web_app_update and web_app_img.exists():
+        data["web_app_screenshot"] = "data:image/png;base64," + base64.b64encode(web_app_img.read_bytes()).decode()
     assert len(documents) == corpus["counts"]["usable_html"] + corpus["counts"]["usable_pdf"] == 155
     assert len(stages["stages"]) == 7
     assert sum(len(s["curated_rows"]) for s in stages["stages"]) == 305
@@ -223,6 +232,7 @@ def build():
     export.pop("screenshot")
     export.pop("source_link_screenshot", None)
     export.pop("park_scope_screenshot", None)
+    export.pop("web_app_screenshot", None)
     (OUT / "run-data.json").write_text(json.dumps(export, ensure_ascii=False, indent=2, allow_nan=False))
     print(f"Dashboard built: {len(documents)} documents; 7 stages; 305 attempted evaluations; 66 final AI labels; {len(sources)} provenance records.")
 

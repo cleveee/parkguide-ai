@@ -1,0 +1,12 @@
+# Hosted (Vercel, Python 3.12 Linux) runtime dependencies, pinned to the
+# versions in requirements-full.lock. No ingestion, Streamlit, PyTorch or
+# sentence-transformers. Local setup uses requirements-full.lock instead.
+requests==2.34.2
+numpy==2.5.3
+rank-bm25==0.2.2
+openai==3.28.0
+httpx==0.28.1
+tiktoken==0.14.0
+python-dotenv==1.2.4
+fastapi==0.141.1
+uvicorn==0.54.0

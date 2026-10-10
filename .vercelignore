@@ -1,0 +1,35 @@
+# Uploaded to Vercel: src/, server.py, config/, scripts/prepare_vercel.py, web/
+# sources, vendor/tiktoken/, the frozen SQLite file and the two gold-seal files.
+# Everything below stays out of both the build and the function.
+
+# Credentials, environments, dependency trees, builds
+.env
+.env.*
+.venv/
+venv/
+web/node_modules/
+web/dist/
+public/
+**/__pycache__/
+.pytest_cache/
+
+# Legacy Streamlit entry and local-only tooling
+app.py
+dashboard/
+tests/
+requirements-*.lock
+
+# Archived corpus, caches, run evidence and reports
+data/raw/
+data/embedding-cache/
+data/diagnostics/
+data/documents.jsonl
+artifacts/
+reports/
+docs/
+references/
+
+# Evaluation content other than the two gold-seal files gold_drafts_ready() needs
+data/evaluation/*
+!data/evaluation/gold-draft-manifest.json
+!data/evaluation/gold-drafts.jsonl

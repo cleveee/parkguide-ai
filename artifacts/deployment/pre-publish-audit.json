@@ -1,0 +1,17 @@
+{
+  "verified_at_utc": "2026-10-10T16:17:25.146504+00:00",
+  "files_scanned": 10844,
+  "payload_bytes": 282447367,
+  "configured_secret_or_private_key_matches": 0,
+  "files_over_100MiB": [],
+  "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+  "excludes": [
+    ".env",
+    "virtual environments",
+    "node_modules",
+    "compiled frontend/public output",
+    "tokenizer build cache",
+    "runtime locks",
+    "SQLite sidecars"
+  ]
+}

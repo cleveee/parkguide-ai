@@ -7,21 +7,30 @@ name = "parkguide-ai"
 version = "0.0.1"
 description = "Local educational RAG chatbot with source traces and saved evaluation"
 requires-python = ">=3.11,<3.14"
+# Runtime serving dependencies only (also the Vercel install; see requirements.txt
+# for exact pins). Ingestion, Streamlit and reranking are extras; the local
+# setup installs requirements-full.lock and is unchanged.
 dependencies = [
-  "requests>=2.32",
-  "beautifulsoup4>=4.12",
-  "pdfplumber>=0.11",
-  "numpy>=2.0",
-  "rank-bm25>=0.2.2",
-  "streamlit>=1.40",
-  "openai>=1.60",
-  "tiktoken>=0.8",
-  "python-dotenv>=1.0",
+  "requests>=2.34,<3",
+  "numpy>=2.5,<2.6",
+  "rank-bm25==0.2.2",
+  "openai>=3.28,<3.29",
+  "httpx>=0.28,<0.29",
+  "tiktoken>=0.14,<0.15",
+  "python-dotenv>=1.2,<2",
+  "fastapi>=0.141,<0.142",
+  "uvicorn>=0.54,<0.55",
 ]
 
 [project.optional-dependencies]
+ingest = ["beautifulsoup4>=4.12", "pdfplumber>=0.11"]
+app = ["streamlit>=1.40"]
 rerank = ["sentence-transformers>=3.3"]
 dev = ["pytest>=8.3"]
+
+[tool.vercel]
+# Explicit so the legacy Streamlit app.py is never selected.
+entrypoint = "server:app"
 
 [project.scripts]
 parkguide = "parkguide.cli:main"

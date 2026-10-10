@@ -1,0 +1,210 @@
+{
+  "duration_api_ms": 531116,
+  "stop_reason": "end_turn",
+  "session_id": "d44ca477-0c6a-48c5-9813-b93714b6987d",
+  "total_cost_usd": 3.9486582,
+  "usage": {
+    "input_tokens": 120,
+    "cache_creation_input_tokens": 157444,
+    "cache_read_input_tokens": 7193531,
+    "output_tokens": 62496,
+    "output_tokens_details": {
+      "thinking_tokens": 16624
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 157444,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1428,
+        "cache_read_input_tokens": 166197,
+        "cache_creation_input_tokens": 3394,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3394
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 120,
+      "outputTokens": 62496,
+      "cacheReadInputTokens": 7193531,
+      "cacheCreationInputTokens": 157444,
+      "webSearchRequests": 0,
+      "costUSD": 3.9486582,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 16624,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01A3kYAJYdpgxDyEad9RHGkG",
+      "tool_input": {
+        "command": "sed -n 115,145p src/parkguide/chat.py; sed -n 236,300p src/parkguide/chat.py; sed -n 40,66p src/parkguide/retrieval.py; sed -n 1,40p tests/test_web.py; cat web/package.json; ls web/src/components web/src/lib web/public; grep -rn \"rerank\" web/src --include=*.ts* | head -40; python3 --version; ls .venv 2>/dev/null | head; git status --short | grep -v \"^A \" | head -30",
+        "description": "Read chat gating, retrieval reranker, tests, frontend"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01LS8atNNY8B4vKUK9RGWNRb",
+      "tool_input": {
+        "command": "grep -rn \"rerank\\|local_persistence\\|budget_ledger\\|Reranker\\|reranker\" web/src | head -50; grep -n \"interface\\|type \" web/src/lib/api.ts | head -40; .venv/bin/python --version; .venv/bin/pip list 2>/dev/null | grep -i \"httpx\\|openai\\|fastapi\\|starlette\\|pydantic\\|tiktoken\\|uvicorn\\|requests\\|numpy\\|anyio\\|dotenv\\|regex\\|jiter\\|distro\\|sniffio\\|typing\\|certifi\\|idna\\|urllib\\|charset\\|h11\\|httpcore\\|annotated\\|tqdm\\|click\"",
+        "description": "Frontend rerank refs and installed packages"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01C5mYn9LXHLqYtN6iXZ4RWi",
+      "tool_input": {
+        "command": "/Users/robin/Build/Personal/parkguide-ai/.venv/bin/python -m pip list 2>/dev/null",
+        "description": "List installed venv packages"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01GBCegeuTgR6EX3YFhKxcDQ",
+      "tool_input": {
+        "command": "cat src/parkguide/__init__.py scripts/setup.sh scripts/run_web.sh; grep -rn \"DIST\\|ledger_path\\|api-ledger\\|embedding-cache\\|corpus_summary\\|Budget(\" --include=*.py src tests scripts app.py | grep -v \"^scripts/.*print\"; xxd -s 18 -l 2 data/parkguide.sqlite; ls -la data/parkguide.sqlite; shasum -a 256 data/parkguide.sqlite; .venv/bin/python --version; sqlite3 \"file:data/parkguide.sqlite?mode=ro\" \"select count(*) from documents; select count(*) from chunks; select count(*) from embeddings; select count(*) from index_builds; select build_id, active, json_extract(manifest_json,'$.strategy'), (select count(*) from chunks c where c.build_id=b.build_id) from index_builds b;\"; python3 -c \"import hashlib;print(hashlib.sha1(b'https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken').hexdigest())\"",
+        "description": "Check usages, DB header and counts"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01LEFDY9nhZ4qGRTu7kURHB5",
+      "tool_input": {
+        "command": ".venv/bin/python - <<'EOF'\nfrom pathlib import Path\np = Path(\"src/parkguide/web.py\")\ns = p.read_text()\ndef sub(old, new, count=1):\n    global s\n    assert s.count(old) == count, (old, s.count(old))\n    s = s.replace(old, new)\n\nsub('''\"\"\"Loopback FastAPI bridge for the ParkGuide web app.\n\nThe browser calls only same-origin /api/* on 127.0.0.1:8513. This process alone''',\n'''\"\"\"FastAPI bridge for the ParkGuide web app (local loopback or Vercel profile).\n\nThe browser calls only same-origin /api/*: on 127.0.0.1:8513 locally, or on the\nallow-listed Vercel/custom-domain host when hosted (see runtime.py). This process alone''')\nsub('''from .runtime import ROOT, config, digest\n''', '''from .runtime import ROOT, config, hosted, ledger_path as runtime_ledger_path, rerank_override, runtime_profile, sqlite_uri\n''')\nsub('''DIST = ROOT / \"web/dist\"\n''', '''# Hosted: the build copies web/dist to public/ (CDN); the function keeps the shell.\nDIST = ROOT / (\"public\" if hosted() else \"web/dist\")\n''')\nsub('''_CONTROL = re.compile(r\"[\\\\x00-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]\")\n''', '''_CONTROL = re.compile(r\"[\\\\x00-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]\")\n# Lowercase DNS hostname, at least two labels, no port, wildcard or userinfo.\n_HOSTNAME = re.compile(r\"^(?=.{1,253}$)[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\\\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$\")\n''')\nsub('''def ledger_path() -> Path:\n    \"\"\"The shared budget ledger written by parkguide.budget.Budget.\"\"\"\n    return ROOT / \"artifacts/api-ledger.json\"\n\n\ndef _allowed_hosts() -> set[str]:\n    return ALLOWED_HOSTS | (DEV_HOSTS if os.environ.get(\"PARKGUIDE_WEB_DEV\") == \"1\" else set())\n''', '''def ledger_path() -> Path:\n    \"\"\"The budget ledger written by parkguide.budget.Budget for this profile.\"\"\"\n    return runtime_ledger_path()\n\n\ndef hosted_hosts() -> set[str]:\n    \"\"\"Exact HTTPS hosts from server-side env only; never from request headers.\n\n    VERCEL_URL and VERCEL_PROJECT_PRODUCTION_URL are bare hostnames set by\n    Vercel. PARKGUIDE_PUBLIC_ORIGIN is an optional exact https://host origin\n    for a custom domain. Malformed values are ignored, not widened.\n    \"\"\"\n    hosts = set()\n    for name in (\"VERCEL_URL\", \"VERCEL_PROJECT_PRODUCTION_URL\"):\n        value = os.environ.get(name, \"\").strip()\n        if _HOSTNAME.match(value):\n            hosts.add(value)\n    origin = os.environ.get(\"PARKGUIDE_PUBLIC_ORIGIN\", \"\").strip()\n    if origin.startswith(\"https://\") and _HOSTNAME.match(origin[len(\"https://\"):]):\n        hosts.add(origin[len(\"https://\"):])\n    return hosts\n\n\ndef _allowed_hosts() -> set[str]:\n    if hosted():\n        return hosted_hosts()\n    return ALLOWED_HOSTS | (DEV_HOSTS if os.environ.get(\"PARKGUIDE_WEB_DEV\") == \"1\" else set())\n\n\ndef _allowed_origins() -> set[str]:\n    scheme = \"https\" if hosted() else \"http\"\n    return {f\"{scheme}://{host}\" for host in _allowed_hosts()}\n''')\nsub('''        raise WebError(503, \"database_missing\", \"The local SQLite database has not been built yet.\")\n    connection = sqlite3.connect(f\"file:{path}?mode=ro\", uri=True, timeout=10)''',\n'''        raise WebError(503, \"database_missing\", \"The SQLite database is missing.\")\n    connection = sqlite3.connect(sqlite_uri(path), uri=True, timeout=10)''')\nsub('''    ready = core.gold_drafts_ready()\n    return {''', '''    ready = core.gold_drafts_ready()\n    runtime = runtime_profile()\n    if hosted():\n        persistence = {\n            \"conversation_text\": \"browser tab memory only; sent to this server per request and not stored by it\",\n            \"embedding_cache\": \"/tmp/parkguide/embedding-cache/ on this instance only (ephemeral): SHA-256 of each embedded retrieval query, its vector and metadata (no query text)\",\n            \"budget_ledger\": \"/tmp/parkguide/api-ledger.json on this instance only (ephemeral, not shared across instances): kind, time, status, tokens and estimated cost of each paid call (no text)\",\n        }\n    else:\n        persistence = {\n            \"conversation_text\": \"browser tab memory only; sent to this server per request and not stored by it\",\n            \"embedding_cache\": \"data/embedding-cache/: SHA-256 of each embedded retrieval query, its vector and metadata (no query text)\",\n            \"budget_ledger\": \"artifacts/api-ledger.json: kind, time, status, tokens and estimated cost of each paid call (no text)\",\n        }\n    return {''')\nsub('''            \"reranker\": {\"model\": settings[\"retrieval\"][\"reranker\"], \"revision\": settings[\"retrieval\"][\"reranker_revision\"]},''',\n'''            \"reranker\": {\"model\": settings[\"retrieval\"][\"reranker\"], \"revision\": settings[\"retrieval\"][\"reranker_revision\"],\n                         \"enabled\": runtime[\"rerank_enabled\"]},''')\nsub('''        \"local_persistence\": {\n            \"conversation_text\": \"browser tab memory only; sent to this server per request and not stored by it\",\n            \"embedding_cache\": \"data/embedding-cache/: SHA-256 of each embedded retrieval query, its vector and metadata (no query text)\",\n            \"budget_ledger\": \"artifacts/api-ledger.json: kind, time, status, tokens and estimated cost of each paid call (no text)\",\n        },''', '''        \"local_persistence\": persistence,\n        \"runtime\": runtime,''')\nsub('''            \"selected_park_rerank\": settings[\"retrieval\"].get(\"selected_park_rerank\", True),''',\n'''            \"selected_park_rerank\": runtime[\"rerank_enabled\"],''')\nsub('''        settings = config()[\"embedding\"]\n        identity = {name: settings[name] for name in settings[\"identity_fields\"]}\n        folder = ROOT / \"data/embedding-cache\" / digest(identity)\n''', '''        folder = embedding_cache.cache_folder()\n''')\nsub('''def public_turn(result: dict, *, build: dict, window: dict, embedding: dict, selected_park: str,\n                history_received: int, answer_call_ms: float) -> dict:''',\n'''def _turn_runtime() -> dict:\n    runtime = runtime_profile()\n    return {key: runtime[key] for key in (\"profile\", \"rerank_enabled\", \"rerank_reason\", \"evaluation_note\")} | {\n        \"budget_scope\": runtime[\"budget\"][\"scope\"]}\n\n\ndef public_turn(result: dict, *, build: dict, window: dict, embedding: dict, selected_park: str,\n                history_received: int, answer_call_ms: float) -> dict:''')\nsub('''        \"history_scope_reset\": bool(result.get(\"history_scope_reset\")),\n        \"reason\":''', '''        \"history_scope_reset\": bool(result.get(\"history_scope_reset\")),\n        \"runtime\": _turn_runtime(),\n        \"reason\":''')\nsub('''        try:\n            result = core.answer(\n                request.question, [message.model_dump() for message in request.history],\n                mode=\"hybrid\", build_id=build[\"build_id\"], selected_park=request.selected_park,\n                embedder=_observed_embedder(observation),\n            )''', '''        # Hosted forces rerank=False; locally the shared path's config default applies.\n        override = rerank_override()\n        try:\n            result = core.answer(\n                request.question, [message.model_dump() for message in request.history],\n                mode=\"hybrid\", build_id=build[\"build_id\"], selected_park=request.selected_park,\n                embedder=_observed_embedder(observation), **({} if override is None else {\"rerank\": override}),\n            )''')\nsub('''                      \"Streamlit process spending at the same time would also appear here.\",''',\n'''                      \"Streamlit process spending at the same time would also appear here. On Vercel the ledger is \"\n                      \"per instance and ephemeral.\",''')\nsub('''        error.details = {\"ledger_window\": window, \"embedding\": embedding, \"answer_call_ms\": round(answer_call_ms, 1)}''',\n'''        error.details = {\"ledger_window\": window, \"embedding\": embedding, \"answer_call_ms\": round(answer_call_ms, 1),\n                         \"runtime\": _turn_runtime()}''')\nsub('''        return WebError(503, \"budget_exhausted\",\n                        \"The local API budget cap was reached during this request, so no further model request was sent.\" + _EARLIER)''',\n'''        return WebError(503, \"budget_exhausted\",\n                        (\"This instance's API budget cap was reached during this request\" if hosted() else\n                         \"The local API budget cap was reached during this request\") +\n                        \", so no further model request was sent.\" + _EARLIER)''')\nsub('''app = FastAPI(title=\"ParkGuide local web app\", docs_url=None, redoc_url=None, openapi_url=None)''',\n'''app = FastAPI(title=\"ParkGuide web app\", docs_url=None, redoc_url=None, openapi_url=None)''')\nsub('''    \"\"\"Reject foreign Host (DNS rebinding) and cross-origin or non-JSON writes.\"\"\"\n    hosts = _allowed_hosts()\n    if request.headers.get(\"host\", \"\") not in hosts:\n        return _error(421, \"host_not_allowed\", \"This local server only answers requests for its loopback address.\")\n    if request.method not in (\"GET\", \"HEAD\"):\n        origin = request.headers.get(\"origin\")\n        if origin not in {f\"http://{host}\" for host in hosts}:''',\n'''    \"\"\"Reject foreign Host (DNS rebinding) and cross-origin or non-JSON writes.\n\n    Only the Host header is compared against the server-side allowlist;\n    X-Forwarded-Host and other client-supplied forwarding headers are ignored.\n    \"\"\"\n    hosts = _allowed_hosts()\n    if request.headers.get(\"host\", \"\") not in hosts:\n        return _error(421, \"host_not_allowed\", \"This server only answers requests for its configured address.\")\n    if request.method not in (\"GET\", \"HEAD\"):\n        origin = request.headers.get(\"origin\")\n        if origin not in _allowed_origins():''')\nsub('''    return _error(500, \"internal_error\", \"The request failed inside the local server. Details were not exposed.\")''',\n'''    return _error(500, \"internal_error\", \"The request failed inside the server. Details were not exposed.\")''')\nsub('''    return _json({\"status\": \"ok\", \"dist_built\": (DIST / \"index.html\").is_file()})''',\n'''    return _json({\"status\": \"ok\", \"dist_built\": (DIST / \"index.html\").is_file(), \"profile\": runtime_profile()[\"profile\"]})''')\np.write_text(s)\nEOF\ngrep -n \"digest\\|hashlib\\|internal_error\" src/parkguide/web.py | head",
+        "description": "Apply hosted-profile edits to web.py"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_017Lg52j9prWv7bdB6iDjucv",
+      "tool_input": {
+        "command": ".venv/bin/python scripts/prepare_vercel.py && shasum -a 256 vendor/tiktoken/* && ls public",
+        "timeout": 180000,
+        "description": "Run Vercel build preparation script locally"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_012UFC3eUmvku7825Gxt8jtX",
+      "tool_input": {
+        "command": "cd /tmp && /Users/robin/Build/Personal/parkguide-ai/.venv/bin/python /tmp/parkguide-claude-edit/hosted_smoke.py /Users/robin/Build/Personal/parkguide-ai 2>&1 | tail -15",
+        "timeout": 120000,
+        "description": "Run offline hosted-profile smoke test"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_017qprJXKQ9oM9jUTsntWrW8",
+      "tool_input": {
+        "command": "/Users/robin/Build/Personal/parkguide-ai/.venv/bin/python /tmp/parkguide-claude-edit/hosted_smoke.py /Users/robin/Build/Personal/parkguide-ai",
+        "timeout": 120000,
+        "description": "Run offline hosted-profile smoke test"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01XxNejyYhsmJjDeEVnKCRCb",
+      "tool_input": {
+        "command": "cd /Users/robin/Build/Personal/parkguide-ai/web && npm run build 2>&1 | tail -12",
+        "timeout": 300000,
+        "description": "Build frontend once to typecheck edits"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_0114bd6Ece3mkMRWorpGbFtw",
+      "tool_input": {
+        "command": "npm --prefix /Users/robin/Build/Personal/parkguide-ai/web run build",
+        "timeout": 300000,
+        "description": "Build frontend once to typecheck edits"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01GcD3pu9J7dZYw2buykaLss",
+      "tool_input": {
+        "command": "cd /Users/robin/Build/Personal/parkguide-ai/web && npm run build",
+        "timeout": 300000,
+        "description": "Build frontend once to typecheck edits"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01HsNzMx8LQZNx4LxN7XiYqT",
+      "tool_input": {
+        "command": "/Users/robin/Build/Personal/parkguide-ai/web/node_modules/.bin/tsc -p /Users/robin/Build/Personal/parkguide-ai/web/tsconfig.app.json --noEmit",
+        "timeout": 300000,
+        "description": "Typecheck frontend without emitting"
+      }
+    },
+    {
+      "tool_name": "Read",
+      "tool_use_id": "toolu_01XoBe5UoRd31Pn9usiKGX55",
+      "tool_input": {
+        "file_path": "/Users/robin/Build/Personal/parkguide-ai/.env.example"
+      }
+    }
+  ],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 92,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "I've implemented the Vercel profile and all 408 Python tests pass offline. I couldn't run the frontend build (`npm run build` and `tsc` were blocked pending approval), so the TSX edits are untypechecked. Nothing has run on Vercel itself.\n\n**What changed**\n- **Entry point:** a thin root `server.py`, with `[tool.vercel] entrypoint = \"server:app\"` in `pyproject.toml`. Streamlit `app.py` is never selected and isn't uploaded.\n- **Hosted profile:** turns on when `VERCEL=1` (or `PARKGUIDE_HOSTED=1` in tests); the local profile is unchanged.\n  - **Database:** every read path, including the shared `store._connection`, opens SQLite read-only. A missing file is an error and is never created.\n  - **Temporary files:** the query-embedding cache and budget ledger go to `/tmp/parkguide`. The $5 cap applies per instance and is not a global limit; the docs recommend Azure-side cost controls.\n  - **Retrieval:** chat runs with the reranker off and keeps the same five passages, park filter and Luna review/guards.\n  - **Where it's shown:** `/api/meta`, each turn's `runtime` block, How it works and the inspector all report this. They also say the saved local evaluations don't measure hosted accuracy.\n- **Host/Origin checks:** the host allowlist comes only from `VERCEL_URL`, `VERCEL_PROJECT_PRODUCTION_URL` and an optional exact `PARKGUIDE_PUBLIC_ORIGIN`. Wildcards, ports, paths and non-https values are ignored, and `X-Forwarded-Host` is never trusted. POSTs need an exact `https://` Origin; the 64 KiB and JSON checks are kept.\n- **Packaging:**\n  - `requirements.txt` holds only the runtime packages, pinned to the full lock.\n  - BeautifulSoup, pdfplumber and Streamlit moved to optional extras.\n  - `vercel.json` sets the build command, the function's include/exclude lists and the CDN security headers. `.vercelignore` keeps everything else out of the upload, including all evaluation files except the two gold-seal files.\n- **Build step (`scripts/prepare_vercel.py`):** checks the database's size, SHA-256 and counts, plus `gold_drafts_ready()`. It also fetches the public `cl100k_base` tokenizer file into `vendor/tiktoken/` (tiktoken checks its hash) and copies only `web/dist` to `public/`. It makes no Azure calls.\n- **Docs and tests:** new `docs/VERCEL.md` with import settings and the four server-only Azure variables, short notes in `README.md` and `AGENTS.md`, and `tests/test_vercel.py` with 11 tests.\n\n**Checks**\n- **Build step run locally:** the database checks passed (155 documents, 5,405 chunks, 5,405 vectors, 2 builds). The tokenizer file was cached and 4 frontend files were published.\n- **Offline hosted run:** with network access and the heavy packages blocked:\n  - `/api/meta` reported the hosted profile with chat ready.\n  - The app shell and the document list loaded.\n  - Retrieval on the real database returned 5 passages without the reranker.\n\n**For the root agent**\n1. Run `npm --prefix web ci && npm --prefix web run build` to typecheck the frontend edits.\n2. `public/` and `web/dist` predate those edits; both are gitignored, and the next build replaces them.\n3. These need checking after import on Vercel:\n   - that `.vercelignore` negation and `includeFiles` behave as intended;\n   - the bundle size;\n   - which of `requirements.txt` and `pyproject.toml` Vercel picks (both list the same packages);\n   - Linux install of the pinned packages;\n   - cold start;\n   - a live hosted chat;\n   - `/api/health` reporting `\"profile\": \"vercel\"`.\n4. Branch-alias URLs are deliberately not on the allowlist, so previews must use the deployment URL.\n\nThe full summary is in `artifacts/frontend/claude-vercel-summary.md`.",
+  "ttft_ms": 1483,
+  "type": "result",
+  "duration_ms": 548221,
+  "uuid": "3c841ce5-8b90-4259-a71a-a6fe025b3c1b",
+  "ttft_stream_ms": 944,
+  "time_to_request_ms": 99,
+  "first_content_frame_ms": 945,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

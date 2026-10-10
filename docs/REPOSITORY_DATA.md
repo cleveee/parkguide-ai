@@ -30,3 +30,9 @@ Mutable logs, query caches and the API ledger may continue changing locally afte
 ## Using the saved state
 
 Clone the repository, run `bash scripts/setup.sh`, create a private `.env` from `.env.example`, and run the working app as described in [README](../README.md). The corpus, database and stored vectors are already present; do not rerun ingestion or indexing to run this snapshot. Dependencies and the pinned local reranker still need installation/download, and live chat needs valid credentials for the configured Azure resource. Historical traces are evidence; no completed human review, sealed-test result, deployment or course submission is claimed.
+
+## Latest frontend and deployment preparation
+
+Robin subsequently authorized committing the completed web app and latest project evidence to `main`, and preparing the repository for a Vercel deployment they will create themselves. The earlier manifest above remains a dated capture; it does not certify byte identity of later mutable files. The latest publication includes the completed React/FastAPI interface, its saved browser verification, the updated dashboard, and the deployment configuration in [VERCEL.md](VERCEL.md).
+
+The deployment bundle contains the frozen SQLite database and its existing vectors server-side. Builds do not crawl, initialize, rebuild or re-embed the corpus. Archive caches and evaluation records remain versioned for inspection but are excluded from the hosted function, except the two authoring-seal files needed by the existing runtime gate. The hosted retrieval profile and ephemeral usage accounting are described explicitly in the deployment instructions. Preparing and pushing these files is distinct from creating or verifying a live Vercel deployment.
