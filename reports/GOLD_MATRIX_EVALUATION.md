@@ -21,7 +21,11 @@ Responses were collected on 2026-10-10 at commit `4d3faaf`. Replaying the evalua
 | Full rubric pass, AI assessed | 21/40 |
 | End-to-end latency p50 / p95 | 4.14s / 34.92s |
 
-Semantic figures come from one AI assessor and have not been calibrated against human grades.
+Semantic figures come from one AI assessor and have not been calibrated against human grades. The 40 delivered claims span 27 answers; a supported claim is not the same unit as a complete answer.
+
+![Overall outcomes with counts and denominator units](figures/gold-matrix-v1/outcomes.png)
+
+Figure 1. Saved local development outcomes. Bars have different denominators, printed next to each score. Human reference review and calibration of the AI semantic grades remain pending.
 
 | Action | Expected cases | TP / FP / FN | Precision | Recall | F1 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -29,12 +33,30 @@ Semantic figures come from one AI assessor and have not been calibrated against 
 | refuse | 8 | 8 / 3 / 0 | 72.7% | 100.0% | 84.2% |
 | clarify | 2 | 2 / 0 / 0 | 100.0% | 100.0% | 100.0% |
 
+![Expected versus observed answer, refusal, and clarification actions](figures/gold-matrix-v1/action-confusion.png)
+
+Figure 2. All three action disagreements are refusals of answerable questions (M024, M027, M036). Matching the requested action does not establish a complete answer or a fully compliant refusal.
+
 | Retrieval | Scorable cases | Hits / retrieved | Hits / known relevant | Micro precision | Micro recall | Micro F1 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Ranked chunks @5 | 30 | 35/150 | 35/44 | 23.3% | 79.5% | 36.1% |
 | Ranked chunks @20 | 30 | 43/600 | 43/44 | 7.2% | 97.7% | 13.4% |
 
 Required-fact evidence coverage is 84.2% at five ranked chunks and 96.7% at 20. Coverage in the actual generation contexts is 84.2% across 30 answerable cases. MRR is 0.794; nDCG@10 is 0.769. Zero-known-qrel items excluded from chunk recall aggregates: none.
+
+The percentages above average each question's evidence fraction equally. The following table pools the same 75 required facts, so its denominator matches delivered-fact coverage:
+
+| Measurement | Pooled facts | Percentage |
+| --- | ---: | ---: |
+| Declared evidence present in top 20 candidates | 72/75 | 96.0% |
+| Declared evidence present in generation contexts | 63/75 | 84.0% |
+| Required facts delivered, AI assessed | 55/75 | 73.3% |
+
+![Separate pooled measurements of declared evidence and delivered facts](figures/gold-matrix-v1/evidence-and-answer.png)
+
+Figure 3. These are separate measurements, not a nested funnel. Evidence coverage tests declared source spans; delivered-fact coverage uses an AI semantic judgment. Four facts judged delivered lack complete declared evidence-group coverage in the actual contexts (M008 F1, M010 F1/F2, M034 F1). Declared alternatives are not exhaustive relevance judgments, so this mismatch alone does not establish unsupported content. Subtracting bars does not measure causal losses in retrieval or generation. M036 also includes a numeric-guard refusal.
+
+All figures are available as [PNG and SVG with exact chart data](figures/gold-matrix-v1/README.md). The [figure manifest](figures/gold-matrix-v1/figure-manifest.json) records their input and output hashes. The [research paper](research-paper/ParkGuide_AI_Research_Paper.docx) incorporates these results and limitations.
 
 ## Independent labeling matrix
 

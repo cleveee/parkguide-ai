@@ -1,0 +1,38 @@
+{
+  "status": "AI_PROVISIONAL_HUMAN_REVIEW_PENDING",
+  "provider_calls": 0,
+  "source_run_date": "2026-10-10",
+  "source_code_commit": "4d3faaf74f5fdf1ba91fe09193eaaa93f8c4ddb7",
+  "revised_sections": [
+    "7 Evaluation",
+    "8 Future Work"
+  ],
+  "original_sha256": "946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624",
+  "inputs": {
+    "reports/research-paper/source/ParkGuide_AI_Research_Paper.docx": {
+      "sha256": "946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624",
+      "hash_mode": "bytes"
+    },
+    "scripts/build_research_paper.py": {
+      "sha256": "43c58a09e9a8818e5f95a173aa18c89c652826f9276df2cf8e2056fde050adf2",
+      "hash_mode": "bytes"
+    },
+    "reports/figures/gold-matrix-v1/figure-manifest.json": {
+      "sha256": "12052a065bffc01f5f36900d91e96adeb396dfeffd93298fbec68f87ff34deb2",
+      "hash_mode": "bytes"
+    },
+    "artifacts/gold-matrix-v1/chatbot/metadata.json": {
+      "sha256": "f07d1b7894f6698d18a7965e31fffe03decb8a0886cb8ddbe73727ad8e6e8873",
+      "hash_mode": "bytes"
+    },
+    "artifacts/gold-matrix-v1/metrics.json": {
+      "sha256": "97c582a43b8e61a19767ec343dd2e5b1b65adf9b0ec5f82180fbfccb39ac9a0b",
+      "hash_mode": "canonical_json_without_created_at"
+    },
+    "artifacts/gold-matrix-v1/semantic-summary.json": {
+      "sha256": "3269f89f73a044157a33e6814553e5c8c0add8440620db6543aa666332594b2e",
+      "hash_mode": "canonical_json_without_created_at"
+    }
+  },
+  "output_sha256": "ff5cc999259e5158aa1ad00e1e8d36aadef22fbbba34321fbc57a8ed099dd1fc"
+}

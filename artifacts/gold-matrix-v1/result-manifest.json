@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-11T14:45:14.877840+00:00",
+  "created_at": "2026-10-11T15:20:38.540767+00:00",
   "status": "COMPLETED_AI_PROVISIONAL_HUMAN_REVIEW_PENDING",
   "labelers": {
     "codex-sol": {
@@ -69,7 +69,7 @@
     "artifacts/gold-matrix-v1/label-freeze.json": "adfe7967a0561846fd273db813da133be2bd46cacbad9b722c46128ca8e507ba",
     "artifacts/gold-matrix-v1/metrics-review-final.json": "a2a1ecf9f80d194194f0452c00315e81808c38cef77c21ed4ed451f0de33fe9e",
     "artifacts/gold-matrix-v1/metrics-review.json": "f2526dbbd6ef4d26e14197341e6f4492034afa65396242d1a27d71a8858168ef",
-    "artifacts/gold-matrix-v1/metrics.json": "81976c75ea57eafe7cfb756c7ada5ae8862e8d7c3640fe6785638a16b3319595",
+    "artifacts/gold-matrix-v1/metrics.json": "76ce784e52929e6add0df852ca8ffb091e3482bab6751b77970f3aec4548b62c",
     "artifacts/gold-matrix-v1/per-item-metrics.jsonl": "c5025adaf979b6b77fae1eab1edbbad09079ef8eba9c69f549275766824f8778",
     "artifacts/gold-matrix-v1/qrels.json": "371be29f4cd080a5f1c783e1845d3c4ad39556ba9d993c219d60f921c25bbfce",
     "artifacts/gold-matrix-v1/report-review.json": "6768606caaa077084eb8b18f2e4f3e7e58ec54c8ad4565ca3918123d80e216e2",
@@ -100,7 +100,7 @@
     "artifacts/gold-matrix-v1/semantic-input.json": "9876b91aae819c8ed3332caeffe096665a9f953e0454244901d1112e7d38b654",
     "artifacts/gold-matrix-v1/semantic-instructions.txt": "1c7d5ce101c6107fbc999371a44e26fd824f73cd5de78b8bb8a9f4e1892e5fb4",
     "artifacts/gold-matrix-v1/semantic-provenance.json": "9742a12be353b923e43b10fd25ce6cd8b673aca66fa6d67578481bf81b3a2b04",
-    "artifacts/gold-matrix-v1/semantic-summary.json": "a8951dc67e3f68c6f703e1088aaece697788aa7c273b2ee3cfd67c767ca2eb64",
+    "artifacts/gold-matrix-v1/semantic-summary.json": "788dbee2a0e78c93d2c34ecfdc5f2797249e374a945f1a39656b898534e705c8",
     "data/evaluation/gold-matrix-v1/annotation-input.json": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
     "data/evaluation/gold-matrix-v1/case-map.json": "0850e7bc0c57f12cee6b814e57b52623e73552ae732dfac1b48494cfdc2af7a2",
     "data/evaluation/gold-matrix-v1/consensus-manifest.json": "12b54f88765b788a1438ea0c034d0229f6e35b78e02fc3bc76aa3cd7751a0656",
@@ -108,10 +108,10 @@
     "data/evaluation/gold-matrix-v1/instructions.txt": "511d2e187d879b8dfb651705d31bf406c636c424a8b5ba67d4b5289ed9876959",
     "data/evaluation/gold-matrix-v1/labels.schema.json": "9186bfd9986d19dcf1564dd6fb3d89df2360d50552904b32d8185747c2b57fe9",
     "data/evaluation/gold-matrix-v1/manifest.json": "c12c8330c06a2f7712b17918d277942edf0fc13344fae4ca21fa85236a27398f",
-    "reports/GOLD_MATRIX_EVALUATION.md": "b2cdcbff8427046c979d8ca14c36e85732f7bd749e7e21e8fc9dc5b6b7f5bd47",
+    "reports/GOLD_MATRIX_EVALUATION.md": "bbe4fe01bed6e5996a3a3b1bccadd8597e570c7715be55f56468c653154e9351",
     "reports/GOLD_MATRIX_RESULTS.md": "347eee71d44665ef519fa33b61887a22ba3f939c67ff34fb35a80e7bc2215376",
     "scripts/assess_gold_matrix.py": "d1f025d346e6cdf03576998c279deb620835e412b986ee498d6e47055c83361d",
-    "scripts/build_gold_matrix_report.py": "a91f4bd5295f2391ba7e17dd668dd65279455819f980f46b787d3036e0da6b94",
+    "scripts/build_gold_matrix_report.py": "06c12fb083e379ceccb0c60743d8dd0981bb928b0894b0fa79b9123bc45e73f5",
     "scripts/derive_gold_matrix.py": "803c433d7d68eeb9dfc7f3b28a05adab907b3880b7b227c121cd403f0c6955b2",
     "scripts/evaluate.py": "9b333a0617565b490b407f7ae384a8ad75062f413c60a204fada09718e641212",
     "scripts/evaluation_integrity.py": "d39759edb99f6f5d928e90e9f940fbac8dfdfad39687bfcfcdd671499f325e40",

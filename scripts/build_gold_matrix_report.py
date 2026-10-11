@@ -128,17 +128,39 @@ Responses were collected on {botmeta['started_at'][:10]} at commit `{botmeta['co
 | Full rubric pass, AI assessed | {semantic['full_rubric_pass']['passed']}/{len(rows)} |
 | End-to-end latency p50 / p95 | {f"{operational['latency_p50_ms']/1000:.2f}s" if operational['latency_p50_ms'] is not None else 'N/A'} / {f"{operational['latency_p95_ms']/1000:.2f}s" if operational['latency_p95_ms'] is not None else 'N/A'} |
 
-Semantic figures come from one AI assessor and have not been calibrated against human grades.
+Semantic figures come from one AI assessor and have not been calibrated against human grades. The {semantic['claim_total']} delivered claims span {sum(bool(bot.get('result', {}).get('response', {}).get('claims')) for bot in readlines(RUN / 'chatbot/responses.jsonl'))} answers; a supported claim is not the same unit as a complete answer.
+
+![Overall outcomes with counts and denominator units](figures/gold-matrix-v1/outcomes.png)
+
+Figure 1. Saved local development outcomes. Bars have different denominators, printed next to each score. Human reference review and calibration of the AI semantic grades remain pending.
 
 | Action | Expected cases | TP / FP / FN | Precision | Recall | F1 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 {chr(10).join(action_rows)}
+
+![Expected versus observed answer, refusal, and clarification actions](figures/gold-matrix-v1/action-confusion.png)
+
+Figure 2. All three action disagreements are refusals of answerable questions (M024, M027, M036). Matching the requested action does not establish a complete answer or a fully compliant refusal.
 
 | Retrieval | Scorable cases | Hits / retrieved | Hits / known relevant | Micro precision | Micro recall | Micro F1 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 {chr(10).join(retrieval_rows)}
 
 Required-fact evidence coverage is {pct(retrieval['at_5']['fact_evidence_coverage'])} at five ranked chunks and {pct(retrieval['at_20']['fact_evidence_coverage'])} at 20. Coverage in the actual generation contexts is {pct(retrieval['generation_context_fact_evidence_coverage']['mean'])} across {retrieval['generation_context_fact_evidence_coverage']['denominator']} answerable cases. MRR is {retrieval['mrr']['mean']:.3f}; nDCG@10 is {retrieval['ndcg_at_10']['mean']:.3f}. Zero-known-qrel items excluded from chunk recall aggregates: {', '.join(retrieval['missing_qrels_items']) or 'none'}.
+
+The percentages above average each question's evidence fraction equally. The following table pools the same {semantic['fact_total']} required facts, so its denominator matches delivered-fact coverage:
+
+| Measurement | Pooled facts | Percentage |
+| --- | ---: | ---: |
+| Declared evidence present in top 20 candidates | {retrieval['at_20']['facts_covered']}/{retrieval['at_20']['facts_total']} | {pct(retrieval['at_20']['fact_evidence_coverage_micro'])} |
+| Declared evidence present in generation contexts | {retrieval['generation_context_fact_evidence_coverage']['facts_covered']}/{retrieval['generation_context_fact_evidence_coverage']['facts_total']} | {pct(retrieval['generation_context_fact_evidence_coverage']['micro'])} |
+| Required facts delivered, AI assessed | {semantic['facts'].get('covered',0)}/{semantic['fact_total']} | {pct(semantic['required_fact_coverage'])} |
+
+![Separate pooled measurements of declared evidence and delivered facts](figures/gold-matrix-v1/evidence-and-answer.png)
+
+Figure 3. These are separate measurements, not a nested funnel. Evidence coverage tests declared source spans; delivered-fact coverage uses an AI semantic judgment. Four facts judged delivered lack complete declared evidence-group coverage in the actual contexts (M008 F1, M010 F1/F2, M034 F1). Declared alternatives are not exhaustive relevance judgments, so this mismatch alone does not establish unsupported content. Subtracting bars does not measure causal losses in retrieval or generation. M036 also includes a numeric-guard refusal.
+
+All figures are available as [PNG and SVG with exact chart data](figures/gold-matrix-v1/README.md). The [figure manifest](figures/gold-matrix-v1/figure-manifest.json) records their input and output hashes. The [research paper](research-paper/ParkGuide_AI_Research_Paper.docx) incorporates these results and limitations.
 
 ## Independent labeling matrix
 

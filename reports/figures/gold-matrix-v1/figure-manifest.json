@@ -1,0 +1,17 @@
+{
+  "chart_data_sha256": "0bd390369de9696fb56693da70a4ab1f4fb712b63325007af0b4d0cdf7db3bd8",
+  "files_sha256": {
+    "action-confusion.png": "9f92ee5d716170d97400046de8a4f78759277e64e3f37789dcdb182bd5f82c7a",
+    "action-confusion.svg": "5c6320ec6bcc011dd6cff99c0bc7c013681ba318c5061c3d197836f8d2156f2e",
+    "chart-data.json": "0bd390369de9696fb56693da70a4ab1f4fb712b63325007af0b4d0cdf7db3bd8",
+    "evidence-and-answer.png": "de6f866015fab509b6e6e58a823d6967685f94b74a4782f485c1e5bc67448f06",
+    "evidence-and-answer.svg": "af9ae30e1ef5cef8d534f507de385828892e5484eb6961ab08a9c3c67ff75046",
+    "outcomes.png": "f7973d14eef65a05955b05b3c9dcad85489c92ed9b547fc7f75b595d7ab65f61",
+    "outcomes.svg": "afaeffdf5f04927cf69a44a56a7742c2c42f3186cdaf2c1eb044ed4bcfc7ea8f"
+  },
+  "generator": "scripts/build_gold_matrix_figures.py",
+  "generator_sha256": "54abaf680862d3a5fd5e2545e3e9adb10f019c9e3316fd0fbb9a42bbb325fef4",
+  "matplotlib_version": "3.10.8",
+  "schema_version": 1,
+  "study": "gold-matrix-v1"
+}

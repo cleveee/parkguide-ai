@@ -17,8 +17,11 @@ The October 10, 2026 study compares 40 saved chatbot responses with references d
 
 Citation support measures the claims the chatbot delivered; the lower fact coverage shows that answers still omit required information. These results describe the recorded local run at `4d3faaf`, not a fresh test of the deployed app.
 
+![Saved gold-matrix outcomes with counts and denominator units](reports/figures/gold-matrix-v1/outcomes.png)
+
 - [Report and limitations](reports/GOLD_MATRIX_EVALUATION.md) — methods, retrieval metrics, breakdowns, and failure analysis.
 - [All 40 question results](reports/GOLD_MATRIX_RESULTS.md) — actions, fact coverage, behaviors, and rubric outcomes.
+- [Charts and exact figure data](reports/figures/gold-matrix-v1/README.md) — overall outcomes, evidence coverage, and action errors, with PNG/SVG downloads.
 - [Mechanical metrics](artifacts/gold-matrix-v1/metrics.json), [semantic summary](artifacts/gold-matrix-v1/semantic-summary.json), and [per-case metrics](artifacts/gold-matrix-v1/per-item-metrics.jsonl).
 - [Reference dataset](data/evaluation/gold-matrix-v1/gold-consensus.jsonl), [saved responses](artifacts/gold-matrix-v1/chatbot/responses.jsonl), and [provenance manifest](artifacts/gold-matrix-v1/result-manifest.json).
 
@@ -32,7 +35,7 @@ Reproduce and check the saved results without credentials or model calls:
 
 See [the evaluation workflow](docs/EVALUATION_WORKFLOW.md) for setup, validation, dataset boundaries, and fresh-run requirements.
 
-The research paper already includes these results in Section 7, Table 2. [Paper review notes](reports/research-paper/README.md) identify the remaining human-review and held-out-evaluation gaps and clarify the dataset and run provenance.
+The [updated research paper](reports/research-paper/ParkGuide_AI_Research_Paper.docx) incorporates the charts, exact denominators, and failure analysis in Section 7. [Revision notes and the original manuscript](reports/research-paper/README.md) document the changes and the remaining human-review and held-out-evaluation gaps.
 
 ## Run locally
 

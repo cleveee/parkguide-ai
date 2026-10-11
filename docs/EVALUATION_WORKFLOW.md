@@ -26,6 +26,29 @@ Write mode finishes validation and generation in a temporary directory before co
 
 The tracked `result-manifest.json` also seals historical provenance. If it is missing or damaged, restore it from a trusted Git revision before replay; `--write` refuses to invent replacement input seals. Other missing or malformed derived outputs can be regenerated once those seals validate.
 
+## Charts and research paper
+
+The saved [publication figures](../reports/figures/gold-matrix-v1/README.md) and [revised research paper](../reports/research-paper/README.md) have separate checks. They require no plotting or Word dependencies in check mode:
+
+```sh
+.venv/bin/python scripts/build_gold_matrix_figures.py --check
+.venv/bin/python scripts/build_research_paper.py --check
+```
+
+To regenerate the visuals or manuscript after reviewed changes, install the optional report dependencies, replay the metrics, then build in this order:
+
+```sh
+.venv/bin/python -m pip install '.[reports]'
+.venv/bin/python scripts/evaluate.py --write
+.venv/bin/python scripts/build_gold_matrix_figures.py --write
+.venv/bin/python scripts/build_research_paper.py --write
+.venv/bin/python scripts/evaluate.py --check
+.venv/bin/python scripts/build_gold_matrix_figures.py --check
+.venv/bin/python scripts/build_research_paper.py --check
+```
+
+Both builders use the saved experiment and make zero provider calls. Figure data records exact denominators and source hashes; the figure manifest binds the data to the PNG/SVG files. The paper builder edits Sections 7 and 8 of the archived original and preserves the earlier baseline table. Its revision manifest binds the original, figures, metrics, builder, and edited DOCX. Aggregate hashes exclude only the top-level generation timestamp, so an unchanged score replay does not invalidate the figures or paper. Checks establish content identity and reproducibility; visually review every rendered paper page after rebuilding to check layout.
+
 ## Inputs and outputs
 
 | File or directory | Role |

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="385.2pt" viewBox="0 0 518.4 385.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>action-confusion</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>action-confusion</dc:title>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>ParkGuide AI evaluation figures</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 385.2
+L 518.4 385.2
+L 518.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 145.152 277.344
+L 451.008 277.344
+L 451.008 88.596
+L 145.152 88.596
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 145.152 88.596
+L 247.104 88.596
+L 247.104 151.512
+L 145.152 151.512
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #267a70; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 247.104 88.596
+L 349.056 88.596
+L 349.056 151.512
+L 247.104 151.512
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #b96630; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 349.056 88.596
+L 451.008 88.596
+L 451.008 151.512
+L 349.056 151.512
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #f0f4f5; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 145.152 151.512
+L 247.104 151.512
+L 247.104 214.428
+L 145.152 214.428
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #f0f4f5; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 247.104 151.512
+L 349.056 151.512
+L 349.056 214.428
+L 247.104 214.428
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #267a70; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 349.056 151.512
+L 451.008 151.512
+L 451.008 214.428
+L 349.056 214.428
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #f0f4f5; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 145.152 214.428
+L 247.104 214.428
+L 247.104 277.344
+L 145.152 277.344
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #f0f4f5; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 247.104 214.428
+L 349.056 214.428
+L 349.056 277.344
+L 247.104 277.344
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #f0f4f5; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 349.056 214.428
+L 451.008 214.428
+L 451.008 277.344
+L 349.056 277.344
+z
+" clip-path="url(#p57d3ef0ab0)" style="fill: #267a70; stroke: #ffffff; stroke-width: 3; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="196.128" y="292.942437" transform="rotate(-0 196.128 292.942437)">Answer</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="298.08" y="292.942437" transform="rotate(-0 298.08 292.942437)">Refuse</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="400.032" y="292.942437" transform="rotate(-0 400.032 292.942437)">Clarify</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173743" x="298.08" y="313.620563" transform="rotate(-0 298.08 313.620563)">Observed action</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173743" x="137.152" y="123.853219" transform="rotate(-0 137.152 123.853219)">Answer (n=30)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173743" x="137.152" y="186.769219" transform="rotate(-0 137.152 186.769219)">Refuse (n=8)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6"/>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173743" x="137.152" y="249.685219" transform="rotate(-0 137.152 249.685219)">Clarify (n=2)</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173743" x="49.819188" y="182.97" transform="rotate(-90 49.819188 182.97)">Expected action</text>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="196.128" y="126.400562" transform="rotate(-0 196.128 126.400562)">27</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="298.08" y="126.400562" transform="rotate(-0 298.08 126.400562)">3</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #83959d" x="400.032" y="126.400562" transform="rotate(-0 400.032 126.400562)">0</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #83959d" x="196.128" y="189.316562" transform="rotate(-0 196.128 189.316562)">0</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="298.08" y="189.316562" transform="rotate(-0 298.08 189.316562)">8</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #83959d" x="400.032" y="189.316562" transform="rotate(-0 400.032 189.316562)">0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #83959d" x="196.128" y="252.232562" transform="rotate(-0 196.128 252.232562)">0</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #83959d" x="298.08" y="252.232562" transform="rotate(-0 298.08 252.232562)">0</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="400.032" y="252.232562" transform="rotate(-0 400.032 252.232562)">2</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.552" y="26.964" transform="rotate(-0 15.552 26.964)">Action decisions and over-refusals</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.552" y="50.076" transform="rotate(-0 15.552 50.076)">Saved local run · 2026-10-10 · 40 questions</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.552" y="331.272" transform="rotate(-0 15.552 331.272)">37/40 expected actions matched. 3/30 answerable questions received refusals.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.552" y="360.162" transform="rotate(-0 15.552 360.162)">AI provisional · One AI semantic assessor · Human review pending</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p57d3ef0ab0">
+   <rect x="145.152" y="88.596" width="305.856" height="188.748"/>
+  </clipPath>
+ </defs>
+</svg>

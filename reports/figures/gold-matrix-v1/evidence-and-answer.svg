@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="604.8pt" height="334.8pt" viewBox="0 0 604.8 334.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>evidence-and-answer</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>evidence-and-answer</dc:title>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>ParkGuide AI evaluation figures</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 334.8
+L 604.8 334.8
+L 604.8 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 202.608 252.774
+L 483.84 252.774
+L 483.84 77.004
+L 202.608 77.004
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 202.608 252.774
+L 202.608 77.004
+" clip-path="url(#p8d4f7573df)" style="fill: none; stroke: #e1e7ea; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="202.608" y="266.612594" transform="rotate(-0 202.608 266.612594)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 272.916 252.774
+L 272.916 77.004
+" clip-path="url(#p8d4f7573df)" style="fill: none; stroke: #e1e7ea; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="272.916" y="266.612594" transform="rotate(-0 272.916 266.612594)">25%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 343.224 252.774
+L 343.224 77.004
+" clip-path="url(#p8d4f7573df)" style="fill: none; stroke: #e1e7ea; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="343.224" y="266.612594" transform="rotate(-0 343.224 266.612594)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 413.532 252.774
+L 413.532 77.004
+" clip-path="url(#p8d4f7573df)" style="fill: none; stroke: #e1e7ea; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="413.532" y="266.612594" transform="rotate(-0 413.532 266.612594)">75%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 483.84 252.774
+L 483.84 77.004
+" clip-path="url(#p8d4f7573df)" style="fill: none; stroke: #e1e7ea; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465d66" x="483.84" y="266.612594" transform="rotate(-0 483.84 266.612594)">100%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(99.443938 101.914695)">Declared evidence</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(83.943938 113.112508)">top 20 ranked chunks</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(99.443938 163.849156)">Declared evidence</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(63.383 175.046969)">actual generation context</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(117.317375 225.783617)">Facts delivered</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #173743" transform="translate(71.425188 236.98143)">AI semantic assessment</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 202.608 84.993545
+L 472.59072 84.993545
+L 472.59072 120.915533
+L 202.608 120.915533
+z
+" clip-path="url(#p8d4f7573df)" style="fill: #285f79"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 202.608 146.928006
+L 438.84288 146.928006
+L 438.84288 182.849994
+L 202.608 182.849994
+z
+" clip-path="url(#p8d4f7573df)" style="fill: #285f79"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 202.608 208.862467
+L 408.8448 208.862467
+L 408.8448 244.784455
+L 202.608 244.784455
+z
+" clip-path="url(#p8d4f7573df)" style="fill: #267a70"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 202.608 252.774
+L 483.84 252.774
+" style="fill: none; stroke: #aebbc0; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="490.8708" y="105.713914" transform="rotate(-0 490.8708 105.713914)">72/75  (96.0%)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="490.8708" y="167.648375" transform="rotate(-0 490.8708 167.648375)">63/75  (84.0%)</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="490.8708" y="229.582836" transform="rotate(-0 490.8708 229.582836)">55/75  (73.3%)</text>
+   </g>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.12" y="21.762" transform="rotate(-0 15.12 21.762)">Evidence coverage and delivered facts</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.12" y="41.85" transform="rotate(-0 15.12 41.85)">Saved local run · 2026-10-10 · 40 questions</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #465d66" x="15.12" y="59.2596" transform="rotate(-0 15.12 59.2596)">Three distinct measurements against the same 75 reference facts; pooled counts.</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #465d66" x="15.12" y="291.276" transform="rotate(-0 15.12 291.276)">4 delivered facts lack complete declared-context coverage. The measurements are not nested sets.</text>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173743" x="15.12" y="314.712" transform="rotate(-0 15.12 314.712)">AI provisional · One AI semantic assessor · Human review pending</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8d4f7573df">
+   <rect x="202.608" y="77.004" width="281.232" height="175.77"/>
+  </clipPath>
+ </defs>
+</svg>
