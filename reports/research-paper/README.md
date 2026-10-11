@@ -1,6 +1,6 @@
 # Research paper
 
-The [updated research paper](ParkGuide_AI_Research_Paper.docx) incorporates three charts, exact metric denominators, and the recorded failure analysis from the saved `gold-matrix-v1` experiment. Sections 7 and 8 were revised on October 11, 2026. The paper remains an editable Word document; the [original supplied manuscript](source/ParkGuide_AI_Research_Paper.docx) is preserved byte for byte.
+The [updated research paper](ParkGuide_AI_Research_Paper.docx) incorporates three charts, exact metric denominators, and the recorded failure analysis from the saved `gold-matrix-v1` experiment. Sections 7 and 8 were revised and Robin Cleve's engineer contribution was added on October 11, 2026. The paper remains an editable Word document; the [original supplied manuscript](source/ParkGuide_AI_Research_Paper.docx) is preserved byte for byte.
 
 Original source: `ParkGuide_AI_Research_Paper.docx`, 219,863 bytes, SHA-256 `946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624`. The [revision manifest](revision-manifest.json) records the updated paper's hash and its source, metric, figure, and builder identities. This directory is excluded from Vercel by the repository's `reports/` rule.
 
@@ -28,7 +28,8 @@ The [complete evaluation report](../GOLD_MATRIX_EVALUATION.md), [all 40 question
 - Added overall outcome, evidence/answer, and action-confusion figures, plus behavior compliance, chunk retrieval rates, and a table covering all 19 unsuccessful cases.
 - Distinguished pooled coverage across 75 facts from the mean of 30 per-question fractions. The evidence and semantic measures are not a nested funnel; differences do not quantify causal losses between stages.
 - Replaced the independent-observation Wilson intervals with explicit counts and a dependency caveat. Facts and claims share questions, questions share sources, and reference/assessor uncertainty is not captured by those intervals.
-- Added links and offline reproduction instructions, and normalized title/heading styling. The remainder of the supplied manuscript, including the author contribution table, is retained; this revision does not fill missing contribution entries or comprehensively update unrelated historical statements.
+- Added links and offline reproduction instructions, and normalized title/heading styling.
+- Added Robin Cleve's approved engineer contribution covering the RAG pipeline, Azure and SQLite integration, React/FastAPI app, park selection, source previews, retrieval inspectors, reliability improvements, Vercel deployment, testing, and technical documentation. Other contribution entries and unrelated historical statements are retained.
 
 ## What remains missing
 
@@ -38,4 +39,4 @@ This 40-question study also does not measure the deployed Vercel/API/browser pat
 
 ## Reproduce
 
-Use the [evaluation workflow](../../docs/EVALUATION_WORKFLOW.md#charts-and-research-paper). `scripts/build_research_paper.py --check` validates the saved paper and its inputs without Word dependencies. `--write` requires the optional `reports` dependencies and rebuilds the revised sections from the archived original, checked metrics, and checked figures. Render and inspect every page after rebuilding; a hash check does not verify Word layout.
+Use the [evaluation workflow](../../docs/EVALUATION_WORKFLOW.md#charts-and-research-paper). `scripts/build_research_paper.py --check` validates the saved paper and its inputs without Word dependencies. `--write` requires the optional `reports` dependencies and rebuilds the revised sections and Robin's contribution from the archived original, checked metrics, checked figures, and approved contribution text in the builder. Render and inspect every page after rebuilding; a hash check does not verify Word layout.

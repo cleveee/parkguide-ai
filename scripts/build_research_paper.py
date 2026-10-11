@@ -1,4 +1,4 @@
-"""Update the supplied paper's evaluation sections from the saved, checked run.
+"""Update the paper with Robin's contribution and the saved, checked evaluation.
 
 The original manuscript remains in reports/research-paper/source/. Check mode
 uses the installed project's offline evaluator; only write needs python-docx.
@@ -22,6 +22,12 @@ MANIFEST = PAPER / "revision-manifest.json"
 FIGURES = ROOT / "reports/figures/gold-matrix-v1"
 RUN = ROOT / "artifacts/gold-matrix-v1"
 ORIGINAL_SHA256 = "946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624"
+ROBIN_CONTRIBUTION = (
+    "Built the RAG pipeline, integrated Azure models and SQLite, and developed the "
+    "React/FastAPI web app. Added park selection, source previews, and retrieval "
+    "inspectors. Improved citation safeguards and conversation reliability, "
+    "deployed the application on Vercel, and supported testing and technical documentation."
+)
 
 
 def read(path):
@@ -86,6 +92,18 @@ def write():
     fmt = lambda value: f"{100 * value:.1f}%"
     count = lambda n, d: f"{n}/{d} ({fmt(n/d)})"
     doc = Document(SOURCE)
+    robin_rows = [row for row in doc.tables[0].rows
+                  if row.cells[0].text.strip() == "Robin Cleve"]
+    if len(robin_rows) != 1:
+        raise ValueError("Expected exactly one Robin Cleve contribution row")
+    contribution = robin_rows[0].cells[1].paragraphs[0]
+    contribution.clear()
+    for highlight in contribution._p.findall(".//" + qn("w:highlight")):
+        highlight.getparent().remove(highlight)
+    contribution.add_run("Engineer: ").bold = True
+    contribution.add_run(ROBIN_CONTRIBUTION).bold = False
+    for run in contribution.runs:
+        run.font.name, run.font.size, run.font.color.rgb = "Times New Roman", Pt(8), RGBColor(0, 0, 0)
     baseline = deepcopy(doc.tables[1]._element)
     # The supplied baseline table is historical evidence; retain every value.
     for highlight in baseline.findall(".//" + qn("w:highlight")):
@@ -254,7 +272,7 @@ def write():
     doc.save(OUTPUT)
     manifest = {"status": "AI_PROVISIONAL_HUMAN_REVIEW_PENDING", "provider_calls": 0,
                 "source_run_date": run_date, "source_code_commit": metadata['code_commit'],
-                "revised_sections": ["7 Evaluation", "8 Future Work"],
+                "revised_sections": ["Author contributions (Robin Cleve)", "7 Evaluation", "8 Future Work"],
                 "original_sha256": ORIGINAL_SHA256, "inputs": source_hashes(),
                 "output_sha256": digest(OUTPUT)}
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n")

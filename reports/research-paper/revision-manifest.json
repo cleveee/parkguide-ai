@@ -4,6 +4,7 @@
   "source_run_date": "2026-10-10",
   "source_code_commit": "4d3faaf74f5fdf1ba91fe09193eaaa93f8c4ddb7",
   "revised_sections": [
+    "Author contributions (Robin Cleve)",
     "7 Evaluation",
     "8 Future Work"
   ],
@@ -14,7 +15,7 @@
       "hash_mode": "bytes"
     },
     "scripts/build_research_paper.py": {
-      "sha256": "43c58a09e9a8818e5f95a173aa18c89c652826f9276df2cf8e2056fde050adf2",
+      "sha256": "db94fa5dc8fed15fd662f6c7b8e660f4873d2688394536e62141bc7676deb026",
       "hash_mode": "bytes"
     },
     "reports/figures/gold-matrix-v1/figure-manifest.json": {
@@ -34,5 +35,5 @@
       "hash_mode": "canonical_json_without_created_at"
     }
   },
-  "output_sha256": "ff5cc999259e5158aa1ad00e1e8d36aadef22fbbba34321fbc57a8ed099dd1fc"
+  "output_sha256": "f2c128cdd0d9a35bc95a489e316492f41d59d9b2a7f534bd7b482f85991edf45"
 }

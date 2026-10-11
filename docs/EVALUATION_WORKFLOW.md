@@ -47,7 +47,7 @@ To regenerate the visuals or manuscript after reviewed changes, install the opti
 .venv/bin/python scripts/build_research_paper.py --check
 ```
 
-Both builders use the saved experiment and make zero provider calls. Figure data records exact denominators and source hashes; the figure manifest binds the data to the PNG/SVG files. The paper builder edits Sections 7 and 8 of the archived original and preserves the earlier baseline table. Its revision manifest binds the original, figures, metrics, builder, and edited DOCX. Aggregate hashes exclude only the top-level generation timestamp, so an unchanged score replay does not invalidate the figures or paper. Checks establish content identity and reproducibility; visually review every rendered paper page after rebuilding to check layout.
+Both builders use the saved experiment and make zero provider calls. Figure data records exact denominators and source hashes; the figure manifest binds the data to the PNG/SVG files. The paper builder edits Sections 7 and 8 of the archived original, adds Robin Cleve's approved engineer contribution, and preserves the earlier baseline table. Its revision manifest binds the original, figures, metrics, builder, and edited DOCX. Aggregate hashes exclude only the top-level generation timestamp, so an unchanged score replay does not invalidate the figures or paper. Checks establish content identity and reproducibility; visually review every rendered paper page after rebuilding to check layout.
 
 ## Inputs and outputs
 
