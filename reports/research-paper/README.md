@@ -1,8 +1,8 @@
 # Research paper
 
-The [updated research paper](ParkGuide_AI_Research_Paper.docx) incorporates three charts, exact metric denominators, and the recorded failure analysis from the saved `gold-matrix-v1` experiment. Sections 7 and 8 were revised and Robin Cleve's engineer contribution was added on October 11, 2026. The paper remains an editable Word document; the [original supplied manuscript](source/ParkGuide_AI_Research_Paper.docx) is preserved byte for byte.
+The [updated research paper](ParkGuide_AI_Research_Paper.pdf) incorporates three charts, exact metric denominators, and the recorded failure analysis from the saved `gold-matrix-v1` experiment. Sections 7 and 8 were revised and Robin Cleve's engineer contribution was added on October 11, 2026. The published paper is the user-supplied PDF, copied unchanged on October 11, 2026; the [original supplied manuscript](source/ParkGuide_AI_Research_Paper.docx) is preserved byte for byte.
 
-Original source: `ParkGuide_AI_Research_Paper.docx`, 219,863 bytes, SHA-256 `946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624`. The [revision manifest](revision-manifest.json) records the updated paper's hash and its source, metric, figure, and builder identities. This directory is excluded from Vercel by the repository's `reports/` rule.
+Original source: `ParkGuide_AI_Research_Paper.docx`, 219,863 bytes, SHA-256 `946a6b88243e4253e7ded4eb3a40de1c42d5a9a6cad29c426bea469ec9afc624`. The [revision manifest](revision-manifest.json) records the historical Word revision's hash and its source, metric, figure, and builder identities. The Word revision has been replaced by the PDF; its manifest remains historical provenance. The [PDF manifest](pdf-manifest.json) records the supplied PDF's byte count and SHA-256. This directory is excluded from Vercel by the repository's `reports/` rule.
 
 ## Results incorporated
 
@@ -39,4 +39,4 @@ This 40-question study also does not measure the deployed Vercel/API/browser pat
 
 ## Reproduce
 
-Use the [evaluation workflow](../../docs/EVALUATION_WORKFLOW.md#charts-and-research-paper). `scripts/build_research_paper.py --check` validates the saved paper and its inputs without Word dependencies. `--write` requires the optional `reports` dependencies and rebuilds the revised sections and Robin's contribution from the archived original, checked metrics, checked figures, and approved contribution text in the builder. Render and inspect every page after rebuilding; a hash check does not verify Word layout.
+Use the [evaluation workflow](../../docs/EVALUATION_WORKFLOW.md#charts-and-research-paper). `scripts/build_research_paper.py --check` validates a generated Word revision and its inputs without Word dependencies. It requires rebuilding that Word file first because the published artifact is now the supplied PDF. `--write` requires the optional `reports` dependencies and rebuilds the revised sections and Robin's contribution from the archived original, checked metrics, checked figures, and approved contribution text in the builder. The builder does not reproduce or validate the supplied PDF. Render and inspect every page after rebuilding; a hash check does not verify Word layout.

@@ -56,7 +56,7 @@ The percentages above average each question's evidence fraction equally. The fol
 
 Figure 3. These are separate measurements, not a nested funnel. Evidence coverage tests declared source spans; delivered-fact coverage uses an AI semantic judgment. Four facts judged delivered lack complete declared evidence-group coverage in the actual contexts (M008 F1, M010 F1/F2, M034 F1). Declared alternatives are not exhaustive relevance judgments, so this mismatch alone does not establish unsupported content. Subtracting bars does not measure causal losses in retrieval or generation. M036 also includes a numeric-guard refusal.
 
-All figures are available as [PNG and SVG with exact chart data](figures/gold-matrix-v1/README.md). The [figure manifest](figures/gold-matrix-v1/figure-manifest.json) records their input and output hashes. The [research paper](research-paper/ParkGuide_AI_Research_Paper.docx) incorporates these results and limitations.
+All figures are available as [PNG and SVG with exact chart data](figures/gold-matrix-v1/README.md). The [figure manifest](figures/gold-matrix-v1/figure-manifest.json) records their input and output hashes. The [research paper](research-paper/ParkGuide_AI_Research_Paper.pdf) incorporates these results and limitations.
 
 ## Independent labeling matrix
 
