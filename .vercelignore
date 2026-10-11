@@ -30,6 +30,7 @@ artifacts/
 reports/
 docs/
 references/
+powerpoint/
 
 # Evaluation content other than the two gold-seal files gold_drafts_ready() needs
 data/evaluation/*
