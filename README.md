@@ -2,7 +2,7 @@
 
 A course RAG chatbot for Yosemite, Yellowstone, and Grand Canyon. Each conversation selects one park and answers from a frozen corpus of public National Park Service pages, with citations and source previews.
 
-[Open ParkGuide](https://parkguide-ai-dh24.vercel.app/) · [Research paper](reports/research-paper/ParkGuide_AI_Research_Paper.docx) · [Evaluation report](reports/GOLD_MATRIX_EVALUATION.md) · [Results by question](reports/GOLD_MATRIX_RESULTS.md) · [Course presentation](powerpoint/ParkGuide_AI_Presentation.pptx)
+[Open ParkGuide](https://parkguide-ai-dh24.vercel.app/) · [Research paper](reports/research-paper/ParkGuide_AI_Research_Paper.pdf) · [Evaluation report](reports/GOLD_MATRIX_EVALUATION.md) · [Results by question](reports/GOLD_MATRIX_RESULTS.md) · [Course presentation](powerpoint/ParkGuide_AI_Presentation.pptx)
 
 ## Evaluation
 
@@ -35,7 +35,7 @@ Reproduce and check the saved results without credentials or model calls:
 
 See [the evaluation workflow](docs/EVALUATION_WORKFLOW.md) for setup, validation, dataset boundaries, and fresh-run requirements.
 
-The [updated research paper](reports/research-paper/ParkGuide_AI_Research_Paper.docx) incorporates the charts, exact denominators, and failure analysis in Section 7. [Revision notes and the original manuscript](reports/research-paper/README.md) document the changes and the remaining human-review and held-out-evaluation gaps.
+The [updated research paper](reports/research-paper/ParkGuide_AI_Research_Paper.pdf) incorporates the charts, exact denominators, and failure analysis in Section 7. [Revision notes and the original manuscript](reports/research-paper/README.md) document the changes and the remaining human-review and held-out-evaluation gaps.
 
 ## Run locally
 

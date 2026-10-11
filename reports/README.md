@@ -1,6 +1,6 @@
 # Reports
 
-- [Research paper](research-paper/ParkGuide_AI_Research_Paper.docx), updated with gold-matrix charts and results, with [revision notes and original manuscript](research-paper/README.md).
+- [Research paper](research-paper/ParkGuide_AI_Research_Paper.pdf), updated with gold-matrix charts and results, with [revision notes and original manuscript](research-paper/README.md).
 - [Current evaluation report](GOLD_MATRIX_EVALUATION.md): the 40-question, five-configuration reference study, saved chatbot scores, and limitations.
 - [Results by question](GOLD_MATRIX_RESULTS.md): all 40 actions and AI-assessed rubric outcomes.
 - [Charts and exact figure data](figures/gold-matrix-v1/README.md): PNG/SVG figures for the saved gold-matrix experiment.
