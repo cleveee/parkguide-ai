@@ -1,5 +1,7 @@
 # ParkGuide implementation status
 
+> Historical implementation snapshot from October 10, 2026. The counts, configuration, and deployment statements below describe that stage. See the [project README](../README.md) and [evaluation workflow](EVALUATION_WORKFLOW.md) for current navigation and reproducible saved results.
+
 **The local PoC now uses one existing Azure resource for embeddings, answers and claim review.** Formal course evaluation remains HUMAN_REVIEW_PENDING. The repo is `/Users/robin/Build/Personal/parkguide-ai`, on `main`, with a public archive at [cleveee/parkguide-ai](https://github.com/cleveee/parkguide-ai). The initial working Azure/Streamlit version is commit `bdbba39`; the [repository data snapshot](REPOSITORY_DATA.md) documents publication of non-secret corpus, database, caches and run evidence. Nothing has been deployed or submitted.
 
 Open [ParkGuide](http://127.0.0.1:8511) and the [updated run dashboard](../dashboard/index.html). The UI requires one park, clearly indicates it, filters every search to that park and clears history when the selection changes. Every delivered factual claim requires cited saved passages and mandatory AI support review. Missing, live, private and wrong-park information is withheld. AI review can still make semantic mistakes or over-refuse; it is not a guarantee of correctness.

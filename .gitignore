@@ -8,6 +8,7 @@ build/
 .vite/
 .next/
 coverage/
+.pytest_cache/
 # Vercel build outputs: SPA copied from web/dist, tokenizer cache fetched at build
 /public/
 /vendor/tiktoken/

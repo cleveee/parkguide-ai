@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-10T23:16:57.367248+00:00",
+  "created_at": "2026-10-11T14:45:14.819459+00:00",
   "cases": 40,
   "facts": {
     "covered": 55,
@@ -76,9 +76,20 @@
     "M034"
   ],
   "additional_answer_issue_item_ids": [],
-  "input_sha256": "9876b91aae819c8ed3332caeffe096665a9f953e0454244901d1112e7d38b654",
-  "assessment_sha256": "e69bf1cac2794b125814d7fbd80755821488746be6068ef3a68763b257548dcf",
   "status": "ONE_AI_ASSESSOR_PROVISIONAL_HUMAN_REVIEW_PENDING",
   "human_verified": false,
-  "interpretation": "Exact quotes and identities validated mechanically; semantic labels from one AI assessor, not calibrated human correctness. Uncertain labels count as not passed. Citation support is claim precision only; unsupported-claim recall/F1 cannot be measured without an independently labeled candidate universe."
+  "interpretation": "Exact quotes and identities validated mechanically; semantic labels from one AI assessor, not calibrated human correctness. Uncertain labels count as not passed. Citation support is claim precision only; unsupported-claim recall/F1 cannot be measured without an independently labeled candidate universe.",
+  "input_sha256": "9876b91aae819c8ed3332caeffe096665a9f953e0454244901d1112e7d38b654",
+  "assessment_sha256": "e69bf1cac2794b125814d7fbd80755821488746be6068ef3a68763b257548dcf",
+  "frozen_inputs": {
+    "annotation_input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+    "dataset_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+    "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+    "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+    "label_freeze_sha256": "adfe7967a0561846fd273db813da133be2bd46cacbad9b722c46128ca8e507ba",
+    "adjudication_sha256": "ced4667b5b2e9d125f30ae0a0d9bae9c50064156d05527547fe28a878815de74",
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a",
+    "semantic_input_sha256": "9876b91aae819c8ed3332caeffe096665a9f953e0454244901d1112e7d38b654",
+    "assessment_sha256": "e69bf1cac2794b125814d7fbd80755821488746be6068ef3a68763b257548dcf"
+  }
 }

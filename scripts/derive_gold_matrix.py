@@ -6,13 +6,13 @@ saved actual results and standard count-based action/retrieval metrics.
 from __future__ import annotations
 import argparse
 from collections import Counter
-import hashlib
 import json
 import math
 from pathlib import Path
 import statistics
 
 from gold_matrix import CONFIGS, DATA, ROOT, RUN, dump, readlines, sha, utc, validate
+from evaluation_integrity import load_frozen_chunks, unique_rows, validate_frozen_inputs
 
 NAMES = list(CONFIGS)
 ACTIONS = ["answer", "refuse", "clarify"]
@@ -129,24 +129,60 @@ def finalize():
     print(json.dumps({"consensus": 40, "facts": sum(len(r["required_facts"]) for r in records), "actions": dict(Counter(r["action"] for r in records))}))
 
 
-def score():
+def aggregate_retrieval(per_item):
+    """Chunk recall and evidence coverage have different eligible denominators."""
+    retrieval = {}
+    for k in [5, 20]:
+        coverage_group = [r[f"retrieval_at_{k}"] for r in per_item if f"retrieval_at_{k}" in r]
+        group = [r for r in coverage_group if r["recall"] is not None]
+        hits, retrieved, relevant = (sum(r[n] for r in group) for n in ["tp", "retrieved", "relevant"])
+        p = hits / retrieved if retrieved else None
+        recall = hits / relevant if relevant else None
+        covered = sum(r["facts_covered"] for r in coverage_group)
+        fact_total = sum(r["facts_total"] for r in coverage_group)
+        retrieval[f"at_{k}"] = {
+            "items": len(group),
+            "macro_precision": statistics.mean(x["precision"] for x in group) if group else None,
+            "macro_recall": statistics.mean(x["recall"] for x in group) if group else None,
+            "macro_f1": statistics.mean(x["f1"] for x in group) if group else None,
+            "micro_precision": p, "micro_recall": recall,
+            "micro_f1": 2 * hits / (retrieved + relevant) if retrieved + relevant else None,
+            "tp": hits, "retrieved": retrieved, "known_relevant": relevant,
+            "fact_evidence_coverage": statistics.mean(x["fact_evidence_coverage"] for x in coverage_group) if coverage_group else None,
+            "fact_evidence_coverage_items": len(coverage_group),
+            "facts_covered": covered, "facts_total": fact_total,
+            "fact_evidence_coverage_micro": covered / fact_total if fact_total else None,
+        }
+    def mean(field):
+        values = [r[field] for r in per_item if r.get(field) is not None]
+        return {"mean": statistics.mean(values) if values else None, "denominator": len(values)}
+    context = mean("generation_context_fact_evidence_coverage")
+    context["facts_covered"] = sum(r.get("generation_context_facts_covered", 0) for r in per_item)
+    context["facts_total"] = sum(r.get("generation_context_facts_total", 0) for r in per_item)
+    context["micro"] = context["facts_covered"] / context["facts_total"] if context["facts_total"] else None
+    retrieval.update(
+        mrr=mean("mrr"), ndcg_at_10=mean("ndcg_at_10"), generation_context_fact_evidence_coverage=context,
+        qrels_definition="A chunk is relevant if its actual source spans jointly cover all units in any evidence group for at least one required atomic fact. Qrels judge only declared evidence alternatives; not exhaustive human relevance judgments.",
+        rankings_definition="@5/@20 use ranked candidates before generation-context pruning; actual generation contexts have a separate coverage metric.",
+        evidence_coverage_definition="Macro averages every answerable case with required facts, including zero-known-qrel cases. Micro divides fully covered facts by all required facts. Combined chunks can cover evidence even when no individual chunk is relevant.",
+        missing_qrels_items=[r["item_id"] for r in per_item if r.get("known_relevant_chunks") == 0],
+    )
+    return retrieval
+
+
+def score(output_dir=None):
+    output_dir = Path(output_dir) if output_dir is not None else RUN
+    database = ROOT / "data/parkguide.sqlite"
+    identities = validate_frozen_inputs(include_semantic=False, database=database, root=ROOT, data=DATA, run=RUN)
     from parkguide.evaluation import evidence_covered
-    from parkguide.store import load_chunks
-    from parkguide.runtime import config
     ref_rows = readlines(DATA / "gold-consensus.jsonl")
     bot_rows = readlines(RUN / "chatbot/responses.jsonl")
-    assert len(ref_rows) == len({r["item_id"] for r in ref_rows}) == 40
-    assert len(bot_rows) == len({r["item_id"] for r in bot_rows}) == 40
-    refs = {r["item_id"]: r for r in ref_rows}
-    bots = {r["item_id"]: r for r in bot_rows}
-    assert len(bots) == 40 and set(bots) == set(refs)
-    frozen = json.loads((RUN / "label-freeze.json").read_text())
+    refs = unique_rows(ref_rows, "references", count=40)
+    bots = unique_rows(bot_rows, "responses", expected_ids=refs, count=40)
     labels = {}
     for name in NAMES:
-        assert sha(RUN / "reviewers" / name / "labels.json") == frozen["label_hashes"][name]
         rows = json.loads((RUN / "reviewers" / name / "labels.json").read_text())["labels"]
-        assert len(rows) == len({r["item_id"] for r in rows}) == 40
-        labels[name] = {r["item_id"]: r for r in rows}
+        labels[name] = unique_rows(rows, name, expected_ids=refs, count=40)
     ids = sorted(refs)
     pairwise, loo = {}, {}
     for name in NAMES:
@@ -171,18 +207,14 @@ def score():
                                  "meaning": "Facts represented in this derived consensus; not independently established fact accuracy"} for name in NAMES}
     agreement = {"pairwise_action_agreement": pairwise, "leave_one_out_action_metrics": loo, "consensus_fact_representation": fact_representation, "fleiss_kappa": (pbar-expected)/(1-expected) if expected != 1 else None,
                  "unanimous_action_items": sum(len({labels[n][i]["action"] for n in NAMES}) == 1 for i in ids), "items": 40, "interpretation": "Agreement is correlated AI agreement, not human correctness; only action labels, not semantic facts, are compared numerically."}
-    dump(RUN / "agreement.json", agreement)
     action = classify([refs[i]["action"] for i in ids], [bots[i].get("result", {}).get("response", {}).get("action", "error") for i in ids])
-    build_id = json.loads((RUN / "chatbot/metadata.json").read_text())["build_id"]
-    universe = load_chunks(ROOT / config()["database"], build_id)
+    build_id = identities["build_id"]
+    universe = load_frozen_chunks(database, build_id)
     per_item, qrels = [], []
     for i in ids:
         ref, bot = refs[i], bots[i]
         row = {"item_id": i, "candidate_item_id": ref["candidate_item_id"], "expected_action": ref["action"], "actual_action": bot.get("result", {}).get("response", {}).get("action", "error"), "action_correct": ref["action"] == bot.get("result", {}).get("response", {}).get("action"), "error": bot.get("error")}
-        assert ("result" in bot) != bool(bot.get("error")), i
         result = bot.get("result", {})
-        if "result" in bot:
-            assert isinstance(result.get("elapsed_ms"), (int, float)) and result["elapsed_ms"] >= 0, i
         row["guard_errors"] = result.get("guard_errors", [])
         context_ids = {c["chunk_id"] for c in result.get("contexts", [])}
         claims = result.get("response", {}).get("claims", [])
@@ -202,49 +234,40 @@ def score():
                 hits = len({c["chunk_id"] for c in top} & relevant)
                 p = hits/len(top) if top else 0.0
                 r = hits/len(relevant) if relevant else None
+                covered = sum(fact_in(f, top) for f in ref["required_facts"])
                 row[f"retrieval_at_{k}"] = {"tp": hits, "retrieved": len(top), "relevant": len(relevant), "precision": p, "recall": r, "f1": 2*p*r/(p+r) if r is not None and p+r else 0.0 if r is not None else None,
-                                            "fact_evidence_coverage": sum(fact_in(f, top) for f in ref["required_facts"])/len(ref["required_facts"])}
-            row["generation_context_fact_evidence_coverage"] = sum(fact_in(f, actual_contexts) for f in ref["required_facts"])/len(ref["required_facts"])
+                                            "fact_evidence_coverage": covered / len(ref["required_facts"]),
+                                            "facts_covered": covered, "facts_total": len(ref["required_facts"])}
+            row["generation_context_facts_covered"] = sum(fact_in(f, actual_contexts) for f in ref["required_facts"])
+            row["generation_context_facts_total"] = len(ref["required_facts"])
+            row["generation_context_fact_evidence_coverage"] = row["generation_context_facts_covered"] / row["generation_context_facts_total"]
             ordered = [c["chunk_id"] in relevant for c in ranked]
             row["mrr"] = next((1/(idx+1) for idx, hit in enumerate(ordered) if hit), 0) if relevant else None
             dcg = sum(int(v)/math.log2(idx+2) for idx, v in enumerate(ordered[:10]))
             ideal = sum(1/math.log2(idx+2) for idx in range(min(10,len(relevant))))
             row["ndcg_at_10"] = dcg/ideal if ideal else None
         per_item.append(row)
-    retrieval = {}
-    for k in [5,20]:
-        group = [r[f"retrieval_at_{k}"] for r in per_item if f"retrieval_at_{k}" in r and r[f"retrieval_at_{k}"]["recall"] is not None]
-        hits, retrieved, relevant = (sum(r[n] for r in group) for n in ["tp", "retrieved", "relevant"])
-        p = hits/retrieved if retrieved else 0; r = hits/relevant if relevant else 0
-        retrieval[f"at_{k}"] = {"items": len(group), "macro_precision": statistics.mean(x["precision"] for x in group) if group else None,
-                                "macro_recall": statistics.mean(x["recall"] for x in group) if group else None, "macro_f1": statistics.mean(x["f1"] for x in group) if group else None,
-                                "micro_precision": p, "micro_recall": r, "micro_f1": 2*p*r/(p+r) if p+r else 0,
-                                "tp": hits, "retrieved": retrieved, "known_relevant": relevant,
-                                "fact_evidence_coverage": statistics.mean(x["fact_evidence_coverage"] for x in group) if group else None}
-    def mean(field):
-        values = [r[field] for r in per_item if r.get(field) is not None]
-        return {"mean": statistics.mean(values) if values else None, "denominator": len(values)}
-    retrieval.update(mrr=mean("mrr"), ndcg_at_10=mean("ndcg_at_10"), generation_context_fact_evidence_coverage=mean("generation_context_fact_evidence_coverage"),
-                     qrels_definition="A chunk is relevant if its actual source spans jointly cover all units in any evidence group for at least one required atomic fact. Qrels judge only declared evidence alternatives; not exhaustive human relevance judgments.",
-                     rankings_definition="@5/@20 use ranked candidates before generation-context pruning; actual generation contexts have a separate coverage metric.",
-                     missing_qrels_items=[r["item_id"] for r in per_item if r.get("known_relevant_chunks") == 0])
+    retrieval = aggregate_retrieval(per_item)
     timings = [b["result"]["elapsed_ms"] for b in bots.values() if "result" in b]
     import numpy as np
     operational = {"attempted": len(refs), "raw_response_rows": len(bot_rows), "unique_response_ids": len(bots), "completed": len(timings), "errors": sum(bool(b.get("error")) for b in bots.values()), "guard_error_item_ids": [r["item_id"] for r in per_item if r["guard_errors"]], "latency_p50_ms": float(np.percentile(timings,50)) if timings else None, "latency_p95_ms": float(np.percentile(timings,95)) if timings else None,
                    "latency_policy": "successful calls including preflight; errors counted separately, never zero latency"}
-    summary = {"created_at": utc(), "dataset_sha256": sha(DATA / "gold-consensus.jsonl"), "responses_sha256": sha(RUN / "chatbot/responses.jsonl"), "agreement": agreement, "action_metrics": action, "retrieval_metrics": retrieval, "operational": operational,
+    summary = {"created_at": utc(), "dataset_sha256": identities["dataset_sha256"], "responses_sha256": identities["responses_sha256"], "frozen_inputs": identities, "agreement": agreement, "action_metrics": action, "retrieval_metrics": retrieval, "operational": operational,
                "grading_status": "AI_CONSENSUS_REFERENCE_HUMAN_REVIEW_PENDING", "formal_course_benchmark": False}
-    dump(RUN / "metrics.json", summary)
-    dump(RUN / "qrels.json", {"build_id": build_id, "definition": retrieval["qrels_definition"], "queries": qrels})
-    (RUN / "per-item-metrics.jsonl").write_text("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in per_item))
-    print(json.dumps({"action_accuracy": action["accuracy"], "action_macro_f1": action["macro_f1"], "retrieval": retrieval, "operational": operational}))
+    dump(output_dir / "agreement.json", agreement)
+    dump(output_dir / "metrics.json", summary)
+    dump(output_dir / "qrels.json", {"build_id": build_id, "definition": retrieval["qrels_definition"], "queries": qrels})
+    (output_dir / "per-item-metrics.jsonl").write_text("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in per_item))
+    return summary
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("operation", choices=["prepare-adjudication", "finalize", "score"])
     op = p.parse_args().operation
-    {"prepare-adjudication": prepare_adjudication, "finalize": finalize, "score": score}[op]()
+    result = {"prepare-adjudication": prepare_adjudication, "finalize": finalize, "score": score}[op]()
+    if result is not None:
+        print(json.dumps(result))
 
 
 if __name__ == "__main__": main()

@@ -1,6 +1,10 @@
-# Eval
+# ParkGuide evaluation report
 
-Five independent configurations produced a source-backed consensus for 40 questions. Fresh chatbot responses achieved **37/40 correct actions** and **21/40 full rubric passes**. References and semantic grades remain AI provisional; human review is pending.
+5 independent configurations produced a source-backed consensus for 40 questions. The saved chatbot run achieved **37/40 correct actions** and **21/40 full rubric passes**. References and semantic grades remain AI provisional; human review is pending.
+
+[All question results](GOLD_MATRIX_RESULTS.md) · [Mechanical metrics](../artifacts/gold-matrix-v1/metrics.json) · [Semantic summary](../artifacts/gold-matrix-v1/semantic-summary.json) · [Evaluation workflow](../docs/EVALUATION_WORKFLOW.md)
+
+Responses were collected on 2026-10-10 at commit `4d3faaf`. Replaying the evaluation recomputes saved results without new chatbot or assessor calls; it does not measure the current deployment.
 
 ## Results
 
@@ -42,11 +46,25 @@ Required-fact evidence coverage is 84.2% at five ranked chunks and 96.7% at 20. 
 | [claude-opus](../artifacts/gold-matrix-v1/reviewers/claude-opus/labels.raw.json) | claude-opus-5-5 / high | 40 | 83 | 81 | 74/75 |
 | [claude-sonnet](../artifacts/gold-matrix-v1/reviewers/claude-sonnet/labels.raw.json) | claude-sonnet-5-5 / medium | 40 | 60 | 59 | 71/75 |
 
-All five chose 30 answers, eight refusals, and two clarifications. Pairwise action agreement, leave-one-out action F1 and Fleiss κ are 1.000. These measure agreement, not correctness. Fact representation measures overlap with the derived reference; labelers split and qualify facts differently.
+40/40 action labels are unanimous. Pairwise action agreement ranges from 1.000–1.000; Fleiss κ is 1.000. Leave-one-out action metrics are in [agreement.json](../artifacts/gold-matrix-v1/agreement.json). These measure agreement, not correctness. Fact representation measures overlap with the derived reference; labelers split and qualify facts differently.
 
 The [consensus dataset](../data/evaluation/gold-matrix-v1/gold-consensus.jsonl) has 75 atomic facts, derived from all five outputs with equal action votes and semantic fact grouping. Facts need three supporters, except a documented source-critical override on M027. Raw labels, votes and fact-detail disagreements on 13 cases are retained. A gpt-6-sol/high adjudicator saw no chatbot outputs; a separate gpt-5.6-sol/high assessor graded responses. A [late evidence supplement](../artifacts/gold-matrix-v1/freeze-incident.json) for M005 is retained separately; scores use the original frozen reference. Codex runtime identities/tokens/costs are unknown; its configurations are recorded. Claude identities and usage come from CLI responses.
 
 ## Cases to improve
+
+The group summaries below count each case once within a park and once within its category. Full rubric passes include action, required facts, behaviors, and delivered claim support; they remain AI assessments.
+
+| Group | Value | Cases | Correct action | Full rubric pass, AI assessed |
+| --- | --- | ---: | ---: | ---: |
+| Park | Grand Canyon | 13 | 13/13 | 8/13 |
+| Park | Yellowstone | 13 | 11/13 | 7/13 |
+| Park | Yosemite | 14 | 13/14 | 6/14 |
+| Category | ambiguous_adversarial | 3 | 3/3 | 1/3 |
+| Category | comparative | 4 | 2/4 | 2/4 |
+| Category | factual | 15 | 15/15 | 11/15 |
+| Category | multi_hop | 6 | 5/6 | 1/6 |
+| Category | temporal | 4 | 4/4 | 2/4 |
+| Category | unanswerable | 8 | 8/8 | 4/8 |
 
 | Case | Provisional finding |
 | --- | --- |
@@ -74,7 +92,7 @@ These cases form the next targeted regression checks. They were retained in the 
 
 ## Scope and interpretation
 
-All 40 questions come from revised `data/evaluation` candidates. Four cross-park comparisons became within-park comparisons; every request supplies one selected park and empty history. Category lineage: ambiguous_adversarial 3, comparative 4, factual 15, multi_hop 6, temporal 4, unanswerable 8. Of six presumed multi-hop cases, 5 use multiple pages; PG016 resolves from one page. Tables, exceptions, dates, source limits and injection are included. Extra scope controls and six dialogue candidates in the [functionality audit](../docs/EVALUATION_FUNCTIONALITY.md) are outside this run.
+All 40 questions come from revised `data/evaluation` candidates. Four cross-park comparisons became within-park comparisons; every request supplies one selected park and empty history. Category lineage: ambiguous_adversarial 3, comparative 4, factual 15, multi_hop 6, temporal 4, unanswerable 8. Of 6 presumed multi-hop cases, 5 use multiple pages; PG016 resolves from one page. Tables, exceptions, dates, source limits and injection are included. Extra scope controls and six dialogue candidates in the [functionality audit](../docs/EVALUATION_FUNCTIONALITY.md) are outside this run.
 
 The packet contains 30 saved NPS documents and a 155-document inventory. Source selection used earlier candidate evidence: this is a development diagnostic with prior exposure, not a held-out benchmark or exhaustive absence search. Human verification remains pending; the original course gold seal is unchanged.
 
@@ -82,18 +100,18 @@ Calls used local `chat.answer` at [commit 4d3faaf](https://github.com/cleveee/pa
 
 Precision is TP/(TP+FP), recall is TP/(TP+FN), and F1 is their harmonic mean. Action macro scores average the three classes; micro scores aggregate counts. Failed calls would remain incorrect predictions. [Scikit-learn metric definitions](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html)
 
-A relevant chunk must fully cover an evidence group for one required fact. @5/@20 use ranked candidates before context pruning; precision divides by actual returned count. Qrels cover declared evidence alternatives, not exhaustive human relevance; group coverage differs from older evidence-unit metrics. Citation support divides by delivered claims. Rejected-candidate precision/recall/F1 are unavailable without a labeled candidate universe. The saved-case approach follows the [OpenAI evaluation guide](https://developers.openai.com/api/docs/guides/evals).
+A relevant chunk must fully cover an evidence group for one required fact. @5/@20 use ranked candidates before context pruning; precision divides by actual returned count. Qrels cover declared evidence alternatives, not exhaustive human relevance. Required-fact evidence coverage includes every answerable case with required facts, even when only multiple chunks together support a fact and no single chunk is relevant. The reported coverage is a mean of per-case fractions; the JSON also records pooled fact counts. This differs from older evidence-unit metrics. Citation support divides by delivered claims. Rejected-candidate precision/recall/F1 are unavailable without a labeled candidate universe. The saved-case approach follows the [OpenAI evaluation guide](https://developers.openai.com/api/docs/guides/evals).
 
 ## Artifacts and reproduction
 
 [Result manifest](../artifacts/gold-matrix-v1/result-manifest.json) · [Metrics](../artifacts/gold-matrix-v1/metrics.json) · [Per-case metrics](../artifacts/gold-matrix-v1/per-item-metrics.jsonl) · [Agreement](../artifacts/gold-matrix-v1/agreement.json) · [Qrels](../artifacts/gold-matrix-v1/qrels.json) · [Fresh responses](../artifacts/gold-matrix-v1/chatbot/responses.jsonl) · [Semantic assessments](../artifacts/gold-matrix-v1/semantic-assessment.json) · [Frozen consensus adjudication](../artifacts/gold-matrix-v1/adjudication.frozen.json) · [Independent metric review](../artifacts/gold-matrix-v1/metrics-review-final.json) · [Report review](../artifacts/gold-matrix-v1/report-review.json)
 
-Run from the repository with its existing environment; these commands make no model calls:
+Run from the repository with its existing environment. The default verifies frozen input hashes and reproduces all derived files in a temporary directory, checking them against the saved outputs:
 
 ```sh
-.venv/bin/python scripts/derive_gold_matrix.py score
-.venv/bin/python scripts/assess_gold_matrix.py summarize
-.venv/bin/python scripts/build_gold_matrix_report.py
+.venv/bin/python scripts/evaluate.py
+# Regenerate derived metrics, both reports, and their manifest after scoring edits:
+.venv/bin/python scripts/evaluate.py --write
 ```
 
-Raw labels, responses and the consensus are never overwritten by these commands. Aggregate generation timestamps may change; counts and scores reproduce from the saved inputs. Preparation, validation and optional **new paid runs** are separated in [gold_matrix.py](../scripts/gold_matrix.py). The earlier [18-question labeling study](../docs/AI_LABELING_SAMPLE.md) and [retrospective hallucination pilot](hallucination-experiment-20261010/REPORT.md) are separate datasets and are not added to this run's denominators.
+These commands make no provider calls and preserve raw labels, responses, assessments, and the consensus. Check mode ignores only generation timestamps when comparing JSON; counts, provenance hashes, and report text must reproduce. New chatbot collection is a separate operation described in the [workflow](../docs/EVALUATION_WORKFLOW.md). The earlier [18-question labeling study](../docs/AI_LABELING_SAMPLE.md) and [retrospective hallucination pilot](hallucination-experiment-20261010/REPORT.md) are separate datasets and are not added to this run's denominators. The linked October 10 independent reviews describe that original snapshot, not later scoring-tool changes.

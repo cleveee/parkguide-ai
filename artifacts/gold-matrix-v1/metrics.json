@@ -1,7 +1,16 @@
 {
-  "created_at": "2026-10-10T23:16:57.209507+00:00",
+  "created_at": "2026-10-11T14:45:14.765000+00:00",
   "dataset_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
   "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+  "frozen_inputs": {
+    "annotation_input_sha256": "5b4349aeebe3fe8bd76be7b475afc2c2037e6e0d277b3451300c6914a7f25694",
+    "dataset_sha256": "4c856c0cfa632fb9e20e8207793c173798e05f7424af7df777a2560a12948929",
+    "responses_sha256": "3f0190e6204ff0c61de79f057b397d985a3f571a7de1d560aca159ed466fdf3f",
+    "database_sha256": "2e017b08ae4a358944716da3b62357b70c988bb61feebe62c39b9b0160feba5c",
+    "label_freeze_sha256": "adfe7967a0561846fd273db813da133be2bd46cacbad9b722c46128ca8e507ba",
+    "adjudication_sha256": "ced4667b5b2e9d125f30ae0a0d9bae9c50064156d05527547fe28a878815de74",
+    "build_id": "e372e28772f9266c175804450969b9879998a97b1d8dd8792f3e3f8cc194dd1a"
+  },
   "agreement": {
     "pairwise_action_agreement": {
       "codex-sol": {
@@ -354,7 +363,11 @@
       "tp": 35,
       "retrieved": 150,
       "known_relevant": 44,
-      "fact_evidence_coverage": 0.8416666666666667
+      "fact_evidence_coverage": 0.8416666666666667,
+      "fact_evidence_coverage_items": 30,
+      "facts_covered": 63,
+      "facts_total": 75,
+      "fact_evidence_coverage_micro": 0.84
     },
     "at_20": {
       "items": 30,
@@ -363,11 +376,15 @@
       "macro_f1": 0.13185896229374489,
       "micro_precision": 0.07166666666666667,
       "micro_recall": 0.9772727272727273,
-      "micro_f1": 0.13354037267080743,
+      "micro_f1": 0.13354037267080746,
       "tp": 43,
       "retrieved": 600,
       "known_relevant": 44,
-      "fact_evidence_coverage": 0.9666666666666667
+      "fact_evidence_coverage": 0.9666666666666667,
+      "fact_evidence_coverage_items": 30,
+      "facts_covered": 72,
+      "facts_total": 75,
+      "fact_evidence_coverage_micro": 0.96
     },
     "mrr": {
       "mean": 0.7944444444444444,
@@ -379,10 +396,14 @@
     },
     "generation_context_fact_evidence_coverage": {
       "mean": 0.8416666666666667,
-      "denominator": 30
+      "denominator": 30,
+      "facts_covered": 63,
+      "facts_total": 75,
+      "micro": 0.84
     },
     "qrels_definition": "A chunk is relevant if its actual source spans jointly cover all units in any evidence group for at least one required atomic fact. Qrels judge only declared evidence alternatives; not exhaustive human relevance judgments.",
     "rankings_definition": "@5/@20 use ranked candidates before generation-context pruning; actual generation contexts have a separate coverage metric.",
+    "evidence_coverage_definition": "Macro averages every answerable case with required facts, including zero-known-qrel cases. Micro divides fully covered facts by all required facts. Combined chunks can cover evidence even when no individual chunk is relevant.",
     "missing_qrels_items": []
   },
   "operational": {
